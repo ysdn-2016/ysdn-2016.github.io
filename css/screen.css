@@ -1,0 +1,90 @@
+/**********************************************************************************
+
+
+Y88b   d88P .d8888b. 8888888b. 888b    888 .d8888b.  .d8888b.  d888   .d8888b.  
+ Y88b d88P d88P  Y88b888  "Y88b8888b   888d88P  Y88bd88P  Y88bd8888  d88P  Y88b 
+  Y88o88P  Y88b.     888    88888888b  888       888888    888  888  888        
+   Y888P    "Y888b.  888    888888Y88b 888     .d88P888    888  888  888d888b.  
+    888        "Y88b.888    888888 Y88b888 .od888P" 888    888  888  888P "Y88b 
+    888          "888888    888888  Y88888d88P"     888    888  888  888    888 
+    888    Y88b  d88P888  .d88P888   Y8888888"      Y88b  d88P  888  Y88b  d88P 
+    888     "Y8888P" 8888888P" 888    Y888888888888  "Y8888P" 8888888 "Y8888P"  
+
+
+**********************************************************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figcaption, figure, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  color: #000; }
+
+a:visited {
+  color: #333; }
+
+a:hover {
+  color: #000; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover, a:active {
+  outline: 0; }
+
+::-moz-selection {
+  background: #666;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #666;
+  color: #fff;
+  text-shadow: none; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.cf:after {
+  content: ' ';
+  display: block;
+  clear: both; }
+
+html {
+  font-family: "proxima-nova", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+html, html a {
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+a:visited {
+  color: inherit; }
