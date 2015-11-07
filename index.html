@@ -8,18 +8,44 @@
 		html {
 			background: #f5d5f5;
 		}
-		.pizza {
+		img {
+			max-width: 100%;
+			max-height: 100vh;
+		}
+		.gif {
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			font-size: 80px;
 			transform: translate(-50%, -50%);
 		}
+		.pizza {
+			position: absolute;
+			font-size: 24px;
+		}
 	</style>
 </head>
 <body>
-	<div class="pizza">
-		🍕
+	<div class="gif">
+		<img src="finale.gif" />
 	</div>
+	<span class="pizza">🍕</span>
+	<span class="pizza">🍕</span>
+	<span class="pizza">🍕</span>
+	<span class="pizza">🍕</span>
+	<span class="pizza">🍕</span>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var pizzas = Array.prototype.slice.call(document.querySelectorAll('.pizza'))
+			pizzas.forEach(function (el) {
+				el.style.top = random(0, 100) + 'vh'
+				el.style.left = random(0, 100) + 'vw'
+				el.style.fontSize = random(12, 96) + 'px'
+			})
+			function random (min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min
+			}
+		})
+	</script>
 </body>
 </html>
