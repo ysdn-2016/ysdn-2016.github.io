@@ -9,7 +9,7 @@ BIN := ./node_modules/.bin
 # Variables
 #
 
-PORT       = 8080
+PORT      ?= 8080
 HOST      ?= localhost
 NODE_ENV  ?= development
 
@@ -29,7 +29,7 @@ BROWSER_SUPPORT = "last 2 versions"
 
 build: node_modules content assets styles
 start: build
-	@PORT=$(PORT) bin/www
+	@bin/www
 
 watch: install
 	@make -j4 watch-serve watch-html watch-css watch-js
