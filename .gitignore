@@ -6,5 +6,8 @@ npm-debug.log
 # Ignore OS X scraps
 .DS_Store
 
+# Ignore build files
+build/
+
 # Ignore design files
 design/

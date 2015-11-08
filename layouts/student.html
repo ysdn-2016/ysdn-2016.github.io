@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	{{ name }}
+	<a href="mailto:{{ email }}">{{ email }}</a>
+
+	{{ contents | safe }}
+{% endblock %}

@@ -1,0 +1,105 @@
+#!/usr/bin/env node
+
+var fs = require('fs')
+var pkg = require('../package')
+
+var metalsmith = require('metalsmith')
+var markdown = require('metalsmith-markdown')
+var typography = require('metalsmith-typography')
+var drafts = require('metalsmith-drafts')
+var collections = require('metalsmith-collections')
+var permalinks = require('metalsmith-permalinks')
+var layouts = require('metalsmith-layouts')
+var branch = require('metalsmith-branch')
+var copy = require('metalsmith-copy')
+var paths = require('metalsmith-paths')
+var yaml = require('../lib/yaml')
+
+var postcss = require('metalsmith-postcss')
+
+/**
+ * Build metadata
+ */
+var build = {
+	source: '../content',
+	destination: '../build',
+	clean: false,
+	env: process.env.NODE_ENV || 'development'
+}
+
+/**
+ * Metadata passed to templates
+ */
+var metadata = {
+	site: {
+		title: 'YSDN'
+	}
+}
+
+/**
+ * Build settings
+ */
+var site = metalsmith(__dirname)
+	.source(build.source)
+	.destination(build.destination)
+	.clean(build.clean)
+	.metadata(metadata)
+	.use(paths())
+	.use(collections({
+		students: { pattern: 'students/**/student.md', refer: false },
+		projects: { pattern: 'projects/**/project.md', refer: false }
+	}))
+
+/**
+ * Build pages
+ */
+site.use(branch('*.yml')
+	.use(yaml())
+	.use(typography())
+	.use(permalinks(':title'))
+	.use(layouts({
+		engine: 'swig',
+		partials: '../layouts',
+		directory: '../layouts'
+	}))
+)
+
+/**
+ * Build students
+ */
+site.use(branch('students/**/student.md')
+	.use(markdown({
+		smartypants: true,
+		gfm: true
+	}))
+	.use(typography())
+	.use(permalinks('students/:name'))
+	.use(layouts({
+		engine: 'swig',
+		default: 'student.html',
+		partials: '../layouts',
+		directory: '../layouts'
+	}))
+)
+
+/**
+ * Build projects
+ */
+site.use(branch('projects/**/project.md')
+	.use(markdown({
+		smartypants: true,
+		gfm: true
+	}))
+	.use(typography())
+	.use(permalinks('projects/:title'))
+	.use(layouts({
+		engine: 'swig',
+		default: 'project.html',
+		partials: '../layouts',
+		directory: '../layouts'
+	}))
+)
+
+site.build(err => {
+	if (err) throw err
+})

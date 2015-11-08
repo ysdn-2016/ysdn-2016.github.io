@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	{% for student in students %}
+		<a href="{{ student.path.href }}" class="student">
+			{{ student.name }}
+			{{ student.email }}
+		</div>
+	{% endfor %}
+{% endblock %}
