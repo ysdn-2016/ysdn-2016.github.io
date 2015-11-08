@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+
+GRAY="\033[0;90m"
+RED="\033[0;31m"
+GREEN="\033[0;32m"
+YELLOW="\033[0;33m"
+BLUE="\033[0;34m"
+PURPLE="\033[0;35m"
+END="\033[0m"
+
+echo
+
+log () {
+	echo -e "${GRAY}>${END}" $1
+}
+
+if ! command -v brew >/dev/null 2>&1; then
+	log "Installing ${YELLOW}homebrew${END}..."
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+	log "${YELLOW}homebrew${END} already installed"
+	sleep 0.1
+fi
+
+if ! command -v git >/dev/null 2>&1; then
+	log "Installing ${RED}git${END}..."
+	brew install git
+else
+	log "${RED}git${END} already installed"
+	sleep 0.15
+fi
+
+if ! command -v make >/dev/null 2>&1; then
+	log "Installing ${PURPLE}make${END}..."
+	brew install make
+else
+	log "${PURPLE}make${END} already installed"
+	sleep 0.1
+fi
+
+if ! command -v node >/dev/null 2>&1; then
+	log "Installing ${GREEN}node${END}..."
+	brew install node
+	npm install -g n
+	n latest
+else
+	if ! brew list | grep node >/dev/null 2>&1; then
+		log "${GREEN}node${END} already installed"
+		log "Your ${GREEN}node${END} is not from ${YELLOW}homebrew${END}"
+		log "Switching to ${YELLOW}homebrew${END} ${GREEN}node${END}..."
+		brew install node
+		npm install -g n
+		n latest
+	else
+		log "${GREEN}node${END} already installed"
+	fi
+	required=4
+	actual=$(node --version)
+	[[ $(node --version) =~ ([0-9][.][0-9.]*) ]] && version="${BASH_REMATCH[1]}"
+	if ! awk -v ver="$version" 'BEGIN { if (ver < 4) exit 1; }'; then
+		log "${RED}Error${END}: ${GREEN}node${END} version 4.0 or higher is required"
+		log "Upgrading ${GREEN}node${END}..."
+		# if nvm is installed, use that
+		if command -v nvm >/dev/null 2>&1; then
+			nvm install stable
+			nvm use stable
+		else
+			npm install -g n
+			n latest
+		fi
+	fi
+fi
+
+echo ""
+log "All done!"
+log "Head to ${YELLOW}https://github.com/ysdn-2016/ysdn-2016.github.io${END} to clone the repo"
+
+echo ""
