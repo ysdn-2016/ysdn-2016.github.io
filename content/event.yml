@@ -1,3 +1,8 @@
 layout: event.html
-start: "2016-04-18T00:00:00.000Z"
-end: "2015-04-19T00:00:00.000Z"
+sessions:
+  - name: "Friends & Family"
+    start: "2016-04-18T18:00:00.000Z"
+    end: "2015-04-18T22:00:00.000Z"
+  - name: "Industry Night"
+    start: "2016-04-19T18:00:00.000Z"
+    end: "2016-04-19T22:00:00.000Z"

@@ -14,7 +14,7 @@ HOST      ?= localhost
 NODE_ENV  ?= development
 
 LAYOUTS    = $(shell find ./layouts -type f -name '*.html')
-MARKDOWN   = $(shell find ./content -type f -name '*.md')
+CONTENT    = $(shell find ./content -type f -name '*.md' -or -type f -name '*.yml')
 
 IMAGES     = $(shell find ./assets -type f -name '*.jpg' -or -type f -name '*.png' -or -type f -name '*.gif')
 STYLES     = $(shell find ./assets -type f -name '*.scss')
@@ -28,13 +28,26 @@ BROWSER_SUPPORT = "last 2 versions"
 #
 
 build: node_modules content assets styles
-	@true
-
-develop: install
+start: build
 	@$(BIN)/serve --port $(PORT) build
 
+watch: install
+	@make -j4 watch-serve watch-html watch-css watch-js
+watch-serve:
+	@$(BIN)/serve --port $(PORT) build | $(BIN)/wtch --dir build | $(BIN)/garnish
+watch-html:
+	@$(BIN)/chokidar 'content/**/*.{md,yml}' 'layouts/**/*.html' -c 'make content' --silent
+watch-css:
+	@$(BIN)/chokidar 'assets/css/**/*.scss' -c 'make styles' --silent
+watch-js:
+	@true
+
+
+
 lint:
-	@xo
+	@$(BIN)/xo
+
+# TODO: add tests
 test: lint
 
 clean:
@@ -58,12 +71,12 @@ scripts: build/assets/bundle.js
 node_modules: package.json
 	@npm install
 
-build/index.html: bin/build $(MARKDOWN) $(LAYOUTS)
+build/index.html: bin/build $(CONTENT) $(LAYOUTS)
 	@bin/build 2>&1 >&-
 
 build/assets/bundle.css: $(STYLES)
 	@mkdir -p $(@D)
-	@cp assets/css/index.css $@
+	@bin/build-css assets/css/index.scss $@
 
 build/assets/bundle.js: $(SCRIPTS)
 	@mkdir -p $(@D)

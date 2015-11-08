@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
 	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
-	<link rel="stylesheet" media="screen, projection" href="/styles.css" />
+	<link rel="stylesheet" media="screen, projection" href="/assets/bundle.css" />
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,5 +15,8 @@
 </head>
 <body class="{% block body.class %}{% endblock %}">
 	{% block body %}{% endblock %}
+	{% if env == 'development' %}
+	<script src="http://127.0.0.1:35729/livereload.js"></script>
+	{% endif %}
 </body>
 </html>

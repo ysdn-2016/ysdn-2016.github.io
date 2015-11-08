@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 var fs = require('fs')
-var pkg = require('../package')
 
 var metalsmith = require('metalsmith')
 var markdown = require('metalsmith-markdown')
@@ -15,7 +14,7 @@ var copy = require('metalsmith-copy')
 var paths = require('metalsmith-paths')
 var yaml = require('../lib/yaml')
 
-var postcss = require('metalsmith-postcss')
+var args = process.argv.slice(2)
 
 /**
  * Build metadata
@@ -33,7 +32,8 @@ var build = {
 var metadata = {
 	site: {
 		title: 'YSDN'
-	}
+	},
+	env: process.env.NODE_ENV || 'development'
 }
 
 /**
