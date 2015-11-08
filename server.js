@@ -13,7 +13,7 @@ server.use(function * (next) {
 	if (this.status !== 404) return
 	this.status = 404
 	this.type = 'html'
-	this.body = fs.createReadStream(`${__dirname}/../build/404.html`)
+	this.body = fs.createReadStream(`${__dirname}/build/404.html`)
 })
 server.use(compression())
 server.use(serve('build'))

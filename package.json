@@ -2,8 +2,7 @@
   "name": "@ysdn/gradshow",
   "version": "1.0.0",
   "description": "Primary site repository",
-  "private": true,
-  "main": "index.js",
+  "main": "server.js",
   "bin": [
     "bin/build",
     "bin/build-css"
