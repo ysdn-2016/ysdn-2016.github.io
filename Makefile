@@ -29,7 +29,7 @@ BROWSER_SUPPORT = "last 2 versions"
 
 build: node_modules content assets styles
 start: build
-	@$(BIN)/serve --port $(PORT) build
+	@PORT=$(PORT) bin/www
 
 watch: install
 	@make -j4 watch-serve watch-html watch-css watch-js

@@ -1,0 +1,9 @@
+{
+  "name": "YSDN 2016",
+  "description": "A web site for the YSDN 2016 grad show",
+  "image": "heroku/nodejs",
+  "addons": [],
+  "scripts": {
+    "postdeploy": "make build"
+  }
+}
