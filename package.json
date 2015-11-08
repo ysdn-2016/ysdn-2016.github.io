@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Primary site repository",
   "private": true,
+  "main": "bin/www",
   "bin": [
     "bin/build",
     "bin/build-css"
