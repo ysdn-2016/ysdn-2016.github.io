@@ -20,7 +20,7 @@ IMAGES     = $(shell find ./assets -type f -name '*.jpg' -or -type f -name '*.pn
 STYLES     = $(shell find ./assets -type f -name '*.scss')
 SCRIPTS    = $(shell find ./assets -type f -name '*.js')
 
-BROWSER_SUPPORT = "last 2 versions"
+DOMAIN     = ysdn2016.com
 
 
 #
