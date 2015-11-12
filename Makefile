@@ -20,7 +20,9 @@ IMAGES     = $(shell find ./assets -type f -name '*.jpg' -or -type f -name '*.pn
 STYLES     = $(shell find ./assets -type f -name '*.scss')
 SCRIPTS    = $(shell find ./assets -type f -name '*.js')
 
-DOMAIN     = ysdn2016.com
+DOMAIN     = ysdn-2016.github.io
+REPO       = ysdn-2016/ysdn-2016.github.io
+BRANCH     = $(shell git rev-parse --abbrev-ref HEAD)
 
 
 #
@@ -42,7 +44,19 @@ watch-css:
 watch-js:
 	@true
 
-
+deploy:
+	@echo "Deploying branch \033[0;33m$(BRANCH)\033[0m to Github pages..."
+	@make clean
+	@NODE_ENV=production make build
+	@(cd build && \
+		git init -q . && \
+		git add . && \
+		git commit -q -m "Deployment (auto-commit)" && \
+		echo "\033[0;90m" && \
+		git push "git@github.com:$(REPO).git" HEAD:master --force && \
+		echo "\033[0m")
+	@make clean
+	@echo "Deployed to \033[0;32mhttp://$(DOMAIN)\033[0m"
 
 lint:
 	@$(BIN)/xo
