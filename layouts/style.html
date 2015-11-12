@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ site.title }}</title>
+	<meta charset="utf-8"/>
+	<meta name="description" content="{{ site.description }}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<link rel="stylesheet" media="screen, projection" href="/assets/bundle.css" />
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body class="{% block body.class %}{% endblock %} s-body">
+	<div class="s-sidebar">
+		<h1>YSDN 2016</h1>
+		<nav>
+			<a href="#s-intro" class="s-nav-item">Intro</a>
+			<a href="#s-bg-color" class="s-nav-item">Background Colors</a>
+			<a href="#s-border-color" class="s-nav-item">Border Colors</a>
+			<a href="#s-fonts" class="s-nav-item">Fonts</a>
+		</nav>
+	</div>
+	<div class="s-content grid">
+		
+	</div>
+	{% if env == 'development' %}
+	<script src="http://127.0.0.1:35729/livereload.js"></script>
+	{% endif %}
+</body>
+</html>

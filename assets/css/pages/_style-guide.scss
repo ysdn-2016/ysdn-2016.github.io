@@ -1,0 +1,20 @@
+.s-body {  
+
+// ===
+// Styleguide Styles
+// ===
+
+	display: flex; // Use flexbox layout
+
+// Layout
+
+.s-layout-sidebar {
+	flex: 0 0 240px;
+	
+}
+
+.s-layout-content {
+	flex: 1;
+}
+
+}

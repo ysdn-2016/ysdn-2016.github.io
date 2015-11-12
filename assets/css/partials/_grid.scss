@@ -1,0 +1,27 @@
+// Grid
+
+.grid {
+	$colWidth: 64px;
+	$colGutter: 16px;
+	$colCount: 12;
+	@extend .cf;
+
+	.row {
+		width: 100%;
+	}
+
+	.col{
+		display: inline-block;
+		min-height: 1px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	@for $i from 1 through $colCount {
+		.col-#{$i} {
+			width: ($colWidth * $i) + (($colGutter * $i) - $colGutter);
+			margin-right: $colGutter;
+		}
+	}
+}
