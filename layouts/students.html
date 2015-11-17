@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
 {% block body %}
+	<div class="list">
 	{% for student in students %}
 		<a href="{{ student.path.href }}" class="student">
 			{{ student.name }}
-			{{ student.email }}
-		</div>
+			{#{{ student.email }}#}
+		</a>
 	{% endfor %}
+	</div>
 {% endblock %}

@@ -1,0 +1,64 @@
+body{
+  font-family: 'Karla',Helvetica,Arial;
+  font-weight: 400;
+  font-size: 62.5%;
+  line-height: 1.6em;
+  -webkit-font-smoothing: antialiased;
+}
+
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: auto;
+  background: #1B2020;
+  padding: 20px;
+}
+
+.container{
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-top: 90px;
+}
+
+a{
+  font-size: 1.5em;
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+}
+
+.logo{
+  color: white;
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+.nav{
+  display: inline-block;
+  vertical-align: bottom;
+  float: right;
+}
+
+.nav a{
+  color: white;
+  text-decoration: none;
+  margin-left: 16px;
+  font-size: 1.5em;
+}
+.nav a:hover{
+  border-bottom: 1px solid white;
+  padding-bottom: 2px;
+}
+
+.list a{
+  display: block;
+  color: #1B2020;
+  text-decoration: none;
+  line-height: 1.5em;
+}
+.list a:hover{
+  text-decoration: underline;
+}
