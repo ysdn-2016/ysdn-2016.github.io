@@ -24,12 +24,13 @@ DOMAIN     = ysdn-2016.github.io
 REPO       = ysdn-2016/ysdn-2016.github.io
 BRANCH     = $(shell git rev-parse --abbrev-ref HEAD)
 
+API        = http://159.203.25.109:19320
 
 #
 # Tasks
 #
 
-build: node_modules content assets styles
+build: node_modules content sync assets styles
 start: build
 	@bin/www
 
@@ -43,6 +44,10 @@ watch-css:
 	@$(BIN)/chokidar 'assets/css/**/*.scss' -c 'make styles' --silent
 watch-js:
 	@true
+
+sync:
+	@mkdir -p content/students
+	@curl -s "$(API)/download" | tar -zxf - -C content/students --strip-components=1
 
 deploy:
 	@echo "Deploying branch \033[0;33m$(BRANCH)\033[0m to Github pages..."

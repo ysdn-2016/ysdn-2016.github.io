@@ -49,6 +49,7 @@
     "swig": "^1.4.2"
   },
   "devDependencies": {
+    "chalk": "^1.1.1",
     "chokidar-cli": "^1.1.1",
     "garnish": "^4.1.1",
     "serve": "^1.4.0",
