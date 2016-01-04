@@ -30,20 +30,16 @@ API        = http://159.203.25.109:19320
 # Tasks
 #
 
-build: node_modules content sync assets styles
+build: node_modules content assets styles
 start: build
 	@bin/www
 
-watch: install
-	@make -j4 watch-serve watch-html watch-css watch-js
-watch-serve:
-	@$(BIN)/serve --port $(PORT) build | $(BIN)/wtch --dir build | $(BIN)/garnish
-watch-html:
-	@$(BIN)/chokidar 'content/**/*.{md,yml}' 'layouts/**/*.html' -c 'make content' --silent
-watch-css:
-	@$(BIN)/chokidar 'assets/css/**/*.scss' -c 'make styles' --silent
-watch-js:
-	@true
+watch: install build
+	@$(BIN)/onchange 'content/**/*.{md,yml}' 'layouts/**/*.html' -c 'make content' --silent & \
+		$(BIN)/onchange 'assets/css/**/*.scss' -c 'make styles' --silent & \
+		$(BIN)/onchange 'assets/fonts/**/*' -c 'make assets' --silent & \
+		$(BIN)/wtch --dir build 2>&1 >/dev/null & \
+		bin/www
 
 sync:
 	@mkdir -p content/students
@@ -80,6 +76,7 @@ clean-deps:
 
 install: node_modules
 content: build/index.html
+assets:  build/assets/fonts
 styles:  build/assets/bundle.css
 scripts: build/assets/bundle.js
 
@@ -92,6 +89,10 @@ node_modules: package.json
 
 build/index.html: bin/build $(CONTENT) $(LAYOUTS)
 	@bin/build 2>&1 >&-
+
+build/assets/%: assets/%
+	@mkdir -p $(@D)
+	@cp -r $< $@
 
 build/assets/bundle.css: $(STYLES)
 	@mkdir -p $(@D)

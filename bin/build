@@ -85,13 +85,13 @@ site.use(branch('students/**/student.md')
 /**
  * Build projects
  */
-site.use(branch('projects/**/project.md')
+site.use(branch('students/**/project.md')
 	.use(markdown({
 		smartypants: true,
 		gfm: true
 	}))
 	.use(typography())
-	.use(permalinks('projects/:title'))
+	.use(permalinks('students/:owner/:title'))
 	.use(layouts({
 		engine: 'swig',
 		default: 'project.html',
