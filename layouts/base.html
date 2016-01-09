@@ -8,13 +8,16 @@
 
 	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
 	<link rel="stylesheet" media="screen, projection" href="/assets/bundle.css" />
-
+	<link href='https://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
 <body class="{% block body.class %}{% endblock %}">
+	{% include "partials/header.html" %}
+	<div class="container">
 	{% block body %}{% endblock %}
+	</div>
 	{% if env == 'development' %}
 	<script src="http://127.0.0.1:35729/livereload.js"></script>
 	{% endif %}

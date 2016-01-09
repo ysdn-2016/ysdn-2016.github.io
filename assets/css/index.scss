@@ -1,2 +1,8 @@
+@import "modules/variables";
+@import "modules/mixins";
 
-@import "pages/placeholder";
+@import "partials/font-face";
+@import "partials/normalize";
+@import "partials/reset";
+
+@import "pages/home";
