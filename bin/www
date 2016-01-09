@@ -7,7 +7,7 @@ var compression = require('koa-compress')
 var serve = require('koa-static')
 
 var server = koa()
-var port = process.env.PORT || 8080
+var port = process.env.PORT || 8081
 var env = process.env.NODE_ENV || 'development'
 
 server.use(function * (next) {
