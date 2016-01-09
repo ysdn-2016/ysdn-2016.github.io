@@ -1,5 +1,6 @@
+@import "../partials/guide";
+
 body{
-  font-family: 'Karla',Helvetica,Arial;
   font-weight: 400;
   font-size: 62.5%;
   line-height: 1.6em;
@@ -11,8 +12,9 @@ header{
   position: fixed;
   top: 0;
   height: auto;
-  background: #1B2020;
   padding: 20px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 1px 0px rgba(232,232,232,0.50);
 }
 
 .container{
@@ -31,25 +33,30 @@ img{
 }
 
 .logo{
-  color: white;
-  display: inline-block;
-  font-size: 1.5em;
+  float: left;
+  width: 120px;
+  height: 40px;
+  background-color: black;
+  -webkit-mask:  url(../../img/logo.svg) no-repeat 50% 50%;
+  mask: url(../../img/logo.svg) no-repeat 50% 50%;
 }
 
 .nav{
   display: inline-block;
   vertical-align: bottom;
-  float: right;
+  float: left;
 }
 
 .nav a{
-  color: white;
   text-decoration: none;
-  margin-left: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 30px;
   font-size: 1.5em;
+  line-height: 40px;
 }
 .nav a:hover{
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid black;
   padding-bottom: 2px;
 }
 
