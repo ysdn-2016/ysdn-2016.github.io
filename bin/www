@@ -2,11 +2,13 @@
 
 var fs = require('fs')
 var koa = require('koa')
+var chalk = require('chalk')
 var compression = require('koa-compress')
 var serve = require('koa-static')
 
 var server = koa()
 var port = process.env.PORT || 8080
+var env = process.env.NODE_ENV || 'development'
 
 server.use(function * (next) {
 	yield next
@@ -19,4 +21,12 @@ server.use(compression())
 server.use(serve('build'))
 server.listen(port)
 
-console.log(`Listening on http://localhost:${port}/`)
+console.log(chalk.green('ysdn-gradshow is running...'))
+console.log(`Listening on https://localhost:${port}`)
+console.log(chalk.gray('Ctrl+C to shut down'))
+
+process.on('SIGINT', () => {
+	console.log(chalk.red('Server has shutdown'))
+	console.log(`Server was running for ${Math.round(process.uptime())} seconds`)
+	process.exit(0)
+})

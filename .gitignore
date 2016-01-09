@@ -6,6 +6,9 @@ npm-debug.log
 # Ignore OS X scraps
 .DS_Store
 
+# Ignore student content files (they'll change often)
+content/students/
+
 # Ignore build files
 build/
 
