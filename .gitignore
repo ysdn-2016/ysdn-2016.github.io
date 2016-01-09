@@ -14,3 +14,6 @@ build/
 
 # Ignore design files
 design/
+
+# Ignore sass-cache
+.sass-cache/
