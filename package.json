@@ -44,6 +44,7 @@
     "metalsmith-validate": "^0.1.4",
     "mkdirp": "^0.5.1",
     "onchange": "^2.0.0",
+    "postcss": "^5.0.14",
     "postcss-advanced-variables": "^1.2.2",
     "postcss-extend": "^1.0.1",
     "postcss-mixins": "^2.1.1",
