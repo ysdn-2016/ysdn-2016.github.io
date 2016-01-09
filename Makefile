@@ -35,11 +35,11 @@ start: build
 	@bin/www
 
 watch: install build
-	@$(BIN)/onchange 'content/**/*.{md,yml}' 'layouts/**/*.html' -c 'make content' --silent & \
-		$(BIN)/onchange 'assets/css/**/*.scss' -c 'make styles' --silent & \
-		$(BIN)/onchange 'assets/{fonts,images}/**/*' -c 'make assets' --silent & \
+	@$(BIN)/onchange 'content/**/*.{md,yml}' 'layouts/**/*.html' -- make content & \
+		$(BIN)/onchange 'assets/css/**/*.scss' -- make styles & \
+		$(BIN)/onchange 'assets/{fonts,images}/**/*' -- make assets & \
 		$(BIN)/wtch --dir build 2>&1 >/dev/null & \
-		bin/www
+		bin/www & wait
 
 sync:
 	@mkdir -p content/students
