@@ -16,7 +16,7 @@ NODE_ENV  ?= development
 LAYOUTS    = $(shell find ./layouts -type f -name '*.html')
 CONTENT    = $(shell find ./content -type f -name '*.md' -or -type f -name '*.yml')
 
-IMAGES     = $(shell find ./assets -type f -name '*.jpg' -or -type f -name '*.png' -or -type f -name '*.gif')
+IMAGES     = $(shell find ./assets -type f -name '*.jpg' -or -type f -name '*.png' -or -type f -name '*.gif' -or -type f -name '*.svg')
 STYLES     = $(shell find ./assets -type f -name '*.scss')
 SCRIPTS    = $(shell find ./assets -type f -name '*.js')
 
@@ -37,7 +37,7 @@ start: build
 watch: install build
 	@$(BIN)/onchange 'content/**/*.{md,yml}' 'layouts/**/*.html' -c 'make content' --silent & \
 		$(BIN)/onchange 'assets/css/**/*.scss' -c 'make styles' --silent & \
-		$(BIN)/onchange 'assets/fonts/**/*' -c 'make assets' --silent & \
+		$(BIN)/onchange 'assets/{fonts,images}/**/*' -c 'make assets' --silent & \
 		$(BIN)/wtch --dir build 2>&1 >/dev/null & \
 		bin/www
 
@@ -76,7 +76,7 @@ clean-deps:
 
 install: node_modules
 content: build/index.html
-assets:  build/assets/fonts
+assets:  build/assets/fonts build/assets/images
 styles:  build/assets/bundle.css
 scripts: build/assets/bundle.js
 
