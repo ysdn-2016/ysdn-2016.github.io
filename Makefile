@@ -20,7 +20,7 @@ IMAGES     = $(shell find ./assets -type f -name '*.jpg' -or -type f -name '*.pn
 STYLES     = $(shell find ./assets -type f -name '*.scss')
 SCRIPTS    = $(shell find ./assets -type f -name '*.js')
 
-DOMAIN     = ysdn-2016.github.io
+DOMAIN     = ysdn2016.com
 REPO       = ysdn-2016/ysdn-2016.github.io
 BRANCH     = $(shell git rev-parse --abbrev-ref HEAD)
 
@@ -50,6 +50,7 @@ deploy:
 	@make clean
 	@NODE_ENV=production make build
 	@(cd build && \
+		echo "$(DOMAIN)" > CNAME && \
 		git init -q . && \
 		git add . && \
 		git commit -q -m "Deployment (auto-commit)" && \
