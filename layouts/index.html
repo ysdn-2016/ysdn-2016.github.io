@@ -128,7 +128,7 @@ $(document).ready(function () {
         xy = x + " " + y;
 
         bgWebKit = "-webkit-gradient(radial, " + xy + ", 145, " + xy + ", " + gradientSize + ", from(" + lightColor + "), to(rgba(255,255,255,1))), " + originalBGeyepeice;
-        bgMoz    = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + originalBGeyepeice + " " + gradientSize + "px)";
+        bgMoz    = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, " + "white" + " " + gradientSize + "px)";
 
         $('#eyepeice')
           .css({ background: bgWebKit })
