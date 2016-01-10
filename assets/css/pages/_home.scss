@@ -1,71 +1,80 @@
 @import "../partials/guide";
 
-body{
-  font-weight: 400;
+body {
   font-size: 62.5%;
+  font-weight: 400;
   line-height: 1.6em;
+
   -webkit-font-smoothing: antialiased;
 }
 
-header{
-  width: 100%;
+header {
   position: fixed;
   top: 0;
+
+  width: 100%;
   height: auto;
   padding: 20px;
-  background: #FFFFFF;
-  box-shadow: 0px 1px 1px 0px rgba(232,232,232,0.50);
+
+  background: #ffffff;
+  box-shadow: 0px 1px 1px 0px rgba(232,232,232,.50);
+  a {
+    font-size: 1.5em;
+
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  .logo {
+    float: left;
+
+    width: 120px;
+    height: 40px;
+
+    background-color: black;
+
+    -webkit-mask: url(images/logo.svg) no-repeat 50% 50%;
+    mask: url(images/logo.svg) no-repeat 50% 50%;
+  }
+  .nav {
+    display: inline-block;
+    float: left;
+
+    vertical-align: bottom;
+  }
+  .nav a {
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 40px;
+
+    margin-left: 30px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .nav a:hover {
+    padding-bottom: 2px;
+
+    border-bottom: 2px solid black;
+  }
+  .list a {
+    line-height: 1.5em;
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #1b2020;
+  }
+  .list a:hover {
+    text-decoration: underline;
+  }
 }
 
-.container{
+.container {
   max-width: 800px;
-  padding: 0 20px;
   margin: 0 auto;
   margin-top: 90px;
-}
-
-a{
-  font-size: 1.5em;
-  text-decoration: none;
-}
-img{
-  max-width: 100%;
-}
-
-.logo{
-  float: left;
-  width: 120px;
-  height: 40px;
-  background-color: black;
-  -webkit-mask:  url(images/logo.svg) no-repeat 50% 50%;
-  mask: url(images/logo.svg) no-repeat 50% 50%;
-}
-
-.nav{
-  display: inline-block;
-  vertical-align: bottom;
-  float: left;
-}
-
-.nav a{
-  text-decoration: none;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-left: 30px;
-  font-size: 1.5em;
-  line-height: 40px;
-}
-.nav a:hover{
-  border-bottom: 2px solid black;
-  padding-bottom: 2px;
-}
-
-.list a{
-  display: block;
-  color: #1B2020;
-  text-decoration: none;
-  line-height: 1.5em;
-}
-.list a:hover{
-  text-decoration: underline;
+  padding: 0 20px;
 }
