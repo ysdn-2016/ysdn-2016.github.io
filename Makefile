@@ -96,7 +96,8 @@ build/assets/%: assets/%
 
 build/assets/bundle.css: $(STYLES)
 	@mkdir -p $(@D)
-	@bin/build-css assets/css/index.scss $@
+	@sassc -m assets/css/index.scss $@
+	@$(BIN)/postcss --use autoprefixer $@ -o $@
 
 build/assets/bundle.js: $(SCRIPTS)
 	@mkdir -p $(@D)

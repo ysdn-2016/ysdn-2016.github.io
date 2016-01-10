@@ -71,6 +71,14 @@ else
 	fi
 fi
 
+if ! command -v make >/dev/null 2>&1; then
+	log "Installing ${RED}sassc${END}..."
+	brew install sassc
+else
+	log "${RED}sassc${END} already installed"
+	sleep 0.1
+fi
+
 echo ""
 log "All done!"
 log "Head to ${YELLOW}https://github.com/ysdn-2016/ysdn-2016.github.io${END} to clone the repo"
