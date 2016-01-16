@@ -17,6 +17,17 @@ cd /path/to/folder/where/you/keep/code
 git clone git@github.com:ysdn-2016/ysdn-2016.github.io.git
 ```
 
+#### Local Development
+
+To start the local server, navigate to the project directory and run `make watch`, like so:
+
+```bash
+cd /path/to/ysdn-2016.github.io
+make watch
+```
+
+This will start a server on `http://localhost:8080`, and will automatically watch for changes in the CSS, HTML, or JS.
+
 ## Contributing
 
 #### Git
