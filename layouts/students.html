@@ -3,11 +3,11 @@
 {% block main %}
 	<div class="student-grid">
 	{% for student in students %}
-		<a class="student-profile" href="{{ student.path.href }}">
-			<div class="student-profile-image">
+		<a class="student-preview" href="{{ student.path.href }}">
+			<div class="student-preview-image">
 				<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=888888&txtclr=888888&txt=250%C3%97250&w=250&h=250" />
 			</div>
-			<div class="student-profile-name">{{ student.name }}</div>
+			<div class="student-preview-name">{{ student.name }}</div>
 		</a>
 	{% endfor %}
 	</div>

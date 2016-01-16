@@ -1,13 +1,13 @@
 
 .header {
 	background: #fff;
-	box-shadow: 0 1px 1px 0 rgba(232, 232, 232, 0.50);
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: $ribbon-width;
 	padding: 20px 36px;
 	height: $header-height;
+	font-family: $sofia;
 	.logo,
 	.nav,
 	.social,
@@ -40,6 +40,7 @@
 		vertical-align: bottom;
 		a {
 			margin-left: 30px;
+			color: #1b2020;
 			font-size: 0.875em;
 			font-weight: 700;
 			line-height: 40px;
@@ -50,16 +51,6 @@
 				padding-bottom: 2px;
 			}
 		}
-	}
-	.nav a
-	.list a {
-		display: block;
-		color: #1b2020;
-		line-height: 1.5em;
-		text-decoration: none;
-	}
-	.list a:hover {
-		text-decoration: underline;
 	}
 	.note {
 		display: inline-block;
