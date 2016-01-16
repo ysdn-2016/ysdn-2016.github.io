@@ -72,7 +72,7 @@ site.use(branch('students/**/student.md')
 		gfm: true
 	}))
 	.use(typography())
-	.use(permalinks(':name'))
+	.use(permalinks('students/:name'))
 	.use(layouts({
 		engine: 'swig',
 		default: 'student.html',
@@ -91,7 +91,7 @@ site.use(branch('students/**/project.md')
 	}))
 	.use(typography())
 	.use(projects())
-	.use(permalinks(':owner_name/:title'))
+	.use(permalinks('students/:owner_name/:title'))
 	.use(layouts({
 		engine: 'swig',
 		default: 'project.html',
