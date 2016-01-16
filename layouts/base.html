@@ -14,12 +14,12 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-<body class="{% block body.class %}{% endblock %}">
-	<div class="page">
+<body class="page-{{ id }}">
+	<div class="container">
 		{% include 'partials/header.html' %}
-		<div class="container">
-		{% block container %}{% endblock %}
-		</div>
+		<main class="main">
+			{% block main %}{% endblock %}
+		</main>
 		{% include 'partials/footer.html' %}
 	</div>
 	{% include 'partials/event-ribbon.html' %}

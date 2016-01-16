@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 
-{% block container %}
-	<div class="list">
+{% block main %}
+	<div class="student-grid">
 	{% for student in students %}
-		<a href="{{ student.path.href }}" class="student">{{ student.name }}</a>
+		<a class="student-profile" href="{{ student.path.href }}">
+			<div class="student-profile-image">
+				<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=888888&txtclr=888888&txt=250%C3%97250&w=250&h=250" />
+			</div>
+			<div class="student-profile-name">{{ student.name }}</div>
+		</a>
 	{% endfor %}
 	</div>
 {% endblock %}

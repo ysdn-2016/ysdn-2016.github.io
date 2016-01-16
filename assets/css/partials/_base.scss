@@ -5,6 +5,9 @@
 html {
 	font-family: $karla;
 	font-size: 18px;
+	line-height: 1.6em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -14,6 +17,10 @@ a {
 	&:visited {
 		color: inherit;
 	}
+}
+
+i {
+	font-style: normal;
 }
 
 /**
@@ -116,9 +123,19 @@ input {
 
 
 //
-// Elements
+// Common Elements
 //
 
-.page {
+.container {
+	// NB: this pushes the page to the right if the ribbon is present, which helps
+	// keep things properly centred and nice once we remove the ribbon after the
+	// event.
 	margin-right: $ribbon-width;
+}
+
+.main {
+	margin: 0 auto;
+	margin-top: $header-height;
+	padding: 60px 20px 0;
+	max-width: 1080px;
 }

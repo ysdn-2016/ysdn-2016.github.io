@@ -1,0 +1,21 @@
+
+.page-students {
+
+}
+
+.student-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.student-profile {
+	display: block;
+	margin-bottom: 2rem;
+}
+
+.student-profile-name {
+	font-family: $sofia;
+	font-weight: bold;
+	font-size: 14px;
+}

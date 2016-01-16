@@ -5,9 +5,9 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	right: 0;
-	padding: 20px 62px 20px 36px;
-	height: 96px;
+	right: $ribbon-width;
+	padding: 20px 36px;
+	height: $header-height;
 	.logo,
 	.nav,
 	.social,
