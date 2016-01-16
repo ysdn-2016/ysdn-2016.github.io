@@ -1,9 +1,17 @@
 <header>
   <a href="/"><div class="logo"></div></a>
   <div class="nav">
-    <a href="/projects/">Projects</a>
-    <a href="/students/">Students</a>
-    <a href="/sponsor/">Sponsor</a>
-    <a href="#">Event Details</a>
+    <a href="/projects/" {% if layout == 'projects.html' %}class="active"{% endif %}>Projects</a>
+    <a href="/students/" {% if layout == 'students.html' %}class="active"{% endif %}>Students</a>
+    <a href="/sponsor/" {% if layout == 'sponsor.html' %}class="active"{% endif %}>Sponsor</a>
+    <a href="/event/" {% if layout == 'event.html' %}class="active"{% endif %}>Event Details</a>
+  </div>
+  <div class="social">
+  	<a href="https://www.facebook.com/ysdnmade/?fref=ts" target="_blank"><i class="fa fa-fw fa-lg fa-facebook"></i></a>
+  	<a href="https://www.facebook.com/ysdnmade/?fref=ts" target="_blank"><i class="fa fa-fw fa-lg fa-twitter"></i></a>
+  	<a href="https://www.facebook.com/ysdnmade/?fref=ts" target="_blank"><i class="fa fa-fw fa-lg fa-instagram"></i></i></a>
+  </div>
+  <div class="note">
+  	<p>April 18th and 19th at The Liberty Grand</p>
   </div>
 </header>
