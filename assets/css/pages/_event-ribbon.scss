@@ -1,0 +1,32 @@
+.event-ribbon {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 50px;
+  height: 100%;
+
+  background-color: $blue;
+  .icon {
+    @include icon(32px);
+  }
+  .event-info {
+    font-size: 1em;
+    .text {
+    	transform: rotate(90deg);
+    	transform-origin: 50% 50%;
+    }
+    p {
+      line-height: 50px;
+
+      display: inline-block;
+
+      padding: 0px 16px;
+    }
+    span {
+      color: white;
+    }
+  }
+  .social-media {
+  }
+}
