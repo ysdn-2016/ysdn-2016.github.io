@@ -5,28 +5,52 @@
 
   width: 50px;
   height: 100%;
+  padding: 0px;
+
+  transition: all .4s ease-out;
 
   background-color: $blue;
+  &:hover {
+    width: 60px;
+
+    transition: all .4s ease-in;
+  }
   .icon {
-    @include icon(32px);
+    font-weight: bold;
+    line-height: 50px;
+
+    text-align: center;
+
+    @include icon(50px, 40px);
   }
   .event-info {
     font-size: 1em;
-    .text {
-    	transform: rotate(90deg);
-    	transform-origin: 50% 50%;
-    }
+
+    position: absolute;
+    top: 0px;
+
+    width: 400px;
+
+    transform: rotate(90deg);
+    transform-origin: 0% 100%;
     p {
       line-height: 50px;
 
-      display: inline-block;
+      display: inline;
 
-      padding: 0px 16px;
+      padding: 0px 10px;
+      &:first-child {
+        padding-left: 0;
+      }
     }
     span {
       color: white;
     }
   }
   .social-media {
+    position: absolute;
+    bottom: 0;
+    color: black;
+    padding-bottom: 20px;
   }
 }
