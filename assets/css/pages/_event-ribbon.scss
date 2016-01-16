@@ -1,31 +1,31 @@
+$ribbon-width: 46px;
+
 .event-ribbon {
   position: fixed;
   top: 0;
   right: 0;
 
-  width: 50px;
+  width: $ribbon-width;
   height: 100%;
   padding: 0px;
 
-  transition: all .4s ease-out;
+  transition: all .4s;
 
   background-color: $blue;
   &:hover {
-    width: 60px;
+    transition: all .4s;
 
-    transition: all .4s ease-in;
+    background-color: darken($blue, 4%);
   }
   .icon {
     font-weight: bold;
-    line-height: 50px;
+    line-height: $ribbon-width;
 
     text-align: center;
 
-    @include icon(50px, 40px);
+    @include icon($ribbon-width, 40px);
   }
   .event-info {
-    font-size: 1em;
-
     position: absolute;
     top: 0px;
 
@@ -34,7 +34,7 @@
     transform: rotate(90deg);
     transform-origin: 0% 100%;
     p {
-      line-height: 50px;
+      line-height: $ribbon-width;
 
       display: inline;
 
@@ -50,7 +50,9 @@
   .social-media {
     position: absolute;
     bottom: 0;
+
+    padding-bottom: 12px;
+
     color: black;
-    padding-bottom: 20px;
   }
 }
