@@ -55,8 +55,8 @@ $black: #1E1E1E;
 $font-stack: 'Sofia Pro', -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 html {
-	font-family: -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-size: 16px;
+  font-family: -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 16px;
 }
 
 // Font smoothing hack
@@ -67,50 +67,50 @@ html, html a {
 
 a {
   font-family: 'Karla';
-	text-decoration: none;
-	color: inherit;
-	&:visited { color: inherit }
+  text-decoration: none;
+  color: inherit;
+  &:visited { color: inherit }
 }
 
 h1 {
-	font-family: $font-stack;
-	font-size: 60px;
-	font-weight: 500;
-	color: $black;
-	line-height: 64px;
+  font-family: $font-stack;
+  font-size: 60px;
+  font-weight: 500;
+  color: $black;
+  line-height: 64px;
 }
 
 h2 {
-	font-family: $font-stack;
-	font-size: 36px;
-	font-weight: 500;
-	color: $black;
-	line-height: 44px;
+  font-family: $font-stack;
+  font-size: 36px;
+  font-weight: 500;
+  color: $black;
+  line-height: 44px;
 }
 
 h3 {
-	font-family: $font-stack;
-	font-size: 24px;
-	font-weight: 500;
-	color: #000000;
-	line-height: 32px;
+  font-family: $font-stack;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 32px;
 }
 
 h4 {
-	font-family: $font-stack;
-	font-size: 14px;
-	font-weight: 500;
-	color: #AAAAAA;
-	letter-spacing: 0.87px;
-	line-height: 12px;
-	text-transform: uppercase;
+  font-family: $font-stack;
+  font-size: 14px;
+  font-weight: 500;
+  color: #AAAAAA;
+  letter-spacing: 0.87px;
+  line-height: 12px;
+  text-transform: uppercase;
 }
 
 p {
-	font-family: Karla-Regular;
-	font-size: 16px;
-	color: #000000;
-	line-height: 24px;
+  font-family: Karla-Regular;
+  font-size: 16px;
+  color: #000000;
+  line-height: 24px;
 }
 
 //Input

@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Karla:400,700);
+
+$font-stack: 'Sofia Pro', -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+html {
+	font-family: -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 16px;
+}
+
+// Font smoothing hack
+html, html a {
+    -webkit-font-smoothing: antialiased !important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:visited { color: inherit }
+}
+
+
+h1 {
+	font-family: $font-stack;
+	font-size: 60px;
+	font-weight: 500;
+	color: $black;
+	line-height: 64px;
+}
+
+h2 {
+	font-family: $font-stack;
+	font-size: 36px;
+	font-weight: 500;
+	color: $black;
+	line-height: 44px;
+}
+
+h3 {
+	font-family: $font-stack;
+	font-size: 24px;
+	font-weight: 500;
+	color: #000000;
+	line-height: 32px;
+}
+
+h4 {
+	font-family: $font-stack;
+	font-size: 14px;
+	font-weight: 500;
+	color: #AAAAAA;
+	letter-spacing: 0.87px;
+	line-height: 12px;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: Karla-Regular;
+	font-size: 16px;
+	color: #000000;
+	line-height: 24px;
+}
+
+//Input
+input {
+  border: 3px solid #000000;
+  padding: 10px;
+  background: rgba(255,255,255,0.5);
+  margin: 0 0 10px 0;
+  outline: none;
+  font-family: Karla-Regular;
+  font-size: 16px;
+  color: $black;
+  line-height: 19px;
+}
+
+.min-input{
+  border: none;
+  border-bottom: 3px solid #000000;
+}
+
+.btn-primary{
+  border: 3px solid #000000;
+  padding: 8px 15px;;
+  margin: 0 0 10px 0;
+  display: inline-block;
+  text-align: center;
+  font-family: $font-stack;
+  font-size: 24px;
+  color: $black;
+  line-height: 24px;
+  cursor: pointer;
+
+  &:hover {
+  background-color: $black;
+  color: white;
+  }
+}

@@ -1,0 +1,63 @@
+$ribbon-width: 46px;
+
+.event-ribbon {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: $ribbon-width;
+  height: 100%;
+  padding: 0px;
+
+  transition: all .4s;
+
+  background-color: $blue;
+  &.yellow {
+    background-color: $yellow;
+    .event-info span {
+    	color: rgba(0,0,0,0.4);
+    }
+  }
+  &:hover {
+    transition: all .4s;
+    // background-color: darken($ribbon-color, 4%);
+  }
+  .icon {
+    font-weight: bold;
+    line-height: $ribbon-width;
+
+    text-align: center;
+
+    @include icon($ribbon-width, 40px);
+  }
+  .event-info {
+    position: absolute;
+    top: 0px;
+
+    width: 400px;
+
+    transform: rotate(90deg);
+    transform-origin: 0% 100%;
+    p {
+      line-height: $ribbon-width;
+
+      display: inline;
+
+      padding: 0px 10px;
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+    span {
+      color: white;
+    }
+  }
+  .social-media {
+    position: absolute;
+    bottom: 0;
+
+    padding-bottom: 12px;
+
+    color: black;
+  }
+}
