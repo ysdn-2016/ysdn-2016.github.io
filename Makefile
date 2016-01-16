@@ -35,18 +35,19 @@ start: build
 	@bin/www
 
 watch: install build
-	@$(BIN)/onchange 'content/**/*.{md,yml}' 'layouts/**/*.html' -c 'make content' --silent & \
-		$(BIN)/onchange 'assets/css/**/*.scss' -c 'make styles' --silent & \
-		$(BIN)/onchange 'assets/{fonts,images}/**/*' -c 'make assets' --silent & \
+	@$(BIN)/onchange 'content/**/*.{md,yml}' 'layouts/**/*.html' -- make content & \
+		$(BIN)/onchange 'assets/css/**/*.scss' -- make styles & \
+		$(BIN)/onchange 'assets/{fonts,images}/**/*' -- make assets & \
 		$(BIN)/wtch --dir build 2>&1 >/dev/null & \
-		bin/www
+		bin/www & wait
 
 sync:
 	@mkdir -p content/students
 	@curl -s "$(API)/download" | tar -zxf - -C content/students --strip-components=1
 
 deploy:
-	@echo "Deploying branch \033[0;33m$(BRANCH)\033[0m to Github pages..."
+	@if [[ "$(BRANCH)" != "production" ]]; then sleep 0.5 && echo "\n\033[0;31mERROR:\033[0m Deployments can only happen in the \033[0;33mproduction\033[0m branch\nMerge your changes into \033[0;33mproduction\033[0m and try again.\n" && tput bel && exit 1; fi
+	@echo "Deploying branch \033[0;33mproduction\033[0m to Github pages..."
 	@make clean
 	@NODE_ENV=production make build
 	@(cd build && \
