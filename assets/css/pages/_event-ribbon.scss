@@ -12,10 +12,15 @@ $ribbon-width: 46px;
   transition: all .4s;
 
   background-color: $blue;
+  &.yellow {
+    background-color: $yellow;
+    .event-info span {
+    	color: rgba(0,0,0,0.4);
+    }
+  }
   &:hover {
     transition: all .4s;
-
-    background-color: darken($blue, 4%);
+    // background-color: darken($ribbon-color, 4%);
   }
   .icon {
     font-weight: bold;

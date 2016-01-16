@@ -1,4 +1,7 @@
-<section class="event-ribbon">
+<section class="event-ribbon
+		{% if layout == 'projects.html' %}yellow{% endif %}
+		{% if layout == 'students.html' %}blue{% endif %}
+"> <!-- ^ section specific color examples -->
 	<a href="#" class="event-ribbon-trigger">
 		<i class="icon right-arrow">&rarr;</i>
 		<div class="ribbon event-info">
