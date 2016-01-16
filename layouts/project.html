@@ -2,7 +2,7 @@
 
 {% block body %}
 	<h2>{{ title }}</h2>
-	<h3>By {{ owner }}</h3>
+	<h3>By {{ owner.name }}</h3>
 
 	{{ contents | safe }}
 {% endblock %}

@@ -24,7 +24,7 @@ DOMAIN     = ysdn2016.com
 REPO       = ysdn-2016/ysdn-2016.github.io
 BRANCH     = $(shell git rev-parse --abbrev-ref HEAD)
 
-API        = http://159.203.25.109:19320
+API        = https://api.ysdn2016.com
 
 #
 # Tasks
@@ -90,7 +90,7 @@ node_modules: package.json
 	@npm install
 
 build/index.html: bin/build $(CONTENT) $(LAYOUTS)
-	@bin/build 2>&1 >&-
+	@bin/build
 
 build/assets/%: assets/%
 	@mkdir -p $(@D)

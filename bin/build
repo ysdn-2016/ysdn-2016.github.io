@@ -13,8 +13,7 @@ var branch = require('metalsmith-branch')
 var copy = require('metalsmith-copy')
 var paths = require('metalsmith-paths')
 var yaml = require('../lib/yaml')
-
-var args = process.argv.slice(2)
+var projects = require('../lib/projects')
 
 /**
  * Build metadata
@@ -47,7 +46,7 @@ var site = metalsmith(__dirname)
 	.use(paths())
 	.use(collections({
 		students: { pattern: 'students/**/student.md', refer: false },
-		projects: { pattern: 'projects/**/project.md', refer: false }
+		projects: { pattern: 'students/**/project.md', refer: false }
 	}))
 
 /**
@@ -73,7 +72,7 @@ site.use(branch('students/**/student.md')
 		gfm: true
 	}))
 	.use(typography())
-	.use(permalinks('students/:name'))
+	.use(permalinks(':name'))
 	.use(layouts({
 		engine: 'swig',
 		default: 'student.html',
@@ -91,7 +90,8 @@ site.use(branch('students/**/project.md')
 		gfm: true
 	}))
 	.use(typography())
-	.use(permalinks('students/:owner/:title'))
+	.use(projects())
+	.use(permalinks(':owner_name/:title'))
 	.use(layouts({
 		engine: 'swig',
 		default: 'project.html',
@@ -100,6 +100,9 @@ site.use(branch('students/**/project.md')
 	}))
 )
 
+/**
+ * Build the site
+ */
 site.build(err => {
 	if (err) throw err
 })
