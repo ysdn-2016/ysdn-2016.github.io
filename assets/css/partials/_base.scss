@@ -1,0 +1,124 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: $karla;
+	font-size: 18px;
+}
+
+a {
+	color: inherit;
+	font-family: "Karla";
+	text-decoration: none;
+	&:visited {
+		color: inherit;
+	}
+}
+
+/**
+ *
+ * Headers
+ *
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-family: $sofia;
+	font-weight: bold;
+	text-rendering: optimizeLegibility;
+}
+
+h1 {
+	color: $black;
+	font-size: 60px;
+	line-height: 64px;
+}
+
+h2 {
+	color: $black;
+	font-size: 36px;
+	line-height: 44px;
+}
+
+h3 {
+	color: $black;
+	font-size: 24px;
+	line-height: 32px;
+}
+
+h4 {
+	color: #aaa;
+	font-size: 14px;
+	line-height: 12px;
+	letter-spacing: 0.87px;
+	text-transform: uppercase;
+}
+
+/**
+ *
+ * Headers
+ *
+ */
+
+p {
+	color: $black;
+	font-family: $karla;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+/**
+ *
+ * Forms
+ *
+ */
+
+input {
+	background: rgba(255, 255, 255, 0.5);
+	border: 3px solid #000;
+	outline: none;
+	margin: 0 0 10px 0;
+	padding: 10px;
+	color: $black;
+	font-family: $karla;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.min-input {
+	border: none;
+	border-bottom: 3px solid #000;
+}
+
+.btn-primary {
+	border: 3px solid #000;
+	display: inline-block;
+	margin: 0 0 10px 0;
+	padding: 8px 15px;
+	color: $black;
+	font-family: $sofia;
+	font-size: 24px;
+	line-height: 24px;
+	text-align: center;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $black;
+		color: white;
+	}
+}
+
+
+//
+// Elements
+//
+
+.page {
+	margin-right: $ribbon-width;
+}

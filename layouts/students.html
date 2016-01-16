@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block body %}
+{% block container %}
 	<div class="list">
 	{% for student in students %}
 		<a href="{{ student.path.href }}" class="student">{{ student.name }}</a>

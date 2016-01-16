@@ -1,10 +1,10 @@
-<header>
+<header class="header">
   <a href="/"><div class="logo"></div></a>
   <div class="nav">
-    <a href="/projects/" {% if layout == 'projects.html' %}class="active"{% endif %}>Projects</a>
-    <a href="/students/" {% if layout == 'students.html' %}class="active"{% endif %}>Students</a>
-    <a href="/sponsor/" {% if layout == 'sponsor.html' %}class="active"{% endif %}>Sponsor</a>
-    <a href="/event/" {% if layout == 'event.html' %}class="active"{% endif %}>Event Details</a>
+    <a href="/projects/" {% if id == 'projects' %}class="active"{% endif %}>Projects</a>
+    <a href="/students/" {% if id == 'students' %}class="active"{% endif %}>Students</a>
+    <a href="/sponsor/" {% if id == 'sponsors' %}class="active"{% endif %}>Sponsor</a>
+    <a href="/event/" {% if id == 'event' %}class="active"{% endif %}>Event Details</a>
   </div>
   <div class="social">
   	<a href="https://www.facebook.com/ysdnmade/?fref=ts" target="_blank"><i class="fa fa-fw fa-lg fa-facebook"></i></a>
