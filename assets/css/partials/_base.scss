@@ -43,8 +43,22 @@ h6 {
 	margin: 0;
 	font-family: $sofia;
 	font-weight: bold;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
 	text-rendering: optimizeLegibility;
+	   -moz-font-feature-settings: 'ss01' 1;
+	    -ms-font-feature-settings: 'ss01' 1;
+	     -o-font-feature-settings: 'ss01' 1;
+	-webkit-font-feature-settings: 'ss01' 1;
+	        font-feature-settings: 'ss01' 1;
 }
 
 h1 {
@@ -121,7 +135,6 @@ input {
 	font-size: 24px;
 	line-height: 24px;
 	text-align: center;
-
 	&:hover {
 		background-color: white;
 		color: $black !important;
