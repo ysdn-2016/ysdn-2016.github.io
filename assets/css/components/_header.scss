@@ -1,12 +1,12 @@
 
 .header {
-	background: #fff;
 	position: fixed;
 	top: 0;
-	left: 0;
 	right: $ribbon-width;
-	padding: 20px 36px;
+	left: 0;
+	background: #fff;
 	height: $header-height;
+	padding: 20px 36px;
 	font-family: $sofia;
 	.logo,
 	.nav,
@@ -24,24 +24,25 @@
 		max-width: 100%;
 	}
 	.logo {
+		background-color: black;
 		float: left;
 		width: 120px;
 		height: 40px;
-		background-color: black;
+
 		-webkit-mask: url(images/logo.svg) no-repeat 50% 50%;
 		        mask: url(images/logo.svg) no-repeat 50% 50%;
 	}
 	.nav {
 		position: relative;
 		top: 50%;
-		transform: translateY(-50%);
 		display: inline-block;
 		float: left;
 		vertical-align: bottom;
+		transform: translateY(-50%);
 		a {
 			margin-left: 30px;
 			color: #1b2020;
-			font-size: 0.875em;
+			font-size: .875em;
 			font-weight: 700;
 			line-height: 40px;
 			text-decoration: none;

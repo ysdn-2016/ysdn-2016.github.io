@@ -2,14 +2,16 @@
 	box-sizing: border-box;
 }
 
-html, body{
-    height:100%
+html,
+body {
+	height: 100%;
 }
 
 html {
 	font-family: $karla;
 	font-size: 18px;
 	line-height: 1.6em;
+
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -41,6 +43,7 @@ h6 {
 	margin: 0;
 	font-family: $sofia;
 	font-weight: bold;
+
 	text-rendering: optimizeLegibility;
 }
 
@@ -66,7 +69,7 @@ h4 {
 	color: #aaa;
 	font-size: 14px;
 	line-height: 12px;
-	letter-spacing: 0.87px;
+	letter-spacing: .87px;
 	text-transform: uppercase;
 }
 
@@ -90,8 +93,8 @@ p {
  */
 
 input {
-	background: rgba(255, 255, 255, 0.5);
-	border: 1px solid #000000;
+	border: 1px solid #000;
+	background: rgba(255, 255, 255, .5);
 	outline: none;
 	margin: 0 0 10px 0;
 	padding: 10px;
@@ -99,7 +102,6 @@ input {
 	font-family: $karla;
 	font-size: 16px;
 	line-height: 19px;
-
 }
 
 .min-input {
@@ -108,17 +110,17 @@ input {
 }
 
 .btn-primary {
+	cursor: pointer;
 	border: 1px solid #000;
+	background-color: $black;
 	display: inline-block;
 	margin: 0 0 10px 0;
 	padding: 9px 15px 5px 15px;
 	color: $white;
-	background-color: $black;
 	font-family: $sofia;
 	font-size: 24px;
 	line-height: 24px;
 	text-align: center;
-	cursor: pointer;
 
 	&:hover {
 		background-color: white;
@@ -132,18 +134,18 @@ input {
 //
 
 .container {
+	position: relative;
+	min-height: 100%;
 	// NB: this pushes the page to the right if the ribbon is present, which helps
 	// keep things properly centred and nice once we remove the ribbon after the
 	// event.
 	margin-right: $ribbon-width;
-    min-height: 100%;
-    position: relative;
 }
 
 .main {
+	max-width: 1080px;
 	// Use padding so that footer will properly display on pages without enough 
 	// content to fill the page vertically.
 	margin: 0 auto;
 	padding: $header-height + 60px 20px 260px;
-	max-width: 1080px;
 }

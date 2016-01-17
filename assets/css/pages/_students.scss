@@ -1,12 +1,9 @@
 
-.page-students {
-
-}
-
 .student-grid {
 	display: flex;
-	flex-wrap: wrap;
+
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .student-preview {
@@ -16,6 +13,6 @@
 
 .student-preview-name {
 	font-family: $sofia;
-	font-weight: bold;
 	font-size: 14px;
+	font-weight: bold;
 }

@@ -1,16 +1,16 @@
-@import "modules/variables";
-@import "modules/mixins";
+@import 'modules/variables';
+@import 'modules/mixins';
 
-@import "partials/normalize";
-@import "partials/font-face";
-@import "partials/base";
+@import 'partials/normalize';
+@import 'partials/font-face';
+@import 'partials/base';
 
-@import "components/header";
-@import "components/footer";
-@import "components/subscribe";
-@import "components/event-ribbon";
+@import 'components/header';
+@import 'components/footer';
+@import 'components/subscribe';
+@import 'components/event-ribbon';
 
-@import "pages/home";
-@import "pages/projects";
-@import "pages/students";
-@import "pages/event";
+@import 'pages/home';
+@import 'pages/projects';
+@import 'pages/students';
+@import 'pages/event';

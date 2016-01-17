@@ -1,84 +1,62 @@
 
-.footer
-{
-    font-family: $sofia;
-
-    position: absolute;
-    right: $ribbon-width;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    padding: 40px 0 0;
-
-    background: #fff;
-    .feature
-    {
-        text-align: center;
-    }
-    .feature p,
-    .feature a
-    {
-        font-family: $sofia;
-        font-size: 21px;
-        font-weight: bold;
-        line-height: 32px;
-    }
-    .bottom-bar
-    {
-        width: 100%;
-        height: $footer-height;
-        margin: 0 auto;
-        margin-top: 40px;
-        padding: 0 30px;
-
-        border-top: 1px black solid;
-    }
-    .nav,
-    .info
-    {
-        position: relative;
-        top: 50%;
-
-        transform: translateY(-50%);
-    }
-    .nav
-    {
-        float: left;
-
-        vertical-align: bottom;
-        a
-        {
-            font-size: .875em;
-            font-weight: 700;
-            line-height: 30px;
-
-            margin-right: 20px;
-            padding-bottom: 2px;
-
-            text-decoration: none;
-            text-transform: uppercase;
-
-            color: #1b2020;
-            &:hover
-            {
-                padding-bottom: 0;
-
-                border-bottom: 2px solid black;
-            }
-        }
-    }
-    .info
-    {
-        float: right;
-    }
-    .info p
-    {
-        font-family: $sofia;
-        font-weight: bold;
-
-        display: inline-block;
-
-        margin: 0 10px;
-    }
+.footer {
+	position: absolute;
+	right: $ribbon-width;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	width: 100%;
+	padding: 40px 0 0;
+	font-family: $sofia;
+	.feature {
+		text-align: center;
+	}
+	.feature p,
+	.feature a {
+		font-family: $sofia;
+		font-size: 21px;
+		font-weight: bold;
+		line-height: 32px;
+	}
+	.bottom-bar {
+		border-top: 1px black solid;
+		width: 100%;
+		height: $footer-height;
+		margin: 0 auto;
+		margin-top: 40px;
+		padding: 0 30px;
+	}
+	.nav,
+	.info {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.nav {
+		float: left;
+		vertical-align: bottom;
+		a {
+			margin-right: 20px;
+			padding-bottom: 2px;
+			color: #1b2020;
+			font-size: .875em;
+			font-weight: 700;
+			line-height: 30px;
+			text-decoration: none;
+			text-transform: uppercase;
+			&:hover {
+				border-bottom: 2px solid black;
+				padding-bottom: 0;
+			}
+		}
+	}
+	.info {
+		float: right;
+	}
+	.info p {
+		display: inline-block;
+		margin: 0 10px;
+		font-family: $sofia;
+		font-weight: bold;
+	}
 }
