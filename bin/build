@@ -12,8 +12,11 @@ var layouts = require('metalsmith-layouts')
 var branch = require('metalsmith-branch')
 var copy = require('metalsmith-copy')
 var paths = require('metalsmith-paths')
+var swig = require('metalsmith-swig-helpers')
+
 var yaml = require('../lib/yaml')
 var projects = require('../lib/projects')
+var filters = require('../lib/filters/')
 
 /**
  * Build metadata
@@ -44,6 +47,7 @@ var site = metalsmith(__dirname)
 	.clean(build.clean)
 	.metadata(metadata)
 	.use(paths())
+	.use(swig({ filters }))
 	.use(collections({
 		students: { pattern: 'students/**/student.md', refer: false },
 		projects: { pattern: 'students/**/project.md', refer: false }
