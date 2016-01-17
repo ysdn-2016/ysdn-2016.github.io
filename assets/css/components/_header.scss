@@ -5,71 +5,30 @@
 	right: $ribbon-width;
 	left: 0;
 	background: #fff;
+	display: flex;
+	justify-content: space-between;
 	height: $header-height;
 	padding: 20px 36px;
-	font-family: $sofia;
-	.logo,
-	.nav,
-	.social,
-	.note {
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	a {
-		font-size: 1.5em;
-		text-decoration: none;
-	}
-	img {
-		max-width: 100%;
-	}
 	.logo {
-		background-color: black;
-		float: left;
+		background: url(images/logo.svg) no-repeat 50% 50%;
 		width: 120px;
 		height: 40px;
-
-		-webkit-mask: url(images/logo.svg) no-repeat 50% 50%;
-		        mask: url(images/logo.svg) no-repeat 50% 50%;
 	}
 	.nav {
 		position: relative;
-		top: 50%;
-		display: inline-block;
-		float: left;
-		vertical-align: bottom;
-		transform: translateY(-50%);
+		color: #1b2020;
+		font-family: $sofia;
+		font-size: .875rem;
+		font-weight: 700;
+		line-height: 40px;
+		text-decoration: none;
+		text-transform: uppercase;
 		a {
 			margin-left: 30px;
-			color: #1b2020;
-			font-size: .875em;
-			font-weight: 700;
-			line-height: 40px;
-			text-decoration: none;
-			text-transform: uppercase;
 			&:hover {
 				border-bottom: 2px solid black;
 				padding-bottom: 2px;
 			}
-		}
-	}
-	.note {
-		display: inline-block;
-		float: right;
-		vertical-align: bottom;
-		p {
-			font-size: 1em;
-			font-weight: bold;
-		}
-	}
-	.social {
-		display: inline-block;
-		float: right;
-		margin-left: 26px;
-		line-height: 56px;
-		vertical-align: bottom;
-		a {
-			padding: 0 6px;
 		}
 	}
 }
