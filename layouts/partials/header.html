@@ -5,4 +5,9 @@
     <a href="/students/" {% if id == 'students' %}class="active"{% endif %}>The Cast</a>
     <a href="/sponsor/" {% if id == 'sponsors' %}class="active"{% endif %}>Sponsors</a>
   </div>
+  {% if type == 'case-study' || type == 'standard' %}
+		{% TODO: Project sticky header%}
+	{% endif %}
 </header>
+
+
