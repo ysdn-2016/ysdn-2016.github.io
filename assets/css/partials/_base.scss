@@ -148,5 +148,31 @@ input {
 	// Use padding so that footer will properly display on pages without enough
 	// content to fill the page vertically.
 	margin: 0 auto;
-	padding: $header-height + 60px 20px 260px;
+	padding: $header-height + 60px 20px 60px;
+}
+
+.row {
+	box-sizing: border-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.col-4 {
+	box-sizing: border-box;
+	flex: 0 0 auto;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	flex-basis: 33.333%;
+	max-width: 33.333%;
+	@media only screen and (max-width: 48em) {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
 }
