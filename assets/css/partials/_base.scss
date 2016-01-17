@@ -7,13 +7,11 @@ body {
 	height: 100%;
 }
 
-html {
+body {
 	font-family: $karla;
 	font-size: 18px;
 	font-feature-settings: 'salt' 1;
 	line-height: 1.6em;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 a {

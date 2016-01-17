@@ -5,7 +5,7 @@
 	{% for project in projects %}
 		<a href="{{ project.path.href }}" class="project-preview">
 			<div class="project-preview-image">
-				<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=888888&txtclr=888888&txt=250%C3%97250&w=250&h=350" />
+				<img src="{{ project.thumbnail.url }}" />
 			</div>
 			<div class="project-preview-title">{{ project.title }}</div>
 		</a>

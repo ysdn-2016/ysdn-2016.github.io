@@ -1,0 +1,18 @@
+<article class="project project--standard">
+	<div class="project-details">
+		<header class="project-header">
+			<h1 class="project-title">{{ title }}</h1>
+			<h3 class="project-owner">{{ owner.name }}</h3>
+		</header>
+		<section class="project-content">
+			{{ contents | safe }}
+		</section>
+		<footer class="project-footer">
+		</footer>
+	</div>
+	<div class="project-assets">
+		{% for asset in assets %}
+			<img src="{{ asset.url }}" />
+		{% endfor %}
+	</div>
+</article>

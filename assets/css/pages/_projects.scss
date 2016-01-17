@@ -3,3 +3,32 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+
+/**
+ * Project Previews
+ */
+.project-preview {
+	flex: 1 0 33%;
+}
+
+/**
+ * Full-view Projects
+ */
+.project {
+	margin-bottom: 4rem;
+}
+
+/**
+ * Standard Projects
+ */
+.project--standard {
+	display: flex;
+	.project-details,
+	.project-assets {
+		flex: 1 0 50%;
+	}
+}
+
+/**
+ * Case Study Projects
+ */
