@@ -4,8 +4,8 @@
 	top: 0;
 	right: $ribbon-width;
 	left: 0;
-	background: #fff;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 	height: $header-height;
 	padding: 20px 36px;
@@ -18,15 +18,14 @@
 		position: relative;
 		color: #1b2020;
 		font-family: $sofia;
-		font-size: .875rem;
-		font-weight: 700;
+		font-size: 1.25rem;
+		font-weight: bold;
 		line-height: 40px;
 		text-decoration: none;
-		text-transform: uppercase;
 		a {
 			margin-left: 30px;
 			&:hover {
-				border-bottom: 2px solid black;
+				border-bottom: 2px currentColor solid;
 				padding-bottom: 2px;
 			}
 		}
