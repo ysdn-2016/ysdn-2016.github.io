@@ -2,6 +2,10 @@
 	box-sizing: border-box;
 }
 
+html, body{
+    height:100%
+}
+
 html {
 	font-family: $karla;
 	font-size: 18px;
@@ -87,7 +91,7 @@ p {
 
 input {
 	background: rgba(255, 255, 255, 0.5);
-	border: 3px solid #000;
+	border: 1px solid #000000;
 	outline: none;
 	margin: 0 0 10px 0;
 	padding: 10px;
@@ -95,6 +99,7 @@ input {
 	font-family: $karla;
 	font-size: 16px;
 	line-height: 19px;
+
 }
 
 .min-input {
@@ -103,11 +108,12 @@ input {
 }
 
 .btn-primary {
-	border: 3px solid #000;
+	border: 1px solid #000;
 	display: inline-block;
 	margin: 0 0 10px 0;
-	padding: 8px 15px;
-	color: $black;
+	padding: 9px 15px 5px 15px;
+	color: $white;
+	background-color: $black;
 	font-family: $sofia;
 	font-size: 24px;
 	line-height: 24px;
@@ -115,8 +121,8 @@ input {
 	cursor: pointer;
 
 	&:hover {
-		background-color: $black;
-		color: white;
+		background-color: white;
+		color: $black !important;
 	}
 }
 
@@ -130,11 +136,14 @@ input {
 	// keep things properly centred and nice once we remove the ribbon after the
 	// event.
 	margin-right: $ribbon-width;
+    min-height: 100%;
+    position: relative;
 }
 
 .main {
+	// Use padding so that footer will properly display on pages without enough 
+	// content to fill the page vertically.
 	margin: 0 auto;
-	margin-top: $header-height;
-	padding: 60px 20px 0;
+	padding: $header-height + 60px 20px 260px;
 	max-width: 1080px;
 }

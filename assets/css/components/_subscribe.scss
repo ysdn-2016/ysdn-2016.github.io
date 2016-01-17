@@ -1,0 +1,18 @@
+.subscribe {
+	display: inline-block;
+	font-family: $sofia;
+	font-weight: bold;
+	input{
+		margin: 0;
+		position: relative;
+		top: -1px;
+	}
+	a {
+		font-size: 16px;
+		line-height: 25px;
+		display: inline-block;
+		margin: 0;
+		padding: 7px 20px;
+		border-left: 0;
+	}
+}
