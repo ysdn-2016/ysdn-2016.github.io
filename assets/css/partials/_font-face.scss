@@ -1,41 +1,37 @@
 @font-face {
 	font-family: 'Sofia';
-	font-weight: normal;
-	font-style: normal;
-
 	src: url('/assets/fonts/SofiaPro-Light.woff2') format('woff2'),
 	url('/assets/fonts/SofiaPro-Light.woff') format('woff'),
 	url('/assets/fonts/SofiaPro-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Sofia';
-	font-weight: normal;
-	font-style: italic;
-
 	src: url('/assets/fonts/SofiaPro-LightItalic.woff2') format('woff2'),
 	url('/assets/fonts/SofiaPro-LightItalic.woff') format('woff'),
 	url('/assets/fonts/SofiaPro-LightItalic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
 }
 
 @font-face {
 	font-family: 'Sofia';
-	font-weight: bold;
-	font-style: normal;
-
 	src: url('/assets/fonts/SofiaPro-Semibold.woff2') format('woff2'),
 	url('/assets/fonts/SofiaPro-Semibold.woff') format('woff'),
 	url('/assets/fonts/SofiaPro-Semibold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Sofia';
-	font-weight: bold;
-	font-style: italic;
-
 	src: url('/assets/fonts/SofiaPro-SemiboldItalic.woff2') format('woff2'),
 	url('/assets/fonts/SofiaPro-SemiboldItalic.woff') format('woff'),
 	url('/assets/fonts/SofiaPro-SemiboldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Karla:400,700);

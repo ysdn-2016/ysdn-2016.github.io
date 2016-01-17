@@ -64,6 +64,9 @@ deploy:
 lint:
 	@$(BIN)/xo
 
+comb:
+	@csscomb assets/css -v
+
 # TODO: add tests
 test: lint
 

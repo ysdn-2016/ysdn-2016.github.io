@@ -10,8 +10,8 @@ body {
 html {
 	font-family: $karla;
 	font-size: 18px;
+	font-feature-settings: 'salt' 1;
 	line-height: 1.6em;
-
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -43,7 +43,6 @@ h6 {
 	margin: 0;
 	font-family: $sofia;
 	font-weight: bold;
-
 	text-rendering: optimizeLegibility;
 }
 
@@ -144,7 +143,7 @@ input {
 
 .main {
 	max-width: 1080px;
-	// Use padding so that footer will properly display on pages without enough 
+	// Use padding so that footer will properly display on pages without enough
 	// content to fill the page vertically.
 	margin: 0 auto;
 	padding: $header-height + 60px 20px 260px;

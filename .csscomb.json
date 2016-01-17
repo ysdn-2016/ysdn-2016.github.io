@@ -104,14 +104,23 @@
 		"overflow-x",
 		"overflow-y",
 		"opacity",
+
 		"clip",
 		"zoom",
+		"pointer-events",
+		"user-select",
+
+		"flex",
+		"flex-align",
+		"flex-basis",
 		"flex-direction",
+		"flex-grow",
 		"flex-order",
 		"flex-pack",
-		"flex-align",
-		"user-select",
-		"pointer-events",
+		"flex-wrap",
+		"align-items",
+		"align-self",
+		"justify-content",
 
 		"box-sizing",
 		"width",
@@ -144,6 +153,7 @@
 		"color",
 		"font",
 		"font-family",
+		"src",
 		"font-size",
 		"font-weight",
 		"font-style",
@@ -154,6 +164,7 @@
 		"font-emphasize",
 		"font-emphasize-position",
 		"font-emphasize-style",
+		"font-feature-settings",
 		"font-smooth",
 		"hyphens",
 		"line-height",
@@ -172,6 +183,7 @@
 		"text-overflow",
 		"text-overflow-ellipsis",
 		"text-overflow-mode",
+		"text-rendering",
 		"text-shadow",
 		"text-transform",
 		"text-wrap",
@@ -203,6 +215,9 @@
 		"animation-timing-function",
 		"animation-delay",
 		"animation-iteration-count",
-		"animation-direction"
+		"animation-direction",
+
+		"-webkit-font-smoothing",
+		"-moz-osx-font-smoothing"
 	]
 }
