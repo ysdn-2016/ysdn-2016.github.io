@@ -23,9 +23,11 @@
  */
 .project--standard {
 	display: flex;
-	.project-details,
+	.project-details {
+		flex: 1 0 41.667%;
+	}
 	.project-assets {
-		flex: 1 0 50%;
+		flex: 1 0 58.333%;
 	}
 }
 
