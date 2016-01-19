@@ -72,6 +72,8 @@ test: lint
 
 clean:
 	@rm -rf build
+	@rm -rf content/students
+
 clean-deps:
 	@rm -rf node_modules
 
