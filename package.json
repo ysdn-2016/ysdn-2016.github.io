@@ -18,9 +18,14 @@
     "url": "https://github.com/ysdn-2016/ysdn-2016.github.io/issues"
   },
   "homepage": "https://github.com/ysdn-2016/ysdn-2016.github.io#readme",
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "masonry-layout": "^4.0.0",
+    "page": "^1.6.4"
+  },
   "devDependencies": {
     "autoprefixer": "^6.1.0",
+    "browserify": "^13.0.0",
     "chalk": "^1.1.1",
     "cssnano": "^3.3.2",
     "garnish": "^4.1.1",
@@ -47,6 +52,7 @@
     "onchange": "^2.0.0",
     "postcss-cli": "^2.3.3",
     "swig": "^1.4.2",
+    "watchify": "^3.7.0",
     "wtch": "^4.0.1"
   },
   "xo": {

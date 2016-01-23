@@ -38,6 +38,7 @@ watch: install build
 	@$(BIN)/onchange 'content/**/*.{md,yml}' 'layouts/**/*.html' -- make content & \
 		$(BIN)/onchange 'assets/css/**/*.scss' -- make styles & \
 		$(BIN)/onchange 'assets/{fonts,images}/**/*' -- make assets & \
+		$(BIN)/watchify assets/js/index.js -o build/assets/bundle.js & \
 		$(BIN)/wtch --dir build 2>&1 >/dev/null & \
 		bin/www & wait
 
@@ -108,7 +109,7 @@ build/assets/bundle.css: $(STYLES)
 
 build/assets/bundle.js: $(SCRIPTS)
 	@mkdir -p $(@D)
-	@cp assets/js/index.js $@
+	@browserify assets/js/index.js -o $@
 
 #
 # Phony
