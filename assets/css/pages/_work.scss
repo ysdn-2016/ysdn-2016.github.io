@@ -1,22 +1,54 @@
 
+$project-grid-gutter: 60px;
+
 .project-grid {
+	column-count: 3;
+	column-gap: $project-grid-gutter;
+	// HACK: -webkit-perspective fixes bugs for chrome
+	-webkit-perspective: 1;
+}
+
+/**
+ * Navigation
+ */
+
+.project-nav {
 	display: flex;
-	flex-wrap: wrap;
+	justify-content: space-between;
+	font-family: $sofia;
 }
 
 /**
  * Project Previews
  */
+
 .project-preview {
-	flex: 1 0 33%;
+	@extend %avoid-column-break;
+	display: block;
+	// NB: 40px is the approximate height of the project labels
+	margin-bottom: $project-grid-gutter - 25px;
+}
+
+.project-preview-details {
+	margin-top: 14px;
+	font-family: $sofia;
+}
+
+.project-preview-title {
+	font-size: 19px;
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+.project-preview-student {
+	color: #888;
+	font-size: 15px;
 }
 
 /**
  * Full-view Projects
  */
-.project {
-	margin-bottom: 4rem;
-}
+
 
 /**
  * Standard Projects

@@ -1,14 +1,32 @@
 {% extends 'base.html' %}
 
 {% block main %}
+	<nav class="project-nav">
+		<div class="project-nav-categories">
+			<a href="#" data-filter-id="*">All</a>
+			<a href="#" data-filter-id="communication">Communication</a>
+			<a href="#" data-filter-id="physical">Physical</a>
+			<a href="#" data-filter-id="information">Information</a>
+			<a href="#" data-filter-id="interactive">Interactive</a>
+		</div>
+		<div class="project-nav-view-controls">
+			<input type="text" autocomplete="off" placeholder="Search" />
+		</div>
+	</nav>
+	<div class="project-list">
+	</div>
 	<div class="project-grid">
+		<div class="project-grid-sizer"></div>
+		<div class="project-grid-gutter-sizer"></div>
 	{% for project in projects %}
 		<a href="{{ project.path.href }}" class="project-preview">
 			<div class="project-preview-image">
 				<img src="{{ project.thumbnail.url }}" />
 			</div>
-			<div class="project-preview-title">{{ project.title }}</div>
-			<div class="project-preview-student">{{ project.owner | json }}</div>
+			<div class="project-preview-details">
+				<div class="project-preview-title">{{ project.title }}</div>
+				<div class="project-preview-student">{{ project.owner.name }}</div>
+			</div>
 		</a>
 	{% endfor %}
 	</div>

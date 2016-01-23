@@ -17,7 +17,7 @@ $(function () {
 	router('/work/:project/', routes.project)
 	router('/students/', routes.students)
 	router('/students/:student/', routes.student)
-	router('/event', routes.event)
+	router('/event/', routes.event)
 	router.start({ click: false })
 
 })

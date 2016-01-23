@@ -1,0 +1,8 @@
+
+%avoid-column-break {
+	// NOTE: these are prefixed because they are non-standard and won't be
+	// accomodated for by autoprefixer
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+}
