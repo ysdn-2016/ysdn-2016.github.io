@@ -1,5 +1,5 @@
 
-var masonry = require('masonry')
+var masonry = require('masonry-layout')
 
 module.exports = function () {
 }
