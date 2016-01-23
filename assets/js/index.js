@@ -10,10 +10,6 @@ var routes = {
 	student:  require('./routes/student'),
 	event:    require('./routes/event')
 }
-var home = require('./routes/home')
-var work = require('./routes/work')
-var students = require('./routes/students')
-var event = require('./routes/event')
 
 $(function () {
 
