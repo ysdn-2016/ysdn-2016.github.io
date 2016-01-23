@@ -47,9 +47,24 @@ sync:
 	@curl -s "$(API)/download" | tar -zxf - -C content/students --strip-components=1
 
 deploy:
+	@echo "Deploying branch \033[0;33m$(BRANCH)\033[0m to Surge.sh..."
+	@make clean
+	@make sync
+	@NODE_ENV=production make build
+	@(cd build && \
+		git init -q . && \
+		git add . && \
+		git commit -q -m "Deployment (auto-commit)" && \
+		echo "\033[0;90m" && \
+		surge . https://ysdn2016-staging.surge.sh \
+		echo "\033[0m")
+	@echo "Deployed to \033[0;32mhttps://ysdn2016-staging.surge.sh/\033[0m"
+
+deploy\:production:
 	@if [[ "$(BRANCH)" != "production" ]]; then sleep 0.5 && echo "\n\033[0;31mERROR:\033[0m Deployments can only happen in the \033[0;33mproduction\033[0m branch\nMerge your changes into \033[0;33mproduction\033[0m and try again.\n" && tput bel && exit 1; fi
 	@echo "Deploying branch \033[0;33mproduction\033[0m to Github pages..."
 	@make clean
+	@make sync
 	@NODE_ENV=production make build
 	@(cd build && \
 		echo "$(DOMAIN)" > CNAME && \
