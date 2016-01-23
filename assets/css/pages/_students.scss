@@ -1,3 +1,87 @@
+.student-nav {
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+
+	flex-flow: column nowrap;
+	p {
+		font-size: 1.1em;
+		&:first-child {
+			border-right: 1px solid;
+		}
+		a {
+			color: lighten(black, 70%);
+			&.active, &:hover {
+				color: black;
+			}
+			padding: 0 8px;
+			&:first-child {
+				padding-left: 16px;
+			}
+		}
+	}
+	i {
+		font-size: 0.7em;
+		position: relative;
+		bottom: 1px;
+	}
+	.row {
+		width: 100%;
+		display: flex;
+		height: 40px;
+		line-height: 40px;
+
+		flex-flow: row nowrap;
+	}
+	.col {
+		flex: 1;
+		flex-direction: column;
+		font-size: 1.1em;
+	}
+	.student-filters {
+		flex-grow: 3;
+	}
+	.student-view {
+		text-align: right;
+	}
+}
+
+.student-list {
+	display: flex;
+	justify-content: space-between;
+
+	flex-flow: column nowrap;
+	header {
+		.col {
+			font-size: .9em;
+		}
+	}
+	.row {
+		border-bottom: 1px solid black;
+		display: flex;
+		height: 60px;
+		line-height: 60px;
+
+		flex-flow: row nowrap;
+	}
+	.col {
+		flex: 1;
+		flex-direction: column;
+		font-size: 1.1em;
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+			margin-right: 14px;
+		}
+	}
+	.students-list-student {
+		// flex-grow: 2;
+	}
+	.student-list-category {
+		flex-grow: 1.5;
+	}
+}
 
 .student-grid {
 	display: flex;
