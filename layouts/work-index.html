@@ -8,6 +8,7 @@
 				<img src="{{ project.thumbnail.url }}" />
 			</div>
 			<div class="project-preview-title">{{ project.title }}</div>
+			<div class="project-preview-student">{{ project.owner | json }}</div>
 		</a>
 	{% endfor %}
 	</div>
