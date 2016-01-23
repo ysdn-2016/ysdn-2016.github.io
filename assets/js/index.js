@@ -19,6 +19,6 @@ $(function () {
 	router('/students/', routes.students)
 	router('/students/:student/', routes.student)
 	routes('/event', routes.event)
-	router.start()
+	router.start({ click: false })
 
 })
