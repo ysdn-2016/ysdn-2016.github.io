@@ -52,6 +52,7 @@ var site = metalsmith(__dirname)
 		students: { pattern: 'students/**/student.md', refer: false },
 		projects: { pattern: 'students/**/project.md', refer: false }
 	}))
+	.use(projects())
 
 /**
  * Build pages
@@ -94,7 +95,6 @@ site.use(branch('students/**/project.md')
 		gfm: true
 	}))
 	.use(typography())
-	.use(projects())
 	.use(permalinks('students/:owner_name/:title'))
 	.use(layouts({
 		engine: 'swig',

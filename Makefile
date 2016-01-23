@@ -18,7 +18,8 @@ CONTENT    = $(shell find ./content -type f -name '*.md' -or -type f -name '*.ym
 
 IMAGES     = $(shell find ./assets -type f -name '*.jpg' -or -type f -name '*.png' -or -type f -name '*.gif' -or -type f -name '*.svg')
 STYLES     = $(shell find ./assets -type f -name '*.scss')
-SCRIPTS    = $(shell find ./assets -type f -name '*.js')
+SCRIPTS    = $(shell find ./assets -type f -name '*.js' -not -path "*vendor*")
+LIBRARIES  = $(shell find ./assets/js/vendor -type f -name '*.js' -not -path "*jquery.js")
 
 DOMAIN     = ysdn2016.com
 REPO       = ysdn-2016/ysdn-2016.github.io
@@ -125,6 +126,9 @@ build/assets/bundle.css: $(STYLES)
 build/assets/bundle.js: $(SCRIPTS)
 	@mkdir -p $(@D)
 	@browserify assets/js/index.js -o $@
+
+build/assets/libraries.js: $(LIBRARIES)
+	@cat assets/js/vendor/jquery.js $^ > $@
 
 #
 # Phony

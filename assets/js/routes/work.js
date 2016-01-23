@@ -1,5 +1,4 @@
 
-var masonry = require('masonry-layout')
-
 module.exports = function () {
+	var $grid = $('.project-grid')
 }
