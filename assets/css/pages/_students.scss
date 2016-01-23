@@ -16,7 +16,7 @@
 				color: black;
 			}
 			&:first-child {
-				padding-left: 24px;
+				padding-left: 0px;
 			}
 		}
 	}
@@ -81,18 +81,36 @@
 	}
 	header {
 		.col {
-			font-size: .9em;
+			font-size: .85em;
+			text-transform: uppercase;
+			i {
+				font-size: 0.9em;
+			}
 		}
 	}
 	.row {
-		border-bottom: 1px solid black;
 		display: flex;
 		height: 60px;
 		line-height: 60px;
 
 		flex-flow: row nowrap;
+		&::before {
+			content: " ";
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 60px;
+			z-index: 0;
+		}
+		&:hover {
+			&::before {
+				background-color: #ffeea4;
+			}
+		}
 	}
 	.col {
+		position: relative;
+		z-index: 1;
 		overflow: hidden;
 		flex: 1;
 		flex-direction: column;
@@ -107,8 +125,11 @@
 			}
 		}
 	}
-	.student-list-category {
+	.student-list-student {
 		flex: 2;
+	}
+	.student-list-category {
+		flex: 4;
 	}
 }
 
