@@ -5,8 +5,8 @@
 
 	flex-flow: column nowrap;
 	p {
-		font-size: 21px;
 		display: inline-block;
+		font-size: 21px;
 		a {
 			display: inline-block;
 			padding: 0 10px;
@@ -22,10 +22,10 @@
 	}
 	.divider {
 		display: inline-block;
-		height: 24px;
-		padding-left: 8px;
-		margin-right: 8px;
 		min-width: 1px;
+		height: 24px;
+		margin-right: 8px;
+		padding-left: 8px;
 	}
 	span {
 		i {

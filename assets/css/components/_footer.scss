@@ -66,20 +66,20 @@
 	padding-bottom: $footer-height + 30px;
 	h2 {
 		font-size: 21px;
-		letter-spacing: 0.2px;
 		line-height: 32px;
+		letter-spacing: .2px;
 	}
 	p {
-		font-size: 14px;
-		letter-spacing: 0.3px;
-		line-height: 19px;
 		margin-top: 2px;
+		font-size: 14px;
+		line-height: 19px;
+		letter-spacing: .3px;
 		text-transform: uppercase;
 	}
-	a{
+	a {
+		color: #fff;
 		font-family: Karla-Regular;
 		font-size: 16px;
-		color: #FFFFFF;
 		line-height: 22px;
 	}
 	.preview {
@@ -89,6 +89,6 @@
 		margin-bottom: 20px;
 	}
 	.subhead {
-		color: #AAAAAA;
+		color: #aaa;
 	}
 }

@@ -23,6 +23,7 @@ a {
 }
 
 img {
+	display: block;
 	max-width: 100%;
 	height: auto;
 }
@@ -37,12 +38,7 @@ i {
  *
  */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	font-family: $sofia;
 	font-weight: bold;
@@ -152,25 +148,25 @@ input {
 }
 
 .row {
-	box-sizing: border-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: -webkit-box;
-	display: flex;
+	display:         flex;
 	flex: 0 1 auto;
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin: 0 auto;
+	box-sizing: border-box;
 	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .col-4 {
-	box-sizing: border-box;
 	flex: 0 0 auto;
+	flex-basis: 33.333%;
+	box-sizing: border-box;
+	max-width: 33.333%;
 	padding-right: 1rem;
 	padding-left: 1rem;
-	flex-basis: 33.333%;
-	max-width: 33.333%;
 	@media only screen and (max-width: 48em) {
 		flex-basis: 100%;
 		max-width: 100%;
