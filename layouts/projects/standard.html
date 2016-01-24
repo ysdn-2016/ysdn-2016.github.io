@@ -1,18 +1,24 @@
-<article class="project project--standard">
-	<div class="project-details">
-		<header class="project-header">
-			<h2 class="project-title">{{ title }}</h2>
-			<h3 class="project-owner">{{ owner.name }}</h3>
-		</header>
-		<section class="project-content">
-			{{ contents | safe }}
-		</section>
-		<footer class="project-footer">
-		</footer>
+<article class="project project--standard" id="content">
+	<div class="sticktotopwindow" id="project-fixed-overlay">
+		<div class="project-details">
+			<header class="project-header">
+				<h2 class="project-title">{{ title }}</h2>
+				<h3 class="project-owner">{{ owner.name }}</h3>
+			</header>
+			<section class="project-content">
+				{{ contents | safe }}
+			</section>
+			<footer class="project-footer">
+			</footer>
+		</div>
+		<div class="project-assets"></div>
 	</div>
-	<div class="project-assets">
-		{% for asset in assets %}
-			<img src="{{ asset.url }}" />
-		{% endfor %}
+	<div id="gallery">
+		<div class="project-details"></div>
+		<div class="project-assets">
+			{% for asset in assets %}
+				<img src="{{ asset.url }}" />
+			{% endfor %}
+		</div>
 	</div>
 </article>

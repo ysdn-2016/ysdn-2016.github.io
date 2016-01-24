@@ -54,12 +54,53 @@ $project-grid-gutter: 60px;
  * Standard Projects
  */
 .project--standard {
-	display: flex;
+	position: relative;
+	#project-fixed-overlay, #gallery{
+		display: flex;
+		width: 100%;
+		max-width: 1160px;
+	}
+	#project-fixed-overlay{
+		position:absolute;
+	}
+	#gallery {
+		min-height: 1000px;
+	}
 	.project-details {
 		flex: 1 0 41.667%;
+		padding-right: 40px;
+		.project-header {
+			margin-top: 60px;
+		}
+		footer {
+			margin-bottom: 60px;
+		}
 	}
 	.project-assets {
 		flex: 1 0 58.333%;
+		img {
+			margin: 10px 0;
+		}
+	}
+	.stickbottom {
+	  position: fixed !important;
+	  bottom: 0;
+	  top: auto;
+	}
+	.sticktop {
+	  position: fixed !important;
+	  top: 0;
+	  bottom: auto;
+	}
+	.stickbottomwindow {
+	  position: absolute !important;
+	  bottom: 0;
+	  top: auto;
+	}
+	.sticktopwindow {
+	  position: absolute !important;
+	  bottom: auto;
+	  top: 0;
 	}
 }
 
