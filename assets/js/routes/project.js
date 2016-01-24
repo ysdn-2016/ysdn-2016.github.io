@@ -4,92 +4,87 @@ module.exports = function () {
 console.log("Running");
 var windw = this;
 $.fn.followTo = function() {
-    var $this = this,
-        $window = $(windw);
-    var lastScrollTop = 0;
-    var scroll;
-    var lastdownposition, lastupposition;
-    $(window).scroll(function(event) {
-        scroll = $(window).scrollTop();
-    });
+    var overlay = $('#project-fixed-overlay'),
+    	container = $('#content');
+    var lastScrollTop = 0,
+        scroll,
+        lastdownposition, 
+        lastupposition,
+        overlayHeight = overlay.height(),
+        windowHeight = $(window).height(),
+        containerTop = container.offset().top,
+        direction;
 
-    $window.scroll(function(e) {
-        var myBox = $('#project-fixed-overlay');
-        var myContent = $('#content'),
-            bHeight = myBox.height(),
-            wHeight = $(window).height(),
-            cHeight = myContent.height();
+    $(windw).scroll(function(e) {
+    	scroll = $(window).scrollTop();
+        var bottomScroll = scroll + windowHeight,
+        	containerHeight = container.height(),
+        	overlayTop = overlay.offset().top,
+        	overlayBottom = overlayHeight + overlayTop,
+        	bottomhit = containerTop + containerHeight + (windowHeight - overlayHeight);
 
-        var bottomScroll = scroll + wHeight;
-        var bTop = $('#project-fixed-overlay').offset().top;
-        var containerBottom = bHeight + bTop;
-        var holdtop = bTop;
-        var spaceAtBottom = wHeight - bHeight;
-        var bBottom = 140 + (cHeight + spaceAtBottom);
-        var direction;
-        
+        if (windowHeight < overlayHeight) {
 
-        if (wHeight < bHeight) {
+        	//Determine Scroll Direction & position of overlay
             var st = $(this).scrollTop();
-            
             if (st > lastScrollTop) {
               direction = 'down';
               lastScrollTop = st;
-              lastdownposition = bTop;
+              lastdownposition = overlayTop;
             } else {
-              $('#project-fixed-overlay').removeClass();
+              overlay.removeClass();
               direction = 'up';
               lastScrollTop = st;
-              lastupposition = bTop;
+              lastupposition = overlayTop;
             }
 
             //Find out if the current view is wihtin content bounds (top & bottom)
-            if ((scroll > 140) && (bottomScroll < (140 + cHeight))){
+            if ((scroll > containerTop) && (bottomScroll < (containerTop + containerHeight))){
               //Within Bounds
               console.log("withinBounds");
               if (direction == 'up'){
                 console.log("up");
-                if (scroll <= bTop){
+                if (scroll <= overlayTop){
                   console.log("Stick to top");
-                  $('#project-fixed-overlay').attr('class', 'sticktop');
+                  overlay.attr('class', 'sticktop');
                 } else {
-                  $('#project-fixed-overlay').attr('class', 'stuck');
-                  $('#project-fixed-overlay').css({
-                      position: 'absolute', top: (lastupposition - 140)
+                  overlay.attr('class', 'stuck');
+                  overlay.css({
+                      position: 'absolute', top: (lastupposition - containerTop)
                   });
                 }
               } else if (direction == 'down'){
                 console.log("down");
-                if (bottomScroll >= (bTop + bHeight)){
+                if (bottomScroll >= (overlayTop + overlayHeight)){
                   console.log("Hit bottom of box");
-                  $('#project-fixed-overlay').attr('class', 'stickbottom');
+                  overlay.attr('class', 'stickbottom');
                 } else {
-                  $('#project-fixed-overlay').attr('class', 'stuck');
-                  $('#project-fixed-overlay').css({
-                      position: 'absolute', top: (lastdownposition - 140)
+                  overlay.attr('class', 'stuck');
+                  overlay.css({
+                      position: 'absolute', top: (lastdownposition - containerTop)
                   });
                 }
               }
             } else {
               //Outside of Bounds
               console.log("outsideBounds");
-              if (scroll < 140) {
-                $('#project-fixed-overlay').attr('class', 'sticktopwindow');
-              } else if (bottomScroll > (140 + cHeight)) {
-                $('#project-fixed-overlay').attr('class', 'stickbottomwindow');
+              if (scroll < containerTop) {
+                overlay.attr('class', 'sticktopwindow');
+              } else if (bottomScroll > (containerTop + containerHeight)) {
+                overlay.attr('class', 'stickbottomwindow');
               }
             }
           }
-        if (wHeight > bHeight) {
-            if (scroll > 140) {
+        if (windowHeight > overlayHeight) {
+            if (scroll > containerTop) {
               //if scroll past top of content
-                $('#project-fixed-overlay').attr('class', 'sticktop');
-            } else if (scroll < 140) {
-                $('#project-fixed-overlay').attr('class', 'sticktopwindow');
+                overlay.attr('class', 'sticktop');
+            } else if (scroll < containerTop) {
+                overlay.attr('class', 'sticktopwindow');
             }
-            if (bBottom < bottomScroll) {
+            if (bottomScroll > bottomhit) {
               //if scroll past bottom of content
-                $('#project-fixed-overlay').attr('class', 'stickbottomwindow');
+                overlay.attr('class', 'stickbottomwindow');
             }
         }
     });
