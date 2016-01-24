@@ -31,7 +31,7 @@ API        = https://api.ysdn2016.com
 # Tasks
 #
 
-build: node_modules content assets styles
+build: node_modules content assets styles scripts
 start: build
 	@bin/www
 
@@ -39,6 +39,7 @@ watch: install build
 	@$(BIN)/onchange 'content/**/*.{md,yml}' 'layouts/**/*.html' -- make content & \
 		$(BIN)/onchange 'assets/css/**/*.scss' -- make styles & \
 		$(BIN)/onchange 'assets/{fonts,images}/**/*' -- make assets & \
+		$(BIN)/onchange 'assets/js/vendor/**/*.js' -- make build/assets/libraries.js & \
 		$(BIN)/watchify assets/js/index.js -o build/assets/bundle.js & \
 		$(BIN)/wtch --dir build 2>&1 >/dev/null & \
 		bin/www & wait
@@ -102,7 +103,7 @@ install: node_modules
 content: build/index.html
 assets:  build/assets/fonts build/assets/images
 styles:  build/assets/bundle.css
-scripts: build/assets/bundle.js
+scripts: build/assets/bundle.js build/assets/libraries.js
 
 #
 # Targets
