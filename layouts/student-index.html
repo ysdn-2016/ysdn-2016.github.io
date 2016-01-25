@@ -35,7 +35,7 @@
 		</header>
 		<div class="student-list-body">
 		{% for student in students | sortByLastName %}
-			<div class="row student-list-row">
+			<div data-categories="communication interactive" class="row student-list-row">
 				<div class="col student-list-student">
 					<a href="{{ student.path.href }}">{{ student.name }}</a>
 				</div>
