@@ -6,11 +6,11 @@
 		<div class="row">
 			<div class="student-filters col">
 				<p>
-					<a href="#" class="active">All</a>
-					<a href="#">Communication</a>
-					<a href="#">Physical</a>
-					<a href="#">Information</a>
-					<a href="#">Interactive</a>
+					<a href="#" class="category-target active">All</a>
+					<a href="#" class="category-target category-com-target">Communication</a>
+					<a href="#" class="category-target category-psy-target">Physical</a>
+					<a href="#" class="category-target category-info-target">Information</a>
+					<a href="#" class="category-target category-inter-target">Interactive</a>
 				</p>
 			</div>
 			<div class="student-view col">
@@ -35,14 +35,14 @@
 		</header>
 		<div class="student-list-body">
 		{% for student in students | sortByLastName %}
-			<div data-categories="communication interactive" class="row student-list-row">
+			<div class="row student student-list-row">
 				<div class="col student-list-student">
 					<a href="{{ student.path.href }}">{{ student.name }}</a>
 				</div>
 				<div class="col student-list-category">
-					<a href="#">Communication</a>
-					<a href="#">Interactive</a>
-					<a href="#">Physical</a>
+					<a href="#" class="category-target">Communication</a>
+					<a href="#" class="category-target">Interactive</a>
+					<a href="#" class="category-target">Physical</a>
 				</div>
 				<div class="col student-list-social">
 					<!-- URL -->
@@ -71,7 +71,7 @@
 	<div class="student-grid">
 		<div class="student-grid-inner">
 			{% for student in students | sortByLastName %}
-				<a class="student-preview" href="{{ student.path.href }}">
+				<a class="student-preview student" href="{{ student.path.href }}">
 					<div class="student-preview-image">
 						<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=888888&txtclr=888888&txt=250%C3%97250&w=250&h=250" />
 					</div>
