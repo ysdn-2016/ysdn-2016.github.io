@@ -33,8 +33,6 @@
 		}
 	}
 	i {
-		position: relative;
-		bottom: 1px;
 		font-size: .7em;
 	}
 	.row {
@@ -59,6 +57,9 @@
 			color: lighten(black, 70%);
 			&.active {
 				color: black;
+			}
+			&:hover:not(.active) {
+				color: lighten(black, 55%);
 			}
 		}
 	}
@@ -88,7 +89,8 @@
 			}
 		}
 	}
-	.row {
+	.row:not(.header-row) {
+		// Make sure header row doesn't get hover effect ^
 		display: flex;
 		height: 60px;
 		line-height: 60px;
@@ -134,6 +136,10 @@
 }
 
 .student-grid {
+	display: none;
+}
+
+.student-grid-inner {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -145,7 +151,10 @@
 }
 
 .student-preview-name {
+	text-align: center;
+	margin-top: 12px;
+	line-height: 36px;
+	font-size: 1.1em;
 	font-family: $sofia;
-	font-size: 14px;
 	font-weight: bold;
 }

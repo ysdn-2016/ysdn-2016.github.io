@@ -14,7 +14,7 @@ $(function () {
 
 	router('/', routes.home)
 	router('/work/', routes.work)
-	router('/work/:project/', routes.project)
+	router('/students/:student/:project/', routes.project)
 	router('/students/', routes.students)
 	router('/students/:student/', routes.student)
 	router('/event/', routes.event)
