@@ -16,6 +16,7 @@ var swig = require('metalsmith-swig-helpers')
 
 var yaml = require('../lib/yaml')
 var projects = require('../lib/projects')
+var students = require('../lib/students')
 var filters = require('../lib/filters/')
 
 /**
@@ -52,6 +53,7 @@ var site = metalsmith(__dirname)
 		students: { pattern: 'students/**/student.md', refer: false },
 		projects: { pattern: 'students/**/project.md', refer: false }
 	}))
+	.use(students())
 	.use(projects())
 
 /**

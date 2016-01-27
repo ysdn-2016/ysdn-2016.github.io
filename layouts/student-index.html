@@ -40,9 +40,9 @@
 					<a href="{{ student.path.href }}">{{ student.name }}</a>
 				</div>
 				<div class="col student-list-category">
-					<a href="#">Communication</a>
-					<a href="#">Interactive</a>
-					<a href="#">Physical</a>
+					{% for category in student.projectCategories %}
+						<a href="{{ category.href }}">{{ category.title }}</a>
+					{% endfor %}
 				</div>
 				<div class="col student-list-social">
 					<!-- URL -->
