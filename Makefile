@@ -15,6 +15,7 @@ NODE_ENV  ?= development
 
 LAYOUTS    = $(shell find ./layouts -type f -name '*.html')
 CONTENT    = $(shell find ./content -type f -name '*.md' -or -type f -name '*.yml')
+MIXINS     = $(shell find ./lib -type f -name '*.js')
 
 IMAGES     = $(shell find ./assets -type f -name '*.jpg' -or -type f -name '*.png' -or -type f -name '*.gif' -or -type f -name '*.svg')
 STYLES     = $(shell find ./assets -type f -name '*.scss')
@@ -36,7 +37,7 @@ start: build
 	@bin/www
 
 watch: install build
-	@$(BIN)/onchange 'content/**/*.{md,yml}' 'layouts/**/*.html' -- make content & \
+	@$(BIN)/onchange 'content/**/*.{md,yml}' 'layouts/**/*.html' 'lib/**/*.js' -- make content & \
 		$(BIN)/onchange 'assets/css/**/*.scss' -- make styles & \
 		$(BIN)/onchange 'assets/{fonts,images}/**/*' -- make assets & \
 		$(BIN)/onchange 'assets/js/vendor/**/*.js' -- make build/assets/libraries.js & \
@@ -112,7 +113,7 @@ scripts: build/assets/bundle.js build/assets/libraries.js
 node_modules: package.json
 	@npm install
 
-build/index.html: bin/build $(CONTENT) $(LAYOUTS)
+build/index.html: bin/build $(CONTENT) $(LAYOUTS) $(MIXINS)
 	@bin/build
 
 build/assets/%: assets/%
