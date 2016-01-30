@@ -18,6 +18,23 @@
 
 @font-face {
 	font-family: 'Sofia';
+	src: url('/assets/fonts/SofiaPro-Medium.woff') format('woff'),
+	url('/assets/fonts/SofiaPro-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Sofia';
+	src: url('/assets/fonts/SofiaPro-MediumItalic.woff2') format('woff2'),
+	url('/assets/fonts/SofiaPro-MediumItalic.woff') format('woff'),
+	url('/assets/fonts/SofiaPro-MediumItalic.ttf') format('truetype');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Sofia';
 	src: url('/assets/fonts/SofiaPro-Semibold.woff2') format('woff2'),
 	url('/assets/fonts/SofiaPro-Semibold.woff') format('woff'),
 	url('/assets/fonts/SofiaPro-Semibold.ttf') format('truetype');

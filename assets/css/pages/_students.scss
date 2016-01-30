@@ -73,17 +73,12 @@
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
-	@media screen and (max-width: 1000px) {
-		.student-list-social {
-			display: none;
-		}
-	}
 	@media screen and (max-width: 640px) {
 		.student-list-category {
 			display: none;
 		}
 	}
-	header {
+	.student-list-header {
 		margin-bottom: 12px;
 		.col {
 			font-size: .75em;
@@ -121,21 +116,36 @@
 		flex: 1;
 		flex-direction: column;
 		margin-right: 24px;
-		font-size: 21px;
+		font-family: $sofia;
+		font-size: 18px;
+		font-weight: 500;
 		text-overflow: ellipses;
 		white-space: nowrap;
-		a {
-			margin-right: 14px;
-			&:hover {
-				text-decoration: underline;
-			}
-		}
 	}
 	.student-list-student {
 		flex: 2;
 	}
 	.student-list-category {
 		flex: 4;
+	}
+}
+
+.student-list-row {
+	cursor: pointer;
+}
+
+.student-list-category {
+	a {
+		margin-right: 2px;
+	}
+}
+
+.student-list-social {
+	a {
+		margin-right: 12px;
+	}
+	@media screen and (max-width: 1000px) {
+		display: none;
 	}
 }
 
