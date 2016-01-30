@@ -1,83 +1,85 @@
 {% extends 'base.html' %}
 
 {% block main %}
-	{# Filters #}
-	<div class="student-nav">
-		<div class="row">
-			<div class="student-filters col">
-				<p>
-					<a href="#" class="category-target active">All</a>
-					<a href="#" class="category-target category-com-target">Communication</a>
-					<a href="#" class="category-target category-psy-target">Physical</a>
-					<a href="#" class="category-target category-info-target">Information</a>
-					<a href="#" class="category-target category-inter-target">Interactive</a>
-				</p>
-			</div>
-			<div class="student-view col">
-				<p>View:</p>
-					<a href="#grid" id="grid-view-target"><i class="grid-view fa fa-fw fa-th"></i></a>
-					<a href="#list" id="list-view-target"><i class="list-view active fa fa-fw fa-bars"></i></a>
-				<div class="divider">|</div>
-				<p>
-					Search <span><i class="fa fa-fw fa-search"></i></span>
-				</p>
+	<section class="student-index">
+		{# Filters #}
+		<div class="student-nav">
+			<div class="row">
+				<div class="student-filters col">
+					<p>
+						<a href="#" class="category-target active">All</a>
+						<a href="#" class="category-target category-com-target">Communication</a>
+						<a href="#" class="category-target category-psy-target">Physical</a>
+						<a href="#" class="category-target category-info-target">Information</a>
+						<a href="#" class="category-target category-inter-target">Interactive</a>
+					</p>
+				</div>
+				<div class="student-view col">
+					<p>View:</p>
+						<a href="#grid" id="grid-view-target"><i class="grid-view fa fa-fw fa-th"></i></a>
+						<a href="#list" id="list-view-target"><i class="list-view active fa fa-fw fa-bars"></i></a>
+					<div class="divider">|</div>
+					<p>
+						Search <span><i class="fa fa-fw fa-search"></i></span>
+					</p>
+				</div>
 			</div>
 		</div>
-	</div>
-	{# List View #}
-	<div class="student-list">
-		<header class="student-list-header">
-			<div class="row header-row">
-				<div class="col student-list-student">Student <i class="fa fa-fw fa-caret-down"></i></div>
-				<div class="col student-list-category">Work Exhibiting</div>
-				<div class="col student-list-social">Connect</div>
-			</div>
-		</header>
-		<div class="student-list-body">
-		{% for student in students | sortByLastName %}
-			<div class="row student student-list-row">
-				<div class="col student-list-student">
-					<a href="{{ student.path.href }}">{{ student.name }}</a>
+		{# List View #}
+		<div class="student-list">
+			<header class="student-list-header">
+				<div class="row header-row">
+					<div class="col student-list-student">Student <i class="fa fa-fw fa-caret-down"></i></div>
+					<div class="col student-list-category">Work Exhibiting</div>
+					<div class="col student-list-social">Connect</div>
 				</div>
-				<div class="col student-list-category">
-					{% for category in student.projectCategories %}
-						<a href="{{ category.href }}" class="category-target">{{ category.title }}</a>
-					{% endfor %}
-				</div>
-				<div class="col student-list-social">
-					<!-- URL -->
-					{% if student.url %}
-						<a href="{{ student.url }}"><i class="fa fa-globe"></i></a>
-					{% endif %}
-					<!-- Email -->
-					{% if student.email %}
-						<a href="mailto:{{ student.email }}"><i class="fa fa-envelope-o"></i></a>
-					{% endif %}
-					<!-- Twitter -->
-					{% if student.twitter %}
-						<a href="{{ student.twitter }}"><i class="fa fa-twitter"></i></a>
-					{% endif %}
-					<!-- Instagram -->
-					{% if student.instagram %}
-						<a href="{{ student.instagram }}"><i class="fa fa-instagram"></i></a>
-					{% endif %}
-				</div>
-			</div>
-		{% endfor %}
-		</div>
-	</div>
-
-	{# Grid View #}
-	<div class="student-grid">
-		<div class="student-grid-inner">
+			</header>
+			<div class="student-list-body">
 			{% for student in students | sortByLastName %}
-				<a class="student-preview student" href="{{ student.path.href }}">
-					<div class="student-preview-image">
-						<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=888888&txtclr=888888&txt=250%C3%97250&w=250&h=250" />
+				<div class="row student student-list-row">
+					<div class="col student-list-student">
+						<a href="{{ student.path.href }}">{{ student.name }}</a>
 					</div>
-					<div class="student-preview-name">{{ student.name }}</div>
-				</a>
+					<div class="col student-list-category">
+						{% for category in student.projectCategories %}
+							<a href="{{ category.href }}" class="category-target">{{ category.title }}</a>
+						{% endfor %}
+					</div>
+					<div class="col student-list-social">
+						<!-- URL -->
+						{% if student.url %}
+							<a href="{{ student.url }}"><i class="fa fa-globe"></i></a>
+						{% endif %}
+						<!-- Email -->
+						{% if student.email %}
+							<a href="mailto:{{ student.email }}"><i class="fa fa-envelope-o"></i></a>
+						{% endif %}
+						<!-- Twitter -->
+						{% if student.twitter %}
+							<a href="{{ student.twitter }}"><i class="fa fa-twitter"></i></a>
+						{% endif %}
+						<!-- Instagram -->
+						{% if student.instagram %}
+							<a href="{{ student.instagram }}"><i class="fa fa-instagram"></i></a>
+						{% endif %}
+					</div>
+				</div>
 			{% endfor %}
+			</div>
 		</div>
-	</div>
+
+		{# Grid View #}
+		<div class="student-grid">
+			<div class="student-grid-inner">
+				{% for student in students | sortByLastName %}
+					<a class="student-preview student" href="{{ student.path.href }}">
+						<div class="student-preview-image">
+							<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=888888&txtclr=888888&txt=250%C3%97250&w=250&h=250" />
+						</div>
+						<div class="student-preview-name">{{ student.name }}</div>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
 {% endblock %}

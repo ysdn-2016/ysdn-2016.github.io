@@ -1,10 +1,16 @@
+.student-index {
+	width: 92%;
+	margin: 0 auto;
+}
+
 .student-nav {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 50px;
+	margin-bottom: 32px;
 
 	flex-flow: column nowrap;
 	p {
+		margin: 0;
 		display: inline-block;
 		font-size: 21px;
 		a {
@@ -81,9 +87,11 @@
 		}
 	}
 	header {
+		margin-bottom: 12px;
 		.col {
-			font-size: .85em;
+			font-size: .75em;
 			text-transform: uppercase;
+			letter-spacing: 0.04em;
 			i {
 				font-size: 0.9em;
 			}
