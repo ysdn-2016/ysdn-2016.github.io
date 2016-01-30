@@ -101,12 +101,12 @@ if ($(".project--standard")[0]){
     });
     $('a').click(function(){
       $('html, body').animate({
-          scrollTop: $( $(this).attr('href') ).offset().top
+          scrollTop: $( $(this).attr('href') ).offset().top - 60
       }, 500);
       return false;
     });
-    console.log("Cleaned");
   });
+
   console.log("Running Case Study");
   var windw = this;
   $.fn.followTo = function() {
@@ -139,6 +139,12 @@ if ($(".project--standard")[0]){
                 //if scroll past bottom of content
                   overlay.attr('class', 'stickbottomwindow');
               }
+          $('.project-content h1, .project-content h2, .project-content h3').each(function(i) {
+              if ($(this).position().top <= scroll - $("#content").position().top + 60) {
+                $('.case-nav a.active').removeClass('active');
+                $('.case-nav a').eq(i).addClass('active');
+            }
+          });
       });
   };
   $('#project-fixed-overlay').followTo();
