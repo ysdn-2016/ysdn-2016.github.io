@@ -6,8 +6,7 @@
 			<div class="col student-meta">
 				<h1>{{ name }}</h1>
 				<h3>Product Designer at Rainbow Design Co</h3>
-				{# TODO: Fix categories #}
-				{% for category in student.projectCategories %}
+				{% for category in projectCategories %}
 					<a href="{{ category.href }}" class="student-categories">{{ category.title }}</a>
 				{% endfor %}
 				<div class="social">
