@@ -127,6 +127,7 @@ $project-grid-gutter: 60px;
  		margin: 60px 0;
  	}
  	.project-header {
+ 		overflow: hidden;
  		h1, h3, h4 {
  			text-align: center;
  			max-width: 100%;
@@ -138,12 +139,66 @@ $project-grid-gutter: 60px;
 				font-weight: normal;
 			}
  		}
+ 		.title{
+ 			position: fixed;
+ 			margin: 0 auto;
+ 			z-index: -1;
+ 			right: 0;
+		    left: 0;
+		    margin-right: auto;
+		    margin-left: auto;
+		    width: 100%;
+		    padding-right: $ribbon-width;
+ 		}
+ 		img{
+ 			padding-top: 200px;
+ 			margin-bottom: 0;
+ 		}
  	}
 
-	.project-content {
+	.project-content, .project-content-holder {
 		flex: 1 0 75%;
+		background-color: $white;
+		padding-top: 60px;
 	}
-	.project-nav {
+	.project-content-holder{
+		background-color: transparent;
+	}
+	#project-fixed-overlay{
+		width: 100%;
+	}
+	#content {
+		position: relative;
+	}
+	.case-nav, .case-nav-holder {
 		flex: 1 0 25%;
+		background-color: $white;
+		h1, h2, h3 {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+	.case-nav{
+		padding-top: 60px;
+	}
+	.stickbottom {
+	  position: fixed !important;
+	  bottom: 0 !important;
+	  top: auto !important;
+	}
+	.sticktop {
+	  position: fixed !important;
+	  top: 0 !important;
+	  bottom: auto !important;
+	}
+	.stickbottomwindow {
+	  position: absolute !important;
+	  bottom: 0 !important;
+	  top: auto !important;
+	}
+	.sticktopwindow {
+	  position: absolute !important;
+	  bottom: auto !important;
+	  top: 0 !important;
 	}
  }

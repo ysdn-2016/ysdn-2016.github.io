@@ -1,7 +1,7 @@
 
 module.exports = function () {
 
-if ($("#project-fixed-overlay")[0]){
+if ($(".project--standard")[0]){
   console.log("Running");
   var windw = this;
   $.fn.followTo = function() {
@@ -90,15 +90,51 @@ if ($("#project-fixed-overlay")[0]){
           }
       });
   };
-
-
   $('#project-fixed-overlay').followTo();
 } else {
   $( document ).ready(function() {
     $(".project-content p img").unwrap();
     $(".project-content img:first-of-type").appendTo(".project-header");
+    $(".project-content h1").appendTo(".case-nav");
+    $(".project-content h2").appendTo(".case-nav");
+    $(".project-content h3").appendTo(".case-nav");
     console.log("Cleaned");
   });
+  console.log("Running Case Study");
+  var windw = this;
+  $.fn.followTo = function() {
+      var overlay = $('#project-fixed-overlay'),
+        container = $('#content');
+      var lastScrollTop = 0,
+          scroll,
+          lastdownposition, 
+          lastupposition,
+          overlayHeight = overlay.height(),
+          windowHeight = $(window).height(),
+          direction;
+
+      $(windw).scroll(function(e) {
+        scroll = $(window).scrollTop();
+          var bottomScroll = scroll + windowHeight,
+            containerTop = container.offset().top,
+            containerHeight = container.height(),
+            overlayTop = overlay.offset().top,
+            overlayBottom = overlayHeight + overlayTop,
+            bottomhit = containerTop + containerHeight + (windowHeight - overlayHeight);
+
+              if (scroll > containerTop) {
+                //if scroll past top of content
+                  overlay.attr('class', 'sticktop');
+              } else if (scroll < containerTop) {
+                  overlay.attr('class', 'sticktopwindow');
+              }
+              if (bottomScroll > bottomhit) {
+                //if scroll past bottom of content
+                  overlay.attr('class', 'stickbottomwindow');
+              }
+      });
+  };
+  $('#project-fixed-overlay').followTo();
 }
 
 }
