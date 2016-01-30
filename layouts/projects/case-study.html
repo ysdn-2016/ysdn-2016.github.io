@@ -1,11 +1,15 @@
 <article class="project project--case-study">
 	<header class="project-header">
 		<h1 class="project-title">{{ title }}</h1>
-		<h3 class="project-owner">{{ owner.name }}</h3>
+		<h3 class="project-owner"><span class="light">by</span> {{ owner.name }}</h3>
+		<h4 class="project-category">{{ category }}</h4>
 	</header>
-	<section class="project-content">
-		{{ contents | safe }}
-	</section>
+	<div class="case-content">
+		<div class="project-nav"></div>
+		<section class="project-content">
+			{{ contents | safe }}
+		</section>
+	</div>
 	<footer class="project-footer">
 	</footer>
 </article>
