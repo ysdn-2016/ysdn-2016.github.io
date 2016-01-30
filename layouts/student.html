@@ -1,8 +1,25 @@
 {% extends 'base.html' %}
 
 {% block main %}
-	<p> {{ name }} </p>
-	<a href="mailto:{{ email }}">{{ email }}</a>
-
+	<section class="student-profile">
+		<div class="row">
+			<div class="col student-meta">
+				<h1>{{ name }}</h1>
+				<h3>Product Designer at Rainbow Design Co</h3>
+				{# TODO: Fix categories #}
+				{% for category in student.projectCategories %}
+					<a href="{{ category.href }}" class="student-categories">{{ category.title }}</a>
+				{% endfor %}
+				<div class="social">
+					<a href="mailto:{{ email }}" class="email">Email</a>
+					<a href="mailto:{{ email }}" class="email">Facebook</a>
+					<a href="mailto:{{ email }}" class="email">Instagram</a>
+					<a href="mailto:{{ email }}" class="email">LinkedIn</a>
+					<a href="mailto:{{ email }}" class="email">GitHub</a>
+				</div>
+			</div>
+			<div class="student-image"></div>
+		</div>
+	</section>
 	{{ contents | safe }}
 {% endblock %}
