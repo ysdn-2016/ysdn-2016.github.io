@@ -113,6 +113,7 @@
 		"flex-align",
 		"flex-basis",
 		"flex-direction",
+		"flex-flow",
 		"flex-grow",
 		"flex-order",
 		"flex-pack",
