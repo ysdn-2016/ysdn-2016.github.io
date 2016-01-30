@@ -1,14 +1,26 @@
 <article class="project project--case-study">
 	<header class="project-header">
-		<h1 class="project-title">{{ title }}</h1>
-		<h3 class="project-owner"><span class="light">by</span> {{ owner.name }}</h3>
-		<h4 class="project-category">{{ category }}</h4>
+		<div class="title">
+			<h1 class="project-title">{{ title }}</h1>
+			<h3 class="project-owner"><span class="light">by</span> {{ owner.name }}</h3>
+			<h4 class="project-category">{{ category }}</h4>
+		</div>
 	</header>
-	<div class="case-content">
-		<div class="project-nav"></div>
-		<section class="project-content">
-			{{ contents | safe }}
-		</section>
+	<div id="content">
+		<div class="sticktotopwindow" id="project-fixed-overlay">
+			<div class="case-content">
+				<div class="case-nav"></div>
+				<section class="project-content-holder"></section>
+			</div>
+		</div>
+		<div>
+			<div class="case-content">
+				<div class="case-nav-holder"></div>
+				<section class="project-content">
+					{{ contents | safe }}
+				</section>
+			</div>
+		</div>
 	</div>
 	<footer class="project-footer">
 	</footer>
