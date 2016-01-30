@@ -175,19 +175,32 @@ $project-grid-gutter: 60px;
 		flex: 1 0 25%;
 		a {
 			display: block;
-			color: gray;
+			color: #d1d1d1;
 			font-family: $sofia;
 			font-size: 21px;
 			font-weight: bold;
 			line-height: 34px;
+			transition: color .25s ease;
 		}
 		.active {
+			top: 0;
 			color: black;
 		}
 	}
 	.case-nav {
 		padding-top: 80px;
 	}
+	#indicator {
+		position: absolute;
+		bottom: -2px;
+		left: -10px;
+		background: $black;
+		width: 4px;
+		height: 2px;
+		list-style-type: none;
+		transition: top .25s ease, height .25s ease;
+	}
+
 	.stickbottom {
 		position: fixed !important;
 		top: auto !important;
