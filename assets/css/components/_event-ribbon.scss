@@ -8,7 +8,7 @@
 	width: $ribbon-width;
 	height: 100%;
 	padding: 0;
-	transition: all .4s;
+	transition: all .4s ease-in-out;
 	&.yellow {
 		background-color: $yellow;
 		.event-info span {
@@ -27,7 +27,7 @@
 		}
 	}
 	&:hover {
-		width: $ribbon-width + 12px;
+		width: $ribbon-width + 6px;
 		// background-color: darken($ribbon-color, 4%);
 	}
 	.icon {
