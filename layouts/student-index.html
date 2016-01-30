@@ -42,7 +42,7 @@
 					</div>
 					<div class="col student-list-category">
 						{% for category in student.projectCategories %}
-							<a href="{{ category.href }}" class="category-target">{{ category.title }}</a>
+						<a href="{{ category.href }}" class="category-target">{{ category.title }}{% if not loop.last %}, {% endif %}</a>
 						{% endfor %}
 					</div>
 					<div class="col student-list-social">
