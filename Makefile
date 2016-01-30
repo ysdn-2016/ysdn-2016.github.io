@@ -86,7 +86,7 @@ lint:
 fmt: comb semistandard
 
 semistandard:
-	@(cd assets && semistandard-format -w)
+	@semistandard-format -w $(SCRIPTS)
 
 comb:
 	@csscomb assets/css -v
