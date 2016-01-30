@@ -18,7 +18,9 @@
 	&.black {
 		background-color: #1e1e1e;
 		color: white;
-		a,p { color: white; }
+		a,p {
+			color: white;
+		}
 		.event-info span {
 			color: #a5a5a5;
 		}

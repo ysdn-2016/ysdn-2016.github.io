@@ -55,13 +55,13 @@ $project-grid-gutter: 60px;
  */
 .project--standard {
 	position: relative;
-	#project-fixed-overlay, #gallery{
+	#project-fixed-overlay, #gallery {
 		display: flex;
 		width: 100%;
 		max-width: 1160px;
 	}
-	#project-fixed-overlay{
-		position:absolute;
+	#project-fixed-overlay {
+		position: absolute;
 	}
 	#gallery {
 		min-height: 1000px;
@@ -87,24 +87,24 @@ $project-grid-gutter: 60px;
 		}
 	}
 	.stickbottom {
-	  position: fixed !important;
-	  bottom: 0 !important;
-	  top: auto !important;
+		position: fixed !important;
+		top: auto !important;
+		bottom: 0 !important;
 	}
 	.sticktop {
-	  position: fixed !important;
-	  top: 0 !important;
-	  bottom: auto !important;
+		position: fixed !important;
+		top: 0 !important;
+		bottom: auto !important;
 	}
 	.stickbottomwindow {
-	  position: absolute !important;
-	  bottom: 0 !important;
-	  top: auto !important;
+		position: absolute !important;
+		top: auto !important;
+		bottom: 0 !important;
 	}
 	.sticktopwindow {
-	  position: absolute !important;
-	  bottom: auto !important;
-	  top: 0 !important;
+		position: absolute !important;
+		top: 0 !important;
+		bottom: auto !important;
 	}
 }
 
@@ -112,94 +112,94 @@ $project-grid-gutter: 60px;
  * Case Study Projects
  */
 
- .project--case-study{
- 	.case-content {
+.project--case-study {
+	.case-content {
 		display: flex;
 		width: 100%;
 		max-width: 1160px;
 	}
 
- 	p, h1, h2, h3, ul {
- 		max-width: 600px;
- 		margin: 20px 0;
- 	}
- 	img {
- 		margin: 60px 0;
- 	}
- 	.project-header {
- 		overflow: hidden;
- 		h1, h3, h4 {
- 			text-align: center;
- 			max-width: 100%;
- 		}
- 		h3{
+	p, h1, h2, h3, ul {
+		max-width: 600px;
+		margin: 20px 0;
+	}
+	img {
+		margin: 60px 0;
+	}
+	.project-header {
+		overflow: hidden;
+		h1, h3, h4 {
+			max-width: 100%;
+			text-align: center;
+		}
+		h3 {
 			font-size: 21px;
 			line-height: 24px;
 			.light {
 				font-weight: normal;
 			}
- 		}
- 		.title{
- 			position: fixed;
- 			margin: 0 auto;
- 			z-index: -1;
- 			right: 0;
-		    left: 0;
-		    margin-right: auto;
-		    margin-left: auto;
-		    width: 100%;
-		    padding-right: $ribbon-width;
- 		}
- 		img{
- 			padding-top: 200px;
- 			margin-bottom: 0;
- 		}
- 	}
+		}
+		.title {
+			position: fixed;
+			z-index: -1;
+			right: 0;
+			left: 0;
+			width: 100%;
+			margin: 0 auto;
+			margin-right: auto;
+			margin-left: auto;
+			padding-right: $ribbon-width;
+		}
+		img {
+			margin-bottom: 0;
+			padding-top: 200px;
+		}
+	}
 
 	.project-content, .project-content-holder {
-		flex: 1 0 75%;
 		background-color: $white;
+		flex: 1 0 75%;
 		padding-top: 60px;
 	}
-	.project-content-holder{
+	.project-content-holder {
 		background-color: transparent;
 	}
-	#project-fixed-overlay{
+	#project-fixed-overlay {
 		width: 100%;
 	}
 	#content {
 		position: relative;
 	}
 	.case-nav, .case-nav-holder {
-		flex: 1 0 25%;
 		background-color: $white;
+		flex: 1 0 25%;
 		a {
+			display: block;
 			font-size: 16px;
 			line-height: 20px;
-			display: block;
 		}
 	}
-	.case-nav{
+	.case-nav {
 		padding-top: 60px;
 	}
 	.stickbottom {
-	  position: fixed !important;
-	  bottom: 0 !important;
-	  top: auto !important;
+		position: fixed !important;
+		top: auto !important;
+		bottom: 0 !important;
 	}
 	.sticktop {
-	  position: fixed !important;
-	  top: 0 !important;
-	  bottom: auto !important;
+		position: fixed !important;
+		top: 0 !important;
+		bottom: auto !important;
 	}
 	.stickbottomwindow {
-	  position: absolute !important;
-	  bottom: 0 !important;
-	  top: auto !important;
+		position: absolute !important;
+		top: auto !important;
+		bottom: 0 !important;
 	}
 	.sticktopwindow {
-	  position: absolute !important;
-	  bottom: auto !important;
-	  top: 0 !important;
+		position: absolute !important;
+		top: 0 !important;
+		bottom: auto !important;
 	}
- }
+}
