@@ -5,24 +5,23 @@
 
 .student-nav {
 	display: flex;
-	flex-flow: column nowrap;
+	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 32px;
-	p {
+	margin-bottom: 48px;
+	font-family: $sofia;
+	font-size: 19px;
+	max-width: 1200px;
+	a {
 		display: inline-block;
-		margin: 0;
-		font-size: 21px;
-		a {
-			display: inline-block;
-			padding: 0 10px;
-			color: lighten(black, 70%);
-			&.active,
-			&:hover {
-				color: black;
-			}
-			&:first-child {
-				padding-left: 0;
-			}
+		padding: 0 8px;
+		color: lighten(black, 70%);
+		font-weight: 400;
+		&.active,
+		&:hover {
+			color: black;
+		}
+		&:first-child {
+			padding-left: 0;
 		}
 	}
 	.divider {
@@ -40,32 +39,45 @@
 	i {
 		font-size: .7em;
 	}
-	.row {
-		display: flex;
-		flex-flow: row nowrap;
-		width: 100%;
-		height: 40px;
-		line-height: 40px;
-	}
-	.col {
-		flex: 1;
-		flex-direction: column;
-		font-size: 1.1em;
-	}
-	.student-filters {
-		flex-grow: 3;
-	}
-	.student-view {
-		text-align: right;
-		i {
-			color: lighten(black, 70%);
-			&.active {
-				color: black;
-			}
-			&:hover:not(.active) {
-				color: lighten(black, 55%);
-			}
+}
+
+.student-nav-view {
+	display: flex;
+	align-items: center;
+	i {
+		color: lighten(black, 70%);
+		font-size: 16px;
+		&.active {
+			color: black;
 		}
+		&:hover:not(.active) {
+			color: lighten(black, 55%);
+		}
+	}
+	&-selector {
+		margin-right: 12px;
+	}
+}
+
+.student-nav-view-search {
+	position: relative;
+	&-icon {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		// NOTE: 40% instead of 50% for visual centering
+		transform: translateY(-40%);
+	}
+	&-value {
+		position: fixed;
+		top: 0; left: 0;
+		pointer-events: none;
+		opacity: 0.0;
+	}
+	&-input {
+		border: none;
+		padding-left: 28px;
+		font-family: $sofia;
 	}
 }
 
@@ -76,17 +88,6 @@
 	@media screen and (max-width: 640px) {
 		.student-list-category {
 			display: none;
-		}
-	}
-	.student-list-header {
-		margin-bottom: 12px;
-		.col {
-			font-size: .75em;
-			letter-spacing: .04em;
-			text-transform: uppercase;
-			i {
-				font-size: .9em;
-			}
 		}
 	}
 	.row:not(.header-row) {
@@ -117,7 +118,7 @@
 		flex-direction: column;
 		margin-right: 24px;
 		font-family: $sofia;
-		font-size: 18px;
+		font-size: 20px;
 		font-weight: 500;
 		text-overflow: ellipses;
 		white-space: nowrap;
@@ -130,7 +131,23 @@
 	}
 }
 
+.student-list-header {
+	margin-bottom: 12px;
+	.col {
+		color: lighten(black, 70%);
+		font-size: 12px;
+		font-weight: bold;
+		letter-spacing: .08em;
+		text-transform: uppercase;
+		i {
+			font-size: .9em;
+		}
+	}
+}
+
+
 .student-list-row {
+	display: block;
 	cursor: pointer;
 }
 
@@ -150,25 +167,23 @@
 }
 
 .student-grid {
-	display: none;
-}
-
-.student-grid-inner {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 
 .student-preview {
+	flex-basis: 24%;
 	display: block;
+	margin-right: 1%;
 	margin-bottom: 2rem;
 }
 
 .student-preview-name {
 	margin-top: 12px;
 	font-family: $sofia;
-	font-size: 1.1em;
+	font-size: 19px;
 	font-weight: bold;
-	line-height: 36px;
+	line-height: 22px;
 	text-align: center;
 }
