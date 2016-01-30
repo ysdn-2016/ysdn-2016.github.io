@@ -175,8 +175,14 @@ $project-grid-gutter: 60px;
 		flex: 1 0 25%;
 		a {
 			display: block;
-			font-size: 16px;
-			line-height: 20px;
+			font-family: $sofia;
+			font-weight: bold;
+			font-size: 21px;
+			color: gray;
+			line-height: 34px;
+		}
+		.active {
+			color: black;
 		}
 	}
 	.case-nav {
