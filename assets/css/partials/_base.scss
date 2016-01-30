@@ -148,10 +148,7 @@ input {
 }
 
 .row {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: -webkit-box;
-	display:         flex;
+	display: flex;
 	flex: 0 1 auto;
 	flex-direction: row;
 	flex-wrap: wrap;
