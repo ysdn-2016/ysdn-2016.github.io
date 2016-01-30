@@ -46,19 +46,19 @@
 						{% endfor %}
 					</div>
 					<div class="col student-list-social">
-						<!-- URL -->
-						{% if student.url %}
-							<a href="{{ student.url }}"><i class="fa fa-globe"></i></a>
-						{% endif %}
-						<!-- Email -->
+						{# Email #}
 						{% if student.email %}
 							<a href="mailto:{{ student.email }}"><i class="fa fa-envelope-o"></i></a>
 						{% endif %}
-						<!-- Twitter -->
+						{# URL #}
+						{% if student.url %}
+							<a href="{{ student.url }}"><i class="fa fa-globe"></i></a>
+						{% endif %}
+						{# Twitter #}
 						{% if student.twitter %}
 							<a href="{{ student.twitter }}"><i class="fa fa-twitter"></i></a>
 						{% endif %}
-						<!-- Instagram -->
+						{# Instagram #}
 						{% if student.instagram %}
 							<a href="{{ student.instagram }}"><i class="fa fa-instagram"></i></a>
 						{% endif %}
