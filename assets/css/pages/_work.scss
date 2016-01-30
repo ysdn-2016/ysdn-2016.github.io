@@ -86,26 +86,6 @@ $project-grid-gutter: 60px;
 			margin: 10px 0;
 		}
 	}
-	.stickbottom {
-		position: fixed !important;
-		top: auto !important;
-		bottom: 0 !important;
-	}
-	.sticktop {
-		position: fixed !important;
-		top: 0 !important;
-		bottom: auto !important;
-	}
-	.stickbottomwindow {
-		position: absolute !important;
-		top: auto !important;
-		bottom: 0 !important;
-	}
-	.sticktopwindow {
-		position: absolute !important;
-		top: 0 !important;
-		bottom: auto !important;
-	}
 }
 
 /**
@@ -179,7 +159,9 @@ $project-grid-gutter: 60px;
 			font-family: $sofia;
 			font-size: 21px;
 			font-weight: bold;
-			line-height: 34px;
+			line-height: 28px;
+			padding-top: 4px;
+			padding-bottom: 4px;
 			transition: color .25s ease;
 		}
 		.active {
@@ -189,6 +171,7 @@ $project-grid-gutter: 60px;
 	}
 	.case-nav {
 		padding-top: 80px;
+		padding-right: $project-grid-gutter/2;
 	}
 	#indicator {
 		position: absolute;
@@ -200,7 +183,11 @@ $project-grid-gutter: 60px;
 		list-style-type: none;
 		transition: top .25s ease, height .25s ease;
 	}
+}
 
+/**
+ * Sticky Sections
+ */
 	.stickbottom {
 		position: fixed !important;
 		top: auto !important;
@@ -221,4 +208,3 @@ $project-grid-gutter: 60px;
 		top: 0 !important;
 		bottom: auto !important;
 	}
-}
