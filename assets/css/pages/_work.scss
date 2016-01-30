@@ -173,9 +173,10 @@ $project-grid-gutter: 60px;
 	.case-nav, .case-nav-holder {
 		flex: 1 0 25%;
 		background-color: $white;
-		h1, h2, h3 {
+		a {
 			font-size: 16px;
 			line-height: 20px;
+			display: block;
 		}
 	}
 	.case-nav{

@@ -95,9 +95,16 @@ if ($(".project--standard")[0]){
   $( document ).ready(function() {
     $(".project-content p img").unwrap();
     $(".project-content img:first-of-type").appendTo(".project-header");
-    $(".project-content h1").appendTo(".case-nav");
-    $(".project-content h2").appendTo(".case-nav");
-    $(".project-content h3").appendTo(".case-nav");
+    $(".project-content h1, .project-content h2, .project-content h3").each(function() {
+      var currentId = $(this).attr('id');
+      $(this).contents().appendTo(".case-nav").wrap( "<a href='#" + currentId + "' class='new'></a>" );
+    });
+    $('a').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $(this).attr('href') ).offset().top
+      }, 500);
+      return false;
+    });
     console.log("Cleaned");
   });
   console.log("Running Case Study");
