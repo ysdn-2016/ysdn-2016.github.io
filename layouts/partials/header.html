@@ -1,4 +1,8 @@
-<header class="header">
+<header class="header
+	{# Light/dark header conditionals #}
+	{% if id == 'work' %} dark{% endif %}
+	{% if id == 'students' %} light{% endif %}
+">
   <a href="/"><div class="logo"></div></a>
   <div class="nav">
     <a href="/work/" {% if id == 'work' %}class="active"{% endif %}>Work</a>
