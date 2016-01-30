@@ -175,10 +175,10 @@ $project-grid-gutter: 60px;
 		flex: 1 0 25%;
 		a {
 			display: block;
-			font-family: $sofia;
-			font-weight: bold;
-			font-size: 21px;
 			color: gray;
+			font-family: $sofia;
+			font-size: 21px;
+			font-weight: bold;
 			line-height: 34px;
 		}
 		.active {
@@ -186,7 +186,7 @@ $project-grid-gutter: 60px;
 		}
 	}
 	.case-nav {
-		padding-top: 60px;
+		padding-top: 80px;
 	}
 	.stickbottom {
 		position: fixed !important;
