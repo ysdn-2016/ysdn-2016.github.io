@@ -83,6 +83,11 @@ deploy\:production:
 lint:
 	@$(BIN)/xo
 
+fmt: comb semistandard
+
+semistandard:
+	@(cd assets && semistandard-format -w)
+
 comb:
 	@csscomb assets/css -v
 

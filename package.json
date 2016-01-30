@@ -49,6 +49,7 @@
     "mkdirp": "^0.5.1",
     "onchange": "^2.0.0",
     "postcss-cli": "^2.3.3",
+    "semistandard-format": "^2.1.0",
     "swig": "^1.4.2",
     "watchify": "^3.7.0",
     "wtch": "^4.0.1"
