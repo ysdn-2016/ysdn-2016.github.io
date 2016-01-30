@@ -98,7 +98,6 @@ $project-grid-gutter: 60px;
 		width: 100%;
 		max-width: 1160px;
 	}
-
 	p, h1, h2, h3, ul {
 		max-width: 600px;
 		margin: 20px 0;
@@ -135,7 +134,6 @@ $project-grid-gutter: 60px;
 			padding-top: 200px;
 		}
 	}
-
 	.project-content, .project-content-holder {
 		background-color: $white;
 		flex: 1 0 75%;
@@ -155,13 +153,13 @@ $project-grid-gutter: 60px;
 		flex: 1 0 25%;
 		a {
 			display: block;
+			padding-top: 4px;
+			padding-bottom: 4px;
 			color: #d1d1d1;
 			font-family: $sofia;
 			font-size: 21px;
-			font-weight: bold;
+			font-weight: 500;
 			line-height: 28px;
-			padding-top: 4px;
-			padding-bottom: 4px;
 			transition: color .25s ease;
 		}
 		.active {
@@ -188,23 +186,23 @@ $project-grid-gutter: 60px;
 /**
  * Sticky Sections
  */
-	.stickbottom {
-		position: fixed !important;
-		top: auto !important;
-		bottom: 0 !important;
-	}
-	.sticktop {
-		position: fixed !important;
-		top: 0 !important;
-		bottom: auto !important;
-	}
-	.stickbottomwindow {
-		position: absolute !important;
-		top: auto !important;
-		bottom: 0 !important;
-	}
-	.sticktopwindow {
-		position: absolute !important;
-		top: 0 !important;
-		bottom: auto !important;
-	}
+.stickbottom {
+	position: fixed !important;
+	top: auto !important;
+	bottom: 0 !important;
+}
+.sticktop {
+	position: fixed !important;
+	top: 0 !important;
+	bottom: auto !important;
+}
+.stickbottomwindow {
+	position: absolute !important;
+	top: auto !important;
+	bottom: 0 !important;
+}
+.sticktopwindow {
+	position: absolute !important;
+	top: 0 !important;
+	bottom: auto !important;
+}
