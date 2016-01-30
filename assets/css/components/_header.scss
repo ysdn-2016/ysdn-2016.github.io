@@ -5,12 +5,12 @@ $header-light-bg: #fff;
 
 
 .header {
+	background-color: $header-light-bg;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	// margin-right: $ribbon-width;
 	padding: 20px 26px 20px 36px;
-	background-color: $header-light-bg;
 	.logo {
 		background: url(images/logo.svg) no-repeat 50% 50%;
 		width: 120px;
@@ -34,9 +34,9 @@ $header-light-bg: #fff;
 	}
 
 	&.dark {
+		background-color: $header-dark-bg;
 		// Dark theme
 		color: $header-dark-color;
-		background-color: $header-dark-bg;
 
 		.logo {
 			background: url(images/logo-light.svg) no-repeat 50% 50%;
