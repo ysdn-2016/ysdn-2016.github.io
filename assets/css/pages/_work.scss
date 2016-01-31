@@ -29,6 +29,25 @@ $project-grid-gutter: 60px;
 	margin-bottom: $project-grid-gutter - 25px;
 }
 
+.project-preview-image {
+	position: relative;
+	&-placeholder {
+		rect {
+			fill: #f2f2f2;
+		}
+	}
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.0;
+		transition: opacity 500ms ease;
+		&[lazyloaded] {
+			opacity: 1.0;
+		}
+	}
+}
+
 .project-preview-details {
 	margin-top: 14px;
 	font-family: $sofia;
