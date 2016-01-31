@@ -25,6 +25,7 @@ LIBRARIES  = $(shell find ./assets/js/vendor -type f -name '*.js' -not -path "*j
 ICONS      = $(shell find './assets/icons/' -type f -name '*.svg')
 
 DOMAIN     = ysdn2016.com
+STAGING    = staging.ysdn2016.com
 REPO       = ysdn-2016/ysdn-2016.github.io
 BRANCH     = $(shell git rev-parse --abbrev-ref HEAD)
 
@@ -61,9 +62,9 @@ deploy:
 		git add . && \
 		git commit -q -m "Deployment (auto-commit)" && \
 		echo "\033[0;90m" && \
-		surge . https://ysdn2016-staging.surge.sh \
+		surge . $(STAGING) \
 		echo "\033[0m")
-	@echo "Deployed to \033[0;32mhttps://ysdn2016-staging.surge.sh/\033[0m"
+	@echo "Deployed to \033[0;32mhttp://$(STAGING)/\033[0m"
 
 deploy\:production:
 	@if [[ "$(BRANCH)" != "production" ]]; then sleep 0.5 && echo "\n\033[0;31mERROR:\033[0m Deployments can only happen in the \033[0;33mproduction\033[0m branch\nMerge your changes into \033[0;33mproduction\033[0m and try again.\n" && tput bel && exit 1; fi
@@ -139,7 +140,7 @@ build/assets/bundle.js: $(SCRIPTS)
 build/assets/libraries.js: $(LIBRARIES)
 	@cat assets/js/vendor/jquery.js $^ > $@
 
-assets/fonts/icons: $(ICONS)
+assets/fonts/icons: assets/icons/icons.sketch assets/icons/config.yml $(ICONS)
 	@fontcustom compile -c assets/icons/config.yml
 
 #
