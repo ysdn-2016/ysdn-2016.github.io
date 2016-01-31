@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
 {% block main %}
-	<h2>Sponsor</h2>
 
+	{% include 'partials/in-progress.html' %}
+
+	<h2>Sponsors</h2>
 	{{ contents | safe }}
 {% endblock %}
