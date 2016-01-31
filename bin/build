@@ -10,8 +10,6 @@ var collections = require('metalsmith-collections')
 var permalinks = require('metalsmith-permalinks')
 var layouts = require('metalsmith-layouts')
 var branch = require('metalsmith-branch')
-var copy = require('metalsmith-copy')
-var paths = require('metalsmith-paths')
 var swig = require('metalsmith-swig-helpers')
 
 var yaml = require('../lib/yaml')
@@ -47,7 +45,6 @@ var site = metalsmith(__dirname)
 	.destination(build.destination)
 	.clean(build.clean)
 	.metadata(metadata)
-	.use(paths())
 	.use(swig({ filters }))
 	.use(collections({
 		students: { pattern: 'students/**/student.md', refer: false },
@@ -79,7 +76,7 @@ site.use(branch('students/**/student.md')
 		gfm: true
 	}))
 	.use(typography())
-	.use(permalinks('students/:name'))
+	.use(permalinks(':name'))
 	.use(layouts({
 		engine: 'swig',
 		default: 'student.html',
@@ -97,7 +94,7 @@ site.use(branch('students/**/project.md')
 		gfm: true
 	}))
 	.use(typography())
-	.use(permalinks('students/:owner_name/:title'))
+	.use(permalinks(':owner_name/:title'))
 	.use(layouts({
 		engine: 'swig',
 		default: 'project.html',
@@ -105,6 +102,7 @@ site.use(branch('students/**/project.md')
 		directory: '../layouts'
 	}))
 )
+
 
 /**
  * Build the site

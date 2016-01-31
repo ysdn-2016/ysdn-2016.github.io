@@ -33,31 +33,31 @@
 			</header>
 			<div class="student-list-body">
 			{% for student in students | sortByLastName %}
-				<div class="row student student-list-row" data-name="{{ student.name }}" data-last-name="{{ student.lastName }}" data-url="{{ student.path.href }}" data-categories="{{ student.projectCategories | map('id') | join(',') }}">
+				<div class="row student student-list-row" data-name="{{ student.name }}" data-last-name="{{ student.lastName }}" data-url="{{ student.href }}" data-categories="{{ student.projectCategories | map('id') | join(',') }}">
 					<div class="col student-list-student">
-						<a href="{{ student.path.href }}">{{ student.name }}</a>
+						<a href="{{ student.href }}">{{ student.name }}</a>
 					</div>
 					<div class="col student-list-category">
 						{% for category in student.projectCategories %}
-						<a href="{{ category.href }}" class="category-target">{{ category.title }}{% if not loop.last %},{% endif %}</a>
+						<a href="{{ category.href }}" class="category-target" data-category="{{ category.id }}">{{ category.title }}{% if not loop.last %},{% endif %}</a>
 						{% endfor %}
 					</div>
 					<div class="col student-list-social">
 						{# Email #}
 						{% if student.email %}
-							<a href="mailto:{{ student.email }}" class="i-mail"></a>
+							<a href="mailto:{{ student.email }}" class="i-mail" target="_blank"></a>
 						{% endif %}
 						{# URL #}
 						{% if student.url %}
-							<a href="{{ student.url }}" class="i-globe"></a>
+							<a href="{{ student.url }}" class="i-globe" target="_blank"></a>
 						{% endif %}
 						{# Twitter #}
 						{% if student.twitter %}
-							<a href="{{ student.twitter }}" class="i-twitter"></a>
+							<a href="{{ student.twitter }}" class="i-twitter" target="_blank"></a>
 						{% endif %}
 						{# Instagram #}
 						{% if student.instagram %}
-							<a href="{{ student.instagram }}" class="i-instagram"></a>
+							<a href="{{ student.instagram }}" class="i-instagram" target="_blank"></a>
 						{% endif %}
 					</div>
 				</div>
@@ -68,7 +68,7 @@
 		{# Grid View #}
 		<div class="student-grid hidden">
 			{% for student in students | sortByLastName %}
-				<a class="student-preview student" href="{{ student.path.href }}" data-url="{{ student.path.href }}" data-name="{{ student.name }}" data-last-name="{{ student.lastName }}" data-categories="{{ student.projectCategories | map('id') | join(',') }}">
+				<a class="student-preview student" href="{{ student.href }}" data-url="{{ student.href }}" data-name="{{ student.name }}" data-last-name="{{ student.lastName }}" data-categories="{{ student.projectCategories | map('id') | join(',') }}">
 					<div class="student-preview-image">
 						<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=888888&txtclr=888888&txt=250%C3%97250&w=300&h=300" />
 					</div>
