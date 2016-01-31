@@ -22,6 +22,8 @@ STYLES     = $(shell find ./assets -type f -name '*.scss')
 SCRIPTS    = $(shell find ./assets -type f -name '*.js' -not -path "*vendor*")
 LIBRARIES  = $(shell find ./assets/js/vendor -type f -name '*.js' -not -path "*jquery.js")
 
+ICONS      = $(shell find './assets/icons/' -type f -name '*.svg')
+
 DOMAIN     = ysdn2016.com
 REPO       = ysdn-2016/ysdn-2016.github.io
 BRANCH     = $(shell git rev-parse --abbrev-ref HEAD)
@@ -107,7 +109,7 @@ clean-deps:
 
 install: node_modules
 content: build/index.html
-assets:  build/assets/fonts build/assets/images
+assets:  assets/fonts/icons build/assets/fonts build/assets/images
 styles:  build/assets/bundle.css
 scripts: build/assets/bundle.js build/assets/libraries.js
 
@@ -136,6 +138,9 @@ build/assets/bundle.js: $(SCRIPTS)
 
 build/assets/libraries.js: $(LIBRARIES)
 	@cat assets/js/vendor/jquery.js $^ > $@
+
+assets/fonts/icons: $(ICONS)
+	@fontcustom compile -c assets/icons/config.yml
 
 #
 # Phony

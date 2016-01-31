@@ -7,13 +7,13 @@ module.exports = function () {
 	var $students = $('.student');
 	var $search = $('.student-nav-view-search-input');
 
-	var $gridViewTarget = $('#grid-view-target');
-	var $listViewTarget = $('#list-view-target');
+	var $gridViewTarget = $('.grid-view-target');
+	var $listViewTarget = $('.list-view-target');
 	var $categoryTarget = $('.category-target');
 
 	var filters = {
 		search: '',
-		category: ''
+		category: '*'
 	};
 
 	/**
@@ -40,16 +40,14 @@ module.exports = function () {
 
 	function handleStudentClick (e) {
 		if (e.target.tagName.toLowerCase() === 'a') {
-			window.location = e.target.href;
 			return;
 		}
 		e.preventDefault();
-		window.location = $(this).find('a').first().attr('href');
+		window.location = $(this).attr('data-url');
 	}
 
 	function handleSearchInput (e) {
-		var query = $search.val();
-		filters.search = query;
+		filters.search = $search.val().trim();
 		updateList();
 	}
 
@@ -74,7 +72,7 @@ module.exports = function () {
 		}
 
 		function bySearch (i, el) {
-			if (filters.search.length < 1) return true;
+			if (!filters.search.length) return true;
 			var name = $(el).attr('data-name');
 			name = name.toLowerCase();
 			name = name.replace(/\s+/g, '');

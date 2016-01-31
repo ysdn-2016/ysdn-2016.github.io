@@ -13,12 +13,12 @@
 			</div>
 			<div class="student-nav-view col">
 				<div class="student-nav-view-selector">
-					<a href="#!" id="grid-view-target"><i class="grid-view fa fa-fw fa-th"></i></a>
-					<a href="#!" id="list-view-target"><i class="list-view active fa fa-fw fa-bars"></i></a>
+					<a href="#!" class="grid-view-target i-grid"></a>
+					<a href="#!" class="list-view-target i-list"></a>
 				</div>
 				<div class="student-nav-view-search">
-					<input type="text" class="student-nav-view-search-input" placeholder="Search" />
-					<label for="student-nav-view-search-input"><i class="student-nav-view-search-icon fa fa-fw fa-search"></i></label>
+					<input type="text" id="student-nav-view-search-input" class="student-nav-view-search-input" placeholder="Search" />
+					<label for="student-nav-view-search-input"><i class="student-nav-view-search-icon i-search"></i></label>
 				</div>
 			</div>
 		</div>
@@ -27,13 +27,13 @@
 			<header class="student-list-header">
 				<div class="row header-row">
 					<div class="col student-list-student">Student</div>
-					<div class="col student-list-category">Work Exhibiting</div>
+					<div class="col student-list-category">Disciplines</div>
 					<div class="col student-list-social">Connect</div>
 				</div>
 			</header>
 			<div class="student-list-body">
 			{% for student in students | sortByLastName %}
-				<div class="row student student-list-row" data-name="{{ student.name }}" data-last-name="{{ student.lastName }}" data-categories="{{ student.projectCategories | map('id') | join(',') }}">
+				<div class="row student student-list-row" data-name="{{ student.name }}" data-last-name="{{ student.lastName }}" data-url="{{ student.path.href }}" data-categories="{{ student.projectCategories | map('id') | join(',') }}">
 					<div class="col student-list-student">
 						<a href="{{ student.path.href }}">{{ student.name }}</a>
 					</div>
@@ -45,19 +45,19 @@
 					<div class="col student-list-social">
 						{# Email #}
 						{% if student.email %}
-							<a href="mailto:{{ student.email }}"><i class="fa fa-envelope-o"></i></a>
+							<a href="mailto:{{ student.email }}" class="i-mail"></a>
 						{% endif %}
 						{# URL #}
 						{% if student.url %}
-							<a href="{{ student.url }}"><i class="fa fa-globe"></i></a>
+							<a href="{{ student.url }}" class="i-globe"></a>
 						{% endif %}
 						{# Twitter #}
 						{% if student.twitter %}
-							<a href="{{ student.twitter }}"><i class="fa fa-twitter"></i></a>
+							<a href="{{ student.twitter }}" class="i-twitter"></a>
 						{% endif %}
 						{# Instagram #}
 						{% if student.instagram %}
-							<a href="{{ student.instagram }}"><i class="fa fa-instagram"></i></a>
+							<a href="{{ student.instagram }}" class="i-instagram"></a>
 						{% endif %}
 					</div>
 				</div>
@@ -68,9 +68,9 @@
 		{# Grid View #}
 		<div class="student-grid hidden">
 			{% for student in students | sortByLastName %}
-				<a class="student-preview student" href="{{ student.path.href }}" data-name="{{ student.name }}" data-last-name="{{ student.lastName }}" data-categories="{{ student.projectCategories | map('id') | join(',') }}">
+				<a class="student-preview student" href="{{ student.path.href }}" data-url="{{ student.path.href }}" data-name="{{ student.name }}" data-last-name="{{ student.lastName }}" data-categories="{{ student.projectCategories | map('id') | join(',') }}">
 					<div class="student-preview-image">
-						<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=888888&txtclr=888888&txt=250%C3%97250&w=250&h=250" />
+						<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=888888&txtclr=888888&txt=250%C3%97250&w=300&h=300" />
 					</div>
 					<div class="student-preview-name">{{ student.name }}</div>
 				</a>

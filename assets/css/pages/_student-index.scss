@@ -64,9 +64,9 @@
 	&-icon {
 		position: absolute;
 		top: 50%;
-		left: 0;
+		right: 0;
 		// NOTE: 40% instead of 50% for visual centering
-		transform: translateY(-40%);
+		transform: translateY(-50%);
 	}
 	&-value {
 		position: fixed;
@@ -76,8 +76,9 @@
 	}
 	&-input {
 		border: none;
-		padding-left: 28px;
+		padding-right: 28px;
 		font-family: $sofia;
+		width: 90px;
 	}
 }
 
@@ -134,9 +135,7 @@
 .student-list-header {
 	margin-bottom: 12px;
 	.col {
-		color: lighten(black, 70%);
 		font-size: 12px;
-		font-weight: bold;
 		letter-spacing: .08em;
 		text-transform: uppercase;
 		i {
@@ -153,6 +152,7 @@
 
 .student-list-category {
 	a {
+		padding: 10px 0;
 		margin-right: 2px;
 	}
 }
@@ -173,10 +173,13 @@
 }
 
 .student-preview {
-	flex-basis: 24%;
+	flex-basis: 22.75%;
 	display: block;
-	margin-right: 1%;
-	margin-bottom: 2rem;
+	margin-right: 3%;
+	margin-bottom: 3rem;
+	&:nth-child(4n) {
+		margin-right: 0;
+	}
 }
 
 .student-preview-name {
