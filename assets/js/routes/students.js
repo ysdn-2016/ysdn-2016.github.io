@@ -53,9 +53,10 @@ module.exports = function () {
 
 	function handleCategoryClick (e) {
 		e.preventDefault();
+		var id = $(this).attr('data-category')
 		$categoryTarget.removeClass('active');
-		$(this).addClass('active');
-		filters.category = $(this).attr('data-category');
+		$('.category-target[data-category="' + id + '"]').addClass('active');
+		filters.category = id;
 		updateList();
 	}
 

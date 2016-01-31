@@ -144,7 +144,6 @@
 	}
 }
 
-
 .student-list-row {
 	display: block;
 	cursor: pointer;
@@ -152,14 +151,20 @@
 
 .student-list-category {
 	a {
-		padding: 10px 0;
-		margin-right: 2px;
+		padding: 10px 2px 10px 0;
+		&:hover {
+			opacity: 0.5;
+		}
 	}
 }
 
 .student-list-social {
 	a {
-		margin-right: 12px;
+		margin-left: -12px;
+		padding: 12px;
+		&:hover {
+			opacity: 0.5;
+		}
 	}
 	@media screen and (max-width: 1000px) {
 		display: none;
