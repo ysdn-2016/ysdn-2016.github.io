@@ -1,4 +1,20 @@
 
 .page-home {
 	background: $black;
+	color: $white;
+}
+
+.home-introduction {
+	text-align: center;
+}
+
+.home-headline,
+.home-subhead {
+	color: $white;
+}
+
+.home-headline {
+	font-size: 52px;
+	font-weight: 500;
+	margin-bottom: 18px;
 }
