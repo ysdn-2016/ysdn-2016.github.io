@@ -1,19 +1,25 @@
 
+$ribbon-offset: 12px;
+
 .event-ribbon {
 	cursor: pointer;
 	position: fixed;
 	top: 0;
 	right: 0;
 	background-color: $blue;
-	width: $ribbon-width;
+	width: $ribbon-width + $ribbon-offset;
 	height: 100%;
 	padding: 0;
-	transition: all .4s ease-in-out;
+	transform: translateX($ribbon-offset);
+	transition: all 200ms ease-in-out;
 	&.yellow {
 		background-color: $yellow;
 		.event-info span {
 			color: rgba(0,0,0,.4);
 		}
+	}
+	&.yellow:hover {
+		background-color: darken($yellow, 10%);
 	}
 	&.black {
 		background-color: #1e1e1e;
@@ -29,8 +35,8 @@
 		}
 	}
 	&:hover {
-		width: $ribbon-width + 6px;
-		// background-color: darken($ribbon-color, 4%);
+		transform: translateX(0);
+		transition: all 200ms ease-out;
 	}
 	.icon {
 		@include icon($ribbon-width, 40px);
@@ -61,5 +67,8 @@
 		bottom: 0;
 		padding-bottom: 12px;
 		color: black;
+	}
+	.page-event & {
+		display: none;
 	}
 }

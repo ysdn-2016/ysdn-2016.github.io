@@ -1,26 +1,23 @@
-$header-dark-color: #fff;
-$header-dark-bg: #000;
+$header-dark-color: $white;
+$header-dark-bg: $black;
 $header-light-color: #1b2020;
-$header-light-bg: #fff;
-
+$header-light-bg: $white;
 
 .header {
-	background-color: $header-light-bg;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	// margin-right: $ribbon-width;
-	padding: 20px 26px 20px 36px;
+	padding: 30px 40px 30px 35px;
 	.logo {
-		background: url(images/logo.svg) no-repeat 50% 50%;
 		width: 120px;
-		height: 40px;
+		path { fill: $header-light-color; }
 	}
 	.nav {
 		position: relative;
 		color: $header-light-color;
 		font-family: $sofia;
-		font-size: 1.15rem;
+		font-size: 21px;
 		font-weight: bold;
 		line-height: 40px;
 		text-decoration: none;
@@ -40,7 +37,7 @@ $header-light-bg: #fff;
 		color: $header-dark-color;
 
 		.logo {
-			background: url(images/logo-light.svg) no-repeat 50% 50%;
+			path { fill: $header-dark-color; }
 		}
 
 		.nav {

@@ -40,6 +40,14 @@ i {
 }
 
 /**
+ * Selection
+ */
+
+::selection {
+	background: rgba($blue, 0.25);
+}
+
+/**
  *
  * Headers
  *
@@ -86,7 +94,6 @@ h4 {
 
 p, em, li, ul {
 	color: $black;
-	font-family: $karla;
 	font-size: 16px;
 	line-height: 24px;
 }
@@ -174,4 +181,16 @@ input {
 		flex-basis: 100%;
 		max-width: 100%;
 	}
+}
+
+.in-progress-flag {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	color: $red;
+	font-family: $sofia;
+	font-size: 96px;
+	transform: translate(-50%, -50%) rotate(-45deg);
+	user-select: none;
+	z-index: 9999;
 }

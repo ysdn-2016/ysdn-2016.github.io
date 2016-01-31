@@ -58,6 +58,7 @@ deploy:
 	@make sync
 	@NODE_ENV=production make build
 	@(cd build && \
+		printf 'User-agent: *\nDisallow: /\n' > robots.txt && \
 		git init -q . && \
 		git add . && \
 		git commit -q -m "Deployment (auto-commit)" && \
