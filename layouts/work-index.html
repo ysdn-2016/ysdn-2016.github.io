@@ -24,7 +24,7 @@
 				<svg class="project-preview-image-placeholder" viewBox="0 0 {{ project.thumbnail.width }} {{ project.thumbnail.height }}" preserveAspectRatio="xMinYMin" width="{{ project.thumbnail.width }}">
 					<rect x="0" y="0" width="100%" height="100%"></rect>
 				</svg>
-				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg==" data-src="{{ project.thumbnail.url }}" />
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg==" data-src="{{ project.thumbnail | asset_url({ width: 400 }) }}" />
 			</div>
 			<div class="project-preview-details">
 				<div class="project-preview-title">{{ project.title }}</div>

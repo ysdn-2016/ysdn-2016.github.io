@@ -36,6 +36,14 @@ i {
 }
 
 /**
+ * Selection
+ */
+
+::selection {
+	background: rgba($blue, 0.25);
+}
+
+/**
  *
  * Headers
  *

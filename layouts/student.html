@@ -12,11 +12,11 @@
 				{% endfor %}
 				</div>
 				<div class="student-social">
-					<a href="mailto:{{ email }}" class="student-social-email" target="_blank"><span>Email</span></a>
-					<a href="{{ facebook }}" class="student-social-facebook" target="_blank"><span>Facebook</span></a>
-					<a href="{{ instagram }}" class="student-social-instagram" target="_blank"><span>Instagram</span></a>
-					<a href="{{ linkedin }}" class="student-social-linkedin" target="_blank"><span>LinkedIn</span></a>
-					<a href="{{ github }}" class="student-social-github" target="_blank"><span>GitHub</span></a>
+					{% if url %}<a href="{{ url }}" class="student-social-url" target="_blank"><span>{{ url | hostname }}</span></a>{% endif %}
+					{% if facebook %}<a href="{{ facebook }}" class="student-social-facebook" target="_blank"><span>Facebook</span></a>{% endif %}
+					{% if instagram %}<a href="{{ instagram }}" class="student-social-instagram" target="_blank"><span>Instagram</span></a>{% endif %}
+					{% if linkedin %}<a href="{{ linkedin }}" class="student-social-linkedin" target="_blank"><span>LinkedIn</span></a>{% endif %}
+					{% if github %}<a href="{{ github }}" class="student-social-github" target="_blank"><span>GitHub</span></a>{% endif %}
 				</div>
 			</div>
 			<div class="student-image">
