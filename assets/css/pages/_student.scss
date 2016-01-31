@@ -1,0 +1,80 @@
+.student-profile {
+	width: 92%;
+	margin: 0 auto;
+
+	.row {
+		display: flex;
+		width: 100%;
+		min-height: 1px;
+		flex-flow: row nowrap;
+	}
+
+	.col {
+		flex: 1;
+		flex-direction: column;
+		&.fifty {
+			width: 50%;
+		}
+	}
+}
+
+.student-header {
+	position: relative;
+	height: 480px;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	width: 100%;
+	padding-left: 8px;
+
+	h1 {
+		margin-top: 130px;
+		font-size: 3em;
+		width: 100%;
+		margin-bottom: 8px;
+	}
+
+	h3 {
+		font-size: 1.2em;
+		line-height: 2em;
+		margin-bottom: 6px;
+	}
+
+	.student-meta {
+		position: relative;
+		z-index: 9;
+	}
+
+	.student-categories {
+		font-size: 0.85em;
+		letter-spacing: 0.06em;
+		a {
+			font-size: 0.85em;
+			text-transform: uppercase;
+			letter-spacing: 0.06em;
+		}
+		margin-bottom: 60px;
+	}
+
+	.student-social {
+		a {
+			font-size: 0.85em;
+			text-decoration: underline;
+			padding: 2px 9px;
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+.student-image {
+	img {
+		height: 500px;
+		width: auto;
+		max-width: none;
+		position: absolute;
+		top: -10px;
+		right: 0;
+		z-index: 1;
+	}
+}

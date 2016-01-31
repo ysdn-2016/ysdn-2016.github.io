@@ -2,14 +2,18 @@
 
 {% block main %}
 	<section class="student-profile">
-		<div class="row">
-			<div class="col student-meta">
+		<div class="student-header">
+			<div class="student-meta">
 				<h1>{{ name }}</h1>
-				<h3>Product Designer at Rainbow Design Co</h3>
-				{% for category in projectCategories %}
+				<h3>Product Designer with Rainbow Design Co</h3>
+				{# TODO: Fix categories #}
+				<div class="student-categories">
+					{% for category in projectCategories %}
 					<a href="{{ category.href }}" class="student-categories">{{ category.title }}</a>
 				{% endfor %}
-				<div class="social">
+					<a href="#" class="student-category">Graphic Design</a>, <a href="#" class="student-category">Interactive</a>
+				</div>
+				<div class="student-social">
 					<a href="mailto:{{ email }}" class="email">Email</a>
 					<a href="mailto:{{ email }}" class="email">Facebook</a>
 					<a href="mailto:{{ email }}" class="email">Instagram</a>
