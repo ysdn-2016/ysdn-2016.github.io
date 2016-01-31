@@ -90,12 +90,16 @@ module.exports = function () {
     $('#project-fixed-overlay').followTo();
   } else {
     $(document).ready(function () {
+      var $mainNav = $('.case-nav');
+      $mainNav.append("<li id='indicator'></li>"),
+      $indicator = $('#indicator');
       $('.project-content p img').unwrap();
       $('.project-content img:first-of-type').appendTo('.project-header');
       $('.project-content h1, .project-content h2, .project-content h3').each(function () {
         var currentId = $(this).attr('id');
         $(this).contents().appendTo('.case-nav').wrap("<a href='#" + currentId + "' class='new'></a>");
       });
+      $('.case-nav a:first-of-type').addClass('active');
       $('a').click(function () {
         $('html, body').animate({
           scrollTop: $($(this).attr('href')).offset().top - 80
@@ -106,6 +110,7 @@ module.exports = function () {
 
     console.log('Running Case Study');
     var windw = this;
+    var thing;
     $.fn.followTo = function () {
       var overlay = $('#project-fixed-overlay'),
         container = $('#content');
@@ -136,15 +141,30 @@ module.exports = function () {
           // if scroll past bottom of content
           overlay.attr('class', 'stickbottomwindow');
         }
+        // this controls the section nav
         $('.project-content h1, .project-content h2, .project-content h3').each(function (i) {
           if ($(this).position().top <= scroll - $('#content').position().top + 80) {
             $('.case-nav a.active').removeClass('active');
             $('.case-nav a').eq(i).addClass('active');
           }
         });
+        // Section Indicator
+        $indicator
+          .height($('.active').height())
+          .css('top', $('.active').position().top + 4);
+        $('.case-nav a').hover(function () {
+          $indicator
+            .height($(this).height())
+            .css('top', $(this).position().top + 4);
+          $(this).css('color', 'black');
+        }, function () {
+          $indicator
+            .height($('.active').height())
+            .css('top', $('.active').position().top + 4);
+          $(this).css('color', '');
+        });
       });
     };
     $('#project-fixed-overlay').followTo();
   }
-
 };

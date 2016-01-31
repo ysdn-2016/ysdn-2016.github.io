@@ -3,7 +3,7 @@
 	src: url('/assets/fonts/SofiaPro-Light.woff2') format('woff2'),
 	url('/assets/fonts/SofiaPro-Light.woff') format('woff'),
 	url('/assets/fonts/SofiaPro-Light.ttf') format('truetype');
-	font-weight: normal;
+	font-weight: 300;
 	font-style: normal;
 }
 
@@ -12,7 +12,25 @@
 	src: url('/assets/fonts/SofiaPro-LightItalic.woff2') format('woff2'),
 	url('/assets/fonts/SofiaPro-LightItalic.woff') format('woff'),
 	url('/assets/fonts/SofiaPro-LightItalic.ttf') format('truetype');
-	font-weight: normal;
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Sofia';
+	src: url('/assets/fonts/SofiaPro-Regular.woff2') format('woff2'),
+	url('/assets/fonts/SofiaPro-Regular.woff') format('woff'),
+	url('/assets/fonts/SofiaPro-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Sofia';
+	src: url('/assets/fonts/SofiaPro-RegularItalic.woff2') format('woff2'),
+	url('/assets/fonts/SofiaPro-RegularItalic.woff') format('woff'),
+	url('/assets/fonts/SofiaPro-RegularItalic.ttf') format('truetype');
+	font-weight: 400;
 	font-style: italic;
 }
 
