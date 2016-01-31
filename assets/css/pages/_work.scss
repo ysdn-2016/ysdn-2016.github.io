@@ -128,7 +128,7 @@ $project-grid-gutter: 60px;
 		width: 100%;
 		max-width: 1160px;
 	}
-	p, h1, h2, h3, ul {
+	p, h1, h2, h3, ul, li {
 		max-width: 600px;
 		margin: 20px 0;
 	}
@@ -138,8 +138,10 @@ $project-grid-gutter: 60px;
 	.project-header {
 		overflow: hidden;
 		h1, h3, h4 {
-			max-width: 100%;
+			max-width: 1160px;
 			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
 		}
 		h3 {
 			font-size: 21px;
@@ -165,7 +167,6 @@ $project-grid-gutter: 60px;
 		}
 	}
 	.project-content, .project-content-holder {
-		background-color: $white;
 		flex: 1 0 75%;
 		padding-top: 60px;
 	}
@@ -177,9 +178,9 @@ $project-grid-gutter: 60px;
 	}
 	#content {
 		position: relative;
+		background-color: $white;
 	}
 	.case-nav, .case-nav-holder {
-		background-color: $white;
 		flex: 1 0 25%;
 		a {
 			display: block;
@@ -200,14 +201,16 @@ $project-grid-gutter: 60px;
 	.case-nav {
 		padding-top: 80px;
 		padding-right: $project-grid-gutter/2;
+		a {
+			padding-left: 14px;
+		}
 	}
 	#indicator {
 		position: absolute;
-		bottom: -2px;
-		left: -10px;
 		background: $black;
 		width: 4px;
-		height: 2px;
+		height: 28px;
+		margin: 4px 0;
 		list-style-type: none;
 		transition: top .25s ease, height .25s ease;
 	}

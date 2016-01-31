@@ -151,16 +151,16 @@ module.exports = function () {
         // Section Indicator
         $indicator
           .height($('.active').height())
-          .css('top', $('.active').position().top + 2);
+          .css('top', $('.active').position().top);
         $('.case-nav a').hover(function () {
           $indicator
             .height($(this).height())
-            .css('top', $(this).position().top + 2);
+            .css('top', $(this).position().top);
           $(this).css('color', 'black');
         }, function () {
           $indicator
             .height($('.active').height())
-            .css('top', $('.active').position().top + 2);
+            .css('top', $('.active').position().top);
           $(this).css('color', '');
         });
       });
