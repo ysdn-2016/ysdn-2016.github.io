@@ -1,12 +1,9 @@
 
 .subscribe {
 	display: inline-block;
-	font-family: $sofia;
-	font-weight: bold;
+	font-family: $karla;
 	input {
-		position: relative;
-		top: -1px;
-		margin: 0;
+		min-width: 260px;
 	}
 	a {
 		border-left: 0;
@@ -15,5 +12,8 @@
 		padding: 7px 20px;
 		font-size: 16px;
 		line-height: 25px;
+	}
+	.btn-primary {
+		font-family: $karla;
 	}
 }

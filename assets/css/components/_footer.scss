@@ -6,7 +6,7 @@
 	left: 0;
 	background: #fff;
 	width: 100%;
-	font-family: $sofia;
+	font-family: $karla;
 	.bottom-bar {
 		border-top: 1px black solid;
 		width: 100%;
@@ -28,12 +28,10 @@
 			padding-bottom: 2px;
 			color: #1b2020;
 			font-size: .875em;
-			font-weight: 700;
 			line-height: 30px;
 			text-decoration: none;
-			text-transform: uppercase;
 			&:hover {
-				border-bottom: 2px solid black;
+				border-bottom: 1px solid black;
 				padding-bottom: 0;
 			}
 		}
@@ -44,8 +42,6 @@
 	.info p {
 		display: inline-block;
 		margin: 0 10px;
-		font-family: $sofia;
-		font-weight: bold;
 	}
 }
 .feature {
@@ -61,7 +57,7 @@
 	}
 }
 .discover {
-	border-top: 1px lightgray solid;
+	border-top: 1px light-gray solid;
 	padding-top: 30px;
 	padding-bottom: $footer-height + 30px;
 	h2 {
