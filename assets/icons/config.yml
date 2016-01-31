@@ -3,7 +3,6 @@
 font_name: ysdn-icons
 css_selector: .i-{{glyph}}
 no_hash: true
-force: true
 quiet: true
 
 input:
