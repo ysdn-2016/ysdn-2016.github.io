@@ -27,6 +27,8 @@
 	padding-left: 8px;
 
 	h1 {
+		position: relative;
+		left: -3px;
 		margin-top: 130px;
 		font-size: 3em;
 		width: 100%;
@@ -34,7 +36,10 @@
 	}
 
 	h3 {
+		position: relative;
+		left: -1px;
 		font-size: 1.2em;
+		font-weight: 500;
 		line-height: 2em;
 		margin-bottom: 6px;
 	}
@@ -46,6 +51,7 @@
 
 	.student-categories {
 		font-size: 0.85em;
+		font-family: $sofia;
 		letter-spacing: 0.06em;
 		a {
 			font-size: 0.85em;
@@ -57,13 +63,27 @@
 
 	.student-social {
 		a {
-			font-size: 0.85em;
-			text-decoration: underline;
-			padding: 2px 9px;
+			font-size: 14px;
+			font-family: $sofia;
+			padding: 2px 7px;
 			&:first-child {
 				padding-left: 0;
 			}
 		}
+		span {
+			@include dotted-border($black, 'bottom');
+			padding: 0 0 2px;
+		}
+		&-email:hover { color: $red; }
+		&-email:hover span { @include dotted-border($red); }
+		&-facebook:hover  { color: $blue; }
+		&-facebook:hover span { @include dotted-border($blue); }
+		&-instagram:hover { color: $green; }
+		&-instagram:hover span { @include dotted-border($green); }
+		&-linkedin:hover  { color: $yellow; }
+		&-linkedin:hover span { @include dotted-border($yellow); }
+		&-github:hover    { color: $orange; }
+		&-github:hover span { @include dotted-border($orange); }
 	}
 }
 

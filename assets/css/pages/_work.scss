@@ -86,6 +86,17 @@ $project-grid-gutter: 60px;
 			margin: 10px 0;
 		}
 	}
+	.project-content {
+		p {
+			font-family: $sofia;
+			line-height: 1.5;
+		}
+	}
+	.project-owner {
+		color: $gray;
+		font-size: 16px;
+		font-weight: normal;
+	}
 }
 
 /**

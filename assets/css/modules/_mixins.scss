@@ -3,3 +3,12 @@
 	width: $wsize;
 	height: $hsize;
 }
+
+@mixin dotted-border($color, $direction: null) {
+	background-image: linear-gradient(to right, $color 33%, rgba(255,255,255,0) 0%);
+	@if $direction != null {
+		background-position: #{$direction};
+	  background-size: 3px 1px;
+	  background-repeat: repeat-x;	
+	}
+}
