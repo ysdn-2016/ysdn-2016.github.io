@@ -12,9 +12,9 @@ var routes = {
 $(function () {
   router('/', routes.home);
   router('/work/', routes.work);
-  router('/students/:student/:project/', routes.project);
+  router('/:student/:project/', routes.project);
   router('/students/', routes.students);
-  router('/students/:student/', routes.student);
+  router('/:student/', routes.student);
   router('/event/', routes.event);
   router.start({ click: false });
 
