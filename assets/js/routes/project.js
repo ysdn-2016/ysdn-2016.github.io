@@ -1,3 +1,6 @@
+
+var slugify = require('slug-component')
+
 module.exports = function () {
   if ($('.project--standard')[0]) {
     $(document).ready(function () {
@@ -126,16 +129,21 @@ module.exports = function () {
       $indicator = $('#indicator');
       $('.project-content p img').unwrap();
       $('.project-content img:first-of-type').appendTo('.project-header');
-      $('.project-content h1, .project-content h2, .project-content h3').each(function () {
-        var currentId = $(this).attr('id');
-        $(this).contents().appendTo('.case-nav').wrap("<a href='#" + currentId + "' class='new'></a>");
+      $('.project-content').find('h1, h2, h3').each(function () {
+        var $self = $(this);
+        var currentId = $self.attr('id');
+        if (!currentId) {
+          currentId = slugify($self.text());
+          $self.attr('id', currentId);
+        }
+        $self.contents().clone().appendTo('.case-nav').wrap("<a href='#" + currentId + "' class='new'></a>");
       });
       $('.case-nav a:first-of-type').addClass('active');
-      $('a').click(function () {
+      $('.case-nav a').click(function (e) {
+        e.preventDefault();
         $('html, body').animate({
           scrollTop: $($(this).attr('href')).offset().top - 80
         }, 500);
-        return false;
       });
     });
 
