@@ -162,6 +162,12 @@ module.exports = function () {
           overlayBottom = overlayHeight + overlayTop,
           bottomhit = containerTop + containerHeight + (windowHeight - overlayHeight);
 
+        if(scroll > 400){
+          $('.title').css({'display': 'none'});
+        } else {
+          $('.title').css({'display': 'block'});
+        }
+
         if (scroll > containerTop) {
           // if scroll past top of content
           overlay.attr('class', 'sticktop');
