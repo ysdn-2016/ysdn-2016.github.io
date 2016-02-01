@@ -23,6 +23,18 @@
 				<!-- <img src="/assets/images/student_sample.jpg" alt="{{ name }}"> -->
 			</div>
 		</div>
+		<div class="student-body">
+			<div class="row">
+				<div class="col student-info"></div>
+				<div class="col student-work-list">
+					{% for project in projects %}
+						<div class="student-project">
+							<a href="{{ project.href }}">{{ project.title }}</a>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
 	</section>
 	{% include 'partials/in-progress.html' %}
 	{{ contents | safe }}

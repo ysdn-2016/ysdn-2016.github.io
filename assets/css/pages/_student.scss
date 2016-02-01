@@ -57,6 +57,9 @@
 			font-size: 0.85em;
 			text-transform: uppercase;
 			letter-spacing: 0.06em;
+			&:not(:last-child)::after {
+				content:', ';
+			}
 		}
 		margin-bottom: 60px;
 	}
