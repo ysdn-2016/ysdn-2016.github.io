@@ -26,7 +26,12 @@ $(function () {
 
 	function handleEventRibbonClick (e) {
 		e.preventDefault();
-		$body.addClass('locked');
-		$eventPanel.toggleClass('event-panel--open');
+    if ($eventPanel.hasClass('event-panel--open')) {
+      $body.removeClass('locked');
+      $eventPanel.removeClass('event-panel--open');
+    } else {
+      $body.addClass('locked');
+      $eventPanel.addClass('event-panel--open');
+    }
 	}
 });

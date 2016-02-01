@@ -2,17 +2,31 @@
 
 {% block main %}
 	<nav class="project-nav">
-		<div class="project-nav-categories">
-			<a href="#" data-filter-id="*">All</a>
-			<a href="#" data-filter-id="communication">Communication</a>
-			<a href="#" data-filter-id="physical">Physical</a>
-			<a href="#" data-filter-id="information">Information</a>
-			<a href="#" data-filter-id="interactive">Interactive</a>
-		</div>
-		<div class="project-nav-view-controls">
-			<input type="text" autocomplete="off" placeholder="Search" />
+		<div class="project-nav-filters">
+			<a href="#" class="category-target active" data-category="*">All</a>
+			<a href="#" class="category-target" data-category="communication">Communication</a>
+			<a href="#" class="category-target" data-category="physical">Physical</a>
+			<a href="#" class="category-target" data-category="information">Information</a>
+			<a href="#" class="category-target" data-category="interactive">Interactive</a>
 		</div>
 	</nav>
+	<div class="project-category-intro">
+		<h2 class="project-category-intro-title">General</h2>
+		<p class="project-category-intro-description">A description about the category of work.</p>
+	</div>
+	<div class="project-nav">
+		<div class="project-nav-category">All Work</div>
+		<div class="project-nav-view">
+			<div class="student-nav-view-selector">
+				<a href="#!" class="grid-view-target i-grid"></a>
+				<a href="#!" class="list-view-target i-list"></a>
+			</div>
+			<div class="student-nav-view-search">
+				<input type="text" id="student-nav-view-search-input" class="student-nav-view-search-input" placeholder="Search" />
+				<label for="student-nav-view-search-input"><i class="student-nav-view-search-icon i-search"></i></label>
+			</div>
+		</div>
+	</div>
 	<div class="project-list">
 	</div>
 	<div class="project-grid">

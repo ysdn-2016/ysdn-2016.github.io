@@ -1,12 +1,6 @@
 
 $project-grid-gutter: 60px;
 
-.project-grid {
-	column-count: 3;
-	column-gap: $project-grid-gutter;
-	// HACK: -webkit-perspective fixes bugs for chrome
-	-webkit-perspective: 1;
-}
 
 /**
  * Navigation
@@ -16,11 +10,50 @@ $project-grid-gutter: 60px;
 	display: flex;
 	justify-content: space-between;
 	font-family: $sofia;
+	font-size: 19px;
+	margin-bottom: 24px;
+	a {
+		padding: 0 8px;
+		color: $light-gray;
+		font-weight: 400;
+		&.active,
+		&:hover {
+			color: black;
+		}
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}
+
+/**
+ * Category Header
+ */
+
+.project-category-intro {
+	background: $black;
+	padding: 48px;
+	font-family: $sofia;
+	margin-bottom: 48px;
+
+	&-title {
+		color: $white;
+	}
+	&-description {
+		color: $white;
+	}
 }
 
 /**
  * Project Previews
  */
+
+.project-grid {
+	column-count: 3;
+	column-gap: $project-grid-gutter;
+	// HACK: -webkit-perspective fixes bugs for chrome
+	-webkit-perspective: 1;
+}
 
 .project-preview {
 	@extend %avoid-column-break;

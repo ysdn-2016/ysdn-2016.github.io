@@ -31,4 +31,20 @@ module.exports = {
 			}
 		]
 	}
+
+	/**
+	 * Social
+	 */
+	facebook: {
+		url: 'https://www.facebook.com/ysdntheintermission/'
+	},
+	instagram: {
+		url: 'https://www.instagram.com/ysdntheintermission/'
+	},
+	twitter: {
+		url: 'https://twitter.com/ysdn2016'
+	},
+	mail: {
+		url: 'mailto:hello@ysdn2016.com'
+	}
 }
