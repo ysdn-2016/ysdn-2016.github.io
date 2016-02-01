@@ -101,3 +101,18 @@
 		z-index: 1;
 	}
 }
+
+.student-body {
+	margin: 40px 0;
+	.student-info {
+		flex-grow: 1;
+	}
+	.student-work-list {
+		flex-grow: 2;
+	}
+	.student-project {
+		.meta {
+			margin: 24px 0;
+		}
+	}
+}

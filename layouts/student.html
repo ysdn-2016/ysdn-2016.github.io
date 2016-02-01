@@ -25,11 +25,29 @@
 		</div>
 		<div class="student-body">
 			<div class="row">
-				<div class="col student-info"></div>
+				<div class="col student-info">
+					<h5>About</h5>
+					<p>{{ student.about }}</p>
+					<h6>Looking For</h6>
+					<p>{{ student.lookingfor }}</p>
+					<h6>Achievements</h6>
+					<p>{{ student.achievements }}</p>
+				</div>
 				<div class="col student-work-list">
 					{% for project in projects %}
 						<div class="student-project">
-							<a href="{{ project.href }}">{{ project.title }}</a>
+							<a href="{{ project.href }}">
+								<img src="{{ project.thumbnail.url }}" alt="{{ project.title }}">
+								<div class="meta row">
+									<div class="col">
+										<h4>{{ project.title }}</h4>
+										<p>{{ project.category }}</p>
+									</div>
+									<div class="col">
+										<p>{{ project.snippet }}</p>
+									</div>
+								</div>
+							</a>
 						</div>
 					{% endfor %}
 				</div>
