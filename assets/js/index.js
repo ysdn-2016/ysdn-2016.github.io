@@ -32,6 +32,7 @@ $(function () {
     } else {
       $body.addClass('locked');
       $eventPanel.addClass('event-panel--open');
+      router('/event/');
     }
 	}
 });
