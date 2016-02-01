@@ -164,6 +164,22 @@ $project-grid-gutter: 60px;
 		display: flex;
 		width: 100%;
 		max-width: 1160px;
+		h1 {
+			margin: 48px 0 24px;
+			font-size: 48px;
+		}
+		h2 {
+			font-size: 32px;
+		}
+		h4 {
+			color: $black;
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+		h6 {
+			font-size: 1rem;
+			font-weight: bold;
+		}
 	}
 	p, h1, h2, h3, ul, li {
 		max-width: 600px;
