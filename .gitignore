@@ -14,7 +14,6 @@ build/
 
 # Ignore design files
 design/
-assets/icons/export
 .fontcustom-manifest.json
 
 # Ignore sass-cache
@@ -22,3 +21,5 @@ assets/icons/export
 */.sass-cache/*
 .sass-cache
 .sass-cache/*
+
+assets/fonts/

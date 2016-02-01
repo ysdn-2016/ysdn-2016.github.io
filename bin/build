@@ -30,12 +30,7 @@ var build = {
 /**
  * Metadata passed to templates
  */
-var metadata = {
-	site: {
-		title: 'YSDN'
-	},
-	env: process.env.NODE_ENV || 'development'
-}
+var metadata = require('../metadata')
 
 /**
  * Build settings

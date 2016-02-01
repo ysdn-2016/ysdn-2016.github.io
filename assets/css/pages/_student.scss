@@ -74,8 +74,8 @@
 			@include dotted-border($black, 'bottom');
 			padding: 0 0 2px;
 		}
-		&-email:hover { color: $red; }
-		&-email:hover span { @include dotted-border($red); }
+		&-url:hover { color: $red; }
+		&-url:hover span { @include dotted-border($red); }
 		&-facebook:hover  { color: $blue; }
 		&-facebook:hover span { @include dotted-border($blue); }
 		&-instagram:hover { color: $green; }

@@ -1,0 +1,37 @@
+<section class="event-panel
+	 {%- if id == 'event' %} event-panel--open{% endif -%}
+	 {%- if id == 'projects' %} yellow{% endif -%}
+	 {%- if id == 'students' %} black{% endif -%}
+"> {# ^ section specific color examples #}
+	<div class="event-ribbon">
+		<a href="/event/" class="event-ribbon-trigger">
+			<div class="event-ribbon-arrow">&rarr;</div>
+			<div class="event-ribbon-info">
+				<p class="event-ribbon-info-cta">Show Information</p>
+				<p class="event-ribbon-info-details">April 18-19, Toronto, ON</p>
+			</div>
+		</a>
+		<div class="event-ribbon-social-media">
+			<a href="{{ event.facebook.url }}" class="event-ribbon-social-media-icon i-facebook"></a>
+			<a href="{{ event.instagram.url }}" class="event-ribbon-social-media-icon i-instagram"></a>
+			<a href="{{ event.twitter.url }}" class="event-ribbon-social-media-icon i-twitter"></a>
+			<a href="{{ event.mail.url }}" class="event-ribbon-social-media-icon i-mail"></a>
+		</div>
+	</div>
+	<section class="event-panel-content">
+		<div class="event-intro">
+			<h1 class="event-intro-headline">The YSDN class of 2016 cordially invites you to <span class="event-intro-headline-title">{{ event.title | replace(' ', '&nbsp;') | safe }}</span></h1>
+		</div>
+		<div class="event-sessions">
+			{% for session in event.sessions %}
+				<div class="session">
+					<div class="session-name">{{ session.name }}</div>
+					<div class="session-date">{{ session.start | date('F jS, Y') }}</div>
+					<div class="session-time">
+						<span class="session-start">{{ session.start | date('g:i') }}</span>&ndash;<span class="session-end">{{ session.end | date('g:i') }}</span>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+</section>

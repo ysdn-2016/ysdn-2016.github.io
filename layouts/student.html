@@ -20,9 +20,10 @@
 				</div>
 			</div>
 			<div class="student-image">
-				<img src="/assets/images/student_sample.jpg" alt="{{ name }}">
+				<!-- <img src="/assets/images/student_sample.jpg" alt="{{ name }}"> -->
 			</div>
 		</div>
 	</section>
+	{% include 'partials/in-progress.html' %}
 	{{ contents | safe }}
 {% endblock %}
