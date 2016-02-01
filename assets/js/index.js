@@ -9,13 +9,24 @@ var routes = {
   event: require('./routes/event')
 };
 
-$(function () {
-  router('/', routes.home);
-  router('/work/', routes.work);
-  router('/:student/:project/', routes.project);
-  router('/students/', routes.students);
-  router('/:student/', routes.student);
-  router('/event/', routes.event);
-  router.start({ click: false });
+router('/', routes.home);
+router('/work/', routes.work);
+router('/:student/:project/', routes.project);
+router('/students/', routes.students);
+router('/:student/', routes.student);
+router('/event/', routes.event);
+router.start({ click: false });
 
+$(function () {
+	var $body = $('body');
+	var $eventPanel = $('.event-panel');
+	var $eventRibbon = $('.event-ribbon-trigger');
+
+	$eventRibbon.on('click', handleEventRibbonClick);
+
+	function handleEventRibbonClick (e) {
+		e.preventDefault();
+		$body.addClass('locked');
+		$eventPanel.toggleClass('event-panel--open');
+	}
 });
