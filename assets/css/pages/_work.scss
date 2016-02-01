@@ -59,7 +59,7 @@ $project-grid-gutter: 60px;
 	@extend %avoid-column-break;
 	display: block;
 	// NB: 40px is the approximate height of the project labels
-	margin-bottom: $project-grid-gutter - 25px;
+	padding-bottom: $project-grid-gutter - 25px;
 }
 
 .project-preview-image {
