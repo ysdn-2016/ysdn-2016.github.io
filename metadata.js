@@ -30,7 +30,7 @@ module.exports = {
 				end: new Date('2016-04-19T22:00:00.000Z')
 			}
 		]
-	}
+	},
 
 	/**
 	 * Social
