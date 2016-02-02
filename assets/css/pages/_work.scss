@@ -153,6 +153,14 @@ $project-grid-gutter: 60px;
 		font-size: 16px;
 		font-weight: normal;
 	}
+	blockquote {
+		border-left: 4px gray solid;
+	    margin-left: 20px;
+	    padding-left: 16px;
+	    p {
+	    	font-size: 18px;
+	    }
+	}
 }
 
 /**
@@ -184,6 +192,17 @@ $project-grid-gutter: 60px;
 	p, h1, h2, h3, ul, li {
 		max-width: 600px;
 		margin: 20px 0;
+	}
+	ol li {
+		margin: 8px 0;
+	}
+	blockquote {
+		border-left: 4px gray solid;
+	    margin-left: 20px;
+	    padding-left: 16px;
+	    p {
+	    	font-size: 18px;
+	    }
 	}
 	img {
 		margin: 60px 0;

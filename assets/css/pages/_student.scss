@@ -57,6 +57,9 @@
 			font-size: 0.85em;
 			text-transform: uppercase;
 			letter-spacing: 0.06em;
+			&:not(:last-child)::after {
+				content:', ';
+			}
 		}
 		margin-bottom: 60px;
 	}
@@ -96,5 +99,20 @@
 		top: -10px;
 		right: 0;
 		z-index: 1;
+	}
+}
+
+.student-body {
+	margin: 40px 0;
+	.student-info {
+		flex-grow: 1;
+	}
+	.student-work-list {
+		flex-grow: 2;
+	}
+	.student-project {
+		.meta {
+			margin: 24px 0;
+		}
 	}
 }
