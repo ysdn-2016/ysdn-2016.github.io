@@ -83,16 +83,16 @@ module.exports = function () {
 
 	function enableGrid (e) {
 		e.preventDefault();
-		$('.grid-view').addClass('active');
-		$('.list-view').removeClass('active');
+		$('.i-grid').addClass('active');
+		$('.i-list').removeClass('active');
 		$('.student-grid').removeClass('hidden');
 		$('.student-list').addClass('hidden');
 	}
 
 	function enableList (e) {
 		e.preventDefault();
-		$('.list-view').addClass('active');
-		$('.grid-view').removeClass('active');
+		$('.i-list').addClass('active');
+		$('.i-grid').removeClass('active');
 		$('.student-grid').addClass('hidden');
 		$('.student-list').removeClass('hidden');
 	}
