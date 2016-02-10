@@ -19,9 +19,11 @@
 					{% if github %}<a href="https://github.com/{{ github }}" class="student-social-github" target="_blank"><span>GitHub</span></a>{% endif %}
 				</div>
 			</div>
+			{% if portrait %}
 			<div class="student-image">
-				<!-- <img src="/assets/images/student_sample.jpg" alt="{{ name }}"> -->
+				<img src="{{ portrait | asset_url }}" />
 			</div>
+			{% endif %}
 		</div>
 		<div class="student-body">
 			<div class="row">
