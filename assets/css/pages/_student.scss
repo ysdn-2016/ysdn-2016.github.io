@@ -23,7 +23,7 @@
 	border-bottom: 1px solid rgba(0,0,0,.2);
 	overflow: hidden;
 	width: 100%;
-	height: 480px;
+	height: 440px;
 	padding-left: 8px;
 
 	h1 {
@@ -36,7 +36,6 @@
 	}
 
 	.student-meta {
-		position: relative;
 		z-index: 9;
 	}
 
@@ -56,10 +55,12 @@
 	}
 
 	.student-social {
+		position: absolute;
+		bottom: 26px;
 		a {
 			padding: 2px 7px;
 			font-family: $sofia;
-			font-size: 14px;
+			font-size: 16px;
 			&:first-child {
 				padding-left: 0;
 			}
@@ -105,11 +106,11 @@
 	img {
 		position: absolute;
 		z-index: 1;
-		top: -10px;
+		top: -70px;
 		right: 0;
 		width: auto;
 		max-width: none;
-		height: 500px;
+		height: 600px;
 	}
 }
 
