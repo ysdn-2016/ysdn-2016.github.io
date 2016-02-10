@@ -204,6 +204,10 @@ $project-grid-gutter: 60px;
     }
 }
 
+#project-fixed-overlay {
+    width: 100%;
+}
+
 /**
  * Full-view Projects
  */
@@ -222,7 +226,6 @@ $project-grid-gutter: 60px;
 
     #project-fixed-overlay {
         position: absolute;
-        pointer-events: none;
 
         .project-assets {
             pointer-events: none;
@@ -288,6 +291,7 @@ $project-grid-gutter: 60px;
 
     .project-header {
         overflow: hidden;
+        min-height: 200px;
 
         h1, h3, h4 {
             max-width: 1160px;
@@ -336,11 +340,6 @@ $project-grid-gutter: 60px;
 
     .project-content-holder {
         background-color: transparent;
-        pointer-events: none;
-    }
-
-    #project-fixed-overlay {
-        width: 100%;
         pointer-events: none;
     }
 
