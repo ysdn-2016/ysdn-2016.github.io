@@ -110,6 +110,101 @@ $project-grid-gutter: 60px;
 }
 
 /**
+ * Project Typography
+ */
+.project-content {
+    p, h1, h2, h3, h4, h5, h6, ul, ol {
+        max-width: 600px;
+        margin-bottom: 15px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 40px;
+
+        &:first-child {
+            margin-top: 16px;
+        }
+    }
+
+    h1, h2, h3, h4 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    h5, h6 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    li ul {
+        margin: 0;
+        padding: 0 14px;
+    }
+
+    img {
+        margin: 25px 0;
+    }
+
+    a {
+        color: #181818;
+        padding-bottom: 0.15em;
+        background-image: linear-gradient(to right, #181818 33%, rgba(255, 255, 255, 0) 0%);
+        background-position: bottom;
+        background-size: 3px 1px;
+        background-repeat: repeat-x;
+        text-decoration: none;
+
+        &:hover {
+            color: #ef4862;
+            background-image: linear-gradient(to right, #ef4862 33%, rgba(255, 255, 255, 0) 0%);
+        }
+    }
+
+    blockquote {
+        border-left: 4px gray solid;
+        margin-left: 20px;
+        padding-left: 16px;
+    }
+
+    .btn-primary, .button {
+        border: 1px solid #000;
+        background-color: $black;
+        background-image: none !important;
+        padding: 10px 20px 10px 20px;
+        color: $white;
+
+        &:hover {
+            background-color: #ECECEC;
+            color: $black !important;
+        }
+    }
+
+    .contributor-name {
+        display: block;
+        line-height: 26px;
+    }
+
+    .contributor-role {
+        display: block;
+        font-size: 14px;
+        color: grey;
+        line-height: 16px;
+        margin-top: 12px;
+    }
+
+    //Markdown Example Page
+    pre {
+        background-color: #F9F9F9;
+        padding: 20px;
+        font-size: 14px;
+        line-height: 18px;
+        border: 1px solid #7B7B7B;
+        border-radius: 3px;
+        border-style: dotted;
+    }
+}
+
+/**
  * Full-view Projects
  */
 
@@ -178,16 +273,6 @@ $project-grid-gutter: 60px;
         font-size: 16px;
         font-weight: normal;
     }
-
-    blockquote {
-        border-left: 4px gray solid;
-        margin-left: 20px;
-        padding-left: 16px;
-
-        p {
-            font-size: 18px;
-        }
-    }
 }
 
 /**
@@ -199,82 +284,6 @@ $project-grid-gutter: 60px;
         display: flex;
         width: 100%;
         max-width: 1160px;
-
-        h1, h2, h3, h4 {
-            margin: 48px 0 24px;
-            font-size: 36px;
-            color: black;
-            line-height: 48px;
-        }
-
-        h5, h6 {
-            font-size: 26px;
-            line-height: 36px;
-        }
-
-        .project-content {
-            h1, h2, h3, h4, h5, h6 {
-                margin-top: 80px;
-
-                &:first-child {
-                    margin-top: 16px;
-                }
-            }
-        }
-
-        .contributor-name {
-            display: block;
-            line-height: 26px;
-        }
-
-        .contributor-role {
-            display: block;
-            font-size: 14px;
-            color: grey;
-            line-height: 16px;
-            margin-top: 12px;
-        }
-    }
-
-    p, h1, h2, h3, h4, h5, h6, ul, ol {
-        max-width: 600px;
-        margin: 20px 0;
-    }
-
-    li ul {
-        margin: 0;
-        padding: 0 14px;
-    }
-
-    blockquote {
-        border-left: 4px gray solid;
-        margin-left: 20px;
-        padding-left: 16px;
-
-        p {
-            font-size: 18px;
-        }
-    }
-
-    pre {
-        background-color: #F9F9F9;
-        padding: 20px;
-        font-size: 14px;
-        line-height: 18px;
-        border: 1px solid #7B7B7B;
-        border-radius: 3px;
-        border-style: dotted;
-    }
-
-    img {
-        //margin: 60px 0;
-   
-    }
-
-    .project-content section {
-        h1, h2, h3, h4, h5, h6 {
-            margin: 10px 0 !important;
-        }
     }
 
     .project-header {
@@ -285,6 +294,7 @@ $project-grid-gutter: 60px;
             text-align: center;
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 20px;
         }
 
         h3 {
@@ -294,6 +304,10 @@ $project-grid-gutter: 60px;
             .light {
                 font-weight: normal;
             }
+        }
+
+        h4 {
+            color: #aaa;
         }
 
         .title {
@@ -322,10 +336,12 @@ $project-grid-gutter: 60px;
 
     .project-content-holder {
         background-color: transparent;
+        pointer-events: none;
     }
 
     #project-fixed-overlay {
         width: 100%;
+        pointer-events: none;
     }
 
     #content {

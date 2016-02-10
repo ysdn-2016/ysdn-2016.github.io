@@ -55,31 +55,28 @@ i {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
+	color: $black;
 	font-family: $sofia;
 	font-weight: bold;
 	text-rendering: optimizeLegibility;
 }
 
 h1 {
-	color: $black;
 	font-size: 60px;
 	line-height: 64px;
 }
 
 h2 {
-	color: $black;
 	font-size: 36px;
 	line-height: 44px;
 }
 
 h3 {
-	color: $black;
 	font-size: 24px;
 	line-height: 32px;
 }
 
 h4 {
-	color: #aaa;
 	font-size: 14px;
 	line-height: 12px;
 	letter-spacing: .87px;
