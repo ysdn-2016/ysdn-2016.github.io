@@ -4,9 +4,9 @@
 
 	.row {
 		display: flex;
+		flex-flow: row nowrap;
 		width: 100%;
 		min-height: 1px;
-		flex-flow: row nowrap;
 	}
 
 	.col {
@@ -20,28 +20,28 @@
 
 .student-header {
 	position: relative;
-	height: 480px;
+	border-bottom: 1px solid rgba(0,0,0,.2);
 	overflow: hidden;
-	border-bottom: 1px solid rgba(0,0,0,0.2);
 	width: 100%;
+	height: 480px;
 	padding-left: 8px;
 
 	h1 {
 		position: relative;
 		left: -3px;
-		margin-top: 130px;
-		font-size: 3em;
 		width: 100%;
+		margin-top: 130px;
 		margin-bottom: 8px;
+		font-size: 3em;
 	}
 
 	h3 {
 		position: relative;
 		left: -1px;
+		margin-bottom: 6px;
 		font-size: 1.2em;
 		font-weight: 500;
 		line-height: 2em;
-		margin-bottom: 6px;
 	}
 
 	.student-meta {
@@ -50,25 +50,25 @@
 	}
 
 	.student-categories {
-		font-size: 0.85em;
+		margin-bottom: 60px;
 		font-family: $sofia;
-		letter-spacing: 0.06em;
+		font-size: .85em;
+		letter-spacing: .06em;
 		a {
-			font-size: 0.85em;
+			font-size: .85em;
+			letter-spacing: .06em;
 			text-transform: uppercase;
-			letter-spacing: 0.06em;
 			&:not(:last-child)::after {
-				content:', ';
+				content: ', ';
 			}
 		}
-		margin-bottom: 60px;
 	}
 
 	.student-social {
 		a {
-			font-size: 14px;
-			font-family: $sofia;
 			padding: 2px 7px;
+			font-family: $sofia;
+			font-size: 14px;
 			&:first-child {
 				padding-left: 0;
 			}
@@ -77,28 +77,48 @@
 			@include dotted-border($black, 'bottom');
 			padding: 0 0 2px;
 		}
-		&-url:hover { color: $red; }
-		&-url:hover span { @include dotted-border($red); }
-		&-facebook:hover  { color: $blue; }
-		&-facebook:hover span { @include dotted-border($blue); }
-		&-instagram:hover { color: $green; }
-		&-instagram:hover span { @include dotted-border($green); }
-		&-linkedin:hover  { color: $yellow; }
-		&-linkedin:hover span { @include dotted-border($yellow); }
-		&-github:hover    { color: $orange; }
-		&-github:hover span { @include dotted-border($orange); }
+		&-url:hover {
+			color: $red;
+		}
+		&-url:hover span {
+			@include dotted-border($red);
+		}
+		&-facebook:hover {
+			color: $blue;
+		}
+		&-facebook:hover span {
+			@include dotted-border($blue);
+		}
+		&-instagram:hover {
+			color: $green;
+		}
+		&-instagram:hover span {
+			@include dotted-border($green);
+		}
+		&-linkedin:hover {
+			color: $yellow;
+		}
+		&-linkedin:hover span {
+			@include dotted-border($yellow);
+		}
+		&-github:hover {
+			color: $orange;
+		}
+		&-github:hover span {
+			@include dotted-border($orange);
+		}
 	}
 }
 
 .student-image {
 	img {
-		height: 500px;
-		width: auto;
-		max-width: none;
 		position: absolute;
+		z-index: 1;
 		top: -10px;
 		right: 0;
-		z-index: 1;
+		width: auto;
+		max-width: none;
+		height: 500px;
 	}
 }
 

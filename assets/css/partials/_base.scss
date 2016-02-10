@@ -36,7 +36,7 @@ i {
 }
 
 ::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 /**
@@ -44,7 +44,7 @@ i {
  */
 
 ::selection {
-	background: rgba($blue, 0.25);
+	background: rgba($blue, .25);
 }
 
 /**
@@ -130,9 +130,9 @@ input {
 	line-height: 19px;
 	text-align: center;
 	&:hover {
-	    background-color: #ECECEC;
+		border: 1px solid #ececec;
+		background-color: #ececec;
 		color: $black !important;
-		border: 1px solid #ECECEC;
 	}
 }
 
@@ -183,12 +183,12 @@ input {
 
 .in-progress-flag {
 	position: fixed;
+	z-index: 9999;
 	top: 50%;
 	left: 50%;
+	user-select: none;
 	color: $red;
 	font-family: $sofia;
 	font-size: 72px;
 	transform: translate(-50%, -50%) rotate(-30deg);
-	user-select: none;
-	z-index: 9999;
 }
