@@ -1,6 +1,5 @@
 @import 'modules/variables';
 @import 'modules/mixins';
-@import 'modules/extends';
 
 @import 'partials/normalize';
 @import 'partials/font-face';
@@ -9,7 +8,10 @@
 
 @import 'components/header';
 @import 'components/footer';
+@import 'components/project_footer';
 @import 'components/subscribe';
+
+@import 'modules/extends';
 
 @import 'pages/home';
 @import 'pages/work';

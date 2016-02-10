@@ -69,25 +69,7 @@ $project-grid-gutter: 60px;
 }
 
 .project-preview-image {
-	position: relative;
-
-	&-placeholder {
-		rect {
-			fill: #f2f2f2;
-		}
-	}
-
-	img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		opacity: .0;
-		transition: opacity 500ms ease;
-
-		&[lazyloaded] {
-			opacity: 1.0;
-		}
-	}
+	@include image-placeholder();
 }
 
 .project-preview-details {
@@ -243,8 +225,7 @@ $project-grid-gutter: 60px;
 
 		iframe {
 			width: 100%;
-
-			//TEMP Hack for video size
+			// HACK: for video size
 		}
 
 		footer {

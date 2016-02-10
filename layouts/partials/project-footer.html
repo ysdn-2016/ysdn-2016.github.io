@@ -1,0 +1,32 @@
+<div class="project-footer">
+	<div class="project-footer-event-prompt">
+		<h4 class="project-footer-subhead">Enjoyed this project?</h4>
+		<h2 class="project-footer-event-prompt-headline">Come meet {{ owner.firstName }} and the rest of the cast at our show, The&nbsp;Intermission, on April 18—19 at The Liberty Grand.</h2>
+		<a href="/event/" class="btn-primary">Show Information</a>
+	</div>
+	<div class="project-footer-next-project project-footer-preview">
+		{# TODO: make it so that this project isn't chosen for the "next" project to view #}
+		{% set project = owner.projects | random %}
+		<h4 class="project-footer-subhead">Also by {{ owner.firstName }}</h4>
+		<a href="{{ project.href }}" class="project-footer-preview-image">
+			<svg class="project-footer-preview-image-placeholder" viewBox="0 0 800 400" preserveAspectRatio="xMinYMin" width="800">
+				<rect x="0" y="0" width="100%" height="100%"></rect>
+			</svg>
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg==" data-src="{{ project.thumbnail | asset_url({ width: 800, height: 400, fit: 'crop' }) }}" />
+		</a>
+		<a href="{{ project.href }}" class="project-footer-preview-title">{{ project.title }}</a>
+		<a href="/work/{{ project.category }}" class="project-footer-preview-category">{{ project.category | titleize }}</a>
+	</div>
+	<div class="project-footer-related-project project-footer-preview">
+		{% set similar = projects | filter('category', category) | not('id', id) | random %}
+		<h4 class="project-footer-subhead">Similar Project</h4>
+		<a href="{{ similar.href }}" class="project-footer-preview-image">
+			<svg class="project-footer-preview-image-placeholder" viewBox="0 0 800 400" preserveAspectRatio="xMinYMin" width="{{ similar.thumbnail.width }}">
+				<rect x="0" y="0" width="100%" height="100%"></rect>
+			</svg>
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg==" data-src="{{ similar.thumbnail | asset_url({ width: 800, height: 400, fit: 'crop' }) }}" />
+		</a>
+		<a href="{{ similar.href }}" class="project-footer-preview-title">{{ similar.title }}</a>
+		<a href="/work/{{ similar.category }}" class="project-footer-preview-category">{{ similar.category | titleize }}</a>
+	</div>
+</div>

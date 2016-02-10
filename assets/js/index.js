@@ -22,6 +22,15 @@ $(function () {
 	var $eventPanel = $('.event-panel');
 	var $eventRibbon = $('.event-ribbon-trigger');
 
+  // TODO: find a better spot for this
+  $('img[data-src]').unveil(200, function () {
+		var $image = $(this);
+		$image.load(function () {
+			$image.removeAttr('data-src');
+			$image.attr('lazyloaded', true);
+		})
+	});
+
 	$eventRibbon.on('click', handleEventRibbonClick);
 
 	function handleEventRibbonClick (e) {

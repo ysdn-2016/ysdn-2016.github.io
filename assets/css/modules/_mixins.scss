@@ -12,3 +12,25 @@
 		background-size: 3px 1px;
 	}
 }
+
+@mixin image-placeholder() {
+	position: relative;
+
+	&-placeholder {
+		rect {
+			fill: #f2f2f2;
+		}
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: .0;
+		transition: opacity 500ms ease;
+
+		&[lazyloaded] {
+			opacity: 1.0;
+		}
+	}
+}
