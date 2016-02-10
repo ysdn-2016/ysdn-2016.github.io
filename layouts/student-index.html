@@ -14,7 +14,7 @@
 			<div class="student-nav-view col">
 				<div class="student-nav-view-selector">
 					<a href="#!" class="grid-view-target i-grid"></a>
-					<a href="#!" class="list-view-target i-list"></a>
+					<a href="#!" class="list-view-target i-list active"></a>
 				</div>
 				<div class="student-nav-view-search">
 					<input type="text" id="student-nav-view-search-input" class="student-nav-view-search-input" placeholder="Search" />
@@ -53,11 +53,15 @@
 						{% endif %}
 						{# Twitter #}
 						{% if student.twitter %}
-							<a href="{{ student.twitter }}" class="i-twitter" target="_blank"></a>
+							<a href="https://twitter.com/{{ student.twitter }}" class="i-twitter" target="_blank"></a>
 						{% endif %}
 						{# Instagram #}
 						{% if student.instagram %}
-							<a href="{{ student.instagram }}" class="i-instagram" target="_blank"></a>
+							<a href="http://instagram.com/{{ student.instagram }}" class="i-instagram" target="_blank"></a>
+						{% endif %}
+						{# Github #}
+						{% if student.instagram %}
+							<a href="http://github.com/{{ student.github }}" class="i-github" target="_blank"></a>
 						{% endif %}
 					</div>
 				</div>
