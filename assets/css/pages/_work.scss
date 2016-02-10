@@ -244,6 +244,22 @@ $project-grid-gutter: 60px;
       //TEMP Hack for video size
     }
 
+}
+
+#project-fixed-overlay {
+    width: 100%;
+}
+
+/**
+ * Full-view Projects
+ */
+
+/**
+ * Standard Projects
+ */
+.project--standard {
+    position: relative;
+
     footer {
       margin-bottom: 60px;
     }
@@ -324,6 +340,50 @@ $project-grid-gutter: 60px;
       margin-bottom: 0;
     }
   }
+
+    .project-header {
+        overflow: hidden;
+        min-height: 200px;
+
+        h1, h3, h4 {
+            max-width: 1160px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 21px;
+            line-height: 24px;
+
+            .light {
+                font-weight: normal;
+            }
+        }
+
+        h4 {
+            color: #aaa;
+        }
+
+        .title {
+            position: fixed;
+            z-index: -1;
+            right: 0;
+            left: 0;
+            width: 100%;
+            margin: 0 auto;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: $ribbon-peek;
+        }
+
+        img {
+            margin-bottom: 0;
+            margin-top: 260px;
+            background-color: white;
+        }
+    }
 
   .project-content, .project-content-holder {
     flex: 1 0 75%;
