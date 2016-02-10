@@ -92,7 +92,7 @@ lint:
 fmt: comb semistandard
 
 semistandard:
-	@semistandard-format -w $(SCRIPTS)
+	@$(BIN)/semistandard-format -w $(SCRIPTS)
 
 comb:
 	@csscomb assets/css -v
@@ -138,7 +138,7 @@ build/assets/bundle.css: $(STYLES)
 
 build/assets/bundle.js: $(SCRIPTS)
 	@mkdir -p $(@D)
-	@browserify assets/js/index.js -o $@
+	@$(BIN)/browserify assets/js/index.js -o $@
 
 build/assets/libraries.js: $(LIBRARIES)
 	@cat assets/js/vendor/jquery.js $^ > $@
