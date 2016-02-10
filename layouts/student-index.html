@@ -53,15 +53,15 @@
 						{% endif %}
 						{# Twitter #}
 						{% if student.twitter %}
-							<a href="https://twitter.com/{{ student.twitter }}" class="i-twitter" target="_blank"></a>
+							<a href="https://twitter.com/{{ student.twitter | replace('@', '') }}" class="i-twitter" target="_blank"></a>
 						{% endif %}
 						{# Instagram #}
 						{% if student.instagram %}
-							<a href="http://instagram.com/{{ student.instagram }}" class="i-instagram" target="_blank"></a>
+							<a href="http://instagram.com/{{ student.instagram | replace('@', '') }}" class="i-instagram" target="_blank"></a>
 						{% endif %}
 						{# Github #}
-						{% if student.instagram %}
-							<a href="http://github.com/{{ student.github }}" class="i-github" target="_blank"></a>
+						{% if student.github %}
+							<a href="http://github.com/{{ student.github | replace('@', '') }}" class="i-github" target="_blank"></a>
 						{% endif %}
 					</div>
 				</div>
@@ -74,7 +74,11 @@
 			{% for student in students | sortByLastName %}
 				<a class="student-preview student" href="{{ student.href }}" data-url="{{ student.href }}" data-name="{{ student.name }}" data-last-name="{{ student.lastName }}" data-categories="{{ student.projectCategories | map('id') | join(',') }}">
 					<div class="student-preview-image">
-						<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=888888&txtclr=888888&txt=250%C3%97250&w=300&h=300" />
+						{% if student.portrait %}
+							<img src="{{ student.portrait | asset_url }}" alt="{{ student.name }}" />
+						{% else %}
+							<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=888888&txtclr=888888&txt=250%C3%97250&w=300&h=300" alt="{{ student.name }}" />
+						{% endif %}
 					</div>
 					<div class="student-preview-name">{{ student.name }}</div>
 				</a>
