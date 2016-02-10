@@ -1,17 +1,17 @@
 
 .event-panel {
 	position: fixed;
-	top: 0;
-	left: 100%;
-	bottom: 0;
 	z-index: 9;
-	color: $black;
+	top: 0;
+	bottom: 0;
+	left: 100%;
 	background: $blue;
 	width: 100%;
-	font-family: $sofia;
 	padding-left: $ribbon-peek;
+	color: $black;
+	font-family: $sofia;
+	transition: transform 800ms cubic-bezier(.190, 1.000, .220, 1.000);
 	transform: translateX(-$ribbon-peek);
-	transition: transform 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
 
 	//
 	// State (hover, open, etc.)
@@ -29,7 +29,7 @@
 			transform-origin: center;
 		}
 		.event-ribbon-info-details {
-			opacity: 0.0;
+			opacity: .0;
 		}
 	}
 
@@ -37,15 +37,11 @@
 	// Subcomponents
 	//
 	&-content {
+		opacity: .0;
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 40px 20px 60px;
-		opacity: 0.0;
 		transition: opacity 400ms ease 600ms;
-	}
-
-	&-intro {
-
 	}
 }
 
@@ -81,8 +77,8 @@
 		}
 	}
 	&:hover {
-		transform: translateX(0);
 		transition: all 200ms ease-out;
+		transform: translateX(0);
 	}
 	&-arrow {
 		@include icon(44px, 44px);
@@ -111,20 +107,20 @@
 		}
 	}
 	&-social-media {
-		display: flex;
-		align-items: stretch;
-		justify-content: space-between;
-		flex-direction: column;
-		height: 150px;
 		position: absolute;
-		left: 0;
 		right: 0;
 		bottom: 12px;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: space-between;
+		height: 150px;
 		text-align: center;
 	}
 	&-social-media-icon {
-		color: $black;
 		padding: 6px;
+		color: $black;
 		font-size: 22px;
 		transition: color 200ms ease;
 		&:hover {
@@ -136,11 +132,11 @@
 .event-intro {
 	text-align: center;
 	&-headline {
-		color: #fff;
-		margin: 0 auto;
-		font-size: 64px;
 		max-width: 13.5em;
+		margin: 0 auto;
+		color: #fff;
+		font-size: 64px;
 		line-height: 1.35;
-		letter-spacing: -0.03em;
+		letter-spacing: -.03em;
 	}
 }

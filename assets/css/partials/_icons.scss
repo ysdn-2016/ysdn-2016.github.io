@@ -3,24 +3,26 @@
 //
 
 @font-face {
-  font-family: "ysdn-icons";
-  src: url("/assets/fonts/ysdn-icons.eot");
-  src: url("/assets/fonts/ysdn-icons.eot?#iefix") format("embedded-opentype"),
-       url("/assets/fonts/ysdn-icons.woff") format("woff"),
-       url("/assets/fonts/ysdn-icons.ttf") format("truetype"),
-       url("/assets/fonts/ysdn-icons.svg#ysdn-icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'ysdn-icons';
+	src: url('/assets/fonts/ysdn-icons.eot');
+	src: url('/assets/fonts/ysdn-icons.eot?#iefix') format('embedded-opentype'),
+	url('/assets/fonts/ysdn-icons.woff') format('woff'),
+	url('/assets/fonts/ysdn-icons.ttf') format('truetype'),
+	url('/assets/fonts/ysdn-icons.svg#ysdn-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: "ysdn-icons";
-    src: url("/assets/fonts/ysdn-icons.svg#ysdn-icons") format("svg");
-  }
+	@font-face {
+		font-family: 'ysdn-icons';
+		src: url('/assets/fonts/ysdn-icons.svg#ysdn-icons') format('svg');
+	}
 }
 
-[data-icon]:before { content: attr(data-icon); }
+[data-icon]:before {
+	content: attr(data-icon);
+}
 
 [data-icon]:before,
 .i-facebook:before,
@@ -33,38 +35,59 @@
 .i-mail:before,
 .i-search:before,
 .i-twitter:before {
-  display: inline-block;
-  font-family: "ysdn-icons";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+	display: inline-block;
+	font-family: 'ysdn-icons';
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-decoration: inherit;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	        font-smoothing: antialiased;
 }
 
-.i-facebook:before { content: "\f100"; }
-.i-github:before { content: "\f101"; }
-.i-globe:before { content: "\f102"; }
-.i-grid:before { content: "\f103"; }
-.i-instagram:before { content: "\f104"; }
-.i-linkedin:before { content: "\f105"; }
-.i-list:before { content: "\f106"; }
-.i-mail:before { content: "\f107"; }
-.i-search:before { content: "\f108"; }
-.i-twitter:before { content: "\f109"; }
+.i-facebook:before {
+	content: '\f100';
+}
+.i-github:before {
+	content: '\f101';
+}
+.i-globe:before {
+	content: '\f102';
+}
+.i-grid:before {
+	content: '\f103';
+}
+.i-instagram:before {
+	content: '\f104';
+}
+.i-linkedin:before {
+	content: '\f105';
+}
+.i-list:before {
+	content: '\f106';
+}
+.i-mail:before {
+	content: '\f107';
+}
+.i-search:before {
+	content: '\f108';
+}
+.i-twitter:before {
+	content: '\f109';
+}
 
-$font-ysdn-icons-facebook: "\f100";
-$font-ysdn-icons-github: "\f101";
-$font-ysdn-icons-globe: "\f102";
-$font-ysdn-icons-grid: "\f103";
-$font-ysdn-icons-instagram: "\f104";
-$font-ysdn-icons-linkedin: "\f105";
-$font-ysdn-icons-list: "\f106";
-$font-ysdn-icons-mail: "\f107";
-$font-ysdn-icons-search: "\f108";
-$font-ysdn-icons-twitter: "\f109";
+$font-ysdn-icons-facebook: '\f100';
+$font-ysdn-icons-github: '\f101';
+$font-ysdn-icons-globe: '\f102';
+$font-ysdn-icons-grid: '\f103';
+$font-ysdn-icons-instagram: '\f104';
+$font-ysdn-icons-linkedin: '\f105';
+$font-ysdn-icons-list: '\f106';
+$font-ysdn-icons-mail: '\f107';
+$font-ysdn-icons-search: '\f108';
+$font-ysdn-icons-twitter: '\f109';
