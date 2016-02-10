@@ -9,26 +9,26 @@ $project-grid-gutter: 60px;
  */
 
 .project-nav {
-    display: flex;
-    justify-content: space-between;
-    font-family: $sofia;
-    font-size: 19px;
-    margin-bottom: 24px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 24px;
+	font-family: $sofia;
+	font-size: 19px;
 
-    a {
-        padding: 0 8px;
-        color: $light-gray;
-        font-weight: 400;
+	a {
+		padding: 0 8px;
+		color: $light-gray;
+		font-weight: 400;
 
-        &.active,
-        &:hover {
-            color: black;
-        }
+		&.active,
+		&:hover {
+			color: black;
+		}
 
-        &:first-child {
-            padding-left: 0;
-        }
-    }
+		&:first-child {
+			padding-left: 0;
+		}
+	}
 }
 
 /**
@@ -36,18 +36,18 @@ $project-grid-gutter: 60px;
  */
 
 .project-category-intro {
-    background: $black;
-    padding: 48px;
-    font-family: $sofia;
-    margin-bottom: 48px;
+	background: $black;
+	margin-bottom: 48px;
+	padding: 48px;
+	font-family: $sofia;
 
-    &-title {
-        color: $white;
-    }
+	&-title {
+		color: $white;
+	}
 
-    &-description {
-        color: $white;
-    }
+	&-description {
+		color: $white;
+	}
 }
 
 /**
@@ -55,157 +55,154 @@ $project-grid-gutter: 60px;
  */
 
 .project-grid {
-    column-count: 3;
-    column-gap: $project-grid-gutter;
-
-    // HACK: -webkit-perspective fixes bugs for chrome
-    -webkit-perspective: 1;
+	column-count: 3;
+	column-gap: $project-grid-gutter;
+	// HACK: -webkit-perspective fixes bugs for chrome
+	-webkit-perspective: 1;
 }
 
 .project-preview {
-    @extend %avoid-column-break;
-
-    display: block;
-
-    // NB: 40px is the approximate height of the project labels
-    margin-bottom: $project-grid-gutter - 25px;
+	@extend %avoid-column-break;
+	display: block;
+	// NB: 40px is the approximate height of the project labels
+	padding-bottom: $project-grid-gutter - 25px;
 }
 
 .project-preview-image {
-    position: relative;
+	position: relative;
 
-    &-placeholder {
-        rect {
-            fill: #f2f2f2;
-        }
-    }
+	&-placeholder {
+		rect {
+			fill: #f2f2f2;
+		}
+	}
 
-    img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0.0;
-        transition: opacity 500ms ease;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: .0;
+		transition: opacity 500ms ease;
 
-        &[lazyloaded] {
-            opacity: 1.0;
-        }
-    }
+		&[lazyloaded] {
+			opacity: 1.0;
+		}
+	}
 }
 
 .project-preview-details {
-    margin-top: 14px;
-    font-family: $sofia;
+	margin-top: 14px;
+	font-family: $sofia;
 }
 
 .project-preview-title {
-    font-size: 19px;
-    font-weight: bold;
-    line-height: 1.2;
+	font-size: 19px;
+	font-weight: bold;
+	line-height: 1.2;
 }
 
 .project-preview-student {
-    color: #888;
-    font-size: 15px;
+	color: #888;
+	font-size: 15px;
 }
 
 /**
  * Project Typography
  */
 .project-content {
-    p, h1, h2, h3, h4, h5, h6, ul, ol {
-        max-width: 600px;
-        margin-bottom: 15px;
-    }
+	p, h1, h2, h3, h4, h5, h6, ul, ol {
+		max-width: 600px;
+		margin-bottom: 15px;
+	}
 
-    h1, h2, h3, h4, h5, h6 {
-        margin-top: 40px;
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 40px;
 
-        &:first-child {
-            margin-top: 16px;
-        }
-    }
+		&:first-child {
+			margin-top: 16px;
+		}
+	}
 
-    h1, h2, h3, h4 {
-        font-size: 36px;
-        line-height: 48px;
-    }
+	h1, h2, h3, h4 {
+		font-size: 36px;
+		line-height: 48px;
+	}
 
-    h5, h6 {
-        font-size: 26px;
-        line-height: 36px;
-    }
+	h5, h6 {
+		font-size: 26px;
+		line-height: 36px;
+	}
 
-    li ul {
-        margin: 0;
-        padding: 0 14px;
-    }
+	li ul {
+		margin: 0;
+		padding: 0 14px;
+	}
 
-    img {
-        margin: 25px 0;
-    }
+	img {
+		margin: 25px 0;
+	}
 
-    a {
-        color: #181818;
-        padding-bottom: 0.15em;
-        background-image: linear-gradient(to right, #181818 33%, rgba(255, 255, 255, 0) 0%);
-        background-position: bottom;
-        background-size: 3px 1px;
-        background-repeat: repeat-x;
-        text-decoration: none;
+	a {
+		background-image: linear-gradient(to right, #181818 33%, rgba(255, 255, 255, 0) 0%);
+		background-repeat: repeat-x;
+		background-position: bottom;
+		background-size: 3px 1px;
+		padding-bottom: .15em;
+		color: #181818;
+		text-decoration: none;
 
-        &:hover {
-            color: #ef4862;
-            background-image: linear-gradient(to right, #ef4862 33%, rgba(255, 255, 255, 0) 0%);
-        }
-    }
+		&:hover {
+			background-image: linear-gradient(to right, #ef4862 33%, rgba(255, 255, 255, 0) 0%);
+			color: #ef4862;
+		}
+	}
 
-    blockquote {
-        border-left: 4px gray solid;
-        margin-left: 20px;
-        padding-left: 16px;
-    }
+	blockquote {
+		border-left: 4px gray solid;
+		margin-left: 20px;
+		padding-left: 16px;
+	}
 
-    .btn-primary, .button {
-        border: 1px solid #000;
-        background-color: $black;
-        background-image: none !important;
-        padding: 10px 20px 10px 20px;
-        color: $white;
+	.btn-primary, .button {
+		border: 1px solid #000;
+		background-color: $black;
+		background-image: none !important;
+		padding: 10px 20px 10px 20px;
+		color: $white;
 
-        &:hover {
-            background-color: #ECECEC;
-            color: $black !important;
-        }
-    }
+		&:hover {
+			background-color: #ececec;
+			color: $black !important;
+		}
+	}
 
-    .contributor-name {
-        display: block;
-        line-height: 26px;
-    }
+	.contributor-name {
+		display: block;
+		line-height: 26px;
+	}
 
-    .contributor-role {
-        display: block;
-        font-size: 14px;
-        color: grey;
-        line-height: 16px;
-        margin-top: 12px;
-    }
+	.contributor-role {
+		display: block;
+		margin-top: 12px;
+		color: grey;
+		font-size: 14px;
+		line-height: 16px;
+	}
 
-    //Markdown Example Page
-    pre {
-        background-color: #F9F9F9;
-        padding: 20px;
-        font-size: 14px;
-        line-height: 18px;
-        border: 1px solid #7B7B7B;
-        border-radius: 3px;
-        border-style: dotted;
-    }
+	//Markdown Example Page
+	pre {
+		border: 1px solid #7b7b7b;
+		border-style: dotted;
+		border-radius: 3px;
+		background-color: #f9f9f9;
+		padding: 20px;
+		font-size: 14px;
+		line-height: 18px;
+	}
 }
 
 #project-fixed-overlay {
-    width: 100%;
+	width: 100%;
 }
 
 /**
@@ -216,66 +213,65 @@ $project-grid-gutter: 60px;
  * Standard Projects
  */
 .project--standard {
-    position: relative;
+	position: relative;
 
-    #project-fixed-overlay, #gallery {
-        display: flex;
-        width: 100%;
-        max-width: 1160px;
-    }
+	#project-fixed-overlay, #gallery {
+		display: flex;
+		width: 100%;
+		max-width: 1160px;
+	}
 
-    #project-fixed-overlay {
-        position: absolute;
+	#project-fixed-overlay {
+		position: absolute;
 
-        .project-assets {
-            pointer-events: none;
-        }
-    }
+		.project-assets {
+			pointer-events: none;
+		}
+	}
 
-    #gallery {
-        min-height: 1000px;
-    }
+	#gallery {
+		min-height: 1000px;
+	}
 
-    .project-details {
-        flex: 1 0 41.667%;
-        padding-right: 40px;
+	.project-details {
+		flex: 1 0 41.667%;
+		padding-right: 40px;
 
-        .project-header {
-            margin-top: 60px;
-        }
+		.project-header {
+			margin-top: 60px;
+		}
 
-        iframe {
-            width: 100%;
+		iframe {
+			width: 100%;
 
-            //TEMP Hack for video size
-       
-        }
+			//TEMP Hack for video size
+		}
 
-        footer {
-            margin-bottom: 60px;
-        }
-    }
+		footer {
+			margin-bottom: 60px;
+		}
+	}
 
-    .project-assets {
-        flex: 1 0 58.333%;
+	.project-assets {
+		flex: 1 0 58.333%;
 
-        img {
-            margin: 10px 0;
-        }
-    }
+		img {
+			margin: 10px 0;
+		}
+	}
 
-    .project-content {
-        p {
-            font-family: $sofia;
-            line-height: 1.5;
-        }
-    }
+	.project-content {
+		p {
+			font-family: $sofia;
+			line-height: 1.5;
+		}
+	}
 
-    .project-owner {
-        color: $gray;
-        font-size: 16px;
-        font-weight: normal;
-    }
+	.project-owner {
+		color: $gray;
+		font-size: 16px;
+		font-weight: normal;
+	}
 }
 
 /**
@@ -283,135 +279,135 @@ $project-grid-gutter: 60px;
  */
 
 .project--case-study {
-    .case-content {
-        display: flex;
-        width: 100%;
-        max-width: 1160px;
-    }
+	.case-content {
+		display: flex;
+		width: 100%;
+		max-width: 1160px;
+	}
 
-    .project-header {
-        overflow: hidden;
-        min-height: 200px;
+	.project-header {
+		overflow: hidden;
+		min-height: 200px;
 
-        h1, h3, h4 {
-            max-width: 1160px;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 20px;
-        }
+		h1, h3, h4 {
+			max-width: 1160px;
+			margin-right: auto;
+			margin-bottom: 20px;
+			margin-left: auto;
+			text-align: center;
+		}
 
-        h3 {
-            font-size: 21px;
-            line-height: 24px;
+		h3 {
+			font-size: 21px;
+			line-height: 24px;
 
-            .light {
-                font-weight: normal;
-            }
-        }
+			.light {
+				font-weight: normal;
+			}
+		}
 
-        h4 {
-            color: #aaa;
-        }
+		h4 {
+			color: #aaa;
+		}
 
-        .title {
-            position: fixed;
-            z-index: -1;
-            right: 0;
-            left: 0;
-            width: 100%;
-            margin: 0 auto;
-            margin-right: auto;
-            margin-left: auto;
-            padding-right: $ribbon-peek;
-        }
+		.title {
+			position: fixed;
+			z-index: -1;
+			right: 0;
+			left: 0;
+			width: 100%;
+			margin: 0 auto;
+			margin-right: auto;
+			margin-left: auto;
+			padding-right: $ribbon-peek;
+		}
 
-        img {
-            margin-bottom: 0;
-            margin-top: 260px;
-            background-color: white;
-        }
-    }
+		img {
+			background-color: white;
+			margin-top: 260px;
+			margin-bottom: 0;
+		}
+	}
 
-    .project-content, .project-content-holder {
-        flex: 1 0 75%;
-        padding-top: 60px;
-    }
+	.project-content, .project-content-holder {
+		flex: 1 0 75%;
+		padding-top: 60px;
+	}
 
-    .project-content-holder {
-        background-color: transparent;
-        pointer-events: none;
-    }
+	.project-content-holder {
+		background-color: transparent;
+		pointer-events: none;
+	}
 
-    #content {
-        position: relative;
-        background-color: $white;
-    }
+	#content {
+		position: relative;
+		background-color: $white;
+	}
 
-    .case-nav, .case-nav-holder {
-        flex: 1 0 25%;
+	.case-nav, .case-nav-holder {
+		flex: 1 0 25%;
 
-        a {
-            display: block;
-            padding-top: 4px;
-            padding-bottom: 4px;
-            color: #d1d1d1;
-            font-family: $sofia;
-            font-size: 21px;
-            font-weight: 500;
-            line-height: 28px;
-            transition: color .25s ease;
-        }
+		a {
+			display: block;
+			padding-top: 4px;
+			padding-bottom: 4px;
+			color: #d1d1d1;
+			font-family: $sofia;
+			font-size: 21px;
+			font-weight: 500;
+			line-height: 28px;
+			transition: color .25s ease;
+		}
 
-        .active {
-            top: 0;
-            color: black;
-        }
-    }
+		.active {
+			top: 0;
+			color: black;
+		}
+	}
 
-    .case-nav {
-        padding-top: 80px;
-        padding-right: $project-grid-gutter / 2;
+	.case-nav {
+		padding-top: 80px;
+		padding-right: $project-grid-gutter / 2;
 
-        a {
-            padding-left: 14px;
-        }
-    }
+		a {
+			padding-left: 14px;
+		}
+	}
 
-    #indicator {
-        position: absolute;
-        background: $black;
-        width: 4px;
-        height: 28px;
-        margin: 4px 0;
-        list-style-type: none;
-        transition: top .25s ease, height .25s ease;
-    }
+	#indicator {
+		position: absolute;
+		background: $black;
+		width: 4px;
+		height: 28px;
+		margin: 4px 0;
+		list-style-type: none;
+		transition: top .25s ease, height .25s ease;
+	}
 }
 
 /**
  * Sticky Sections
  */
 .stickbottom {
-    position: fixed !important;
-    top: auto !important;
-    bottom: 0 !important;
+	position: fixed !important;
+	top: auto !important;
+	bottom: 0 !important;
 }
 
 .sticktop {
-    position: fixed !important;
-    top: 0 !important;
-    bottom: auto !important;
+	position: fixed !important;
+	top: 0 !important;
+	bottom: auto !important;
 }
 
 .stickbottomwindow {
-    position: absolute !important;
-    top: auto !important;
-    bottom: 0 !important;
+	position: absolute !important;
+	top: auto !important;
+	bottom: 0 !important;
 }
 
 .sticktopwindow {
-    position: absolute !important;
-    top: 0 !important;
-    bottom: auto !important;
+	position: absolute !important;
+	top: 0 !important;
+	bottom: auto !important;
 }
