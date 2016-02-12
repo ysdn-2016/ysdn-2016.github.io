@@ -2,8 +2,8 @@
 @import "modules/mixins";
 
 @import "partials/font-face";
-//@import "partials/normalize";
-//@import "partials/reset";
+@import "partials/normalize";
+@import "partials/base";
 
-//@import "pages/home";
-@import "pages/placeholder";
+@import "pages/event";
+@import "pages/redirect";
