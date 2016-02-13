@@ -128,12 +128,12 @@ $project-grid-gutter: 60px;
 		}
 	}
 
-	h1, h2, h3, h4 {
+	h1, h2 {
 		font-size: 36px;
 		line-height: 48px;
 	}
 
-	h5, h6 {
+	h3, h4, h5, h6 {
 		font-size: 26px;
 		line-height: 36px;
 	}
@@ -163,8 +163,8 @@ $project-grid-gutter: 60px;
 	}
 
 	blockquote {
-		border-left: 4px gray solid;
-		margin-left: 20px;
+		border-left: 4px #ccc solid;
+		margin-left: 0;
 		padding-left: 16px;
 	}
 
@@ -195,12 +195,21 @@ $project-grid-gutter: 60px;
 	}
 
 	//Markdown Example Page
+	code {
+		font-family: Menlo, Monaco, monospace;
+		font-size: 13px;
+	}
+
+	:not(pre) > code {
+		background: #f9f9f9;
+		border: 1px solid #f2f2f2;
+	}
+
 	pre {
-		border: 1px solid #7b7b7b;
-		border-style: dotted;
+		border: 1px solid #f2f2f2;
 		border-radius: 3px;
 		background-color: #f9f9f9;
-		padding: 20px;
+		padding: 14px 16px;
 		font-size: 14px;
 		line-height: 18px;
 	}
