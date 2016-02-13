@@ -210,12 +210,15 @@ module.exports = function () {
         $indicator
           .height($('.active').height())
           .css('top', $('.active').position().top);
+        //If you hover on item, move the selector
         $('.case-nav a').hover(function () {
           $indicator
             .height($(this).height())
             .css('top', $(this).position().top);
           $(this).css('color', 'black');
-        }, function () {
+        }, 
+        //Otherwise put it back
+        function () {
           $indicator
             .height($('.active').height())
             .css('top', $('.active').position().top);
