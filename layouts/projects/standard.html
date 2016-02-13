@@ -2,6 +2,7 @@
 	<div class="sticktotopwindow" id="project-fixed-overlay">
 		<div class="project-details">
 			<header class="project-header">
+				<h4 class="project-category">{{ category | titleize }}</h4>
 				<h2 class="project-title">{{ title }}</h2>
 				<h3 class="project-owner"><span class="light">by </span><a href="{{ owner.href }}">{{ owner.name }}</a></h3>
 			</header>
