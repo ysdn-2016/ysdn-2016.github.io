@@ -216,6 +216,7 @@ $project-grid-gutter: 60px;
 		padding: 14px 16px;
 		font-size: 14px;
 		line-height: 18px;
+		max-width: 600px;
 	}
 }
 
@@ -365,16 +366,16 @@ $project-grid-gutter: 60px;
 			font-size: 21px;
 			font-weight: 500;
 			line-height: 28px;
-			transition: color 0.25s ease;
+			transition: color 200ms ease;
+		}
 
-			&:hover {
-				color: black;
-			}
+		a:hover {
+			color: #444;
 		}
 
 		.active {
 			top: 0;
-			color: black;
+			color: $black;
 		}
 	}
 
