@@ -366,6 +366,10 @@ $project-grid-gutter: 60px;
 			font-weight: 500;
 			line-height: 28px;
 			transition: color 0.25s ease;
+
+			&:hover {
+				color: black;
+			}
 		}
 
 		.active {
