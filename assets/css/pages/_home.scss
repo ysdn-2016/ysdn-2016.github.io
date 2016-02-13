@@ -1,28 +1,42 @@
 
-
+.page-home {
+}
 
 .home-introduction {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: $black;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background: $black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
 .home-introduction-headline {
 	color: $white;
-	font-size: 19px;
 	font-weight: normal;
+	font-size: 19px;
 	line-height: 1.6;
 	letter-spacing: -0.01em;
 	text-align: center;
 }
 
-
+.home-introduction-arrow {
+	position: absolute;
+	bottom: 5vh;
+	left: 50%;
+	cursor: default;
+	transform: translateX(-50%);
+	&::before {
+		@extend %icon;
+		color: $white;
+		font-size: 24px;
+		text-align: center;
+		content: $font-ysdn-icons-arrow-down;
+	}
+}
 
 .home-headline,
 .home-subhead {
