@@ -13,16 +13,7 @@
 	<![endif]-->
 </head>
 <body class="page-{{ id }}">
-	<div class="container">
-		{% include 'partials/header.html' %}
-		<main class="main">
-			{% block main %}{% endblock %}
-		</main>
-		{% if id !== 'home' %}
-			{% include 'partials/footer.html' %}
-		{% endif %}
-	</div>
-	{% include 'partials/event-panel.html' %}
+	{% block body %}{% endblock %}
 	{% if env == 'development' %}
 	<script src="http://127.0.0.1:35729/livereload.js"></script>
 	{% endif %}

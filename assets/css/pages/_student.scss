@@ -20,7 +20,7 @@
 
 .student-header {
 	position: relative;
-	border-bottom: 1px solid rgba(0,0,0,.2);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -45,11 +45,11 @@
 	.student-categories {
 		margin-bottom: 60px;
 		font-family: $sofia;
-		font-size: .85em;
-		letter-spacing: .06em;
+		font-size: 0.85em;
+		letter-spacing: 0.06em;
 		a {
-			font-size: .85em;
-			letter-spacing: .06em;
+			font-size: 0.85em;
+			letter-spacing: 0.06em;
 			text-transform: uppercase;
 			&:not(:last-child)::after {
 				content: ', ';

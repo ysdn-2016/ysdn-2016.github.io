@@ -1,12 +1,28 @@
 
-.page-home {
-	background: $black;
-	color: $white;
-}
+
 
 .home-introduction {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: $black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.home-introduction-headline {
+	color: $white;
+	font-size: 19px;
+	font-weight: normal;
+	line-height: 1.6;
+	letter-spacing: -0.01em;
 	text-align: center;
 }
+
+
 
 .home-headline,
 .home-subhead {
