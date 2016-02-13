@@ -18,23 +18,23 @@ router('/event/', routes.event);
 router.start({ click: false });
 
 $(function () {
-	var $body = $('body');
-	var $eventPanel = $('.event-panel');
-	var $eventRibbon = $('.event-ribbon-trigger');
+  var $body = $('body');
+  var $eventPanel = $('.event-panel');
+  var $eventRibbon = $('.event-ribbon-trigger');
 
   // TODO: find a better spot for this
   $('img[data-src]').unveil(200, function () {
-		var $image = $(this);
-		$image.load(function () {
-			$image.removeAttr('data-src');
-			$image.attr('lazyloaded', true);
-		})
-	});
+    var $image = $(this);
+    $image.load(function () {
+      $image.removeAttr('data-src');
+      $image.attr('lazyloaded', true);
+    });
+  });
 
-	$eventRibbon.on('click', handleEventRibbonClick);
+  $eventRibbon.on('click', handleEventRibbonClick);
 
-	function handleEventRibbonClick (e) {
-		e.preventDefault();
+  function handleEventRibbonClick (e) {
+    e.preventDefault();
     if ($eventPanel.hasClass('event-panel--open')) {
       $body.removeClass('locked');
       $eventPanel.removeClass('event-panel--open');
@@ -43,5 +43,5 @@ $(function () {
       $eventPanel.addClass('event-panel--open');
       router('/event/');
     }
-	}
+  }
 });

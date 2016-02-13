@@ -1,41 +1,39 @@
-
-var slugify = require('slug-component')
+var slugify = require('slug-component');
 
 module.exports = function () {
   if ($('.project--standard')[0]) {
-    $(document).ready(function () {
-      $('iframe').prependTo('#gallery .project-assets');
-    });
+    // Standard Project
+    $('iframe').prependTo('#gallery .project-assets');
 
-  // Find all YouTube videos
-  var $allVideos = $("iframe"),
+    // Find all YouTube videos
+    var $allVideos = $('iframe'),
       // The element that is fluid width
-      $fluidEl = $(".project-assets");
-  console.log($allVideos);
-  // Figure out and save aspect ratio for each video
-  $allVideos.each(function() {
-    $(this)
-      .data('aspectRatio', this.height / this.width)
-      // and remove the hard coded width/height
-      .removeAttr('height')
-      .removeAttr('width');
-  });
-  // When the window is resized
-  $(window).resize(function() {
-    var newWidth = $fluidEl.width();
-    // Resize all videos according to their own aspect ratio
-    $allVideos.each(function() {
-      var $el = $(this);
-      $el
-        .width(newWidth)
-        .height(newWidth * $el.data('aspectRatio'));
+      $fluidEl = $('.project-assets');
+    console.log($allVideos);
+    // Figure out and save aspect ratio for each video
+    $allVideos.each(function () {
+      $(this)
+        .data('aspectRatio', this.height / this.width)
+        // and remove the hard coded width/height
+        .removeAttr('height')
+        .removeAttr('width');
     });
-  // Kick off one resize to fix all videos on page load
-  }).resize();
+    // When the window is resized
+    $(window).resize(function () {
+      var newWidth = $fluidEl.width();
+      // Resize all videos according to their own aspect ratio
+      $allVideos.each(function () {
+        var $el = $(this);
+        $el
+          .width(newWidth)
+          .height(newWidth * $el.data('aspectRatio'));
+      });
+    // Kick off one resize to fix all videos on page load
+    }).resize();
 
-
-    console.log('Project Running');
     var windw = this;
+
+    // Sticky Function
     $.fn.followTo = function () {
       var overlay = $('#project-fixed-overlay'),
         container = $('#content');
@@ -44,19 +42,23 @@ module.exports = function () {
         lastdownposition,
         lastupposition,
         overlayHeight = overlay.height(),
-        windowHeight = $(window).height(),
         containerTop = container.offset().top,
         direction;
 
+      // When scrolling
       $(windw).scroll(function (e) {
         scroll = $(window).scrollTop();
-        var bottomScroll = scroll + windowHeight,
+        console.log('scroll' + scroll);
+        var windowHeight = $(window).height(),
+          bottomScroll = scroll + windowHeight,
           containerHeight = container.height(),
           overlayTop = overlay.offset().top,
           overlayBottom = overlayHeight + overlayTop,
           bottomhit = containerTop + containerHeight + (windowHeight - overlayHeight);
 
+        // if the window is smaller than the overlay itself
         if (windowHeight < overlayHeight) {
+          console.log('Overlay is bigger');
           // Determine Scroll Direction & position of overlay
           var st = $(this).scrollTop();
           if (st > lastScrollTop) {
@@ -82,7 +84,8 @@ module.exports = function () {
               } else {
                 overlay.attr('class', 'stuck');
                 overlay.css({
-                  position: 'absolute', top: (lastupposition - containerTop)
+                  position: 'absolute',
+                  top: (lastupposition - containerTop)
                 });
               }
             } else if (direction == 'down') {
@@ -93,7 +96,8 @@ module.exports = function () {
               } else {
                 overlay.attr('class', 'stuck');
                 overlay.css({
-                  position: 'absolute', top: (lastdownposition - containerTop)
+                  position: 'absolute',
+                  top: (lastdownposition - containerTop)
                 });
               }
             }
@@ -108,6 +112,9 @@ module.exports = function () {
           }
         }
         if (windowHeight > overlayHeight) {
+          console.log('Overlay is smaller');
+          console.log('bottomScroll' + bottomScroll);
+          console.log('bottomhit' + bottomhit);
           if (scroll > containerTop) {
             // if scroll past top of content
             overlay.attr('class', 'sticktop');
@@ -123,6 +130,8 @@ module.exports = function () {
     };
     $('#project-fixed-overlay').followTo();
   } else {
+    // Case Studies
+
     $(document).ready(function () {
       var $mainNav = $('.case-nav');
       $mainNav.append("<li id='indicator'></li>"),
@@ -157,23 +166,27 @@ module.exports = function () {
         scroll,
         lastdownposition,
         lastupposition,
-        overlayHeight = overlay.height(),
         windowHeight = $(window).height(),
         direction;
 
       $(windw).scroll(function (e) {
         scroll = $(window).scrollTop();
         var bottomScroll = scroll + windowHeight,
+          overlayHeight = overlay.height(),
           containerTop = container.offset().top,
           containerHeight = container.height(),
           overlayTop = overlay.offset().top,
           overlayBottom = overlayHeight + overlayTop,
           bottomhit = containerTop + containerHeight + (windowHeight - overlayHeight);
 
-        if(scroll > 400){
-          $('.title').css({'display': 'none'});
+        if (scroll > 400) {
+          $('.title').css({
+            'display': 'none'
+          });
         } else {
-          $('.title').css({'display': 'block'});
+          $('.title').css({
+            'display': 'block'
+          });
         }
 
         if (scroll > containerTop) {
