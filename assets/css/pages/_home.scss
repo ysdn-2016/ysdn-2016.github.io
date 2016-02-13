@@ -1,41 +1,40 @@
 
-.page-home {
-}
+
 
 .home-introduction {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: $black;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: $black;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
 }
 
 .home-introduction-headline {
 	color: $white;
-	font-weight: normal;
 	font-size: 19px;
+	font-weight: normal;
 	line-height: 1.6;
 	letter-spacing: -0.01em;
 	text-align: center;
 }
 
 .home-introduction-arrow {
+	cursor: default;
 	position: absolute;
 	bottom: 5vh;
 	left: 50%;
-	cursor: default;
 	transform: translateX(-50%);
 	&::before {
 		@extend %icon;
-		color: $white;
+		content: $font-ysdn-icons-arrow-down;
 		opacity: 0.5;
+		color: $white;
 		font-size: 2em;
 		text-align: center;
-		content: $font-ysdn-icons-arrow-down;
 		animation: hover 2000ms ease infinite;
 	}
 }
