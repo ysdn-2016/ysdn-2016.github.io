@@ -1,7 +1,7 @@
 
 .project-footer {
-	display: flex;
 	border-top: 1px light-gray solid;
+	display: flex;
 	padding-top: 30px;
 	padding-bottom: $footer-height + 30px;
 	font-family: $sofia;
@@ -67,20 +67,20 @@
 
 .project-footer-next-project,
 .project-footer-related-project {
-	padding-left: 16px;
 	padding-right: 16px;
+	padding-left: 16px;
 }
 
 .project-footer-preview-image {
-	display: block;
 	@include image-placeholder();
+	display: block;
 	margin-bottom: 16px;
 }
 
 .project-footer-preview-title {
+	display: block;
 	font-size: 21px;
 	font-weight: bold;
-	display: block;
 	line-height: 1.2;
 }
 
