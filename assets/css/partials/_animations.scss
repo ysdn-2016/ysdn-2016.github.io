@@ -1,6 +1,12 @@
 
 @keyframes hover {
-	0%   { transform: translateY(-10%); }
-	60%  { transform: translateY(10%); }
-	100% { transform: translateY(-10%); }
+	0% {
+		transform: translateY(-10%);
+	}
+	60% {
+		transform: translateY(10%);
+	}
+	100% {
+		transform: translateY(-10%);
+	}
 }

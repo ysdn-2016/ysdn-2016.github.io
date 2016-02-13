@@ -93,6 +93,10 @@ $project-grid-gutter: 60px;
  */
 
 .project-header {
+	h2 {
+		font-size: 48px;
+		line-height: 54px;
+	}
 	h4 {
 		margin-bottom: 10px;
 		color: #aaa;
@@ -103,7 +107,7 @@ $project-grid-gutter: 60px;
 		background-repeat: repeat-x;
 		background-position: bottom;
 		background-size: 3px 1px;
-		padding-bottom: .15em;
+		padding-bottom: 0.15em;
 		color: #181818;
 		text-decoration: none;
 
@@ -316,11 +320,11 @@ $project-grid-gutter: 60px;
 		}
 
 		img {
+			position: relative;
 			background-color: white;
+			pointer-events: none;
 			margin-top: 260px;
 			margin-bottom: 0;
-			pointer-events: none;
-			position: relative;
 		}
 	}
 
