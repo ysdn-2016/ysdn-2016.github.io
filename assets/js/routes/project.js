@@ -138,7 +138,7 @@ module.exports = function () {
       $indicator = $('#indicator');
       $('.project-content p img').unwrap();
       $('.project-content img:first-of-type').appendTo('.project-header');
-      $('.project-content').find('h1, h2, h3').each(function () {
+      $('.project-content').find('h1, h3, h5').each(function () {
         var $self = $(this);
         var currentId = $self.attr('id');
         if (!currentId) {
@@ -200,7 +200,7 @@ module.exports = function () {
           overlay.attr('class', 'stickbottomwindow');
         }
         // this controls the section nav
-        $('.project-content h1, .project-content h2, .project-content h3').each(function (i) {
+        $('.project-content h1, .project-content h3, .project-content h5').each(function (i) {
           if ($(this).position().top <= scroll - $('#content').position().top + 80) {
             $('.case-nav a.active').removeClass('active');
             $('.case-nav a').eq(i).addClass('active');
@@ -210,20 +210,6 @@ module.exports = function () {
         $indicator
           .height($('.active').height())
           .css('top', $('.active').position().top);
-        // If you hover on item, move the selector
-        $('.case-nav a').hover(function () {
-          $indicator
-            .height($(this).height())
-            .css('top', $(this).position().top);
-          $(this).css('color', 'black');
-        },
-          // Otherwise put it back
-          function () {
-            $indicator
-              .height($('.active').height())
-              .css('top', $('.active').position().top);
-            $(this).css('color', '');
-          });
       });
     };
     $('#project-fixed-overlay').followTo();
