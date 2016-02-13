@@ -32,9 +32,11 @@
 	&::before {
 		@extend %icon;
 		color: $white;
-		font-size: 24px;
+		opacity: 0.5;
+		font-size: 2em;
 		text-align: center;
 		content: $font-ysdn-icons-arrow-down;
+		animation: hover 2000ms ease infinite;
 	}
 }
 
