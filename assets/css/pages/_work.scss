@@ -221,6 +221,7 @@ $project-grid-gutter: 60px;
 
 #project-fixed-overlay {
 	width: 100%;
+	pointer-events: none;
 }
 
 /**
@@ -376,6 +377,7 @@ $project-grid-gutter: 60px;
 	.case-nav {
 		padding-top: 80px;
 		padding-right: $project-grid-gutter / 2;
+		pointer-events: auto;
 
 		a {
 			padding-left: 14px;
