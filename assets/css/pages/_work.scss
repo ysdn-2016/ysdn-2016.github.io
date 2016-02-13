@@ -152,7 +152,7 @@ $project-grid-gutter: 60px;
 		background-repeat: repeat-x;
 		background-position: bottom;
 		background-size: 3px 1px;
-		padding-bottom: .15em;
+		padding-bottom: 0.15em;
 		color: #181818;
 		text-decoration: none;
 
@@ -351,7 +351,7 @@ $project-grid-gutter: 60px;
 			font-size: 21px;
 			font-weight: 500;
 			line-height: 28px;
-			transition: color .25s ease;
+			transition: color 0.25s ease;
 		}
 
 		.active {
@@ -376,7 +376,7 @@ $project-grid-gutter: 60px;
 		height: 28px;
 		margin: 4px 0;
 		list-style-type: none;
-		transition: top .25s ease, height .25s ease;
+		transition: top 0.25s ease, height 0.25s ease;
 	}
 }
 

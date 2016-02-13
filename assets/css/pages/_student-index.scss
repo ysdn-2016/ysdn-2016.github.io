@@ -33,7 +33,7 @@
 		}
 	}
 	i {
-		font-size: .7em;
+		font-size: 0.7em;
 	}
 }
 
@@ -67,7 +67,7 @@
 	&-value {
 		position: fixed;
 		top: 0; left: 0;
-		opacity: .0;
+		opacity: 0.0;
 		pointer-events: none;
 	}
 	&-input {
@@ -132,10 +132,10 @@
 	margin-bottom: 12px;
 	.col {
 		font-size: 12px;
-		letter-spacing: .08em;
+		letter-spacing: 0.08em;
 		text-transform: uppercase;
 		i {
-			font-size: .9em;
+			font-size: 0.9em;
 		}
 	}
 }
@@ -149,7 +149,7 @@
 	a {
 		padding: 10px 2px 10px 0;
 		&:hover {
-			opacity: .5;
+			opacity: 0.5;
 		}
 	}
 }
@@ -159,7 +159,7 @@
 		margin-left: -8px;
 		padding: 8px;
 		&:hover {
-			opacity: .5;
+			opacity: 0.5;
 		}
 	}
 	@media screen and (max-width: 1000px) {
