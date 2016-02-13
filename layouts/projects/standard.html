@@ -3,15 +3,13 @@
 	<div class="sticktopwindow" id="project-fixed-overlay">
 		<div class="project-details">
 			<header class="project-header">
-				<h4 class="project-category">{{ category | titleize }}</h4>
-				<h2 class="project-title">{{ title }}</h2>
-				<h3 class="project-owner"><span class="light">by </span><a href="{{ owner.href }}">{{ owner.name }}</a></h3>
+				<span class="project-category">{{ category | titleize }}</span>
+				<span class="project-title">{{ title }}</span>
+				<span class="project-owner"><span class="light">by </span><a href="{{ owner.href }}">{{ owner.name }}</a></span>
 			</header>
 			<section class="project-content">
 				{{ contents | safe }}
 			</section>
-			<footer class="project-footer">
-			</footer>
 		</div>
 		<div class="project-assets"></div>
 	</div>

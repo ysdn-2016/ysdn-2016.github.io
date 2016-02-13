@@ -2,8 +2,10 @@
 .project-footer {
 	border-top: 1px light-gray solid;
 	display: flex;
-	padding-top: 30px;
-	padding-bottom: $footer-height + 30px;
+	margin: 0 -16px;
+	margin-top: 50px;
+	padding-top: 60px;
+	padding-bottom: 40px;
 	font-family: $sofia;
 	// h2 {
 	// 	font-size: 21px;
@@ -53,12 +55,17 @@
 // Visit the Event Prompt
 //
 
-.project-footer-event-prompt-headline {
-	max-width: 15em;
-	margin-top: 40px;
-	margin-bottom: 48px;
-	font-size: 21px;
-	line-height: 32px;
+.project-footer-event-prompt {
+	padding-right: 16px;
+	padding-left: 16px;
+
+	&-headline {
+		max-width: 15em;
+		margin-top: 40px;
+		margin-bottom: 48px;
+		font-size: 21px;
+		line-height: 32px;
+	}
 }
 
 //
@@ -85,7 +92,8 @@
 }
 
 .project-footer-preview-category {
-	color: #aaa;
-	font-size: 15px;
+	color: $light-gray;
+	font-size: 14px;
 	font-weight: normal;
+	text-transform: uppercase;
 }
