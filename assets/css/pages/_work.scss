@@ -93,7 +93,6 @@ $project-grid-gutter: 60px;
  */
 
 .project-header {
-
 	h2 {
 		font-size: 48px;
 		line-height: 54px;
@@ -120,25 +119,25 @@ $project-grid-gutter: 60px;
 	}
 
 	.project-title {
-		font-size: 60px;
-		line-height: 64px;
-		font-weight: bold;
 		display: block;
 		margin-bottom: 12px;
+		font-size: 60px;
+		font-weight: bold;
+		line-height: 64px;
 	}
 	.project-owner {
-		font-size: 21px;
-		line-height: 24px;
-		font-weight: bold;
 		display: block;
 		margin-bottom: 16px;
+		font-size: 21px;
+		font-weight: bold;
+		line-height: 24px;
 	}
 	.project-category {
+		display: block;
+		opacity: 0.5;
 		font-size: 14px;
 		line-height: 18px;
 		text-transform: uppercase;
-		opacity: 0.5;
-		display: block;
 	}
 }
 
@@ -253,16 +252,16 @@ $project-grid-gutter: 60px;
 .project--standard {
 	position: relative;
 	min-height: 600px;
-	
+
 	#project-fixed-overlay, #gallery {
 		display: flex;
 		width: 100%;
 		max-width: 1160px;
 	}
-	
+
 	.project-assets {
-			pointer-events: none;
-		}
+		pointer-events: none;
+	}
 
 	.project-details {
 		pointer-events: auto;
@@ -384,11 +383,6 @@ $project-grid-gutter: 60px;
 /**
  * Sticky Sections
  */
-.stickbottom {
-	position: fixed !important;
-	top: auto !important;
-	bottom: 0 !important;
-}
 
 .sticktop {
 	position: fixed !important;
