@@ -1,5 +1,56 @@
 $project-grid-gutter: 60px;
 
+
+progress {
+	/* Positioning */
+	position: fixed;
+	top: 0;
+	left: 0;
+	/* Get rid of the default border in Firefox/Opera. */
+	border: none;
+	/* For Firefox/IE10+ */
+	background-color: transparent;
+	/* Dimensions */
+	width: 100%;
+	height: 0.25em;
+	/* For IE10+, color of the progress bar */
+	color: red;
+	/* Reset the apperance */
+
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+}
+
+progress::-webkit-progress-bar {
+	background-color: transparent;
+}
+
+.flat::-webkit-progress-value {
+	background-color: red;
+}
+
+.flat::-moz-progress-bar {
+	background-color: red;
+}
+
+.progress-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: transparent;
+	display: block;
+	width: 100%;
+	height: 0.25em;
+}
+
+.progress-bar {
+	background-color: red;
+	display: block;
+	width: 50%;
+	height: inherit;
+}
+
 /**
  * Typography
  */
@@ -121,15 +172,14 @@ $project-grid-gutter: 60px;
 	.project-title {
 		display: block;
 		margin-bottom: 12px;
-		font-size: 60px;
+		font-size: 36px;
 		font-weight: bold;
-		line-height: 64px;
+		line-height: 43px;
 	}
 	.project-owner {
 		display: block;
 		margin-bottom: 16px;
 		font-size: 21px;
-		font-weight: bold;
 		line-height: 24px;
 	}
 	.project-category {
@@ -265,11 +315,11 @@ $project-grid-gutter: 60px;
 
 	.project-details {
 		pointer-events: auto;
-		flex: 1 0 41.667%;
+		flex: 1 0 33.333%;
 		padding-right: 40px;
 
 		.project-header {
-			margin: 60px 0;
+			margin: 20px 0;
 		}
 
 		footer {
@@ -278,10 +328,10 @@ $project-grid-gutter: 60px;
 	}
 
 	.project-assets {
-		flex: 1 0 58.333%;
+		flex: 1 0 66.667%;
 
 		img {
-			margin: 10px 0;
+			margin: 20px 0;
 		}
 	}
 }
