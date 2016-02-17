@@ -27,15 +27,17 @@
 			<div class="row">
 				<div class="col student-info">
 					<h5>About</h5>
-					<p>{{ student.about }}</p>
+					<p><span>"Lorem ipsum dolor sit amet, consectetur adip elit. Earum quo consequatur voluptatem at, facilis mollitia nisi."</span></p>
+					<p>{{ biography }}</p>
 					<h5>Looking For</h5>
-					<p>{{ student.lookingfor }}</p>
+					<p></p>
+					<p>{{ lookingfor }}</p>
 					<h5>Achievements</h5>
-					<p>{{ student.achievements }}</p>
+					<p>{{ achievements }}</p>
 				</div>
-				<div class="col student-work-list">
+				<div class="col student-work-list row">
 					{% for project in projects %}
-						<div class="student-project">
+						<div class="student-project col">
 							<a href="{{ project.href }}">
 								<img src="{{ project.thumbnail.url }}" alt="{{ project.title }}">
 								<div class="meta row">
@@ -44,7 +46,7 @@
 										<p>{{ project.category | titleize }}</p>
 									</div>
 									<div class="col">
-										<p>{{ project.snippet }}</p>
+										<p>{{ project.contents | safe }}</p>
 									</div>
 								</div>
 							</a>
@@ -54,6 +56,6 @@
 			</div>
 		</div>
 	</section>
-	{% include 'partials/in-progress.html' %}
+	<!-- {% include 'partials/in-progress.html' %} -->
 	{{ contents | safe }}
 {% endblock %}

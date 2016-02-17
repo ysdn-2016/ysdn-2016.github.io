@@ -12,9 +12,6 @@
 	.col {
 		flex: 1;
 		flex-direction: column;
-		&.fifty {
-			width: 50%;
-		}
 	}
 }
 
@@ -115,14 +112,64 @@
 .student-body {
 	margin: 40px 0;
 	.student-info {
-		flex-grow: 1;
-	}
-	.student-work-list {
 		flex-grow: 2;
 	}
+	.student-work-list {
+		flex-grow: 3;
+	}
 	.student-project {
+		width: 50%;
 		.meta {
 			margin: 24px 0;
+		}
+		&::before {
+			font-weight: normal;
+				text-transform: uppercase;
+				letter-spacing: 0.06em;
+				font-size: 0.7em;
+				line-height: 1.4em;
+				margin-bottom: 16px;
+				display: block;
+		}
+
+		&:first-child {
+			width: 100%;
+			&::before {
+				content: "CASE STUDY";
+			}
+		}
+
+		&:nth-child(2) {
+			width: 50%;
+			&::before {
+				content: "Project";
+			}
+		}
+
+		&:nth-child(3){
+			&::before {
+				content: "";
+			}
+		}
+	}
+
+	h5 {
+		font-weight: normal;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		font-size: 0.7em;
+		line-height: 1.4em;
+		margin-bottom: 16px;
+	}
+
+	p {
+		max-width: 72%;
+		font-size: 0.9em;
+		line-height: 1.6em;
+		span {
+			font-weight: bold;
+			font-size: 1.3em;
+			line-height: 1.5em;
 		}
 	}
 }
