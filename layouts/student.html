@@ -30,10 +30,15 @@
 					<p><span>"Lorem ipsum dolor sit amet, consectetur adip elit. Earum quo consequatur voluptatem at, facilis mollitia nisi."</span></p>
 					<p>{{ biography }}</p>
 					<h5>Looking For</h5>
-					<p></p>
-					<p>{{ lookingfor }}</p>
+					<p class="text-light">Consectetur adipisicing elit. Error vitae sint accusantium, sequi. Veritatis ex, ut et mollitia perferendis quibusdam ab perspiciatis!</p>
+					<p class="text-light">{{ lookingfor }}</p>
 					<h5>Achievements</h5>
-					<p>{{ achievements }}</p>
+					<ul class="text-light">
+						<li>2015 PLAYGROUNDS FESTIVAL: Featured Speaker, Amsterdam, Netherlands</li>
+						<li>GRAY AREA FESTIVAL: Featured Speaker: San Francisco, California</li>
+						<li>Featured Speaker: New York, New York</li>
+					</ul>
+					<p class="text-light">{{ achievements }}</p>
 				</div>
 				<div class="col student-work-list row">
 					{% for project in projects %}
@@ -45,9 +50,10 @@
 										<h4>{{ project.title }}</h4>
 										<p>{{ project.category | titleize }}</p>
 									</div>
-									<div class="col">
+									{# <div class="col">
+										Figure out if excerpts are viable
 										<p>{{ project.contents | safe }}</p>
-									</div>
+									</div> #}
 								</div>
 							</a>
 						</div>

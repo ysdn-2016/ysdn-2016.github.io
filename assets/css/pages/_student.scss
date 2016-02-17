@@ -112,10 +112,10 @@
 .student-body {
 	margin: 40px 0;
 	.student-info {
-		flex-grow: 2;
+		width: 40%;
 	}
 	.student-work-list {
-		flex-grow: 3;
+		width: 60%;
 	}
 	.student-project {
 		width: 50%;
@@ -160,6 +160,9 @@
 		font-size: 0.7em;
 		line-height: 1.4em;
 		margin-bottom: 16px;
+		&:not(:first-child) {
+			margin-top: 40px;
+		}
 	}
 
 	p {
@@ -171,5 +174,30 @@
 			font-size: 1.3em;
 			line-height: 1.5em;
 		}
+	}
+
+	ul {
+		padding-left: 20px;
+	}
+
+	li {
+		color: #888;
+		// list-style: none;
+		font-size: 0.94em;
+		max-width: 75%;
+		line-height: 1.5;
+		padding-bottom: 8px;
+		// &:before {
+		// 	position: relative;
+		// 	bottom: 2px;
+		// 	content: '•';
+		// 	padding-right: 5px;
+		// 	font-size: 75%; /* or whatever */
+		// }
+	}
+
+	.text-light {
+		color: #777;
+		font-size: 0.9em;
 	}
 }
