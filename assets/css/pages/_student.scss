@@ -1,14 +1,12 @@
 .student-profile {
 	width: 92%;
 	margin: 0 auto;
-
 	.row {
 		display: flex;
 		flex-flow: row nowrap;
 		width: 100%;
 		min-height: 1px;
 	}
-
 	.col {
 		flex: 1;
 		flex-direction: column;
@@ -24,7 +22,6 @@
 	height: 440px;
 	height: 60vh;
 	padding-left: 8px;
-
 	h1 {
 		position: relative;
 		left: -3px;
@@ -33,12 +30,11 @@
 		margin-bottom: 8px;
 		font-size: 3em;
 	}
-
 	.student-meta {
 		position: relative;
 		z-index: 9;
+		width: 60%;
 	}
-
 	.student-categories {
 		margin-bottom: 60px;
 		font-family: $sofia;
@@ -53,7 +49,6 @@
 			}
 		}
 	}
-
 	.student-social {
 		position: absolute;
 		bottom: 26px;
@@ -123,79 +118,64 @@
 			margin: 24px 0;
 		}
 		&::before {
+			display: block;
+			margin-bottom: 16px;
+			font-size: 0.7em;
 			font-weight: normal;
-				text-transform: uppercase;
-				letter-spacing: 0.06em;
-				font-size: 0.7em;
-				line-height: 1.4em;
-				margin-bottom: 16px;
-				display: block;
+			line-height: 1.4em;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
 		}
-
 		&:first-child {
 			width: 100%;
 			&::before {
-				content: "CASE STUDY";
+				content: 'CASE STUDY';
 			}
 		}
-
 		&:nth-child(2) {
 			width: 50%;
 			&::before {
-				content: "Project";
+				content: 'Project';
 			}
 		}
-
-		&:nth-child(3){
+		&:nth-child(3) {
 			&::before {
-				content: "";
+				content: '';
 			}
 		}
 	}
-
 	h5 {
-		font-weight: normal;
-		text-transform: uppercase;
-		letter-spacing: 0.06em;
-		font-size: 0.7em;
-		line-height: 1.4em;
 		margin-bottom: 16px;
+		font-size: 0.7em;
+		font-weight: normal;
+		line-height: 1.4em;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
 		&:not(:first-child) {
 			margin-top: 40px;
 		}
 	}
-
 	p {
 		max-width: 72%;
 		font-size: 0.9em;
 		line-height: 1.6em;
 		span {
-			font-weight: bold;
 			font-size: 1.3em;
+			font-weight: bold;
 			line-height: 1.5em;
 		}
 	}
-
 	ul {
 		padding-left: 20px;
 	}
-
 	li {
+		max-width: 75%;
+		padding-bottom: 8px;
 		color: #888;
 		// list-style: none;
 		font-size: 0.94em;
-		max-width: 75%;
 		line-height: 1.5;
-		padding-bottom: 8px;
-		// &:before {
-		// 	position: relative;
-		// 	bottom: 2px;
-		// 	content: '•';
-		// 	padding-right: 5px;
-		// 	font-size: 75%; /* or whatever */
-		// }
 	}
-
 	.text-light {
 		color: #777;
 		font-size: 0.9em;

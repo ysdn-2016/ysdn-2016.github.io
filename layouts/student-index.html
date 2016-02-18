@@ -63,6 +63,10 @@
 						{% if student.github %}
 							<a href="http://github.com/{{ student.github | replace('@', '') }}" class="i-github" target="_blank"></a>
 						{% endif %}
+						{# Dribbble #}
+						{% if student.dribbble %}
+							<a href="http://dribbble.com/{{ student.dribbble | replace('@', '') }}" class="i-dribbble" target="_blank"></a>
+						{% endif %}
 					</div>
 				</div>
 			{% endfor %}
