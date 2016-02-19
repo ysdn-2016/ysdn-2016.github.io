@@ -48,7 +48,7 @@ watch: install build
 		$(BIN)/wtch --dir build 2>&1 >/dev/null & \
 		bin/www & wait
 
-sync:
+sync: clean-content
 	@mkdir -p content/students
 	@curl -s "$(API)/download" | tar -zxf - -C content/students --strip-components=1
 
@@ -102,7 +102,8 @@ test: lint
 
 clean:
 	@rm -rf build
-
+clean-content:
+	@rm -rf content/students
 clean-deps:
 	@rm -rf node_modules
 
