@@ -27,8 +27,8 @@
 			</div>
 		</div>
 		<div class="student-body">
-			<div class="row">
-				<div class="col student-info">
+			<div class="">
+				<div class="student-info">
 					<h5>About</h5>
 					<p><span>Don’t jump into conclusions before trying it out. You’d be surprised to see how wrong you are many of the times.</span></p>
 					<p>{{ biography }}</p>
@@ -41,24 +41,26 @@
 					</p>
 					<p class="text-light">{{ achievements }}</p>
 				</div>
-				<div class="col student-work-list row">
-					{% for project in projects %}
-						<div class="student-project col">
-							<a href="{{ project.href }}">
-								<img src="{{ project.thumbnail.url }}" alt="{{ project.title }}">
-								<div class="meta row">
-									<div class="col">
-										<h4>{{ project.title }}</h4>
-										<p>{{ project.category | titleize }}</p>
+				<div class="student-work-list">
+					<div class="group">
+						{% for project in projects %}
+							<div class="student-project col">
+								<a href="{{ project.href }}">
+									<img src="{{ project.thumbnail.url }}" alt="{{ project.title }}">
+									<div class="meta">
+										<div class="info">
+											<h4>{{ project.title }}</h4>
+											<p class="cat">{{ project.category | titleize }}</p>
+										</div>
+										<div class="desc">
+											{# <p>{{ project.contents | safe }}</p> #}
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
 									</div>
-									{# <div class="col">
-										Figure out if excerpts are viable
-										<p>{{ project.contents | safe }}</p>
-									</div> #}
-								</div>
-							</a>
-						</div>
-					{% endfor %}
+								</a>
+							</div>
+						{% endfor %}
+					</div>
 				</div>
 			</div>
 		</div>

@@ -35,10 +35,10 @@
 	}
 	.student-categories {
 		margin-bottom: 60px;
+		color: #aaa;
 		font-family: $sofia;
 		font-size: 0.9em;
 		letter-spacing: 0.06em;
-		color: #aaa;
 		a {
 			font-size: 0.85em;
 			letter-spacing: 0.06em;
@@ -111,19 +111,37 @@
 	width: 440px;
 }
 
+.group:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
 .student-body {
-	margin-top: 40px;
+	@extend .group;
 	border-bottom: 1px solid rgba(0,0,0,0.8);
+	margin-top: 40px;
 	.student-info {
+		float: left;
 		width: 40%;
 	}
 	.student-work-list {
+		float: left;
 		width: 60%;
 	}
 	.student-project {
-		width: 50%;
+		float: left;
 		.meta {
+			@extend .group;
 			margin: 24px 0;
+			.cat {
+				margin-bottom: 60px;
+				color: #aaa;
+				font-family: $sofia;
+				font-size: 0.75em;
+				letter-spacing: 0.06em;
+				text-transform: uppercase;
+			}
 		}
 		&::before {
 			display: block;
@@ -139,16 +157,41 @@
 			&::before {
 				content: 'CASE STUDY';
 			}
+			.info {
+				width: 30%;
+				float: left;
+			}
+			.desc {
+				width: 70%;
+				float: left;
+				p {
+					margin: 0;
+					max-width: 100%;
+					color: #777;
+				}
+			}
+			& > div {
+				float: left;
+				width: 50%;
+			}
 		}
 		&:nth-child(2) {
-			width: 50%;
+			width: 47%;
+			margin-right: 6%;
 			&::before {
 				content: 'Project';
 			}
+			.desc {
+				display: none;
+			}
 		}
 		&:nth-child(3) {
+			width: 47%;
 			&::before {
-				content: '';
+				content: '\2063'; /* Don't remove this! It's an invisible space that aligns the height of the two second projects */
+			}
+			.desc {
+				display: none;
 			}
 		}
 	}
@@ -162,6 +205,10 @@
 		&:not(:first-child) {
 			margin-top: 40px;
 		}
+	}
+	h4 {
+		font-size: 1.2em;
+		line-height: 1.3em;
 	}
 	p {
 		max-width: 72%;
