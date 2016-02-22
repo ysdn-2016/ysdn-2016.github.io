@@ -196,12 +196,12 @@
 		}
 	}
 	h5 {
-		margin-bottom: 16px;
-		font-size: 0.7em;
-		font-weight: normal;
-		line-height: 1.4em;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
+		margin-bottom: 0px;
+		font-size: 0.9em;
+		font-weight: bold;
+		line-height: 1.2em;
+		// letter-spacing: 0.06em;
+		// text-transform: uppercase;
 		&:not(:first-child) {
 			margin-top: 40px;
 		}
@@ -232,7 +232,7 @@
 		line-height: 1.5;
 	}
 	.text-light {
-		color: #777;
+		// color: #777;
 		font-size: 0.9em;
 	}
 }
