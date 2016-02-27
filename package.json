@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ysdn-2016/ysdn-2016.github.io#readme",
   "dependencies": {
+    "marked": "^0.3.5",
     "page": "^1.6.4",
     "slug-component": "^1.1.0"
   },

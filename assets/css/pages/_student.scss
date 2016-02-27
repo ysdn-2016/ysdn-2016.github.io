@@ -214,12 +214,18 @@
 		max-width: 72%;
 		font-size: 0.9em;
 		line-height: 1.6em;
-		span {
-			font-size: 1.3em;
-			font-weight: bold;
-			line-height: 1.5em;
-		}
 	}
+	a {
+		@include dotted-border(currentColor, bottom);
+	}
+	.student-introduction {
+		max-width: 72%;
+		font-size: 1.17em;
+		font-weight: bold;
+		line-height: 1.5;
+		margin-bottom: 2rem;
+	}
+
 	ul {
 		padding-left: 20px;
 	}
