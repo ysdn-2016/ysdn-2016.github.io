@@ -14,7 +14,7 @@ var copy = require('metalsmith-copy')
 var paths = require('metalsmith-paths')
 var yaml = require('../lib/yaml')
 
-var args = process.argv.slice(2)
+var metadata = require('../metadata')
 
 /**
  * Build metadata
@@ -27,16 +27,6 @@ var build = {
 }
 
 /**
- * Metadata passed to templates
- */
-var metadata = {
-	site: {
-		title: 'YSDN'
-	},
-	env: process.env.NODE_ENV || 'development'
-}
-
-/**
  * Build settings
  */
 var site = metalsmith(__dirname)
@@ -44,11 +34,6 @@ var site = metalsmith(__dirname)
 	.destination(build.destination)
 	.clean(build.clean)
 	.metadata(metadata)
-	.use(paths())
-	.use(collections({
-		students: { pattern: 'students/**/student.md', refer: false },
-		projects: { pattern: 'projects/**/project.md', refer: false }
-	}))
 
 /**
  * Build pages
@@ -59,42 +44,6 @@ site.use(branch('*.yml')
 	.use(permalinks(':title'))
 	.use(layouts({
 		engine: 'swig',
-		partials: '../layouts',
-		directory: '../layouts'
-	}))
-)
-
-/**
- * Build students
- */
-site.use(branch('students/**/student.md')
-	.use(markdown({
-		smartypants: true,
-		gfm: true
-	}))
-	.use(typography())
-	.use(permalinks('students/:name'))
-	.use(layouts({
-		engine: 'swig',
-		default: 'student.html',
-		partials: '../layouts',
-		directory: '../layouts'
-	}))
-)
-
-/**
- * Build projects
- */
-site.use(branch('students/**/project.md')
-	.use(markdown({
-		smartypants: true,
-		gfm: true
-	}))
-	.use(typography())
-	.use(permalinks('students/:owner/:title'))
-	.use(layouts({
-		engine: 'swig',
-		default: 'project.html',
 		partials: '../layouts',
 		directory: '../layouts'
 	}))

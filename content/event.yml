@@ -1,5 +1,5 @@
+id: event
 layout: event.html
-draft: true
 sessions:
   - name: "Friends & Family"
     start: "2016-04-18T18:00:00.000Z"
