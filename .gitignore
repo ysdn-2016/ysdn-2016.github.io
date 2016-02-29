@@ -14,9 +14,13 @@ build/
 
 # Ignore design files
 design/
+resources/
+.fontcustom-manifest.json
 
 # Ignore sass-cache
 */.sass-cache
 */.sass-cache/*
 .sass-cache
 .sass-cache/*
+
+assets/fonts/ysdn-icons
