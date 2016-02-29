@@ -35,9 +35,10 @@ start: build
 	@bin/www
 
 watch: install build
-	@$(BIN)/onchange 'content/**/*.{md,yml}' 'layouts/**/*.html' -- make content & \
+	@$(BIN)/onchange 'content/**/*.{md,yml}' 'layouts/**/*.html' 'lib/**/*.js' 'metadata.js' -- make content & \
 		$(BIN)/onchange 'assets/css/**/*.scss' -- make styles & \
 		$(BIN)/onchange 'assets/{fonts,images}/**/*' -- make assets & \
+		$(BIN)/watchify assets/js/index.js -o build/assets/bundle.js & \
 		$(BIN)/wtch --dir build 2>&1 >/dev/null & \
 		bin/www & wait
 
@@ -89,7 +90,7 @@ scripts: build/assets/bundle.js
 node_modules: package.json
 	@npm install
 
-build/index.html: bin/build $(CONTENT) $(LAYOUTS)
+build/index.html: bin/build metadata.js $(CONTENT) $(LAYOUTS)
 	@bin/build 2>&1 >&-
 
 build/assets/%: assets/%
