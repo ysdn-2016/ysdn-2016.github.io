@@ -3,30 +3,143 @@
 {% block body %}
 
 	<section class="event-full-site-notice">
-		<p>The full site with student work is coming soon. <a href="#">Subscribe</a> to get updated when it launches!</p>
+		<p class="event-full-site-notice-line">The full site with student work is coming soon. <span class="event-full-site-notice-subscribe-line"><a href="#" data-subscribe-link>Subscribe</a> to get updated when it launches!</span></p>
+		<p class="event-full-site-notice-line-alt event-full-site-notice-line">The full site with student work is coming soon. <span class="event-full-site-notice-subscribe-line"><a href="#">Subscribe</a> to get updated when it launches!</span></p>
 	</section>
 
-	<section class="event-introduction">
+	<section class="event-introduction event-section">
+		<div class="event-introduction-overlay"></div>
+		<div class="event-introduction-logo-desktop event-introduction-logo">{% include 'partials/logo.html' %}</div>
+		<div class="event-introduction-logo-mobile event-introduction-logo">{% include 'partials/logotype.html' %}</div>
 		<h1 class="event-introduction-headline">
-			<span class="event-introduction-headline-program">The York / Sheridan Program in Design invites you to</span>
-			<span class="event-introduction-headline-show-name">The Intermission</span>
+			<span class="event-introduction-headline-program">The York<span class="event-introduction-headline-slash">/</span>Sheridan Program <span class="no-wrap">in Design</span> invites you to</span>
+			<span class="event-introduction-headline-show-name no-wrap">{{ event.title }}</span>
 		</h1>
-		<div class"event-introduction-details">
-			<div class="event-introduction-date"></div>
-			<div class="event-introduction-venue"></div>
+		<div class="event-introduction-details">
+			<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=YSDN+Grad+Show:+The+Intermission&dates=20160419T230000Z/20160420T030000Z&location=Liberty+Grand,+Toronto,+ON&sf=true&output=xml" class="event-introduction-date" target="_blank">{{ event.date | date('F j, Y') }}</a>
+			<a href="https://goo.gl/maps/YuXwP9XNDhQ2" class="event-introduction-venue" target="_blank">{{ event.venue.name }}, {{ event.venue.address.city }}</a>
+		</div>
+		<div class="event-introduction-arrow"></div>
+	</section>
+
+	<section class="event-about event-section">
+		<div class="event-about-wrapper">
+			<div class="event-about-details">
+				<h2 class="event-about-header event-section-header">About <span class="no-wrap">The Intermission</span></h2>
+				<div class="event-about-description">
+					<p>{{ event.title }} is the 2016 annual graduate show of the <a href="http://design.yorku.ca" target="_blank">York/Sheridan Program in Design</a>, a joint Bachelor of Design Honours program. The show celebrates four years of hard work by the students.</p>
+				</div>
+			</div>
+			<figure class="event-about-figure">
+				<img src="/assets/images/grad-show-close.jpg" />
+			</figure>
 		</div>
 	</section>
 
-	<h1>Event details</h1>
-
-	{% for session in sessions %}
-		<div class="session">
-			<div class="session-name">{{ session.name }}</div>
-			<div class="session-date">{{ session.start | date('F jS, Y') }}</div>
-			<div class="session-time">
-				<span class="session-start">{{ session.start | date('g:i') }}</span>&ndash;<span class="session-end">{{ session.end | date('g:i') }}</span>
+	<section class="event-details event-section">
+		<div class="event-details-map" data-map></div>
+		<div class="event-details-card">
+			<h2 class="event-details-header event-section-header">Event Details</h2>
+			<div class="event-details-date">{{ event.date | date('F j') }}</div>
+			<div class="event-details-sessions">
+				{% for session in event.sessions %}
+					<div class="event-details-session">
+						<div class="event-details-session-name">{{ session.name }}</div>
+						<div class="event-details-session-time">
+							<span class="event-details-session-start">{{ session.start | date('g:i') }}</span>{#
+						#}<span class="event-details-session-dash">&ndash;</span>{#
+						#}<span class="event-details-session-end">{{ session.end | date('ga') }}</span>
+						</div>
+						<div class="event-details-session-public">
+							{% if session.public %}
+								Open to public
+							{% else %}
+								Closed to public
+							{% endif %}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="event-details-venue">
+				<div class="venue-name">{{ event.venue.name }}</div>
+				<div class="venue-address">
+					<span class="venue-address-street">{{ event.venue.address.street }}</span><br>
+					<span class="venue-address-city">{{ event.venue.address.city }},</span>
+					<span class="venue-address-state">{{ event.venue.address.state }}</span>
+				</div>
 			</div>
 		</div>
-	{% endfor %}
+	</section>
+
+	<section class="event-faq event-section">
+		<div class="event-faq-wrapper wrapper">
+			<h2 class="event-faq-header event-section-header">Frequently Asked Questions</h2>
+			<div class="event-faq-list">
+				{% for column in event.faq | half %}
+					<div class="event-faq-column">
+						{% for item in column %}
+							<div class="event-faq-item">
+								<div class="event-faq-question">{{ item.question }}</div>
+								<div class="event-faq-answer">{{ item.answer | markdown | safe | replace('<p>', '') | replace('</p>', '') }}</div>
+							</div>
+						{% endfor %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<section class="event-sponsors event-section">
+		<div class="event-sponsors-wrapper wrapper">
+			<header class="event-sponsors-introduction">
+				<h2 class="event-sponsors-header event-section-header">Thank you to our sponsors</h2>
+				<h4 class="event-sponsors-subheader event-section-subheader">We couldn&rsquo;t have done it <span class="no-wrap">without them!</span></h4>
+			</header>
+			<div class="event-sponsors-logos">
+				<div class="event-sponsors-presenting-sponsors">
+					{% for sponsor in event.sponsors | filter('priority', 1) %}
+					<a class="event-presenting-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+						{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
+						{% include logo %}
+					</a>
+					{% endfor %}
+				</div>
+				<div class="event-sponsors-founding-sponsors">
+					{% for sponsor in event.sponsors | filter('priority', 2) %}
+					<a class="event-founding-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+						{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
+						{% include logo %}
+					</a>
+					{% endfor %}
+				</div>
+				<div class="event-sponsors-patron-sponsors">
+					{% for sponsor in event.sponsors | filter('priority', 3) %}
+					<a class="event-patron-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+						{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
+						{% include logo %}
+					</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="event-social event-section">
+		<div class="event-social-wrapper wrapper">
+			<header class="event-social-introduction">
+				<h2 class="event-social-header event-section-header">Backstage</h2>
+				<h4 class="event-social-subheader event-section-subheader">See what we&rsquo;ve been up to <span class="no-wrap">behind the scenes.</span></h4>
+			</header>
+			<div class="event-social-instagram-feed instagram-feed" data-instagram></div>
+			<h4 class="event-social-subheader event-section-subheader">Follow along on <a class="event-social-link--facebook" href="{{ facebook.url }}" target="_blank">Facebook</a>, <a class="event-social-link--twitter" href="{{ twitter.url }}" target="_blank">Twitter</a>, and <a class="event-social-link--instagram" href="{{ instagram.url }}" target="_blank">Instagram</a> for more.</h4>
+		</div>
+	</section>
+
+	<section class="event-footer event-section">
+		<div class="event-footer-wrapper wrapper">
+			<h2 class="event-footer-header event-section-header">Come meet <span class="no-wrap">The Cast!</span></h2>
+			<h4 class="event-footer-subheader">Let us know if you&rsquo;re coming <a class="no-wrap" href="http://facebook.com/ysdntheintermission" target="_blank">on Facebook.</a> We hope to <span class="no-wrap">see you there!</span></h4>
+		</div>
+	</section>
 
 {% endblock %}

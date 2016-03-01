@@ -1,0 +1,666 @@
+
+.page-event {
+	background: $black;
+	color: $white;
+}
+
+.event-section {
+	position: relative;
+	padding: 80px 0;
+	padding: 15vh 0;
+	@media only screen and (max-width: 451px) {
+		padding: 10vh 0 5vh;
+	}
+}
+
+.event-section-header {
+	margin-bottom: 24px;
+	font-size: 36px;
+	font-weight: 600;
+}
+
+.event-section-subheader {
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+//
+// Full Site Notice
+//
+
+$media-event-full-site-notice-a: 641px;
+$event-full-site-marquee-duration: 90000ms;
+
+.event-full-site-notice {
+	background: $accent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+	overflow: hidden;
+	color: $white;
+	font-size: 14px;
+	letter-spacing: 0.01em;
+	text-align: center;
+}
+
+.event-full-site-notice-line {
+	margin: 0;
+	padding: 0.75em 1em;
+	white-space: nowrap;
+	@media #{$media-mobile-large} {
+		width: 615px;
+		animation: marquee $event-full-site-marquee-duration linear infinite both;
+	}
+	@media #{$media-mobile-small} {
+		width: 530px;
+		font-size: 12px;
+	}
+}
+
+.event-full-site-notice-line-alt {
+	display: none;
+	@media #{$media-mobile-large} {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		animation: marquee-offset $event-full-site-marquee-duration linear infinite both;
+	}
+}
+
+.event-full-site-notice a {
+	@include underline(lighten($accent, 30%));
+	padding-bottom: 0.12em;
+	&:hover {
+		@include underline-color(lighten($accent, 17%));
+		color: mix($white, $accent, 50%);
+	}
+}
+
+//
+// Introduction
+//
+
+$media-event-introduction-a: 801px; // iPad
+$media-event-introduction-b: 767px;
+$media-event-introduction-c: 402px; // iPhone 6
+$media-event-introduction-d: 374px; // iPhone 4 + 5
+
+.event-introduction {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	text-align: center;
+}
+
+.event-introduction-overlay {
+	@include fill();
+	background:
+		linear-gradient(to top, rgba($black, 1.0), rgba($black, 0.01) 30%, rgba($black, 0.00)),
+		url("/assets/images/grad-show-wide.jpg") center center no-repeat;
+	background-size: cover;
+	z-index: 1;
+	opacity: 0.10;
+}
+
+.event-introduction-logo {
+	position: relative;
+	z-index: 2;
+	margin-bottom: 12vh;
+	max-width: 120px;
+
+	@media #{$media-desktop-small} {
+		margin-bottom: 10vh;
+		max-width: 120px;
+	}
+
+	@media #{$media-mobile-small} {
+		margin-bottom: 6vh;
+		max-width: 100px;
+	}
+}
+
+.event-introduction-logo-desktop {
+	@media only screen and (max-width: $media-event-introduction-b) {
+		display: none;
+	}
+}
+
+.event-introduction-logo-mobile {
+	display: none;
+	@media only screen and (max-width: $media-event-introduction-b) {
+		display: block;
+	}
+}
+
+.event-introduction-headline {
+	@include wrapper(18em);
+	position: relative;
+	z-index: 2;
+	margin-bottom: 10vh;
+	color: $yellow;
+	font-size: 52px;
+	font-weight: 600;
+	line-height: 1.4;
+
+	&-slash {
+		padding-right: 0.1em;
+		padding-left: 0.1em;
+	}
+
+	@media only screen and (max-width: $media-event-introduction-a) {
+		font-size: 48px;
+	}
+
+	@media only screen and (max-width: $media-event-introduction-b) {
+		font-size: 36px;
+	}
+
+	@media only screen and (max-width: $media-event-introduction-b) {
+		font-size: 32px;
+	}
+
+	@media #{$media-mobile-small} {
+		font-size: 28px;
+		margin-bottom: 10vh;
+	}
+}
+
+.event-introduction-details {
+	@include wrapper($grid-width);
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 10vh;
+	font-size: 20px;
+	@media only screen and (max-width: $media-event-introduction-b) {
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 5vh;
+	}
+}
+
+.event-introduction-date,
+.event-introduction-venue {
+	display: flex;
+	align-items: center;
+	margin-right: 1em;
+	margin-left: 1em;
+	font-size: 16px;
+	&::before {
+		content: '';
+		top: 1px;
+		margin-right: 0.4em;
+	}
+	@media only screen and (max-width: $media-event-introduction-b) {
+		margin-bottom: 0.5em;
+	}
+}
+
+.event-introduction-date::before {
+	@include icon("calendar", 36px);
+}
+
+.event-introduction-venue::before {
+	@include icon("marker", 36px);
+}
+
+.event-introduction-date::before,
+.event-introduction-venue::before {
+	@media only screen and (max-width: $media-event-introduction-b) {
+		flex-basis: 24px;
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.event-introduction-arrow {
+	@include icon("arrow-down", 36px);
+	position: absolute;
+	left: 50%;
+	bottom: 24px;
+	margin-left: -18px;
+	animation: hover 2000ms ease infinite;
+	@media only screen and (max-width: $media-event-introduction-d) {
+		display: none;
+	}
+}
+
+//
+// About
+//
+
+$media-event-about-a: 801px;
+
+.event-about {
+	@media only screen and (max-width: $media-event-about-a) {
+		padding-top: 10vh;
+		padding-bottom: 5vh;
+	}
+}
+
+.event-about-wrapper {
+	@include wrapper(1200px);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@media only screen and (max-width: $media-event-about-a) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.event-about-details {
+	flex: 5 0;
+	margin-right: 5%;
+	margin-left: 9%;
+	@media only screen and (max-width: $media-event-about-a) {
+		order: 2;
+		margin: 0;
+	}
+}
+
+.event-about-description {
+	max-width: 25em;
+	font-size: 16px;
+	line-height: 1.75;
+	a {
+		@include underline($off-white-faded);
+		padding-bottom: 0.1em;
+		&:hover {
+			color: $red;
+			@include underline-color(rgba($red, 0.6));
+		}
+	}
+}
+
+.event-about-figure {
+	flex: 7 0;
+	margin: 0;
+	@media only screen and (max-width: $media-event-about-a) {
+		order: 1;
+		margin-bottom: 48px;
+	}
+}
+
+//
+// Event Details
+//
+
+$media-event-details-a: 1001px;
+$media-event-details-b: 701px;
+$media-event-details-c: 451px;
+$media-event-details-d: 376px;
+
+
+.event-details {
+	margin-bottom: 0;
+	// NOTE: we're switching from `padding` to `margin` to make it so we can
+	// use `position: absolute` and `bottom` on the .event-details-card
+	padding-top: 40px;
+	padding-bottom: 80px;
+	// @media only screen and (max-width: $media-event-about-a) {
+	// 	padding-top: 40px;
+	// 	padding-bottom: 0;
+	// }
+}
+
+.event-details-map {
+	@include aspect-ratio(12, 6);
+	background: $accent !important;
+	margin-left: auto;
+	width: 90%;
+
+	@media #{$media-desktop-small} {
+		@include aspect-ratio(3, 2);
+		width: 100%;
+	}
+
+	@media #{$media-tablet-medium} {
+		@include aspect-ratio(1, 1);
+		pointer-events: none;
+	}
+
+	@media #{$media-mobile-large} {
+		@include aspect-ratio(3, 4);
+	}
+}
+
+// HACK: selecting the Google logo
+.event-details-map > div > :last-child, // Google logo
+.event-details-map > div > :nth-last-child(2), // "Report a problem with this map"
+.event-details-map > div > :nth-last-child(4), // Terms of Service
+.event-details-map > div > :nth-last-child(6) {
+	display: none !important;
+}
+
+.event-details-card {
+	background: $black;
+	position: absolute;
+	left: 20%;
+	bottom: 0;
+	padding: 36px;
+	width: 90%;
+	max-width: 400px;
+
+	@media #{$media-desktop-small} {
+		left: 5%;
+		max-width: 500px;
+	}
+
+	@media #{$media-mobile-large} {
+		left: 4%;
+		width: 92%;
+	}
+
+	@media #{$media-mobile-small} {
+		padding: 8% 7% 7%;
+		font-size: 0.9em;
+	}
+}
+
+.event-details-header {
+	margin-bottom: 32px;
+	line-height: 1.0;
+}
+
+.event-details-sessions {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 36px;
+}
+
+.event-details-session {
+	flex: 1 0 50%;
+}
+
+.venue-name,
+.event-details-date {
+	margin-bottom: 24px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.event-details-session-name {
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.event-details-session-time {
+	margin-bottom: 2px;
+	font-size: 28px;
+	@media only screen and (max-width: $media-event-details-d) {
+		font-size: 24px;
+	}
+}
+
+.event-details-session-public {
+	color: $gray;
+	font-size: 13px;
+}
+
+
+//
+// FAQ
+//
+
+$media-event-faq-a: 601px;
+
+.event-faq {
+}
+
+.event-faq-header {
+	margin-bottom: 48px;
+}
+
+.event-faq-list {
+	display: flex;
+	line-height: 1.75;
+	@media only screen and (max-width: $media-event-faq-a) {
+		flex-direction: column;
+	}
+}
+
+.event-faq-link {
+	&-contact:hover {
+		@include link-hover-color($red);
+	}
+	&-parking-main:hover {
+		@include link-hover-color($blue);
+	}
+	&-parking-alternate:hover {
+		@include link-hover-color($yellow);
+	}
+}
+
+.event-faq-column {
+	$gutter-width: 6%;
+	flex: 1 0 50%;
+	padding-right: $gutter-width;
+	@media only screen and (max-width: $media-event-faq-a) {
+		flex-basis: auto;
+		padding-right: 0;
+	}
+}
+
+.event-faq-item {
+	margin-bottom: 24px;
+}
+
+.event-faq-question {
+	margin-bottom: 6px;
+	font-weight: 600;
+	&::before {
+		content: "Q. ";
+		opacity: 0.5;
+	}
+}
+
+.event-faq-answer {
+	color: $off-white;
+	font-size: 16px;
+	&::before {
+		content: "A. ";
+		opacity: 0.5;
+	}
+	a {
+		@include underline($off-white-faded);
+		padding-bottom: 0.1em;
+	}
+}
+
+
+//
+// Sponsors
+//
+
+$media-event-sponsors-a: 801px;
+
+.event-sponsors {
+	background: $white;
+	padding-bottom: 0;
+	color: $black;
+	text-align: center;
+}
+
+.event-sponsors-introduction {
+	margin-bottom: 56px;
+}
+
+.event-sponsors-logos {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.event-sponsors-presenting-sponsors,
+.event-sponsors-founding-sponsors,
+.event-sponsors-patron-sponsors {
+	display: flex;
+	margin-bottom: 24px;
+
+	@media only screen and (max-width: $media-event-sponsors-a) {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 0;
+	}
+}
+
+.event-presenting-sponsor {
+	@media only screen and (max-width: $media-event-sponsors-a) {
+		width: 90%;
+	}
+}
+
+.event-founding-sponsor {
+	max-width: 375px;
+}
+
+.event-patron-sponsor {
+	max-width: 350px;
+}
+
+.event-sponsor {
+	path {
+		transition: fill 200ms ease;
+	}
+
+	&--facebook:hover path {
+		fill: $sponsor-facebook;
+	}
+	&--rl-solutions:hover path {
+		fill: $sponsor-rl-solutions;
+	}
+	&--hughes-brannan:hover path {
+		fill: $sponsor-hughes-brannan;
+	}
+	&--veritiv:hover path {
+		fill: $sponsor-veritiv;
+	}
+	&--critical-mass:hover path {
+		fill: $sponsor-critical-mass;
+	}
+}
+
+//
+// Social
+//
+
+$media-event-social-a: 401px;
+
+.event-social {
+	background: $white;
+	color: $black;
+	text-align: center;
+	@media only screen and (max-width: $media-event-social-a) {
+		padding-bottom: 10vh;
+	}
+}
+
+.event-social-wrapper {
+	@include wrapper(1080px);
+}
+
+.event-social-introduction {
+	margin-bottom: 48px;
+}
+
+.event-social-subheader {
+	line-height: 1.3;
+	a {
+		@include underline();
+	}
+}
+
+.event-social-instagram-feed {
+	margin-bottom: 64px;
+	@media only screen and (max-width: $media-event-social-a) {
+		margin-bottom: 32px;
+	}
+}
+
+.instagram-feed {
+	display: flex;
+	justify-content: space-between;
+
+	flex-wrap: wrap;
+}
+
+.instagram-feed-item {
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: block;
+	flex: 0 0 31%;
+	margin-bottom: 4%;
+	&:hover &-caption {
+		opacity: 1.0;
+	}
+
+	@media only screen and (max-width: 501px) {
+		flex: 0 0 48%;
+	}
+}
+
+.instagram-feed-item-caption {
+	@include fill();
+	background: rgba($black, 0.90);
+	display: flex;
+	overflow: hidden;
+	opacity: 0.0;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	color: $white;
+	font-size: 15px;
+	line-height: 1.65;
+	pointer-events: none;
+	transition: opacity 200ms ease;
+
+	will-change: opacity;
+
+	@media only screen and (max-width: 501px) {
+		background: rgba($black, 0.5);
+		overflow: hidden;
+		color: rgba(0, 0, 0, 0.0);
+	}
+}
+
+.event-social-link {
+	&--facebook:hover {
+		@include link-hover-color($accent);
+	}
+	&--twitter:hover {
+		@include link-hover-color($blue);
+	}
+	&--instagram:hover {
+		@include link-hover-color($red);
+	}
+}
+
+//
+// Footer
+//
+
+.event-footer {
+	text-align: center;
+}
+
+.event-footer-wrapper {
+	margin-bottom: 80px;
+	a {
+		@include underline($off-white-faded);
+		padding-bottom: 0.1em;
+	}
+}
+
+.event-footer-subheader {
+	line-height: 1.5;
+}

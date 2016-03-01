@@ -7,41 +7,23 @@ module.exports = {
 	 * Site metadata (title, meta description, etc)
 	 */
 	site: {
-		title: 'YSDN'
-	},
-
-	/**
-	 * Details about the event
-	 */
-	event: {
-		title: 'The Intermission',
-		venue: {
-			name: 'Liberty Grand'
-		},
-		sessions: [
-			{
-				name: 'Friends & Family',
-				start: new Date('2016-04-18T18:00:00.000Z'),
-				end: new Date('2015-04-18T22:00:00.000Z')
-			},
-			{
-				name: 'Industry Night',
-				start: new Date('2016-04-19T18:00:00.000Z'),
-				end: new Date('2016-04-19T22:00:00.000Z')
-			}
-		]
+		title: 'YSDN',
+		description: 'The York/Sheridan Program in Design invites you to The Intermission — An exhibition of the work of the 2016’s graduating class.'
 	},
 
 	/**
 	 * Social
 	 */
 	facebook: {
+		username: 'ysdntheintermission',
 		url: 'https://www.facebook.com/ysdntheintermission/'
 	},
 	instagram: {
+		username: 'ysdntheintermission',
 		url: 'https://www.instagram.com/ysdntheintermission/'
 	},
 	twitter: {
+		username: 'ysdn2016',
 		url: 'https://twitter.com/ysdn2016'
 	},
 	mail: {

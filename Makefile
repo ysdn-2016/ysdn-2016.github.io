@@ -13,18 +13,18 @@ PORT      ?= 8080
 HOST      ?= localhost
 NODE_ENV  ?= development
 
-LAYOUTS    = $(shell find ./layouts -type f -name '*.html')
-CONTENT    = $(shell find ./content -type f -name '*.md' -or -type f -name '*.yml')
+LAYOUTS    = $(shell find layouts -type f -name '*.html')
+CONTENT    = $(shell find content -type f -name '*.md' -or -type f -name '*.yml')
 
-IMAGES     = $(shell find ./assets -type f -name '*.jpg' -or -type f -name '*.png' -or -type f -name '*.gif' -or -type f -name '*.svg')
-STYLES     = $(shell find ./assets -type f -name '*.scss')
-SCRIPTS    = $(shell find ./assets -type f -name '*.js')
+IMAGES     = $(shell find assets -type f -name '*.jpg' -or -type f -name '*.png' -or -type f -name '*.gif' -or -type f -name '*.svg')
+STYLES     = $(shell find assets -type f -name '*.scss')
+SCRIPTS    = $(shell find assets -type f -name '*.js')
 
 DOMAIN     = ysdn2016.com
 REPO       = ysdn-2016/ysdn-2016.github.io
 BRANCH     = $(shell git rev-parse --abbrev-ref HEAD)
 
-API        = http://159.203.25.109:19320
+BROWSERIFY_ARGS = -t partialify
 
 #
 # Tasks
@@ -38,7 +38,7 @@ watch: install build
 	@$(BIN)/onchange 'content/**/*.{md,yml}' 'layouts/**/*.html' 'lib/**/*.js' 'metadata.js' -- make content & \
 		$(BIN)/onchange 'assets/css/**/*.scss' -- make styles & \
 		$(BIN)/onchange 'assets/{fonts,images}/**/*' -- make assets & \
-		$(BIN)/watchify assets/js/index.js -o build/assets/bundle.js & \
+		$(BIN)/watchify $(BROWSERIFY_ARGS) assets/js/index.js -o build/assets/bundle.js & \
 		$(BIN)/wtch --dir build 2>&1 >/dev/null & \
 		bin/www & wait
 
@@ -79,7 +79,7 @@ clean-deps:
 
 install: node_modules
 content: build/index.html
-assets:  build/assets/fonts build/assets/images
+assets:  build/assets/fonts $(addprefix build/, $(IMAGES))
 styles:  build/assets/bundle.css
 scripts: build/assets/bundle.js
 
@@ -97,6 +97,10 @@ build/assets/%: assets/%
 	@mkdir -p $(@D)
 	@cp -r $< $@
 
+build/assets/images/%: assets/images/%
+	@mkdir -p $(@D)
+	@cp -r $< $@
+
 build/assets/bundle.css: $(STYLES)
 	@mkdir -p $(@D)
 	@sassc -m assets/css/index.scss $@
@@ -104,7 +108,7 @@ build/assets/bundle.css: $(STYLES)
 
 build/assets/bundle.js: $(SCRIPTS)
 	@mkdir -p $(@D)
-	@cp assets/js/index.js $@
+	@$(BIN)/browserify $(BROWSERIFY_ARGS) assets/js/index.js -o $@
 
 #
 # Phony

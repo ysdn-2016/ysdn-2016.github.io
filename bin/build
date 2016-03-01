@@ -10,9 +10,11 @@ var collections = require('metalsmith-collections')
 var permalinks = require('metalsmith-permalinks')
 var layouts = require('metalsmith-layouts')
 var branch = require('metalsmith-branch')
-var copy = require('metalsmith-copy')
 var paths = require('metalsmith-paths')
+var swig = require('metalsmith-swig-helpers')
+
 var yaml = require('../lib/yaml')
+var filters = require('../lib/filters/')
 
 var metadata = require('../metadata')
 
@@ -34,6 +36,7 @@ var site = metalsmith(__dirname)
 	.destination(build.destination)
 	.clean(build.clean)
 	.metadata(metadata)
+	.use(swig({ filters }))
 
 /**
  * Build pages
