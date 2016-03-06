@@ -64,6 +64,17 @@ module.exports = function () {
     var overlay = $('#project-fixed-overlay'),
       container = $('#content'),
       windowHeight = $(window).height();
+    var st, direction, lastdirection;
+    var stl;
+    var lastScrollTop = 0;
+      $(window).scroll(function(event){
+         st = $(this).scrollTop();
+       });
+
+      //If overlay is bigger than container, set to height of overlay
+      if (overlay.height() > container.height()){
+        $('.project--standard').css('min-height', overlay.height());
+      }
 
     $(windw).scroll(function (e) {
       var scroll = $(window).scrollTop();
@@ -71,15 +82,54 @@ module.exports = function () {
         containerTop = container.offset().top,
         bottomhit = containerTop + container.height() + (windowHeight - overlay.height());
 
-      if (scroll > containerTop) {
-        // if scroll past top of content
-        overlay.attr('class', 'sticktop');
-      } else if (scroll < containerTop) {
-        overlay.attr('class', 'sticktopwindow');
-      }
-      if (bottomScroll > bottomhit) {
-        // if scroll past bottom of content
-        overlay.attr('class', 'stickbottomwindow');
+      if (overlay.height() < windowHeight){
+
+        if (scroll > containerTop) {
+          // if scroll past top of content
+          overlay.attr('class', 'sticktop');
+        } else if (scroll < containerTop) {
+          overlay.attr('class', 'sticktopwindow');
+        }
+        if (bottomScroll > bottomhit) {
+          // if scroll past bottom of content
+          overlay.attr('class', 'stickbottomwindow');
+        }
+      } else {
+             if (st > lastScrollTop){
+                console.log("Down");
+                if (bottomScroll > (overlay.height() + 143)) {
+                  // if scroll past bottom of content
+                  overlay.attr('class', 'stickbottom');
+                } 
+                stl = st + 1;
+                direction = "down";
+             } else {
+                // upscroll code
+                console.log("Up");
+                if (scroll < overlay.offset().top) {
+                  // if scroll past bottom of content
+                  overlay.attr('class', 'sticktop');
+                } 
+                stl = st - 1;
+                direction = "up";
+             }
+             console.log("overlay.offset().top" + overlay.offset().top);
+             console.log("lastScrollTop" + lastScrollTop);
+             console.log("st" + st);
+             lastScrollTop = st;
+             if (direction != lastdirection){
+                overlay.attr('class', 'stickinplace');
+                $('.stickinplace').css('top', overlay.offset().top);
+                $('.stickinplace').css('position', 'absolute');
+             }
+             lastdirection = direction;
+        if (scroll < containerTop) {
+          overlay.attr('class', 'sticktopwindow');
+        }
+        if (bottomScroll > bottomhit) {
+          // if scroll past bottom of content
+          overlay.attr('class', 'stickbottomwindow');
+        }
       }
 
     });

@@ -439,6 +439,11 @@ progress::-webkit-progress-bar {
 	top: 0 !important;
 	bottom: auto !important;
 }
+.stickbottom {
+	position: fixed !important;
+	top: auto !important;
+	bottom: 0 !important;
+}
 
 .stickbottomwindow {
 	position: absolute !important;
