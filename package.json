@@ -19,9 +19,12 @@
   },
   "homepage": "https://github.com/ysdn-2016/ysdn-2016.github.io#readme",
   "dependencies": {
+    "dom": "0.0.3",
+    "dom-events": "^0.1.1",
     "domready": "^1.0.8",
     "enquire.js": "^2.1.1",
     "instafeed.js": "^1.4.1",
+    "scroll-to": "0.0.2",
     "scrollmonitor": "^1.0.12"
   },
   "devDependencies": {

@@ -3,9 +3,20 @@
 {% block body %}
 
 	<section class="event-full-site-notice">
-		<p class="event-full-site-notice-line">The full site with student work is coming soon. <span class="event-full-site-notice-subscribe-line"><a href="#" data-subscribe-link>Subscribe</a> to get updated when it launches!</span></p>
-		<p class="event-full-site-notice-line-alt event-full-site-notice-line">The full site with student work is coming soon. <span class="event-full-site-notice-subscribe-line"><a href="#">Subscribe</a> to get updated when it launches!</span></p>
+		<div class="event-full-site-notice-form">
+			<form action="//ysdn2016.us1.list-manage.com/subscribe/post?u=f33d9911c326699b7c6202723&id=73fa04b2c1" method="post" target="_blank">
+			<input type="email" name="EMAIL" placeholder="Enter your email" size="30" required />
+			<button type="submit">Subscribe</button>
+		</div>
+		<div class="event-full-site-notice-close">
+			<a href="#" data-subscribe-close>Close</a>
+		</div>
+		<div class="event-full-site-notice-prompt">
+			<p class="event-full-site-notice-line">The full site with student work is coming soon. <span class="event-full-site-notice-subscribe-line"><a href="#" data-subscribe-open>Subscribe</a> to get updated when it launches!</span></p>
+			<p class="event-full-site-notice-line-alt event-full-site-notice-line">The full site with student work is coming soon. <span class="event-full-site-notice-subscribe-line"><a href="#" data-subscribe-open>Subscribe</a> to get updated when it launches!</span></p>
+		</div>
 	</section>
+	<div class="event-full-site-notice-overlay"></div>
 
 	<section class="event-introduction event-section">
 		<div class="event-introduction-overlay"></div>
@@ -16,7 +27,7 @@
 			<span class="event-introduction-headline-show-name no-wrap">{{ event.title }}</span>
 		</h1>
 		<div class="event-introduction-details">
-			<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=YSDN+Grad+Show:+The+Intermission&dates=20160419T230000Z/20160420T030000Z&location=Liberty+Grand,+Toronto,+ON&sf=true&output=xml" class="event-introduction-date" target="_blank">{{ event.date | date('F j, Y') }}</a>
+			<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=YSDN+Grad+Show:+The+Intermission&dates=20160419T230000Z/20160420T030000Z&location=Liberty+Grand,+Toronto,+ON&sf=true&output=xml" class="event-introduction-date" target="_blank">{{ event.date | date('l, F j, Y') }}</a>
 			<a href="https://goo.gl/maps/YuXwP9XNDhQ2" class="event-introduction-venue" target="_blank">{{ event.venue.name }}, {{ event.venue.address.city }}</a>
 		</div>
 		<div class="event-introduction-arrow"></div>
@@ -27,13 +38,15 @@
 			<div class="event-about-details">
 				<h2 class="event-about-header event-section-header">About <span class="no-wrap">The Intermission</span></h2>
 				<div class="event-about-description">
-					<p>{{ event.title }} is the 2016 annual graduate show of the <a href="http://design.yorku.ca" target="_blank">York/Sheridan Program in Design</a>, a joint Bachelor of Design Honours program. The show celebrates four years of hard work by the students.</p>
+					<p>{{ event.title }} is the 2016 annual graduate show of the <a href="http://design.yorku.ca" target="_blank">York/Sheridan Program in Design</a>, a joint Bachelor of Design Honours program. The show is student-organized, and celebrates four years of hard work.</p>
 				</div>
 			</div>
 			<figure class="event-about-figure">
 				<img src="/assets/images/grad-show-close.jpg" />
 			</figure>
 		</div>
+		<div class="event-grid event-about-grid-left"><img src="/assets/images/grid/a.svg" /></div>
+		<div class="event-grid event-about-grid-right"><img src="/assets/images/grid/b.svg" /></div>
 	</section>
 
 	<section class="event-details event-section">
@@ -46,7 +59,7 @@
 					<div class="event-details-session">
 						<div class="event-details-session-name">{{ session.name }}</div>
 						<div class="event-details-session-time">
-							<span class="event-details-session-start">{{ session.start | date('g:i') }}</span>{#
+					<span class="event-details-session-start">{{ session.start | date('g:i') }}</span>{#
 						#}<span class="event-details-session-dash">&ndash;</span>{#
 						#}<span class="event-details-session-end">{{ session.end | date('ga') }}</span>
 						</div>
@@ -62,13 +75,18 @@
 			</div>
 			<div class="event-details-venue">
 				<div class="venue-name">{{ event.venue.name }}</div>
-				<div class="venue-address">
-					<span class="venue-address-street">{{ event.venue.address.street }}</span><br>
-					<span class="venue-address-city">{{ event.venue.address.city }},</span>
-					<span class="venue-address-state">{{ event.venue.address.state }}</span>
-				</div>
+				<a class="venue-address" href="https://goo.gl/maps/YuXwP9XNDhQ2" target="_blank" data-venue-address>
+					<div class="venue-address-details">
+						<span class="venue-address-street">{{ event.venue.address.street }}</span><br>
+						<span class="venue-address-city">{{ event.venue.address.city }},</span>
+						<span class="venue-address-state">{{ event.venue.address.state }}</span>
+					</div>
+					<div class="venue-address-icon"></div>
+				</a>
 			</div>
 		</div>
+		<div class="event-grid event-details-grid-left"><img src="/assets/images/grid/c.svg" /></div>
+		<div class="event-grid event-details-grid-right"><img src="/assets/images/grid/d.svg" /></div>
 	</section>
 
 	<section class="event-faq event-section">
@@ -87,12 +105,15 @@
 				{% endfor %}
 			</div>
 		</div>
+		<div class="event-grid event-faq-grid-top"><img src="/assets/images/grid/e.svg" /></div>
+		<div class="event-grid event-faq-grid-left"><img src="/assets/images/grid/f.svg" /></div>
+		<div class="event-grid event-faq-grid-right"><img src="/assets/images/grid/g.svg" /></div>
 	</section>
 
 	<section class="event-sponsors event-section">
 		<div class="event-sponsors-wrapper wrapper">
 			<header class="event-sponsors-introduction">
-				<h2 class="event-sponsors-header event-section-header">Thank you to our sponsors</h2>
+				<h2 class="event-sponsors-header event-section-header">Thank you to <span class="no-wrap">our sponsors</span></h2>
 				<h4 class="event-sponsors-subheader event-section-subheader">We couldn&rsquo;t have done it <span class="no-wrap">without them!</span></h4>
 			</header>
 			<div class="event-sponsors-logos">
@@ -122,6 +143,9 @@
 				</div>
 			</div>
 		</div>
+		<div class="event-grid event-sponsors-grid-left"><img src="/assets/images/grid/h.svg" /></div>
+		<div class="event-grid event-sponsors-grid-top"><img src="/assets/images/grid/i.svg" /></div>
+		<div class="event-grid event-sponsors-grid-right"><img src="/assets/images/grid/j.svg" /></div>
 	</section>
 
 	<section class="event-social event-section">
@@ -133,13 +157,18 @@
 			<div class="event-social-instagram-feed instagram-feed" data-instagram></div>
 			<h4 class="event-social-subheader event-section-subheader">Follow along on <a class="event-social-link--facebook" href="{{ facebook.url }}" target="_blank">Facebook</a>, <a class="event-social-link--twitter" href="{{ twitter.url }}" target="_blank">Twitter</a>, and <a class="event-social-link--instagram" href="{{ instagram.url }}" target="_blank">Instagram</a> for more.</h4>
 		</div>
+		<div class="event-grid event-social-grid-left"><img src="/assets/images/grid/k.svg" /></div>
+		<div class="event-grid event-social-grid-right"><img src="/assets/images/grid/l.svg" /></div>
 	</section>
 
 	<section class="event-footer event-section">
 		<div class="event-footer-wrapper wrapper">
-			<h2 class="event-footer-header event-section-header">Come meet <span class="no-wrap">The Cast!</span></h2>
-			<h4 class="event-footer-subheader">Let us know if you&rsquo;re coming <a class="no-wrap" href="http://facebook.com/ysdntheintermission" target="_blank">on Facebook.</a> We hope to <span class="no-wrap">see you there!</span></h4>
+			<h2 class="event-footer-header event-section-header">Come meet <span class="no-wrap">the cast!</span></h2>
+			<h4 class="event-footer-subheader">Let us know if you&rsquo;re coming <a class="no-wrap" href="http://facebook.com/ysdntheintermission" target="_blank">on Facebook</a> and <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=YSDN+Grad+Show:+The+Intermission&dates=20160419T230000Z/20160420T030000Z&location=Liberty+Grand,+Toronto,+ON&sf=true&output=xml" target="_blank">add it to your calendar</a>. We hope to <span class="no-wrap">see you there!</span></h4>
 		</div>
+		<div class="event-grid event-footer-grid-left"><img src="/assets/images/grid/m.svg" /></div>
+		<div class="event-grid event-footer-grid-right"><img src="/assets/images/grid/n.svg" /></div>
+		<div class="event-grid event-footer-grid-bottom"><img src="/assets/images/grid/o.svg" /></div>
 	</section>
 
 {% endblock %}

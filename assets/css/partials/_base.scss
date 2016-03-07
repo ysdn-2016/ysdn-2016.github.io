@@ -14,7 +14,7 @@ html.blue-elastic-scroll {
 body {
 	font-family: $sofia;
 	font-size: 18px;
-	line-height: 1.5;
+	line-height: $line-height;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -77,6 +77,14 @@ svg {
 	@include wrapper();
 }
 
+//
+// Utility
+//
+
+.locked {
+	overflow: hidden;
+}
+
 .no-wrap {
-	white-space: nowrap ;
+	white-space: nowrap;
 }

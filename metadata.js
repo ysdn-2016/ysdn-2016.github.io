@@ -8,7 +8,7 @@ module.exports = {
 	 */
 	site: {
 		title: 'YSDN',
-		description: 'The York/Sheridan Program in Design invites you to The Intermission — An exhibition of the work of the 2016’s graduating class.'
+		description: 'The York/Sheridan Program in Design invites you to The Intermission — an exhibition of the work of the 2016’s graduating class.'
 	},
 
 	/**
