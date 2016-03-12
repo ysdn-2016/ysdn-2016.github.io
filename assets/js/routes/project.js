@@ -76,13 +76,13 @@ module.exports = function () {
         $('.project--standard').css('min-height', overlay.height());
       }
 
-    $(windw).scroll(function (e) {
-      var scroll = Math.round($(window).scrollTop());
-      var bottomScroll = Math.round(scroll) + windowHeight,
+    /*$(windw).scroll(function (e) {
+      var scroll = $(window).scrollTop();
+      var bottomScroll = scroll + windowHeight,
         containerTop = container.offset().top,
-        bottomhit = containerTop + container.height() + (windowHeight - overlay.height()),
-        overlayTop = Math.round(overlay.offset().top),
-        overlayBottom = overlayTop + Math.round(overlay.height());
+        bottomhit = containerTop + container.height() + (windowHeight - overlay.height());
+        //overlayTop = Math.round(overlay.offset().top),
+        //overlayBottom = overlayTop + Math.round(overlay.height());
 
       if (overlay.height() < windowHeight){
 
@@ -96,7 +96,7 @@ module.exports = function () {
           // if scroll past bottom of content
           overlay.attr('class', 'stickbottomwindow');
         }
-      } else {
+      } else {*/
         /*console.log("Is at top of overlay" + scroll + "<=" + overlayTop);
         console.log("Is at bottom of overlay" + bottomScroll + ">=" + overlayBottom);
          if ((overlayTop > containerTop) && (overlayBottom < bottomhit)) {
