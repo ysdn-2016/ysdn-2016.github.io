@@ -1,2 +1,55 @@
 
+//
+// Colors
+//
+
+$orange: #f47f50;
+$yellow: #fed418;
+$red: #ef4862;
+$green: #5ac2b4;
+$blue: #7abee0;
+$accent: #2b4074;
+
+$black: #141414;
+$white: #fff;
+$off-white: darken($white, 10%);
+$off-white-faded: darken($off-white, 40%);
+$light-gray: darken($white, 30%);
+$gray: lighten($black, 25%);
+
+//
+// Typography
+//
+
 $sofia: 'Sofia', 'Avenir', 'Helvetica Neue', Arial, sans-serif;
+
+//
+// Components
+//
+
+//
+// Measurements
+//
+
+$grid-width: 990px;
+$line-height: 1.5;
+
+$media-desktop-medium: "only screen and (max-width: 1025px)";
+$media-desktop-small: "only screen and (max-width: 1001px)";
+
+$media-tablet-medium: "only screen and (max-width: 769px)";
+
+$media-mobile-large: "only screen and (max-width: 426px)";
+$media-mobile-medium: "only screen and (max-width: 376px)";
+$media-mobile-small: "only screen and (max-width: 321px)";
+
+//
+// Sponsor Colors
+//
+
+$sponsor-facebook: #3b5998;
+$sponsor-rl-solutions: #7dc242;
+$sponsor-veritiv: #027e34;
+$sponsor-hughes-brannan: #666;
+$sponsor-critical-mass: #444;
+$sponsor-saman: #666;

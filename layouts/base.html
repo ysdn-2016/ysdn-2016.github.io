@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>{{ site.title }}</title>
+	<title>{{ site.title }}{% if page.title %} &mdash; {{ page.title }}{% endif%}</title>
 	<meta charset="utf-8"/>
 	<meta name="description" content="{{ site.description }}" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 
-	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png" />
 	<link rel="stylesheet" media="screen, projection" href="/assets/bundle.css" />
-	<link href='https://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
+
+	<meta property="og:site_name" content="YSDN 2016"/>
+	<meta property="og:title" content="YSDN 2016 Presents: The Intermission"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://ysdn2016.com/" />
+	<meta property="og:image" content="http://ysdn2016.com/assets/images/og-image.png" />
+	<meta property="og:description" content="{{ site.description }}" />
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="YSDN 2016 Presents: The Intermission">
+	<meta name="twitter:description" content="{{ site.description }}">
+
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-<body class="{% block body.class %}{% endblock %}">
-	{% include "partials/header.html" %}
-	<div class="container">
+<body class="page-{{ id }}">
 	{% block body %}{% endblock %}
-	</div>
 	{% if env == 'development' %}
 	<script src="http://127.0.0.1:35729/livereload.js"></script>
 	{% endif %}
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMUOHhM9ne4RkreEDZOIDzxdm6u4EsPrY"></script>
+	<script src="/assets/bundle.js"></script>
 </body>
 </html>

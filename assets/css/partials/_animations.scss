@@ -1,0 +1,37 @@
+
+@keyframes hover {
+	0% {
+		transform: translateY(-10%);
+	}
+	60% {
+		transform: translateY(10%);
+	}
+	100% {
+		transform: translateY(-10%);
+	}
+}
+
+
+@keyframes marquee {
+	from {
+		transform: translateX(105%);
+	}
+	to {
+		transform: translateX(-105%);
+	}
+}
+
+@keyframes marquee-offset {
+	0% {
+		transform: translateX(0);
+	}
+	49.99% {
+		transform: translateX(-105%);
+	}
+	50% {
+		transform: translateX(105%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
