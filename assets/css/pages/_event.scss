@@ -450,6 +450,32 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	}
 }
 
+.event-about-schools {
+	display: flex;
+	align-items: center;
+	margin-top: 24px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.event-about-school {
+	flex-basis: 30%;
+	path {
+		fill: #777;
+	}
+	@media #{$media-mobile-large} {
+		flex-basis: 40%;
+	}
+}
+
+.event-about-cross {
+	position: relative;
+	top: -4px;
+	padding: 1em;
+	color: #444;
+	font-size: 24px;
+}
+
 .event-about-figure {
 	flex: 7 0;
 	margin: 0;

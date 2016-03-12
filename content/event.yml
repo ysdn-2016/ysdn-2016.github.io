@@ -43,12 +43,12 @@ event:
       company: Facebook
       title: Interactive Sponsor
       url: https://facebook.com/profile.php?=73322363
-      priority: 1
+      priority: 2
     - id: veritiv
       company: Veritiv
       title: Foundation Sponsor
       url: http://veritivcorp.com
-      priority: 3
+      priority: 2
     - id: hughes-brannan
       company: Hughes & Brannan
       title: Patron
@@ -58,4 +58,9 @@ event:
       company: Critical Mass
       title: Patron
       url: http://criticalmass.com
+      priority: 3
+    - id: saman
+      company: Saman Design
+      title: Patron
+      url: http://www.samandesign.com/
       priority: 3
