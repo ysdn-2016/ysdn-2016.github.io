@@ -10,3 +10,17 @@
 		transform: translateY(-10%);
 	}
 }
+
+//
+// Student Film Strip Animations
+//
+
+@keyframes play {
+	from { left: 0%; }
+	to   { left: -400%; }
+}
+
+@keyframes rewind {
+	from { left: -400%; }
+	to   { left: 0%; }
+}

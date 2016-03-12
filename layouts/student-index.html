@@ -2,90 +2,29 @@
 
 {% block main %}
 	<section class="student-index">
-		{# Filters #}
-		<div class="student-nav">
-			<div class="student-nav-filters col">
-					<a href="#" class="category-target active" data-category="*">All</a>
-					<a href="#" class="category-target" data-category="communication">Communication</a>
-					<a href="#" class="category-target" data-category="physical">Physical</a>
-					<a href="#" class="category-target" data-category="information">Information</a>
-					<a href="#" class="category-target" data-category="interactive">Interactive</a>
-			</div>
-			<div class="student-nav-view col">
-				<div class="student-nav-view-selector">
-					<a href="#!" class="grid-view-target i-grid"></a>
-					<a href="#!" class="list-view-target i-list active"></a>
-				</div>
-				<div class="student-nav-view-search">
-					<input type="text" id="student-nav-view-search-input" class="student-nav-view-search-input" placeholder="Search" />
-					<label for="student-nav-view-search-input"><i class="student-nav-view-search-icon i-search"></i></label>
-				</div>
-			</div>
-		</div>
-		{# List View #}
-		<div class="student-list">
-			<header class="student-list-header">
-				<div class="row header-row">
-					<div class="col student-list-student">Student</div>
-					<div class="col student-list-category">Work</div>
-					<div class="col student-list-social">Connect</div>
-				</div>
-			</header>
-			<div class="student-list-body">
-			{% for student in students | sortByLastName %}
-				<div class="row student student-list-row" data-name="{{ student.name }}" data-last-name="{{ student.lastName }}" data-url="{{ student.href }}" data-categories="{{ student.projectCategories | map('id') | join(',') }}">
-					<div class="col student-list-student">
-						<a href="{{ student.href }}">{{ student.name }}</a>
-					</div>
-					<div class="col student-list-category">
-						{% for category in student.projectCategories %}
-						<a href="{{ category.href }}" class="category-target" data-category="{{ category.id }}">{{ category.title }}{% if not loop.last %},{% endif %}</a>
-						{% endfor %}
-					</div>
-					<div class="col student-list-social">
-						{# Email #}
-						{% if student.email %}
-							<a href="mailto:{{ student.email }}" class="i-mail" target="_blank"></a>
-						{% endif %}
-						{# URL #}
-						{% if student.url %}
-							<a href="{{ student.url }}" class="i-globe" target="_blank"></a>
-						{% endif %}
-						{# Twitter #}
-						{% if student.twitter %}
-							<a href="https://twitter.com/{{ student.twitter | replace('@', '') }}" class="i-twitter" target="_blank"></a>
-						{% endif %}
-						{# Instagram #}
-						{% if student.instagram %}
-							<a href="http://instagram.com/{{ student.instagram | replace('@', '') }}" class="i-instagram" target="_blank"></a>
-						{% endif %}
-						{# Github #}
-						{% if student.github %}
-							<a href="http://github.com/{{ student.github | replace('@', '') }}" class="i-github" target="_blank"></a>
-						{% endif %}
-						{# Dribbble #}
-						{% if student.dribbble %}
-							<a href="http://dribbble.com/{{ student.dribbble | replace('@', '') }}" class="i-dribbble" target="_blank"></a>
-						{% endif %}
-					</div>
-				</div>
-			{% endfor %}
-			</div>
-		</div>
-
-		{# Grid View #}
-		<div class="student-grid hidden">
-			{% for student in students | sortByLastName %}
-				<a class="student-preview student" href="{{ student.href }}" data-url="{{ student.href }}" data-name="{{ student.name }}" data-last-name="{{ student.lastName }}" data-categories="{{ student.projectCategories | map('id') | join(',') }}">
-					<div class="student-preview-image">
-						{% if student.portrait %}
-							<img src="{{ student.portrait | asset_url }}" alt="{{ student.name }}" />
-						{% else %}
-							<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=888888&txtclr=888888&txt=250%C3%97250&w=300&h=300" alt="{{ student.name }}" />
-						{% endif %}
-					</div>
-					<div class="student-preview-name">{{ student.name }}</div>
-				</a>
+		{# <div class="student-search">
+			<input type="text" placeholder="Looking for someone?" />
+		</div> #}
+		<div class="student-grid">
+			{% for item in studentGrid %}
+				{% if item.type === 'shape' %}
+					<div class="student-grid-shape student-grid-shape--{{ item.shape }}"></div>
+				{% endif %}
+				{% if item.type === 'intermission' %}
+					<div class="student-grid-intermission"><p>{{ item.text }}</p></div>
+				{% endif %}
+				{% if item.type === 'student' %}
+					<a class="student-preview student" href="{{ item.href }}" data-name="{{ item.name }}">
+						<div class="student-preview-image">
+							{% if item.strip %}
+								<img src="{{ item.strip | asset_url }}" alt="{{ item.name }}" draggable="false" />
+							{% else %}
+								<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=ffffff&txtclr=888888&txt=250%C3%97250&w=700&h=100" alt="{{ item.name }}" draggable="false" />
+							{% endif %}
+						</div>
+						{# <div class="student-preview-name">{{ item.name }}</div> #}
+					</a>
+				{% endif %}
 			{% endfor %}
 		</div>
 	</section>

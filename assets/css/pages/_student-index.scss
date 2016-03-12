@@ -169,16 +169,48 @@
 .student-grid {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-start;
+}
+
+.student-grid-intermission {
+	flex: 0 1 50%;
+	margin-bottom: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+}
+
+.student-grid-shape {
+	flex: 0 1 22%;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
 }
 
 .student-preview {
 	display: block;
-	flex-basis: 22.75%;
-	margin-right: 3%;
+	flex-basis: 22%;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
 	margin-bottom: 3rem;
-	&:nth-child(4n) {
-		margin-right: 0;
+}
+
+.student-preview-image {
+	position: relative;
+	height: 0;
+	padding-top: 100%;
+	overflow: hidden;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		max-width: none;
+		height: 100%;
+		animation: rewind 400ms steps(4) forwards
+	}
+	.student-preview:hover & {
+		img {
+			animation: play 400ms steps(4) forwards;
+		}
 	}
 }
 

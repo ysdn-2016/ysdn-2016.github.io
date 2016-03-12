@@ -15,6 +15,7 @@ var swig = require('metalsmith-swig-helpers')
 var yaml = require('../lib/yaml')
 var projects = require('../lib/projects')
 var students = require('../lib/students')
+var grid = require('../lib/grid')
 var filters = require('../lib/filters/')
 
 /**
@@ -47,6 +48,7 @@ var site = metalsmith(__dirname)
 	}))
 	.use(students())
 	.use(projects())
+	.use(grid())
 
 /**
  * Build pages
