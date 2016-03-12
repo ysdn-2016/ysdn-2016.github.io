@@ -64,7 +64,7 @@
 					<div class="event-details-session">
 						<div class="event-details-session-name">{{ session.name }}</div>
 						<div class="event-details-session-time">
-					<span class="event-details-session-start">{{ session.start | date('g:i') }}</span>{#
+					<span class="event-details-session-start">{{ session.start | date('g') }}{% if (session.start | date('i')) == '30'  %}{{ session.start | date(':i') }}{% endif %}</span>{#
 						#}<span class="event-details-session-dash">&ndash;</span>{#
 						#}<span class="event-details-session-end">{{ session.end | date('ga') }}</span>
 						</div>
@@ -160,7 +160,7 @@
 				<h4 class="event-social-subheader event-section-subheader">See what we&rsquo;ve been up to <span class="no-wrap">behind the scenes.</span></h4>
 			</header>
 			<div class="event-social-instagram-feed instagram-feed" data-instagram></div>
-			<h4 class="event-social-subheader event-section-subheader">Follow along on <a class="event-social-link--facebook" href="{{ facebook.url }}" target="_blank">Facebook</a>, <a class="event-social-link--twitter" href="{{ twitter.url }}" target="_blank">Twitter</a>, and <a class="event-social-link--instagram" href="{{ instagram.url }}" target="_blank">Instagram</a> for more.</h4>
+			<h4 class="event-social-subheader event-section-subheader">Follow along on <a class="event-social-link--facebook" href="{{ facebook.url }}" target="_blank">Facebook</a>, <a class="event-social-link--twitter" href="{{ twitter.url }}" target="_blank">Twitter</a>, and <a class="event-social-link--instagram" href="{{ instagram.url }}" target="_blank">Instagram</a> for a behind-the-scenes look.</h4>
 		</div>
 		<div class="event-grid event-social-grid-left"><img src="/assets/images/grid/k.svg" /></div>
 		<div class="event-grid event-social-grid-right"><img src="/assets/images/grid/l.svg" /></div>
@@ -169,7 +169,7 @@
 	<section class="event-footer event-section">
 		<div class="event-footer-wrapper wrapper">
 			<h2 class="event-footer-header event-section-header">Come meet <span class="no-wrap">the cast!</span></h2>
-			<h4 class="event-footer-subheader">Let us know if you&rsquo;re coming <a class="no-wrap" href="http://facebook.com/ysdntheintermission" target="_blank">on Facebook</a> and <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=YSDN+Grad+Show:+The+Intermission&dates=20160419T230000Z/20160420T030000Z&location=Liberty+Grand,+Toronto,+ON&sf=true&output=xml" target="_blank">add it to your calendar</a>. We hope to <span class="no-wrap">see you there!</span></h4>
+			<h4 class="event-footer-subheader">Let us know if you&rsquo;re coming <a class="no-wrap" href="https://www.facebook.com/events/260128614319369/" target="_blank">on Facebook</a> and <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=YSDN+Grad+Show:+The+Intermission&dates=20160419T230000Z/20160420T030000Z&location=Liberty+Grand,+Toronto,+ON&sf=true&output=xml" target="_blank">add the event to <span class="no-wrap">your calendar</span></a>. We hope to <span class="no-wrap">see you there!</span></h4>
 		</div>
 		<div class="event-grid event-footer-grid-left"><img src="/assets/images/grid/m.svg" /></div>
 		<div class="event-grid event-footer-grid-right"><img src="/assets/images/grid/n.svg" /></div>

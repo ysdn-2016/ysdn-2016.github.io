@@ -23,16 +23,15 @@ event:
     - question: Is the show free?
       answer: Yes absolutely! However, we do help fund the event through sponsorships. If you're interested in supporting this or future years, <a class="event-faq-link-contact" href="mailto:exec.ysdn16@gmail.com" target="_blank">get in touch</a>.
     - question: What can I expect to see and do at the show?
-      answer: The show is a celebration and a chance for students to showcase their best work from the program. You will have a chance to browse their work and connect with the students in-person.
-    - question: Will there be food?
-      answer: |
-        Yes, there will be some finger&nbsp;food&nbsp;(:
+      answer: The show is an opportunity to browse the work and meet in-person with grads from one of Canada's top design programs.
+    - question: Will there be drinks?
+      answer: Yes, we'll have a cash bar available throughout the night.
     - question: What is Industry?
       answer: We dedicate a part of the night exclusively to people working in the design and creative industries. All students will be there to answer any questions about their work and experience.
     - question: I'll be at FITC on April 19th. Can I still come?
       answer: For sure! The FITC schedule ends at 6pm on April 19th. We're open until 11pm, so there's lots of time if you'd like to swing by in the evening.
     - question: Where can I park my car?
-      answer: There is <a class="event-faq-link-parking-main" href="https://www.google.ca/maps/place/10+Yukon+Pl,+Toronto,+ON+M6K+3C3/@43.6313371,-79.4257077,17.69z/data=!4m2!3m1!1s0x882b3509d05b0731:0x9e824a6f06404650?hl=en" target="_blank">a parking area</a> right next to the Liberty Grand. An <a class="event-faq-link-parking-alternate" href="https://www.google.ca/maps/place/20+British+Columbia+Rd,+Toronto,+ON+M6K+3C3/@43.6318017,-79.4300434,17.43z/data=!4m2!3m1!1s0x882b35a7a0cd15d3:0x80d900256cca108a" target="_blank">overflow parking lot</a> is also available on the opposite side of the building.
+      answer: There is a parking area located <a class="event-faq-link-parking-main" href="https://www.google.ca/maps/place/10+Yukon+Pl,+Toronto,+ON+M6K+3C3/@43.6313371,-79.4257077,17.69z/data=!4m2!3m1!1s0x882b3509d05b0731:0x9e824a6f06404650?hl=en" target="_blank">right beside the Liberty Grand</a> that will be available.
   sponsors:
     - id: rl-solutions
       company: RL Solutions
