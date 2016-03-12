@@ -7,7 +7,7 @@ module.exports = {
 	 * Site metadata (title, meta description, etc)
 	 */
 	site: {
-		title: 'YSDN',
+		title: 'YSDN 2016',
 		description: 'The York/Sheridan Program in Design invites you to The Intermission — an exhibition of the work of the 2016’s graduating class.'
 	},
 
