@@ -852,7 +852,8 @@ $media-event-faq-a: 601px;
 }
 
 .event-sponsor {
-	path {
+	path,
+	rect {
 		transition: fill 200ms ease;
 	}
 
@@ -870,6 +871,13 @@ $media-event-faq-a: 601px;
 	}
 	&--critical-mass:hover path {
 		fill: $sponsor-critical-mass;
+	}
+	&--saman:hover path,
+	&--saman:hover rect {
+		fill: $sponsor-saman;
+	}
+	&--saman:hover .background {
+		fill: #f2f2f2;
 	}
 }
 
