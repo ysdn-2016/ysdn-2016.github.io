@@ -32,8 +32,10 @@
 						<div class="student-introduction">{{ introduction }}</div>
 					{% endif %}
 					{% if biography %}
-						<h5>About</h5>
-						<p>{{ biography }}</p>
+						<div class="student-about">
+							<h5>About</h5>
+							<p>{{ biography }}</p>
+						</div>
 					{% endif %}
 					{% for note in sideNotes %}
 						<div class="student-side-note">
