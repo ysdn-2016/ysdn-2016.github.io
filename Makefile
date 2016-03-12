@@ -30,7 +30,7 @@ BROWSERIFY_ARGS = -t partialify
 # Tasks
 #
 
-build: node_modules content assets styles
+build: node_modules content assets styles scripts
 start: build
 	@bin/www
 
