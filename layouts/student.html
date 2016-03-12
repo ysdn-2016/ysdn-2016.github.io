@@ -13,6 +13,9 @@
 					{% if github %}<a href="https://github.com/{{ github | replace('@', '') }}" class="student-social-github" target="_blank"><span>GitHub</span></a>{% endif %}
 				</div>
 			</div>
+			<div class="student-image">
+				<img src="https://dl.dropboxusercontent.com/u/68882376/img/michelle_lee.jpg" alt="">
+			</div>
 			{% if portrait %}
 			<div class="student-image">
 				<!-- <img src="{{ portrait | asset_url }}" /> -->
@@ -41,8 +44,8 @@
 				</div>
 				<div class="student-work-list">
 					<div class="group">
-						{% for project in projects %}
-							<div class="student-project col">
+						{% for project in projects | filter("type", "case-study") %}
+							<div class="student-project case-study">
 								<a href="{{ project.href }}">
 									<img src="{{ project.thumbnail.url }}" alt="{{ project.title }}">
 									<div class="meta">
@@ -53,6 +56,21 @@
 										<div class="desc">
 											{# <p>{{ project.contents | safe }}</p> #}
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						{% endfor %}
+					</div>
+					<div class="group">
+						{% for project in projects | filter("type", "standard") %}
+							<div class="student-project standard">
+								<a href="{{ project.href }}">
+									<img src="{{ project.thumbnail.url }}" alt="{{ project.title }}">
+									<div class="meta">
+										<div class="info">
+											<h4>{{ project.title }}</h4>
+											<p class="cat">{{ project.category | titleize }}</p>
 										</div>
 									</div>
 								</a>
