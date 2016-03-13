@@ -21,9 +21,11 @@ machine:
     - git config --global user.email "ci@example.com"
 dependencies:
   pre:
-    - cp bin/ci/sassc bin/sassc
+    - ./bin/ci/install-sassc
   override:
     - npm install --dev
+  cache_directories:
+    - bin
 deployment:
   production:
     branch: production
