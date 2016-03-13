@@ -21,7 +21,7 @@ machine:
     - git config --global user.email "ci@example.com"
 dependencies:
   pre:
-    - bin/ci/install-sassc
+    - ln -s bin/ci/sassc bin/sassc
   override:
     - npm install --dev
 deployment:
