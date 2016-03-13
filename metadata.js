@@ -11,6 +11,22 @@ module.exports = {
 	},
 
 	/**
+	 * Appearance Configuration
+	 */
+	config: {
+		studentIndex: {
+			averageShapeInterval: 5,
+			averageIntermissionInterval: 20,
+			intermissionSentences: [
+				`Phew, there's a lot of us, isn't there?`,
+				`Keep going…`,
+				`Almost there!`,
+				`That's right. 96 f**king students. Eat it OCAD.`
+			]
+		}
+	},
+
+	/**
 	 * Details about the event
 	 */
 	event: {
