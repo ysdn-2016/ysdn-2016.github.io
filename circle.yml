@@ -31,7 +31,9 @@ deployment:
     branch: production
     commands:
       - make deploy:production
+      - ./bin/ci/notify "production"
   staging:
     branch: develop
     commands:
       - make deploy
+      - ./bin/ci/notify "staging"

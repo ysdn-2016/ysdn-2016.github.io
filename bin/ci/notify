@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+MESSAGE="Built site for \`$1\` environment"
+URL=https://hooks.slack.com/services/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
+
+PAYLOAD="payload={\"text\": \"${MESSAGE}\"}"
+
+curl -X POST --data "$PAYLOAD" ${URL}
