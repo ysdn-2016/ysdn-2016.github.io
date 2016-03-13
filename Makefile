@@ -110,9 +110,10 @@ clean-deps:
 
 install: node_modules
 content: build/index.html
-assets:  assets/fonts/icons build/assets/fonts build/assets/images
+assets:  build/assets/fonts build/assets/images
 styles:  build/assets/bundle.css
 scripts: build/assets/bundle.js build/assets/libraries.js
+icons:   assets/fonts/icons
 
 #
 # Targets
