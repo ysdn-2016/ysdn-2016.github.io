@@ -181,9 +181,13 @@
 }
 
 .student-grid-shape {
+	display: flex;
 	flex: 0 1 22%;
+	justify-content: center;
+	align-items: center;
 	margin-left: 1.5%;
 	margin-right: 1.5%;
+	margin-bottom: 3.5rem;
 }
 
 .student-preview {

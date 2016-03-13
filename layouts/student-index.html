@@ -8,7 +8,9 @@
 		<div class="student-grid">
 			{% for item in studentGrid %}
 				{% if item.type === 'shape' %}
-					<div class="student-grid-shape student-grid-shape--{{ item.shape }}"></div>
+					<div class="student-grid-shape student-grid-shape--{{ item.shape }}">
+						{% include 'partials/shapes/student-index-triangle.html' %}
+					</div>
 				{% endif %}
 				{% if item.type === 'intermission' %}
 					<div class="student-grid-intermission"><p>{{ item.text }}</p></div>
@@ -17,9 +19,9 @@
 					<a class="student-preview student" href="{{ item.href }}" data-name="{{ item.name }}">
 						<div class="student-preview-image">
 							{% if item.strip %}
-								<img src="{{ item.strip | asset_url }}" alt="{{ item.name }}" draggable="false" />
+								<img src="{{ item.strip | asset_url({ height: 400 }) }}" alt="{{ item.name }}" draggable="false" />
 							{% else %}
-								<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=ffffff&txtclr=888888&txt=250%C3%97250&w=700&h=100" alt="{{ item.name }}" draggable="false" />
+								<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=f2f2f2&txtclr=888888&txt=250%C3%97250&w=700&h=100" alt="{{ item.name }}" draggable="false" />
 							{% endif %}
 						</div>
 						{# <div class="student-preview-name">{{ item.name }}</div> #}
