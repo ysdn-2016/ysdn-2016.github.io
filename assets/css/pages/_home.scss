@@ -1,13 +1,8 @@
-
-
-
 .home-introduction {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: $black;
+	// position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #000;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -22,12 +17,20 @@
 	text-align: center;
 }
 
+.home-logo {
+	position: relative;
+	width: 258px;
+	top:40%;
+	margin: 0 auto;
+}
+
 .home-introduction-arrow {
 	cursor: default;
 	position: absolute;
 	bottom: 5vh;
 	left: 50%;
 	transform: translateX(-50%);
+	animation: home-introduction-arrow 4s infinite;
 	&::before {
 		@extend %icon;
 		content: $font-ysdn-icons-arrow-down;
@@ -37,6 +40,27 @@
 		text-align: center;
 		animation: hover 2000ms ease infinite;
 	}
+}
+
+@keyframes home-introduction-arrow {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(4px);
+  }
+}
+
+.home-introduction-grid {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	// position: absolute;
+	background-image: url(../../assets/images/black-grid.png);
+	background-size: 50px;
+	border: 12px #000 solid;
 }
 
 .home-headline,
