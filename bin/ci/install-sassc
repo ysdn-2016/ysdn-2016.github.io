@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+#
+# Installs `sassc` on the CircleCI test machines
+#
+
 SASS_VERSION=3.3.2
 
 set -x
