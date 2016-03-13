@@ -62,10 +62,10 @@ deploy:
 		printf 'User-agent: *\nDisallow: /\n' > robots.txt && \
 		git init -q . && \
 		git add . && \
-		git commit -q -m "Deployment (auto-commit)" && \
+		git commit -q -m "Deployment (auto-commit)") && \
 		echo "\033[0;90m" && \
-		surge . $(STAGING) \
-		echo "\033[0m")
+		$(BIN)/surge build $(STAGING) \
+		echo "\033[0m"
 	@echo "Deployed to \033[0;32mhttp://$(STAGING)/\033[0m"
 
 deploy\:production:
@@ -86,9 +86,6 @@ deploy\:production:
 	@make clean
 	@echo "Deployed to \033[0;32mhttp://$(DOMAIN)\033[0m"
 
-lint:
-	@$(BIN)/xo
-
 fmt: comb semistandard
 
 semistandard:
@@ -97,8 +94,8 @@ semistandard:
 comb:
 	@csscomb assets/css -v
 
-# TODO: add tests
-test: lint
+test:
+	@true
 
 clean:
 	@rm -rf build
@@ -113,9 +110,10 @@ clean-deps:
 
 install: node_modules
 content: build/index.html
-assets:  assets/fonts/icons build/assets/fonts build/assets/images
+assets:  build/assets/fonts build/assets/images
 styles:  build/assets/bundle.css
 scripts: build/assets/bundle.js build/assets/libraries.js
+icons:   assets/fonts/icons
 
 #
 # Targets

@@ -14,7 +14,7 @@
 
 .student-header {
 	position: relative;
-	border-bottom: 1px solid rgba(0,0,0,0.8);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -49,8 +49,9 @@
 		}
 	}
 	.student-social {
-		position: absolute;
-		bottom: 26px;
+		margin-top: 6px;
+		// position: absolute;
+		// bottom: 26px;
 		a {
 			padding: 2px 7px;
 			font-family: $sofia;
@@ -101,6 +102,8 @@
 	z-index: -1;
 	right: 120px;
 	bottom: 0;
+	width: 450px;
+	height: 450px;
 }
 
 .profile-shapes {
@@ -119,23 +122,32 @@
 
 .student-body {
 	@extend .group;
-	border-bottom: 1px solid rgba(0,0,0,0.8);
+	border-bottom: 1px solid rgba(0,0,0,0.4);
 	margin-top: 40px;
 	.student-info {
 		float: left;
-		width: 40%;
+		width: 36%;
 	}
 	.student-work-list {
 		float: left;
-		width: 60%;
+		width: 64%;
 	}
 	.student-project {
 		float: left;
+		transition: opacity 0.2s ease;
+		img {
+			backface-visibility: hidden;
+		}
+		&:hover img {
+			opacity: 0.7;
+			transition: opacity 0.2s ease;
+		}
 		.meta {
 			@extend .group;
-			margin: 24px 0;
+			margin: 24px 0 40px 0;
 			.cat {
-				margin-bottom: 60px;
+				margin-top: 6px;
+				margin-bottom: 4px;
 				color: #aaa;
 				font-family: $sofia;
 				font-size: 0.75em;
@@ -143,30 +155,20 @@
 				text-transform: uppercase;
 			}
 		}
-		&::before {
-			display: block;
-			margin-bottom: 16px;
-			font-size: 0.7em;
-			font-weight: normal;
-			line-height: 1.4em;
-			letter-spacing: 0.06em;
-			text-transform: uppercase;
-		}
-		&:first-child {
+		&.case-study {
 			width: 100%;
-			&::before {
-				content: 'CASE STUDY';
-			}
 			.info {
-				width: 30%;
 				float: left;
+				// width: 100%;
+				width: 24%;
+				margin-right: 6%;
 			}
 			.desc {
-				width: 70%;
 				float: left;
+				width: 70%;
 				p {
-					margin: 0;
 					max-width: 100%;
+					margin: 0;
 					// color: #777;
 				}
 			}
@@ -174,29 +176,51 @@
 				float: left;
 				width: 50%;
 			}
-		}
-		&:nth-child(2) {
-			width: 47%;
-			margin-right: 6%;
-			&::before {
-				content: 'Project';
-			}
-			.desc {
-				display: none;
+			&:first-child {
+				&::before {
+					content: 'CASE STUDY';
+				}
 			}
 		}
-		&:nth-child(3) {
-			width: 47%;
-			&::before {
-				content: '\2063'; /* Don't remove this! It's an invisible space that aligns the height of the two second projects */
+		&.standard {
+			&:nth-of-type(1) {
+				width: 47%;
+				margin-right: 6%;
+				&::before {
+					content: 'Project';
+				}
 			}
-			.desc {
-				display: none;
+			&:nth-of-type(2) {
+				width: 47%;
+				&::before {
+					content: '\2063'; /* Don't remove this! It's an invisible space that aligns the height of the two second projects */
+				}
 			}
+			&:nth-of-type(3) {
+				width: 47%;
+				margin-right: 6%;
+			}
+			&:nth-of-type(4) {
+				width: 47%;
+			}
+		}
+		&::before {
+			display: block;
+			margin-bottom: 16px;
+			font-size: 0.8em;
+			font-weight: bold;
+			line-height: 1.4em;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
 		}
 	}
+	h4 {
+		font-size: 1.1em;
+		font-weight: normal;
+		line-height: 1.4em;
+	}
 	h5 {
-		margin-bottom: 0px;
+		margin-bottom: 0;
 		font-size: 0.9em;
 		font-weight: bold;
 		line-height: 1.2em;
@@ -205,10 +229,6 @@
 		&:not(:first-child) {
 			margin-top: 40px;
 		}
-	}
-	h4 {
-		font-size: 1.2em;
-		line-height: 1.3em;
 	}
 	p {
 		max-width: 72%;
@@ -220,12 +240,11 @@
 	}
 	.student-introduction {
 		max-width: 72%;
-		font-size: 1.17em;
+		margin-bottom: 2rem;
+		font-size: 1.32em;
 		font-weight: bold;
 		line-height: 1.5;
-		margin-bottom: 2rem;
 	}
-
 	ul {
 		padding-left: 20px;
 	}
@@ -241,4 +260,49 @@
 		// color: #777;
 		font-size: 0.9em;
 	}
+}
+
+@media (max-width: 1100px) {
+	.student-header {
+		width: 92%;
+			margin: 0 4%;
+	}
+	.student-body {
+		p { max-width: 92%;}
+		.student-info {
+			width: 92%;
+			margin: 0 4%;
+		}
+		.student-work-list {
+			padding-top: 40px;
+			width: 92%;
+			margin: 0 4%;
+		}
+		.student-introduction {
+			max-width: 100%;
+		}
+		.student-about {
+			width: 50%;
+			float: left;
+		}
+
+		.student-side-note {
+			width: 50%;
+			float: left;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+.student-body {
+	.student-about {
+			width: 100%;
+			float: left;
+		}
+
+		.student-side-note {
+			width: 100%;
+			float: left;
+		}
+}
 }
