@@ -31,9 +31,9 @@ deployment:
     branch: production
     commands:
       - make deploy:production
-      - ./bin/ci/notify "production"
+      - ./bin/ci/notify "production" "http://ysdn2016.com"
   staging:
     branch: develop
     commands:
       - make deploy
-      - ./bin/ci/notify "staging"
+      - ./bin/ci/notify "staging" "http://staging.ysdn2016.com"
