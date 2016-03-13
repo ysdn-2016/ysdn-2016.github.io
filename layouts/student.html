@@ -29,12 +29,12 @@
 			<div class="">
 				<div class="student-info">
 					{% if introduction %}
-						<div class="student-introduction">{{ introduction }}</div>
+						<div class="student-introduction">{{ introduction | markdown | safe }}</div>
 					{% endif %}
 					{% if biography %}
 						<div class="student-about">
 							<h5>About</h5>
-							<p>{{ biography }}</p>
+							<p>{{ biography | markdown | safe }}</p>
 						</div>
 					{% endif %}
 					{% for note in sideNotes %}
