@@ -56,8 +56,5 @@
     "swig": "^1.4.2",
     "watchify": "^3.7.0",
     "wtch": "^4.0.1"
-  },
-  "xo": {
-    "semicolon": false
   }
 }

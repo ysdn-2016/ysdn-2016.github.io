@@ -86,9 +86,6 @@ deploy\:production:
 	@make clean
 	@echo "Deployed to \033[0;32mhttp://$(DOMAIN)\033[0m"
 
-lint:
-	@$(BIN)/xo
-
 fmt: comb semistandard
 
 semistandard:
@@ -97,8 +94,8 @@ semistandard:
 comb:
 	@csscomb assets/css -v
 
-# TODO: add tests
-test: lint
+test:
+	@true
 
 clean:
 	@rm -rf build

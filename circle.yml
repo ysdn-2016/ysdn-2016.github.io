@@ -1,0 +1,26 @@
+general:
+  branches:
+    ignore:
+      - gh-pages
+      - master
+experimental:
+  notify:
+    branches:
+      only:
+        - production
+
+machine:
+  node:
+    version: 5.7.0
+dependencies:
+  override:
+    - npm install --dev
+deployment:
+  production:
+    branch: production
+    commands:
+      - make deploy:production
+  staging:
+    branch: develop
+    commands:
+      - make deploy
