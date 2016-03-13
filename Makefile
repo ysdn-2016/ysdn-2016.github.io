@@ -62,10 +62,10 @@ deploy:
 		printf 'User-agent: *\nDisallow: /\n' > robots.txt && \
 		git init -q . && \
 		git add . && \
-		git commit -q -m "Deployment (auto-commit)" && \
+		git commit -q -m "Deployment (auto-commit)") && \
 		echo "\033[0;90m" && \
-		$(BIN)/surge . $(STAGING) \
-		echo "\033[0m")
+		$(BIN)/surge build $(STAGING) \
+		echo "\033[0m"
 	@echo "Deployed to \033[0;32mhttp://$(STAGING)/\033[0m"
 
 deploy\:production:
