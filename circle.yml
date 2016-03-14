@@ -30,10 +30,10 @@ deployment:
   production:
     branch: production
     commands:
-      - make deploy:production
+      - make --no-print-directory deploy:production
       - ./bin/ci/notify "production" "http://ysdn2016.com"
   staging:
     branch: develop
     commands:
-      - make deploy
+      - make --no-print-directory deploy
       - ./bin/ci/notify "staging" "http://staging.ysdn2016.com"

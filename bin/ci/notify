@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MESSAGE="Deployed site to \`$1\` environment: <$2>"
+MESSAGE="Auto-deployed site to \`$1\` environment: <$2>"
 URL=https://hooks.slack.com/services/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
 
 PAYLOAD="payload={\"text\": \"${MESSAGE}\"}"
