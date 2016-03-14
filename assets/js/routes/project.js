@@ -3,7 +3,7 @@ var slugify = require('slug-component');
 module.exports = function () {
   if ($('.project--standard')[0]) {
     // Standard Project
-    $('iframe').prependTo('#gallery .project-assets');
+    $('iframe').prependTo('.project-assets');
 
     // Find all YouTube videos
     var $allVideos = $('iframe'),
@@ -35,8 +35,11 @@ module.exports = function () {
     // Case Studies
     $(document).ready(function () {
       var $mainNav = $('.case-nav');
-      $mainNav.prepend("<li id='indicator'></li>"),
-      $indicator = $('#indicator');
+      // if project has titles, insert Indicator
+      if ($('.project-content').find('h1, h3, h5').length > 0) {
+        $mainNav.prepend("<li id='indicator'></li>");
+        $indicator = $('#indicator');
+      }
       $('.project-content p img').unwrap();
       $('.project-content img:first-of-type').appendTo('.project-header');
       $('.project-content').find('h1, h3, h5').each(function () {
@@ -93,12 +96,20 @@ module.exports = function () {
         }
       });
       // Section Indicator
-      $indicator
-        .height($('.active').height())
-        .css('top', $('.active').position().top);
+      if ($('#indicator').length > 0) {
+        $indicator
+          .height($('.active').height())
+          .css('top', $('.active').position().top);
+      }
+
+      if (scroll > 250){
+        $(".title").css("opacity", 0);
+      } else {
+        $(".title").css("opacity", 1);
+      }
 
       if (overlay.height() < windowHeight) {
-        console.log("Running");
+        console.log('Running');
         if (scroll > containerTop) {
           // if scroll past top of content
           overlay.attr('class', 'sticktop');
@@ -109,7 +120,7 @@ module.exports = function () {
           // if scroll past bottom of content
           overlay.attr('class', 'stickbottomwindow');
         }
-      } 
+      }
     });
   };
   $('#project-fixed-overlay').followTo();

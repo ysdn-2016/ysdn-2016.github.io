@@ -129,6 +129,40 @@
 	}
 }
 
+@media only screen and (max-width : 640px) {
+	.event-panel {
+		top: initial;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: $ribbon-peek;
+		transform: translateX(0px);
+	}
+	.event-ribbon {
+		width: 100%;
+		height: $ribbon-peek;
+		&-info {
+			top: 0;
+			transform: rotate(0deg);
+			display: inline-block;
+		}
+		&-headline {
+			max-width: 13.5em;
+			margin: 0 auto;
+			color: #fff;
+			font-size: 64px;
+			line-height: 1.35;
+			letter-spacing: -0.03em;
+		}
+		&-arrow {
+			display: inline-block;
+		}
+		&-social-media {
+			display: none;
+		}
+	}
+}
+
 .event-intro {
 	text-align: center;
 	&-headline {

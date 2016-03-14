@@ -286,7 +286,7 @@ $project-grid-gutter: 60px;
 			margin: 20px 0;
 		}
 	}
-	.project-assets:last-child{
+	.project-assets:last-child {
 		margin-bottom: 0;
 	}
 }
@@ -382,10 +382,10 @@ $project-grid-gutter: 60px;
 			}
 			a {
 				border-bottom: 1px solid black;
-				color: black;
 				display: inline-block;
 				padding: 0;
 				padding-bottom: 2px;
+				color: black;
 			}
 			p:first-of-type {
 				font-weight: bold;
@@ -418,6 +418,19 @@ $project-grid-gutter: 60px;
 		margin-left: -14px;
 		list-style-type: none;
 		transition: top 0.25s ease, height 0.25s ease;
+	}
+}
+
+@media only screen and (max-width : 740px) {
+	.case-nav, .case-nav-holder {
+		display: none;
+	}
+	.project-content {
+		width: 100%;
+		margin-left: 0;
+	}
+	.project--case-study .project-header .title{
+		padding: 40px 20px 68px;
 	}
 }
 

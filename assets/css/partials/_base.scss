@@ -140,12 +140,18 @@ input {
 
 .container {
 	position: relative;
+	overflow-x: hidden;
 	min-height: 100%;
 	// NB: this pushes the page to the right if the ribbon is present, which helps
 	// keep things properly centred and nice once we remove the ribbon after the
 	// event.
 	margin-right: $ribbon-peek;
-	overflow-x: hidden;
+}
+
+@media only screen and (max-width : 640px){
+	.container{
+		margin-right: 0;
+	}
 }
 
 .main {
