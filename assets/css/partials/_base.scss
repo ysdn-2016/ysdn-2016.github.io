@@ -5,7 +5,6 @@
 html,
 body {
 	height: 100%;
-	overflow-x: hidden;
 }
 
 body {
@@ -146,6 +145,7 @@ input {
 	// keep things properly centred and nice once we remove the ribbon after the
 	// event.
 	margin-right: $ribbon-peek;
+	overflow-x: hidden;
 }
 
 .main {

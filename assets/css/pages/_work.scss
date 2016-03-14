@@ -172,6 +172,9 @@ $project-grid-gutter: 60px;
 	img {
 		margin: 25px 0;
 	}
+	img:nth-last-child(1) {
+		margin-bottom: 0;
+	}
 
 	a {
 		border-bottom: 2px currentColor solid;
@@ -282,6 +285,9 @@ $project-grid-gutter: 60px;
 		img {
 			margin: 20px 0;
 		}
+	}
+	.project-assets:last-child{
+		margin-bottom: 0;
 	}
 }
 

@@ -98,6 +98,7 @@ module.exports = function () {
         .css('top', $('.active').position().top);
 
       if (overlay.height() < windowHeight) {
+        console.log("Running");
         if (scroll > containerTop) {
           // if scroll past top of content
           overlay.attr('class', 'sticktop');
@@ -108,31 +109,7 @@ module.exports = function () {
           // if scroll past bottom of content
           overlay.attr('class', 'stickbottomwindow');
         }
-      } else {
-        /*console.log("Is at top of overlay" + scroll + "<=" + overlayTop);
-        console.log("Is at bottom of overlay" + bottomScroll + ">=" + overlayBottom);
-         if ((overlayTop > containerTop) && (overlayBottom < bottomhit)) {
-           if (scroll <= overlayTop) {
-              console.log("Stick to Top");
-              overlay.attr('class', 'sticktop');
-           } else if (bottomScroll >= overlayBottom) {
-              console.log("Stick to Bottom");
-              overlay.attr('class', 'stickbottom');
-           } else {
-              console.log("Stick in Place");
-              overlay.attr('class', 'stickinplace');
-              $('.stickinplace').css('top', overlayTop);
-              $('.stickinplace').css('position', 'absolute');
-           }
-        }
-        else if (bottomScroll > overlayBottom) {
-          overlay.attr('class', 'stickbottom');
-        }
-        else{
-
-        }*/
-      }
-
+      } 
     });
   };
   $('#project-fixed-overlay').followTo();
