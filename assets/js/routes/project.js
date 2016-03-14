@@ -107,18 +107,21 @@ module.exports = function () {
       } else {
         $('.title').css('opacity', 1);
       }
-
-      if (overlay.height() < windowHeight) {
-        console.log('Running');
-        if (scroll > containerTop) {
-          // if scroll past top of content
-          overlay.attr('class', 'sticktop');
-        } else if (scroll < containerTop) {
-          overlay.attr('class', 'sticktopwindow');
-        }
-        if (bottomScroll > bottomhit) {
-          // if scroll past bottom of content
-          overlay.attr('class', 'stickbottomwindow');
+      if ($(window).width() < 960) {
+        overlay.removeClass();
+      } else {
+        if (overlay.height() < windowHeight) {
+          console.log('Running');
+          if (scroll > containerTop) {
+            // if scroll past top of content
+            overlay.attr('class', 'sticktop');
+          } else if (scroll < containerTop) {
+            overlay.attr('class', 'sticktopwindow');
+          }
+          if (bottomScroll > bottomhit) {
+            // if scroll past bottom of content
+            overlay.attr('class', 'stickbottomwindow');
+          }
         }
       }
     });

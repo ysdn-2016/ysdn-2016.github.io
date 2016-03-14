@@ -459,10 +459,12 @@ $project-grid-gutter: 60px;
 	.project--case-study .project-header .title {
 		padding: 40px 20px 68px;
 	}
-	#project-fixed-overlay, #gallery{
-	    flex-direction: column;
+	#project-fixed-overlay, #gallery {
+		flex-direction: column;
+		display: block !important;
 	}
 	.stickbottomwindow, .sticktopwindow, .stickbottom, .sticktop {
 		position: static !important;
+		display: block;
 	}
 }
