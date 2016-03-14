@@ -35,7 +35,7 @@ module.exports = function () {
     // Case Studies
     $(document).ready(function () {
       var $mainNav = $('.case-nav');
-      $mainNav.append("<li id='indicator'></li>"),
+      $mainNav.prepend("<li id='indicator'></li>"),
       $indicator = $('#indicator');
       $('.project-content p img').unwrap();
       $('.project-content img:first-of-type').appendTo('.project-header');
@@ -55,6 +55,7 @@ module.exports = function () {
           scrollTop: $($(this).attr('href')).offset().top - 80
         }, 500);
       });
+      $('.case-nav').append($('#introduction'));
     });
     var windw = this;
   }
@@ -67,25 +68,36 @@ module.exports = function () {
     var st, direction, lastdirection;
     var lastDir;
     var lastScrollTop = 0;
-      $(window).scroll(function(event){
-         st = $(this).scrollTop();
-       });
+    $(window).scroll(function (event) {
+      st = $(this).scrollTop();
+    });
 
-      //If overlay is bigger than container, set to height of overlay
-      if (overlay.height() > container.height()){
-        $('.project--standard').css('min-height', overlay.height());
-      }
+    // If overlay is bigger than container, set to height of overlay
+    if (overlay.height() > container.height()) {
+      $('.project--standard').css('min-height', overlay.height());
+    }
 
-    /*$(windw).scroll(function (e) {
+    $(windw).scroll(function (e) {
       var scroll = $(window).scrollTop();
       var bottomScroll = scroll + windowHeight,
         containerTop = container.offset().top,
         bottomhit = containerTop + container.height() + (windowHeight - overlay.height());
-        //overlayTop = Math.round(overlay.offset().top),
-        //overlayBottom = overlayTop + Math.round(overlay.height());
+        // overlayTop = Math.round(overlay.offset().top),
+        // overlayBottom = overlayTop + Math.round(overlay.height());
 
-      if (overlay.height() < windowHeight){
+      // this controls the section nav
+      $('.project-content h1, .project-content h2, .project-content h3').each(function (i) {
+        if ($(this).position().top <= scroll - $('#content').position().top + 80) {
+          $('.case-nav a.active').removeClass('active');
+          $('.case-nav a').eq(i).addClass('active');
+        }
+      });
+      // Section Indicator
+      $indicator
+        .height($('.active').height())
+        .css('top', $('.active').position().top);
 
+      if (overlay.height() < windowHeight) {
         if (scroll > containerTop) {
           // if scroll past top of content
           overlay.attr('class', 'sticktop');
@@ -96,7 +108,7 @@ module.exports = function () {
           // if scroll past bottom of content
           overlay.attr('class', 'stickbottomwindow');
         }
-      } else {*/
+      } else {
         /*console.log("Is at top of overlay" + scroll + "<=" + overlayTop);
         console.log("Is at bottom of overlay" + bottomScroll + ">=" + overlayBottom);
          if ((overlayTop > containerTop) && (overlayBottom < bottomhit)) {
@@ -124,55 +136,4 @@ module.exports = function () {
     });
   };
   $('#project-fixed-overlay').followTo();
-
-  $(document).ready(function () {
-    var getMax = function () {
-      return $(document).height() - $(window).height();
-    };
-
-    var getValue = function () {
-      return $(window).scrollTop();
-    };
-
-    if ('max' in document.createElement('progress')) {
-      // Browser supports progress element
-      var progressBar = $('progress');
-
-      // Set the Max attr for the first time
-      progressBar.attr({ max: getMax() });
-
-      $(document).on('scroll', function () {
-        // On scroll only Value attr needs to be calculated
-        progressBar.attr({ value: getValue() });
-      });
-
-      $(window).resize(function () {
-        // On resize, both Max/Value attr needs to be calculated
-        progressBar.attr({ max: getMax(), value: getValue() });
-      });
-    } else {
-      var progressBar = $('.progress-bar'),
-        max = getMax(),
-        value, width;
-
-      var getWidth = function () {
-        // Calculate width in percentage
-        value = getValue();
-        width = (value / max) * 100;
-        width = width + '%';
-        return width;
-      };
-
-      var setWidth = function () {
-        progressBar.css({ width: getWidth() });
-      };
-
-      $(document).on('scroll', setWidth);
-      $(window).on('resize', function () {
-        // Need to reset the Max attr
-        max = getMax();
-        setWidth();
-      });
-    }
-  });
 };

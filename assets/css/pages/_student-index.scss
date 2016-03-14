@@ -172,44 +172,44 @@
 }
 
 .student-grid-intermission {
-	flex: 0 1 50%;
-	margin-bottom: 3rem;
 	display: flex;
+	flex: 0 1 50%;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 3rem;
 	font-weight: 600;
 }
 
 .student-grid-shape {
 	display: flex;
 	flex: 0 1 22%;
-	justify-content: center;
 	align-items: center;
-	margin-left: 1.5%;
+	justify-content: center;
 	margin-right: 1.5%;
 	margin-bottom: 3.5rem;
+	margin-left: 1.5%;
 }
 
 .student-preview {
 	display: block;
 	flex-basis: 22%;
-	margin-left: 1.5%;
 	margin-right: 1.5%;
 	margin-bottom: 3rem;
+	margin-left: 1.5%;
 }
 
 .student-preview-image {
 	position: relative;
+	overflow: hidden;
 	height: 0;
 	padding-top: 100%;
-	overflow: hidden;
 	img {
 		position: absolute;
 		top: 0;
 		left: 0;
 		max-width: none;
 		height: 100%;
-		animation: rewind 400ms steps(4) forwards
+		animation: rewind 400ms steps(4) forwards;
 	}
 	.student-preview:hover & {
 		img {

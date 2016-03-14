@@ -265,44 +265,46 @@
 @media (max-width: 1100px) {
 	.student-header {
 		width: 92%;
-			margin: 0 4%;
+		margin: 0 4%;
 	}
 	.student-body {
-		p { max-width: 92%;}
+		p {
+			max-width: 92%;
+		}
 		.student-info {
 			width: 92%;
 			margin: 0 4%;
 		}
 		.student-work-list {
-			padding-top: 40px;
 			width: 92%;
 			margin: 0 4%;
+			padding-top: 40px;
 		}
 		.student-introduction {
 			max-width: 100%;
 		}
 		.student-about {
-			width: 50%;
 			float: left;
+			width: 50%;
 		}
 
 		.student-side-note {
-			width: 50%;
 			float: left;
+			width: 50%;
 		}
 	}
 }
 
 @media (max-width: 800px) {
-.student-body {
-	.student-about {
-			width: 100%;
+	.student-body {
+		.student-about {
 			float: left;
+			width: 100%;
 		}
 
 		.student-side-note {
-			width: 100%;
 			float: left;
+			width: 100%;
 		}
-}
+	}
 }
