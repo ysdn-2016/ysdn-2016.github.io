@@ -3,6 +3,7 @@
 {% block main %}
 	<section class="student-profile">
 		<div class="student-header">
+			<div class="header-bg"></div>
 			<div class="student-meta">
 				<h1>{{ name }}</h1>
 
@@ -42,6 +43,7 @@
 					{% endfor %}
 				</div>
 				<div class="student-work-list">
+					<h5>Case Study</h5>
 					<div class="group">
 						{% for project in projects | filter("type", "case-study") %}
 							<div class="student-project case-study">
@@ -61,7 +63,8 @@
 							</div>
 						{% endfor %}
 					</div>
-					<div class="group">
+					<h5>Projects</h5>
+					<div class="standard-list">
 						{% for project in projects | filter("type", "standard") %}
 							<div class="student-project standard">
 								<a href="{{ project.href }}">

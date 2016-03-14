@@ -14,12 +14,20 @@
 
 .student-header {
 	position: relative;
-	border-bottom: 1px solid rgba(0,0,0,0.2);
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 	height: 360px;
 	padding-left: 8px;
+	.header-bg {
+		position: absolute;
+		z-index: -1;
+		background-color: #f6f6f6;
+		width: 200%;
+		height: 2000px;
+		bottom: 0;
+		left: -50%;
+	}
 	h1 {
 		position: relative;
 		left: -3px;
@@ -126,11 +134,22 @@
 	margin-top: 40px;
 	.student-info {
 		float: left;
-		width: 36%;
+		width: 28%;
+		margin-right: 8%;
 	}
 	.student-work-list {
 		float: left;
-		width: 64%;
+		width: 62%;
+		h5 {
+			padding: 0 15px;
+		}
+	}
+	.standard-list {
+		column-count: 2;
+		column-width: 50%;
+		.standard {
+			padding: 0 15px;
+		}
 	}
 	.student-project {
 		float: left;
@@ -144,7 +163,7 @@
 		}
 		.meta {
 			@extend .group;
-			margin: 24px 0 40px 0;
+			margin: 14px 0 20px 0;
 			.cat {
 				margin-top: 6px;
 				margin-bottom: 4px;
@@ -157,6 +176,7 @@
 		}
 		&.case-study {
 			width: 100%;
+			padding: 0 15px;
 			.info {
 				float: left;
 				// width: 100%;
@@ -176,42 +196,6 @@
 				float: left;
 				width: 50%;
 			}
-			&:first-child {
-				&::before {
-					content: 'CASE STUDY';
-				}
-			}
-		}
-		&.standard {
-			&:nth-of-type(1) {
-				width: 47%;
-				margin-right: 6%;
-				&::before {
-					content: 'Project';
-				}
-			}
-			&:nth-of-type(2) {
-				width: 47%;
-				&::before {
-					content: '\2063'; /* Don't remove this! It's an invisible space that aligns the height of the two second projects */
-				}
-			}
-			&:nth-of-type(3) {
-				width: 47%;
-				margin-right: 6%;
-			}
-			&:nth-of-type(4) {
-				width: 47%;
-			}
-		}
-		&::before {
-			display: block;
-			margin-bottom: 16px;
-			font-size: 0.8em;
-			font-weight: bold;
-			line-height: 1.4em;
-			letter-spacing: 0.06em;
-			text-transform: uppercase;
 		}
 	}
 	h4 {
@@ -220,18 +204,14 @@
 		line-height: 1.4em;
 	}
 	h5 {
-		margin-bottom: 0;
-		font-size: 0.9em;
+		margin-bottom: 16px;
+		font-size: 0.8em;
 		font-weight: bold;
-		line-height: 1.2em;
-		// letter-spacing: 0.06em;
-		// text-transform: uppercase;
-		&:not(:first-child) {
-			margin-top: 40px;
-		}
+		line-height: 1.4em;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
 	}
 	p {
-		max-width: 72%;
 		font-size: 0.9em;
 		line-height: 1.6em;
 	}
@@ -239,11 +219,13 @@
 		@include dotted-border(currentColor, bottom);
 	}
 	.student-introduction {
-		max-width: 72%;
 		margin-bottom: 2rem;
 		font-size: 1.32em;
 		font-weight: bold;
 		line-height: 1.5;
+		p {
+			margin: 0;
+		}
 	}
 	ul {
 		padding-left: 20px;
@@ -287,7 +269,6 @@
 			float: left;
 			width: 50%;
 		}
-
 		.student-side-note {
 			float: left;
 			width: 50%;
@@ -301,7 +282,6 @@
 			float: left;
 			width: 100%;
 		}
-
 		.student-side-note {
 			float: left;
 			width: 100%;
