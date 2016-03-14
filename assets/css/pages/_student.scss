@@ -240,6 +240,7 @@
 	p {
 		font-size: 0.9em;
 		line-height: 1.6em;
+		color: #565758;
 	}
 	a {
 		@include dotted-border(currentColor, bottom);
