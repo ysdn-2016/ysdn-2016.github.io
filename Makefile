@@ -58,6 +58,7 @@ sync-portraits:
 deploy:
 	@echo "Building site for \033[0;33mstaging\033[0m..."
 	@make clean
+	@make clean-content
 	@make sync
 	@NODE_ENV=production make build
 	@echo "Deploying branch \033[0;33m$(BRANCH)\033[0m to Surge.sh..."
