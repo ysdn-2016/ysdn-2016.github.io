@@ -48,7 +48,9 @@
 						{% for project in projects | filter("type", "case-study") %}
 							<div class="student-project case-study">
 								<a href="{{ project.href }}">
-									<img src="{{ project.thumbnail.url }}" alt="{{ project.title }}">
+									<div class="project-image">
+										<img src="{{ project.thumbnail.url }}" alt="{{ project.title }}">
+									</div>
 									<div class="meta">
 										<div class="info">
 											<h4>{{ project.title }}</h4>
@@ -68,7 +70,9 @@
 						{% for project in projects | filter("type", "standard") %}
 							<div class="student-project standard">
 								<a href="{{ project.href }}">
-									<img src="{{ project.thumbnail.url }}" alt="{{ project.title }}">
+									<div class="project-image">
+										<img src="{{ project.thumbnail.url }}" alt="{{ project.title }}">
+									</div>
 									<div class="meta">
 										<div class="info">
 											<h4>{{ project.title }}</h4>
