@@ -1,56 +1,5 @@
 $project-grid-gutter: 60px;
 
-
-progress {
-	/* Positioning */
-	position: fixed;
-	top: 0;
-	left: 0;
-	/* Get rid of the default border in Firefox/Opera. */
-	border: none;
-	/* For Firefox/IE10+ */
-	background-color: transparent;
-	/* Dimensions */
-	width: 100%;
-	height: 0.25em;
-	/* For IE10+, color of the progress bar */
-	color: red;
-	/* Reset the apperance */
-
-	-webkit-appearance: none;
-	   -moz-appearance: none;
-	        appearance: none;
-}
-
-progress::-webkit-progress-bar {
-	background-color: transparent;
-}
-
-.flat::-webkit-progress-value {
-	background-color: red;
-}
-
-.flat::-moz-progress-bar {
-	background-color: red;
-}
-
-.progress-container {
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: transparent;
-	display: block;
-	width: 100%;
-	height: 0.25em;
-}
-
-.progress-bar {
-	background-color: red;
-	display: block;
-	width: 50%;
-	height: inherit;
-}
-
 /**
  * Typography
  */
@@ -193,7 +142,7 @@ progress::-webkit-progress-bar {
 
 .project-content {
 	p, h1, h2, h3, h4, h5, h6, ul, ol {
-		max-width: 600px;
+		max-width: 700px;
 		margin-bottom: 15px;
 	}
 
@@ -380,7 +329,7 @@ progress::-webkit-progress-bar {
 	}
 
 	.project-content, .project-content-holder {
-		flex: 1 0 75%;
+		flex: 1 0 66.667%;
 		padding-top: 60px;
 	}
 
@@ -390,15 +339,15 @@ progress::-webkit-progress-bar {
 	}
 
 	.case-nav, .case-nav-holder {
-		flex: 1 0 25%;
+		flex: 1 0 33.333%;
 		padding-top: 80px;
 		padding-right: $project-grid-gutter / 2;
 
 		a {
+			cursor: pointer;
 			display: block;
 			padding-top: 4px;
 			padding-bottom: 4px;
-			padding-left: 14px;
 			color: #d1d1d1;
 			font-size: 21px;
 			font-weight: 500;
@@ -413,6 +362,41 @@ progress::-webkit-progress-bar {
 			top: 0;
 			color: $black;
 		}
+
+		#introduction {
+			border-top: 1px rgba(0,0,0,0.2) solid;
+			border-bottom: 1px rgba(0,0,0,0.2) solid;
+			width: 100% ;
+			margin-top: 20px;
+			padding-bottom: 20px;
+			p, a {
+				font-size: 16px;
+				line-height: 25px;
+				letter-spacing: 0.15px;
+			}
+			a {
+				border-bottom: 1px solid black;
+				color: black;
+				display: inline-block;
+				padding: 0;
+				padding-bottom: 2px;
+			}
+			p:first-of-type {
+				font-weight: bold;
+				line-height: 16px;
+				letter-spacing: 0.2px;
+			}
+			.text {
+				display: inline-block;
+				width: calc(100% - 105px);
+			}
+			img {
+				position: absolute;
+				bottom: 1px;
+				display: inline-block;
+				width: 100px;
+			}
+		}
 	}
 
 	.case-nav {
@@ -425,6 +409,7 @@ progress::-webkit-progress-bar {
 		width: 4px;
 		height: 28px;
 		margin: 4px 0;
+		margin-left: -14px;
 		list-style-type: none;
 		transition: top 0.25s ease, height 0.25s ease;
 	}

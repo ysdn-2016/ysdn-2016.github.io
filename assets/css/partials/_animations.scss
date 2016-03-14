@@ -16,11 +16,19 @@
 //
 
 @keyframes play {
-	from { left: 0%; }
-	to   { left: -400%; }
+	from {
+		left: 0;
+	}
+	to {
+		left: -400%;
+	}
 }
 
 @keyframes rewind {
-	from { left: -400%; }
-	to   { left: 0%; }
+	from {
+		left: -400%;
+	}
+	to {
+		left: 0;
+	}
 }
