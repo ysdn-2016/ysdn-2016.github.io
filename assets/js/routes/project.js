@@ -102,10 +102,10 @@ module.exports = function () {
           .css('top', $('.active').position().top);
       }
 
-      if (scroll > 250){
-        $(".title").css("opacity", 0);
+      if (scroll > 250) {
+        $('.title').css('opacity', 0);
       } else {
-        $(".title").css("opacity", 1);
+        $('.title').css('opacity', 1);
       }
 
       if (overlay.height() < windowHeight) {

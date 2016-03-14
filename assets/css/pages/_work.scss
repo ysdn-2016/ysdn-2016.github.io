@@ -199,9 +199,9 @@ $project-grid-gutter: 60px;
 		color: $white;
 
 		&:hover {
+			border: 1px solid #000 !important;
 			background-color: #ececec;
 			color: $black !important;
-			border: 1px solid #000 !important;
 		}
 	}
 
@@ -422,19 +422,6 @@ $project-grid-gutter: 60px;
 	}
 }
 
-@media only screen and (max-width : 740px) {
-	.case-nav, .case-nav-holder {
-		display: none;
-	}
-	.project-content {
-		width: 100%;
-		margin-left: 0;
-	}
-	.project--case-study .project-header .title{
-		padding: 40px 20px 68px;
-	}
-}
-
 /**
  * Sticky Sections
  */
@@ -460,4 +447,22 @@ $project-grid-gutter: 60px;
 	position: absolute !important;
 	top: 0 !important;
 	bottom: auto !important;
+}
+
+@media only screen and (max-width : 740px) {
+	.case-nav, .case-nav-holder {
+		display: none;
+	}
+	.project-content, .project-details, .project-assets {
+		padding-right: 0 !important;
+	}
+	.project--case-study .project-header .title {
+		padding: 40px 20px 68px;
+	}
+	#project-fixed-overlay, #gallery{
+	    flex-direction: column;
+	}
+	.stickbottomwindow, .sticktopwindow, .stickbottom, .sticktop {
+		position: static !important;
+	}
 }
