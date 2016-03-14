@@ -52,6 +52,9 @@ sync: clean-content
 	@mkdir -p content/students
 	@curl -s "$(API)/download" | tar -zxf - -C content/students --strip-components=1
 
+sync-portraits:
+	@node resources/add-profile-images/index.js
+
 deploy:
 	@echo "Building site for \033[0;33mstaging\033[0m..."
 	@make clean

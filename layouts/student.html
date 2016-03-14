@@ -13,12 +13,9 @@
 					{% if github %}<a href="https://github.com/{{ github | replace('@', '') }}" class="student-social-github" target="_blank"><span>GitHub</span></a>{% endif %}
 				</div>
 			</div>
+			{% if strip %}
 			<div class="student-image">
-				<img src="https://dl.dropboxusercontent.com/u/68882376/img/michelle_lee.jpg" alt="">
-			</div>
-			{% if portrait %}
-			<div class="student-image">
-				<!-- <img src="{{ portrait | asset_url }}" /> -->
+				<img src="{{ strip | asset_url({ rect: '0,0,1200,800' }) }}" />
 			</div>
 			{% endif %}
 			<div class="profile-shapes">
