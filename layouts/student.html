@@ -6,6 +6,9 @@
 			<div class="header-bg"></div>
 			<div class="student-meta">
 				<h1>{{ name }}</h1>
+				{% if introduction %}
+					<div class="student-introduction">{{ introduction | markdown | safe }}</div>
+				{% endif %}
 
 				<div class="student-social">
 					{% if url %}<a href="{{ url }}" class="student-social-url" target="_blank"><span>Profile</span></a>{% endif %}
@@ -26,9 +29,6 @@
 		<div class="student-body">
 			<div class="">
 				<div class="student-info">
-					{% if introduction %}
-						<div class="student-introduction">{{ introduction | markdown | safe }}</div>
-					{% endif %}
 					{% if biography %}
 						<div class="student-about">
 							<h5>About</h5>
