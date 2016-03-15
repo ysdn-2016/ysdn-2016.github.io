@@ -1,5 +1,3 @@
-$project-grid-gutter: 60px;
-
 /**
  * Typography
  */
@@ -264,12 +262,13 @@ $project-grid-gutter: 60px;
 
 	.project-assets {
 		pointer-events: none;
+		padding-left: $project-grid-gutter / 2;
 	}
 
 	.project-details {
 		pointer-events: auto;
-		flex: 1 0 33.333%;
-		padding-right: 40px;
+		flex: 1 0 32.333%;
+		padding-right: $project-grid-gutter / 2;
 
 		.project-header {
 			margin: 20px 0;
@@ -338,6 +337,7 @@ $project-grid-gutter: 60px;
 	.project-content, .project-content-holder {
 		flex: 1 0 66.667%;
 		padding-top: 60px;
+		padding-left: $project-grid-gutter / 2;
 	}
 
 	#content {
@@ -346,7 +346,7 @@ $project-grid-gutter: 60px;
 	}
 
 	.case-nav, .case-nav-holder {
-		flex: 1 0 33.333%;
+		flex: 1 0 32.333%;
 		padding-top: 80px;
 		padding-right: $project-grid-gutter / 2;
 
@@ -376,6 +376,7 @@ $project-grid-gutter: 60px;
 			width: 100% ;
 			margin-top: 20px;
 			padding-bottom: 20px;
+			max-width: 340px;
 			p, a {
 				font-size: 16px;
 				line-height: 25px;

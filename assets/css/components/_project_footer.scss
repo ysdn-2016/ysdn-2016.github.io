@@ -1,7 +1,7 @@
 .project-footer {
 	border-top: 1px light-gray solid;
 	display: flex;
-	margin: 0 -16px;
+	margin: 0 ($project-grid-gutter / 2) * -1;
 	margin-top: 50px;
 	padding-top: 60px;
 	padding-bottom: 40px;
@@ -71,8 +71,8 @@
 //
 
 .project-footer-event-prompt {
-	padding-right: 16px;
-	padding-left: 16px;
+	padding-right: $project-grid-gutter / 2;
+	padding-left: $project-grid-gutter / 2;
 
 	&-headline {
 		max-width: 15em;
@@ -89,14 +89,14 @@
 
 .project-footer-next-project,
 .project-footer-related-project {
-	padding-right: 16px;
-	padding-left: 16px;
+	padding-right: $project-grid-gutter / 2;
+	padding-left: $project-grid-gutter / 2;
 }
 
 .project-footer-preview-image {
 	@include image-placeholder;
 	display: block;
-	margin-bottom: 16px;
+	margin-bottom: 20px;
 }
 
 .project-footer-preview-title {
