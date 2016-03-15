@@ -18,6 +18,7 @@ module.exports = (function () {
 	var noticeScrollWatcher
 	var noticeOpenLink
 	var noticeCloseLink
+	var noticeInput
 
 	var savedScrollPosition = 0
 
@@ -29,6 +30,7 @@ module.exports = (function () {
 		noticeScrollWatcher = scrollMonitor.create(notice)
 		noticeOpenLink = dom('[data-subscribe-open]')
 		noticeCloseLink = dom('[data-subscribe-close]')
+		noticeInput = dom('input[name="EMAIL"]')
 
 		noticeOpenLink.on('click', noticeOpenClick)
 		noticeCloseLink.on('click', noticeCloseClick)
@@ -58,6 +60,7 @@ module.exports = (function () {
 		notice.on('touchstart', stopPropagation)
 		notice.addClass('event-full-site-notice--active')
 		body.addClass('locked')
+		noticeInput[0].focus()
 	}
 
 	function close () {
