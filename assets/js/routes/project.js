@@ -52,7 +52,7 @@ module.exports = function () {
         $self.contents().clone().appendTo('.case-nav').wrap("<a href='#" + currentId + "' class='new'></a>");
       });
       $('.case-nav a:first-of-type').addClass('active');
-      $('.case-nav a').click(function (e) {
+      $('.case-nav a.new').click(function (e) {
         e.preventDefault();
         $('html, body').animate({
           scrollTop: $($(this).attr('href')).offset().top - 80

@@ -59,8 +59,7 @@
 											<p class="cat">{{ project.category | titleize }}</p>
 										</div>
 										<div class="desc">
-											{# <p>{{ project.contents | safe }}</p> #}
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										<p>{{ project.contents | toString | excerpt(250) | safe }}</p>
 										</div>
 									</div>
 								</a>

@@ -18,11 +18,7 @@
 				{% if item.type === 'student' %}
 					<a class="student-preview student" href="{{ item.href }}" data-name="{{ item.name }}">
 						<div class="student-preview-image">
-							{% if item.strip %}
-								<img src="{{ item.strip | asset_url({ height: 400 }) }}" alt="{{ item.name }}" draggable="false" />
-							{% else %}
-								<img src="https://placeholdit.imgix.net/~text?txtsize=23&bg=f2f2f2&txtclr=f2f2f2&txt=250%C3%97250&w=2000&h=400" alt="{{ item.name }}" draggable="false" />
-							{% endif %}
+							<img src="{{ item.strip | asset_url({ height: 400 }) }}" alt="{{ item.name }}" draggable="false" />
 						</div>
 						{# <div class="student-preview-name">{{ item.name }}</div> #}
 					</a>
