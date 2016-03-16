@@ -140,6 +140,15 @@
 	clear: both;
 }
 
+.student-about {
+	p:first-child {
+		margin: 0 !important;
+	}
+	p {
+		margin: 8px 0;
+	}
+}
+
 .student-body {
 	@extend .group;
 	border-bottom: 1px solid rgba(0,0,0,0.4);
@@ -148,6 +157,11 @@
 		float: left;
 		width: 28%;
 		margin-right: 8%;
+		h5 {
+			font-size: 0.95em;
+			letter-spacing: 0;
+			text-transform: capitalize;
+		}
 	}
 	.student-work-list {
 		float: left;
@@ -192,7 +206,6 @@
 		.project-image {
 			position: relative;
 		}
-
 		&.case-study {
 			width: 100%;
 			padding: 0 15px;
@@ -208,6 +221,7 @@
 				p {
 					max-width: 100%;
 					margin: 0;
+					line-height: 1.6em;
 					// color: #777;
 				}
 			}
@@ -224,8 +238,8 @@
 	}
 	h5 {
 		margin-top: 38px;
-		margin-bottom: 12px;
-		font-size: 0.8em;
+		margin-bottom: 6px;
+		font-size: 0.9em;
 		font-weight: bold;
 		line-height: 1.4em;
 		letter-spacing: 0.06em;
@@ -233,7 +247,7 @@
 	}
 	p {
 		font-size: 0.9em;
-		line-height: 1.6em;
+		line-height: 1.54em;
 		// color: #565758;
 	}
 	a {

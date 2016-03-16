@@ -34,13 +34,13 @@
 					{% if biography %}
 						<div class="student-about">
 							<h5>About</h5>
-							<p>{{ biography | markdown | safe }}</p>
+							{{ biography | markdown | safe }}
 						</div>
 					{% endif %}
 					{% for note in sideNotes %}
 						<div class="student-side-note">
 							<h5 class="student-side-note-label">{{ note.label }}</h5>
-							<p class="student-side-note-contents text-light">{{ note.contents | markdown | safe }}</p>
+							{{ note.contents | markdown | safe }}
 						</div>
 					{% endfor %}
 				</div>

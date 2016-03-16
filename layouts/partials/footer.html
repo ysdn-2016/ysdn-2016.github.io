@@ -1,22 +1,24 @@
 {% if type !== 'case-study' and type !== 'standard' %}
 <div class="feature">
   <p>Thanks for visiting. To meet the cast, come check out our show,<br> The Intermission, on April 19 at The Liberty Grand.</p>
-  <a href="/event/">See show information &rarr;</a>
+  <a href="/event/" class="button">See show information</a>
 </div>
 {% endif %}
 
 <footer class="footer">
-  <div class="bottom-bar">
-    <div class="nav">
-      <a href="/projects/" {% if id == 'projects' %}class="active"{% endif %}>Work</a>
-      <a href="/students/" {% if id == 'students' %}class="active"{% endif %}>The Cast</a>
-      <a href="/sponsor/" {% if id == 'sponsors' %}class="active"{% endif %}>Sponsors</a>
-      <!-- Not sure where this link goes -->
-      <a href="/contact/" {% if id == 'contact' %}class="active"{% endif %}>Contact</a>
-    </div>
-    <div class="info">
-      <p>Subscribe to our Newsletter</p>
-      {% include 'subscribe.html' %}
+  <div class="inner">
+    <div class="bottom-bar">
+      <div class="nav">
+        <a href="/projects/" {% if id == 'projects' %}class="active"{% endif %}>Work</a>
+        <a href="/students/" {% if id == 'students' %}class="active"{% endif %}>Cast</a>
+        <a href="/sponsor/" {% if id == 'sponsors' %}class="active"{% endif %}>Sponsors</a>
+        <!-- Not sure where this link goes -->
+        <a href="/about/" {% if id == 'contact' %}class="active"{% endif %}>About</a>
+      </div>
+      <div class="info">
+        <p>Subscribe to our Newsletter</p>
+        {% include 'subscribe.html' %}
+      </div>
     </div>
   </div>
 </footer>

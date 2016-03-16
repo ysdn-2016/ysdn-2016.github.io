@@ -1,6 +1,7 @@
 var router = require('page');
 
 var routes = {
+  about: require('./routes/about'),
   home: require('./routes/home'),
   work: require('./routes/work'),
   project: require('./routes/project'),
@@ -10,6 +11,7 @@ var routes = {
 };
 
 router('/', routes.home);
+router('/about/', routes.about);
 router('/work/', routes.work);
 router('/:student/:project/', routes.project);
 router('/students/', routes.students);

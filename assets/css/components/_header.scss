@@ -4,11 +4,13 @@ $header-light-color: #1b2020;
 $header-light-bg: $white;
 
 .header {
+	max-width: 1200px;
+	margin: 0 auto;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	// margin-right: $ribbon-width;
-	padding: 30px 40px 30px 35px;
+	padding: 30px 20px 30px;
 	.logo {
 		width: 120px;
 		path {
