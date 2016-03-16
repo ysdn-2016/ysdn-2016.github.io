@@ -105,6 +105,7 @@ build/assets/bundle.css: $(STYLES)
 	@mkdir -p $(@D)
 	@sassc -m assets/css/index.scss $@
 	@$(BIN)/postcss --use autoprefixer $@ -o $@
+	@if [[ "$(NODE_ENV)" == "production" ]]; then cleancss --s0 $@ -o $@; fi
 
 build/assets/bundle.js: $(SCRIPTS)
 	@mkdir -p $(@D)
