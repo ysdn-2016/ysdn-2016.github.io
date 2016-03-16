@@ -1,9 +1,7 @@
 module.exports = function () {
-  $(document).ready(function () {
-    $('.main').mousemove(function (e) {
-      // parallax(e, document.getElementById('student-image'), 0.1);
-      parallax(e, document.getElementById('student-shapes'), 0.4);
-    });
+  $('.main').mousemove(function (e) {
+    // parallax(e, document.getElementById('student-image'), 0.1);
+    parallax(e, document.getElementById('student-shapes'), 0.4);
   });
 
   function parallax (e, target, layer) {
