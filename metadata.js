@@ -14,6 +14,11 @@ module.exports = {
 	 * Appearance Configuration
 	 */
 	config: {
+		studentProfile: {
+			defaults: {
+				biography: "This student hasn't written anything about themselves :("
+			}
+		},
 		studentIndex: {
 			averageShapeInterval: 5,
 			averageIntermissionInterval: 20,
@@ -51,16 +56,23 @@ module.exports = {
 	/**
 	 * Social
 	 */
-	facebook: {
-		url: 'https://www.facebook.com/ysdntheintermission/'
+	social: {
+		facebook: {
+			url: 'https://www.facebook.com/ysdntheintermission/'
+		},
+		instagram: {
+			url: 'https://www.instagram.com/ysdntheintermission/'
+		},
+		twitter: {
+			url: 'https://twitter.com/ysdn2016'
+		},
+		mail: {
+			url: 'mailto:hello@ysdn2016.com'
+		},
 	},
-	instagram: {
-		url: 'https://www.instagram.com/ysdntheintermission/'
-	},
-	twitter: {
-		url: 'https://twitter.com/ysdn2016'
-	},
-	mail: {
-		url: 'mailto:hello@ysdn2016.com'
-	}
+
+	/**
+	 * Development Utils
+	 */
+	pixel: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg=='
 }

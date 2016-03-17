@@ -1,126 +1,113 @@
-.student-profile {
-	margin: 0 auto;
-	.row {
-		display: flex;
-		flex-flow: row nowrap;
+.page-student {
+	.header {
+		position: absolute;
 		width: 100%;
-		min-height: 1px;
-	}
-	.col {
-		flex: 1;
-		flex-direction: column;
 	}
 }
 
-.student-header {
+.student-profile {}
+
+.student-profile-header {
+	display: flex;
+	background-color: #f6f6f6;
+	position: relative;
+	min-height: 500px;
+}
+
+.student-profile-header-wrapper {
+	@include wrapper;
 	position: relative;
 	display: flex;
+	align-items: stretch;
 	justify-content: space-between;
-	width: 100%;
-	height: 360px;
-	padding-left: 8px;
-	.header-bg {
-		position: absolute;
-		z-index: -1;
-		bottom: 0;
-		left: -50%;
-		background-color: #f6f6f6;
-		width: 200%;
-		height: 2000px;
+	// padding-top: 0px;
+}
+
+.student-profile-meta {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 2;
+}
+
+.student-profile-hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-self: center;
+	// margin-bottom: 120px;
+}
+
+.student-profile-name {
+	position: relative;
+	left: -3px;
+	font-size: 52px;
+}
+
+.student-profile-introduction {
+	max-width: 60%;
+	margin-top: 12px;
+	font-size: 20px;
+	line-height: 1.5;
+	p {
+		margin: 0;
+		font-size: inherit;
 	}
-	h1 {
-		position: relative;
-		left: -3px;
-		width: 100%;
-		margin-top: 60px;
-		margin-bottom: 6px;
-		font-size: 3em;
-	}
-	.student-introduction {
-		max-width: 60%;
-		margin-bottom: 2rem;
-		line-height: 1.5;
-		p {
-			margin: 0;
-			font-size: 1.16em;
-		}
-	}
-	.student-meta {
-		position: relative;
-		z-index: 9;
-		width: 60%;
-	}
-	.student-categories {
-		margin-bottom: 60px;
-		color: #aaa;
-		font-family: $sofia;
-		font-size: 0.9em;
-		letter-spacing: 0.06em;
-		a {
-			font-size: 0.85em;
-			letter-spacing: 0.06em;
-			text-transform: uppercase;
-			&:not(:last-child)::after {
-				content: ', ';
-			}
-		}
-	}
-	.student-social {
-		position: absolute;
-		bottom: 26px;
-		margin-top: 6px;
-		a {
-			padding: 2px 7px;
-			font-family: $sofia;
-			font-size: 16px;
-			&:first-child {
-				padding-left: 0;
-			}
-		}
+}
+
+.student-profile-portrait {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 60%;
+}
+
+.student-profile-social {
+	position: absolute;
+	// margin-top: auto;
+	bottom: 24px;
+	&-link {
+		margin-right: 0.75em;
+		font-size: 16px;
 		span {
 			@include dotted-border($black, 'bottom');
 			padding: 0 0 2px;
 		}
-		&-url:hover {
-			color: $red;
-		}
-		&-url:hover span {
-			@include dotted-border($red);
-		}
-		&-facebook:hover {
-			color: $blue;
-		}
-		&-facebook:hover span {
-			@include dotted-border($blue);
-		}
-		&-instagram:hover {
-			color: $green;
-		}
-		&-instagram:hover span {
-			@include dotted-border($green);
-		}
-		&-linkedin:hover {
-			color: $yellow;
-		}
-		&-linkedin:hover span {
-			@include dotted-border($yellow);
-		}
-		&-github:hover {
-			color: $orange;
-		}
-		&-github:hover span {
-			@include dotted-border($orange);
-		}
+	}
+	&-url:hover {
+		color: $red;
+	}
+	&-url:hover span {
+		@include dotted-border($red);
+	}
+	&-facebook:hover {
+		color: $blue;
+	}
+	&-facebook:hover span {
+		@include dotted-border($blue);
+	}
+	&-instagram:hover {
+		color: $green;
+	}
+	&-instagram:hover span {
+		@include dotted-border($green);
+	}
+	&-linkedin:hover {
+		color: $yellow;
+	}
+	&-linkedin:hover span {
+		@include dotted-border($yellow);
+	}
+	&-github:hover {
+		color: $orange;
+	}
+	&-github:hover span {
+		@include dotted-border($orange);
 	}
 }
 
-.student-image {
-	position: absolute;
-	z-index: -1;
-	right: 20px;
-	bottom: 0;
-	width: 675px;
-	height: 450px;
+.student-profile-portrait {
 }
 
 .profile-shapes {
@@ -131,186 +118,154 @@
 	width: 440px;
 }
 
-.group {
-	position: relative;
-}
-.group:after {
-	content: '';
-	display: table;
-	clear: both;
+.student-profile-body {
+	padding-top: 56px;
 }
 
-.student-about {
-	p:first-child {
-		margin: 0 !important;
-	}
+.student-profile-body-wrapper {
+	@include wrapper;
+	display: flex;
+}
+
+//
+// Sidebar
+//
+
+.student-profile-sidebar {
+	flex: 1 0 26%;
+	margin-right: 8%;
+}
+
+.student-profile-sidebar-biography {
+	margin-bottom: 12px;
+}
+
+.student-profile-sidebar-note-label {
+	font-size: 17px;
+	margin-bottom: 12px;
+}
+
+.student-profile-sidebar-note {
+	margin-bottom: 24px;
 	p {
-		margin: 8px 0;
+		margin: 0;
+		font-size: 16px;
+		line-height: 1.6;
 	}
-}
-
-.student-body {
-	@extend .group;
-	border-bottom: 1px solid rgba(0,0,0,0.4);
-	margin-top: 40px;
-	.student-info {
-		float: left;
-		width: 28%;
-		margin-right: 8%;
-		h5 {
-			font-size: 0.95em;
-			letter-spacing: 0;
-			text-transform: capitalize;
-		}
-	}
-	.student-work-list {
-		float: left;
-		width: 62%;
-		padding-bottom: 40px;
-		h5 {
-			padding: 0 15px;
-		}
-	}
-	.standard-list {
-		margin-top: 32px;
-
-		column-count: 2;
-		column-width: 50%;
-		.standard {
-			padding: 0 15px;
-		}
-	}
-	.student-project {
-		float: left;
-		transition: opacity 0.2s ease;
-		img {
-			backface-visibility: hidden;
-		}
-		&:hover img {
-			opacity: 0.7;
-			transition: opacity 0.2s ease;
-		}
-		.meta {
-			@extend .group;
-			margin: 14px 0 20px 0;
-			.cat {
-				margin-top: 6px;
-				margin-bottom: 4px;
-				color: #aaa;
-				font-family: $sofia;
-				font-size: 0.75em;
-				letter-spacing: 0.06em;
-				text-transform: uppercase;
-			}
-		}
-		.project-image {
-			position: relative;
-		}
-		&.case-study {
-			width: 100%;
-			padding: 0 15px;
-			.info {
-				float: left;
-				// width: 100%;
-				width: 24%;
-				margin-right: 6%;
-			}
-			.desc {
-				float: left;
-				width: 70%;
-				p {
-					max-width: 100%;
-					margin: 0;
-					line-height: 1.6em;
-					// color: #777;
-				}
-			}
-			& > div {
-				float: left;
-				width: 50%;
-			}
-		}
-	}
-	h4 {
-		font-size: 1.1em;
-		font-weight: normal;
-		line-height: 1.4em;
-	}
-	h5 {
-		margin-top: 38px;
-		margin-bottom: 6px;
-		font-size: 0.9em;
-		font-weight: bold;
-		line-height: 1.4em;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-	}
-	p {
-		font-size: 0.9em;
-		line-height: 1.54em;
-		// color: #565758;
+	p + p {
+		margin-top: 0.75em;
 	}
 	a {
-		@include dotted-border(currentColor, bottom);
-	}
-	ul {
-		padding-left: 20px;
-	}
-	li {
-		max-width: 75%;
-		padding-bottom: 8px;
-		color: #888;
-		// list-style: none;
-		font-size: 0.94em;
-		line-height: 1.5;
-	}
-	.text-light {
-		// color: #777;
-		font-size: 0.9em;
+		padding-bottom: 1px;
+		@include dotted-underline($black);
 	}
 }
 
-@media (max-width: 1100px) {
-	.student-header {
-		width: 92%;
-		margin: 0 4%;
-	}
-	.student-body {
-		p {
-			max-width: 92%;
-		}
-		.student-info {
-			width: 92%;
-			margin: 0 4%;
-		}
-		.student-work-list {
-			width: 92%;
-			margin: 0 4%;
-			padding-top: 40px;
-		}
-		.student-introduction {
-			max-width: 100%;
-		}
-		.student-about {
-			float: left;
-			width: 50%;
-		}
-		.student-side-note {
-			float: left;
-			width: 50%;
-		}
+//
+// Projects
+//
+
+.student-profile-projects {
+	flex: 2 0 62%;
+}
+
+
+.student-profile-projects {
+	margin-bottom: 60px;
+}
+
+.student-profile-projects-header {
+	display: block;
+	margin-bottom: 24px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.4em;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	.student-profile-projects + & {
+		border-top: 1px #f2f2f2 solid;
+		padding-top: 48px;
 	}
 }
 
-@media (max-width: 800px) {
-	.student-body {
-		.student-about {
-			float: left;
-			width: 100%;
-		}
-		.student-side-note {
-			float: left;
-			width: 100%;
-		}
+//
+// Project
+//
+
+.student-profile-project {
+	display: block;
+	&--case-study {
+		margin-bottom: 48px;
+	}
+	&--standard {
+		margin-bottom: 16px;
 	}
 }
+
+.student-profile-project-thumbnail {
+	@include image-placeholder;
+	margin-bottom: 14px;
+}
+
+.student-profile-project-meta {
+	display: flex;
+}
+
+.student-profile-project-header {
+	flex: 1 0 24%;
+	margin-right: 6%;
+}
+
+.student-profile-project-title {
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 1.3;
+}
+
+.student-profile-project-category {
+	margin-top: 10px;
+	color: #aaa;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 1.0;
+	letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.student-profile-project-description {
+	flex: 1 0 70%;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+//
+// Projects Masonry
+//
+
+.student-profile-projects--standard {
+	@include clearfix;
+	.size-1of2 {
+		width: 46%;
+	}
+	.column:nth-child(2n) {
+		margin-left: 8%;
+	}
+	.student-profile-project {
+		margin-bottom: 40px;
+	}
+}
+
+
+// .masonry-grid-sizer,
+// .student-profile-project--standard {
+// 	width: 44%;
+// }
+//
+// .masonry-gutter-sizer {
+// 	width: 6%;
+// }
+//
+// .student-profile-project--standard {
+// 	float: left;
+// 	margin-bottom: 40px;
+// }

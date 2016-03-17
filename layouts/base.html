@@ -12,7 +12,7 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-<body class="page-{{ id }}">
+<body class="page-{{ layout | layoutClassName }}">
 	{% block body %}{% endblock %}
 	{% if env == 'development' %}
 	<script src="http://127.0.0.1:35729/livereload.js"></script>

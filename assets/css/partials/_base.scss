@@ -155,11 +155,10 @@ input {
 }
 
 .main {
-	max-width: 1200px;
+	@include wrapper;
 	// Use padding so that footer will properly display on pages without enough
 	// content to fill the page vertically.
-	margin: 0 auto;
-	padding: 40px 20px 0;
+	padding: 40px 0 0;
 }
 
 .row {

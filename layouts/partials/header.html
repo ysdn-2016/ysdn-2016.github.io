@@ -1,15 +1,11 @@
-<header class="header
-	{%- if id == 'home' %} dark{% endif -%}
-	{%- if id == 'students' %} light{% endif -%}
-">
-  <a href="/">{% include 'logo.html' %}</a>
-  <div class="nav">
-    <a href="/work/" {% if id == 'work' %}class="active"{% endif %}>Work</a>
-    <a href="/students/" {% if id == 'students' %}class="active"{% endif %}>Cast</a>
-    <a href="/sponsor/" {% if id == 'sponsors' %}class="active"{% endif %}>Sponsors</a>
-    <a href="/about/" {% if id == 'sponsors' %}class="active"{% endif %}>About</a>
-  </div>
-  {% if type == 'case-study' || type == 'standard' %}
-		{# TODO: Project sticky header #}
-	{% endif %}
+<header class="header">
+	<div class="header-wrapper">
+	  <a href="/" class="header-logo">{% include 'logo.html' %}</a>
+	  <div class="header-nav">
+	    <a href="/work/" {% if id == 'work' %}class="active"{% endif %}>Work</a>
+	    <a href="/students/" {% if id == 'students' %}class="active"{% endif %}>Cast</a>
+	    <a href="/sponsor/" {% if id == 'sponsors' %}class="active"{% endif %}>Sponsors</a>
+	    <a href="/about/" {% if id == 'sponsors' %}class="active"{% endif %}>About</a>
+	  </div>
+	</div>
 </header>

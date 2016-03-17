@@ -1,10 +1,27 @@
+
+
+@mixin wrapper {
+	max-width: $max-width;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 @mixin icon ($wsize, $hsize) {
 	display: block;
 	width: $wsize;
 	height: $hsize;
 }
 
-@mixin dotted-border($color, $direction: null) {
+@mixin clearfix {
+	&:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin dotted-border ($color, $direction: null) {
 	background-image: linear-gradient(to right, $color 33%, rgba(255,255,255,0) 0%);
 	@if $direction != null {
 		background-repeat: repeat-x;
@@ -13,7 +30,11 @@
 	}
 }
 
-@mixin font-smoothing($value: antialiased) {
+@mixin dotted-underline ($color) {
+	@include dotted-border($color, "bottom");
+}
+
+@mixin font-smoothing ($value: antialiased) {
 	@if $value == antialiased {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -38,6 +59,7 @@
 		top: 0;
 		left: 0;
 		opacity: 0.0;
+		backface-visibility: hidden;
 		transition: opacity 500ms ease;
 
 		&[lazyloaded] {

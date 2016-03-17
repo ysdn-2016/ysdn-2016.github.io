@@ -4,53 +4,39 @@ $header-light-color: #1b2020;
 $header-light-bg: $white;
 
 .header {
-	max-width: 1200px;
-	margin: 0 auto;
+	position: relative;
+	padding: 30px 0;
+	z-index: 9;
+}
+
+.header-wrapper {
+	@include wrapper;
+	width: 90%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	// margin-right: $ribbon-width;
-	padding: 30px 20px 30px;
-	.logo {
-		width: 120px;
-		path {
-			fill: $header-light-color;
-		}
+}
+
+.header-logo {
+	width: 120px;
+	path {
+		fill: $header-light-color;
 	}
-	.nav {
-		position: relative;
-		color: $header-light-color;
-		font-family: $sofia;
-		font-size: 21px;
-		line-height: 40px;
-		text-decoration: none;
-		a {
-			margin-left: 30px;
-			&.active,
-			&:hover {
-				border-bottom: 2px currentColor solid;
-				padding-bottom: 2px;
-			}
-		}
-	}
+}
 
-	&.dark {
-		background-color: $header-dark-bg;
-		// Dark theme
-		color: $header-dark-color;
-
-		.logo {
-			path {
-				fill: $header-dark-color;
-			}
-		}
-
-		.nav {
-			font-weight: normal;
-		}
-
-		a {
-			color: $header-dark-color;
+.header-nav {
+	position: relative;
+	color: $header-light-color;
+	font-family: $sofia;
+	font-size: 21px;
+	line-height: 40px;
+	text-decoration: none;
+	a {
+		margin-left: 30px;
+		&.active,
+		&:hover {
+			border-bottom: 2px currentColor solid;
+			padding-bottom: 2px;
 		}
 	}
 }
