@@ -1,20 +1,16 @@
 
+var Lazyload = require('../lib/lazyload')
+
 module.exports = function () {
-
-
-
-  // var msnry = new Masonry('[data-columns]', {
-  //   itemSelector: '.student-profile-project',
-  //   columnWidth: '.masonry-grid-sizer',
-  //   gutter: '.masonry-gutter-sizer',
-  //   percentPosition: true,
-  //   transitionDuration: 0
-  // })
 
   savvior.init('[data-columns]', {
     'screen and (min-width: 1px)': { columns: 2 },
     'screen and (min-width: 3px)': { columns: 2 },
   });
+
+  $(window).on('savvior:setup', function (e) {
+    Lazyload.update()
+  })
 
   // $('.main').mousemove(function (e) {
   //   // parallax(e, document.getElementById('student-image'), 0.1);

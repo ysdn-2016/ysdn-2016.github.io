@@ -1,5 +1,6 @@
 
 var router = require('page');
+require('./lib/lazyload');
 
 var routes = {
   about: require('./routes/about'),
@@ -24,15 +25,6 @@ $(function () {
   var $body = $('body');
   var $eventPanel = $('.event-panel');
   var $eventRibbon = $('.event-ribbon-trigger');
-
-  // TODO: find a better spot for this
-  $('img[data-src]').unveil(200, function () {
-    var $image = $(this);
-    $image.load(function () {
-      $image.removeAttr('data-src');
-      $image.attr('lazyloaded', true);
-    });
-  });
 
   $eventRibbon.on('click', handleEventRibbonClick);
 
