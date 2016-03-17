@@ -55,8 +55,18 @@
 	p,
 	a {
 		font-family: $sofia;
-		font-size: 21px;
-		// font-weight: bold;
+		font-size: 18px;
+		font-weight: bold;
 		line-height: 32px;
+	}
+	.button {
+		border: none;
+		background: $red;
+		padding: 6px 18px 7px;
+		font-size: 14px;
+		&:hover {
+			background: darken(desaturate($red, 20%), 20%);
+			color: #fff !important;
+		}
 	}
 }

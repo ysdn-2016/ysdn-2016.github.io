@@ -21,12 +21,13 @@ module.exports = {
 		},
 		studentIndex: {
 			averageShapeInterval: 5,
-			averageIntermissionInterval: 20,
+			averageIntermissionInterval: 18,
 			intermissionSentences: [
 				`Phew, there's a lot of us, isn't there?`,
 				`Keep going…`,
+				`Just a bit further`,
 				`Almost there!`,
-				`That's right. 96 f**king students. Eat it OCAD.`
+				`That's right. 96 students. Eat it OCAD.`
 			]
 		}
 	},
