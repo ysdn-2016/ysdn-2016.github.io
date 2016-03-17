@@ -1,8 +1,12 @@
+.about {
+	margin: 0 auto;
+}
+
 // == Header == //
 
 .about-header {
 	padding-top: 80px;
-	padding-bottom: 120px;
+	padding-bottom: 160px;
 	h1 {
 		font-size: 2.2em;
 		text-align: center;
@@ -35,16 +39,54 @@
 	}
 }
 
+// == About == //
+.about-brand {
+	position: relative;
+	width: 100%;
+	height: 630px;
+	.inner {
+		position: absolute;
+		top: 0;
+		left: -50%;
+		width: 200%;
+		height: 100%;
+		background-color: #000;
+	}
+}
+
 // == Shapes == //
 
 .shape-1 {
 	top: 350px;
 	right: 0px;
-	@include shape-triangle(118px, #FCD319, 0);
+	@include shape-triangle(100px, #FCD319, 0);
 }
 
 .shape-2 {
-	top: 350px;
-	left: 0px;
-	@include shape-circle(54px, #EE4A62);
+	top: 170px;
+	left: 50%;
+	margin-left: 280px;
+	@include shape-circle(74px, #EE4A62);
+}
+
+.shape-3 {
+	top: 420px;
+	left: 50%;
+	margin-left: -580px;
+	@include shape-square(100px, #64BDB1, 45);
+}
+
+.shape-4 {
+	top: 500px;
+	left: 50%;
+	margin-left: -460px;
+	@include shape-triangle(54px, #FCD319, 270);
+}
+
+.shape-5 {
+	top: 666px;
+	left: 50%;
+	margin-left: 120px;
+	z-index: 99;
+	@include shape-rectangle(42px, 92px, #7ABDDF, 0);
 }
