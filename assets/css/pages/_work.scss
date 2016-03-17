@@ -58,7 +58,14 @@
 		width: 30%;
 		margin-right: 5%;
 	}
+	.size-1of2 {
+		width: 46%;
+		margin-right: 8%;
+	}
 	&[data-columns="3"] .column:nth-child(3n) {
+		margin-right: 0;
+	}
+	&[data-columns="2"] .column:nth-child(2n) {
 		margin-right: 0;
 	}
 }
