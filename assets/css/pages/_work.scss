@@ -2,9 +2,9 @@
  * Typography
  */
 
-/**
- * Navigation
- */
+//
+// Navigation
+//
 
 .project-nav {
 	display: flex;
@@ -29,9 +29,9 @@
 	}
 }
 
-/**
- * Category Header
- */
+//
+// Category Header
+//
 
 .project-category-intro {
 	background: $black;
@@ -48,22 +48,25 @@
 	}
 }
 
-/**
- * Project Previews
- */
+//
+// Project Grid
+//
 
 .project-grid {
-	column-count: 3;
-	column-gap: $project-grid-gutter;
-	// HACK: -webkit-perspective fixes bugs for chrome
-	-webkit-perspective: 1;
+	@include clearfix;
+	.size-1of3 {
+		width: 30%;
+		margin-right: 5%;
+	}
+	&[data-columns="3"] .column:nth-child(3n) {
+		margin-right: 0;
+	}
 }
 
 .project-preview {
 	@extend %avoid-column-break;
 	display: block;
-	// NB: 40px is the approximate height of the project labels
-	padding-bottom: $project-grid-gutter - 25px;
+	margin-bottom: 50px;
 }
 
 .project-preview-image {
@@ -86,9 +89,9 @@
 	font-size: 15px;
 }
 
-/**
- * Project/Case Study Global
- */
+//
+// Projects
+//
 
 .project-header {
 	h2 {

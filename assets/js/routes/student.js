@@ -1,15 +1,9 @@
 
-var Lazyload = require('../lib/lazyload')
-
 module.exports = function () {
 
   savvior.init('[data-columns]', {
     'screen and (min-width: 1px)': { columns: 2 }
   });
-
-  window.addEventListener('savvior:setup', function (e) {
-    Lazyload.update()
-  })
 
   // $('.main').mousemove(function (e) {
   //   // parallax(e, document.getElementById('student-image'), 0.1);

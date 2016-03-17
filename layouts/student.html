@@ -52,7 +52,7 @@
 									<svg class="student-profile-project-thumbnail-placeholder" viewBox="0 0 {{ project.thumbnail.width }} {{ project.thumbnail.height }}" preserveAspectRatio="xMinYMin" width="{{ project.thumbnail.width }}">
 										<rect x="0" y="0" width="100%" height="100%"></rect>
 									</svg>
-									<img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 1000 }) }}" alt="{{ project.title }}" />
+									<img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 800 }) }}" data-retina-src="{{ project.thumbnail | asset_url({ width: 1600 }) }}" alt="{{ project.title }}" />
 								</div>
 								<div class="student-profile-project-meta">
 									<div class="student-profile-project-header">
@@ -76,7 +76,7 @@
 									<svg class="student-profile-project-thumbnail-placeholder" viewBox="0 0 {{ project.thumbnail.width }} {{ project.thumbnail.height }}" preserveAspectRatio="xMinYMin" width="{{ project.thumbnail.width }}">
 										<rect x="0" y="0" width="100%" height="100%"></rect>
 									</svg>
-									<img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 800 }) }}" alt="{{ project.title }}" />
+									<img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 400 }) }}" data-retina-src="{{ project.thumbnail | asset_url({ width: 800 }) }}" alt="{{ project.title }}" />
 								</div>
 								<div class="student-profile-project-meta">
 									<div class="student-profile-project-header">
