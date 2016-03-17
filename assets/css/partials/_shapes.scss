@@ -1,0 +1,45 @@
+.shape {
+	position: absolute;
+	mix-blend-mode: multiply;
+	&.screen {
+		mix-blend-mode: screen !important;
+	}
+}
+
+@mixin shape-triangle($size, $color, $rotation) {
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-bottom: $size solid transparent;
+  border-right: $size solid $color;
+  transform: rotate($rotation + deg);
+}
+
+@mixin shape-circle($size, $color) {
+	border-radius: 50%;
+	width: $size;
+  height: $size;
+  background-color: $color;
+}
+
+@mixin shape-half-circle($size, $color, $rotation) {
+	height:$size/2;
+	width:$size;
+	border-radius: $size $size 0 0;
+	background-color:$color;
+	transform: rotate($rotation + deg);
+}
+
+@mixin shape-rectangle($width, $height, $color, $rotation) {
+	width: $width;
+  height: $height;
+  background-color: $color;
+  transform: rotate($rotation + deg);
+}
+
+@mixin shape-square($size, $color, $rotation) {
+	width: $size;
+  height: $size;
+  background-color: $color;
+  transform: rotate($rotation + deg);
+}
