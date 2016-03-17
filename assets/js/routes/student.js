@@ -7,7 +7,7 @@ module.exports = function () {
     'screen and (min-width: 1px)': { columns: 2 }
   });
 
-  $(window).on('savvior:setup', function (e) {
+  window.addEventListener('savvior:setup', function (e) {
     Lazyload.update()
   })
 
