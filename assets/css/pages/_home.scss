@@ -102,7 +102,7 @@ section {
 		overflow: hidden;
 		width: 80px;
 		height: 80px;
-		@include dot-grid(#000);
+		@include dot-grid;
 		margin-bottom: 20px;
 	}
 }

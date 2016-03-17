@@ -6,7 +6,7 @@
 	}
 }
 
-@mixin dot-grid($color) {
+@mixin dot-grid() {
 	background-image: url(/assets/images/dot-grid.svg);
 	background-repeat: repeat;
 	background-position: top left;
