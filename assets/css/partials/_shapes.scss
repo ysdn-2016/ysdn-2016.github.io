@@ -18,6 +18,14 @@
   background-color: $color;
 }
 
+@mixin shape-half-circle($size, $color, $rotation) {
+	height:$size/2;
+	width:$size;
+	border-radius: $size $size 0 0;
+	background-color:$color;
+	transform: rotate($rotation + deg);
+}
+
 @mixin shape-rectangle($width, $height, $color, $rotation) {
 	width: $width;
   height: $height;
