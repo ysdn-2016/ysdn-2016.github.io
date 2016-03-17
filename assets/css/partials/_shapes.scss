@@ -1,3 +1,7 @@
+.shape {
+	position: absolute;
+}
+
 @mixin shape-triangle($size, $color, $rotation) {
   width: 0;
   height: 0;
@@ -8,6 +12,7 @@
 }
 
 @mixin shape-circle($size, $color) {
+	border-radius: 50%;
 	width: $size;
   height: $size;
   background-color: $color;
