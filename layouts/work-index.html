@@ -27,18 +27,18 @@
 	</div>
 	<div class="project-grid" data-columns>
 	{% for project in projects %}
-		<a href="{{ project.href }}" class="project-preview">
-			<div class="project-preview-image">
+		<div class="project-preview">
+			<a href="{{ project.href }}" class="project-preview-image">
 				<svg class="project-preview-image-placeholder" viewBox="0 0 {{ project.thumbnail.width }} {{ project.thumbnail.height }}" preserveAspectRatio="xMinYMin" width="{{ project.thumbnail.width }}">
 					<rect x="0" y="0" width="100%" height="100%"></rect>
 				</svg>
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg==" data-src="{{ project.thumbnail | asset_url({ width: 400 }) }}" />
-			</div>
+			</a>
 			<div class="project-preview-details">
-				<div class="project-preview-title">{{ project.title }}</div>
-				<div class="project-preview-student">{{ project.owner.name }}</div>
+				<a href="{{ project.href }}" class="project-preview-title">{{ project.title }}</a>
+				<a href="{{ project.owner.href }}" class="project-preview-student">{{ project.owner.name }}</a>
 			</div>
-		</a>
+		</div>
 	{% endfor %}
 	</div>
 {% endblock %}
