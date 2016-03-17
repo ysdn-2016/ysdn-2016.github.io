@@ -1,0 +1,50 @@
+// == Header == //
+
+.about-header {
+	padding-top: 80px;
+	padding-bottom: 120px;
+	h1 {
+		font-size: 2.2em;
+		text-align: center;
+		margin-bottom: 28px;
+	}
+	p {
+		width: 580px;
+		text-align: center;
+		margin: 0 auto;
+		&:not(:last-child) {
+			margin-bottom: 14px;
+		}
+	}
+	a {
+		display: inline-block;
+		padding: 2px 0;
+		&:hover {
+			color: #ef4862;
+		}
+		&:hover span {
+			background-image: linear-gradient(to right, #ef4862 33%, rgba(255, 255, 255, 0) 0%);
+		}
+		span {
+			background-image: linear-gradient(to right, #141414 33%, rgba(255, 255, 255, 0) 0%);
+			background-repeat: repeat-x;
+			background-position: bottom;
+			background-size: 3px 1px;
+			padding: 0 0 2px;
+		}
+	}
+}
+
+// == Shapes == //
+
+.shape-1 {
+	top: 350px;
+	right: 0px;
+	@include shape-triangle(118px, #FCD319, 0);
+}
+
+.shape-2 {
+	top: 350px;
+	left: 0px;
+	@include shape-circle(54px, #EE4A62);
+}
