@@ -1,0 +1,28 @@
+@mixin shape-triangle($size, $color, $rotation) {
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-bottom: $size solid transparent;
+  border-right: $size solid $color;
+  transform: rotate($rotation + deg);
+}
+
+@mixin shape-circle($size, $color) {
+	width: $size;
+  height: $size;
+  background-color: $color;
+}
+
+@mixin shape-rectangle($width, $height, $color, $rotation) {
+	width: $width;
+  height: $height;
+  background-color: $color;
+  transform: rotate($rotation + deg);
+}
+
+@mixin shape-square($size, $color, $rotation) {
+	width: $size;
+  height: $size;
+  background-color: $color;
+  transform: rotate($rotation + deg);
+}
