@@ -4,8 +4,7 @@ var Lazyload = require('../lib/lazyload')
 module.exports = function () {
 
   savvior.init('[data-columns]', {
-    'screen and (min-width: 1px)': { columns: 2 },
-    'screen and (min-width: 3px)': { columns: 2 },
+    'screen and (min-width: 1px)': { columns: 2 }
   });
 
   $(window).on('savvior:setup', function (e) {
