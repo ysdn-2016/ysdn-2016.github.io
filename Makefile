@@ -114,7 +114,7 @@ clean-deps:
 
 install: node_modules
 content: build/index.html
-assets:  build/assets/fonts build/assets/images
+assets:  build/assets/fonts build/assets/images build/favicon.png
 styles:  build/assets/bundle.css
 scripts: build/assets/bundle.js build/assets/libraries.js
 icons:   assets/fonts/icons
@@ -128,6 +128,10 @@ node_modules: package.json
 
 build/index.html: bin/build $(CONTENT) $(LAYOUTS) $(MIXINS)
 	@bin/build
+
+build/favicon.png: assets/images/favicon.png
+	@mkdir -p $(@D)
+	@cp -r $< $@
 
 build/assets/%: assets/%
 	@mkdir -p $(@D)
