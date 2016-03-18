@@ -46,7 +46,7 @@
 }
 
 .student-profile-introduction {
-	max-width: 25em;
+	max-width: 20em;
 	margin-top: 12px;
 	font-size: 20px;
 	line-height: 1.5;
@@ -81,29 +81,29 @@
 	&-url:hover span {
 		@include dotted-border($red);
 	}
-	&-facebook:hover {
-		color: $blue;
+	&-behance:hover {
+		color: $accent;
 	}
-	&-facebook:hover span {
-		@include dotted-border($blue);
+	&-behance:hover span {
+		@include dotted-border($accent);
 	}
 	&-instagram:hover {
-		color: $green;
+		color: $blue;
 	}
 	&-instagram:hover span {
-		@include dotted-border($green);
+		@include dotted-border($blue);
 	}
 	&-linkedin:hover {
-		color: $yellow;
-	}
-	&-linkedin:hover span {
-		@include dotted-border($yellow);
-	}
-	&-github:hover {
 		color: $orange;
 	}
-	&-github:hover span {
+	&-linkedin:hover span {
 		@include dotted-border($orange);
+	}
+	&-github:hover {
+		color: $green;
+	}
+	&-github:hover span {
+		@include dotted-border($green);
 	}
 }
 
@@ -196,7 +196,7 @@
 	display: block;
 	transition: opacity 300ms ease;
 	&--case-study {
-		margin-bottom: 48px;
+		margin-bottom: 56px;
 	}
 	&--standard {
 		margin-bottom: 16px;
@@ -208,7 +208,7 @@
 
 .student-profile-project-thumbnail {
 	@include image-placeholder;
-	margin-bottom: 14px;
+	margin-bottom: 18px;
 }
 
 .student-profile-project-meta {
