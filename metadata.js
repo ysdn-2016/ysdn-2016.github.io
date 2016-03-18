@@ -25,7 +25,7 @@ module.exports = {
 			intermissionSentences: [
 				`Phew, there's a lot of us, isn't there?`,
 				`Keep going…`,
-				`Just a bit further`,
+				`A little bit further`,
 				`Almost there!`,
 				`That's right. 96 students. Eat it OCAD.`
 			]
