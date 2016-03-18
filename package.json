@@ -19,16 +19,19 @@
   },
   "homepage": "https://github.com/ysdn-2016/ysdn-2016.github.io#readme",
   "dependencies": {
-    "autoprefixer": "^6.1.0",
-    "browserify": "^13.0.0",
-    "chalk": "^1.1.1",
-    "cssnano": "^3.3.2",
     "cash-dom": "^1.0.0",
     "layzr.js": "^2.0.4",
     "masonry-layout": "^4.0.0",
     "page": "^1.6.4",
     "savvior": "^0.5.0",
-    "slug-component": "^1.1.0",
+    "slug-component": "^1.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.1.0",
+    "browserify": "^13.0.0",
+    "chalk": "^1.1.1",
+    "cssnano": "^3.3.2",
+    "garnish": "^4.1.1",
     "insane": "^2.5.0",
     "js-yaml": "^3.4.3",
     "koa": "^1.1.2",
@@ -51,16 +54,13 @@
     "metalsmith-typography": "^0.1.1",
     "metalsmith-validate": "^0.1.4",
     "mkdirp": "^0.5.1",
+    "onchange": "^2.0.0",
     "postcss-cli": "^2.3.3",
     "semistandard-format": "^2.1.0",
     "slug-component": "^1.1.0",
     "surge": "^0.17.7",
     "swig": "^1.4.2",
-    "truncate-html": "0.0.6"
-  },
-  "devDependencies": {
-    "garnish": "^4.1.1",
-    "onchange": "^2.0.0",
+    "truncate-html": "0.0.6",
     "watchify": "^3.7.0",
     "wtch": "^4.0.1"
   }
