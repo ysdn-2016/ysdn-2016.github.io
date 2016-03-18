@@ -1,21 +1,132 @@
 
-{% extends 'base.html' %}
+{% extends 'site.html' %}
 
-{% block body %}
+{% block main %}
 
-  <section class="home-introduction">
+  <!-- <section class="home-introduction">
     <h2 class="home-introduction-headline">York<span class="slash">/</span>Sheridan Program in Design&rsquo;s<br/>Graduating Class of 2016 presents</h2>
     <div class="home-introduction-arrow"></div>
   </section>
   <div class="home-introduction-grid">
     <img src="/assets/images/home-logo-black.png" alt="" class="home-logo">
-  </div>
-  <!-- <section class="home-">
-  </section> -->
-
-  <!-- <div class="home-introduction">
-    <h1 class="home-headline">Design for the Second Act.</h1>
-    <h3 class="home-subhead">YSDN Design Degree Show 2016</h3>
   </div> -->
+  <section class="home grid-12">
+    <header class="home-intro">
+
+    </header> <!-- .home-intro -->
+    <section class="home-info">
+      <div class="row">
+        <div class="col span-2"></div>
+        <div class="col span-6">
+          <h2>
+            <a href="http://design.yorku.ca/" target="_blank"><span>York/Sheridan Program in Design</span></a> <br>presents The Intermission, <br>the 2016 grad show.
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-2"></div>
+        <div class="col span-4">
+          <div class="feature-text">
+            <p>To see the works and meet the cast, come check out our show, The Intermission, on April 19th at The Libery Grand.</p>
+            <a href="/event/" class="button">Show Information</a>
+          </div>
+        </div>
+        <div class="col span-5">
+          <p>The YSDN Grad Show celebrates our last four years of design studies and accomplishments, and share our hopes and fears for the future. In the theatre world, this break in the action is called "the intermission". It is a chance for us to break character from the many roles we must adopt as designers and take a moment to truly introduce ourselves.</p>
+          <p>Look how far we've come and see the possibilities that lie ahead. Welcome to The Intermission.</p>
+        </div>
+      </div>
+    </section> <!-- .home-info -->
+    <section class="home-work">
+      <div class="row home-work-comm">
+        <div class="col span-4 title">
+          <div class="shape-grid">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+          <h3>Communication Design</h3>
+          <p>Communicating ideas through visual language on all manner of mediums, including branding identity, type and editorial design, various promotional materials, and more.</p>
+          <a href="#" class="button">See More Projects</a>
+        </div>
+        <div class="col span-7 work">
+          {% for project in projects | filter("category", "graphic-design") | take(3) %}
+            <div class="home-work-project">
+              <h4 class="student-profile-project-title">{{ project.title }}</h4>
+              <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="row home-work-phy">
+        <div class="col span-7 work">
+          {% for project in projects | filter("category", "packaging") | take(3) %}
+            <div class="home-work-project">
+              <h4 class="student-profile-project-title">{{ project.title }}</h4>
+              <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="col span-4 title">
+          <div class="shape-grid">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+          <h3>Physical Design</h3>
+          <p>Experimenting and crafting objects used in a three-dimensional space, from packaging to physical computing.</p>
+          <a href="#" class="button">See More Projects</a>
+        </div>
+      </div>
+      <div class="row home-work-info">
+        <div class="col span-4 title">
+          <div class="shape-grid">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+          <h3>Information Design</h3>
+          <p>Prioritizing, simplifying, and creatively visualizing a wide range of complex textual and visual information.</p>
+          <a href="#" class="button">See More Projects</a>
+        </div>
+        <div class="col span-7 work">
+          {% for project in projects | filter("category", "information-design") | take(3) %}
+            <div class="home-work-project">
+              <h4 class="student-profile-project-title">{{ project.title }}</h4>
+              <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="row home-work-web">
+        <div class="col span-7 work">
+          {% for project in projects | filter("category", "motion-design") | take(3) %}
+            <div class="home-work-project">
+              <h4 class="student-profile-project-title">{{ project.title }}</h4>
+              <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="col span-4 title">
+          <div class="shape-grid">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+          <h3>Interactive &amp; Motion Design</h3>
+          <p>Developing participatory interactive experiences and visualizing moving image with motion design.</p>
+          <a href="#" class="button">See More Projects</a>
+        </div>
+      </div>
+    </section> <!-- .home-work -->
+    <section class="home-event">
+      <h2>Come to the Show to Meet the Cast on April 19th</h2>
+      <p>To meet the cast, come check out our show,  The Intermission, on April 19 at The Liberty Grand.</p>
+      <a href="/event" class="button">Show Information</a>
+    </section> <!-- .home-event -->
+    <section class="home-social">
+
+    </section> <!-- .section.home-social -->
+  </section>
 
 {% endblock %}

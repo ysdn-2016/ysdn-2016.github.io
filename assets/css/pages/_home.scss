@@ -1,3 +1,215 @@
+// == Home Grid == //
+
+$start: 1;
+$end: 12;
+$gridWidth: 1240px;
+$spanPadding: 20px;
+
+
+[class*='span-'] {
+	float: left;
+	padding: 0 $spanPadding;
+}
+
+// Create grid widths (1-12)
+@for $i from $start through $end {
+	.span-#{$i} {
+		width: ($gridWidth/$end) * $i;
+	}
+}
+
+.grid-12 {
+	max-width: $gridWidth;
+	margin: 0 auto;
+	.row {
+		width: 100%;
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+		&:not(:last-child) {
+			padding-bottom: 28px;
+		}
+	}
+	.col {
+		min-height: 1px;
+	}
+}
+
+section {
+	padding-bottom: 60px;
+}
+
+// == Home Info == //
+
+.home-info {
+	h2 {
+		a {
+			display: inline-block;
+			padding: 2px 0;
+			&:hover {
+				color: #ef4862;
+			}
+			&:hover span {
+				background-image: linear-gradient(to right, #ef4862 33%, rgba(255, 255, 255, 0) 0%);
+			}
+			span {
+				background-image: linear-gradient(to right, #141414 33%, rgba(255, 255, 255, 0) 0%);
+				background-repeat: repeat-x;
+				background-position: bottom;
+				background-size: 3px 1px;
+				padding: 0 0 2px;
+			}
+		}
+	}
+	.feature-text {
+		background-color: #fad300;
+		margin-top: 200px;
+		padding: 32px 28px;
+		p {
+			margin: 0;
+			font-size: 1.1em;
+		}
+		.button {
+			margin-top: 32px;
+		}
+	}
+}
+
+// == Home Work == //
+
+.home-work {
+	.row {
+		margin-bottom: 48px;
+	}
+	.col {
+	}
+	h3 {
+		font-size: 2.1em;
+		line-height: 1.25em;
+	}
+	.button {
+		margin-top: 48px;
+	}
+}
+
+.home-work .title {
+	position: relative;
+	padding-top: 160px;
+	.shape-grid {
+		position: relative;
+		overflow: hidden;
+		width: 80px;
+		height: 80px;
+		@include dot-grid;
+		margin-bottom: 20px;
+	}
+}
+
+// == Home Work Shapes == //
+
+.home-work-comm {
+	.shape-1 {
+		@include shape-square(26.6px, $yellow, 0);
+		top: 0.66px;
+		right: 0.66px;
+	}
+	.shape-2 {
+		top: 26.6px;
+		left: 0.66px;
+		@include shape-circle(53.2px, $red);
+		z-index: 2;
+	}
+	.shape-3 {
+		bottom: 0.66px;
+		right: 0.66px;
+		@include shape-rectangle(80px, 26.6px, $blue, 0);
+		z-index: 1;
+	}
+}
+
+.home-work-phy {
+	.shape-1 {
+		@include shape-circle(26.6px, $red);
+		bottom: 0.66px;
+		right: 0.66px;
+		z-index: 2;
+	}
+	.shape-2 {
+		bottom: 26.6px;
+		left: 0.66px;
+		@include shape-rectangle(80px, 26.6px, $green, 0);
+		z-index: 1;
+	}
+	.shape-3 {
+		top: 0.66px;
+		left: 0.66px;
+		@include shape-triangle(53.2px, $yellow, 270);
+		z-index: 3;
+	}
+}
+
+.home-work-info {
+	.shape-1 {
+		@include shape-square(26.6px, #7CBDDF, 0);
+		top: 0.66px;
+		left: 0.66px;
+	}
+	.shape-2 {
+		top: 26.6px;
+		left: 26.6px;
+		@include shape-square(26.6px, #7CBDDF, 0);
+		z-index: 2;
+	}
+	.shape-3 {
+		top: 0.66px;
+		right: 0.66px;
+		@include shape-triangle(80px, #EE4862, 90);
+		z-index: 1;
+	}
+}
+
+.home-work-web {
+	.shape-1 {
+		@include shape-rectangle(53.2px, 80px, $yellow, 0);
+		top: 0.66px;
+		left: 0.66px;
+	}
+	.shape-3 {
+		top: 26.6px;
+		left: 26.6px;
+		@include shape-triangle(53.2px, $blue, 180);
+		z-index: 1;
+	}
+}
+
+// == Home Event == //
+
+.home-event {
+	background-color: $black;
+	height: 660px;
+	h2,p {
+		color: white;
+	}
+
+	h2 {
+		width: 60%;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 2.6em;
+	}
+
+	p {
+		text-align: center;
+	}
+}
+
+
+
+// ======== \/ SORT ME \/ ========== //
+
+
 .home-introduction {
 	background: #000;
 	display: flex;
