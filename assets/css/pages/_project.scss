@@ -269,7 +269,6 @@ $sticky-scroll-offset: 60px;
 
 .project--standard {
 	position: relative;
-	min-height: 600px;
 
 	.project-header {
 		margin-bottom: 24px;
@@ -302,86 +301,34 @@ $sticky-scroll-offset: 60px;
 		max-width: 1160px;
 	}
 
-	#content {
-		position: relative;
-		background-color: $white;
+}
+
+.project-callout {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 32px;
+	margin-bottom: 32px;
+	line-height: 1.2;
+
+	&-title {
+		font-size: 17px;
+		font-weight: bold;
 	}
 
-	.case-nav, .case-nav-holder {
-		flex: 1 0 32.333%;
-		padding-top: 80px;
-		padding-right: $project-grid-gutter / 2;
-
-		a {
-			cursor: pointer;
-			display: block;
-			padding-top: 4px;
-			padding-bottom: 4px;
-			color: #d1d1d1;
-			font-size: 21px;
-			font-weight: 500;
-			line-height: 28px;
-			transition: color 200ms ease;
-			&:hover {
-				color: #444;
-			}
-		}
-
-		.active {
-			top: 0;
-			color: $black;
-		}
-
-		#introduction {
-			border-top: 1px rgba(0,0,0,0.2) solid;
-			border-bottom: 1px rgba(0,0,0,0.2) solid;
-			width: 100% ;
-			margin-top: 20px;
-			padding-bottom: 20px;
-			max-width: 340px;
-			p, a {
-				font-size: 16px;
-				line-height: 25px;
-				letter-spacing: 0.15px;
-			}
-			a {
-				border-bottom: 1px solid black;
-				display: inline-block;
-				padding: 0;
-				padding-bottom: 2px;
-				color: black;
-			}
-			p:first-of-type {
-				font-weight: bold;
-				line-height: 16px;
-				letter-spacing: 0.2px;
-			}
-			.text {
-				display: inline-block;
-				width: calc(100% - 105px);
-			}
-			img {
-				position: absolute;
-				bottom: 1px;
-				display: inline-block;
-				width: 100px;
-			}
-		}
+	&-name {
+		color: #aaa;
+		font-size: 15px;
 	}
 
-	.case-nav {
-		pointer-events: auto;
-	}
-
-	#indicator {
+	&::after {
+		content: '';
+		display: block;
+		width: 75%;
+		height: 1px;
+		background: #f2f2f2;
 		position: absolute;
-		background: $black;
-		width: 4px;
-		height: 28px;
-		margin: 4px 0;
-		margin-left: -14px;
-		list-style-type: none;
-		transition: top 0.25s ease, height 0.25s ease;
+		bottom: 0px;
 	}
 }
 

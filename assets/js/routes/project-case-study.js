@@ -11,6 +11,7 @@ module.exports = function () {
 	var $body = $('.project-body')
 	var $sidebar = $('.project-sidebar')
 	var $links = $sidebar.find('.project-sidebar-headers-link')
+	var $toTop = $sidebar.find('[data-back-to-top]')
 
 	/**
 	 * Header link active states
@@ -52,6 +53,15 @@ module.exports = function () {
 		scrollTo(scroll)
 		$links.removeClass('active')
 		$self.addClass('active')
+	})
+
+	/**
+	 * Back to top scrolling
+	 */
+
+	$toTop.on('click', function (e) {
+		e.preventDefault()
+		scrollTo(0)
 	})
 
 	/**

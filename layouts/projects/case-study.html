@@ -12,6 +12,10 @@
 	<section class="project-body">
 		<div class="project-sidebar-filler">
 			<aside class="project-sidebar">
+				<div class="project-callout">
+					<a class="project-callout-title" href="{{ href }}" data-back-to-top>{{ title }}</a>
+					<a class="project-callout-name" href="{{ owner.href }}">{{ owner.name }}</a>
+				</div>
 				{% for header in headers %}
 					<a href="{{ header.href }}" class="project-sidebar-headers-link">{{ header.text }}</a>
 				{% endfor %}

@@ -26,7 +26,7 @@
 	<div class="project-list">
 	</div>
 	<div class="project-grid" data-columns>
-	{% for project in projects %}
+	{% for project in projects | shuffle %}
 		<div class="project-preview">
 			<a href="{{ project.href }}" class="project-preview-image">
 				<svg class="project-preview-image-placeholder" viewBox="0 0 {{ project.thumbnail.width }} {{ project.thumbnail.height }}" preserveAspectRatio="xMinYMin" width="{{ project.thumbnail.width }}">

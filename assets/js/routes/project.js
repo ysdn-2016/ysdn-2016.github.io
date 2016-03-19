@@ -27,11 +27,17 @@ module.exports = function () {
     pinned: { start: 0, end: 0 },
     bottom: { start: 0, end: 0 },
   }
+
   var lastScrollY = 0
   var heights = {
     content: 0,
-    sidebar: 0
+    sidebar: 0,
+    window: 0
   }
+
+  var shouldPin = false
+  var isSidebarSmallerThanWindow = false
+  var isContentLargerThanSidebar = false
 
   loop.add(scroll);
   $window.on('resize load', resize);
@@ -44,13 +50,16 @@ module.exports = function () {
     $sidebar.css('width', $sidebar.parent().innerWidth())
     heights.content = $content.innerHeight()
     heights.sidebar = $sidebar.innerHeight()
+    heights.window = $window.height()
+    isSidebarSmallerThanWindow = (heights.sidebar + 60) < heights.window
+    isContentLargerThanSidebar = heights.content > heights.sidebar
+    shouldPin = isSidebarSmallerThanWindow && isContentLargerThanSidebar
     setTracks()
   }
 
   function scroll (e) {
     var scrollY = e.deltaY
     if (scrollY === lastScrollY) return
-    var shouldPin = heights.content > heights.sidebar
     $sidebar.toggleClass('pinned', shouldPin && isBetween(scrollY, tracks.pinned.start, tracks.pinned.end))
     $sidebar.toggleClass('bottom', shouldPin && isBetween(scrollY, tracks.bottom.start, tracks.bottom.end))
     lastScrollY = scrollY
