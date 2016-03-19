@@ -2,44 +2,43 @@ section.home {
 	section {
 		padding-bottom: 60px;
 	}
-}
+	// == Home Grid == //
 
-// == Home Grid == //
-
-$start: 1;
-$end: 12;
-$gridWidth: 1240px;
-$spanPadding: 20px;
+	$start: 1;
+	$end: 12;
+	$gridWidth: 1240px;
+	$spanPadding: 20px;
 
 
-[class*='span-'] {
-	float: left;
-	padding: 0 $spanPadding;
-}
-
-// Create grid widths (1-12)
-@for $i from $start through $end {
-	.span-#{$i} {
-		width: ($gridWidth/$end) * $i;
+	[class*='span-'] {
+		float: left;
+		padding: 0 $spanPadding;
 	}
-}
 
-.grid-12 {
-	max-width: $gridWidth;
-	margin: 0 auto;
-	.row {
-		width: 100%;
-		&:after {
-			content: '';
-			display: table;
-			clear: both;
-		}
-		&:not(:last-child) {
-			padding-bottom: 28px;
+	// Create grid widths (1-12)
+	@for $i from $start through $end {
+		.span-#{$i} {
+			width: ($gridWidth/$end) * $i;
 		}
 	}
-	.col {
-		min-height: 1px;
+
+	.grid-12 {
+		max-width: $gridWidth;
+		margin: 0 auto;
+		.row {
+			width: 100%;
+			&:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+			&:not(:last-child) {
+				padding-bottom: 28px;
+			}
+		}
+		.col {
+			min-height: 1px;
+		}
 	}
 }
 
@@ -189,25 +188,86 @@ $spanPadding: 20px;
 // == Home Event == //
 
 .home-event {
+	@extend .fullwidth-override;
+	background-image: url(/assets/images/home-event-grid.png);
+	background-size: auto 640px;
+	background-position: center;
+	background-repeat: no-repeat;
 	background-color: $black;
-	height: 660px;
+	height: 680px;
 	h2,p {
 		color: white;
 	}
 
 	h2 {
-		width: 60%;
+		padding-top: 20px;
+		width: 600px;
 		margin: 0 auto;
 		text-align: center;
-		font-size: 2.6em;
+		font-size: 3.4em;
+		padding-bottom: 44px;
 	}
 
 	p {
+		width: 780px;
+		margin: 0 auto;
 		text-align: center;
+		font-size: 1.2em;
+		padding-bottom: 24px;
+		line-height: 1.6;
+	}
+
+	.wrap {
+		padding-top: 200px;
+	}
+	.bg-span {
+		padding: 30px;
+		background-color: black;
+		margin: 0 auto;
+		width:860px;
+		height: 260px;
+	}
+
+	.button-wrap {
+		padding: 30px;
+		background-color: black;
+		margin: 0 auto;
+		width: 240px;
+		margin-top: 60px;
+	}
+
+	.button {
+		background-color: white;
+		margin: 0 auto;
+		display: block;
+		width: 180px;
+		color: black;
+		border: 1px solid white;
+		font-weight: normal;
+		&:hover {
+			background-color: $red;
+			color: white;
+			border: 1px solid $red;
+		}
 	}
 }
 
+// == Home Social == //
 
+.home-social {
+	@extend .fullwidth-override;
+	background-color: $black;
+	height: 660px;
+	h2 {
+		color: white;
+		width: 600px;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 1.2em;
+		padding-bottom: 44px;
+		font-weight: normal;
+	}
+}
 
 // ======== \/ SORT ME \/ ========== //
 
