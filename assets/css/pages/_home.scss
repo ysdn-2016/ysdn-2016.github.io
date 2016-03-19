@@ -41,9 +41,118 @@ section.home {
 	}
 }
 
+// == Home Post Intro == //
+
+.home-post-intro {
+	background-color: #fff;
+	@include dot-grid;
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 820px;
+	background-size: 160px;
+	z-index: 99;
+	margin: 36px;
+
+	.logo {
+		width: 400px;
+		background-color: #fff;
+		position: absolute;
+		top: 320px;
+		left: 50%;
+		margin-left: -240px;
+		height: 200px;
+		svg {
+			position: absolute;
+			top: -20px;
+			left: 48px;
+			margin-left: 0;
+			width: 300px;
+			g {fill: #000;}
+		}
+	}
+
+	// Shapes
+
+	.shape-1 {
+		@include shape-square(40px, $orange, 0);
+		top: 202.3px;
+		margin-left: -616px;
+		left: 50%;
+	}
+	.shape-2 {
+		@include shape-triangle(120px, $yellow, 180);
+		top: 122.3px;
+		left: 121px;
+	}
+	.shape-3 {
+		@include shape-circle(80px, $red);
+		top: 42px;
+		left: 402px;
+	}
+	.shape-4 {
+		@include shape-triangle(240px, $yellow, 270);
+		top: 163.3px;
+		left: 1002px;
+	}
+	.shape-5 {
+		@include shape-triangle(120px, $yellow, 270);
+		top: 282.3px;
+		left: 1122px;
+	}
+	.shape-6 {
+		@include shape-square(114px, $green, 45);
+		top: 425.3px;
+		left: 224.6px;
+	}
+	.shape-7 {
+		@include shape-rectangle(80px, 160px, $blue, 0);
+		top: 482.3px;
+		left: 1162px;
+	}
+	.shape-8 {
+		@include shape-triangle(120px, $yellow, 180);
+		top: 602.3px;
+		margin-left: -55px;
+		left: 50%;
+	}
+	.shape-9 {
+		@include shape-square(80px, $orange, 0);
+		top: 682.3px;
+		margin-left: 225px;
+		left: 50%;
+	}
+	.shape-10 {
+		@include shape-rectangle(40px, 80px, $blue, 90);
+		top: 662.3px;
+		margin-left: -595px;
+		left: 50%;
+	}
+	.shape-11 {
+		@include shape-circle(80px, $red);
+		top: 602px;
+		margin-left: 425px;
+		left: 50%;
+	}
+}
+
+// == Home Nav == //
+
+.home-nav {
+	top: 860px;
+	@extend .fullwidth-override;
+	position: absolute;
+	.header {
+		position: absolute;
+		width: 100%;
+	}
+}
+
 // == Home Info == //
 
 .home-info {
+	margin-top: 900px;
 	h2 {
 		a {
 			display: inline-block;
@@ -192,6 +301,7 @@ section.home {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: auto 640px;
+	background-color: black;
 	height: 680px;
 	h2,p {
 		color: white;
@@ -241,11 +351,12 @@ section.home {
 		width: 180px;
 		margin: 0 auto;
 		color: black;
-		font-weight: normal;
+		border: 1px solid white;
 		&:hover {
 			border: 1px solid $red;
 			background-color: $red;
-			color: white;
+			color: white !important;
+			border: 1px solid $red;
 		}
 	}
 }
@@ -254,7 +365,7 @@ section.home {
 
 .home-social {
 	@extend .fullwidth-override;
-	background-color: $black;
+	background-color: black;
 	height: 660px;
 	h2 {
 		width: 600px;
