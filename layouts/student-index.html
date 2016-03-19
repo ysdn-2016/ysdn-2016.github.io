@@ -16,7 +16,7 @@
 					<div class="student-grid-intermission"><p>{{ item.text }}</p></div>
 				{% endif %}
 				{% if item.type === 'student' %}
-					<a class="student-preview student" href="{{ item.href }}" data-name="{{ item.name }}">
+					<a class="student-preview student" href="{{ item.href }}" data-name="{{ item.name }}" data-categories="{{ item.projectCategories | map('id') | join(',') }}">
 						<div class="student-preview-image">
 							<img src="{{ item.strip | asset_url({ height: 400 }) }}" alt="{{ item.name }}" draggable="false" />
 						</div>
