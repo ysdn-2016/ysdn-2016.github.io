@@ -54,11 +54,11 @@
 		left: 0;
 		max-width: none;
 		height: 100.5%;
-		animation: rewind 400ms steps(4) forwards;
+		animation: rewind 400ms steps(4) both;
 	}
 	.student-preview:hover & {
 		img {
-			animation: play 400ms steps(4) forwards;
+			animation: play 400ms steps(4) both;
 		}
 	}
 }

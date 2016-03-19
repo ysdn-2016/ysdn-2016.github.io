@@ -8,8 +8,10 @@ var SCROLL_RATE = 1000;
 
 module.exports = function () {
 
+	var $window = $(window)
 	var $body = $('.project-body')
 	var $sidebar = $('.project-sidebar')
+	var $header = $('.project-header')
 	var $links = $sidebar.find('.project-sidebar-headers-link')
 	var $toTop = $sidebar.find('[data-back-to-top]')
 
@@ -21,12 +23,29 @@ module.exports = function () {
 	var lastScroll = -1
 	var $headers = $('h1,h3,h5')
 	var waypoints = getWaypoints($headers)
+	var measurements = {
+		window: {
+			width: 0,
+			height: 0
+		}
+	}
 
 	loop.add(scroll)
+
+	$window.on('resize', function () {
+		measurements.window.height = $window.height()
+	}).trigger('resize')
+
 
 	function scroll (e) {
 		var scrollY = e.deltaY
 		if (scrollY === lastScroll) return
+
+		var progress = (scrollY * 1.2) / (measurements.window.height / 2)
+		$header.css({
+			transform: 'translateY(' + progress * 200 + 'px)',
+			opacity: Math.max(1 - progress, 0)
+		})
 
 		for (var i = 0; i < waypoints.length; i++) {
 			var waypoint = waypoints[i]

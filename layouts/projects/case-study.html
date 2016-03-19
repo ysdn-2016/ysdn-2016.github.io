@@ -1,16 +1,16 @@
 
 <article class="project project--case-study">
 	<header class="project-header">
+		<a class="project-header-category" href="/work/{{ category }}">{{ category | titleize }}</a>
+		<div class="project-header-title{% if title.length < 10 %} project-header-title--large{% endif %}">{{ title }}</div>
 		<div class="project-owner">
 			<a class="project-owner-image" href="{{ owner.href }}">
 				<img src="{{ owner.portrait | asset_url({ width: 120, height: 120, fit: 'facearea', facepad: 2.5 }) }}" alt="{{ owner.name }}" draggable="false" />
 			</a>
 			<div class="project-owner-details">
 				<a class="project-owner-name" href="{{ owner.href }}" >{{ owner.name }}</a>
-				<a class="project-owner-category" href="/work/{{ category }}">{{ category | titleize }}</a>
 			</div>
 		</div>
-		<div class="project-header-title{% if title.length < 10 %} project-header-title--large{% endif %}">{{ title }}</div>
 	</header>
 	{% if headerImage %}
 	<section class="project-introduction">
