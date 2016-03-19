@@ -2,7 +2,7 @@ section.home {
 	// == Home Grid == //
 	$start: 1;
 	$end: 12;
-	$gridWidth: 1240px;
+	$gridWidth: 1160px;
 	$spanPadding: 20px;
 	section {
 		padding-bottom: 60px;
@@ -204,6 +204,11 @@ section.home {
 	}
 }
 
+.home-work-project {
+	display: inline-block;
+	padding: 20px;
+}
+
 .home-work .title {
 	position: relative;
 	padding-top: 160px;
@@ -342,7 +347,7 @@ section.home {
 		background-color: black;
 		width: 240px;
 		margin: 0 auto;
-		margin-top: 60px;
+		margin-top: 56px;
 		padding: 30px;
 	}
 
