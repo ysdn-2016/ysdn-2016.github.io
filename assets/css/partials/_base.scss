@@ -8,12 +8,12 @@ body {
 }
 
 body {
+	@include font-smoothing;
 	color: $black;
 	font-family: $sofia;
 	font-size: 18px;
 	font-feature-settings: 'kern';
 	line-height: 1.6em;
-	@include font-smoothing;
 }
 
 a {

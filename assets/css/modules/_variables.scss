@@ -32,3 +32,33 @@ $ribbon-peek-offset: 12px;
 $footer-height: 68px;
 
 $project-grid-gutter: 40px;
+
+
+//
+// Measurements
+//
+
+$grid-width: 990px;
+$line-height: 1.5;
+
+$media-desktop-medium: 'only screen and (max-width: 1025px)';
+$media-desktop-small: 'only screen and (max-width: 1001px)';
+
+$media-tablet-medium: 'only screen and (max-width: 769px)';
+
+$media-mobile-large: 'only screen and (max-width: 426px)';
+$media-mobile-medium: 'only screen and (max-width: 376px)';
+$media-mobile-small: 'only screen and (max-width: 321px)';
+
+
+
+//
+// Sponsor Colors
+//
+
+$sponsor-facebook: #3b5998;
+$sponsor-rl-solutions: #7dc242;
+$sponsor-veritiv: #027e34;
+$sponsor-hughes-brannan: #666;
+$sponsor-critical-mass: #444;
+$sponsor-saman: #666;

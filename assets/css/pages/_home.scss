@@ -1,13 +1,12 @@
 section.home {
-	section {
-		padding-bottom: 60px;
-	}
 	// == Home Grid == //
-
 	$start: 1;
 	$end: 12;
 	$gridWidth: 1240px;
 	$spanPadding: 20px;
+	section {
+		padding-bottom: 60px;
+	}
 
 
 	[class*='span-'] {
@@ -84,8 +83,7 @@ section.home {
 	.row {
 		margin-bottom: 48px;
 	}
-	.col {
-	}
+
 	h3 {
 		font-size: 2.1em;
 		line-height: 1.25em;
@@ -99,11 +97,11 @@ section.home {
 	position: relative;
 	padding-top: 160px;
 	.shape-grid {
+		@include dot-grid;
 		position: relative;
 		overflow: hidden;
 		width: 80px;
 		height: 80px;
-		@include dot-grid;
 		margin-bottom: 20px;
 	}
 }
@@ -117,57 +115,57 @@ section.home {
 		right: 0.66px;
 	}
 	.shape-2 {
-		top: 26.6px;
-		left: 0.66px;
 		@include shape-circle(53.2px, $red);
 		z-index: 2;
+		top: 26.6px;
+		left: 0.66px;
 	}
 	.shape-3 {
-		bottom: 0.66px;
-		right: 0.66px;
 		@include shape-rectangle(80px, 26.6px, $blue, 0);
 		z-index: 1;
+		right: 0.66px;
+		bottom: 0.66px;
 	}
 }
 
 .home-work-phy {
 	.shape-1 {
 		@include shape-circle(26.6px, $red);
-		bottom: 0.66px;
-		right: 0.66px;
 		z-index: 2;
+		right: 0.66px;
+		bottom: 0.66px;
 	}
 	.shape-2 {
-		bottom: 26.6px;
-		left: 0.66px;
 		@include shape-rectangle(80px, 26.6px, $green, 0);
 		z-index: 1;
+		bottom: 26.6px;
+		left: 0.66px;
 	}
 	.shape-3 {
-		top: 0.66px;
-		left: 0.66px;
 		@include shape-triangle(53.2px, $yellow, 270);
 		z-index: 3;
+		top: 0.66px;
+		left: 0.66px;
 	}
 }
 
 .home-work-info {
 	.shape-1 {
-		@include shape-square(26.6px, #7CBDDF, 0);
+		@include shape-square(26.6px, #7cbddf, 0);
 		top: 0.66px;
 		left: 0.66px;
 	}
 	.shape-2 {
+		@include shape-square(26.6px, #7cbddf, 0);
+		z-index: 2;
 		top: 26.6px;
 		left: 26.6px;
-		@include shape-square(26.6px, #7CBDDF, 0);
-		z-index: 2;
 	}
 	.shape-3 {
+		@include shape-triangle(80px, #ee4862, 90);
+		z-index: 1;
 		top: 0.66px;
 		right: 0.66px;
-		@include shape-triangle(80px, #EE4862, 90);
-		z-index: 1;
 	}
 }
 
@@ -178,10 +176,10 @@ section.home {
 		left: 0.66px;
 	}
 	.shape-3 {
-		top: 26.6px;
-		left: 26.6px;
 		@include shape-triangle(53.2px, $blue, 180);
 		z-index: 1;
+		top: 26.6px;
+		left: 26.6px;
 	}
 }
 
@@ -189,65 +187,65 @@ section.home {
 
 .home-event {
 	@extend .fullwidth-override;
-	background-image: url(/assets/images/home-event-grid.png);
-	background-size: auto 640px;
-	background-position: center;
-	background-repeat: no-repeat;
 	background-color: $black;
+	background-image: url(/assets/images/home-event-grid.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 640px;
 	height: 680px;
 	h2,p {
 		color: white;
 	}
 
 	h2 {
-		padding-top: 20px;
 		width: 600px;
 		margin: 0 auto;
-		text-align: center;
-		font-size: 3.4em;
+		padding-top: 20px;
 		padding-bottom: 44px;
+		font-size: 3.4em;
+		text-align: center;
 	}
 
 	p {
 		width: 780px;
 		margin: 0 auto;
-		text-align: center;
-		font-size: 1.2em;
 		padding-bottom: 24px;
+		font-size: 1.2em;
 		line-height: 1.6;
+		text-align: center;
 	}
 
 	.wrap {
 		padding-top: 200px;
 	}
 	.bg-span {
-		padding: 30px;
 		background-color: black;
-		margin: 0 auto;
-		width:860px;
+		width: 860px;
 		height: 260px;
+		margin: 0 auto;
+		padding: 30px;
 	}
 
 	.button-wrap {
-		padding: 30px;
 		background-color: black;
-		margin: 0 auto;
 		width: 240px;
+		margin: 0 auto;
 		margin-top: 60px;
+		padding: 30px;
 	}
 
 	.button {
+		border: 1px solid white;
 		background-color: white;
-		margin: 0 auto;
 		display: block;
 		width: 180px;
+		margin: 0 auto;
 		color: black;
-		border: 1px solid white;
 		font-weight: normal;
 		&:hover {
+			border: 1px solid $red;
 			background-color: $red;
 			color: white;
-			border: 1px solid $red;
 		}
 	}
 }
@@ -259,13 +257,13 @@ section.home {
 	background-color: $black;
 	height: 660px;
 	h2 {
-		color: white;
 		width: 600px;
 		margin: 0 auto;
-		text-align: center;
-		font-size: 1.2em;
 		padding-bottom: 44px;
+		color: white;
+		font-size: 1.2em;
 		font-weight: normal;
+		text-align: center;
 	}
 }
 

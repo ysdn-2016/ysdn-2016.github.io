@@ -4,10 +4,10 @@
 	right: $ribbon-peek;
 	bottom: 0;
 	left: 0;
+	border-top: 1px black solid;
 	background: #fff;
 	width: 100%;
 	font-family: $sofia;
-	border-top: 1px black solid;
 	.inner {
 		max-width: 1200px;
 		margin: 0 auto;

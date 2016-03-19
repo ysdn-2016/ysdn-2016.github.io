@@ -1,4 +1,3 @@
-
 var router = require('page');
 var Lazyload = require('./lib/lazyload');
 

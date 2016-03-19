@@ -5,16 +5,16 @@ $header-light-bg: $white;
 
 .header {
 	position: relative;
-	padding: 30px 0;
 	z-index: 9;
+	padding: 30px 0;
 }
 
 .header-wrapper {
 	@include wrapper;
-	width: 90%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	width: 90%;
 }
 
 .header-logo {

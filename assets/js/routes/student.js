@@ -1,6 +1,4 @@
-
 module.exports = function () {
-
   savvior.init('[data-columns]', {
     'screen and (min-width: 1px)': { columns: 2 }
   });
@@ -10,10 +8,10 @@ module.exports = function () {
   //   parallax(e, $('.student-shapes').get(0), 0.4);
   // });
 
-  // function parallax (e, target, layer) {
-  //   var layer_coeff = 10 / layer;
-  //   var x = ($(window).width() - target.offsetWidth) / 2 - (e.pageX - ($(window).width() / 2)) / layer_coeff;
-  //   var y = (e.pageY - ($(window).height() / 2)) / layer_coeff;
-  //   $(target).offset({ top: 80 + y, left: 240 + x });
-  // }
+// function parallax (e, target, layer) {
+//   var layer_coeff = 10 / layer;
+//   var x = ($(window).width() - target.offsetWidth) / 2 - (e.pageX - ($(window).width() / 2)) / layer_coeff;
+//   var y = (e.pageY - ($(window).height() / 2)) / layer_coeff;
+//   $(target).offset({ top: 80 + y, left: 240 + x });
+// }
 };

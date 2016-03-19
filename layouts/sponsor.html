@@ -1,9 +1,67 @@
 {% extends 'site.html' %}
 
 {% block main %}
+	<section class="sponsors">
 
-	{% include 'partials/in-progress.html' %}
+		<div class="sponsors-header">
+			<h1>Sponsors</h1>
+			<p>We would like to extend our gratitute to our generous sponsors. <br> This show wouldn’t have been possible without their kind support.</p>
+			<p class="subline">If you are interested in supporting this or future years, please <a href="#">get in touch.</a></p>
 
-	<h2>Sponsors</h2>
-	{{ contents | safe }}
+			<div class="shapes">
+				<div class="shape sponsors-header-shape-1"></div>
+				<div class="shape sponsors-header-shape-2"></div>
+				<div class="shape sponsors-header-shape-3"></div>
+				<div class="shape sponsors-header-shape-4"></div>
+				<div class="shape sponsors-header-shape-5"></div>
+			</div>
+		</div> <!-- .sponsors-header -->
+
+		<section class="event-sponsors event-section">
+		<div class="event-sponsors-logos">
+					<div class="event-sponsors-presenting-sponsors">
+						<a class="event-presenting-sponsor event-sponsor event-sponsor--rl-solutions" href="http://rlsolutions.com" rel="nofollow" target="_blank">
+							{% set logo = "partials/sponsors/rl-solutions.html" %}
+							{% include logo %}
+						</a>
+					</div>
+					<div class="event-sponsors-founding-sponsors">
+						<a class="event-founding-sponsor event-sponsor event-sponsor--facebook" href="https://facebook.com/profile.php?=73322363" rel="nofollow" target="_blank">
+							{% set logo = "partials/sponsors/facebook.html" %}
+							{% include logo %}
+						</a>
+						<a class="event-founding-sponsor event-sponsor event-sponsor--veritiv" href="http://veritivcorp.com" rel="nofollow" target="_blank">
+							{% set logo = "partials/sponsors/veritiv.html" %}
+							{% include logo %}
+						</a>
+					</div>
+					<div class="event-sponsors-patron-sponsors">
+						<a class="event-patron-sponsor event-sponsor event-sponsor--hughes-brannan" href="http://hughesbrannanlaw.com" rel="nofollow" target="_blank">
+							{% set logo = "partials/sponsors/hughes-brannan.html" %}
+							{% include logo %}
+						</a>
+						<a class="event-patron-sponsor event-sponsor event-sponsor--critical-mass" href="http://www.criticalmass.com/" rel="nofollow" target="_blank">
+							{% set logo = "partials/sponsors/critical-mass.html" %}
+							{% include logo %}
+						</a>
+						<a class="event-patron-sponsor event-sponsor event-sponsor--saman" href="http://www.samandesign.com/" rel="nofollow" target="_blank">
+							{% set logo = "partials/sponsors/saman.html" %}
+							{% include logo %}
+						</a>
+				</div>
+			</div>
+		</section><!-- .sponsors -->
+
+	</section> <!-- .sponsors -->
+	<section class="sponsors">
+		<div class="sponsors-header">
+			<h1>RL Solutions</h1>
+			<p>Presenting Sponsor</p>
+		</div> <!-- .sponsors-header -->
+		<div class="sponsors-videos">
+			<style>.embed-container {position: relative; padding-bottom: 28.125%; height: 0; overflow: hidden; max-width: 50%; display: inline-block; width: 49%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%;     padding: 15px 20px;}</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/8057966' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+			<style>.embed-container { position: relative; padding-bottom: 28.125%; height: 0; overflow: hidden; max-width: 50%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/8057966' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+		</div>
+	</section>
+
 {% endblock %}

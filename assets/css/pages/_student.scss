@@ -10,11 +10,11 @@
 }
 
 .student-profile-header {
-	display: flex;
-	background-color: #f6f6f6;
 	position: relative;
-	min-height: 500px;
+	background-color: #f6f6f6;
+	display: flex;
 	overflow: hidden;
+	min-height: 500px;
 }
 
 .student-profile-header-wrapper {
@@ -28,11 +28,11 @@
 
 .student-profile-meta {
 	position: relative;
+	z-index: 2;
 	display: flex;
 	flex: 1 0 auto;
 	flex-direction: column;
 	justify-content: center;
-	z-index: 2;
 }
 
 .student-profile-hero {
@@ -114,8 +114,7 @@
 	}
 }
 
-.student-profile-portrait {
-}
+
 
 .profile-shapes {
 	position: absolute;
@@ -163,11 +162,11 @@
 		margin-top: 0.75em;
 	}
 	a {
-		padding-bottom: 1px;
 		@include underline($black);
+		padding-bottom: 1px;
 		&:hover {
-			color: $red;
 			@include underline-color($red);
+			color: $red;
 		}
 	}
 }
@@ -244,7 +243,7 @@
 	font-weight: normal;
 	line-height: 1.0;
 	letter-spacing: 0.06em;
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .student-profile-project-description {

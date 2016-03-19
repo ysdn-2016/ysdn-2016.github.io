@@ -1,5 +1,6 @@
 .shape {
 	position: absolute;
+
 	mix-blend-mode: multiply;
 	&.screen {
 		mix-blend-mode: screen !important;
@@ -13,39 +14,39 @@
 }
 
 @mixin shape-triangle($size, $color, $rotation) {
-  width: 0;
-  height: 0;
-  border-top: 0px solid transparent;
-  border-bottom: $size solid transparent;
-  border-right: $size solid $color;
-  transform: rotate($rotation + deg);
+	border-top: 0 solid transparent;
+	border-right: $size solid $color;
+	border-bottom: $size solid transparent;
+	width: 0;
+	height: 0;
+	transform: rotate($rotation + deg);
 }
 
 @mixin shape-circle($size, $color) {
 	border-radius: 50%;
+	background-color: $color;
 	width: $size;
-  height: $size;
-  background-color: $color;
+	height: $size;
 }
 
 @mixin shape-half-circle($size, $color, $rotation) {
-	height:$size/2;
-	width:$size;
 	border-radius: $size $size 0 0;
-	background-color:$color;
+	background-color: $color;
+	width: $size;
+	height: $size/2;
 	transform: rotate($rotation + deg);
 }
 
 @mixin shape-rectangle($width, $height, $color, $rotation) {
+	background-color: $color;
 	width: $width;
-  height: $height;
-  background-color: $color;
-  transform: rotate($rotation + deg);
+	height: $height;
+	transform: rotate($rotation + deg);
 }
 
 @mixin shape-square($size, $color, $rotation) {
+	background-color: $color;
 	width: $size;
-  height: $size;
-  background-color: $color;
-  transform: rotate($rotation + deg);
+	height: $size;
+	transform: rotate($rotation + deg);
 }
