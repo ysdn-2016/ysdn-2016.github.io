@@ -283,42 +283,6 @@ $sticky-scroll-offset: 60px;
 	.project-owner {
 		margin: 12px 0 0 -2px;
 	}
-
-	#project-fixed-overlay, #gallery {
-		display: flex;
-		width: 100%;
-		max-width: 1160px;
-	}
-
-	.project-assets {
-		pointer-events: none;
-		padding-left: $project-grid-gutter / 2;
-	}
-
-	.project-details {
-		pointer-events: auto;
-		flex: 1 0 32.333%;
-		padding-right: $project-grid-gutter / 2;
-
-		.project-header {
-			margin: 20px 0;
-		}
-
-		footer {
-			margin-bottom: 60px;
-		}
-	}
-
-	.project-assets {
-		flex: 1 0 66.667%;
-
-		img {
-			margin: 20px 0;
-		}
-	}
-	.project-assets:last-child {
-		margin-bottom: 0;
-	}
 }
 
 //
