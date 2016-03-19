@@ -286,11 +286,6 @@
 		max-width: 1160px;
 	}
 
-	.project-assets {
-		pointer-events: none;
-		padding-left: $project-grid-gutter / 2;
-	}
-
 	.project-details {
 		pointer-events: auto;
 		flex: 1 0 32.333%;
@@ -305,8 +300,9 @@
 		}
 	}
 
-	.project-assets {
+	.project-assets, .project-assets-holder {
 		flex: 1 0 66.667%;
+		padding-left: $project-grid-gutter / 2;
 
 		img {
 			margin: 20px 0;
