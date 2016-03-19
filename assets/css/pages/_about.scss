@@ -7,7 +7,7 @@
 
 .about-header {
 	padding-top: 80px;
-	padding-bottom: 160px;
+	padding-bottom: 40px;
 	h1 {
 		margin-bottom: 28px;
 		font-size: 2.2em;
@@ -177,7 +177,7 @@
 }
 
 .about-header-shape-5 {
-	@include shape-rectangle(42px, 92px, #7abddf, 0);
+	// @include shape-rectangle(42px, 92px, #7abddf, 0);
 	z-index: 99;
 	top: 666px;
 	left: 50%;
