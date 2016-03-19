@@ -90,7 +90,7 @@
           <a href="#" class="button">See More Projects</a>
         </div>
         <div class="col span-7 work">
-          {% for project in projects | filter("category", "information-design") | take(3) %}
+          {% for project in projects | filterByDiscipline("information") | take(3) %}
             <div class="home-work-project">
               <h4 class="student-profile-project-title">{{ project.title }}</h4>
               <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
@@ -100,7 +100,7 @@
       </div>
       <div class="row home-work-web">
         <div class="col span-7 work">
-          {% for project in projects | filter("category", "motion-design") | take(3) %}
+          {% for project in projects | filterByDiscipline("interactive") | take(3) %}
             <div class="home-work-project">
               <h4 class="student-profile-project-title">{{ project.title }}</h4>
               <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
