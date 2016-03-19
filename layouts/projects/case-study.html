@@ -1,37 +1,24 @@
 
 <article class="project project--case-study">
-	<header class="project-header">
-		<div class="title">
-			<span class="project-title">{{ title }}</span>
-			<span class="project-owner"><span class="light">by </span><a href="{{ owner.href }}">{{ owner.name }}</a></span>
-			<span class="project-category">{{ category | titleize }}</span>
+	{% include '../partials/project-header.html' %}
+	{% if headerImage %}
+	<section class="project-introduction">
+		<svg class="project-introduction-placeholder" viewBox="0 0 {{ headerImage.width }} {{ headerImage.height }}" preserveAspectRatio="xMinYMin" width="{{ headerImage.width }}">
+			<rect x="0" y="0" width="100%" height="100%"></rect>
+		</svg>
+		<img src="{{ pixel }}" data-src="{{ headerImage | asset_url }}" />
+	</section>
+	{% endif %}
+	<section class="project-body">
+		<div class="project-sidebar-filler">
+			<aside class="project-sidebar">
+				{% for header in headers %}
+					<a href="{{ header.href }}" class="project-sidebar-headers-link">{{ header.text }}</a>
+				{% endfor %}
+			</aside>
 		</div>
-	</header>
-	<div id="content">
-		<div class="sticktopwindow" id="project-fixed-overlay">
-			<div class="case-content">
-				<div class="case-nav">
-					<div id="introduction">
-						<div class="text">
-							<p>{{ owner.name }}</p>
-							<p>{{ owner.introduction | markdown | default("I&rsquo;m bad because I didn&rsquo;t fill out my introduction. So I have this placeholder copy instead. Butts.") | safe }}</p>
-							<a href="{{ owner.href }}">View Profile</a>
-						</div>
-						<img src="/assets/images/taylor-half.png" alt="">
-					</div>
-				</div>
-				<section class="project-content-holder"></section>
-			</div>
+		<div class="project-content">
+			{{ contents | safe }}
 		</div>
-		<div>
-			<div class="case-content">
-				<div class="case-nav-holder"></div>
-				<section class="project-content flat">
-					{{ contents | safe }}
-				</section>
-			</div>
-		</div>
-	</div>
-	<footer class="project-footer">
-	</footer>
+	</section>
 </article>

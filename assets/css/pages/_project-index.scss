@@ -1,0 +1,109 @@
+//
+// Navigation
+//
+
+.project-nav {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 24px;
+	font-family: $sofia;
+	font-size: 19px;
+
+	a {
+		padding: 0 8px;
+		color: $light-gray;
+		font-weight: 400;
+
+		&.active,
+		&:hover {
+			color: black;
+		}
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}
+
+//
+// Category Header
+//
+
+.project-category-intro {
+	background: $black;
+	margin-bottom: 48px;
+	padding: 48px;
+	font-family: $sofia;
+
+	&-title {
+		color: $white;
+	}
+
+	&-description {
+		color: $white;
+	}
+}
+
+//
+// Project Grid
+//
+
+.project-grid {
+	@include clearfix;
+	.size-1of3 {
+		width: 30%;
+		margin-right: 5%;
+	}
+	.size-1of2 {
+		width: 46%;
+		margin-right: 8%;
+	}
+	&[data-columns="3"] .column:nth-child(3n) {
+		margin-right: 0;
+	}
+	&[data-columns="2"] .column:nth-child(2n) {
+		margin-right: 0;
+	}
+}
+
+.project-preview {
+	display: block;
+	margin-bottom: 50px;
+}
+
+.project-preview-image {
+	@include image-placeholder;
+	display: block;
+	transition: opacity 300ms ease;
+	.project-preview.hover & {
+		opacity: 0.6;
+	}
+}
+
+.project-preview-details {
+	margin-top: 14px;
+	font-family: $sofia;
+}
+
+.project-preview-title {
+	display: block;
+	font-size: 20px;
+  font-weight: normal;
+  line-height: 1.3;
+	transition: opacity 300ms ease;
+	.project-preview.hover & {
+		opacity: 0.6;
+	}
+}
+
+.project-preview-student {
+	display: block;
+	margin-top: 6px;
+	color: #888;
+	font-size: 15px;
+	line-height: 1.0;
+	transition: opacity 300ms ease;
+	&:hover {
+		opacity: 0.6;
+	}
+}

@@ -21,18 +21,9 @@
   }
 }
 
-@mixin dotted-border ($color, $direction: null) {
-	background-image: linear-gradient(to right, $color 33%, rgba(255,255,255,0) 0%);
-	@if $direction != null {
-		background-repeat: repeat-x;
-		background-position: #{$direction};
-		background-size: 3px 1px;
-	}
-}
-
-@mixin dotted-underline ($color) {
-	@include dotted-border($color, "bottom");
-}
+//
+// Typography
+//
 
 @mixin font-smoothing ($value: antialiased) {
 	@if $value == antialiased {
@@ -45,13 +36,47 @@
 	}
 }
 
+@mixin underline ($color: currentColor) {
+	@include underline-color($color);
+	background-position: bottom;
+	background-repeat: repeat-x;
+	background-size: 3px 1px;
+	text-decoration: none;
+}
+
+@mixin underline-color ($color) {
+	background-image: linear-gradient(to right, $color 33%, rgba(255,255,255,0) 0%);
+}
+
+@mixin all-caps {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@mixin project-category {
+	@include all-caps;
+	color: #aaa;
+	font-size: 13px;
+	font-weight: normal;
+  line-height: 1.0;
+}
+
+//
+// Blocks
+//
+
+@mixin avatar {
+	img {
+		border-radius: 50%;
+		overflow: hidden;
+	}
+}
+
 @mixin image-placeholder() {
 	position: relative;
 
-	&-placeholder {
-		rect {
-			fill: #f2f2f2;
-		}
+	svg rect {
+		fill: #f2f2f2;
 	}
 
 	img {
@@ -61,9 +86,9 @@
 		opacity: 0.0;
 		backface-visibility: hidden;
 		transition: opacity 500ms ease;
+	}
 
-		&[lazyloaded] {
-			opacity: 1.0;
-		}
+	img[lazyloaded] {
+		opacity: 1.0;
 	}
 }

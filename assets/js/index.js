@@ -1,6 +1,6 @@
 
 var router = require('page');
-require('./lib/lazyload');
+var Lazyload = require('./lib/lazyload');
 
 var routes = {
   about: require('./routes/about'),
@@ -26,6 +26,9 @@ $(function () {
   var $eventPanel = $('.event-panel');
   var $eventRibbon = $('.event-ribbon-trigger');
 
+  /**
+   * Event Ribbon
+   */
   $eventRibbon.on('click', handleEventRibbonClick);
 
   function handleEventRibbonClick (e) {

@@ -1,24 +1,33 @@
 
-<article class="project project--standard" id="content">
-	<div class="sticktopwindow" id="project-fixed-overlay">
-		<div class="project-details">
-			<header class="project-header">
-				<span class="project-title">{{ title }}</span>
-				<span class="project-owner"><span class="light">by </span><a href="{{ owner.href }}">{{ owner.name }}</a></span>
-				<span class="project-category">{{ category | titleize }}</span>
-			</header>
-			<section class="project-content">
-				{{ contents | safe }}
-			</section>
+<article class="project project--standard">
+	<section class="project-body">
+		<div class="project-sidebar-filler">
+			<aside class="project-sidebar">
+				<header class="project-header">
+					<div class="project-header-title{% if title.length < 10 %} project-header-title--large{% endif %}">{{ title }}</div>
+					<div class="project-owner">
+						<a class="project-owner-image" href="{{ owner.href }}">
+							<img src="{{ owner.strip | asset_url({ width: 120, height: 120, fit: 'facearea', face: 2, facepad: 1.4 }) }}" alt="{{ owner.name }}" draggable="false" />
+						</a>
+						<div class="project-owner-details">
+							<a class="project-owner-name" href="{{ owner.href }}" >{{ owner.name }}</a>
+							<a class="project-owner-category" href="/work/{{ category }}">{{ category | titleize }}</a>
+						</div>
+					</div>
+				</header>
+				<div class="project-markdown">{{ contents | stripAssets | safe }}</div>
+			</aside>
 		</div>
-		<div class="project-assets"></div>
-	</div>
-	<div id="gallery">
-		<div class="project-details"></div>
-		<div class="project-assets">
+		<div class="project-content">
+			{{ contents | onlyVideoAssets | safe }}
 			{% for asset in assets %}
-				<img src="{{ asset.url }}" />
+				<figure>
+					<svg viewBox="0 0 {{ asset.width }} {{ asset.height }}" preserveAspectRatio="xMinYMin" width="{{ asset.width }}">
+						<rect x="0" y="0" width="100%" height="100%"></rect>
+					</svg>
+					<img src="{{ pixel }}" data-src="{{ asset | asset_url({ width: 800 }) }}" data-retina-src="{{ asset | asset_url({ width: 1600 }) }}" />
+				</figure>
 			{% endfor %}
 		</div>
-	</div>
+	</section>
 </article>

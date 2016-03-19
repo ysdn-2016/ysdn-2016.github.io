@@ -5,7 +5,9 @@
 	}
 }
 
-.student-profile {}
+.student-profile {
+	margin-right:
+}
 
 .student-profile-header {
 	display: flex;
@@ -71,7 +73,7 @@
 		margin-right: 0.75em;
 		font-size: 16px;
 		span {
-			@include dotted-border($black, 'bottom');
+			@include underline($black);
 			padding: 0 0 2px;
 		}
 	}
@@ -79,31 +81,31 @@
 		color: $red;
 	}
 	&-url:hover span {
-		@include dotted-border($red);
+		@include underline($red);
 	}
 	&-behance:hover {
 		color: $accent;
 	}
 	&-behance:hover span {
-		@include dotted-border($accent);
+		@include underline($accent);
 	}
 	&-instagram:hover {
 		color: $blue;
 	}
 	&-instagram:hover span {
-		@include dotted-border($blue);
+		@include underline($blue);
 	}
 	&-linkedin:hover {
 		color: $orange;
 	}
 	&-linkedin:hover span {
-		@include dotted-border($orange);
+		@include underline($orange);
 	}
 	&-github:hover {
 		color: $green;
 	}
 	&-github:hover span {
-		@include dotted-border($green);
+		@include underline($green);
 	}
 }
 
@@ -141,12 +143,12 @@
 }
 
 .student-profile-sidebar-note-label {
-	font-size: 17px;
+	// font-size: 17px;
 	margin-bottom: 12px;
 }
 
 .student-profile-sidebar-note {
-	margin-bottom: 24px;
+	margin-bottom: 28px;
 	p {
 		margin: 0;
 		font-size: 16px;
@@ -157,7 +159,11 @@
 	}
 	a {
 		padding-bottom: 1px;
-		@include dotted-underline($black);
+		@include underline($black);
+		&:hover {
+			color: $red;
+			@include underline-color($red);
+		}
 	}
 }
 
@@ -177,7 +183,7 @@
 .student-profile-projects-header {
 	display: block;
 	margin-bottom: 24px;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
 	line-height: 1.4em;
 	letter-spacing: 0.06em;

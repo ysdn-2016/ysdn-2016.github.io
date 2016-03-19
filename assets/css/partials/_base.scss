@@ -8,12 +8,12 @@ body {
 }
 
 body {
+	color: $black;
 	font-family: $sofia;
 	font-size: 18px;
 	font-feature-settings: 'kern';
 	line-height: 1.6em;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	@include font-smoothing;
 }
 
 a {
@@ -52,7 +52,6 @@ i {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
-	color: $black;
 	font-family: $sofia;
 	font-weight: bold;
 	text-rendering: optimizeLegibility;
@@ -76,19 +75,6 @@ h3 {
 h4 {
 	font-size: 14px;
 	line-height: 12px;
-}
-
-/**
- *
- * Paragraphs
- *
- */
-
-p, em, li, ul {
-	color: $black;
-	font-size: 18px;
-	line-height: 30px;
-	letter-spacing: 0.15px;
 }
 
 /**
