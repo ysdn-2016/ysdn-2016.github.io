@@ -1,5 +1,5 @@
-var previousUrl = ''
+var previousUrl = '';
 
 module.exports = function (ctx) {
-	console.log('yoyoyo')
+  console.log('yoyoyo');
 };

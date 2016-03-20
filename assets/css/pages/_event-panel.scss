@@ -37,13 +37,13 @@
 	// Subcomponents
 	//
 	&-content {
-		opacity: 0.0;
 		position: absolute;
 		top: 0;
-		left: $ribbon-peek;
 		right: $ribbon-peek;
 		bottom: 0;
+		left: $ribbon-peek;
 		overflow: scroll;
+		opacity: 0.0;
 		// max-width: 1200px;
 		// margin: 0 auto;
 		padding: 42px 20px 0;
