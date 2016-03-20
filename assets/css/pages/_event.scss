@@ -182,11 +182,12 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 }
 
 .event-introduction-arrow {
-	@include icon("arrow-down", 36px);
 	position: absolute;
 	left: 50%;
 	bottom: 24px;
 	margin-left: -18px;
+	color: #fff;
+	font-size: 32px;
 	animation: hover 2000ms ease infinite;
 	@media only screen and (max-width: $media-event-introduction-d) {
 		display: none;
