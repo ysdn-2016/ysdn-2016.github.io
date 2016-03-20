@@ -22,6 +22,7 @@
     "cash-dom": "^1.0.0",
     "component-raf": "^1.2.0",
     "fixed-sticky": "^0.1.6",
+    "instafeed.js": "^1.4.1",
     "layzr.js": "^2.0.4",
     "masonry-layout": "^4.0.0",
     "page": "^1.6.4",

@@ -373,7 +373,7 @@ section.home {
 .home-social {
 	@extend .fullwidth-override;
 	background-color: black;
-	height: 660px;
+	padding-bottom: 120px;
 	h2 {
 		width: 600px;
 		margin: 0 auto;
@@ -383,6 +383,62 @@ section.home {
 		font-weight: normal;
 		text-align: center;
 	}
+	h4 {
+		width: 800px;
+		margin: 0 auto;
+		color: white;
+		font-size: 1em;
+		text-align: center;
+		margin-top: 38px;
+	}
+	.home-social-feed {
+		width: 1200px;
+		margin: 0 auto;
+		&:after {
+			 content: "";
+		  display: table;
+		  clear: both;
+		}
+		img {
+			width: 270px;
+		}
+		a {
+			float: left;
+			margin: 15px;
+			width: 270px;
+			height: 270px;
+		}
+	}
+}
+
+.instagram-feed-item {
+	width: 270px;
+	height: 270px;
+	overflow: hidden;
+	z-index: 9;
+	position: relative;
+	&:hover .instagram-feed-item-caption {
+		opacity: 1;
+	}
+}
+
+.instagram-feed-item-caption {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	color: white;
+	font-size: 0.9em;
+	padding: 20px;
+	line-height: 1.45;
+	background-color: rgba(0,0,0,0.84);
+	display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 270px;
 }
 
 // ======== \/ SORT ME \/ ========== //
