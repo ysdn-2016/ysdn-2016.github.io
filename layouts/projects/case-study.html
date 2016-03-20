@@ -23,13 +23,16 @@
 	<section class="project-body">
 		<div class="project-sidebar-filler">
 			<aside class="project-sidebar">
-				<div class="project-callout">
-					<a class="project-callout-title" href="{{ href }}" data-back-to-top>{{ title }}</a>
-					<a class="project-callout-name" href="{{ owner.href }}">{{ owner.name }}</a>
-				</div>
 				{% for header in headers %}
 					<a href="{{ header.href }}" class="project-sidebar-headers-link">{{ header.text }}</a>
 				{% endfor %}
+				<div class="project-callout">
+					<a class="project-owner-image" href="{{ owner.href }}">
+						<img src="{{ owner.portrait | asset_url({ width: 120, height: 120, fit: 'facearea', facepad: 2.5 }) }}" alt="{{ owner.name }}" draggable="false" />
+					</a>
+					<a class="project-owner-name" href="{{ owner.href }}" >{{ owner.name }}</a>
+					<a class="project-owner-introduction" href="{{ owner.href }}" >{{ owner.introduction }}</a>	
+				</div>
 			</aside>
 		</div>
 		<div class="project-content">

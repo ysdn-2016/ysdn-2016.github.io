@@ -1,8 +1,4 @@
-
 module.exports = function (ctx) {
-	var $html = $('html');
-	var $panel = $('.event-panel');
-
 	setTimeout(setActionWork, 50);
 };
 

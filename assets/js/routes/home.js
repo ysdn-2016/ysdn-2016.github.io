@@ -1,7 +1,7 @@
 module.exports = function () {
-  var Instafeed = require('instafeed.js')
-  var stripHashtags = require('../lib/helpers/strip-hashtags')
-  var truncate = require('../lib/helpers/truncate')
+  var Instafeed = require('instafeed.js');
+  var stripHashtags = require('../lib/helpers/strip-hashtags');
+  var truncate = require('../lib/helpers/truncate');
 
   var feedOptions = {
     clientId: '467ede5a6b9b48ae8e03f4e2582aeeb3',
@@ -9,7 +9,7 @@ module.exports = function () {
     sortBy: 'most-recent',
     template: require('../templates/insta_home.html'),
     limit: 8
-  }
+  };
 
   $('.home').mousemove(function (e) {
     // parallax(e, $('.logo').get(0), .11);
@@ -37,14 +37,14 @@ module.exports = function () {
       userId: feedOptions.userId,
       template: feedOptions.template,
       filter: function (item) {
-          // HACK: we adjust the captions in filter function 🙈
-          item.caption.text = stripHashtags(item.caption.text)
-          item.caption.text = truncate(item.caption.text, 200)
-          return item.type === 'image'
+        // HACK: we adjust the captions in filter function 🙈
+        item.caption.text = stripHashtags(item.caption.text);
+        item.caption.text = truncate(item.caption.text, 200);
+        return item.type === 'image';
       },
-      })
-      feed.run()
-    return feed
+    });
+    feed.run();
+    return feed;
   }
 
   instagramFeed('home-insta');

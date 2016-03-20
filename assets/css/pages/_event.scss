@@ -35,8 +35,8 @@ $event-grid-increment: 34px; // NOTE: taken from space between circles in grid s
 	img,
 	svg {
 		-webkit-user-drag: none;
-		-moz-user-drag: none;
-		user-drag: none;
+		   -moz-user-drag: none;
+		        user-drag: none;
 	}
 }
 
@@ -59,10 +59,12 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 }
 
 .event-introduction-overlay {
-	@include fill();
-
+	@include fill;
 	background-size: cover;
 	z-index: 1;
+	background: linear-gradient(to top, rgba($blue, 1.0), rgba($blue, 0.01) 30%, rgba($blue, 0.00)),
+	url('/assets/images/grad-show-wide.jpg') center center no-repeat;
+	background-size: cover;
 	opacity: 0.15;
 	.event-panel.blue & {
 		background:
@@ -84,17 +86,17 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 .event-introduction-logo {
 	position: relative;
 	z-index: 2;
-	margin-bottom: 12vh;
 	max-width: 120px;
+	margin-bottom: 12vh;
 
 	@media #{$media-desktop-small} {
-		margin-bottom: 10vh;
 		max-width: 120px;
+		margin-bottom: 10vh;
 	}
 
 	@media #{$media-mobile-small} {
-		margin-bottom: 6vh;
 		max-width: 100px;
+		margin-bottom: 6vh;
 	}
 }
 
@@ -169,7 +171,7 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	margin-left: 1em;
 	font-size: 16px;
 	&::before {
-		content: "";
+		content: '';
 		top: 1px;
 		margin-right: 0.4em;
 	}
@@ -179,11 +181,11 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 }
 
 .event-introduction-date::before {
-	@include icon("calendar", 36px);
+	@include icon('calendar', 36px);
 }
 
 .event-introduction-venue::before {
-	@include icon("marker", 36px);
+	@include icon('marker', 36px);
 }
 
 .event-introduction-date::before,
@@ -197,8 +199,8 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 
 .event-introduction-arrow {
 	position: absolute;
-	left: 50%;
 	bottom: 24px;
+	left: 50%;
 	margin-left: -18px;
 	color: #fff;
 	font-size: 32px;
@@ -239,6 +241,7 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	margin-left: 9%;
 	@media #{$media-tablet-medium} {
 		margin: 0;
+
 		order: 2;
 	}
 }
@@ -261,7 +264,6 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	display: flex;
 	align-items: center;
 	margin-top: 24px;
-	margin-left: auto;
 	margin-right: auto;
 	color: #fff;
 	opacity: 0.75;
@@ -292,6 +294,7 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	margin: 0;
 	@media #{$media-tablet-medium} {
 		margin-bottom: 48px;
+
 		order: 1;
 	}
 }
@@ -333,10 +336,10 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 //
 
 .event-details {
-	margin-bottom: 0;
 	// NOTE: we're switching from `padding` to `margin` to make it so we can
 	// use `position: absolute` and `bottom` on the .event-details-card
 	overflow: hidden;
+	margin-bottom: 0;
 	padding-top: 200px;
 	padding-bottom: 80px;
 	// @media only screen and (max-width: $media-event-about-a) {
@@ -351,10 +354,10 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 .event-details-map {
 	@include aspect-ratio(12, 6);
 	position: relative;
-	background: $accent !important;
-	margin-left: auto;
-	width: 90%;
 	z-index: 3;
+	background: $accent !important;
+	width: 90%;
+	margin-left: auto;
 
 	@media #{$media-desktop-small} {
 		@include aspect-ratio(3, 2);
@@ -384,11 +387,12 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 .event-details-card {
 	position: absolute;
 	z-index: 4;
-	left: 20%;
 	bottom: -40px;
-	padding: 36px 36px 76px;
+	left: 20%;
+	background: $black;
 	width: 90%;
 	max-width: 400px;
+	padding: 36px 36px 76px;
 
 	.event-panel.blue & {
 		background: $blue;
@@ -406,10 +410,10 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	}
 
 	@media #{$media-mobile-large} {
-		left: 4%;
 		bottom: -10px;
-		padding: 8% 7% 7%;
+		left: 4%;
 		width: 92%;
+		padding: 8% 7% 7%;
 	}
 
 	@media #{$media-mobile-small} {
@@ -480,26 +484,26 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 }
 
 .venue-address-icon {
-	@include icon("new-window", 19px);
+	@include icon('new-window', 19px);
 	opacity: 0.5;
 	margin-right: 32px;
 }
 
 .event-details-grid-left {
-	left: 0;
 	top: 0;
+	left: 0;
 	@media only screen and (max-width: 1280px) {
 		left: -$event-grid-increment * 2;
 	}
 	@media #{$media-desktop-small} {
-		display: none;
 		top: $event-grid-increment * 3;
+		display: none;
 	}
 }
 
 .event-details-grid-right {
-	right: 0;
 	top: 0;
+	right: 0;
 	@media #{$media-desktop-small} {
 		display: none;
 	}
@@ -561,7 +565,7 @@ $media-event-faq-a: 601px;
 	margin-bottom: 6px;
 	font-weight: 600;
 	&::before {
-		content: "Q. ";
+		content: 'Q. ';
 		opacity: 0.5;
 	}
 }
@@ -570,7 +574,7 @@ $media-event-faq-a: 601px;
 	color: $off-black;
 	font-size: 16px;
 	&::before {
-		content: "A. ";
+		content: 'A. ';
 		opacity: 0.5;
 	}
 	a {
@@ -601,8 +605,8 @@ $media-event-faq-a: 601px;
 }
 
 .event-faq-grid-left {
-	left: 0;
 	bottom: 0;
+	left: 0;
 	@media only screen and (max-width: 1300px) {
 		left: -$event-grid-increment * 1;
 	}
@@ -638,8 +642,8 @@ $media-event-faq-a: 601px;
 		right: -$event-grid-increment * 3;
 	}
 	@media only screen and (max-width: 750px) {
-		bottom: -$event-grid-increment * 4;
 		right: -$event-grid-increment * 4;
+		bottom: -$event-grid-increment * 4;
 	}
 	@media only screen and (max-width: 650px) {
 		bottom: -$event-grid-increment * 5;
@@ -654,8 +658,8 @@ $media-event-faq-a: 601px;
 //
 
 .event-sponsors {
-	padding-bottom: 0;
 	overflow: hidden;
+	padding-bottom: 0;
 	color: $black;
 	text-align: center;
 	@media #{$media-mobile-large} {
@@ -732,13 +736,24 @@ $media-event-faq-a: 601px;
 		fill: rgb(20,20,20);
 	}
 	&--lassonde:hover {
-
-		.st0{fill:#010101;}
-		.st1{fill:#840055;}
-		.st2{fill:#CD163F;}
-		.st3{fill:#003660;}
-		.st4{fill:#33A58E;}
-		.st5{fill:#FDB714;}
+		.st0 {
+			fill: #010101;
+		}
+		.st1 {
+			fill: #840055;
+		}
+		.st2 {
+			fill: #cd163f;
+		}
+		.st3 {
+			fill: #003660;
+		}
+		.st4 {
+			fill: #33a58e;
+		}
+		.st5 {
+			fill: #fdb714;
+		}
 	}
 }
 
@@ -805,8 +820,8 @@ $media-event-faq-a: 601px;
 $media-event-social-a: 401px;
 
 .event-social {
-	color: $black;
 	overflow: hidden;
+	color: $black;
 	text-align: center;
 	@media only screen and (max-width: $media-event-social-a) {
 		padding-bottom: 10vh;
@@ -837,15 +852,14 @@ $media-event-social-a: 401px;
 
 .instagram-feed {
 	display: flex;
-	justify-content: space-between;
-
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .instagram-feed-item {
+	position: relative;
 	background-repeat: no-repeat;
 	background-size: cover;
-	position: relative;
 	display: block;
 	flex: 0 0 31%;
 	margin-bottom: 4%;
@@ -864,14 +878,15 @@ $media-event-social-a: 401px;
 	display: flex;
 	overflow: hidden;
 	opacity: 0.0;
+	pointer-events: none;
 	align-items: center;
 	justify-content: center;
 	padding: 2rem;
 	color: $white;
 	font-size: 15px;
 	line-height: 1.65;
-	pointer-events: none;
 	transition: opacity 200ms ease;
+
 	will-change: opacity;
 
 	@media only screen and (max-width: 501px) {
@@ -886,8 +901,8 @@ $media-event-social-a: 401px;
 }
 
 .event-social-grid-left {
-	left: 0;
 	top: 50%;
+	left: 0;
 
 	@media only screen and (max-width: 1280px) {
 		left: -$event-grid-increment * 2;
@@ -898,8 +913,8 @@ $media-event-social-a: 401px;
 }
 
 .event-social-grid-right {
-	right: -$event-grid-increment;
 	top: 35%;
+	right: -$event-grid-increment;
 
 	@media only screen and (max-width: 1345px) {
 		right: -$event-grid-increment * 2;
@@ -950,8 +965,8 @@ $media-event-social-a: 401px;
 }
 
 .event-footer-grid-left {
-	left: 0;
 	top: $event-section-padding;
+	left: 0;
 	@media only screen and (max-width: 1008px) {
 		left: -$event-grid-increment * 2;
 	}
@@ -961,8 +976,8 @@ $media-event-social-a: 401px;
 }
 
 .event-footer-grid-right {
-	right: 0;
 	top: $event-section-padding;
+	right: 0;
 	@media only screen and (max-width: 1008px) {
 		right: -$event-grid-increment * 2;
 	}
