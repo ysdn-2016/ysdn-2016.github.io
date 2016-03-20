@@ -1,5 +1,6 @@
 var router = require('page');
 var Lazyload = require('./lib/lazyload');
+var EventRibbon = require('./lib/ribbon')
 
 var routes = {
   about: require('./routes/about'),
@@ -14,31 +15,12 @@ var routes = {
 router('/', routes.home);
 router('/about/', routes.about);
 router('/work/', routes.work);
+router('/event/', routes.event);
 router('/:student/:project/', routes.project);
 router('/students/', routes.students);
 router('/:student/', routes.student);
-router('/event/', routes.event);
 router.start({ click: false });
 
 $(function () {
-  var $body = $('body');
-  var $eventPanel = $('.event-panel');
-  var $eventRibbon = $('.event-ribbon-trigger');
-
-  /**
-   * Event Ribbon
-   */
-  $eventRibbon.on('click', handleEventRibbonClick);
-
-  function handleEventRibbonClick (e) {
-    e.preventDefault();
-    if ($eventPanel.hasClass('event-panel--open')) {
-      $body.removeClass('locked');
-      $eventPanel.removeClass('event-panel--open');
-    } else {
-      $body.addClass('locked');
-      $eventPanel.addClass('event-panel--open');
-      router('/event/');
-    }
-  }
+  EventRibbon.init()
 });

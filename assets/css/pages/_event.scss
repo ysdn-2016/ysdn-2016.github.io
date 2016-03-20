@@ -488,6 +488,10 @@ $media-event-faq-a: 601px;
 	overflow: hidden;
 }
 
+.event-faq-wrapper {
+	@include wrapper(990px);
+}
+
 .event-faq-header {
 	margin-bottom: 48px;
 }
@@ -863,7 +867,7 @@ $media-event-social-a: 401px;
 }
 
 .event-social-grid-left {
-	left: -$event-grid-increment;
+	left: 0;
 	top: 50%;
 
 	@media only screen and (max-width: 1280px) {
