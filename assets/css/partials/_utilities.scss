@@ -23,3 +23,20 @@
 .size-1of4 {
 	width: 25%;
 }
+
+
+//
+// Elastic Scrolling Colors
+//
+
+html {
+	&.blue {
+		background: $blue;
+	}
+	&.yellow {
+		background: $yellow;
+	}
+	&.red {
+		background: $red;
+	}
+}

@@ -9,6 +9,7 @@ module.exports = (function () {
 	var $body;
 	var $eventPanel;
 	var $eventRibbon;
+	var $eventRibbonAction;
 
 	var previousUrl = DEFAULT_URL
 
@@ -16,6 +17,8 @@ module.exports = (function () {
 		$body = $('body');
 		$eventPanel = $('.event-panel');
 		$eventRibbon = $('.event-ribbon-trigger');
+		$eventRibbonAction = $('.event-ribbon-info-cta');
+
 		$eventRibbon.on('click', handleEventRibbonClick);
 	}
 
@@ -27,7 +30,10 @@ module.exports = (function () {
 
 	function handleEventRibbonClick (e) {
 		e.preventDefault();
-		if ($eventPanel.hasClass('event-panel--open')) {
+
+		var isOpen = $eventPanel.hasClass('event-panel--open')
+
+		if (isOpen) {
 			$body.removeClass('locked');
 			$eventPanel.removeClass('event-panel--open');
 			router(previousUrl);

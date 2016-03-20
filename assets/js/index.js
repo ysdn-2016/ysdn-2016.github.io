@@ -16,6 +16,7 @@ router('/', routes.home);
 router('/about/', routes.about);
 router('/work/', routes.work);
 router('/event/', routes.event);
+router.exit('/event/', routes.event.exit);
 router('/:student/:project/', routes.project);
 router('/students/', routes.students);
 router('/:student/', routes.student);

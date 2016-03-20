@@ -1,13 +1,13 @@
 <section class="event-panel
 	 {%- if id == 'event' %} event-panel--open{% endif -%}
 	 {%- if id == 'projects' %} yellow{% endif -%}
-	 {%- if id == 'students' %} black{% endif -%}
+	 {%- if id == 'students' %} red{% endif -%}
 "> {# ^ section specific color examples #}
 	<div class="event-ribbon">
 		<a href="/event/" class="event-ribbon-trigger">
 			<div class="event-ribbon-arrow">&rarr;</div>
 			<div class="event-ribbon-info">
-				<p class="event-ribbon-info-cta">Show Information</p>
+				<p class="event-ribbon-info-cta">Event Information</p>
 				<p class="event-ribbon-info-details">April 19, Toronto, ON</p>
 			</div>
 		</a>
@@ -50,8 +50,8 @@
 					<img src="/assets/images/grad-show-close.jpg" />
 				</figure>
 			</div>
-			<div class="event-grid event-about-grid-left"><img src="/assets/images/grid/a.svg" /></div>
-			<div class="event-grid event-about-grid-right"><img src="/assets/images/grid/b.svg" /></div>
+			<div class="event-grid event-about-grid-left">{% include 'partials/grids/a.html' %}</div>
+			<div class="event-grid event-about-grid-right">{% include 'partials/grids/b.html' %}</div>
 		</section>
 
 		<section class="event-details event-section">
@@ -90,8 +90,8 @@
 					</a>
 				</div>
 			</div>
-			<div class="event-grid event-details-grid-left"><img src="/assets/images/grid/c.svg" /></div>
-			<div class="event-grid event-details-grid-right"><img src="/assets/images/grid/d.svg" /></div>
+			<div class="event-grid event-details-grid-left">{% include 'partials/grids/c.html' %}</div>
+			<div class="event-grid event-details-grid-right">{% include 'partials/grids/d.html' %}</div>
 		</section>
 
 		<section class="event-faq event-section">
@@ -110,9 +110,9 @@
 					{% endfor %}
 				</div>
 			</div>
-			<div class="event-grid event-faq-grid-top"><img src="/assets/images/grid/e.svg" /></div>
-			<div class="event-grid event-faq-grid-left"><img src="/assets/images/grid/f.svg" /></div>
-			<div class="event-grid event-faq-grid-right"><img src="/assets/images/grid/g.svg" /></div>
+			<div class="event-grid event-faq-grid-top">{% include 'partials/grids/e.html' %}</div>
+			<div class="event-grid event-faq-grid-left">{% include 'partials/grids/f.html' %}</div>
+			<div class="event-grid event-faq-grid-right">{% include 'partials/grids/g.html' %}</div>
 		</section>
 
 		<section class="event-sponsors event-section">
@@ -148,9 +148,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="event-grid event-sponsors-grid-left"><img src="/assets/images/grid/h.svg" /></div>
-			<div class="event-grid event-sponsors-grid-top"><img src="/assets/images/grid/i.svg" /></div>
-			<div class="event-grid event-sponsors-grid-right"><img src="/assets/images/grid/j.svg" /></div>
+			<div class="event-grid event-sponsors-grid-left">{% include 'partials/grids/h.html' %}</div>
+			<div class="event-grid event-sponsors-grid-top">{% include 'partials/grids/i.html' %}</div>
+			<div class="event-grid event-sponsors-grid-right">{% include 'partials/grids/j.html' %}</div>
 		</section>
 
 		<section class="event-social event-section">
@@ -162,8 +162,8 @@
 				<div class="event-social-instagram-feed instagram-feed" data-instagram></div>
 				<h4 class="event-social-subheader event-section-subheader">Follow along on <a class="event-social-link--facebook" href="{{ facebook.url }}" target="_blank">Facebook</a>, <a class="event-social-link--twitter" href="{{ twitter.url }}" target="_blank">Twitter</a>, and <a class="event-social-link--instagram" href="{{ instagram.url }}" target="_blank">Instagram</a> for a behind-the-scenes look.</h4>
 			</div>
-			<div class="event-grid event-social-grid-left"><img src="/assets/images/grid/k.svg" /></div>
-			<div class="event-grid event-social-grid-right"><img src="/assets/images/grid/l.svg" /></div>
+			<div class="event-grid event-social-grid-left">{% include 'partials/grids/k.html' %}</div>
+			<div class="event-grid event-social-grid-right">{% include 'partials/grids/l.html' %}</div>
 		</section>
 
 		<section class="event-footer event-section">
@@ -171,9 +171,9 @@
 				<h2 class="event-footer-header event-section-header">Come meet <span class="no-wrap">the cast!</span></h2>
 				<h4 class="event-footer-subheader">Let us know if you&rsquo;re coming <a class="no-wrap" href="https://www.facebook.com/events/260128614319369/" target="_blank">on Facebook</a> and <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=YSDN+Grad+Show:+The+Intermission&dates=20160419T230000Z/20160420T030000Z&location=Liberty+Grand,+Toronto,+ON&sf=true&output=xml" target="_blank">add the event to <span class="no-wrap">your calendar</span></a>. We hope to <span class="no-wrap">see you there!</span></h4>
 			</div>
-			<div class="event-grid event-footer-grid-left"><img src="/assets/images/grid/m.svg" /></div>
-			<div class="event-grid event-footer-grid-right"><img src="/assets/images/grid/n.svg" /></div>
-			<div class="event-grid event-footer-grid-bottom"><img src="/assets/images/grid/o.svg" /></div>
+			<div class="event-grid event-footer-grid-left">{% include 'partials/grids/m.html' %}</div>
+			<div class="event-grid event-footer-grid-right">{% include 'partials/grids/n.html' %}</div>
+			<div class="event-grid event-footer-grid-bottom">{% include 'partials/grids/o.html' %}</div>
 		</section>
 	</main>
 </section>

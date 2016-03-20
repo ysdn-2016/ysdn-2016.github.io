@@ -44,6 +44,7 @@
 		right: $ribbon-peek;
 		bottom: 0;
 		overflow: scroll;
+		-webkit-overflow-scrolling: touch;
 		// max-width: 1200px;
 		// margin: 0 auto;
 		padding: 42px 20px 0;
