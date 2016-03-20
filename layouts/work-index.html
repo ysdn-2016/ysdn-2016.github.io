@@ -27,6 +27,7 @@
 	</div>
 	<div class="project-grid" data-columns>
 	{% for project in projects | shuffle %}
+	{% if project.thumbnail %}
 		<div class="project-preview">
 			<a href="{{ project.href }}" class="project-preview-image">
 				<svg class="project-preview-image-placeholder" viewBox="0 0 {{ project.thumbnail.width }} {{ project.thumbnail.height }}" preserveAspectRatio="xMinYMin" width="{{ project.thumbnail.width }}">
@@ -39,6 +40,7 @@
 				<a href="{{ project.owner.href }}" class="project-preview-student">{{ project.owner.name }}</a>
 			</div>
 		</div>
+	{% endif %}
 	{% endfor %}
 	</div>
 {% endblock %}

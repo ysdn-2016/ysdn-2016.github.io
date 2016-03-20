@@ -21,5 +21,4 @@ module.exports = function () {
   function projectMouseLeave (e) {
     $(this).removeClass('hover');
   }
-
 };
