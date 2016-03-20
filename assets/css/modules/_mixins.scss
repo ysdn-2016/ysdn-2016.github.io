@@ -1,8 +1,8 @@
 
 
-@mixin wrapper {
+@mixin wrapper ($width: $max-width) {
 	width: 90%;
-	max-width: $max-width;
+	max-width: $width;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -13,12 +13,25 @@
 	height: $hsize;
 }
 
+@mixin fill {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
 @mixin clearfix {
 	&:after {
 		content: '';
 		display: table;
 		clear: both;
 	}
+}
+
+@mixin aspect-ratio ($width, $height) {
+	padding-bottom: percentage($height / $width);
+	height: 0;
 }
 
 //
@@ -46,6 +59,11 @@
 
 @mixin underline-color ($color) {
 	background-image: linear-gradient(to right, $color 33%, rgba(255,255,255,0) 0%);
+}
+
+@mixin underline-hover-color ($color) {
+	@include underline-color(rgba($color, 0.6));
+	color: $color;
 }
 
 @mixin all-caps {

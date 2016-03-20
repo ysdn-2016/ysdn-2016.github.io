@@ -5,11 +5,11 @@
 	top: 0;
 	bottom: 0;
 	left: 100%;
-	background: $blue;
 	width: 100%;
 	padding-left: $ribbon-peek;
 	color: $black;
 	font-family: $sofia;
+	font-size: 16px;
 	transition: transform 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
 	transform: translateX(-$ribbon-peek);
 
@@ -38,8 +38,14 @@
 	//
 	&-content {
 		opacity: 0.0;
-		max-width: 1200px;
-		margin: 0 auto;
+		position: absolute;
+		top: 0;
+		left: $ribbon-peek;
+		right: $ribbon-peek;
+		bottom: 0;
+		overflow: scroll;
+		// max-width: 1200px;
+		// margin: 0 auto;
 		padding: 40px 20px 60px;
 		transition: opacity 400ms ease 600ms;
 	}
