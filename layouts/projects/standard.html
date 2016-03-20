@@ -4,6 +4,7 @@
 		<div class="project-sidebar-filler">
 			<aside class="project-sidebar">
 				<header class="project-header">
+					<a class="project-header-category" href="/work/{{ category }}">{{ category | titleize }}</a>
 					<div class="project-header-title{% if title.length < 10 %} project-header-title--large{% endif %}">{{ title }}</div>
 					<div class="project-owner">
 						<a class="project-owner-image" href="{{ owner.href }}">
@@ -11,7 +12,6 @@
 						</a>
 						<div class="project-owner-details">
 							<a class="project-owner-name" href="{{ owner.href }}" >{{ owner.name }}</a>
-							<a class="project-owner-category" href="/work/{{ category }}">{{ category | titleize }}</a>
 						</div>
 					</div>
 				</header>

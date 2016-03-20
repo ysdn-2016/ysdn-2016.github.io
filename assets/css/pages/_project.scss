@@ -8,15 +8,18 @@ $sticky-scroll-offset: 60px;
 .project-body {
 	position: relative;
 	display: flex;
+	margin: 0 -$project-grid-gutter/2;
 }
 
 .project-sidebar-filler {
 	position: relative;
-	flex: 0 1 36%;
+	flex: 0 1 33.334%;
+	padding:0 $project-grid-gutter/2;
 }
 
 .project-sidebar {
 	padding-right: 60px;
+	position: absolute;
 	&.pinned {
 		position: fixed;
 		top: $sticky-scroll-offset;
@@ -29,7 +32,8 @@ $sticky-scroll-offset: 60px;
 }
 
 .project-content {
-	flex: 1 0 64%;
+	flex: 1 0 66.666%;
+	padding:0 $project-grid-gutter/2;
 
 	& > :first-child {
 		margin-top: 0;
@@ -102,12 +106,21 @@ $sticky-scroll-offset: 60px;
 	display: block;
 	margin-bottom: 3px;
 	font-size: 18px;
-	line-height: 1.0;
+	line-height: 1.8;
+}
+
+.project-owner-introduction {
+	display: block;
+	margin-bottom: 3px;
+	font-size: 15px;
+	line-height: 1.3;
+	color: #aaa;
+	max-width: 300px;
 }
 
 .project-owner-image {
 	@include avatar;
-	max-width: 40px;
+	max-width: 50px;
 	margin-right: 12px;
 	margin-left: -6px;
 }
@@ -309,8 +322,8 @@ $sticky-scroll-offset: 60px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 32px;
-	padding-bottom: 32px;
+	margin-top: 32px;
+	padding-top: 32px;
 	line-height: 1.2;
 
 	&-title {
@@ -323,10 +336,10 @@ $sticky-scroll-offset: 60px;
 		font-size: 15px;
 	}
 
-	&::after {
+	&::before {
 		content: '';
 		position: absolute;
-		bottom: 0;
+		top: 0;
 		background: #f2f2f2;
 		display: block;
 		width: 75%;
