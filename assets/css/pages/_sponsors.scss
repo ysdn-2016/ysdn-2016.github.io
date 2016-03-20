@@ -38,7 +38,8 @@
 		text-align: center;
 	}
 	p {
-		width: 580px;
+		max-width: 580px;
+		width: 100%;
 		margin: 0 auto;
 		text-align: center;
 		&:not(:last-child) {
@@ -49,6 +50,7 @@
 		color: #aaa;
 		font-size: 16px;
 		line-height: 20px;
+		max-width: 680px;
 		a {
 			background-image: linear-gradient(to right, #aaa 33%, rgba(255, 255, 255, 0) 0%);
 			background-repeat: repeat-x;
