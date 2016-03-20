@@ -20,39 +20,32 @@
 		<section class="event-sponsors event-section">
 		<div class="event-sponsors-logos">
 					<div class="event-sponsors-presenting-sponsors">
-						<a class="event-presenting-sponsor event-sponsor event-sponsor--rl-solutions" href="http://rlsolutions.com" rel="nofollow" target="_blank">
-							{% set logo = "partials/sponsors/rl-solutions.html" %}
+						{% for sponsor in event.sponsors | filter('priority', 1) %}
+						<a class="event-presenting-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+							{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
 							{% include logo %}
 						</a>
+						{% endfor %}
 					</div>
 					<div class="event-sponsors-founding-sponsors">
-						<a class="event-founding-sponsor event-sponsor event-sponsor--facebook" href="https://facebook.com/profile.php?=73322363" rel="nofollow" target="_blank">
-							{% set logo = "partials/sponsors/facebook.html" %}
+						{% for sponsor in event.sponsors | filter('priority', 2) %}
+						<a class="event-founding-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+							{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
 							{% include logo %}
 						</a>
-						<a class="event-founding-sponsor event-sponsor event-sponsor--veritiv" href="http://veritivcorp.com" rel="nofollow" target="_blank">
-							{% set logo = "partials/sponsors/veritiv.html" %}
-							{% include logo %}
-						</a>
+						{% endfor %}
 					</div>
 					<div class="event-sponsors-patron-sponsors">
-						<a class="event-patron-sponsor event-sponsor event-sponsor--hughes-brannan" href="http://hughesbrannanlaw.com" rel="nofollow" target="_blank">
-							{% set logo = "partials/sponsors/hughes-brannan.html" %}
+						{% for sponsor in event.sponsors | filter('priority', 3) %}
+						<a class="event-patron-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+							{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
 							{% include logo %}
 						</a>
-						<a class="event-patron-sponsor event-sponsor event-sponsor--critical-mass" href="http://www.criticalmass.com/" rel="nofollow" target="_blank">
-							{% set logo = "partials/sponsors/critical-mass.html" %}
-							{% include logo %}
-						</a>
-						<a class="event-patron-sponsor event-sponsor event-sponsor--saman" href="http://www.samandesign.com/" rel="nofollow" target="_blank">
-							{% set logo = "partials/sponsors/saman.html" %}
-							{% include logo %}
-						</a>
+						{% endfor %}
+					</div>
 				</div>
-			</div>
-		</section><!-- .sponsors -->
+			</div><!-- .sponsors -->
 
-	</section> <!-- .sponsors -->
 	<!-- Hide until Videos are Received -->
 	<!--
 	<section class="sponsors">

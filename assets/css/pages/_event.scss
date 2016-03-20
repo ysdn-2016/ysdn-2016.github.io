@@ -696,6 +696,18 @@ $media-event-faq-a: 601px;
 	&--saman:hover .background {
 		fill: #f2f2f2;
 	}
+	&--lassonde path {
+		fill: rgb(20,20,20);
+	}
+	&--lassonde:hover {
+
+		.st0{fill:#010101;}
+		.st1{fill:#840055;}
+		.st2{fill:#CD163F;}
+		.st3{fill:#003660;}
+		.st4{fill:#33A58E;}
+		.st5{fill:#FDB714;}
+	}
 }
 
 .event-sponsors-grid-left {
