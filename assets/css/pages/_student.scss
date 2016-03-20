@@ -82,35 +82,48 @@
 			padding: 0 0 2px;
 		}
 	}
+
 	&-url:hover {
-		color: $red;
-	}
-	&-url:hover span {
-		@include underline($red);
+		color: #666;
+		span {
+			@include underline(#666);
+		}
 	}
 	&-behance:hover {
 		color: $accent;
+		span {
+			@include underline($accent);
+		}
 	}
-	&-behance:hover span {
-		@include underline($accent);
+	&-dribbble:hover {
+		color: $red;
+		span {
+			@include underline($red);
+		}
 	}
-	&-instagram:hover {
+	&-twitter:hover {
 		color: $blue;
-	}
-	&-instagram:hover span {
-		@include underline($blue);
+		span {
+			@include underline($blue);
+		}
 	}
 	&-linkedin:hover {
 		color: $orange;
-	}
-	&-linkedin:hover span {
-		@include underline($orange);
+		span {
+			@include underline($orange);
+		}
 	}
 	&-github:hover {
 		color: $green;
+		span {
+			@include underline($green);
+		}
 	}
-	&-github:hover span {
-		@include underline($green);
+	&-instagram:hover {
+		color: $accent;
+		span {
+			@include underline($accent);
+		}
 	}
 }
 
