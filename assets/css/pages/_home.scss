@@ -407,34 +407,37 @@ section.home {
 		width: 1200px;
 		margin: 0 auto;
 		&:after {
-			 content: "";
+			content: "";
 		  display: table;
 		  clear: both;
 		}
 		img {
 			width: 270px;
+			height: 270px;
+			overflow: hidden;
 		}
 		a {
 			float: left;
 			margin: 15px;
 			width: 270px;
 			height: 270px;
+			overflow: hidden;
 		}
 	}
 }
 
-.instagram-feed-item {
+.home-social-feed-item {
 	width: 270px;
 	height: 270px;
 	overflow: hidden;
 	z-index: 9;
 	position: relative;
-	&:hover .instagram-feed-item-caption {
+	&:hover .home-social-feed-item-caption {
 		opacity: 1;
 	}
 }
 
-.instagram-feed-item-caption {
+.home-social-feed-item-caption {
 	opacity: 0;
 	position: absolute;
 	top: 0;
@@ -451,6 +454,7 @@ section.home {
   justify-content: center;
   flex-direction: column;
   height: 270px;
+  width: 270px;
 }
 
 // ======== \/ SORT ME \/ ========== //
