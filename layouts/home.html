@@ -70,9 +70,12 @@
           <p>Communicating ideas through visual language on all manner of mediums, including branding identity, type and editorial design, various promotional materials, and more.</p>
           <a href="#" class="button">See More Projects</a>
         </div>
-        <div class="col span-7 work">
+        <div class="col span-8 work">
           {% for project in projects | filter("category", "graphic-design") | take(3) %}
             <div class="home-work-project">
+              <div class="thumbnail">
+                <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 100 }) }}" data-retina-src="{{ project.thumbnail | asset_url({ width: 200 }) }}" alt="{{ project.title }}" />
+              </div>
               <h4 class="student-profile-project-title">{{ project.title }}</h4>
               <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
             </div>
@@ -80,9 +83,12 @@
         </div>
       </div>
       <div class="row home-work-phy">
-        <div class="col span-7 work">
+        <div class="col span-8 work">
           {% for project in projects | filter("category", "packaging") | take(3) %}
             <div class="home-work-project">
+              <div class="thumbnail">
+                <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 100 }) }}" data-retina-src="{{ project.thumbnail | asset_url({ width: 200 }) }}" alt="{{ project.title }}" />
+              </div>
               <h4 class="student-profile-project-title">{{ project.title }}</h4>
               <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
             </div>
@@ -110,9 +116,12 @@
           <p>Prioritizing, simplifying, and creatively visualizing a wide range of complex textual and visual information.</p>
           <a href="#" class="button">See More Projects</a>
         </div>
-        <div class="col span-7 work">
+        <div class="col span-8 work">
           {% for project in projects | filterByDiscipline("information") | take(3) %}
             <div class="home-work-project">
+              <div class="thumbnail">
+                <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 100 }) }}" data-retina-src="{{ project.thumbnail | asset_url({ width: 200 }) }}" alt="{{ project.title }}" />
+              </div>
               <h4 class="student-profile-project-title">{{ project.title }}</h4>
               <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
             </div>
@@ -120,9 +129,12 @@
         </div>
       </div>
       <div class="row home-work-web">
-        <div class="col span-7 work">
+        <div class="col span-8 work">
           {% for project in projects | filterByDiscipline("interactive") | take(3) %}
             <div class="home-work-project">
+              <div class="thumbnail">
+                <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }}"/>
+              </div>
               <h4 class="student-profile-project-title">{{ project.title }}</h4>
               <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
             </div>
