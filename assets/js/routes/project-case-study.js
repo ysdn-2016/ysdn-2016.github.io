@@ -6,6 +6,7 @@ var SCROLL_TO_OFFSET = 80;
 var SCROLL_RATE = 1000;
 
 module.exports = function () {
+<<<<<<< Updated upstream
   var $window = $(window);
   var $body = $('.project-body');
   var $sidebar = $('.project-sidebar');

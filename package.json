@@ -60,6 +60,7 @@
     "metalsmith-validate": "^0.1.4",
     "mkdirp": "^0.5.1",
     "onchange": "^2.0.0",
+    "partialify": "^3.1.6",
     "postcss-cli": "^2.3.3",
     "semistandard-format": "^2.1.0",
     "slug-component": "^1.1.0",

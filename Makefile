@@ -24,6 +24,8 @@ LIBRARIES  = $(shell find ./assets/js/vendor -type f -name '*.js' -not -path "*j
 
 ICONS      = $(shell find './assets/icons/' -type f -name '*.svg')
 
+BROWSERIFY_ARGS = -t partialify
+
 DOMAIN     = ysdn2016.com
 STAGING    = staging.ysdn2016.com
 REPO       = ysdn-2016/ysdn-2016.github.io
@@ -44,7 +46,7 @@ watch: install build
 		$(BIN)/onchange 'assets/css/**/*.scss' -- make styles & \
 		$(BIN)/onchange 'assets/{fonts,images}/**/*' -- make assets & \
 		$(BIN)/onchange 'assets/js/vendor/**/*.js' -- make build/assets/libraries.js & \
-		$(BIN)/watchify assets/js/index.js -o build/assets/bundle.js & \
+		$(BIN)/watchify $(BROWSERIFY_ARGS) assets/js/index.js -o build/assets/bundle.js & \
 		$(BIN)/wtch --dir build 2>&1 >/dev/null & \
 		bin/www & wait
 
@@ -144,7 +146,7 @@ build/assets/bundle.css: $(STYLES)
 
 build/assets/bundle.js: $(SCRIPTS)
 	@mkdir -p $(@D)
-	@$(BIN)/browserify assets/js/index.js -o $@
+	@$(BIN)/browserify $(BROWSERIFY_ARGS) assets/js/index.js -o $@
 
 build/assets/libraries.js: $(LIBRARIES)
 	@cat assets/js/vendor/jquery.js $^ > $@
