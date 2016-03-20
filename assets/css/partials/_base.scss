@@ -9,6 +9,7 @@ body {
 
 body {
 	@include font-smoothing;
+	background: #fff;
 	color: $black;
 	font-family: $sofia;
 	font-size: 18px;

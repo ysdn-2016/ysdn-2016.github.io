@@ -1,14 +1,15 @@
 <section class="event-panel
 	 {%- if id == 'event' %} event-panel--open{% endif -%}
-	 {%- if id == 'projects' %} yellow{% endif -%}
-	 {%- if id == 'students' %} red{% endif -%}
+	 {%- if id == 'projects' %} yellow
+	 {%- elseif id == 'students' %} red
+	 {%- else %} blue{% endif -%}
 "> {# ^ section specific color examples #}
 	<div class="event-ribbon">
 		<a href="/event/" class="event-ribbon-trigger">
 			<div class="event-ribbon-arrow">&rarr;</div>
 			<div class="event-ribbon-info">
 				<p class="event-ribbon-info-cta">Event Information</p>
-				<p class="event-ribbon-info-details">April 19, Toronto, ON</p>
+				<p class="event-ribbon-info-details">April 19<span class="event-ribbon-bullet">&bullet;</span>Liberty Grand</p>
 			</div>
 		</a>
 		<div class="event-ribbon-social-media">
@@ -58,7 +59,7 @@
 			<div class="event-details-map" data-map></div>
 			<div class="event-details-card">
 				<h2 class="event-details-header event-section-header">Event Details</h2>
-				<div class="event-details-date">{{ event.date | date('F j') }}</div>
+				<div class="event-details-date">April 19</div>
 				<div class="event-details-sessions">
 					{% for session in event.sessions %}
 						<div class="event-details-session">
@@ -79,12 +80,12 @@
 					{% endfor %}
 				</div>
 				<div class="event-details-venue">
-					<div class="venue-name">{{ event.venue.name }}</div>
+					<div class="venue-name">Liberty Grand</div>
 					<a class="venue-address" href="https://goo.gl/maps/YuXwP9XNDhQ2" target="_blank" data-venue-address>
 						<div class="venue-address-details">
-							<span class="venue-address-street">{{ event.venue.address.street }}</span><br>
-							<span class="venue-address-city">{{ event.venue.address.city }},</span>
-							<span class="venue-address-state">{{ event.venue.address.state }}</span>
+							<span class="venue-address-street">25 British Columbia Road</span><br>
+							<span class="venue-address-city">Toronto,</span>
+							<span class="venue-address-state">Ontario</span>
 						</div>
 						<div class="venue-address-icon"></div>
 					</a>
@@ -160,7 +161,7 @@
 					<h4 class="event-social-subheader event-section-subheader">See what we&rsquo;ve been up to <span class="no-wrap">behind the curtains.</span></h4>
 				</header>
 				<div class="event-social-instagram-feed instagram-feed" data-instagram></div>
-				<h4 class="event-social-subheader event-section-subheader">Follow along on <a class="event-social-link--facebook" href="{{ facebook.url }}" target="_blank">Facebook</a>, <a class="event-social-link--twitter" href="{{ twitter.url }}" target="_blank">Twitter</a>, and <a class="event-social-link--instagram" href="{{ instagram.url }}" target="_blank">Instagram</a> for a behind-the-scenes look.</h4>
+				<h4 class="event-social-subheader event-section-subheader">Follow along on <a class="event-social-link event-social-link--facebook" href="{{ facebook.url }}" target="_blank">Facebook</a>, <a class="event-social-link event-social-link--twitter" href="{{ twitter.url }}" target="_blank">Twitter</a>, and <a class="event-social-link event-social-link--instagram" href="{{ instagram.url }}" target="_blank">Instagram</a> for a behind-the-scenes look.</h4>
 			</div>
 			<div class="event-grid event-social-grid-left">{% include 'partials/grids/k.html' %}</div>
 			<div class="event-grid event-social-grid-right">{% include 'partials/grids/l.html' %}</div>
