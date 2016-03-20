@@ -120,6 +120,13 @@ module.exports = {
 	      title: "Patron",
 	      url: "http://www.samandesign.com/",
 	      priority: 3
+	    },
+	    {
+	      id: "lassonde",
+	      company: "Lassonde School of Enginering",
+	      title: "Patron",
+	      url: "http://lassonde.yorku.ca/",
+	      priority: 3
 	    }
 	  ]
 	},
