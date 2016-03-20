@@ -459,7 +459,7 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 }
 
 .event-details-session-public {
-	color: lighten($black, 40%);
+	opacity: 0.4;
 	font-size: 13px;
 }
 
@@ -469,22 +469,19 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	justify-content: space-between;
 }
 
+.venue-address span {
+	@include underline($black);
+}
+
 .venue-address:hover,
 .venue-address.hover {
-	span {
-		@include underline-hover-color($red);
-	}
+	opacity: 0.6;
 	.venue-address-icon {
 		opacity: 0.3;
 	}
 }
 
-.venue-address span {
-	@include underline($off-black-faded);
-}
-
 .venue-address-icon {
-	@include icon('new-window', 19px);
 	opacity: 0.5;
 	margin-right: 32px;
 }
@@ -705,55 +702,21 @@ $media-event-faq-a: 601px;
 }
 
 .event-sponsor {
-	path,
+
+	transition: opacity 200ms ease;
+
+	path:not(.background),
 	rect {
-		transition: fill 200ms ease;
+		fill: $black;
 	}
 
-	&--facebook:hover path {
-		fill: $sponsor-facebook;
+	.event-panel.blue & path.background {
+		fill: $black;
+		opacity: 0.1;
 	}
-	&--rl-solutions:hover path {
-		fill: $sponsor-rl-solutions;
-	}
-	&--hughes-brannan:hover path {
-		fill: $sponsor-hughes-brannan;
-	}
-	&--veritiv:hover path {
-		fill: $sponsor-veritiv;
-	}
-	&--critical-mass:hover path {
-		fill: $sponsor-critical-mass;
-	}
-	&--saman:hover path,
-	&--saman:hover rect {
-		fill: $sponsor-saman;
-	}
-	&--saman:hover .background {
-		fill: #f2f2f2;
-	}
-	&--lassonde path {
-		fill: rgb(20,20,20);
-	}
-	&--lassonde:hover {
-		.st0 {
-			fill: #010101;
-		}
-		.st1 {
-			fill: #840055;
-		}
-		.st2 {
-			fill: #cd163f;
-		}
-		.st3 {
-			fill: #003660;
-		}
-		.st4 {
-			fill: #33a58e;
-		}
-		.st5 {
-			fill: #fdb714;
-		}
+
+	&:hover {
+		opacity: 0.6;
 	}
 }
 
