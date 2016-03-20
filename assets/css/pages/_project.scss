@@ -117,6 +117,7 @@ $sticky-scroll-offset: 60px;
 	color: #aaa;
 	font-size: 15px;
 	line-height: 1.4;
+	width: 100%;
 }
 
 .project-owner-image {
@@ -322,8 +323,8 @@ $sticky-scroll-offset: 60px;
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin-top: 32px;
-	margin-bottom: 6px;
 	padding-top: 32px;
+	padding-bottom: 32px;
 	line-height: 1.2;
 
 	&-title {
