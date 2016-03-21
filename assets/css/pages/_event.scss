@@ -65,7 +65,7 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	background: linear-gradient(to top, rgba($blue, 1.0), rgba($blue, 0.01) 30%, rgba($blue, 0.00)),
 	url('/assets/images/grad-show-wide.jpg') center center no-repeat;
 	background-size: cover;
-	opacity: 0.15;
+	opacity: 0.2;
 	.event-panel.blue & {
 		background:
 			linear-gradient(to top, rgba($blue, 1.0), rgba($blue, 0.01) 30%, rgba($blue, 0.00)),
