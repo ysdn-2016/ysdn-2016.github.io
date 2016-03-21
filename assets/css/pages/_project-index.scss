@@ -23,6 +23,28 @@
 			padding-left: 0;
 		}
 	}
+	.student-nav-view-search input{
+		border: none;
+		padding: 0;
+		font-size: 19px;
+		line-height: 1.6em;
+		width: 68px;
+		color: black;
+		transition: width 0.25s ease;
+
+		&:focus{
+			width: 200px;
+			&::-webkit-input-placeholder{
+			opacity: 0.3;
+		}
+		}
+		&::-webkit-input-placeholder{
+			color: black;
+			opacity: 1;
+			transition: opacity 0.25s ease;
+		}
+	}
+
 }
 
 //
@@ -30,17 +52,23 @@
 //
 
 .project-category-intro {
-	background: $black;
-	margin-bottom: 48px;
-	padding: 48px;
-	font-family: $sofia;
+	@include dot-grid;
+	background-color: #fff;
+	background-size: 160px;
+	position: relative;
+	width: 101%;
+	height: 420px;
+	margin-bottom: 20px;
+	margin-left: -0.5%;
 
 	&-title {
-		color: $white;
-	}
-
-	&-description {
-		color: $white;
+		color: $black;
+		font-size: 64px;
+		position: absolute;
+		bottom: 80px;
+		left: 60px;
+		background-color: $white;
+		padding: 20px 20px;
 	}
 }
 
