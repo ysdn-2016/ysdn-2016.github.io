@@ -62,12 +62,56 @@
 
 .student-profile-portrait {
 	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: -40px;
-	width: 60%;
-	img {
-		max-height: 100%;
+	right: 60px;
+	bottom: -140px;
+	width: 600px;
+	height: 600px;
+	.shapes {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		.shape-1 {
+			@include shape-rectangle(60px, 120px, $blue, 35);
+		}
+		.shape-2 {
+			@include shape-circle(80px, $red);
+
+		}
+		.shape-3 {
+			@include shape-triangle(60px, $yellow, 0);
+		}
+		.shape-4 {
+			@include shape-square(80px, $orange, 0);
+		}
+		.shape-5 {
+			@include shape-circle(40px, $green);
+		}
+		.wrapper {
+			position: absolute;
+			mix-blend-mode: multiply;
+		}
+		.shape-1-wrapper {
+			right: 160px;
+			bottom: 300px;
+		}
+		.shape-2-wrapper {
+			right: 210px;
+			bottom: 320px;
+		}
+		.shape-3-wrapper {
+			top: 80px;
+			left: 80px;
+		}
+		.shape-4-wrapper {
+			bottom: 260px;
+			left: 160px;
+		}
+		.shape-5-wrapper {
+			top: 60px;
+			right: 170px;
+		}
 	}
 }
 
