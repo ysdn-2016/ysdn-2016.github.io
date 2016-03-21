@@ -70,6 +70,27 @@
 		background-color: $white;
 		padding: 20px 20px;
 	}
+	.shape-1 {
+		@include shape-rectangle(360px, 120px, $blue, 0);
+		top: 202.3px;
+		left: 30%;
+		margin-left: -2px;
+	}
+	.shape-2 {
+		@include shape-square(120px, $yellow, 0);
+		top: 122.3px;
+		left: 121px;
+	}
+	.shape-3 {
+		@include shape-circle(240px, $red);
+		top: 82px;
+		left: 362px;
+	}
+	.shape-4 {
+		@include shape-triangle(240px, $yellow, 270);
+		top: 163.3px;
+		left: 1002px;
+	}
 }
 
 //

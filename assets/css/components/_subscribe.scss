@@ -15,5 +15,10 @@
 	}
 	.btn-primary {
 		font-family: $sofia;
+		padding: 10px 20px 10px 20px;
+		border: 1px solid $black;
+		&:hover{
+			border: 1px solid $red;
+		}
 	}
 }

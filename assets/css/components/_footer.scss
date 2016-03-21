@@ -16,7 +16,6 @@
 		width: 100%;
 		height: $footer-height;
 		margin: 0 auto;
-		padding: 0 20px;
 	}
 	.nav,
 	.info {
@@ -58,15 +57,5 @@
 		font-size: 21px;
 		line-height: 32px;
 		letter-spacing: 0.15px;
-	}
-	.button {
-		border: none;
-		background: $black;
-		padding: 6px 18px 7px;
-		font-size: 14px;
-		&:hover {
-			background: $red;
-			color: #fff !important;
-		}
 	}
 }

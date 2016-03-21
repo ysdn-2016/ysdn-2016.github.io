@@ -102,21 +102,17 @@ input {
 
 .btn-primary, .button {
 	cursor: pointer;
-	border: 1px solid #000;
 	background-color: $black;
 	display: inline-block;
 	margin: 0 0 10px 0;
-	padding: 10px 20px 10px 20px;
+	padding: 10px 20px 11px;
 	color: $white;
 	font-family: $sofia;
-	font-size: 16px;
-	font-weight: bold;
-	line-height: 19px;
+	font-size: 16px !important;
+	line-height: 19px !important;
 	text-align: center;
 	&:hover {
-		border: 1px solid #ececec;
-		background-color: #ececec;
-		color: $black !important;
+		background-color: $red;
 	}
 }
 
