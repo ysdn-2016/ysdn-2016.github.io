@@ -31,7 +31,7 @@
 						<img src="{{ owner.portrait | asset_url({ width: 120, height: 120, fit: 'facearea', facepad: 2.5 }) }}" alt="{{ owner.name }}" draggable="false" />
 					</a>
 					<a class="project-owner-name" href="{{ owner.href }}" >{{ owner.name }}</a>
-					<a class="project-owner-introduction" href="{{ owner.href }}" >{{ owner.introduction }}</a>	
+					<a class="project-owner-introduction" href="{{ owner.href }}" >{{ owner.introduction | markdown | safe }}</a>
 				</div>
 			</aside>
 		</div>

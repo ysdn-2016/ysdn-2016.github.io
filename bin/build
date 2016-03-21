@@ -65,6 +65,20 @@ site.use(branch('*.yml')
 )
 
 /**
+ * Build work categories
+ */
+site.use(branch('work/*.yml')
+	.use(yaml())
+	.use(typography())
+	.use(permalinks('work/:category'))
+	.use(layouts({
+		engine: 'swig',
+		partials: '../layouts',
+		directory: '../layouts'
+	}))
+)
+
+/**
  * Build students
  */
 site.use(branch('students/**/student.md')

@@ -3,11 +3,11 @@
 {% block main %}
 	<nav class="project-nav">
 		<div class="project-nav-filters">
-			<a href="#" class="category-target active" data-category="*">All</a>
-			<a href="#" class="category-target" data-category="communication">Communication</a>
-			<a href="#" class="category-target" data-category="physical">Physical</a>
-			<a href="#" class="category-target" data-category="information">Information</a>
-			<a href="#" class="category-target" data-category="interactive">Interactive</a>
+			<a href="/work/" class="category-target {%- if category === 'all' %} active{% endif %}" data-category="all">All</a>
+			<a href="/work/communication/" class="category-target {%- if category === 'communication' %} active{% endif %}" data-category="communication">Communication</a>
+			<a href="/work/physical/" class="category-target {%- if category === 'physical' %} active{% endif %}" data-category="physical">Physical</a>
+			<a href="/work/information/" class="category-target {%- if category === 'information' %} active{% endif %}" data-category="information">Information</a>
+			<a href="/work/interactive/" class="category-target {%- if category === 'interactive' %} active{% endif %}" data-category="interactive">Interactive</a>
 		</div>
 	</nav>
 	<div class="project-category-intro">
@@ -38,7 +38,11 @@
 	<div class="project-list">
 	</div>
 	<div class="project-grid" data-columns>
-	{% for project in projects | shuffle %}
+	{% set listing = projects | shuffle %}
+	{% if category !== 'all' %}
+		{% set listing = listing | filterByDiscipline(category) %}
+	{% endif %}
+	{% for project in listing %}
 	{% if project.thumbnail %}
 		<div class="project-preview">
 			<a href="{{ project.href }}" class="project-preview-image">
