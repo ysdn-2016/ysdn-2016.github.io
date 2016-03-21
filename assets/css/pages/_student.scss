@@ -2,11 +2,12 @@
 	.header {
 		position: absolute;
 		width: 100%;
+		padding-right: $ribbon-peek;
 	}
 }
 
 .student-profile {
-	// margin-right:
+	margin-right: $ribbon-peek;
 }
 
 .student-profile-header {
