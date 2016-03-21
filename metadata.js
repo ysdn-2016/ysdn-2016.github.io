@@ -1,4 +1,5 @@
 
+
 module.exports = {
 
 	env: process.env.NODE_ENV || 'development',
@@ -130,6 +131,28 @@ module.exports = {
 	    }
 	  ]
 	},
+
+	/**
+	 * Work categories
+	 */
+	categories: [
+		{ id: 'graphic-design', label: 'Graphic Design', discipline: 'communication' },
+		{ id: 'branding', label: 'Branding', discipline: 'communication' },
+		{ id: 'type-design', label: 'Type Design', discipline: 'communication' },
+		{ id: 'editorial', label: 'Editorial Design', discipline: 'communication' },
+		{ id: 'book', label: 'Book Design', discipline: 'communication' },
+		{ id: 'information-design', label: 'Information Design', discipline: 'information' },
+		{ id: 'data-visualization', label: 'Data Visualization', discipline: 'information' },
+		{ id: 'motion', label: 'Motion', discipline: 'interactive' },
+		{ id: 'web', label: 'Web', discipline: 'interactive' },
+		{ id: 'mobile', label: 'Mobile', discipline: 'interactive' },
+		{ id: 'physical-computing', label: 'Physical Computing', discipline: 'interactive' },
+		{ id: 'digital-product', label: 'Product Design', discipline: 'interactive' },
+		{ id: 'experiential', label: 'Experiential', discipline: 'physical' },
+		{ id: 'service', label: 'Service Design', discipline: 'physical' },
+		{ id: 'packaging', label: 'Packaging Design', discipline: 'physical' },
+		{ id: 'physical-product', label: 'Product Design', discipline: 'physical' }
+	],
 
 	/**
 	 * Social

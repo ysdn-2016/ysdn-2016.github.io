@@ -3,11 +3,11 @@
 {% block main %}
 	<nav class="project-nav">
 		<div class="project-nav-filters">
-			<a href="/work/" class="category-target {%- if category === 'all' %} active{% endif %}" data-category="all">All</a>
-			<a href="/work/communication/" class="category-target {%- if category === 'communication' %} active{% endif %}" data-category="communication">Communication</a>
-			<a href="/work/physical/" class="category-target {%- if category === 'physical' %} active{% endif %}" data-category="physical">Physical</a>
-			<a href="/work/information/" class="category-target {%- if category === 'information' %} active{% endif %}" data-category="information">Information</a>
-			<a href="/work/interactive/" class="category-target {%- if category === 'interactive' %} active{% endif %}" data-category="interactive">Interactive</a>
+			<a href="/work/" class="category-target {%- if discipline === 'all' %} active{% endif %}" data-category="all">All</a>
+			<a href="/work/communication/" class="category-target {%- if discipline === 'communication' %} active{% endif %}" data-category="communication">Communication</a>
+			<a href="/work/physical/" class="category-target {%- if discipline === 'physical' %} active{% endif %}" data-category="physical">Physical</a>
+			<a href="/work/information/" class="category-target {%- if discipline === 'information' %} active{% endif %}" data-category="information">Information</a>
+			<a href="/work/interactive/" class="category-target {%- if discipline === 'interactive' %} active{% endif %}" data-category="interactive">Interactive &amp; Motion</a>
 		</div>
 	</nav>
 	<div class="project-category-intro">
@@ -27,7 +27,12 @@
       </div>
 	</div>
 	<div class="project-nav">
-		<div class="project-nav-category">All Work</div>
+		<div class="project-nav-categories">
+			<div class="project-nav-category">All Work</div>
+			{% for category in categories | filter('discipline', discipline) %}
+				<div class="project-nav-category">{{ category.label }}</div>
+			{% endfor %}
+		</div>
 		<div class="project-nav-view">
 			<div class="student-nav-view-search">
 				<input type="text" id="student-nav-view-search-input" class="student-nav-view-search-input" placeholder="Search" />
@@ -39,8 +44,8 @@
 	</div>
 	<div class="project-grid" data-columns>
 	{% set listing = projects | shuffle %}
-	{% if category !== 'all' %}
-		{% set listing = listing | filterByDiscipline(category) %}
+	{% if discipline !== 'all' %}
+		{% set listing = listing | filterByDiscipline(discipline) %}
 	{% endif %}
 	{% for project in listing %}
 	{% if project.thumbnail %}
