@@ -7,6 +7,27 @@
 	}
 }
 
+.parallax {
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100vh;
+
+	perspective: 1px;
+}
+
+.parallax-layer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+	transform: translateZ(-0.04px);
+	&-double {
+		transform: translateZ(-0.08px);
+	}
+}
+
 @mixin dot-grid() {
 	background-image: url(/assets/images/dot-grid.svg);
 	background-repeat: repeat;

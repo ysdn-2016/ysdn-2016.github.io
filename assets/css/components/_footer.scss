@@ -55,17 +55,17 @@
 	p,
 	a {
 		font-family: $sofia;
-		font-size: 18px;
-		font-weight: bold;
+		font-size: 21px;
 		line-height: 32px;
+		letter-spacing: 0.15px;
 	}
 	.button {
 		border: none;
-		background: $red;
+		background: $black;
 		padding: 6px 18px 7px;
 		font-size: 14px;
 		&:hover {
-			background: darken(desaturate($red, 20%), 20%);
+			background: $red;
 			color: #fff !important;
 		}
 	}
