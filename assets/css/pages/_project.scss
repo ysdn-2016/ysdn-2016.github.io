@@ -230,6 +230,14 @@ $sticky-scroll-offset: 60px;
 			opacity: 1.0;
 			border-color: $red;
 		}
+
+		.caption {
+			font-size: 0.86em;
+			line-height: 1.5;
+			color: #aaa;
+			margin-top: -18px;
+			padding-bottom: 12px;
+		}
 	}
 
 	.contributors {
