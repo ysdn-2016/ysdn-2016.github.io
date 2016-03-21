@@ -37,6 +37,7 @@ module.exports = function () {
   var shouldPin = false;
   var isSidebarSmallerThanWindow = false;
   var isContentLargerThanSidebar = false;
+  var isSidebarLargerThanContent = false;
 
   loop.add(scroll);
   $window.on('resize load', resize);
@@ -52,8 +53,10 @@ module.exports = function () {
     heights.window = $window.height();
     isSidebarSmallerThanWindow = (heights.sidebar + 60) < heights.window;
     isContentLargerThanSidebar = heights.content > heights.sidebar;
+    isSidebarLargerThanContent = heights.content < heights.sidebar;
     shouldPin = isSidebarSmallerThanWindow && isContentLargerThanSidebar;
     setTracks();
+    if (isSidebarLargerThanContent) {$('.project-body').css('height', heights.sidebar);}
   }
 
   function scroll (e) {
