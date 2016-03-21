@@ -3,7 +3,7 @@
 {% block main %}
 	<section class="student-index">
 		<div class="student-search">
-			<input class="student-search-input" type="text" placeholder="Looking for someone?" autofocus />
+			<input class="student-search-input" type="text" placeholder="Looking for someone?" />
 		</div>
 		<div class="student-grid">
 			{% for item in studentGrid %}
@@ -18,7 +18,7 @@
 				{% if item.type === 'student' %}
 					<a class="student-preview student" href="{{ item.href }}" data-name="{{ item.name }}" data-categories="{{ item.projectCategories | map('id') | join(',') }}">
 						<div class="student-preview-image">
-							<img src="{{ item.strip | asset_url({ height: 400 }) }}" alt="{{ item.name }}" draggable="false" />
+							<img src="{{ pixel }}" data-src="{{ item.strip | asset_url({ height: 400 }) }}" data-retina-src="{{ item.strip | asset_url({ height: 800 }) }}" alt="{{ item.name }}" draggable="false" />
 						</div>
 						{# <div class="student-preview-name">{{ item.name }}</div> #}
 					</a>

@@ -98,6 +98,12 @@
 							{% endfor %}
 						</div>
 					{% endif %}
+					{% if !standardProjects.length && !caseStudies.length %}
+						<div class="student-profile-projects-header student-profile-projects-header-placeholder">Projects</div>
+						<div class="student-profile-projects-placeholder">
+							This student hasn't uploaded any work yet :(
+						</div>
+					{% endif %}
 				</div>
 			</div>
 		</main>
