@@ -4,11 +4,11 @@ module.exports = function () {
   });
 
   $('.student-profile').mousemove(function (e) {
-    parallax(e, $('.shape-1-wrapper'), 0.6);
-    parallax(e, $('.shape-2-wrapper'), 1.2);
-    parallax(e, $('.shape-3-wrapper'), 0.4);
-    parallax(e, $('.shape-4-wrapper'), -0.8);
-    parallax(e, $('.shape-5-wrapper'), -0.4);
+    parallax(e, $('.shape-1-wrapper'), 0.15);
+    parallax(e, $('.shape-2-wrapper'), 0.3);
+    parallax(e, $('.shape-3-wrapper'), 0.1);
+    parallax(e, $('.shape-4-wrapper'), -0.3);
+    parallax(e, $('.shape-5-wrapper'), -0.1);
   });
 
 function parallax (e, target, layer) {
