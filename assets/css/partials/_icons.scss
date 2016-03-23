@@ -24,6 +24,7 @@
 
 [data-icon]:before,
 .i-arrow-down:before,
+.i-arrow-up:before,
 .i-facebook:before,
 .i-github:before,
 .i-globe:before,
@@ -50,6 +51,7 @@
 }
 
 .i-arrow-down:before { content: "\f10a"; }
+.i-arrow-up:before { content: "\f10c"; }
 .i-facebook:before { content: "\f100"; }
 .i-github:before { content: "\f101"; }
 .i-globe:before { content: "\f102"; }
@@ -63,6 +65,7 @@
 .i-twitter:before { content: "\f109"; }
 
 $font-ysdn-icons-arrow-down: "\f10a";
+$font-ysdn-icons-arrow-up: "\f10c";
 $font-ysdn-icons-facebook: "\f100";
 $font-ysdn-icons-github: "\f101";
 $font-ysdn-icons-globe: "\f102";

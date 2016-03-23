@@ -6,19 +6,15 @@
 {% endif %}
 
 <footer class="footer">
-  <div class="inner">
-    <div class="bottom-bar">
-      <div class="nav">
-        <a href="/projects/" {% if id == 'projects' %}class="active"{% endif %}>Work</a>
-        <a href="/students/" {% if id == 'students' %}class="active"{% endif %}>Cast</a>
-        <a href="/sponsor/" {% if id == 'sponsors' %}class="active"{% endif %}>Sponsors</a>
-        <!-- Not sure where this link goes -->
-        <a href="/about/" {% if id == 'contact' %}class="active"{% endif %}>About</a>
-      </div>
-      <div class="info">
-        <p>Subscribe to our Newsletter</p>
-        {% include 'subscribe.html' %}
-      </div>
+  <div class="footer-wrapper">
+    <nav class="footer-nav">
+      <a href="/work/" {% if id == 'work' %}class="active"{% endif %}><span>Work</span></a>
+      <a href="/students/" {% if id == 'students' %}class="active"{% endif %}><span>Cast</span></a>
+      <a href="/sponsors/" {% if id == 'sponsors' %}class="active"{% endif %}><span>Sponsors</span></a>
+      <a href="/about/" {% if id == 'about' %}class="active"{% endif %}><span>About</span></a>
+    </nav>
+    <div class="footer-actions">
+      <a href="#!top" class="footer-back-to-top"><i class="i-arrow-up"></i><span>Back To Top</span></a>
     </div>
   </div>
 </footer>

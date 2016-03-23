@@ -1,52 +1,29 @@
 
 .footer {
 	// position: absolute;
-	right: $ribbon-peek;
+	padding-right: $ribbon-peek;
 	bottom: 0;
 	left: 0;
-	border-top: 1px black solid;
 	background: #fff;
-	width: 100%;
 	font-family: $sofia;
-	.inner {
-		max-width: 1200px;
-		margin: 0 auto;
-	}
-	.bottom-bar {
-		width: 100%;
-		height: $footer-height;
-		margin: 0 auto;
-	}
-	.nav,
-	.info {
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	.nav {
-		float: left;
-		vertical-align: bottom;
-		a {
-			margin-right: 20px;
-			padding-bottom: 2px;
-			color: #1b2020;
-			font-size: 0.875em;
-			line-height: 30px;
-			text-decoration: none;
-			&:hover {
-				border-bottom: 1px solid black;
-				padding-bottom: 0;
-			}
+	font-size: 0.875em;
+
+	a {
+		padding-bottom: 2px;
+		color: #1b2020;
+		line-height: 30px;
+		text-decoration: none;
+		&:hover span {
+			border-bottom: 1px solid black;
+			padding-bottom: 0;
 		}
 	}
-	.info {
-		float: right;
-	}
-	.info p {
-		display: inline-block;
-		margin: 0 10px;
+
+	a + a {
+		margin-left: 20px;
 	}
 }
+
 .feature {
 	padding-top: 40px;
 	padding-bottom: 48px;
@@ -57,5 +34,23 @@
 		font-size: 21px;
 		line-height: 32px;
 		letter-spacing: 0.15px;
+	}
+}
+
+.footer-wrapper {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px black solid;
+	padding: 20px 0 28px;
+	max-width: $max-width;
+	margin: 0 auto;
+}
+
+.footer-back-to-top {
+	i {
+		position: relative;
+		top: 2px;
+		margin-right: 6px;
+		font-size: 19px;
 	}
 }

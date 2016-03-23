@@ -25,4 +25,12 @@ router.start({ click: false });
 
 $(function () {
   EventRibbon.init();
+
+  $('a[href="#!top"]').on('click', function (e) {
+    e.preventDefault()
+    $('html,body,.parallax').animate({ scrollTop: 0 }, {
+      easing: 'easeOutExpo',
+      duration: 800
+    });
+  })
 });
