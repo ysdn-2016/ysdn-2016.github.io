@@ -1,15 +1,5 @@
-
 {% extends 'site.html' %}
-
 {% block main %}
-
-  <!-- <section class="home-introduction">
-    <h2 class="home-introduction-headline">York<span class="slash">/</span>Sheridan Program in Design&rsquo;s<br/>Graduating Class of 2016 presents</h2>
-    <div class="home-introduction-arrow"></div>
-  </section>
-  <div class="home-introduction-grid">
-    <img src="/assets/images/home-logo-black.png" alt="" class="home-logo">
-  </div> -->
   <section class="home grid-12">
     <header class="home-intro">
 
@@ -48,13 +38,13 @@
         <div class="col span-2"></div>
         <div class="col span-4">
           <div class="feature-text">
-            <p>To see the works and meet the cast, come check out our show, The Intermission, on April 19th at The Libery Grand.</p>
-            <a href="/event/" class="button">Event Information</a>
+            <p>To meet the cast and explore their work, come check out The Intermission on April 19th at The Liberty Grand.</p>
+            <a href="/event/" class="button">Show Information</a>
           </div>
         </div>
         <div class="col span-5">
-          <p>The YSDN Grad Show celebrates our last four years of design studies and accomplishments, and share our hopes and fears for the future. In the theatre world, this break in the action is called "the intermission". It is a chance for us to break character from the many roles we must adopt as designers and take a moment to truly introduce ourselves.</p>
-          <p>Look how far we've come and see the possibilities that lie ahead. Welcome to The Intermission.</p>
+          <p>The YSDN Grad Show commemorates our last four years of design study, and provides a chance to celebrate our accomplishments and share our hopes for the future. It is a chance for us to break character from the many roles we adopt as designers, and take a moment to truly introduce ourselves. </p>
+          <p>Join us as we pause to reflect on how far we've come and the possibilities that lie ahead. Welcome to the intermission.</p>
         </div>
       </div>
     </section> <!-- .home-info -->
@@ -71,8 +61,7 @@
           <a href="#" class="button">See More Projects</a>
         </div>
         <div class="col span-8 work">
-          <div class="home-work-col">
-            {% for project in projects | filter("category", "graphic-design") | shuffle | take(1) %}
+          {% for project in projects | filter("category", "graphic-design") | shuffle | take(4) %}
             <div class="home-work-project">
               <div class="thumbnail">
                 <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
@@ -81,44 +70,19 @@
               <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
             </div>
           {% endfor %}
-          </div>
-          <div class="home-work-col">
-            {% for project in projects | filter("category", "graphic-design") | shuffle | take(2) %}
-            <div class="home-work-project">
-              <div class="thumbnail">
-                <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
-              </div>
-              <h4 class="student-profile-project-title">{{ project.title }}</h4>
-              <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
-            </div>
-          {% endfor %}
-          </div>
         </div>
       </div>
       <div class="row home-work-phy">
         <div class="col span-8 work">
-          <div class="home-work-col">
-            {% for project in projects | filter("category", "packaging") | shuffle | take(2) %}
-              <div class="home-work-project">
-                <div class="thumbnail">
-                  <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
-                </div>
-                <h4 class="student-profile-project-title">{{ project.title }}</h4>
-                <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
+          {% for project in projects | filter("category", "packaging") | shuffle | take(4) %}
+            <div class="home-work-project">
+              <div class="thumbnail">
+                <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
               </div>
-            {% endfor %}
-          </div>
-          <div class="home-work-col">
-            {% for project in projects | filter("category", "packaging") | shuffle | take(1) %}
-              <div class="home-work-project">
-                <div class="thumbnail">
-                  <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
-                </div>
-                <h4 class="student-profile-project-title">{{ project.title }}</h4>
-                <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
-              </div>
-            {% endfor %}
-          </div>
+              <h4 class="student-profile-project-title">{{ project.title }}</h4>
+              <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
+            </div>
+          {% endfor %}
         </div>
         <div class="col span-4 title">
           <div class="shape-grid">
@@ -127,7 +91,7 @@
             <div class="shape shape-3"></div>
           </div>
           <h3>Physical Design</h3>
-          <p>Experimenting and crafting objects used in a three-dimensional space, from packaging to physical computing.</p>
+          <p>Creation and experimentation in three-dimensional space, from package design to physical computing.</p>
           <a href="#" class="button">See More Projects</a>
         </div>
       </div>
@@ -139,59 +103,34 @@
             <div class="shape shape-3"></div>
           </div>
           <h3>Information Design</h3>
-          <p>Prioritizing, simplifying, and creatively visualizing a wide range of complex textual and visual information.</p>
+          <p>Organizing, simplifying, and visualizing text and image, to efficiently communicate data in an interesting and thought-provoking way.</p>
           <a href="#" class="button">See More Projects</a>
         </div>
         <div class="col span-8 work">
-          <div class="home-work-col">
-            {% for project in projects | filterByDiscipline("information") | shuffle | take(1) %}
+          {% for project in projects | filterByDiscipline("information") | shuffle | take(4) %}
             <div class="home-work-project">
               <div class="thumbnail">
                 <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }}" data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}" alt="{{ project.title }}" />
               </div>
               <h4 class="student-profile-project-title">{{ project.title }}</h4>
-              <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
+              <h5 class="student-profile-project-category">{{ project.category | titleize }}</h5>
             </div>
           {% endfor %}
-          </div>
-          <div class="home-work-col">
-            {% for project in projects | filterByDiscipline("information") | shuffle | take(2) %}
-            <div class="home-work-project">
-              <div class="thumbnail">
-                <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
-              </div>
-              <h4 class="student-profile-project-title">{{ project.title }}</h4>
-              <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
-            </div>
-            {% endfor %}
-          </div>
         </div>
       </div>
       <div class="row home-work-web">
         <div class="col span-8 work">
-          <div class="home-work-col">
-            {% for project in projects | filterByDiscipline("interactive") | shuffle | take(2) %}
+          {% for project in projects | filterByDiscipline("interactive") | shuffle | take(4) %}
               <div class="home-work-project">
-                <div class="thumbnail">
-                  <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
-                </div>
-                <h4 class="student-profile-project-title">{{ project.title }}</h4>
-                <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
+                <a href="{{ project.url }}">
+                  <div class="thumbnail">
+                    <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
+                  </div>
+                  <h4 class="student-profile-project-title">{{ project.title }}</h4>
+                  <h5 class="student-profile-project-category">{{ project.category | titleize }}</h5>
+                </a>
               </div>
-            {% endfor %}
-          </div>
-          <div class="home-work-col">
-            {% for project in projects | filterByDiscipline("interactive") | shuffle | take(1) %}
-              <div class="home-work-project">
-                <div class="thumbnail">
-                  <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }}"/>
-                </div>
-                <h4 class="student-profile-project-title">{{ project.title }}</h4>
-                <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
-              </div>
-            {% endfor %}
-          </div>
-
+          {% endfor %}
         </div>
         <div class="col span-4 title">
           <div class="shape-grid">

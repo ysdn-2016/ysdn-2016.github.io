@@ -5,7 +5,7 @@ section.home {
 	$gridWidth: 1160px;
 	$spanPadding: 20px;
 	section {
-		padding-bottom: 60px;
+		padding-bottom: 20px;
 	}
 
 
@@ -192,7 +192,8 @@ section.home {
 // == Home Work == //
 
 .home-work {
-	padding-bottom: 80px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 	.row {
 		margin-bottom: 48px;
 	}
@@ -206,16 +207,34 @@ section.home {
 	}
 }
 
-.home-work-col {
+.home-work .work {
 	display: flex;
-	float: left;
-	flex-direction: column;
-	justify-content: center;
-	width: 50%;
-	height: 740px;
-	padding: 15px;
+	flex-wrap: wrap;
+	flex-direction: row;
 }
 
+.home-work-project {
+	align-items: center;
+	padding: 0 15px;
+	width: 50%;
+	transition: opacity 0.4s;
+	margin-bottom: 28px;
+	&:hover {
+		opacity: 0.6;
+		transition: opacity 0.4s;
+	}
+	&:nth-child(1), &:nth-child(2) {
+		align-self: flex-end;
+	}
+	&:nth-child(3), &:nth-child(4)  {
+	  align-items: flex-start;
+	}
+	.thumbnail {
+		overflow: hidden;
+		max-height: 420px;
+		margin-bottom: 16px;
+	}
+}
 
 
 .home-work .title {
