@@ -11,8 +11,21 @@
 		</div>
 	</nav>
 	<div class="project-category-intro">
-		<h2 class="project-category-intro-title">All Work</h2>
-      <div class="shapes">
+		<h2 class="project-category-intro-title">
+			{%if discipline === 'communication' %}
+				Communication
+			{%elseif discipline === 'physical' %}
+				Physical
+			{%elseif discipline === 'information' %}
+				Information
+			{%elseif discipline === 'interactive' %}
+				Interactive & Motion 
+			{%else %}
+				All Work
+			{% endif %}
+		</h2>
+
+      <div class="shapes {{ discipline }}">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
         <div class="shape shape-3"></div>

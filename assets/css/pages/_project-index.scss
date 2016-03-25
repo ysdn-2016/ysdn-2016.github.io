@@ -70,26 +70,96 @@
 		background-color: $white;
 		padding: 20px 20px;
 	}
-	.shape-1 {
-		@include shape-rectangle(360px, 120px, $blue, 0);
-		top: 202.3px;
-		left: 30%;
-		margin-left: -2px;
+	.shapes.all{
+		.shape-1 {
+			@include shape-circle(120px, $blue);
+			top: 122px;
+			left: 644px;
+			margin-left: -2px;
+		}
+		.shape-2 {
+			@include shape-square(120px, $yellow, 0);
+			top: 122.3px;
+			left: 121px;
+		}
+		.shape-3 {
+			@include shape-triangle(240px, $red, 180);
+			top: 122px;
+			left: 362px;
+		}
+		.shape-4 {
+			@include shape-triangle(240px, $green, 270);
+			top: 42px;
+			left: 802px;
+		}
+		.shape-5 {
+			@include shape-circle(120px, $red);
+			top: 202px;
+			left: 962px;
+		}
+		.shape-6 {
+			@include shape-rectangle(120px, 160px, $orange, 0);
+			top: 42px;
+			left: 42px;
+		}
 	}
-	.shape-2 {
-		@include shape-square(120px, $yellow, 0);
-		top: 122.3px;
-		left: 121px;
+	.shapes.physical{
+		.shape-1 {
+			@include shape-triangle(240px, $yellow, 270);
+		}
+		.shape-2 {
+			@include shape-rectangle(280px, 120px, $green, 0);
+		}
+		.shape-3 {
+			@include shape-circle(120px, $green);
+		}
 	}
-	.shape-3 {
-		@include shape-circle(240px, $red);
-		top: 82px;
-		left: 362px;
+	.shapes.communication{
+		.shape-1 {
+			@include shape-rectangle(360px, 120px, $blue, 0);
+			top: 242.3px;
+			left: 40%;
+			margin-left: -2px;
+		}
+		.shape-2 {
+			@include shape-square(120px, $yellow, 0);
+			top: 122.3px;
+			left: 121px;
+		}
+		.shape-3 {
+			@include shape-circle(240px, $red);
+			top: 42px;
+			left: 364px;
+		}
+		.shape-4 {
+			@include shape-square(240px, $yellow, 0);
+			top: 42px;
+			left: 802px;
+		}
+		.shape-5 {
+			@include shape-circle(120px, $red);
+			top: 202px;
+			left: 962px;
+		}
 	}
-	.shape-4 {
-		@include shape-triangle(240px, $yellow, 270);
-		top: 163.3px;
-		left: 1002px;
+	.shapes.information{
+		.shape-1 {
+			@include shape-square(120px, $blue, 0);
+		}
+		.shape-2 {
+			@include shape-square(120px, $blue, 0);
+		}
+		.shape-3 {
+			@include shape-triangle(240px, $red, 90);
+		}
+	}
+	.shapes.interactive{
+		.shape-1 {
+			@include shape-rectangle(120px, 280px, $yellow, 0);
+		}
+		.shape-2 {
+			@include shape-triangle(140px, $blue, 180);
+		}
 	}
 }
 
