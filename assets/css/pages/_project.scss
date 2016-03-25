@@ -71,6 +71,7 @@ $sticky-scroll-offset: 60px;
 	font-size: 36px;
 	font-weight: bold;
 	line-height: 43px;
+	text-align: center;
 	&--large {
 		margin-top: 4px;
 		font-size: 48px;
@@ -169,6 +170,9 @@ $sticky-scroll-offset: 60px;
 		max-width: 600px;
 		margin-bottom: 15px;
 		font-size: 18px;
+		@media #{$media-tablet-medium} {
+			width: 100%;
+		}
 	}
 
 	figure {
@@ -302,6 +306,19 @@ $sticky-scroll-offset: 60px;
 		margin: 0 0 4px;
 		font-size: 36px;
 	}
+	@media #{$media-tablet-medium}{
+		.project-body{
+				flex-direction: column;
+				.project-sidebar-filler, .project-content {
+					flex-basis: 100%;
+					.project-sidebar{
+						position: static;
+						padding-right: 0;
+						width: 100% !important; //Remove if Sidebar JS is turned off on mobile
+					}
+				}
+			}
+		}
 }
 
 //
@@ -318,6 +335,11 @@ $sticky-scroll-offset: 60px;
 		display: flex;
 		width: 100%;
 		max-width: 1160px;
+	}
+	@media #{$media-tablet-medium} {
+		.project-sidebar-filler {
+			display: none;
+		}
 	}
 }
 
@@ -391,7 +413,7 @@ $sticky-scroll-offset: 60px;
 		display: none;
 	}
 	.project-content, .project-details, .project-assets {
-		padding-right: 0 !important;
+		padding-right: 20px;
 	}
 	.project--case-study .project-header .title {
 		padding: 40px 20px 68px;

@@ -1,7 +1,6 @@
 
 .footer {
 	// position: absolute;
-	padding-right: $ribbon-peek;
 	bottom: 0;
 	left: 0;
 	background: #fff;
@@ -44,6 +43,18 @@
 	padding: 20px 0 28px;
 	max-width: $max-width;
 	margin: 0 auto;
+
+	@media #{$media-mobile-large} {
+		flex-direction: column;
+	    -webkit-align-items: center;
+	    align-items: center;
+	    padding: 16px 0 16px;
+	}
+}
+.footer-nav{
+	@media #{$media-mobile-large} {
+		padding-bottom: 20px;
+	}
 }
 
 .footer-back-to-top {

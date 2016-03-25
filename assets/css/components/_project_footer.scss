@@ -44,7 +44,7 @@
 
 @media only screen and (max-width: 740px) {
 	.project-footer {
-		flex-direction: column;
+		display: block;
 	}
 	.project-footer-event-prompt,
 	.project-footer-next-project,
