@@ -1,7 +1,15 @@
 module.exports = function () {
-  savvior.init('[data-columns]', {
-    'screen and (min-width: 1px)': { columns: 2 }
-  });
+
+  var config = {
+    container: '[data-columns]',
+    items: '.student-profile-project',
+    columnClass: 'column',
+    mediaQueries: [
+      { query: 'screen and (min-width: 1px)', columns: 2 }
+    ]
+  }
+
+  var grid = new Quartz(config)
 
   $('.student-profile').mousemove(function (e) {
     parallax(e, $('.shape-1-wrapper'), 0.15);

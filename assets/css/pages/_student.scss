@@ -319,7 +319,7 @@
 
 .student-profile-projects--standard {
 	@include clearfix;
-	.size-1of2 {
+	.column {
 		width: 46%;
 	}
 	.column:nth-child(2n) {

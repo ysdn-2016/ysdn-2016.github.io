@@ -16,8 +16,4 @@ document.addEventListener('DOMContentLoaded', function () {
   Lazyload.update().check().handlers(true);
 });
 
-window.addEventListener('savvior:setup', function (e) {
-  Lazyload.update().check();
-});
-
 module.exports = Lazyload;
