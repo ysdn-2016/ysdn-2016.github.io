@@ -40,6 +40,7 @@ ready(function () {
 	var map = googleMap(mapElement)
 	var marker = googleMapMarker()
 	var mapPosition = { x: 0.5, y: 0.5 }
+	var imageCount = 0
 
 	var feedElement = document.querySelector('[data-instagram]')
 	var feed = instagramFeed(feedElement)
@@ -62,16 +63,19 @@ ready(function () {
 			accessToken: '5139102.1677ed0.e96631b309c2454493762538cccb4e1d',
 			target: el,
 			sort: feedOptions.sortBy,
-			limit: feedOptions.limit,
+			limit: feedOptions.limit * 2,
 			get: 'user',
 			resolution: 'standard_resolution',
 			userId: feedOptions.userId,
 			template: feedOptions.template,
 			filter: function (item) {
+				if (item.type !== 'image') return false
+				if (imageCount >= feedOptions.limit) return false
 				// HACK: we adjust the captions in filter function 🙈
 				item.caption.text = stripHashtags(item.caption.text)
 				item.caption.text = truncate(item.caption.text, 200)
-				return item.type === 'image'
+				imageCount++
+				return true
 			},
 		})
 		feed.run()
