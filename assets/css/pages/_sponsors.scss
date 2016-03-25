@@ -104,7 +104,8 @@ $event-grid-increment: 34px; // NOTE: taken from space between circles in grid s
 		color: $black;
 		text-align: center;
 		@media #{$media-mobile-large} {
-			padding-top: 15vh;
+			padding-top: 10vh;
+			padding-bottom: 10vh
 		}
 	}
 

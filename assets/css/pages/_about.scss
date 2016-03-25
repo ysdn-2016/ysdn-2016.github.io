@@ -8,13 +8,17 @@
 .about-header {
 	padding-top: 80px;
 	padding-bottom: 40px;
+	@media #{$media-tablet-medium} {
+		padding-top: 0px;
+	}
 	h1 {
 		margin-bottom: 28px;
 		font-size: 2.2em;
 		text-align: center;
 	}
 	p {
-		width: 580px;
+		width: 100%;
+		max-width: 580px;
 		margin: 0 auto;
 		text-align: center;
 		&:not(:last-child) {
@@ -60,13 +64,18 @@
 	position: relative;
 	padding-top: 140px;
 	padding-bottom: 120px;
+	@media #{$media-tablet-medium} {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
 	h2 {
 		margin-bottom: 18px;
 		font-size: 2em;
 		text-align: center;
 	}
 	p {
-		width: 580px;
+		width: 100%;
+		max-width: 580px;
 		margin: 0 auto;
 		text-align: center;
 		&:not(:last-child) {
@@ -78,12 +87,16 @@
 // == Contact == //
 
 .about-contact {
+	position: relative;
 	background-color: #2b4074;
 	width: 100%;
 	min-height: 200px;
 	margin-bottom: 60px;
 	padding: 60px 100px 40px;
 	color: white;
+	@media #{$media-tablet-medium} {
+		padding: 60px 20px 40px;
+	}
 	h2 {
 		color: white;
 	}
@@ -136,6 +149,9 @@
 			&:first-child {
 				width: 360px;
 				margin-right: 40px;
+				@media #{$media-tablet-medium} {
+					margin-right: 0;
+				}
 			}
 			&:nth-child(2) {
 				width: 560px;
