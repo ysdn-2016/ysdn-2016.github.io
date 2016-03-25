@@ -25,7 +25,7 @@
 	font-weight: 600;
 }
 
-.student-grid-shape {
+.student-grid-shape-container {
 	display: flex;
 	flex: 0 1 22%;
 	align-items: center;
@@ -33,6 +33,24 @@
 	margin-right: 1.5%;
 	margin-bottom: 3.5rem;
 	margin-left: 1.5%;
+}
+
+.student-grid-shape {
+	&--triangle {
+		@include shape-triangle(60px, $yellow, 0);
+	}
+	&--rectangle {
+		@include shape-rectangle(40px, 80px, $red, 45);
+	}
+	&--half-circle {
+		@include shape-half-circle(60px, $green, 135);
+	}
+	&--circle {
+		@include shape-circle(60px, $blue);
+	}
+	&--square {
+		@include shape-circle(60px, $orange);
+	}
 }
 
 .student-preview {

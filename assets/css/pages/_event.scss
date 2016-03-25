@@ -13,9 +13,34 @@ $event-grid-increment: 34px; // NOTE: taken from space between circles in grid s
 		padding: 10vh 0 5vh;
 	}
 
-	svg ellipse {
+	h4 {
+		font-size: 18px;
+		font-weight: normal;
+	}
+
+	// NOTE: [rx="0.910405076"] is a proxy for a .grid class
+	ellipse[rx="0.910405076"] {
 		fill: $black;
 		stroke: $black;
+	}
+
+	.event-panel.blue & {
+		[fill="#{$blue}"] {
+			fill: $yellow;
+		}
+		[fill="#{$green}"] {
+			fill: darken($green, 15%);
+		}
+	}
+
+	.event-panel.red & {
+		[fill="#{$red}"] {
+			fill: $green;
+		}
+		ellipse[rx="0.910405076"] {
+			fill: $white;
+			stroke: $white;
+		}
 	}
 }
 
@@ -73,7 +98,7 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	}
 	.event-panel.red & {
 		background:
-			linear-gradient(to top, rgba($red, 1.0), rgba($red, 0.01) 30%, rgba($red, 0.00)),
+			linear-gradient(to top, rgba($darkened-red, 1.0), rgba($darkened-red, 0.01) 30%, rgba($darkened-red, 0.00)),
 			url("/assets/images/grad-show-wide.jpg") center center no-repeat;
 	}
 	.event-panel.yellow & {
@@ -264,11 +289,10 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	font-size: 17px;
 	line-height: 1.75;
 	a {
-		@include underline($off-black-faded);
+		@include underline(currentColor);
 		padding-bottom: 0.1em;
 		&:hover {
-			@include underline-color(rgba($red, 0.6));
-			color: $red;
+			opacity: 0.6;
 		}
 	}
 }
@@ -280,6 +304,9 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	margin-right: auto;
 	color: #fff;
 	opacity: 0.75;
+	.event-panel.blue & {
+		color: $black;
+	}
 }
 
 .event-about-school {
@@ -289,6 +316,9 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	}
 	path {
 		fill: #fff;
+	}
+	.event-panel.blue & path {
+		fill: $black;
 	}
 	@media #{$media-mobile-large} {
 		flex-basis: 40%;
@@ -411,7 +441,7 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 		background: $blue;
 	}
 	.event-panel.red & {
-		background: $red;
+		background: $darkened-red;
 	}
 	.event-panel.yellow & {
 		background: $yellow;
@@ -483,7 +513,7 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 }
 
 .venue-address span {
-	@include underline($black);
+	@include underline(currentColor);
 }
 
 .venue-address:hover,
@@ -545,18 +575,6 @@ $media-event-faq-a: 601px;
 	}
 }
 
-.event-faq-link {
-	&-contact:hover {
-		@include underline-hover-color($orange);
-	}
-	&-parking-main:hover {
-		@include underline-hover-color($blue);
-	}
-	&-parking-alternate:hover {
-		@include underline-hover-color($yellow);
-	}
-}
-
 .event-faq-column {
 	$gutter-width: 6%;
 	flex: 1 0 50%;
@@ -588,8 +606,11 @@ $media-event-faq-a: 601px;
 		opacity: 0.5;
 	}
 	a {
-		@include underline($off-black-faded);
+		@include underline(currentColor);
 		padding-bottom: 0.1em;
+	}
+	a:hover {
+		opacity: 0.6;
 	}
 }
 
@@ -926,8 +947,11 @@ $media-event-social-a: 401px;
 	width: 87%;
 	margin-bottom: 80px;
 	a {
-		@include underline($off-black-faded);
+		@include underline(currentColor);
 		padding-bottom: 0.1em;
+	}
+	a:hover {
+		opacity: 0.6;
 	}
 	@media #{$media-mobile-large} {
 		margin-bottom: 180px;

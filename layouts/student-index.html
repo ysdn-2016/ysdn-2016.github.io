@@ -8,8 +8,8 @@
 		<div class="student-grid">
 			{% for item in studentGrid %}
 				{% if item.type === 'shape' %}
-					<div class="student-grid-shape student-grid-shape--{{ item.shape }}">
-						{% include 'partials/shapes/student-index-triangle.html' %}
+					<div class="student-grid-shape-container">
+						<div class="student-grid-shape student-grid-shape--{{ item.shape }}"></div>
 					</div>
 				{% endif %}
 				{% if item.type === 'intermission' %}
