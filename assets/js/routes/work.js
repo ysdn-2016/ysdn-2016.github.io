@@ -6,10 +6,22 @@ module.exports = function () {
   var $grid = $('.project-grid');
   var $projects = $('.project-preview');
 
-  savvior.init('[data-columns]', {
-    'screen and (max-width: 800px)': { columns: 2 },
-    'screen and (min-width: 800px)': { columns: 3 },
-  });
+  var config = {
+    container: '[data-columns]',
+    items: '.project-preview',
+    columnClass: 'column',
+    mediaQueries: [
+      { query: 'screen and (max-width: 800px)', columns: 2 },
+      { query: 'screen and (min-width: 800px)', columns: 3 },
+    ]
+  }
+
+  var grid = new Quartz(config)
+
+  // savvior.init('[data-columns]', {
+  //   'screen and (max-width: 800px)': { columns: 2 },
+  //   'screen and (min-width: 800px)': { columns: 3 },
+  // });
 
   $projects.on('mouseenter', projectMouseEnter);
   $projects.on('mouseleave', projectMouseLeave);

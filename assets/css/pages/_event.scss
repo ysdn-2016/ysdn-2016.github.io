@@ -77,6 +77,7 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 			url("/assets/images/grad-show-wide.jpg") center center no-repeat;
 	}
 	.event-panel.yellow & {
+		opacity: 0.15;
 		background:
 			linear-gradient(to top, rgba($yellow, 1.0), rgba($yellow, 0.01) 30%, rgba($yellow, 0.00)),
 			url("/assets/images/grad-show-wide.jpg") center center no-repeat;
@@ -129,6 +130,10 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 		padding-left: 0.05em;
 	}
 
+	.event-panel.yellow & {
+		color: desaturate(darken($red, 5%), 10%);
+	}
+
 	@media only screen and (max-width: $media-event-introduction-a) {
 		font-size: 48px;
 	}
@@ -154,8 +159,11 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	display: flex;
 	justify-content: center;
 	padding-bottom: 6vh;
-	color: #fff;
+	color: $black;
 	font-size: 20px;
+	.event-panel.red & {
+		color: $white;
+	}
 	@media only screen and (max-width: $media-event-introduction-b) {
 		flex-direction: column;
 		align-items: center;
@@ -202,9 +210,14 @@ $media-event-introduction-d: 374px; // iPhone 4 + 5
 	bottom: 24px;
 	left: 50%;
 	margin-left: -18px;
-	color: #fff;
+	color: $black;
 	font-size: 32px;
 	animation: hover 2000ms ease infinite;
+
+	.event-panel.red & {
+		color: $white;
+	}
+
 	@media only screen and (max-width: $media-event-introduction-d) {
 		display: none;
 	}
@@ -568,8 +581,8 @@ $media-event-faq-a: 601px;
 }
 
 .event-faq-answer {
-	color: $off-black;
 	font-size: 16px;
+	opacity: 0.9;
 	&::before {
 		content: 'A. ';
 		opacity: 0.5;
@@ -657,7 +670,6 @@ $media-event-faq-a: 601px;
 .event-sponsors {
 	overflow: hidden;
 	padding-bottom: 0;
-	color: $black;
 	text-align: center;
 	@media #{$media-mobile-large} {
 		padding-top: 15vh;
@@ -710,9 +722,17 @@ $media-event-faq-a: 601px;
 		fill: $black;
 	}
 
+	path.background {
+		opacity: 0.1;
+	}
+
 	.event-panel.blue & path.background {
 		fill: $black;
-		opacity: 0.1;
+	}
+
+	.event-panel.red & path,
+	.event-panel.red & rect {
+		fill: $white;
 	}
 
 	&:hover {

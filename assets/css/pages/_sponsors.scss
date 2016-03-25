@@ -91,137 +91,146 @@
 $event-section-padding: 15vh;
 $event-grid-increment: 34px; // NOTE: taken from space between circles in grid svg
 
-.event-sponsors {
-	overflow: hidden;
-	padding-bottom: 0;
-	color: $black;
-	text-align: center;
-	@media #{$media-mobile-large} {
-		padding-top: 15vh;
+// TODO: @emmersonic, if you get a chance can you change these class names from
+// 'event-sponsors' to like 'all-sponsors' or 'sponsors-page-sponsors'?
+// By duplicating them you're affecting my work on the event page.
+// I've scoped it in for now, but it's best if things sit on the top level.
+
+.sponsors {
+
+	.event-sponsors {
+		overflow: hidden;
+		padding-bottom: 0;
+		color: $black;
+		text-align: center;
+		@media #{$media-mobile-large} {
+			padding-top: 15vh;
+		}
 	}
-}
 
-.event-sponsors-introduction {
-	margin-bottom: 56px;
-}
+	.event-sponsors-introduction {
+		margin-bottom: 56px;
+	}
 
-.event-sponsors-logos {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.event-sponsors-presenting-sponsors,
-.event-sponsors-founding-sponsors,
-.event-sponsors-patron-sponsors {
-	display: flex;
-	margin-bottom: 24px;
-
-	@media #{$media-tablet-medium} {
+	.event-sponsors-logos {
+		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 0;
-	}
-}
-
-.event-presenting-sponsor {
-	@media #{$media-tablet-medium} {
-		width: 90%;
-	}
-}
-
-.event-founding-sponsor {
-	max-width: 375px;
-}
-
-.event-patron-sponsor {
-	max-width: 350px;
-}
-
-.event-sponsors-list {
-	path,
-	rect {
-		transition: fill 200ms ease;
 	}
 
-	&--facebook:hover path {
-		fill: $sponsor-facebook;
-	}
-	&--rl-solutions:hover path {
-		fill: $sponsor-rl-solutions;
-	}
-	&--hughes-brannan:hover path {
-		fill: $sponsor-hughes-brannan;
-	}
-	&--veritiv:hover path {
-		fill: $sponsor-veritiv;
-	}
-	&--critical-mass:hover path {
-		fill: $sponsor-critical-mass;
-	}
-	&--saman:hover path,
-	&--saman:hover rect {
-		fill: $sponsor-saman;
-	}
-	&--saman:hover .background {
-		fill: #f2f2f2;
-	}
-}
+	.event-sponsors-presenting-sponsors,
+	.event-sponsors-founding-sponsors,
+	.event-sponsors-patron-sponsors {
+		display: flex;
+		margin-bottom: 24px;
 
-.event-sponsors-grid-left {
-	top: 0;
-	left: 0;
-	@media only screen and (max-width: 1300px) {
-		top: -$event-grid-increment * 3;
+		@media #{$media-tablet-medium} {
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 0;
+		}
 	}
-	@media only screen and (max-width: 1080px) {
-		left: -$event-grid-increment * 2;
-	}
-	@media only screen and (max-width: 960px) {
-		left: -$event-grid-increment;
-	}
-	@media only screen and (max-width: 880px) {
-		top: -$event-grid-increment * 5;
-		left: -$event-grid-increment * 2;
-	}
-	@media only screen and (max-width: 750px) {
-		top: -$event-grid-increment * 6;
-		left: -$event-grid-increment * 3;
-	}
-	@media only screen and (max-width: 650px) {
-		top: -$event-grid-increment * 7;
-		left: -$event-grid-increment * 3;
-	}
-	@media only screen and (max-width: 324px) {
-		top: -$event-grid-increment * 8.5;
-		left: $event-grid-increment * 2;
-	}
-}
 
-.event-sponsors-grid-right {
-	top: 0;
-	right: 0;
-	@media only screen and (max-width: 1300px) {
-		right: -$event-grid-increment;
+	.event-presenting-sponsor {
+		@media #{$media-tablet-medium} {
+			width: 90%;
+		}
 	}
-	@media only screen and (max-width: 1080px) {
-		right: -$event-grid-increment * 2;
+
+	.event-founding-sponsor {
+		max-width: 375px;
 	}
-	@media only screen and (max-width: 960px) {
-		top: -$event-grid-increment * 3;
-		right: -$event-grid-increment;
+
+	.event-patron-sponsor {
+		max-width: 350px;
 	}
-	@media only screen and (max-width: 880px) {
-		top: -$event-grid-increment * 3;
-		right: -$event-grid-increment * 3;
+
+	.event-sponsors-list {
+		path,
+		rect {
+			transition: fill 200ms ease;
+		}
+
+		&--facebook:hover path {
+			fill: $sponsor-facebook;
+		}
+		&--rl-solutions:hover path {
+			fill: $sponsor-rl-solutions;
+		}
+		&--hughes-brannan:hover path {
+			fill: $sponsor-hughes-brannan;
+		}
+		&--veritiv:hover path {
+			fill: $sponsor-veritiv;
+		}
+		&--critical-mass:hover path {
+			fill: $sponsor-critical-mass;
+		}
+		&--saman:hover path,
+		&--saman:hover rect {
+			fill: $sponsor-saman;
+		}
+		&--saman:hover .background {
+			fill: #f2f2f2;
+		}
 	}
-	@media only screen and (max-width: 750px) {
-		top: -$event-grid-increment * 4;
-		right: -$event-grid-increment * 4;
+
+	.event-sponsors-grid-left {
+		top: 0;
+		left: 0;
+		@media only screen and (max-width: 1300px) {
+			top: -$event-grid-increment * 3;
+		}
+		@media only screen and (max-width: 1080px) {
+			left: -$event-grid-increment * 2;
+		}
+		@media only screen and (max-width: 960px) {
+			left: -$event-grid-increment;
+		}
+		@media only screen and (max-width: 880px) {
+			top: -$event-grid-increment * 5;
+			left: -$event-grid-increment * 2;
+		}
+		@media only screen and (max-width: 750px) {
+			top: -$event-grid-increment * 6;
+			left: -$event-grid-increment * 3;
+		}
+		@media only screen and (max-width: 650px) {
+			top: -$event-grid-increment * 7;
+			left: -$event-grid-increment * 3;
+		}
+		@media only screen and (max-width: 324px) {
+			top: -$event-grid-increment * 8.5;
+			left: $event-grid-increment * 2;
+		}
 	}
-	@media only screen and (max-width: 324px) {
-		display: none;
+
+	.event-sponsors-grid-right {
+		top: 0;
+		right: 0;
+		@media only screen and (max-width: 1300px) {
+			right: -$event-grid-increment;
+		}
+		@media only screen and (max-width: 1080px) {
+			right: -$event-grid-increment * 2;
+		}
+		@media only screen and (max-width: 960px) {
+			top: -$event-grid-increment * 3;
+			right: -$event-grid-increment;
+		}
+		@media only screen and (max-width: 880px) {
+			top: -$event-grid-increment * 3;
+			right: -$event-grid-increment * 3;
+		}
+		@media only screen and (max-width: 750px) {
+			top: -$event-grid-increment * 4;
+			right: -$event-grid-increment * 4;
+		}
+		@media only screen and (max-width: 324px) {
+			display: none;
+		}
 	}
+
 }
 
 
