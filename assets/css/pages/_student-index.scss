@@ -1,13 +1,24 @@
 
 .student-search {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin-bottom: 64px;
-	text-align: center;
+}
+
+.student-search-icon {
+	@extend .i-search;
+	position: relative;
+	top: 2px;
 }
 
 .student-search-input {
 	border: none;
+	box-sizing: content-box;
 	font-size: 24px;
-	text-align: center;
+	padding-left: 0.5em;
+	overflow: visible;
+	will-change: width;
 }
 
 .student-grid {
@@ -16,23 +27,28 @@
 	margin: 0 -1.5%;
 }
 
+.student-grid--searching {
+	justify-content: center;
+}
+
+.student-grid-block,
 .student-grid-intermission {
 	display: flex;
-	flex: 0 1 50%;
+	flex: 0 1 22%;
+	margin: 0 1.5% 4%;
+}
+
+.student-grid-intermission {
+	flex-basis: 47%;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 3rem;
 	font-weight: 600;
 }
 
 .student-grid-shape-container {
 	display: flex;
-	flex: 0 1 22%;
 	align-items: center;
 	justify-content: center;
-	margin-right: 1.5%;
-	margin-bottom: 3.5rem;
-	margin-left: 1.5%;
 }
 
 .student-grid-shape {
@@ -54,11 +70,8 @@
 }
 
 .student-preview {
+	position: relative;
 	display: block;
-	flex-basis: 22%;
-	margin-right: 1.5%;
-	margin-bottom: 3rem;
-	margin-left: 1.5%;
 }
 
 .student-preview-image {
@@ -90,10 +103,46 @@
 }
 
 .student-preview-name {
-	margin-top: 12px;
+	position: absolute;
+	// margin-top: 12px;
+	color: #ccc;
+	top: -4px;
+	left: calc(100% - 32px);
+	width: 100%;
 	font-family: $sofia;
-	font-size: 19px;
-	font-weight: bold;
+	font-size: 13px;
+	// font-weight: bold;
 	line-height: 22px;
-	text-align: center;
+	text-align: left;
+	transform: rotate(90deg);
+	transform-origin: left bottom;
+	z-index: 9;
+	mix-blend-mode: multiply;
+}
+
+@media only screen and (max-width: 940px) {
+	.student-grid-block {
+		flex-basis: 30%;
+		margin: 0 1.5% 4%;
+	}
+
+	.student-grid-intermission {
+		flex-basis: 63%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.student-grid-block {
+		flex-basis: 48%;
+		margin: 0 0 4%;
+	}
+
+	.student-grid-block:nth-of-type(even) {
+		margin-left: 4%;
+	}
+
+	.student-grid-intermission {
+		flex-basis: 100%;
+		padding: 48px 0;
+	}
 }
