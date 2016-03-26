@@ -103,7 +103,6 @@ module.exports = function () {
 
   function setTracks () {
     var projectOffset = $project.offset();
-    console.log(isCaseStudy)
     if (isCaseStudy) {
       tracks.pinned.start = projectOffset.top - PINNED_SCROLL_OFFSET_FROM_TOP;
       tracks.pinned.end = projectOffset.top + $project.innerHeight() - $sidebar.outerHeight() - PINNED_SCROLL_OFFSET_FROM_TOP;
