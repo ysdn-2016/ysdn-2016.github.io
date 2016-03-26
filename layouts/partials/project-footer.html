@@ -27,6 +27,6 @@
 			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg==" data-src="{{ similar.thumbnail | asset_url({ width: 800, height: 400, fit: 'crop' }) }}" />
 		</a>
 		<a href="{{ similar.href }}" class="project-footer-preview-title">{{ similar.title }}</a>
-		<a href="/work/{{ similar.category }}" class="project-footer-preview-category">{{ similar.category | titleize }}</a>
+		<a href="{{ similar.owner.href }}" class="project-footer-preview-author">{{ similar.owner.name }}</a>
 	</div>
 </div>

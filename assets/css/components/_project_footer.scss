@@ -107,8 +107,16 @@
 }
 
 .project-footer-preview-category {
-	color: $light-gray;
 	color: #aaa;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 1.0;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.project-footer-preview-author {
+	color: #444;
 	font-size: 13px;
 	font-weight: normal;
 	line-height: 1.0;
