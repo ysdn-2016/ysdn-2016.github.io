@@ -13,7 +13,6 @@
 	font-size: 16px;
 	transition: transform 800ms cubic-bezier(0.190, 1.000, 0.220, 1.000), background 200ms ease-out 400ms;
 	transform: translateX(-$ribbon-peek);
-	will-change: transform;
 
 	//
 	// State (hover, open, etc.)
