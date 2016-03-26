@@ -26,7 +26,6 @@ module.exports = {
 			intermissionSentences: [
 				`Phew, there's a lot of us, isn't there?`,
 				`Keep going…`,
-				`A little bit further`,
 				`Almost there!`,
 				`That's right. 96 students. Eat it OCAD.`
 			]
@@ -175,5 +174,5 @@ module.exports = {
 	/**
 	 * Development Utils
 	 */
-	pixel: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg=='
+	pixel: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
 }

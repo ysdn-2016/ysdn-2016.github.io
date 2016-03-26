@@ -2,9 +2,12 @@
 
 {% block main %}
 	<section class="student-index">
-		<div class="student-search">
-			<div class="student-search-icon"></div>
-			<input class="student-search-input" type="text" placeholder="Looking for someone?" />
+		<div class="student-search-wrapper">
+			<div class="student-search">
+				<div class="student-search-icon"></div>
+				<div class="student-search-typeahead"></div>
+				<input class="student-search-input" type="text" placeholder="Looking for someone?" />
+			</div>
 		</div>
 		<div class="student-grid">
 			{% for item in studentGrid %}

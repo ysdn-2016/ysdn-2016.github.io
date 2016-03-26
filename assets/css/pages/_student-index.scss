@@ -1,7 +1,14 @@
 
-.student-search {
+.student-search-wrapper {
 	display: flex;
 	align-items: center;
+	justify-content: center;
+}
+
+.student-search {
+	position: relative;
+	display: flex;
+	align-items: baseline;
 	justify-content: center;
 	margin-bottom: 64px;
 }
@@ -9,16 +16,33 @@
 .student-search-icon {
 	@extend .i-search;
 	position: relative;
-	top: 2px;
+	width: 24px;
+	text-align: center;
 }
 
 .student-search-input {
+	position: relative;
+	background: transparent;
 	border: none;
-	box-sizing: content-box;
-	font-size: 24px;
-	padding-left: 0.5em;
 	overflow: visible;
 	will-change: width;
+	z-index: 2;
+}
+
+.student-search-input,
+.student-search-typeahead {
+	font-size: 24px;
+}
+
+.student-search-typeahead {
+	position: absolute;
+	color: #ccc;
+	top: 12px;
+	left: 34px;
+	white-space: nowrap;
+	.silent {
+		visibility: hidden;
+	}
 }
 
 .student-grid {
@@ -30,6 +54,12 @@
 .student-grid--searching {
 	justify-content: center;
 }
+
+// .student-grid--typing {
+// 	img {
+// 		animation-play-state: paused;
+// 	}
+// }
 
 .student-grid-block,
 .student-grid-intermission {
@@ -87,17 +117,18 @@
 		left: 0;
 		opacity: 0.0;
 		transition: opacity 300ms ease 100ms;
-		will-change: opacity;
+		will-change: opacity, transform;
 		max-width: none;
-		height: 100.1%;
-		animation: rewind 400ms steps(4) backwards;
-	}
-	img[lazyloaded] {
-		opacity: 1.0;
-	}
-	.student-preview:hover & {
-		img {
-			animation: play 400ms steps(4) both;
+		height: 101%;
+
+		&[lazyloaded] {
+			opacity: 1.0;
+		}
+		.student-preview:hover & {
+			animation: play 400ms steps(4) forwards;
+		}
+		.student-preview--rewind & {
+			animation: rewind 400ms steps(4) forwards;
 		}
 	}
 }
@@ -107,7 +138,7 @@
 	// margin-top: 12px;
 	color: #ccc;
 	top: -4px;
-	left: calc(100% - 32px);
+	left: calc(100% - 30px);
 	width: 100%;
 	font-family: $sofia;
 	font-size: 13px;

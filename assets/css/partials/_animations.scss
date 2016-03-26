@@ -15,20 +15,15 @@
 // Student Film Strip Animations
 //
 
+// NOTE: 80% because we want to shift over 4 out of 5 frames.
+// 4/5 = 80%
+
 @keyframes play {
-	from {
-		left: 0;
-	}
-	to {
-		left: -400%;
-	}
+	from { transform: translateX(0%); }
+	to { transform: translateX(-80%); }
 }
 
 @keyframes rewind {
-	from {
-		left: -400%;
-	}
-	to {
-		left: 0;
-	}
+	from { transform: translateX(-80%); }
+	to { transform: translateX(0%); }
 }
