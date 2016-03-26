@@ -5,12 +5,22 @@ var isBetween = require('../lib/utils').isBetween;
 var standard = require('./project-standard');
 var caseStudy = require('./project-case-study');
 
-var SCROLL_TO_OFFSET = 60;
+var PINNED_SCROLL_OFFSET_FROM_TOP = 60;
+var PINNED_SCROLL_OFFSET_FROM_BOTTOM = 30;
 
 module.exports = function () {
-  var route = $('.project').hasClass('project--case-study')
-    ? caseStudy()
-    : standard();
+
+  var isCaseStudy = $('.project').hasClass('project--case-study');
+
+  /**
+   * Trigger different routes
+   */
+
+  if (isCaseStudy) {
+    caseStudy();
+  } else {
+    standard();
+  }
 
   /**
    * Sticky Sidebar
@@ -18,12 +28,17 @@ module.exports = function () {
 
   var $window = $(window);
   var $document = $(document);
-  var $body = $('.project-body');
+  var $project = $('.project-body');
   var $sidebar = $('.project-sidebar');
   var $content = $('.project-content');
 
+  var isPinned = false;
+  var isSidebarSmallerThanWindow = false;
+  var isSidebarLargerThanContent = false;
+  var isContentLargerThanSidebar = false;
+
   var tracks = {
-    pinned: { start: 0, end: 0 },
+    pinned: { start: 0, end: 0, offset: 0 },
     bottom: { start: 0, end: 0 },
   };
 
@@ -34,16 +49,11 @@ module.exports = function () {
     window: 0
   };
 
-  var shouldPin = false;
-  var isSidebarSmallerThanWindow = false;
-  var isContentLargerThanSidebar = false;
-  var isSidebarLargerThanContent = false;
-
   loop.add(scroll);
   $window.on('resize load', resize);
   $document.on('DOMContentLoaded', resize);
 
-  $body.fitVids();
+  $project.fitVids();
   resize();
 
   function resize () {
@@ -54,7 +64,6 @@ module.exports = function () {
     isSidebarSmallerThanWindow = (heights.sidebar + 60) < heights.window;
     isContentLargerThanSidebar = heights.content > heights.sidebar;
     isSidebarLargerThanContent = heights.content < heights.sidebar;
-    shouldPin = isSidebarSmallerThanWindow && isContentLargerThanSidebar;
     setTracks();
     if (isSidebarLargerThanContent) {
       $('.project-body').css('height', heights.sidebar);
@@ -64,17 +73,52 @@ module.exports = function () {
   function scroll (e) {
     var scrollY = e.deltaY;
     if (scrollY === lastScrollY) return;
-    $sidebar.toggleClass('pinned', shouldPin && isBetween(scrollY, tracks.pinned.start, tracks.pinned.end));
-    $sidebar.toggleClass('bottom', shouldPin && isBetween(scrollY, tracks.bottom.start, tracks.bottom.end));
+
+    isBetween(scrollY, tracks.pinned.start, tracks.pinned.end) ? pin() : unpin();
+    isBetween(scrollY, tracks.bottom.start, tracks.bottom.end) ? pinToBottom() : unpinToBottom();
     lastScrollY = scrollY;
   }
 
+  function pin () {
+    if (isPinned) return;
+    $sidebar.css('top', tracks.pinned.offset);
+    $sidebar.addClass('pinned');
+    isPinned = true;
+  }
+
+  function unpin () {
+    if (!isPinned) return;
+    $sidebar.css('top', '');
+    $sidebar.removeClass('pinned');
+    isPinned = false;
+  }
+
+  function pinToBottom () {
+    $sidebar.addClass('bottom');
+  }
+
+  function unpinToBottom () {
+    $sidebar.removeClass('bottom');
+  }
+
   function setTracks () {
-    var bodyOffset = $body.offset();
-    tracks.pinned.start = bodyOffset.top - SCROLL_TO_OFFSET;
-    tracks.pinned.end = bodyOffset.top + $body.innerHeight() - $sidebar.outerHeight() - SCROLL_TO_OFFSET;
-    tracks.bottom.start = tracks.pinned.end;
-    tracks.bottom.end = $(document).height();
+    var projectOffset = $project.offset();
+    console.log(isCaseStudy)
+    if (isCaseStudy) {
+      tracks.pinned.start = projectOffset.top - PINNED_SCROLL_OFFSET_FROM_TOP;
+      tracks.pinned.end = projectOffset.top + $project.innerHeight() - $sidebar.outerHeight() - PINNED_SCROLL_OFFSET_FROM_TOP;
+      tracks.pinned.offset = PINNED_SCROLL_OFFSET_FROM_TOP;
+      tracks.bottom.start = tracks.pinned.end;
+      tracks.bottom.end = $(document).height();
+    } else {
+      // Standard Project: pin-to-bottom
+      var sidebarScrollOffset = (heights.sidebar - heights.window + PINNED_SCROLL_OFFSET_FROM_BOTTOM)
+      tracks.pinned.start = projectOffset.top + sidebarScrollOffset;
+      tracks.pinned.end = projectOffset.top + $project.innerHeight() - heights.window + PINNED_SCROLL_OFFSET_FROM_BOTTOM;
+      tracks.pinned.offset = -(heights.sidebar - heights.window + PINNED_SCROLL_OFFSET_FROM_BOTTOM);
+      tracks.bottom.start = tracks.pinned.end;
+      tracks.bottom.end = $(document).height();
+    }
   }
 
 };
