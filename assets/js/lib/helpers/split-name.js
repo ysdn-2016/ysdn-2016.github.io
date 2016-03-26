@@ -16,7 +16,7 @@ module.exports = function splitName (name) {
 		last = components.slice(1).join(' ');
 	} else {
 		first = components.slice(0, -1).join(' ');
-		last = components.slice(-1);
+		last = components.slice(-1).join(' ');
 	}
 
 	return [first, last]

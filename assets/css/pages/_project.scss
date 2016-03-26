@@ -71,7 +71,6 @@ $sticky-scroll-offset: 60px;
 	font-size: 36px;
 	font-weight: bold;
 	line-height: 43px;
-	text-align: center;
 	&--large {
 		margin-top: 4px;
 		font-size: 48px;
@@ -329,6 +328,10 @@ $sticky-scroll-offset: 60px;
 	.project-header {
 		align-items: center;
 		margin-bottom: 60px;
+	}
+
+	.project-header-title {
+		text-align: center;
 	}
 
 	.case-content {

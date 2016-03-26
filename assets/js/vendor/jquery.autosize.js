@@ -47,8 +47,7 @@
 				str = str || value() || elem.getAttribute('placeholder') || '';
 				ghost.style.cssText += elemCssText;
 				ghost.innerHTML = escape(str);
-				var width = window.getComputedStyle(ghost).width;
-				elem.style.width = width;
+				elem.style.width = ghost.clientWidth + 'px';
 				return width;
 			}
 
@@ -63,6 +62,9 @@
 			}
 
 			elem.addEventListener('input', function () {
+				set();
+			});
+			elem.addEventListener('keydown', function () {
 				set();
 			});
 

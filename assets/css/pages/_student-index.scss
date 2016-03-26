@@ -124,7 +124,8 @@
 		&[lazyloaded] {
 			opacity: 1.0;
 		}
-		.student-preview:hover & {
+		.student-preview:hover &,
+		.student-preview:focus & {
 			animation: play 400ms steps(4) forwards;
 		}
 		.student-preview--rewind & {
@@ -139,7 +140,7 @@
 	color: #ccc;
 	top: -4px;
 	left: calc(100% - 30px);
-	width: 100%;
+	width: calc(100% - 60px);
 	font-family: $sofia;
 	font-size: 13px;
 	// font-weight: bold;

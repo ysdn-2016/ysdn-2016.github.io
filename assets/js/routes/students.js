@@ -17,19 +17,21 @@ module.exports = function () {
   var $typeahead = $('.student-search-typeahead');
   var $shapes = $('.student-grid-shape-container');
   var $intermissions = $('.student-grid-intermission');
+  var $footer = $('.page-student-index .feature');
   var $students = $('.student-preview');
 
   var students = $students.map(toStudentObject).get();
   var fuse = new Fuse(students, {
     keys: [
       { name: 'name', weight: 0.7 },
-      { name: 'invertedName', weight: 0.5 },
+      { name: 'invertedName', weight: 0.4 },
       { name: 'firstName', weight: 0.2 },
       { name: 'lastName', weight: 0.2 },
       // { name: 'categories', weight: 0.1 }
     ],
+    include: ['matches'],
     distance: 0,
-    threshold: 0.1
+    threshold: 0
   });
   var prompt = '';
 
@@ -38,7 +40,7 @@ module.exports = function () {
    */
 
   $search.on('input change', update);
-  $search.on('keyup', keyUp);
+  $search.on('keydown', keyUp);
   $students.on('mouseenter', mouseEnter);
   $students.on('mouseleave', mouseLeave);
 
@@ -51,6 +53,7 @@ module.exports = function () {
   function update () {
     var predicate = $search.val();
 
+    // Sanitize the predicate
     if (NON_ALPHABETIC.test(predicate)) {
       predicate = predicate.replace(NON_ALPHABETIC, '');
       $search.val(predicate);
@@ -60,7 +63,9 @@ module.exports = function () {
       $students.show();
       $shapes.show();
       $intermissions.show();
+      $footer.show();
       $typeahead.text('');
+      prompt = '';
       return;
     }
 
@@ -70,9 +75,10 @@ module.exports = function () {
     $students.hide();
     $intermissions.hide();
     $shapes.hide();
+    $footer.hide();
 
-    matches.forEach(function (student) {
-      student.$el.show();
+    matches.forEach(function (match) {
+      match.item.$el.show();
     });
 
     Lazyload.check();
@@ -84,17 +90,16 @@ module.exports = function () {
     }
 
     var match = matches[0];
-    var name = match.name
-    var searchingLastName = match.firstName.toLowerCase().indexOf(predicate.toLowerCase()) !== 0
-    prompt = searchingLastName
-      ? formatInvertedName(match.firstName, match.lastName)
-      : name;
+    var student = match.item
+    var name = student.name
 
-    var index = prompt.toLowerCase().indexOf(lastChar(predicate.toLowerCase())) + 1;
-    var typed = prompt.substring(0, index);
+    prompt = isSearchingLastName(predicate, match)
+      ? formatInvertedName(student.firstName, student.lastName)
+      : name;
+    var index = prompt.toLowerCase().indexOf(predicate.toLowerCase()) + predicate.length;
     var ahead = prompt.substring(index);
 
-    var html = wrap(typed) + ahead;
+    var html = wrap(predicate) + ahead;
     $typeahead.html(html);
   }
 
@@ -110,14 +115,20 @@ module.exports = function () {
 
   function keyUp (e) {
     switch (e.keyCode) {
-      // ENTER
-      case 13:
+      case 27: // esc
+        $search.val('');
+        update();
+        break;
+      case 13: // return
         $search.val(prompt);
         update();
         break;
-      case 27:
-        $search.val('');
-        update();
+      case 39: // right arrow
+        var search = $search.get(0)
+        if (search.value.length === search.selectionEnd) {
+          $search.val(prompt);
+          update();
+        }
         break;
     }
   }
@@ -154,4 +165,9 @@ function toStudentObject (i, el) {
 
 function formatInvertedName (first, last) {
   return last + ', ' + first;
+}
+
+function isSearchingLastName (predicate, match) {
+  var bestMatchingSearchKey = match.matches[0].key
+  return bestMatchingSearchKey === 'invertedName' || bestMatchingSearchKey === 'lastName';
 }
