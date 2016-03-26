@@ -4,8 +4,9 @@ var Lazyload = require('../lib/lazyload');
 var htmlEscape = require('../lib/helpers/html-escape');
 var splitName = require('../lib/helpers/split-name');
 
-var ANIMATION_END = 'webkitAnimationEnd oanimationend msAnimationEnd animationend'
-var NON_ALPHABETIC = /[^A-Za-z,\s\-]/g
+var ANIMATION_END = 'webkitAnimationEnd oanimationend msAnimationEnd animationend';
+var NON_ALPHABETIC = /[^A-Za-z,\s\-]/g;
+var MINIMUM_MATCHES = 6;
 
 var notFalse = function (x) { return !!x };
 var lastChar = function (str) { return str.charAt(str.length - 1) };
@@ -17,6 +18,9 @@ module.exports = function () {
   var $typeahead = $('.student-search-typeahead');
   var $shapes = $('.student-grid-shape-container');
   var $intermissions = $('.student-grid-intermission');
+  var $noResults = $('.student-search-results');
+  var $noResultsPrompt = $('.student-search-results-prompt');
+  var $noResultsClear = $('.student-search-results-clear');
   var $footer = $('.page-student-index .feature');
   var $students = $('.student-preview');
 
@@ -43,8 +47,9 @@ module.exports = function () {
   $search.on('keydown', keyUp);
   $students.on('mouseenter', mouseEnter);
   $students.on('mouseleave', mouseLeave);
+  $noResultsClear.on('click', clear);
 
-  $search.autosize({ typeahead: $typeahead });
+  var autosize = $search.autosize({ typeahead: $typeahead });
 
   /**
    * Event Handlers
@@ -64,8 +69,10 @@ module.exports = function () {
       $shapes.show();
       $intermissions.show();
       $footer.show();
+      $noResults.addClass('hidden');
       $typeahead.text('');
       prompt = '';
+      autosize();
       return;
     }
 
@@ -83,7 +90,13 @@ module.exports = function () {
 
     Lazyload.check();
 
+    if (matches.length < MINIMUM_MATCHES) {
+      $noResultsPrompt.text('Not who');
+      $noResults.removeClass('hidden');
+    }
+
     if (!matches.length) {
+      $noResultsPrompt.text('Can\'t find');
       prompt = ''
       $typeahead.text('');
       return;
@@ -103,6 +116,14 @@ module.exports = function () {
     $typeahead.html(html);
   }
 
+  function clear (e) {
+    if (e) {
+      e.preventDefault();
+    }
+    $search.val('');
+    update();
+  }
+
   function mouseEnter () {
     var $self = $(this);
     $self.off(ANIMATION_END, stopRewind);
@@ -116,8 +137,7 @@ module.exports = function () {
   function keyUp (e) {
     switch (e.keyCode) {
       case 27: // esc
-        $search.val('');
-        update();
+        clear();
         break;
       case 13: // return
         $search.val(prompt);

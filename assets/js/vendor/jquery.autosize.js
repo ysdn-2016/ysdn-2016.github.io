@@ -33,45 +33,39 @@
 			$.extend(options, opts);
 		}
 
-		return this.each(function () {
-			var elem = this;
-			elem.style.boxSizing = 'content-box';
-			var elemStyle = window.getComputedStyle(elem);
-	    var elemCssText = 'font-family:' + elemStyle.fontFamily +
-	                     ';font-size:'   + elemStyle.fontSize;
-			var value = options.typeahead
-				? typeaheadValue
-				: elemValue
+		var elem = this.get(0);
+		elem.style.boxSizing = 'content-box';
+		var elemStyle = window.getComputedStyle(elem);
+    var elemCssText = 'font-family:' + elemStyle.fontFamily +
+                     ';font-size:'   + elemStyle.fontSize;
+		var value = options.typeahead
+			? typeaheadValue
+			: elemValue
 
-			function set (str) {
-				str = str || value() || elem.getAttribute('placeholder') || '';
-				ghost.style.cssText += elemCssText;
-				ghost.innerHTML = escape(str);
-				elem.style.width = ghost.clientWidth + 'px';
-				return width;
-			}
+		function set (str) {
+			str = str || value() || elem.getAttribute('placeholder') || '';
+			ghost.style.cssText += elemCssText;
+			ghost.innerHTML = escape(str);
+			elem.style.width = ghost.clientWidth + 'px';
+			return width;
+		}
 
-			function elemValue () {
-				return elem.value
-			}
+		function elemValue () {
+			return elem.value
+		}
 
-			function typeaheadValue () {
-				var typeahead = options.typeahead.text();
-				var input = elem.value;
-				return typeahead.length > input.length ? typeahead : input;
-			}
+		function typeaheadValue () {
+			var typeahead = options.typeahead.text();
+			var input = elem.value;
+			return typeahead.length > input.length ? typeahead : input;
+		}
 
-			elem.addEventListener('input', function () {
-				set();
-			});
-			elem.addEventListener('keydown', function () {
-				set();
-			});
+		elem.addEventListener('input', function () { set(); });
 
-			var width = set();
+		var width = set();
 
-			return set;
-		})
+		return set;
+
 
 	}
 
