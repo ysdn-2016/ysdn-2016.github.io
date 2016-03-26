@@ -56,7 +56,9 @@ module.exports = function () {
     isSidebarLargerThanContent = heights.content < heights.sidebar;
     shouldPin = isSidebarSmallerThanWindow && isContentLargerThanSidebar;
     setTracks();
-    if (isSidebarLargerThanContent) {$('.project-body').css('height', heights.sidebar);}
+    if (isSidebarLargerThanContent) {
+      $('.project-body').css('height', heights.sidebar);
+    }
   }
 
   function scroll (e) {
