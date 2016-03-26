@@ -25,19 +25,6 @@
 	}
 }
 
-.feature {
-	padding-top: 40px;
-	padding-bottom: 48px;
-	text-align: center;
-	p,
-	a {
-		font-family: $sofia;
-		font-size: 21px;
-		line-height: 32px;
-		letter-spacing: 0.15px;
-	}
-}
-
 .footer-wrapper {
 	display: flex;
 	justify-content: space-between;
@@ -53,7 +40,7 @@
 	    padding: 16px 0 16px;
 	}
 }
-.footer-nav{
+.footer-nav {
 	@media #{$media-mobile-large} {
 		padding-bottom: 20px;
 	}
@@ -65,5 +52,35 @@
 		top: 2px;
 		margin-right: 6px;
 		font-size: 19px;
+	}
+}
+
+
+//
+// CTA Footer
+//
+
+.feature {
+	width: 90%;
+	margin: 96px auto 0;
+	max-width: $max-width;
+	padding: 42px 0 30px;
+	border-top: 1px #ccc solid;
+	text-align: center;
+	p,
+	a {
+		font-family: $sofia;
+		font-size: 21px;
+		max-width: 27em;
+		margin: 0 auto 1.25em;
+		line-height: 32px;
+		letter-spacing: 0.15px;
+	}
+}
+
+.feature--student {
+	p,
+	a {
+		max-width: 35em;
 	}
 }

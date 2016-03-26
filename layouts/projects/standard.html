@@ -4,7 +4,7 @@
 		<div class="project-sidebar-filler">
 			<aside class="project-sidebar">
 				<header class="project-header">
-					<a class="project-header-category" href="/work/{{ category }}">{{ category | titleize }}</a>
+					<a class="project-header-category" href="/work/{{ category | categoryToDiscipline }}/">{{ category | titleize }}</a>
 					<div class="project-header-title{% if title.length < 10 %} project-header-title--large{% endif %}">{{ title }}</div>
 					<div class="project-owner">
 						<div class="project-owner-details">

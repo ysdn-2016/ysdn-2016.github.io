@@ -1,7 +1,7 @@
 
 <article class="project project--case-study">
 	<header class="project-header">
-		<a class="project-header-category" href="/work/{{ category }}">{{ category | titleize }}</a>
+		<a class="project-header-category" href="/work/{{ category | categoryToDiscipline }}/">{{ category | titleize }}</a>
 		<div class="project-header-title{% if title.length < 10 %} project-header-title--large{% endif %}">{{ title }}</div>
 		<div class="project-owner">
 			<a class="project-owner-image" href="{{ owner.href }}">

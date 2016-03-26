@@ -1,6 +1,10 @@
 {% if type !== 'case-study' and type !== 'standard' %}
-<div class="feature">
-  <p>To meet the cast and explore their work, come check out The Intermission <br>on April 19th at The Liberty Grand.</p>
+<div class="feature {%- if firstName %} feature--student{% endif %}">
+  {% if firstName %}
+    <p>Thanks for visiting. To meet {{ firstName }} and the rest of the cast, come check out our show, The Intermission, on April 19th at the Liberty Grand.</p>
+  {% else %}
+    <p>To meet the cast and explore their work, come check out The Intermission on April 19th at The Liberty Grand.</p>
+  {% endif %}
   <a href="/event/" class="btn-primary">Event Information</a>
 </div>
 {% endif %}
