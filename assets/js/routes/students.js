@@ -51,6 +51,8 @@ module.exports = function () {
 
   var autosize = $search.autosize({ typeahead: $typeahead });
 
+  update();
+
   /**
    * Event Handlers
    */
