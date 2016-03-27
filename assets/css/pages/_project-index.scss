@@ -65,6 +65,7 @@
 
 	&-desktop{
 		display: block;
+		width: 100%;
 		@media #{$media-desktop-medium} {
 			display: none;
 		}
