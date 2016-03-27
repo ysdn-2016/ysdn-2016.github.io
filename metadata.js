@@ -66,8 +66,8 @@ module.exports = {
 				answer: `Yes, we'll have a cash bar available throughout the night.`
 			},
 			{
-				question: `What is Industry?`,
-				answer: `We dedicate a part of the night exclusively to people working in the design and creative industries. All students will be there to answer any questions about their work and experience.`
+				question: `What is the 'Industry' portion of the show?`,
+				answer: `We dedicate a part of the night exclusively to people working in the design and creative industries. All students will be there to answer any questions about their work and experience. No ticket or registration is required.`
 			},
 			{
 				question: `I'll be at FITC on April 19th. Can I still come?`,
