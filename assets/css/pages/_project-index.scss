@@ -63,9 +63,12 @@
 	margin-bottom: 20px;
 	margin-left: -0.5%;
 
+	img {
+		width: 100%;
+	}
+
 	&-desktop{
 		display: block;
-		width: 100%;
 		@media #{$media-desktop-medium} {
 			display: none;
 		}
