@@ -60,29 +60,39 @@
           <p>Communicating ideas through visual language on all manner of mediums, including branding identity, type and editorial design, various promotional materials, and more.</p>
           <a href="/work/communication/" class="button">See More Projects</a>
         </div>
-        {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half %}
-          <div class="col span-4">
-            {% for project in column %}
-              <div class="home-work-project">
-                <div class="thumbnail">
-                  <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
-                </div>
-                <h4 class="student-profile-project-title">{{ project.title }}</h4>
-                <h5 class="student-profile-project-category">{{ project.category | titleize }}</h5>
-              </div>
-            {% endfor %}
-          </div>
-        {% endfor %}
-      </div>
-      {# <div class="row home-work-phy">
         <div class="col span-8 work">
-          {% for project in projects | filter("category", "packaging") | shuffle | take(4) %}
-            <div class="home-work-project">
-              <div class="thumbnail">
-                <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
-              </div>
-              <h4 class="student-profile-project-title">{{ project.title }}</h4>
-              <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
+          {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half %}
+            <div class="sub-col">
+              {% for project in column %}
+                <div class="home-work-project">
+                  <a href="{{ project.href }}">
+                    <div class="thumbnail">
+                      <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
+                    </div>
+                    <h4 class="student-profile-project-title">{{ project.title }}</h4>
+                    <h5 class="student-profile-project-category">{{ project.owner.name }}</h5>
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="row home-work-phy">
+        <div class="col span-8 work">
+          {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half %}
+            <div class="sub-col">
+              {% for project in column %}
+                <div class="home-work-project">
+                  <a href="{{ project.href }}">
+                    <div class="thumbnail">
+                      <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
+                    </div>
+                    <h4 class="student-profile-project-title">{{ project.title }}</h4>
+                    <h5 class="student-profile-project-category">{{ project.owner.name }}</h5>
+                  </a>
+                </div>
+              {% endfor %}
             </div>
           {% endfor %}
         </div>
@@ -109,29 +119,39 @@
           <a href="/work/information/" class="button">See More Projects</a>
         </div>
         <div class="col span-8 work">
-          {% for project in projects | filterByDiscipline("information") | shuffle | take(4) %}
-            <div class="home-work-project">
-              <div class="thumbnail">
-                <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }}" data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}" alt="{{ project.title }}" />
-              </div>
-              <h4 class="student-profile-project-title">{{ project.title }}</h4>
-              <h5 class="student-profile-project-category">{{ project.category | titleize }}</h5>
+          {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half %}
+            <div class="sub-col">
+              {% for project in column %}
+                <div class="home-work-project">
+                  <a href="{{ project.href }}">
+                    <div class="thumbnail">
+                      <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
+                    </div>
+                    <h4 class="student-profile-project-title">{{ project.title }}</h4>
+                    <h5 class="student-profile-project-category">{{ project.owner.name }}</h5>
+                  </a>
+                </div>
+              {% endfor %}
             </div>
           {% endfor %}
         </div>
       </div>
       <div class="row home-work-web">
         <div class="col span-8 work">
-          {% for project in projects | filterByDiscipline("interactive") | shuffle | take(4) %}
-              <div class="home-work-project">
-                <a href="{{ project.url }}">
-                  <div class="thumbnail">
-                    <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
-                  </div>
-                  <h4 class="student-profile-project-title">{{ project.title }}</h4>
-                  <h5 class="student-profile-project-category">{{ project.category | titleize }}</h5>
-                </a>
-              </div>
+          {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half %}
+            <div class="sub-col">
+              {% for project in column %}
+                <div class="home-work-project">
+                  <a href="{{ project.href }}">
+                    <div class="thumbnail">
+                      <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
+                    </div>
+                    <h4 class="student-profile-project-title">{{ project.title }}</h4>
+                    <h5 class="student-profile-project-category">{{ project.owner.name }}</h5>
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
           {% endfor %}
         </div>
         <div class="col span-4 title">

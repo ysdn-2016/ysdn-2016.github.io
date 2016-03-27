@@ -210,14 +210,19 @@ section.home {
 
 .home-work .work {
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
+  flex: 0 1 58%;
+}
+
+.home-work .sub-col {
+	display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: 0 12px;
 }
 
 .home-work-project {
-	align-items: center;
-	padding: 6px 3%;
-	width: 44%;
+	width: 100%;
 	transition: opacity 0.4s;
 	margin-bottom: 28px;
 	&:hover {
@@ -232,7 +237,7 @@ section.home {
 	}
 	.thumbnail {
 		overflow: hidden;
-		max-height: 420px;
+		max-height: 360px;
 		margin-bottom: 16px;
 	}
 }
