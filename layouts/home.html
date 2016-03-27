@@ -61,18 +61,10 @@
           <a href="/work/communication/" class="button">See More Projects</a>
         </div>
         <div class="col span-8 work">
-          {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half %}
+          {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half(true) %}
             <div class="sub-col">
               {% for project in column %}
-                <div class="home-work-project">
-                  <a href="{{ project.href }}">
-                    <div class="thumbnail">
-                      <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
-                    </div>
-                    <h4 class="student-profile-project-title">{{ project.title }}</h4>
-                    <h5 class="student-profile-project-category">{{ project.owner.name }}</h5>
-                  </a>
-                </div>
+                {% include 'partials/project-preview.html' %}
               {% endfor %}
             </div>
           {% endfor %}
@@ -80,18 +72,10 @@
       </div>
       <div class="row home-work-phy">
         <div class="col span-8 work">
-          {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half %}
+          {% for column in projects | filterByDiscipline('physical') | shuffle | take(3) | half %}
             <div class="sub-col">
               {% for project in column %}
-                <div class="home-work-project">
-                  <a href="{{ project.href }}">
-                    <div class="thumbnail">
-                      <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
-                    </div>
-                    <h4 class="student-profile-project-title">{{ project.title }}</h4>
-                    <h5 class="student-profile-project-category">{{ project.owner.name }}</h5>
-                  </a>
-                </div>
+                {% include 'partials/project-preview.html' %}
               {% endfor %}
             </div>
           {% endfor %}
@@ -115,22 +99,14 @@
             <div class="shape shape-3"></div>
           </div>
           <h3>Information Design</h3>
-          <p>Organizing, simplifying, and visualizing text and image, to efficiently communicate data in an interesting and thought-provoking way.</p>
+          <p>Organizing, simplifying, and visualizing text and image, to communicate data in an interesting and thought-provoking way.</p>
           <a href="/work/information/" class="button">See More Projects</a>
         </div>
         <div class="col span-8 work">
-          {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half %}
+          {% for column in projects | filterByDiscipline('information') | shuffle | take(3) | half(true) %}
             <div class="sub-col">
               {% for project in column %}
-                <div class="home-work-project">
-                  <a href="{{ project.href }}">
-                    <div class="thumbnail">
-                      <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
-                    </div>
-                    <h4 class="student-profile-project-title">{{ project.title }}</h4>
-                    <h5 class="student-profile-project-category">{{ project.owner.name }}</h5>
-                  </a>
-                </div>
+                {% include 'partials/project-preview.html' %}
               {% endfor %}
             </div>
           {% endfor %}
@@ -138,18 +114,10 @@
       </div>
       <div class="row home-work-web">
         <div class="col span-8 work">
-          {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half %}
+          {% for column in projects | filterByDiscipline('interactive') | shuffle | take(3) | half %}
             <div class="sub-col">
               {% for project in column %}
-                <div class="home-work-project">
-                  <a href="{{ project.href }}">
-                    <div class="thumbnail">
-                      <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
-                    </div>
-                    <h4 class="student-profile-project-title">{{ project.title }}</h4>
-                    <h5 class="student-profile-project-category">{{ project.owner.name }}</h5>
-                  </a>
-                </div>
+                {% include 'partials/project-preview.html' %}
               {% endfor %}
             </div>
           {% endfor %}
@@ -183,4 +151,23 @@
       <h4 class="event-social-subheader event-section-subheader">Follow along on <a class="event-social-link--facebook" href="{{ facebook.url }}" target="_blank">Facebook</a>, <a class="event-social-link--twitter" href="{{ twitter.url }}" target="_blank">Twitter</a>, and <a class="event-social-link--instagram" href="{{ instagram.url }}" target="_blank">Instagram</a> for a behind-the-scenes look.</h4>
     </section> <!-- .section.home-social -->
   </section>
+  <template id="project-preview-template">
+    {% raw %}
+    <div class="project-preview">
+    	<a href="{{ project.href }}" class="project-preview-image">
+    		<svg class="project-preview-image-placeholder" viewBox="0 0 {{ project.thumbnail.width }} {{ project.thumbnail.height }}" preserveAspectRatio="xMinYMin" width="{{ project.thumbnail.width }}">
+    			<rect x="0" y="0" width="100%" height="100%"></rect>
+    		</svg>
+    		<img src="{{ pixel }}" data-src="{{ project.thumbnail.asset400 }}" data-src-retina="{{ project.thumbnail.asset800 }}" />
+    	</a>
+    	<div class="project-preview-details">
+    		<a href="{{ project.href }}" class="project-preview-title">{{ project.title }}</a>
+    		<a href="{{ project.owner.href }}" class="project-preview-student">{{ project.owner.name }}</a>
+    	</div>
+    </div>
+    {% endraw %}
+  </template>
+  <script>
+    var PROJECTS = {{ projectsHash | json | safe }};
+  </script>
 {% endblock %}

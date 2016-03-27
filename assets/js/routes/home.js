@@ -1,7 +1,9 @@
+
 module.exports = function () {
   var Instafeed = require('instafeed.js');
   var stripHashtags = require('../lib/helpers/strip-hashtags');
   var truncate = require('../lib/helpers/truncate');
+  var instagramItemCount = 0
 
   var feedOptions = {
     clientId: '467ede5a6b9b48ae8e03f4e2582aeeb3',
@@ -31,16 +33,19 @@ module.exports = function () {
       accessToken: '5139102.1677ed0.e96631b309c2454493762538cccb4e1d',
       target: el,
       sort: feedOptions.sortBy,
-      limit: feedOptions.limit,
+      limit: feedOptions.limit * 2,
       get: 'user',
       resolution: 'standard_resolution',
       userId: feedOptions.userId,
       template: feedOptions.template,
       filter: function (item) {
+        if (item.type !== 'image') return false;
+        if (instagramItemCount >= feedOptions.limit) return false;
         // HACK: we adjust the captions in filter function 🙈
         item.caption.text = stripHashtags(item.caption.text);
         item.caption.text = truncate(item.caption.text, 200);
-        return item.type === 'image';
+        instagramItemCount++
+        return true
       },
     });
     feed.run();

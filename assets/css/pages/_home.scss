@@ -41,6 +41,7 @@ section.home {
 	}
 }
 
+
 // == Home Post Intro == //
 
 .home-post-intro {
@@ -196,6 +197,7 @@ section.home {
 	padding-top: 40px;
 	padding-bottom: 40px;
 	.row {
+		justify-content: space-between;
 		margin-bottom: 48px;
 	}
 
@@ -210,7 +212,7 @@ section.home {
 
 .home-work .work {
 	display: flex;
-  flex: 0 1 58%;
+  flex: 0 1 percentage(7.5/12);
 }
 
 .home-work .sub-col {
@@ -246,7 +248,9 @@ section.home {
 .home-work .title {
 	position: relative;
 	display: flex;
+	flex: 0 1 percentage(4/12);
 	flex-direction: column;
+	align-items: flex-start;
 	justify-content: center;
 	height: 640px;
 	.shape-grid {
