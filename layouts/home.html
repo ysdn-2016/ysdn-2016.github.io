@@ -60,19 +60,21 @@
           <p>Communicating ideas through visual language on all manner of mediums, including branding identity, type and editorial design, various promotional materials, and more.</p>
           <a href="/work/communication/" class="button">See More Projects</a>
         </div>
-        <div class="col span-8 work">
-          {% for project in projects | filter("category", "graphic-design") | shuffle | take(4) %}
-            <div class="home-work-project">
-              <div class="thumbnail">
-                <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
+        {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half %}
+          <div class="col span-4">
+            {% for project in column %}
+              <div class="home-work-project">
+                <div class="thumbnail">
+                  <img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 300 }) }} data-retina-src="{{ project.thumbnail | asset_url({ width: 600 }) }}""/>
+                </div>
+                <h4 class="student-profile-project-title">{{ project.title }}</h4>
+                <h5 class="student-profile-project-category">{{ project.category | titleize }}</h5>
               </div>
-              <h4 class="student-profile-project-title">{{ project.title }}</h4>
-              <h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
-            </div>
-          {% endfor %}
-        </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
       </div>
-      <div class="row home-work-phy">
+      {# <div class="row home-work-phy">
         <div class="col span-8 work">
           {% for project in projects | filter("category", "packaging") | shuffle | take(4) %}
             <div class="home-work-project">
@@ -142,7 +144,7 @@
           <p>Developing participatory interactive experiences and visualizing moving image with motion design.</p>
           <a href="/work/interactive/" class="button">See More Projects</a>
         </div>
-      </div>
+      </div>#}
     </section> <!-- .home-work -->
     <section class="home-event">
       <div class="wrap">

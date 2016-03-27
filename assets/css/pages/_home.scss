@@ -81,12 +81,13 @@ section.home {
 		@include shape-square(40px, $orange, 0);
 		top: 202.3px;
 		left: 50%;
-		margin-left: -616px;
+		margin-left: -615px;
 	}
 	.shape-2 {
 		@include shape-triangle(120px, $yellow, 180);
 		top: 122.3px;
-		left: 121px;
+		left: 50%;
+		margin-left: -575px;
 	}
 	.shape-3 {
 		@include shape-circle(80px, $red);
@@ -215,8 +216,8 @@ section.home {
 
 .home-work-project {
 	align-items: center;
-	padding: 0 15px;
-	width: 50%;
+	padding: 6px 3%;
+	width: 44%;
 	transition: opacity 0.4s;
 	margin-bottom: 28px;
 	&:hover {
