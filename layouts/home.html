@@ -103,7 +103,7 @@
           <a href="/work/information/" class="button">See More Projects</a>
         </div>
         <div class="col span-8 work">
-          {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half(true) %}
+          {% for column in projects | filterByDiscipline('information') | shuffle | take(3) | half(true) %}
             <div class="sub-col">
               {% for project in column %}
                 {% include 'partials/project-preview.html' %}
@@ -114,7 +114,7 @@
       </div>
       <div class="row home-work-web">
         <div class="col span-8 work">
-          {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half %}
+          {% for column in projects | filterByDiscipline('interactive') | shuffle | take(3) | half %}
             <div class="sub-col">
               {% for project in column %}
                 {% include 'partials/project-preview.html' %}
