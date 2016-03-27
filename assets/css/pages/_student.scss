@@ -356,7 +356,11 @@
 	// body
 }
 
+// Mobile breakpoint
 @media (max-width: 700px)  {
+	.student-profile {
+		margin-right: 0;
+	}
 	.student-profile-body-wrapper {
 		display: block;
 	}
