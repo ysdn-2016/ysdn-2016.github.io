@@ -64,6 +64,7 @@ $gridsize: 35px;
 	margin-left: -0.5%;
 	@media #{$media-tablet-medium} {
 		height: 180px;
+		background-size: 160*0.4375px;
 	}
 
 	&-title {

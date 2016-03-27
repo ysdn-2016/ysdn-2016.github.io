@@ -171,12 +171,16 @@ $sticky-scroll-offset: 60px;
 		font-size: 18px;
 		@media #{$media-tablet-medium} {
 			width: 100%;
+			font-size: 17px;
 		}
 	}
 
 	figure {
 		@include image-placeholder;
 		margin: 2em 0;
+		@media #{$media-tablet-medium} {
+			margin: 22px 0;
+		}
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -308,10 +312,12 @@ $sticky-scroll-offset: 60px;
 	@media #{$media-tablet-medium}{
 		.project-body{
 				flex-direction: column;
+				display: block;
+				height: auto !important;
 				.project-sidebar-filler, .project-content {
 					flex-basis: 100%;
 					.project-sidebar{
-						position: static;
+						position: initial;
 						padding-right: 0;
 						width: 100% !important; //Remove if Sidebar JS is turned off on mobile
 					}
