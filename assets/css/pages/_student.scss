@@ -15,7 +15,7 @@
 	background-color: #f6f6f6;
 	display: flex;
 	overflow: hidden;
-	min-height: 500px;
+	height: 500px;
 }
 
 .student-profile-header-wrapper {
@@ -62,7 +62,8 @@
 
 .student-profile-portrait {
 	position: absolute;
-	right: 60px;
+	left: 50%;
+	margin-left: -60px;
 	bottom: -140px;
 	width: 600px;
 	height: 600px;
@@ -327,5 +328,36 @@
 	}
 	.student-profile-project {
 		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 1000px)  {
+	// header
+	.student-profile-header {
+		height: 400px;
+	}
+	.student-profile-name {
+		font-size: 42px;
+	}
+	.student-profile-introduction {
+		font-size: 17px;
+	}
+	.student-profile-social {
+		width: 300px;
+		line-height: 1.8;
+	}
+	.student-profile-portrait {
+		width: 400px;
+		height: 400px;
+		bottom: -60px;
+		margin-left: -20px;
+	}
+
+	// body
+}
+
+@media (max-width: 700px)  {
+	.student-profile-body-wrapper {
+		display: block;
 	}
 }
