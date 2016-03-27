@@ -313,7 +313,7 @@ $sticky-scroll-offset: 60px;
 		.project-body{
 				flex-direction: column;
 				display: block;
-				height: auto !important;
+				height: auto !important; //Remove if Sidebar JS is turned off on mobile
 				.project-sidebar-filler, .project-content {
 					flex-basis: 100%;
 					.project-sidebar{

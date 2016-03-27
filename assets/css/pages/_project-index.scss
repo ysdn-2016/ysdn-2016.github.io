@@ -44,6 +44,11 @@
 			transition: opacity 0.25s ease;
 		}
 	}
+	&-filters{
+		@media #{$media-mobile-large}{
+		flex-direction: column;
+	}
+	}
 
 }
 
@@ -51,197 +56,41 @@
 // Category Header
 //
 
-$gridsize: 35px;
-
 .project-category-intro {
-	@include dot-grid;
-	background-color: #fff;
-	background-size: 160*0.875px;
+	width: 100%;
 	position: relative;
 	width: 101%;
-	height: 420px;
 	margin-bottom: 20px;
 	margin-left: -0.5%;
-	@media #{$media-tablet-medium} {
-		height: 180px;
-		background-size: 160*0.4375px;
-	}
 
-	&-title {
-		color: $black;
-		font-size: 64px;
-		line-height: 78px;
-		position: absolute;
-		bottom: 80px;
-		left: 60px;
-		background-color: $white;
-		padding: 20px 10px;
-		padding-right: 15px;
-		@media #{$media-tablet-medium} {
-			font-size: 42px;
-			line-height: 50px;
-			left:24px;
-			bottom: 10px;
-			padding-right: 20px;
+	&-desktop{
+		display: block;
+		@media #{$media-desktop-medium} {
+			display: none;
+		}
+	}
+	&-tablet{
+		display: none;
+		@media #{$media-desktop-medium} {
+			display: block;
 		}
 		@media #{$media-mobile-large} {
-			font-size: 36px;
-			line-height: 40px;
+			display: none;
 		}
 	}
-
-	.shape-1, .shape-2, .shape-3, .shape-4, .shape-5, .shape-6, .shape-7, .shape-8, .shape-9, .shape-10{
-		margin-left: 2px;
-		margin-top: 2px;
-	}
-	.shapes.all{
-		.shape-1 {
-			@include shape-half-circle(3*$gridsize, $orange, 315);
-			top: 1*$gridsize;
-			left: 1*$gridsize;
-			margin-left: -16px;
-			margin-top: 10px;
-		}
-		.shape-2 {
-			@include shape-triangle(4*$gridsize, $blue, 180);
-			top: 5*$gridsize;
-			left: 12*$gridsize;
-		}
-		.shape-3 {
-			@include shape-square(2*$gridsize, $green, 0);
-			top: 2*$gridsize;
-			left: 18*$gridsize;
-		}
-		.shape-4 {
-			@include shape-circle(4*$gridsize, $red);
-			top: 6*$gridsize;
-			left: 22*$gridsize;
-		}
-		.shape-5{
-			@include shape-rectangle(4*$gridsize, 2*$gridsize, $yellow, 0);
-			top: 3*$gridsize;
-			left: 28*$gridsize;
-		}
-	}
-	.shapes.physical{
-		.shape-1 {
-			@include shape-triangle(4*$gridsize, $yellow, 270);
-			top: 3*$gridsize;
-			left: 26*$gridsize;
-		}
-		.shape-2 {
-			@include shape-rectangle(6*$gridsize, 2*$gridsize, $green, 0);
-			top: 5*$gridsize;
-			left: 26*$gridsize;
-		}
-		.shape-3 {
-			@include shape-circle(4*$gridsize, $red);
-			top: 1*$gridsize;
-			left: 2*$gridsize;
-		}
-		.shape-4 {
-			@include shape-circle(2*$gridsize, $red);
-			top: 7*$gridsize;
-			left: 30*$gridsize;
-		}
-	}
-	.shapes.communication{
-		//.shape-1 {
-		//	@include shape-triangle(4*$gridsize, $green, 180);
-		//	top: 5*$gridsize;
-		//	left: 1*$gridsize;
-		//}
-		.shape-2{
-			@include shape-square(3*$gridsize, $yellow, 180);
-			top: 7*$gridsize;
-			left: 26*$gridsize;
-		}
-		.shape-3{
-			@include shape-rectangle(6*$gridsize, 2*$gridsize, $blue, 0);
-			top: 4*$gridsize;
-			left: 24*$gridsize;
-		}
-		.shape-4{
-			@include shape-circle(4*$gridsize, $red);
-			top: 2*$gridsize;
-			left: 24*$gridsize;
-		}
-		.shape-5{
-			@include shape-circle(2*$gridsize, $red);
-			top: 3*$gridsize;
-			left: 6*$gridsize;
-		}
-		.shape-6{
-			@include shape-rectangle(6*$gridsize, 3*$gridsize, $blue, 0);
-			top: 1*$gridsize;
-			left: 2*$gridsize;
-		}
-		.shape-7{
-			@include shape-square(2*$gridsize, $yellow, 0);
-			top: 3*$gridsize;
-			left: 16*$gridsize;
-		}
-	}
-	.shapes.information{
-		.shape-1 {
-			@include shape-square(2*$gridsize, $blue, 0);
-			top: 3*$gridsize;
-			left: 25*$gridsize;
-		}
-		.shape-2 {
-			@include shape-square(2*$gridsize, $blue, 0);
-			top: 5*$gridsize;
-			left: 27*$gridsize;
-		}
-		.shape-3 {
-			@include shape-triangle(6*$gridsize, $red, 90);
-			top: 3*$gridsize;
-			left: 25*$gridsize;
-		}
-		.shape-4 {
-			@include shape-circle(2*$gridsize, $green);
-			top: 1*$gridsize;
-			left: 8*$gridsize;
-		}
-	}
-	.shapes.interactive{
-		@include keyframes(triangle) {
-		  0%   { top: 2*$gridsize; }
-		  50% { top: 6*$gridsize; }
-		  100% {top: 2*$gridsize; }
-		}
-		@include keyframes(rectangle) {
-		  0%   { left: 24*$gridsize; }
-		  50% { left: 21*$gridsize; }
-		  100% {left: 24*$gridsize; }
-		}
-		.shape-1 {
-			@include shape-rectangle(4*$gridsize, 6*$gridsize, $yellow, 0);
-			top: 4*$gridsize;
-			left: 24*$gridsize;
-			@include animation ('rectangle 3s infinite');
-		}
-		.shape-2 {
-			@include shape-triangle(4*$gridsize, $blue, 180);
-			top: 6*$gridsize;
-			left: 26*$gridsize;
-			@include animation ('triangle 4s infinite');
-		}
-		.shape-3 {
-			@include shape-circle(1*$gridsize, $red);
-			top: 2*$gridsize;
-			left: 10*$gridsize;
-		}
-		.shape-4 {
-			@include shape-circle(1*$gridsize, $red);
-			top: 4*$gridsize;
-			left: 4*$gridsize;
+	&-mobile{
+		display: none;
+		@media #{$media-mobile-large} {
+			display: block;
 		}
 	}
 }
 
 .project-nav-categories {
 	display: flex;
+	@media #{$media-mobile-large}{
+		flex-direction: column;
+	}
 }
 
 .project-nav-category {
