@@ -22,6 +22,7 @@
     "autosize-input": "^0.2.1",
     "cash-dom": "^1.0.0",
     "component-raf": "^1.2.0",
+    "fisher-yates": "^1.0.3",
     "fixed-sticky": "^0.1.6",
     "fuse.js": "^2.2.0",
     "instafeed.js": "^1.4.1",

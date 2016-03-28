@@ -211,6 +211,10 @@ section.home {
 	[data-columns] {
 		display: flex;
 		align-items: center;
+		opacity: 0.0;
+		&.loaded {
+			opacity: 1.0;
+		}
 	}
 	.column {
 		flex: 1 0 47%;
@@ -567,4 +571,8 @@ section.home {
 	margin-bottom: 18px;
 	font-size: 52px;
 	font-weight: 500;
+}
+
+section.home .home-social {
+	padding-bottom: 80px;
 }

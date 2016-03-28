@@ -1,8 +1,28 @@
 
+var Instafeed = require('instafeed.js');
+var stripHashtags = require('../lib/helpers/strip-hashtags');
+var truncate = require('../lib/helpers/truncate');
+var shuffle = require('fisher-yates')
+
+var GRID_PROJECT_COUNT = 3
+
+var PIXEL = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+
+var TEMPLATE_PIXEL = /\{\{\s*pixel\s*\}\}/g
+var TEMPLATE_HREF = /\{\{\s*project\.href\s*\}\}/g
+var TEMPLATE_TITLE = /\{\{\s*project\.title\s*\}\}/g
+var TEMPLATE_THUMBNAIL_WIDTH = /\{\{\s*project\.thumbnail\.width\s*\}\}/g
+var TEMPLATE_THUMBNAIL_HEIGHT = /\{\{\s*project\.thumbnail\.height\s*\}\}/g
+var TEMPLATE_THUMBNAIL_400 = /\{\{\s*project\.thumbnail\.asset400\s*\}\}/g
+var TEMPLATE_THUMBNAIL_800 = /\{\{\s*project\.thumbnail\.asset800\s*\}\}/g
+var TEMPLATE_OWNER_NAME = /\{\{\s*project\.owner\.name\s*\}\}/g
+var TEMPLATE_OWNER_HREF = /\{\{\s*project\.owner\.href\s*\}\}/g
+
 module.exports = function () {
-  var Instafeed = require('instafeed.js');
-  var stripHashtags = require('../lib/helpers/strip-hashtags');
-  var truncate = require('../lib/helpers/truncate');
+
+  var $grids = $('[data-columns]');
+
+  var template = $('template#project-preview-template').html();
   var instagramItemCount = 0
 
   var feedOptions = {
@@ -13,24 +33,29 @@ module.exports = function () {
     limit: 8
   };
 
-  var grids = $('[data-columns]').map(function (i, el) {
-    return new Quartz(getGridConfig(el))
-  }).get()
+  if (window.PROJECTS.length) {
+    $grids.each(function (i, el) {
+      var $grid = $(el);
+      var discipline = el.dataset.columns;
+      var projects = PROJECTS.filter(function (p) { return p.discipline === discipline });
+      var picks = shuffle(projects).slice(0, GRID_PROJECT_COUNT);
+      $grid.empty();
+      picks.forEach(function (project) {
+        $grid.append(generateProjectPreview(project))
+      });
+      $grid.addClass('loaded');
+    })
+  }
 
-  $('.home').mousemove(function (e) {
-    // parallax(e, $('.logo').get(0), .11);
-    //   parallax(e, $('.shape-1').get(0), .11);
-    //   parallax(e, $('.shape-2').get(0), .2);
-    //   parallax(e, $('.shape-3').get(0), .3);
-    //   parallax(e, $('.shape-4').get(0), .4);
-    //   parallax(e, $('.shape-5').get(0), .1);
-    //   parallax(e, $('.shape-6').get(0), .2);
-    //   parallax(e, $('.shape-7').get(0), .15);
-    //   parallax(e, $('.shape-8').get(0), .1);
-    //   parallax(e, $('.shape-9').get(0), .2);
-    //   parallax(e, $('.shape-10').get(0), .15);
-    //  parallax(e, $('.shape-11').get(0), .35);
-  });
+  var grids = $grids.map(function (i, el) {
+    return new Quartz(getGridConfig(el))
+  }).get();
+
+  instagramFeed('home-insta');
+
+  /**
+   * Helper functions
+   */
 
   function instagramFeed (el) {
     var feed = new Instafeed({
@@ -56,14 +81,19 @@ module.exports = function () {
     return feed;
   }
 
-  instagramFeed('home-insta');
-
-  function parallax (e, target, layer) {
-    var layer_coeff = 10 / layer;
-    var x = (e.pageX - ($(window).width() / 2)) / layer_coeff;
-    var y = (e.pageY - ($(window).height() / 2)) / layer_coeff;
-    var rot = $(target).css('transform');
-    $(target).css('transform', 'translateY(' + y + 'px) translateX(' + x + 'px)');
+  function generateProjectPreview (project) {
+    // HACK: this mess
+    var rendered = template
+      .replace(TEMPLATE_PIXEL, PIXEL)
+      .replace(TEMPLATE_HREF, project.href)
+      .replace(TEMPLATE_TITLE, project.title)
+      .replace(TEMPLATE_THUMBNAIL_WIDTH, project.thumbnail.width)
+      .replace(TEMPLATE_THUMBNAIL_HEIGHT, project.thumbnail.height)
+      .replace(TEMPLATE_THUMBNAIL_400, project.thumbnail.asset400)
+      .replace(TEMPLATE_THUMBNAIL_800, project.thumbnail.asset800)
+      .replace(TEMPLATE_OWNER_NAME, project.owner.name)
+      .replace(TEMPLATE_OWNER_HREF, project.owner.href)
+    return rendered
   }
 };
 
