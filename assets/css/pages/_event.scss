@@ -19,7 +19,8 @@ $event-grid-increment: 34px; // NOTE: taken from space between circles in grid s
 	}
 
 	// NOTE: [rx="0.910405076"] is a proxy for a .grid class
-	ellipse[rx="0.910405076"] {
+	ellipse[rx^="0.91"],
+	ellipse[rx^=".91"] {
 		fill: $black;
 		stroke: $black;
 	}

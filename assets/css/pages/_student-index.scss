@@ -93,14 +93,12 @@
 
 .student-preview-name {
 	position: absolute;
-	// margin-top: 12px;
 	color: #ccc;
-	top: -4px;
+	top: -8px;
 	left: calc(100% - 30px);
-	width: calc(100% - 60px);
+	width: calc(100% - 24px);
 	font-family: $sofia;
-	font-size: 13px;
-	// font-weight: bold;
+	font-size: 14px;
 	line-height: 22px;
 	text-align: left;
 	transform: rotate(90deg);
@@ -126,13 +124,23 @@
 		margin: 0 0 4%;
 	}
 
-	.student-grid-block:nth-of-type(even) {
+	a.student-grid-block:nth-of-type(even) {
 		margin-left: 4%;
 	}
 
 	.student-grid-intermission {
 		flex-basis: 100%;
 		padding: 48px 0;
+	}
+	.student-preview-name {
+		font-size: 13px;
+		left: calc(100% - 26px);
+	}
+}
+
+@media only screen and (max-width: 340px) {
+	.student-preview-name {
+		display: none;
 	}
 }
 
