@@ -11,7 +11,8 @@ module.exports = function splitName (name) {
 
 	// NOTE: this block is to handle "Natalie Di Maria"
 	// (which is a pretty unique case)
-	if (components[1].toLowerCase() === 'di') {
+	var search = components[1].toLowerCase()
+	if (search === 'di' || search === 'freire') {
 		first = components[0];
 		last = components.slice(1).join(' ');
 	} else {
