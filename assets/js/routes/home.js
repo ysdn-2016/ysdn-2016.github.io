@@ -13,6 +13,10 @@ module.exports = function () {
     limit: 8
   };
 
+  var grids = $('[data-columns]').map(function (i, el) {
+    return new Quartz(getGridConfig(el))
+  }).get()
+
   $('.home').mousemove(function (e) {
     // parallax(e, $('.logo').get(0), .11);
     //   parallax(e, $('.shape-1').get(0), .11);
@@ -62,3 +66,16 @@ module.exports = function () {
     $(target).css('transform', 'translateY(' + y + 'px) translateX(' + x + 'px)');
   }
 };
+
+function getGridConfig (el) {
+  var category = el.dataset.columns
+  var className = '[data-columns="' + category + '"]'
+  return {
+    container: className,
+    items: className + ' .project-preview',
+    columnClass: 'column',
+    mediaQueries: [
+      { query: 'screen and (min-width: 1px)', columns: 2 }
+    ]
+  }
+}

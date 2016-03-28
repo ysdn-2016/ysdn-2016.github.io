@@ -208,6 +208,16 @@ section.home {
 	.button {
 		margin-top: 48px;
 	}
+	[data-columns] {
+		display: flex;
+		align-items: center;
+	}
+	.column {
+		flex: 1 0 47%;
+	}
+	.column + .column {
+		margin-left: 6%;
+	}
 }
 
 .home-work .work {

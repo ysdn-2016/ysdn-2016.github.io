@@ -60,24 +60,16 @@
           <p>Communicating ideas through visual language on all manner of mediums, including branding identity, type and editorial design, various promotional materials, and more.</p>
           <a href="/work/communication/" class="button">See More Projects</a>
         </div>
-        <div class="col span-8 work">
-          {% for column in projects | filterByDiscipline('communication') | shuffle | take(3) | half(true) %}
-            <div class="sub-col">
-              {% for project in column %}
-                {% include 'partials/project-preview.html' %}
-              {% endfor %}
-            </div>
+        <div class="col span-8 work" data-columns="communication">
+          {% for project in projects | filterByDiscipline('communication') | shuffle | take(3) %}
+            {% include 'partials/project-preview.html' %}
           {% endfor %}
         </div>
       </div>
       <div class="row home-work-phy">
-        <div class="col span-8 work">
-          {% for column in projects | filterByDiscipline('physical') | shuffle | take(3) | half %}
-            <div class="sub-col">
-              {% for project in column %}
-                {% include 'partials/project-preview.html' %}
-              {% endfor %}
-            </div>
+        <div class="col span-8 work" data-columns="physical">
+          {% for project in projects | filterByDiscipline('physical') | shuffle | take(3) %}
+            {% include 'partials/project-preview.html' %}
           {% endfor %}
         </div>
         <div class="col span-4 title">
@@ -102,24 +94,16 @@
           <p>Organizing, simplifying, and visualizing text and image, to communicate data in an interesting and thought-provoking way.</p>
           <a href="/work/information/" class="button">See More Projects</a>
         </div>
-        <div class="col span-8 work">
-          {% for column in projects | filterByDiscipline('information') | shuffle | take(3) | half(true) %}
-            <div class="sub-col">
-              {% for project in column %}
-                {% include 'partials/project-preview.html' %}
-              {% endfor %}
-            </div>
+        <div class="col span-8 work" data-columns="information">
+          {% for project in projects | filterByDiscipline('information') | shuffle | take(3) %}
+            {% include 'partials/project-preview.html' %}
           {% endfor %}
         </div>
       </div>
       <div class="row home-work-web">
-        <div class="col span-8 work">
-          {% for column in projects | filterByDiscipline('interactive') | shuffle | take(3) | half %}
-            <div class="sub-col">
-              {% for project in column %}
-                {% include 'partials/project-preview.html' %}
-              {% endfor %}
-            </div>
+      <div class="col span-8 work" data-columns="interactive">
+          {% for project in projects | filterByDiscipline('interactive') | shuffle | take(3) %}
+            {% include 'partials/project-preview.html' %}
           {% endfor %}
         </div>
         <div class="col span-4 title">
