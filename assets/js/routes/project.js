@@ -33,6 +33,7 @@ module.exports = function () {
   var $content = $('.project-content');
 
   var isPinned = false;
+  var shouldPinToTop = false;
   var isSidebarSmallerThanWindow = false;
   var isSidebarLargerThanContent = false;
   var isContentLargerThanSidebar = false;
@@ -103,7 +104,8 @@ module.exports = function () {
 
   function setTracks () {
     var projectOffset = $project.offset();
-    if (isCaseStudy) {
+    shouldPinToTop = isCaseStudy || heights.sidebar < heights.window
+    if (shouldPinToTop) {
       tracks.pinned.start = projectOffset.top - PINNED_SCROLL_OFFSET_FROM_TOP;
       tracks.pinned.end = projectOffset.top + $project.innerHeight() - $sidebar.outerHeight() - PINNED_SCROLL_OFFSET_FROM_TOP;
       tracks.pinned.offset = PINNED_SCROLL_OFFSET_FROM_TOP;
