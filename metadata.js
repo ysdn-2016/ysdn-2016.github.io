@@ -27,7 +27,7 @@ module.exports = {
 				`Phew, there's a lot of us, isn't there?`,
 				`Keep going…`,
 				`Almost there!`,
-				`That's right. 96 students. Eat it OCAD.`
+				`…`
 			]
 		}
 	},
