@@ -5,12 +5,17 @@
 .project-nav {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 48px;
+	margin-bottom: 30px;
 	font-family: $sofia;
 	font-size: 19px;
 
+	@media #{$media-mobile-large} {
+		flex-direction: row-reverse;
+		font-size: 16px;
+	}
+
 	a {
-		padding: 0 8px;
+		padding-right: 16px;
 		color: $light-gray;
 		font-weight: 400;
 
@@ -60,7 +65,7 @@
 	width: 100%;
 	position: relative;
 	width: 101%;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	margin-left: -0.5%;
 
 	img {
@@ -90,8 +95,22 @@
 	}
 }
 
+
+.student-nav-view-search{
+	white-space: nowrap;
+	#student-nav-view-search-input{
+		@media #{$media-mobile-large} {
+			width: 0;
+		}
+	}
+	@media #{$media-mobile-large} {
+		margin-right: 10px;
+	}
+}
+
 .project-nav-categories {
-	display: flex;
+	overflow: scroll;
+    white-space: nowrap;
 	@media #{$media-mobile-large}{
 		flex-direction: column;
 	}
@@ -99,6 +118,7 @@
 
 .project-nav-category {
 	margin-right: 1em;
+	display: inline-block;
 }
 
 //

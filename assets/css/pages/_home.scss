@@ -2,7 +2,7 @@ section.home {
 	// == Home Grid == //
 	$start: 1;
 	$end: 12;
-	$gridWidth: 1160px;
+	$gridWidth: 100%;
 	$spanPadding: 20px;
 	section {
 		padding-bottom: 20px;
@@ -19,6 +19,10 @@ section.home {
 		.span-#{$i} {
 			width: ($gridWidth/$end) * $i;
 		}
+	}
+
+	&.grid-wrapper {
+		max-width: 1160px;
 	}
 
 	.grid-12 {
@@ -39,6 +43,12 @@ section.home {
 			min-height: 1px;
 		}
 	}
+
+	@media (max-width: 800px) {
+		.span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12 {
+			width: 100%;
+		}
+	}
 }
 
 
@@ -47,7 +57,7 @@ section.home {
 .home-post-intro {
 	@include dot-grid;
 	position: absolute;
-	z-index: 99;
+	z-index: 97;
 	top: 0;
 	left: 0;
 	background-color: #fff;
