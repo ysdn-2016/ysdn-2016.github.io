@@ -23,8 +23,7 @@ server.use((req, res) => {
 // 	this.body = fs.createReadStream(`${process.cwd()}/build/404.html`)
 // })
 server.listen(port, () => {
-	console.log(chalk.green('ysdn-gradshow is running...'))
-	console.log(`Listening on https://localhost:${port}`)
+	console.log('Listening on',  chalk.green(`https://localhost:${port}`))
 	console.log(chalk.gray('Ctrl+C to shut down'))
 })
 
