@@ -60,7 +60,7 @@
 						</div>
 					{% endfor %}
 				</aside>
-				<div class="student-profile-projects">
+				<div class="student-profile-main-column">
 					{% set caseStudies = projects | filter("type", "case-study") %}
 					{% set standardProjects = projects | filter("type", "standard") %}
 					{% if caseStudies.length > 0 %}

@@ -197,7 +197,7 @@
 //
 
 .student-profile-sidebar {
-	flex: 1 0 26%;
+	width: 26%;
 	margin-right: 8%;
 }
 
@@ -234,10 +234,9 @@
 // Projects
 //
 
-.student-profile-projects {
-	flex: 2 0 62%;
+.student-profile-main-column {
+	width: 62%;
 }
-
 
 .student-profile-projects {
 	margin-bottom: 60px;
