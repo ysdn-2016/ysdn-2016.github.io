@@ -36,6 +36,12 @@
 	background-position: top left;
 }
 
+@mixin dot-grid-unit() {
+	background-image: url(/assets/images/grid_unit_40px.svg);
+	background-repeat: repeat;
+	background-position: top left;
+}
+
 @mixin shape-triangle($size, $color, $rotation) {
 	border-top: 0 solid transparent;
 	border-right: $size solid $color;
@@ -80,13 +86,13 @@
     }
     @-moz-keyframes #{$animation-name} {
         @content;
-    }  
+    }
     @-ms-keyframes #{$animation-name} {
         @content;
     }
     @-o-keyframes #{$animation-name} {
         @content;
-    }  
+    }
     @keyframes #{$animation-name} {
         @content;
     }
@@ -97,5 +103,5 @@
   -moz-animation: #{$str};
   -ms-animation: #{$str};
   -o-animation: #{$str};
-  animation: #{$str};      
+  animation: #{$str};
 }
