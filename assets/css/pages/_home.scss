@@ -7,24 +7,20 @@ section.home {
 	section {
 		padding-bottom: 20px;
 	}
-
-
 	[class*='span-'] {
 		float: left;
 		padding: 0 $spanPadding;
 	}
-
 	// Create grid widths (1-12)
 	@for $i from $start through $end {
 		.span-#{$i} {
 			width: ($gridWidth/$end) * $i;
 		}
 	}
-
 	&.grid-wrapper {
 		max-width: 1160px;
+		margin: 0 auto;
 	}
-
 	.grid-12 {
 		max-width: $gridWidth;
 		margin: 0 auto;
@@ -43,7 +39,6 @@ section.home {
 			min-height: 1px;
 		}
 	}
-
 	@media (max-width: 800px) {
 		.span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12 {
 			width: 100%;
@@ -54,17 +49,38 @@ section.home {
 
 // == Home Post Intro == //
 
-.home-post-intro {
-	@include dot-grid-unit;
-	position: absolute;
-	z-index: 97;
-	top: 0;
-	left: 0;
-	background-color: #fff;
-	width: 100%;
-	height: 820px;
-	margin: 36px;
+@media (min-width: 1001px) {
+	.home-post-intro {
+		width: 100%;
+		margin: 0 auto;
+		// background-image: url(/assets/images/home-intro-grid-desktop.svg);
+	}
+}
 
+@media (max-width: 1000px) {
+	.home-post-intro {
+		width: 800px;
+		height: 600px;
+		margin: 37px 36px;
+	}
+}
+
+@media (max-width: 560px) {
+	.home-post-intro {
+		width: 320px;
+		height: 600px;
+		margin: 38px 37px;
+	}
+}
+
+.home-post-intro {
+	// @include dot-grid-unit;
+	position: relative;
+	z-index: 97;
+	background-color: #fff;
+	img {
+		width: 100%;
+	}
 	.logo {
 		position: absolute;
 		top: 320px;
@@ -84,69 +100,69 @@ section.home {
 			}
 		}
 	}
-
 	// Shapes
-
-	.shape-1 {
-		@include shape-square(40px, $orange, 0);
-		top: 202.3px;
-		left: 50%;
-		margin-left: -615px;
-	}
-	.shape-2 {
-		@include shape-triangle(120px, $yellow, 180);
-		top: 122.3px;
-		left: 50%;
-		margin-left: -575px;
-	}
-	.shape-3 {
-		@include shape-circle(80px, $red);
-		top: 42px;
-		left: 402px;
-	}
-	.shape-4 {
-		@include shape-triangle(240px, $yellow, 270);
-		top: 163.3px;
-		left: 1002px;
-	}
-	.shape-5 {
-		@include shape-triangle(120px, $yellow, 270);
-		top: 282.3px;
-		left: 1122px;
-	}
-	.shape-6 {
-		@include shape-square(114px, $green, 45);
-		top: 425.3px;
-		left: 224.6px;
-	}
-	.shape-7 {
-		@include shape-rectangle(80px, 160px, $blue, 0);
-		top: 482.3px;
-		left: 1162px;
-	}
-	.shape-8 {
-		@include shape-triangle(120px, $yellow, 180);
-		top: 602.3px;
-		left: 50%;
-		margin-left: -55px;
-	}
-	.shape-9 {
-		@include shape-square(80px, $orange, 0);
-		top: 682.3px;
-		left: 50%;
-		margin-left: 225px;
-	}
-	.shape-10 {
-		@include shape-rectangle(40px, 80px, $blue, 90);
-		top: 662.3px;
-		left: 50%;
-		margin-left: -595px;
-	}
-	.shape-11 {
-		@include shape-circle(80px, $red);
-		top: 602px;
-		left: 50%;
-		margin-left: 425px;
+	@media (min-width: 1001px) {
+		.shape-1 {
+			@include shape-square(40px, $orange, 0);
+			top: 202.3px;
+			left: 50%;
+			margin-left: -615px;
+		}
+		.shape-2 {
+			@include shape-triangle(120px, $yellow, 180);
+			top: 122.3px;
+			left: 50%;
+			margin-left: -575px;
+		}
+		.shape-3 {
+			@include shape-circle(80px, $red);
+			top: 42px;
+			left: 402px;
+		}
+		.shape-4 {
+			@include shape-triangle(240px, $yellow, 270);
+			top: 163.3px;
+			left: 1002px;
+		}
+		.shape-5 {
+			@include shape-triangle(120px, $yellow, 270);
+			top: 282.3px;
+			left: 1122px;
+		}
+		.shape-6 {
+			@include shape-square(114px, $green, 45);
+			top: 425.3px;
+			left: 224.6px;
+		}
+		.shape-7 {
+			@include shape-rectangle(80px, 160px, $blue, 0);
+			top: 482.3px;
+			left: 1162px;
+		}
+		.shape-8 {
+			@include shape-triangle(120px, $yellow, 180);
+			top: 602.3px;
+			left: 50%;
+			margin-left: -55px;
+		}
+		.shape-9 {
+			@include shape-square(80px, $orange, 0);
+			top: 682.3px;
+			left: 50%;
+			margin-left: 225px;
+		}
+		.shape-10 {
+			@include shape-rectangle(40px, 80px, $blue, 90);
+			top: 662.3px;
+			left: 50%;
+			margin-left: -595px;
+		}
+		.shape-11 {
+			@include shape-circle(80px, $red);
+			top: 602px;
+			left: 50%;
+			margin-left: 425px;
+		}
 	}
 }
 
@@ -165,7 +181,7 @@ section.home {
 // == Home Info == //
 
 .home-info {
-	margin-top: 900px;
+	padding-top: 60px;
 	h2 {
 		font-size: 1.94em;
 		a {
@@ -209,7 +225,6 @@ section.home {
 		justify-content: space-between;
 		margin-bottom: 48px;
 	}
-
 	h3 {
 		font-size: 2.1em;
 		line-height: 1.25em;
@@ -219,8 +234,8 @@ section.home {
 	}
 	[data-columns] {
 		display: flex;
-		align-items: center;
 		opacity: 0.0;
+		align-items: center;
 		&.loaded {
 			opacity: 1.0;
 		}
@@ -235,21 +250,21 @@ section.home {
 
 .home-work .work {
 	display: flex;
-  width: percentage(7.5/12);
+	width: percentage(7.5/12);
 }
 
 .home-work .sub-col {
 	display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
-  margin: 0 12px;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	margin: 0 12px;
 }
 
 .home-work-project {
 	width: 100%;
-	transition: opacity 0.4s;
 	margin-bottom: 28px;
+	transition: opacity 0.4s;
 	&:hover {
 		opacity: 0.6;
 		transition: opacity 0.4s;
@@ -257,8 +272,8 @@ section.home {
 	&:nth-child(1), &:nth-child(2) {
 		align-self: flex-end;
 	}
-	&:nth-child(3), &:nth-child(4)  {
-	  align-items: flex-start;
+	&:nth-child(3), &:nth-child(4) {
+		align-items: flex-start;
 	}
 	.thumbnail {
 		overflow: hidden;
@@ -271,10 +286,10 @@ section.home {
 .home-work .title {
 	position: relative;
 	display: flex;
-	width: percentage(4/12);
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
+	width: percentage(4/12);
 	height: 640px;
 	.shape-grid {
 		@include dot-grid;
@@ -377,7 +392,6 @@ section.home {
 	h2,p {
 		color: white;
 	}
-
 	h2 {
 		width: 600px;
 		margin: 0 auto;
@@ -386,7 +400,6 @@ section.home {
 		font-size: 3.4em;
 		text-align: center;
 	}
-
 	p {
 		width: 780px;
 		margin: 0 auto;
@@ -395,7 +408,6 @@ section.home {
 		line-height: 1.6;
 		text-align: center;
 	}
-
 	.wrap {
 		padding-top: 200px;
 	}
@@ -406,7 +418,6 @@ section.home {
 		margin: 0 auto;
 		padding: 30px;
 	}
-
 	.button-wrap {
 		background-color: black;
 		width: 240px;
@@ -414,7 +425,6 @@ section.home {
 		margin-top: 56px;
 		padding: 30px;
 	}
-
 	.button {
 		border: 1px solid white;
 		border: 1px solid white;

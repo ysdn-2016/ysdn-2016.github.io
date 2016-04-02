@@ -1,41 +1,14 @@
-{% extends 'site.html' %}
-{% block main %}
+{% extends 'base.html' %}
+{% block body %}
+  <div class="home-post-intro">
+    <img src="/assets/images/home-intro-grid-desktop.svg">
+  </div>
+  {% include 'partials/header.html' %}
   <section class="home grid-wrapper">
     <div class="grid-12">
       <header class="home-intro">
 
       </header> <!-- .home-intro -->
-      <div class="home-post-intro">
-        <div class="logo">
-          {% include 'partials/logo.html' %}
-        </div>
-        <div class="shapes">
-          <div class="shape shape-1"></div>
-          <div class="shape shape-2"></div>
-          <div class="shape shape-3"></div>
-          <div class="shape shape-4"></div>
-          <div class="shape shape-5"></div>
-          <div class="shape shape-6"></div>
-          <div class="shape shape-7"></div>
-          <div class="shape shape-8"></div>
-          <div class="shape shape-9"></div>
-          <div class="shape shape-10"></div>
-          <div class="shape shape-11"></div>
-        </div>
-      </div>
-      <nav class="home-nav">
-        <header class="header">
-          <div class="header-wrapper">
-            <a href="/" class="header-logo">{% include 'partials/logo.html' %}</a>
-            <div class="header-nav">
-              <a href="/work/" {% if id == 'work' %}class="active"{% endif %}>Work</a>
-              <a href="/students/" {% if id == 'students' %}class="active"{% endif %}>Cast</a>
-              <a href="/sponsors/" {% if id == 'sponsors' %}class="active"{% endif %}>Sponsors</a>
-              <a href="/about/" {% if id == 'about' %}class="active"{% endif %}>About</a>
-            </div>
-          </div>
-        </header>
-      </nav>
       <section class="home-info">
         <div class="row">
           <div class="col span-2"></div>
