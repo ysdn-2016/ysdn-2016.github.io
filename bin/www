@@ -1,29 +1,32 @@
 #!/usr/bin/env node
 
 var fs = require('fs')
-var koa = require('koa')
 var chalk = require('chalk')
-var compression = require('koa-compress')
-var serve = require('koa-better-static')
+var express = require('express')
 
-var server = koa()
 var port = process.env.PORT || 8081
 var env = process.env.NODE_ENV || 'development'
+var dir = 'build'
 
-server.use(function * (next) {
-	yield next
-	if (this.status !== 404) return
-	this.status = 404
-	this.type = 'html'
-	this.body = fs.createReadStream(`${process.cwd()}/build/404.html`)
+var server = express()
+
+server.use(express.static(dir))
+server.use((req, res) => {
+	res.sendFile(`${process.cwd()}/${dir}/404.html`)
 })
-server.use(compression())
-server.use(serve('build'))
-server.listen(port)
 
-console.log(chalk.green('ysdn-gradshow is running...'))
-console.log(`Listening on https://localhost:${port}`)
-console.log(chalk.gray('Ctrl+C to shut down'))
+// server.use(serve('build'))
+// server.use(function * (next) {
+// 	if (this.status !== 404) return
+// 	this.status = 404
+// 	this.type = 'html'
+// 	this.body = fs.createReadStream(`${process.cwd()}/build/404.html`)
+// })
+server.listen(port, () => {
+	console.log(chalk.green('ysdn-gradshow is running...'))
+	console.log(`Listening on https://localhost:${port}`)
+	console.log(chalk.gray('Ctrl+C to shut down'))
+})
 
 process.on('SIGINT', () => {
 	console.log(chalk.red('Server has shutdown'))
