@@ -11,6 +11,7 @@ var permalinks = require('metalsmith-permalinks')
 var layouts = require('metalsmith-layouts')
 var branch = require('metalsmith-branch')
 var swig = require('metalsmith-swig-helpers')
+var ora = require('ora')
 
 var yaml = require('../lib/yaml')
 var projects = require('../lib/projects')
@@ -118,6 +119,10 @@ site.use(branch('students/**/project.md')
 /**
  * Build the site
  */
+var spinner = ora('Building site')
+spinner.start()
 site.build(err => {
 	if (err) throw err
+	spinner.stop()
+	spinner.clear()
 })
