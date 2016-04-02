@@ -55,13 +55,12 @@ section.home {
 // == Home Post Intro == //
 
 .home-post-intro {
-	@include dot-grid;
+	@include dot-grid-unit;
 	position: absolute;
 	z-index: 97;
 	top: 0;
 	left: 0;
 	background-color: #fff;
-	background-size: 160px;
 	width: 100%;
 	height: 820px;
 	margin: 36px;

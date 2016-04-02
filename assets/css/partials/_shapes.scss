@@ -40,6 +40,7 @@
 	background-image: url(/assets/images/grid_unit_40px.svg);
 	background-repeat: repeat;
 	background-position: top left;
+	background-size: 40px;
 }
 
 @mixin shape-triangle($size, $color, $rotation) {
