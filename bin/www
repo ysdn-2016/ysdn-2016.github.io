@@ -4,7 +4,7 @@ var fs = require('fs')
 var koa = require('koa')
 var chalk = require('chalk')
 var compression = require('koa-compress')
-var serve = require('koa-static')
+var serve = require('koa-better-static')
 
 var server = koa()
 var port = process.env.PORT || 8081
