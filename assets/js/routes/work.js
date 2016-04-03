@@ -23,19 +23,21 @@ module.exports = function () {
 
 
   $categoryLinks.on('click', categoryLinkClick);
-  $(document).on('mouseenter', PROJECT_CLASS, projectMouseEnter);
-  $(document).on('mouseleave', PROJECT_CLASS, projectMouseLeave);
+  $(document).on('mouseenter', '.project-preview-title', projectMouseEnter);
+  $(document).on('mouseleave', '.project-preview-title', projectMouseLeave);
+  $(document).on('mouseenter', '.project-preview-image', projectMouseEnter);
+  $(document).on('mouseleave', '.project-preview-image', projectMouseLeave);
 
   /**
    * Event Handlers
    */
 
   function projectMouseEnter (e) {
-    $(this).addClass('hover');
+    $(this).parents('.project-preview').addClass('hover');
   }
 
   function projectMouseLeave (e) {
-    $(this).removeClass('hover');
+    $(this).parents('.project-preview').removeClass('hover');
   }
 
   function categoryLinkClick (e) {

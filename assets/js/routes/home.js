@@ -54,15 +54,17 @@ module.exports = function () {
 
   instagramFeed('home-insta');
 
-  $(document).on('mouseenter', '.project-preview', projectMouseEnter);
-  $(document).on('mouseleave', '.project-preview', projectMouseLeave);
+  $(document).on('mouseenter', '.project-preview-title', projectMouseEnter);
+  $(document).on('mouseleave', '.project-preview-title', projectMouseLeave);
+  $(document).on('mouseenter', '.project-preview-image', projectMouseEnter);
+  $(document).on('mouseleave', '.project-preview-image', projectMouseLeave);
 
   function projectMouseEnter (e) {
-    $(this).addClass('hover');
+    $(this).parents('.project-preview').addClass('hover');
   }
 
   function projectMouseLeave (e) {
-    $(this).removeClass('hover');
+    $(this).parents('.project-preview').removeClass('hover');
   }
 
   /**
