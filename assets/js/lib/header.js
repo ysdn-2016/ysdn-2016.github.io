@@ -23,6 +23,8 @@ module.exports = (function () {
 	}
 
 	function destroy () {
+		isFixed = false;
+		$header.removeClass('header--fixed header--maximized header--is-transitioning');
 		$window.off('scrolldelta', handleScroll);
 	}
 

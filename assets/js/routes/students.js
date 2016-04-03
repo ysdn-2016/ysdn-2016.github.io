@@ -67,10 +67,10 @@ module.exports = function () {
     }
 
     if (!predicate.length) {
-      $students.show();
-      $shapes.show();
-      $intermissions.show();
-      $footer.show();
+      $students.removeClass('hidden');
+      $shapes.removeClass('hidden');
+      $intermissions.removeClass('hidden');
+      $footer.removeClass('hidden');
       $noResults.addClass('hidden');
       $typeahead.text('');
       prompt = '';
@@ -81,13 +81,13 @@ module.exports = function () {
     var matches = fuse.search(predicate);
     var count = matches.length;
 
-    $students.hide();
-    $intermissions.hide();
-    $shapes.hide();
-    $footer.hide();
+    $students.addClass('hidden');
+    $intermissions.addClass('hidden');
+    $shapes.addClass('hidden');
+    $footer.addClass('hidden');
 
     matches.forEach(function (match) {
-      match.item.$el.show();
+      match.item.$el.removeClass('hidden');
     });
 
     Lazyload.check();

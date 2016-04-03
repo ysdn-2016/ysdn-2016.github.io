@@ -26,7 +26,17 @@ router.start({ click: false });
 
 $(function () {
   EventRibbon.init();
-  Header.init();
+
+  // NB: Keep in sync with _header.scss
+  enquire.register('screen and (min-width: 600px)', {
+    match: function () {
+      console.log('yoyo')
+      Header.init();
+    },
+    unmatch: function () {
+      Header.destroy();
+    }
+  })
 
   $('a[href="#!top"]').on('click', function (e) {
     e.preventDefault()
@@ -35,14 +45,14 @@ $(function () {
       duration: 800
     });
   });
-  $('#mobile-header-trigger').on('click', function (e) {
-    e.preventDefault()
-    $('.mobile-header').toggleClass('active');
-    $('main.main').toggleClass('mobile-nav-active');
-  });
-  $('#mobile-header-close').on('click', function (e) {
-    e.preventDefault()
-    $('.mobile-header').toggleClass('active');
-    $('main.main').toggleClass('mobile-nav-active');
-  });
+  // $('#mobile-header-trigger').on('click', function (e) {
+  //   e.preventDefault()
+  //   $('.mobile-header').toggleClass('active');
+  //   $('main.main').toggleClass('mobile-nav-active');
+  // });
+  // $('#mobile-header-close').on('click', function (e) {
+  //   e.preventDefault()
+  //   $('.mobile-header').toggleClass('active');
+  //   $('main.main').toggleClass('mobile-nav-active');
+  // });
 });

@@ -51,8 +51,8 @@
 	}
 	&-filters{
 		@media #{$media-mobile-large}{
-		flex-direction: column;
-	}
+			flex-direction: column;
+		}
 	}
 
 }
@@ -64,9 +64,8 @@
 .project-category-intro {
 	width: 100%;
 	position: relative;
-	width: 101%;
+	width: 100%;
 	margin-bottom: 30px;
-	margin-left: -0.5%;
 
 	img {
 		width: 100%;

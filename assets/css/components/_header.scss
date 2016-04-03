@@ -9,10 +9,11 @@ $header-light-bg: $white;
 	align-items: center;
 	left: 0;
 	right: 0;
-	z-index: 9;
+	z-index: 99;
 	height: 90px;
 	box-shadow: none;
 	transition: box-shadow 400ms ease, background 400ms ease;
+	backface-visibility: hidden;
 }
 
 .header--fixed {
@@ -168,7 +169,8 @@ $header-light-bg: $white;
 	}
 }
 
-@media (max-width: 560px) {
+// NB: Keep in sync with index.js
+@media (max-width: 600px) {
 	.header {
 		z-index: 99;
 		background-color: #fff;

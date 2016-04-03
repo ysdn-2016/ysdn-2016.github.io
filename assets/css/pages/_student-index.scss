@@ -106,8 +106,19 @@
 		margin: 0 1.5% 4%;
 	}
 
+	.student-grid-block:nth-child(4),
+	.student-grid-block:nth-child(11),
+	.student-grid-block:nth-child(25),
+	.student-grid-block:nth-child(28),
+	.student-grid-block:nth-child(62),
+	.student-grid-block:nth-child(93),
+	.student-grid-block:nth-child(126) {
+		display: none;
+	}
+
 	.student-grid-intermission {
 		flex-basis: 63%;
+		min-height: 26vw;
 	}
 }
 
@@ -120,6 +131,14 @@
 	.student-grid-block {
 		flex-basis: 48%;
 		margin: 0 0 4%;
+	}
+
+	.student-grid-block:nth-child(4) {
+		display: flex;
+	}
+
+	.student-grid-block:nth-child(62) {
+		display: none;
 	}
 
 	.student-grid-shape-container {
