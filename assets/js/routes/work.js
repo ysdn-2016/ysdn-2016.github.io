@@ -1,4 +1,5 @@
 var shuffle = require('../lib/shuffle');
+var Lazyload = require('../lib/lazyload');
 
 var PROJECT_CLASS = '.project-preview'
 
@@ -54,6 +55,7 @@ module.exports = function () {
         .filter('[data-category="' + category + '"]')
         .show();
     }
+    Lazyload.check();
     grid.update();
   }
 };
