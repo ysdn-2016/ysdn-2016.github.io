@@ -1,18 +1,14 @@
-.page-student {
-	.header {
-		position: absolute;
-		width: 100%;
-		padding-right: $ribbon-peek;
-	}
-}
+$student-profile-header-background: #f6f6f6;
 
-.student-profile {
-	margin-right: $ribbon-peek;
+.page-student {
+	.header:not(.header--fixed) {
+		background: $student-profile-header-background;
+	}
 }
 
 .student-profile-header {
 	position: relative;
-	background-color: #f6f6f6;
+	background-color: $student-profile-header-background;
 	display: flex;
 	overflow: hidden;
 	height: 500px;

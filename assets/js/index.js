@@ -1,5 +1,6 @@
 var router = require('page');
 var Lazyload = require('./lib/lazyload');
+var Header = require('./lib/header');
 var EventRibbon = require('./lib/ribbon');
 
 var routes = {
@@ -25,6 +26,7 @@ router.start({ click: false });
 
 $(function () {
   EventRibbon.init();
+  Header.init();
 
   $('a[href="#!top"]').on('click', function (e) {
     e.preventDefault()
