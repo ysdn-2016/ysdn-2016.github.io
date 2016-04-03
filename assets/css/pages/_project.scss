@@ -309,6 +309,13 @@ $sticky-scroll-offset: 60px;
 		margin: 0 0 4px;
 		font-size: 36px;
 	}
+
+	.project-header-owner-name {
+		margin: 8px 0 12px;
+		color: #888;
+		font-size: 15px;
+	}
+
 	@media #{$media-tablet-medium}{
 		.project-body{
 				flex-direction: column;
