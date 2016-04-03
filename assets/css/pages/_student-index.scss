@@ -9,16 +9,6 @@
 	margin: 0 -1.5%;
 }
 
-.student-grid--searching {
-	justify-content: center;
-}
-
-// .student-grid--typing {
-// 	img {
-// 		animation-play-state: paused;
-// 	}
-// }
-
 .student-grid-block,
 .student-grid-intermission {
 	display: flex;
@@ -31,12 +21,15 @@
 	align-items: center;
 	justify-content: center;
 	font-weight: 600;
+	p {
+		margin: 0;
+	}
 }
 
 .student-grid-shape-container {
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 }
 
 .student-grid-shape {
@@ -44,16 +37,16 @@
 		@include shape-triangle(60px, $yellow, 0);
 	}
 	&--rectangle {
-		@include shape-rectangle(40px, 80px, $red, 45);
+		@include shape-rectangle(42px, 84px, $red, 45);
 	}
 	&--half-circle {
-		@include shape-half-circle(60px, $green, 135);
+		@include shape-half-circle(80px, $green, 135);
 	}
 	&--circle {
 		@include shape-circle(60px, $blue);
 	}
 	&--square {
-		@include shape-circle(60px, $orange);
+		@include shape-square(60px, $orange, 0);
 	}
 }
 
@@ -119,19 +112,25 @@
 }
 
 @media only screen and (max-width: 600px) {
+
+	.student-grid {
+		justify-content: space-between;
+	}
+
 	.student-grid-block {
 		flex-basis: 48%;
 		margin: 0 0 4%;
 	}
 
-	a.student-grid-block:nth-of-type(even) {
-		margin-left: 4%;
+	.student-grid-shape-container {
+		min-height: 44.5vw;
 	}
 
 	.student-grid-intermission {
 		flex-basis: 100%;
-		padding: 48px 0;
+		min-height: 44.5vw;
 	}
+
 	.student-preview-name {
 		font-size: 13px;
 		left: calc(100% - 26px);

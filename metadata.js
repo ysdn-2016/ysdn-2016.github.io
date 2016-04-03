@@ -22,13 +22,7 @@ module.exports = {
 		},
 		studentIndex: {
 			averageShapeInterval: 5,
-			averageIntermissionInterval: 18,
-			intermissionSentences: [
-				`Phew, there's a lot of us, isn't there?`,
-				`Keep going…`,
-				`Almost there!`,
-				`…`
-			]
+			averageIntermissionInterval: 18
 		}
 	},
 

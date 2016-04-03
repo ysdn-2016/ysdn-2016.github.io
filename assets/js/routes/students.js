@@ -144,12 +144,14 @@ module.exports = function () {
       case 13: // return
         $search.val(prompt);
         update();
+        autosize();
         break;
       case 39: // right arrow
         var search = $search.get(0)
         if (search.value.length === search.selectionEnd) {
           $search.val(prompt);
           update();
+          autosize();
         }
         break;
     }
