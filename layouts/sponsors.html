@@ -6,7 +6,6 @@
 		<div class="sponsors-header">
 			<h1>Sponsors</h1>
 			<p>We would like to express our gratitute to our generous sponsors. <br>This show wouldn’t have been possible without their kind support.</p>
-			<p class="subline">If you are interested in supporting this event or a Grad Show in the future, <a href="mailto:hello@ysdn2016.com?subject=Sponsorship">please get in touch.</a></p>
 
 			<div class="shapes parallax-layer">
 				<div class="shape sponsors-header-shape-1"></div>
@@ -20,6 +19,7 @@
 		<section class="event-sponsors event-section event-sponsors-list">
 		<div class="event-sponsors-logos">
 			<div class="event-sponsors-presenting-sponsors">
+			<p>Presenting Sponsor</p>
 				{% for sponsor in event.sponsors | filter('priority', 1) %}
 				<a class="event-presenting-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
 					{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
@@ -28,6 +28,7 @@
 				{% endfor %}
 			</div>
 			<div class="event-sponsors-founding-sponsors">
+			<p>Interactive Sponsor</p>
 				{% for sponsor in event.sponsors | filter('priority', 2) %}
 				<a class="event-founding-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
 					{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
@@ -36,6 +37,7 @@
 				{% endfor %}
 			</div>
 			<div class="event-sponsors-patron-sponsors">
+				<p>Sponsors</p>
 				{% for sponsor in event.sponsors | filter('priority', 3) %}
 				<a class="event-patron-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
 					{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
@@ -43,8 +45,21 @@
 				</a>
 				{% endfor %}
 			</div>
+			<div class="event-sponsors-patron-sponsors">
+				{% for sponsor in event.sponsors | filter('priority', 4) %}
+				<a class="event-patron-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+					{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
+					{% include logo %}
+				</a>
+				{% endfor %}
+			</div>
 		</div>
-		</section><!-- .sponsors -->
+		</section>
+		
+		<div class="sponsors-interest">
+			<p>If you are interested in supporting this event or a Grad Show in the future, <a href="mailto:hello@ysdn2016.com?subject=Sponsorship"><span>please get in touch.</span></a></p>
+		</div>
+		<!-- .sponsors -->
 
 	<!-- Hide until Videos are Received -->
 	<!--

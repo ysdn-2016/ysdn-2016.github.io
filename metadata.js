@@ -88,17 +88,17 @@ module.exports = {
 	      priority: 2
 	    },
 	    {
+	      id: "3m",
+	      company: "3M",
+	      title: "Foundation Sponsor",
+	      url: "http://3Mcanada.ca",
+	      priority: 3
+	    },
+	    {
 	      id: "veritiv",
 	      company: "Veritiv",
 	      title: "Foundation Sponsor",
 	      url: "http://veritivcorp.com",
-	      priority: 2
-	    },
-	    {
-	      id: "hughes-brannan",
-	      company: "Hughes & Brannan",
-	      title: "Patron",
-	      url: "http://hughesbrannanlaw.com",
 	      priority: 3
 	    },
 	    {
@@ -106,21 +106,28 @@ module.exports = {
 	      company: "Critical Mass",
 	      title: "Patron",
 	      url: "http://criticalmass.com",
-	      priority: 3
+	      priority: 4
 	    },
 	    {
-	      id: "saman",
-	      company: "Saman Design",
+	      id: "hughes-brannan",
+	      company: "Hughes & Brannan",
 	      title: "Patron",
-	      url: "http://www.samandesign.com/",
-	      priority: 3
+	      url: "http://hughesbrannanlaw.com",
+	      priority: 4
 	    },
 	    {
 	      id: "lassonde",
 	      company: "Lassonde School of Enginering",
 	      title: "Patron",
 	      url: "http://lassonde.yorku.ca/",
-	      priority: 3
+	      priority: 4
+	    },
+	    {
+	      id: "saman",
+	      company: "Saman Design",
+	      title: "Patron",
+	      url: "http://www.samandesign.com/",
+	      priority: 4
 	    }
 	  ]
 	},

@@ -28,7 +28,7 @@
 
 // == Header == //
 
-.sponsors-header {
+.sponsors-header, .sponsors-interest {
 	padding-top: 80px;
 	padding-bottom: 40px;
 	h1 {
@@ -83,11 +83,15 @@
 	}
 }
 
+.sponsors-interest p {
+	max-width: 100%;
+}
+
 //
 // Sponsors
 //
 
-$event-section-padding: 15vh;
+$event-section-padding: 10vh;
 $event-grid-increment: 34px; // NOTE: taken from space between circles in grid svg
 
 // TODO: @emmersonic, if you get a chance can you change these class names from
@@ -116,6 +120,10 @@ $event-grid-increment: 34px; // NOTE: taken from space between circles in grid s
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		p {
+			display: block;
+			flex: 0 1 100%;
+		}
 	}
 
 	.event-sponsors-presenting-sponsors,
@@ -123,6 +131,8 @@ $event-grid-increment: 34px; // NOTE: taken from space between circles in grid s
 	.event-sponsors-patron-sponsors {
 		display: flex;
 		margin-bottom: 24px;
+		flex-wrap: wrap;
+		justify-content: center;
 
 		@media #{$media-tablet-medium} {
 			flex-direction: column;
@@ -142,7 +152,7 @@ $event-grid-increment: 34px; // NOTE: taken from space between circles in grid s
 	}
 
 	.event-patron-sponsor {
-		max-width: 350px;
+		max-width: 320px;
 	}
 
 	.event-sponsors-list {
