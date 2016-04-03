@@ -110,14 +110,13 @@
 
 .project-nav-categories {
 	overflow: scroll;
-    white-space: nowrap;
+  white-space: nowrap;
 	@media #{$media-mobile-large}{
 		flex-direction: column;
 	}
 }
 
 .project-nav-category {
-	margin-right: 1em;
 	display: inline-block;
 }
 
