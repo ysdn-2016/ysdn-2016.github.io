@@ -4,6 +4,7 @@ section.home {
 	$end: 12;
 	$gridWidth: 100%;
 	$spanPadding: 20px;
+	overflow-x: hidden;
 	section {
 		padding-bottom: 20px;
 	}
@@ -55,21 +56,20 @@ section.home {
 		margin: 0 auto;
 		// background-image: url(/assets/images/home-intro-grid-desktop.svg);
 	}
+	.desktop {
+		display: block !important;
+	}
 }
 
-@media (max-width: 1000px) {
-	.home-post-intro {
-		width: 800px;
-		height: 600px;
-		margin: 37px 36px;
+@media (min-width: 561px) and (max-width: 1000px) {
+	.tablet {
+		display: block !important;
 	}
 }
 
 @media (max-width: 560px) {
-	.home-post-intro {
-		width: 320px;
-		height: 600px;
-		margin: 38px 37px;
+	.mobile {
+		display: block !important;
 	}
 }
 
@@ -78,6 +78,8 @@ section.home {
 	position: relative;
 	z-index: 97;
 	background-color: #fff;
+	width: 100%;
+	margin: 0 auto;
 	img {
 		width: 100%;
 	}
@@ -100,69 +102,8 @@ section.home {
 			}
 		}
 	}
-	// Shapes
-	@media (min-width: 1001px) {
-		.shape-1 {
-			@include shape-square(40px, $orange, 0);
-			top: 202.3px;
-			left: 50%;
-			margin-left: -615px;
-		}
-		.shape-2 {
-			@include shape-triangle(120px, $yellow, 180);
-			top: 122.3px;
-			left: 50%;
-			margin-left: -575px;
-		}
-		.shape-3 {
-			@include shape-circle(80px, $red);
-			top: 42px;
-			left: 402px;
-		}
-		.shape-4 {
-			@include shape-triangle(240px, $yellow, 270);
-			top: 163.3px;
-			left: 1002px;
-		}
-		.shape-5 {
-			@include shape-triangle(120px, $yellow, 270);
-			top: 282.3px;
-			left: 1122px;
-		}
-		.shape-6 {
-			@include shape-square(114px, $green, 45);
-			top: 425.3px;
-			left: 224.6px;
-		}
-		.shape-7 {
-			@include shape-rectangle(80px, 160px, $blue, 0);
-			top: 482.3px;
-			left: 1162px;
-		}
-		.shape-8 {
-			@include shape-triangle(120px, $yellow, 180);
-			top: 602.3px;
-			left: 50%;
-			margin-left: -55px;
-		}
-		.shape-9 {
-			@include shape-square(80px, $orange, 0);
-			top: 682.3px;
-			left: 50%;
-			margin-left: 225px;
-		}
-		.shape-10 {
-			@include shape-rectangle(40px, 80px, $blue, 90);
-			top: 662.3px;
-			left: 50%;
-			margin-left: -595px;
-		}
-		.shape-11 {
-			@include shape-circle(80px, $red);
-			top: 602px;
-			left: 50%;
-			margin-left: 425px;
-		}
+	.desktop, .tablet, .mobile {
+		display: none;
 	}
 }
 

@@ -98,7 +98,7 @@ $header-light-bg: $white;
 }
 
 .mobile-header-nav {
-	position: absolute;
+	position: fixed;
 	top: -300px;
 	left: 0;
 	width: 100%;
