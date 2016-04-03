@@ -30,7 +30,7 @@ module.exports = function () {
     clientId: '467ede5a6b9b48ae8e03f4e2582aeeb3',
     userId: '2228340350',
     sortBy: 'most-recent',
-    template: require('../templates/insta_home.html'),
+    template: require('../templates/instagram.html'),
     limit: 8
   };
 
