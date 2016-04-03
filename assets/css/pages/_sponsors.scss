@@ -91,17 +91,17 @@
 // Sponsors
 //
 
-$event-section-padding: 10vh;
-$event-grid-increment: 34px; // NOTE: taken from space between circles in grid svg
+$sponsor-page-section-padding: 10vh;
+$sponsor-page-grid-increment: 34px; // NOTE: taken from space between circles in grid svg
 
 // TODO: @emmersonic, if you get a chance can you change these class names from
-// 'event-sponsors' to like 'all-sponsors' or 'sponsors-page-sponsors'?
+// 'sponsor-page-sponsors' to like 'all-sponsors' or 'sponsors-page-sponsors'?
 // By duplicating them you're affecting my work on the event page.
 // I've scoped it in for now, but it's best if things sit on the top level.
 
 .sponsors {
 
-	.event-sponsors {
+	.sponsor-page-sponsors {
 		overflow: hidden;
 		padding-bottom: 0;
 		color: $black;
@@ -112,11 +112,38 @@ $event-grid-increment: 34px; // NOTE: taken from space between circles in grid s
 		}
 	}
 
-	.event-sponsors-introduction {
+	.sponsor-page-sponsor {
+
+	transition: opacity 200ms ease;
+
+	path:not(.background),
+	rect {
+		fill: $black;
+	}
+
+	path.background {
+		opacity: 0.1;
+	}
+
+	.event-panel.blue & path.background {
+		fill: $black;
+	}
+
+	.event-panel.red & path,
+	.event-panel.red & rect {
+		fill: $white;
+	}
+
+	&:hover {
+		opacity: 0.6;
+	}
+}
+
+	.sponsor-page-sponsors-introduction {
 		margin-bottom: 56px;
 	}
 
-	.event-sponsors-logos {
+	.sponsor-page-sponsors-logos {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -126,13 +153,14 @@ $event-grid-increment: 34px; // NOTE: taken from space between circles in grid s
 		}
 	}
 
-	.event-sponsors-presenting-sponsors,
-	.event-sponsors-founding-sponsors,
-	.event-sponsors-patron-sponsors {
+	.sponsor-page-sponsors-presenting-sponsors,
+	.sponsor-page-sponsors-founding-sponsors,
+	.sponsor-page-sponsors-patron-sponsors {
 		display: flex;
 		margin-bottom: 24px;
 		flex-wrap: wrap;
 		justify-content: center;
+		align-self: center;
 
 		@media #{$media-tablet-medium} {
 			flex-direction: column;
@@ -141,21 +169,21 @@ $event-grid-increment: 34px; // NOTE: taken from space between circles in grid s
 		}
 	}
 
-	.event-presenting-sponsor {
+	.sponsor-page-presenting-sponsor {
 		@media #{$media-tablet-medium} {
 			width: 90%;
 		}
 	}
 
-	.event-founding-sponsor {
+	.sponsor-page-founding-sponsor {
 		max-width: 375px;
 	}
 
-	.event-patron-sponsor {
+	.sponsor-page-patron-sponsor {
 		max-width: 320px;
 	}
 
-	.event-sponsors-list {
+	.sponsor-page-sponsors-list {
 		path,
 		rect {
 			transition: fill 200ms ease;
@@ -185,56 +213,56 @@ $event-grid-increment: 34px; // NOTE: taken from space between circles in grid s
 		}
 	}
 
-	.event-sponsors-grid-left {
+	.sponsor-page-sponsors-grid-left {
 		top: 0;
 		left: 0;
 		@media only screen and (max-width: 1300px) {
-			top: -$event-grid-increment * 3;
+			top: -$sponsor-page-grid-increment * 3;
 		}
 		@media only screen and (max-width: 1080px) {
-			left: -$event-grid-increment * 2;
+			left: -$sponsor-page-grid-increment * 2;
 		}
 		@media only screen and (max-width: 960px) {
-			left: -$event-grid-increment;
+			left: -$sponsor-page-grid-increment;
 		}
 		@media only screen and (max-width: 880px) {
-			top: -$event-grid-increment * 5;
-			left: -$event-grid-increment * 2;
+			top: -$sponsor-page-grid-increment * 5;
+			left: -$sponsor-page-grid-increment * 2;
 		}
 		@media only screen and (max-width: 750px) {
-			top: -$event-grid-increment * 6;
-			left: -$event-grid-increment * 3;
+			top: -$sponsor-page-grid-increment * 6;
+			left: -$sponsor-page-grid-increment * 3;
 		}
 		@media only screen and (max-width: 650px) {
-			top: -$event-grid-increment * 7;
-			left: -$event-grid-increment * 3;
+			top: -$sponsor-page-grid-increment * 7;
+			left: -$sponsor-page-grid-increment * 3;
 		}
 		@media only screen and (max-width: 324px) {
-			top: -$event-grid-increment * 8.5;
-			left: $event-grid-increment * 2;
+			top: -$sponsor-page-grid-increment * 8.5;
+			left: $sponsor-page-grid-increment * 2;
 		}
 	}
 
-	.event-sponsors-grid-right {
+	.sponsor-page-sponsors-grid-right {
 		top: 0;
 		right: 0;
 		@media only screen and (max-width: 1300px) {
-			right: -$event-grid-increment;
+			right: -$sponsor-page-grid-increment;
 		}
 		@media only screen and (max-width: 1080px) {
-			right: -$event-grid-increment * 2;
+			right: -$sponsor-page-grid-increment * 2;
 		}
 		@media only screen and (max-width: 960px) {
-			top: -$event-grid-increment * 3;
-			right: -$event-grid-increment;
+			top: -$sponsor-page-grid-increment * 3;
+			right: -$sponsor-page-grid-increment;
 		}
 		@media only screen and (max-width: 880px) {
-			top: -$event-grid-increment * 3;
-			right: -$event-grid-increment * 3;
+			top: -$sponsor-page-grid-increment * 3;
+			right: -$sponsor-page-grid-increment * 3;
 		}
 		@media only screen and (max-width: 750px) {
-			top: -$event-grid-increment * 4;
-			right: -$event-grid-increment * 4;
+			top: -$sponsor-page-grid-increment * 4;
+			right: -$sponsor-page-grid-increment * 4;
 		}
 		@media only screen and (max-width: 324px) {
 			display: none;
