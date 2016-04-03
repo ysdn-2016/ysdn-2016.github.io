@@ -18,8 +18,8 @@ module.exports = function () {
 
   var grid = new Quartz(config)
 
-  $projects.on('mouseenter', projectMouseEnter);
-  $projects.on('mouseleave', projectMouseLeave);
+  $(document).on('mouseenter', '.project-preview', projectMouseEnter);
+  $(document).on('mouseleave', '.project-preview', projectMouseLeave);
 
   function projectMouseEnter (e) {
     $(this).addClass('hover');

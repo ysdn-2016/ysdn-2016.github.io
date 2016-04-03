@@ -21,6 +21,7 @@ var TEMPLATE_OWNER_HREF = /\{\{\s*project\.owner\.href\s*\}\}/g
 module.exports = function () {
 
   var $grids = $('[data-columns]');
+  var $projects = $('.project-preview');
 
   var template = $('template#project-preview-template').html();
   var instagramItemCount = 0
@@ -52,6 +53,17 @@ module.exports = function () {
   }).get();
 
   instagramFeed('home-insta');
+
+  $(document).on('mouseenter', '.project-preview', projectMouseEnter);
+  $(document).on('mouseleave', '.project-preview', projectMouseLeave);
+
+  function projectMouseEnter (e) {
+    $(this).addClass('hover');
+  }
+
+  function projectMouseLeave (e) {
+    $(this).removeClass('hover');
+  }
 
   /**
    * Helper functions
