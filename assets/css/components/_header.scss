@@ -141,15 +141,13 @@ $header-light-bg: $white;
 
 @media (max-width: 560px) {
 	.header {
-		padding: 0;
+		position: relative;
+		left: -4px;
 		z-index: 99;
 		background-color: #fff;
-		height: 80px;
+		padding-bottom: 0;
 	}
-	.mobile-header {
-		display: flex;
-	}
-	.header-wrapper {
+	.header-nav {
 		display: none;
 	}
 }

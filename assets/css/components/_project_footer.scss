@@ -6,11 +6,6 @@
 	padding-top: 60px;
 	padding-bottom: 40px;
 
-	// h2 {
-	// 	font-size: 21px;
-	// 	line-height: 32px;
-	// 	letter-spacing: .2px;
-	// }
 	p {
 		margin-top: 2px;
 		font-size: 14px;
@@ -93,10 +88,18 @@
 	padding-left: $project-grid-gutter / 2;
 }
 
+.project-footer-preview {
+	&.hover .project-footer-preview-image,
+	&.hover .project-footer-preview-title {
+		opacity: 0.6;
+	}
+}
+
 .project-footer-preview-image {
 	@include image-placeholder;
 	display: block;
-	margin-bottom: 20px;
+	margin-bottom: 14px;
+	transition: opacity 200ms ease;
 }
 
 .project-footer-preview-title {
@@ -104,22 +107,33 @@
 	font-size: 20px;
 	font-weight: normal;
 	line-height: 1.3;
+	transition: opacity 200ms ease;
 }
 
 .project-footer-preview-category {
+	display: block;
+	margin-top: 6px;
 	color: #aaa;
 	font-size: 13px;
 	font-weight: normal;
 	line-height: 1.0;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
+	transition: opacity 200ms ease;
+	&:hover {
+		opacity: 0.6;
+	}
 }
 
 .project-footer-preview-author {
-	color: #444;
-	font-size: 13px;
+	display: block;
+	margin-top: 6px;
+	color: #888;
+	font-size: 15px;
 	font-weight: normal;
 	line-height: 1.0;
-	letter-spacing: 0.06em;
-	text-transform: uppercase;
+	transition: opacity 200ms ease;
+	&:hover {
+		opacity: 0.6;
+	}
 }

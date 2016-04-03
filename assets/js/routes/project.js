@@ -54,6 +54,11 @@ module.exports = function () {
   $window.on('resize load', resize);
   $document.on('DOMContentLoaded', resize);
 
+  $(document).on('mouseenter', '.project-footer-preview-title', projectMouseEnter);
+  $(document).on('mouseleave', '.project-footer-preview-title', projectMouseLeave);
+  $(document).on('mouseenter', '.project-footer-preview-image', projectMouseEnter);
+  $(document).on('mouseleave', '.project-footer-preview-image', projectMouseLeave);
+
   $project.fitVids();
   resize();
 
@@ -120,6 +125,14 @@ module.exports = function () {
       tracks.bottom.start = tracks.pinned.end;
       tracks.bottom.end = $(document).height();
     }
+  }
+
+  function projectMouseEnter (e) {
+    $(this).parents('.project-footer-preview').addClass('hover');
+  }
+
+  function projectMouseLeave (e) {
+    $(this).parents('.project-footer-preview').removeClass('hover');
   }
 
 };
