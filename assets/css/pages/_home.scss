@@ -110,7 +110,7 @@ section.home {
 // == Home Nav == //
 
 .home-nav {
-	@extend .fullwidth-override;
+	@include fullwidth-override;
 	position: absolute;
 	top: 860px;
 	.header {
@@ -154,6 +154,13 @@ section.home {
 		.button {
 			margin-top: 32px;
 		}
+	}
+}
+
+@media (max-width: 800px) {
+	.home-info .feature-text {
+		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -242,6 +249,30 @@ section.home {
 	}
 }
 
+@media (max-width: 800px) {
+	.home-work .row {
+		display: block;
+	}
+
+	.home-work .work {
+		display: block !important;
+		content: "";
+		display: table;
+		clear: both;
+		.column {
+			width: auto;
+		}
+	}
+
+	.home-work .project-preview {
+		float: left;
+		width: auto;
+		img, svg {
+			height: 180px;
+		}
+	}
+}
+
 // == Home Work Shapes == //
 
 .home-work-comm {
@@ -322,7 +353,7 @@ section.home {
 // == Home Event == //
 
 .home-event {
-	@extend .fullwidth-override;
+	@include fullwidth-override;
 	background-color: $black;
 	background-color: black;
 	background-image: url(/assets/images/home-event-grid.png);
@@ -380,7 +411,6 @@ section.home {
 // == Home Social == //
 
 .home-social {
-	@extend .fullwidth-override;
 	background-color: black;
 	padding-bottom: 120px;
 	h2 {
@@ -397,7 +427,8 @@ section.home {
 		margin: 0 auto;
 		margin-top: 38px;
 		color: white;
-		font-size: 1em;
+		font-size: 16px;
+		font-weight: 400;
 		text-align: center;
 	}
 	.home-social-feed {
@@ -452,6 +483,40 @@ section.home {
 	font-size: 0.9em;
 	line-height: 1.45;
 	text-align: center;
+}
+@media (min-width: 1001px) {
+	.home-social {
+		@include fullwidth-override;
+	}
+}
+
+@media (min-width: 561px) and (max-width: 1000px) {
+	.home-social {
+
+	}
+}
+
+@media (max-width: 560px) {
+	.home-social {
+		width: 100%;
+		.home-social-feed {
+			width: 98%;
+			margin: 0 2%;
+		}
+
+		.home-social-feed a {
+			width: 46%;
+			margin: 2%;
+			height: auto;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+			&:hover .home-social-feed-item-caption {
+				opacity: 0;
+			}
+		}
+	}
 }
 
 // ======== \/ SORT ME \/ ========== //
