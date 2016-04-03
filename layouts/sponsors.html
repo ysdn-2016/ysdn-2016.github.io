@@ -16,38 +16,38 @@
 			</div>
 		</div> <!-- .sponsors-header -->
 
-		<section class="event-sponsors event-section event-sponsors-list">
-		<div class="event-sponsors-logos">
-			<div class="event-sponsors-presenting-sponsors">
+		<section class="sponsor-page-sponsors sponsor-page-section sponsor-page-sponsors-list">
+		<div class="sponsor-page-sponsors-logos">
+			<div class="sponsor-page-sponsors-presenting-sponsors">
 			<p>Presenting Sponsor</p>
 				{% for sponsor in event.sponsors | filter('priority', 1) %}
-				<a class="event-presenting-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+				<a class="sponsor-page-presenting-sponsor sponsor-page-sponsor sponsor-page-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
 					{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
 					{% include logo %}
 				</a>
 				{% endfor %}
 			</div>
-			<div class="event-sponsors-founding-sponsors">
+			<div class="sponsor-page-sponsors-founding-sponsors">
 			<p>Interactive Sponsor</p>
 				{% for sponsor in event.sponsors | filter('priority', 2) %}
-				<a class="event-founding-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+				<a class="sponsor-page-founding-sponsor sponsor-page-sponsor sponsor-page-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
 					{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
 					{% include logo %}
 				</a>
 				{% endfor %}
 			</div>
-			<div class="event-sponsors-patron-sponsors">
+			<div class="sponsor-page-sponsors-patron-sponsors">
 				<p>Sponsors</p>
 				{% for sponsor in event.sponsors | filter('priority', 3) %}
-				<a class="event-patron-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+				<a class="sponsor-page-patron-sponsor sponsor-page-sponsor sponsor-page-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
 					{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
 					{% include logo %}
 				</a>
 				{% endfor %}
 			</div>
-			<div class="event-sponsors-patron-sponsors">
+			<div class="sponsor-page-sponsors-patron-sponsors">
 				{% for sponsor in event.sponsors | filter('priority', 4) %}
-				<a class="event-patron-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+				<a class="sponsor-page-patron-sponsor sponsor-page-sponsor sponsor-page-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
 					{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
 					{% include logo %}
 				</a>
