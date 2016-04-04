@@ -68,6 +68,10 @@ module.exports = function () {
   }
 
   /**
+  * Intro Functions
+  **/
+
+  /**
    * Helper functions
    */
 
