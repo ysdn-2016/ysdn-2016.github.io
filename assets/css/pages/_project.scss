@@ -13,8 +13,9 @@ $sticky-scroll-offset: 60px;
 
 .project-sidebar-filler {
 	position: relative;
-	width: 33.334%;
+	flex-basis:  33.334%;
 	padding: 0 $project-grid-gutter/2;
+
 }
 
 .project-sidebar {
@@ -32,7 +33,7 @@ $sticky-scroll-offset: 60px;
 }
 
 .project-content {
-	width: 66.666%;
+	flex-basis: 66.666%;
 	padding: 0 $project-grid-gutter/2;
 
 	& > :first-child {
