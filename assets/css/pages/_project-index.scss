@@ -110,6 +110,11 @@
 	margin-left: 24px;
 	overflow: scroll;
 	white-space: nowrap;
+	&::-webkit-scrollbar {
+		display: none;
+		height: 0;
+		width: 0;
+	}
 	-webkit-overflow-scrolling: touch;
 	@media #{$media-mobile-large} {
 		flex-direction: column;
