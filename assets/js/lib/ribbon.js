@@ -7,6 +7,7 @@ var EVENT_URL = '/event/';
 var noop = function () {};
 
 module.exports = (function () {
+  var $document;
   var $body;
   var $window;
   var $eventPanel;
@@ -46,14 +47,18 @@ module.exports = (function () {
   function init () {
     $body = $('body');
     $window = $(window);
+    $document = $(document);
     $eventPanel = $('.event-panel');
     $eventRibbon = $('.event-ribbon');
     $eventRibbonMenu = $('.event-ribbon-menu');
     $eventRibbonMenuToggle = $('.event-ribbon-menu-toggle');
 
-    isOpen = $eventPanel.hasClass('event-panel--open');
+    if ($eventPanel.hasClass('event-panel--open')) {
+      showEventPanel();
+    }
 
     $eventRibbon.on('click', handleEventRibbonClick);
+    $eventRibbonMenu.on('click', stopPropagation);
     $eventRibbonMenuToggle.on('click', handleMobileMenuToggle);
 
     enquire.register(mobileQuery, mobileHandler);
@@ -75,12 +80,16 @@ module.exports = (function () {
     hideMobileMenu();
     fixMobileTransition();
     $body.addClass('locked');
+    $body.on('touchmove', preventDefault);
+    $eventPanel.on('touchmove', stopPropagation);
     $eventPanel.addClass('event-panel--open');
     $eventRibbon.addClass('event-ribbon--open');
   }
 
   function hideEventPanel () {
     $body.removeClass('locked');
+    $body.off('touchmove', preventDefault);
+    $eventPanel.off('touchmove', stopPropagation);
     $eventPanel.removeClass('event-panel--open');
     $eventRibbon.removeClass('event-ribbon--open');
     isOpen = false;
@@ -119,7 +128,6 @@ module.exports = (function () {
   }
 
   function fixMobileTransition () {
-    if (!isOpen) return;
     if (!isMobileSize) return;
     var windowHeight = window.innerHeight;
     var ribbonOffset = windowHeight - $eventRibbon.innerHeight();
@@ -132,6 +140,14 @@ module.exports = (function () {
     css.inject('.event-panel', { height: null, bottom: null });
     css.inject('.event-panel--open', { transform: null });
     css.inject('.event-ribbon--open', { transform: null });
+  }
+
+  function preventDefault (e) {
+    e.preventDefault();
+  }
+
+  function stopPropagation (e) {
+    e.stopPropagation();
   }
 
 })();

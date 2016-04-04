@@ -4,6 +4,9 @@ $ribbon-height-mobile: 50px;
 $ribbon-bleed: 240px;
 $ribbon-peek: 8px;
 
+$ribbon-transition-duration: 800ms;
+$ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
+
 .event-panel {
 	background: $yellow;
 	position: fixed;
@@ -11,8 +14,8 @@ $ribbon-peek: 8px;
 	z-index: 103;
 	width: 100%;
 	height: 100vh;
-	transition: transform 800ms cubic-bezier(0.19, 1, 0.22, 1);
-	// will-change: transform;
+	transition: transform $ribbon-transition-duration $ribbon-transition-ease;
+	will-change: transform;
 
 	&:not(.event-panel--open) {
 		cursor: pointer;
@@ -25,53 +28,25 @@ $ribbon-peek: 8px;
 	overflow-y: scroll;
 	width: 100%;
 	height: 100%;
-
+	transition: opacity 400ms ease $ribbon-transition-duration;
 	-webkit-overflow-scrolling: touch;
 }
-
-.event-panel-content-wrapper {
-	@include wrapper;
-}
-
-// .event-panel {
-// 	background: $yellow;
-// 	position: fixed;
-// 	bottom: calc(100% - #{$ribbon-height});
-// 	left: 0;
-// 	right: 0;
-// 	z-index: 102;
-// 	height: 100vh;
-// 	transition: transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
-//
-// 	&:not(.event-panel--open) {
-// 		cursor: pointer;
-// 	}
-//
-// 	&:not(.event-panel--open):hover {
-// 		transform: translateY($ribbon-peek);
-// 	}
-//
-// 	& + * {
-// 		margin-top: $ribbon-height;
-// 	}
-// }
-//
-// .event-panel--open {
-// 	transform: translateY(calc(100% - #{$ribbon-height}));
-// }
 
 @media only screen and (min-width: 600px) {
 	.event-panel {
 		bottom: 100%;
-		height: 100vh;
+		height: calc(100vh - #{$ribbon-height-desktop});
 	}
 
 	.event-panel--open {
-		transform: translateY(calc(100vh - #{$ribbon-height-desktop}));
+		transform: translateY(100%);
 	}
 
 	.event-panel-content {
-		display: none;
+		opacity: 0.0;
+		.event-panel--open & {
+			opacity: 1.0;
+		}
 	}
 }
 
@@ -86,7 +61,7 @@ $ribbon-peek: 8px;
 	display: block;
 	width: 100%;
 	cursor: pointer;
-	transition: background 400ms ease, transform 800ms cubic-bezier(0.19, 1, 0.22, 1);
+	transition: background 400ms ease, transform $ribbon-transition-duration $ribbon-transition-ease;
 	// will-change: transform;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.0);
 	// the CSS for .event-ribbon--open is set in JS
@@ -253,6 +228,19 @@ $ribbon-peek: 8px;
 		padding-top: $ribbon-bleed;
 		height: $ribbon-height-desktop + $ribbon-bleed;
 		font-size: 15px;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			top: $ribbon-bleed;
+			left: 0;
+			height: 1px;
+			background: transparent;
+			transform: background 400ms ease;
+		}
+		.event-ribbon--open &::before {
+			background: rgba(0, 0, 0, 0.1);
+		}
 	}
 }
 
@@ -288,3 +276,116 @@ $ribbon-peek: 8px;
 //
 // Event Panel Content
 //
+
+.event-panel-content {
+	overflow-x: hidden;
+	padding-top: 12px;
+	a {
+		@include underline;
+	}
+}
+
+.event-panel-content-wrapper {
+	@include wrapper;
+}
+
+.event-details {
+	position: relative;
+	padding-bottom: 48px;
+	text-align: center;
+	h1 {
+		color: $red;
+		font-size: 36px;
+		line-height: 1.2;
+	}
+	h3 {
+		font-weight: normal;
+	}
+	h4 {
+		margin-bottom: 16px;
+	}
+	h5 {
+		color: $red;
+		font-size: 13px;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.15);
+		width: 111%;
+		height: 1px;
+		margin-left: -5.5%;
+	}
+}
+
+.event-details-block {
+	position: relative;
+	margin-top: 24px;
+	z-index: 2;
+}
+
+.event-details-location {
+	a {
+		font-size: 14px;
+	}
+}
+
+.event-details-time {
+	width: 111%;
+	margin-left: -5.5%;
+	padding: 48px 0;
+	background: transparent url('/assets/images/grad-show-close@2x.jpg') no-repeat;
+	background-size: cover;
+}
+
+.event-details-time-blocks {
+	margin-top: 24px;
+	display: flex;
+	justify-content: space-around;
+	h6 {
+		margin-bottom: 6px;
+		line-height: 1.0;
+	}
+	h3 {
+		font-size: 20px;
+	}
+}
+
+.event-info {
+	padding-top: 48px;
+	h3 {
+		color: $red;
+		margin-top: 48px;
+		margin-bottom: 24px;
+		font-size: 20px;
+		font-weight: normal;
+	}
+}
+
+.event-intro-figure {
+	display: none;
+}
+
+.event-info-question {
+	margin-bottom: 36px;
+	h5 {
+		line-height: 1.35;
+		font-size: 18px;
+		font-weight: normal;
+		&::before {
+			content: 'Q. '
+		}
+	}
+	p {
+		margin: 6px 0 0;
+		font-size: 15px;
+		line-height: 1.6;
+		&::before {
+			content: 'A. '
+		}
+	}
+}

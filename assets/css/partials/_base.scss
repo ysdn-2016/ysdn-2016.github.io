@@ -33,10 +33,6 @@ i {
 	font-style: normal;
 }
 
-::-webkit-scrollbar {
-	display: none;
-}
-
 /**
  * Selection
  */
@@ -162,16 +158,4 @@ input {
 		flex-basis: 100%;
 		max-width: 100%;
 	}
-}
-
-.in-progress-flag {
-	position: fixed;
-	z-index: 9999;
-	top: 50%;
-	left: 50%;
-	user-select: none;
-	color: $red;
-	font-family: $sofia;
-	font-size: 72px;
-	transform: translate(-50%, -50%) rotate(-30deg);
 }
