@@ -8,11 +8,6 @@
 @import 'partials/icons';
 @import 'partials/base';
 
-@import 'components/header';
-@import 'components/footer';
-@import 'components/project_footer';
-@import 'components/subscribe';
-
 @import 'modules/extends';
 
 @import 'pages/home';
@@ -23,5 +18,10 @@
 @import 'pages/student-index';
 @import 'pages/student';
 @import 'pages/event';
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/project_footer';
+@import 'components/subscribe';
 
 @import 'partials/utilities';

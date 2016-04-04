@@ -3,6 +3,8 @@ $header-dark-bg: $black;
 $header-light-color: #1b2020;
 $header-light-bg: $white;
 
+$header-height: 90px;
+
 .header {
 	position: absolute;
 	display: flex;
@@ -10,7 +12,7 @@ $header-light-bg: $white;
 	left: 0;
 	right: 0;
 	z-index: 99;
-	height: 90px;
+	height: $header-height + $ribbon-height-desktop;
 	box-shadow: none;
 	transition: box-shadow 400ms ease, background 400ms ease;
 	backface-visibility: hidden;
@@ -20,7 +22,7 @@ $header-light-bg: $white;
 	background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 	position: fixed;
-	height: 90px;
+	height: $header-height + $ribbon-height-desktop;
 	top: 0;
 	transform: translateY(-100%);
 }

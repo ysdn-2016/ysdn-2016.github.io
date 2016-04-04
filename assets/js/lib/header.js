@@ -5,6 +5,7 @@ module.exports = (function () {
 
 	var $header;
 	var $spacer;
+	var $ribbon;
 	var $window;
 
 	var isFixed = false;
@@ -14,6 +15,7 @@ module.exports = (function () {
 	function init () {
 		$header = $('.header');
 		$spacer = $('.header-spacer');
+		$ribbon = $('.event-ribbon');
 		$window = $(window);
 
 		spacerOffset = $spacer.offset().top;
