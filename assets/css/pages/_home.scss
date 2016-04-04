@@ -4,7 +4,6 @@ section.home {
 	$end: 12;
 	$gridWidth: 100%;
 	$spanPadding: 20px;
-	overflow-x: hidden;
 	section {
 		padding-bottom: 20px;
 	}
@@ -73,6 +72,7 @@ section.home {
 }
 
 .home-post-intro {
+	overflow-x: hidden;
 	position: relative;
 	z-index: 7;
 	background-color: #fff;
