@@ -480,6 +480,7 @@ header.home-header {
   height: 216px;
 	scroll-snap-type: mandatory;
   scroll-snap-points-x: repeat(234px);
+  -webkit-overflow-scrolling: touch;
 }
 
 .home-work.mobile .home-work-title {
@@ -519,6 +520,7 @@ header.home-header {
 	.home-work .row {
 		margin-bottom: 16px;
 		padding-bottom: 0px !important;
+		padding-right: 5%;
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
@@ -626,7 +628,6 @@ header.home-header {
 // == Home Event == //
 
 .home-event {
-	@include fullwidth-override;
 	background-color: $black;
 	background-color: black;
 	background-image: url(/assets/images/home-event-grid.png);
@@ -678,6 +679,56 @@ header.home-header {
 		width: 180px;
 		margin: 0 auto;
 		color: black;
+	}
+}
+
+
+@media (min-width: 561px) {
+	.home-event {
+		@include fullwidth-override;
+	}
+}
+
+@media (max-width: 560px) {
+	.home-event {
+		overflow: hidden;
+		height: 480px;
+		background-position: top center;
+	}
+
+	.home-event .wrap {
+		padding-top: 80px;
+	}
+
+	.home-event .bg-span {
+		width: 100%;
+		padding: 10px;
+		height: 210px;
+	}
+
+	.home-event h2 {
+		width: 100%;
+		font-size: 24px;
+		padding-top: 0px;
+		padding-bottom: 10px;
+	}
+
+	.home-event p {
+		width: 80%;
+		padding: 0 10%;
+		font-size: 18px;
+		padding-top: 0px;
+		padding-bottom: 10px;
+	}
+
+	.home-event .button-wrap {
+		width: 100%;
+		margin-top: 0px;
+		padding: 20px;
+	}
+
+	.home-event .button {
+		width: 220px;
 	}
 }
 
@@ -771,6 +822,7 @@ header.home-header {
 @media (max-width: 560px) {
 	.home-social {
 		width: 100%;
+		overflow: hidden;
 		.home-social-feed {
 			width: 98%;
 			margin: 0 2%;
