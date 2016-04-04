@@ -1,7 +1,8 @@
 $student-profile-header-background: #f6f6f6;
 
 .page-student {
-	.header:not(.header--fixed) {
+	.header:not(.header--fixed),
+	.header-spacer {
 		background: $student-profile-header-background;
 	}
 }
