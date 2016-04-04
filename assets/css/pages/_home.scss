@@ -323,7 +323,15 @@ header.home-header {
 	}
 }
 
-@media (min-width: 541px) and (max-width: 800px) {
+@media (max-width: 800px) {
+	.mobile {
+		display: block !important;
+	}
+
+	.desktop {
+		display: none;
+	}
+
 	.home-info .feature-text {
 		margin-top: 20px;
 		margin-bottom: 20px;
@@ -685,7 +693,7 @@ header.home-header {
 		border: 1px solid white;
 		background-color: white;
 		display: block;
-		width: 180px;
+		width: 220px;
 		margin: 0 auto;
 		color: black;
 	}
@@ -832,6 +840,19 @@ header.home-header {
 	.home-social {
 		overflow: hidden;
 		width: 100%;
+		h2 {
+			width: 100%;
+			padding-bottom: 12px;
+			font-size: 18px;
+		}
+		h4 {
+			width: 80%;
+			margin: 0 auto;
+			padding-top: 12px;
+			padding-bottom: 8px;
+			font-size: 18px;
+			line-height: 1.4;
+		}
 		.home-social-feed {
 			width: 98%;
 			margin: 0 2%;
