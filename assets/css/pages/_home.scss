@@ -239,6 +239,7 @@ section.home {
 	z-index: 3;
 	top: 0;
 	left: 0;
+	width: 100%;
 	transform: translateY(-1440px);
 	animation: slide-in 2.0s forwards;
 	animation-delay: 7.6s;
@@ -252,6 +253,7 @@ section.home {
 	z-index: 5;
 	top: 0;
 	left: 0;
+	width: 100%;
 }
 
 .final-stage {
