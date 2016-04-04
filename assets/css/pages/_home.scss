@@ -473,6 +473,7 @@ header.home-header {
 .home-work.mobile .work {
   overflow-x: auto;
   overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
   white-space: nowrap;
   margin: auto;
   font-size: 0;
@@ -480,6 +481,11 @@ header.home-header {
   height: 216px;
 	scroll-snap-type: mandatory;
   scroll-snap-points-x: repeat(234px);
+	&::-webkit-scrollbar {
+		display: none;
+		height: 0;
+		width: 0;
+	}
 }
 
 .home-work.mobile .home-work-title {
