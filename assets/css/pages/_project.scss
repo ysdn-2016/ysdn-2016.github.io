@@ -196,6 +196,10 @@ $sticky-scroll-offset: 60px;
 	h3, h4, h5, h6 {
 		font-size: 26px;
 		line-height: 36px;
+		@media #{$media-tablet-medium} {
+			font-size: 22px;
+			line-height: 32px;
+		}
 	}
 
 	ul,
