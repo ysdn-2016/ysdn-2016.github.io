@@ -30,7 +30,6 @@ module.exports = (function () {
 
 	function open () {
 		if (!isFixed) return;
-		// $header.off('transitionend webkitTransitionEnd', removeTransitionClass);
 		$header.addClass('header--is-transitioning');
 		$header.addClass('header--maximized');
 		$header.on('transitionend webkitTransitionEnd', removeTransitionClass);
@@ -38,7 +37,6 @@ module.exports = (function () {
 
 	function close () {
 		if (!isFixed) return;
-		// $header.off('transitionend webkitTransitionEnd', removeTransitionClass);
 		$header.addClass('header--is-transitioning');
 		$header.removeClass('header--maximized');
 		$header.on('transitionend webkitTransitionEnd', removeTransitionClass);
@@ -70,14 +68,6 @@ module.exports = (function () {
 			$header.removeClass('header--fixed header--maximized header--is-transitioning');
 			isFixed = false;
 		}
-		// if (delta > 1 && delta >= SCROLL_THRESHOLD && scrollY > 0) {
-		// 	$header.addClass('hidden');
-		// } else if (delta < 1 && delta <= (SCROLL_THRESHOLD * -1)) {
-		// 	$header.removeClass('hidden');
-		// }
-		// if (scrollY === 0) {
-		// 	$header.removeClass('hidden');
-		// }
 	}
 
 })()

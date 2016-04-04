@@ -1,167 +1,43 @@
-<section class="event-panel
-	 {%- if id == 'event' %} event-panel--open{% endif -%}
-	 {%- if id == 'work' %} yellow
-	 {%- elseif id == 'students' %} red
-	 {%- else %} blue{% endif -%}
-"> {# ^ section specific color examples #}
-	<div class="event-ribbon">
-		<a href="/event/" class="event-ribbon-trigger">
-			<div class="event-ribbon-arrow">&rarr;</div>
-			<div class="event-ribbon-info">
-				<p class="event-ribbon-info-cta">Event Information</p>
-				<p class="event-ribbon-info-details">April 19<span class="event-ribbon-bullet">&bullet;</span>Liberty Grand</p>
-			</div>
-		</a>
-		<div class="event-ribbon-social-media">
-			<a href="{{ social.facebook.url }}" class="event-ribbon-social-media-icon i-facebook" target="_blank"></a>
-			<a href="{{ social.instagram.url }}" class="event-ribbon-social-media-icon i-instagram" target="_blank"></a>
-			<a href="{{ social.twitter.url }}" class="event-ribbon-social-media-icon i-twitter" target="_blank"></a>
-			<a href="{{ social.mail.url }}" class="event-ribbon-social-media-icon i-mail" target="_blank"></a>
+<div class="event-panel {%- if id == 'event' %} event-panel--open{% endif %}">
+	<main class="event-panel-content">
+
+	</main>
+</div>
+<div class="event-ribbon {%- if id == 'event' %} event-ribbon--open{% endif %}">
+	<div class="event-ribbon-wrapper--desktop event-ribbon-wrapper wrapper">
+		<div class="event-ribbon-callout">
+			Attend the Grad Show
+		</div>
+		<div class="event-ribbon-arrow i-arrow-up"></div>
+		<div class="event-ribbon-details">
+			Liberty Grand, Toronto<span class="event-ribbon-bullet">&bullet;</span>April 19
 		</div>
 	</div>
-	<main class="event-panel-content">
-		<section class="event-introduction event-section">
-			<div class="event-introduction-overlay"></div>
-			<div class="event-introduction-logo-desktop event-introduction-logo">{% include 'partials/logo.html' %}</div>
-			<div class="event-introduction-logo-mobile event-introduction-logo">{% include 'partials/logo-grid.html' %}</div>
-			<h1 class="event-introduction-headline">
-				<span class="event-introduction-headline-program">The York<span class="event-introduction-headline-slash">/</span>Sheridan Program <span class="no-wrap">in Design</span> invites you to</span>
-				<span class="event-introduction-headline-show-name no-wrap">{{ event.title }}</span>
-			</h1>
-			<div class="event-introduction-details">
-				<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=YSDN+Grad+Show:+The+Intermission&dates=20160419T230000Z/20160420T030000Z&location=Liberty+Grand,+Toronto,+ON&sf=true&output=xml" class="event-introduction-date" target="_blank">April 19, 2016</a>
-				<a href="https://goo.gl/maps/YuXwP9XNDhQ2" class="event-introduction-venue" target="_blank">Liberty Grand, Toronto</a>
-			</div>
-			<div class="event-introduction-arrow i-arrow-down"></div>
-		</section>
-		<section class="event-about event-section">
-			<div class="event-about-wrapper">
-				<div class="event-about-details">
-					<h2 class="event-about-header event-section-header">About <span class="no-wrap">The Intermission</span></h2>
-					<div class="event-about-description">
-						<p>{{ event.title }} is the 2016 annual graduate show of the <a href="http://design.yorku.ca" target="_blank">York/Sheridan Program in Design</a>, a joint Bachelor of Design Honours program. The show is student-organized, and celebrates four years of hard work.</p>
-					</div>
-					<div class="event-about-schools">
-						<a href="http://yorku.ca" class="event-about-school event-about-school--york" target="_blank">{% include 'partials/york.html' %}</a>
-						<div class="event-about-cross">&times;</div>
-						<a href="https://sheridancollege.ca/" class="event-about-school event-about-school--sheridan" target="_blank">{% include 'partials/sheridan.html' %}</a>
-					</div>
-				</div>
-				<figure class="event-about-figure">
-					<img src="/assets/images/grad-show-close.jpg" />
-				</figure>
-			</div>
-			<div class="event-grid event-about-grid-left">{% include 'partials/grids/a.html' %}</div>
-			<div class="event-grid event-about-grid-right">{% include 'partials/grids/b.html' %}</div>
-		</section>
-
-		<section class="event-details event-section">
-			<div class="event-details-map" data-map></div>
-			<div class="event-details-card">
-				<h2 class="event-details-header event-section-header">Event Details</h2>
-				<div class="event-details-date">April 19</div>
-				<div class="event-details-sessions">
-					{% for session in event.sessions %}
-						<div class="event-details-session">
-							<div class="event-details-session-name">{{ session.name }}</div>
-							<div class="event-details-session-time">
-						<span class="event-details-session-start">{{ session.start | date('g') }}{% if (session.start | date('i')) == '30'  %}{{ session.start | date(':i') }}{% endif %}</span>{#
-							#}<span class="event-details-session-dash">&ndash;</span>{#
-							#}<span class="event-details-session-end">{{ session.end | date('ga') }}</span>
-							</div>
-							<div class="event-details-session-public">
-								{% if session.public %}
-									Open to public
-								{% else %}
-									Closed to public
-								{% endif %}
-							</div>
-						</div>
-					{% endfor %}
-				</div>
-				<div class="event-details-venue">
-					<div class="venue-name">Liberty Grand</div>
-					<a class="venue-address" href="https://goo.gl/maps/YuXwP9XNDhQ2" target="_blank" data-venue-address>
-						<div class="venue-address-details">
-							<span class="venue-address-street">25 British Columbia Road</span><br>
-							<span class="venue-address-city">Toronto,</span>
-							<span class="venue-address-state">Ontario</span>
-						</div>
-						<div class="venue-address-icon i-new-window"></div>
-					</a>
-				</div>
-			</div>
-			<div class="event-grid event-details-grid-left">{% include 'partials/grids/c.html' %}</div>
-			<div class="event-grid event-details-grid-right">{% include 'partials/grids/d.html' %}</div>
-		</section>
-
-		<section class="event-faq event-section" id="faq">
-			<div class="event-faq-wrapper">
-				<h2 class="event-faq-header event-section-header">Frequently Asked Questions</h2>
-				<div class="event-faq-list">
-					{% for column in event.faq | half %}
-						<div class="event-faq-column">
-							{% for item in column %}
-								<div class="event-faq-item">
-									<div class="event-faq-question">{{ item.question }}</div>
-									<div class="event-faq-answer">{{ item.answer | markdown | safe | replace('<p>', '') | replace('</p>', '') }}</div>
-								</div>
-							{% endfor %}
-						</div>
-					{% endfor %}
-				</div>
-			</div>
-			<div class="event-grid event-faq-grid-top">{% include 'partials/grids/e.html' %}</div>
-			<div class="event-grid event-faq-grid-left">{% include 'partials/grids/f.html' %}</div>
-			<div class="event-grid event-faq-grid-right">{% include 'partials/grids/g.html' %}</div>
-		</section>
-
-		<section class="event-sponsors event-section">
-			<div class="event-sponsors-wrapper">
-				<header class="event-sponsors-introduction">
-					<h2 class="event-sponsors-header event-section-header">Thank you to <span class="no-wrap">our sponsors</span></h2>
-					<h4 class="event-sponsors-subheader event-section-subheader">We couldn&rsquo;t have done it <span class="no-wrap">without them!</span></h4>
-				</header>
-				<div class="event-sponsors-logos">
-					<div class="event-sponsors-presenting-sponsors">
-						{% for sponsor in event.sponsors | filter('priority', 1) %}
-						<a class="event-presenting-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
-							{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
-							{% include logo %}
-						</a>
-						{% endfor %}
-					</div>
-					<div class="event-sponsors-founding-sponsors">
-						{% for sponsor in event.sponsors | filter('priority', 2) %}
-						<a class="event-founding-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
-							{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
-							{% include logo %}
-						</a>
-						{% endfor %}
-					</div>
-					<div class="event-sponsors-patron-sponsors">
-						{% for sponsor in event.sponsors | filter('priority', 3) %}
-						<a class="event-patron-sponsor event-sponsor event-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
-							{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
-							{% include logo %}
-						</a>
-						{% endfor %}
-					</div>
-				</div>
-			</div>
-			<div class="event-grid event-sponsors-grid-left">{% include 'partials/grids/h.html' %}</div>
-			<div class="event-grid event-sponsors-grid-top">{% include 'partials/grids/i.html' %}</div>
-			<div class="event-grid event-sponsors-grid-right">{% include 'partials/grids/j.html' %}</div>
-		</section>
-
-		<section class="event-footer event-section">
-			<div class="event-footer-wrapper">
-				<h2 class="event-footer-header event-section-header">Come meet <span class="no-wrap">the cast!</span></h2>
-				<h4 class="event-footer-subheader">Let us know if you&rsquo;re coming <a class="no-wrap" href="https://www.facebook.com/events/260128614319369/" target="_blank">on Facebook</a> and <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=YSDN+Grad+Show:+The+Intermission&dates=20160419T230000Z/20160420T030000Z&location=Liberty+Grand,+Toronto,+ON&sf=true&output=xml" target="_blank">add the event to <span class="no-wrap">your calendar</span></a>. We hope to <span class="no-wrap">see you there!</span></h4>
-			</div>
-			<div class="event-grid event-footer-grid-left">{% include 'partials/grids/m.html' %}</div>
-			<div class="event-grid event-footer-grid-right">{% include 'partials/grids/n.html' %}</div>
-			<div class="event-grid event-footer-grid-bottom">{% include 'partials/grids/o.html' %}</div>
-		</section>
-	</main>
-</section>
+	<div class="event-ribbon-wrapper--mobile event-ribbon-wrapper wrapper">
+		<div class="event-ribbon-callout">
+			<span class="event-ribbon-arrow i-arrow-up"></span>
+			Attend the Show
+		</div>
+		<a href="#!" class="event-ribbon-menu-toggle">Menu</a>
+	</div>
+	<div class="event-ribbon-menu">
+		<div class="event-ribbon-menu-line">
+			<a href="/work/" {% if id == 'work' %}class="active"{% endif %}>Work</a>
+		</div>
+		<div class="event-ribbon-menu-line">
+			<a href="/students/" {% if id == 'students' %}class="active"{% endif %}>Cast</a>
+		</div>
+		<div class="event-ribbon-menu-line">
+			<a href="/sponsors/" {% if id == 'sponsors' %}class="active"{% endif %}>Sponsors</a>
+		</div>
+		<div class="event-ribbon-menu-line">
+			<a href="/about/" {% if id == 'about' %}class="active"{% endif %}>About</a>
+		</div>
+		<div class="event-ribbon-menu-line event-ribbon-menu-line--social">
+			<a href="{{ social.facebook.url }}" class="event-ribbon-social-icon i-facebook" target="_blank"></a>
+			<a href="{{ social.instagram.url }}" class="event-ribbon-social-icon i-instagram" target="_blank"></a>
+			<a href="{{ social.twitter.url }}" class="event-ribbon-social-icon i-twitter" target="_blank"></a>
+			<a href="{{ social.mail.url }}" class="event-ribbon-social-icon i-mail" target="_blank"></a>
+		</div>
+	</div>
+</div>

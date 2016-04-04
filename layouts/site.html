@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 
 {% block body %}
+
+	{% include 'event.html' %}
+
 	{% if id == 'about' || id == 'sponsors' %}
 		<div class="parallax">
 	{% endif %}
@@ -16,5 +19,4 @@
 	{% if id == 'about' || id == 'sponsors' %}
 		</div>
 	{% endif %}
-	{# {% include 'event.html' %} #}
 {% endblock %}

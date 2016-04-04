@@ -4,7 +4,7 @@
 	<title>{{ site.title }}</title>
 	<meta charset="utf-8"/>
 	<meta name="description" content="{{ site.description }}" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 
 	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
 	<link rel="stylesheet" media="screen, projection" href="/assets/bundle.css" />
@@ -12,7 +12,7 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-<body class="page-{{ layout | layoutClassName }}">
+<body class="page-{{ layout | layoutClassName }}{% if id == 'event' %} locked {% endif %}">
 	{% block body %}{% endblock %}
 	{% if env == 'development' %}
 	<script src="http://127.0.0.1:35729/livereload.js"></script>
