@@ -1,6 +1,7 @@
 .project-footer {
 	border-top: 1px light-gray solid;
 	display: flex;
+	flex-wrap: wrap;
 	margin: 0 ($project-grid-gutter / 2) * -1;
 	margin-top: 50px;
 	padding-top: 60px;
@@ -38,14 +39,14 @@
 }
 
 @media only screen and (max-width: 740px) {
-	.project-footer {
-		display: block;
-	}
 	.project-footer-event-prompt,
 	.project-footer-next-project,
 	.project-footer-related-project {
-		flex: 1 0 100%;
+		flex: 1 0 50%;
 		margin: 20px 0;
+	}
+	.project-footer-event-prompt {
+		flex: 1 0 100%;
 	}
 }
 

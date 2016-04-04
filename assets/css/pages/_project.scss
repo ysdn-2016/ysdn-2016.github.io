@@ -13,8 +13,9 @@ $sticky-scroll-offset: 60px;
 
 .project-sidebar-filler {
 	position: relative;
-	width: 33.334%;
+	flex-basis:  33.334%;
 	padding: 0 $project-grid-gutter/2;
+
 }
 
 .project-sidebar {
@@ -32,7 +33,7 @@ $sticky-scroll-offset: 60px;
 }
 
 .project-content {
-	width: 66.666%;
+	flex-basis: 66.666%;
 	padding: 0 $project-grid-gutter/2;
 
 	& > :first-child {
@@ -195,6 +196,10 @@ $sticky-scroll-offset: 60px;
 	h3, h4, h5, h6 {
 		font-size: 26px;
 		line-height: 36px;
+		@media #{$media-tablet-medium} {
+			font-size: 22px;
+			line-height: 32px;
+		}
 	}
 
 	ul,
@@ -318,19 +323,19 @@ $sticky-scroll-offset: 60px;
 
 	@media #{$media-tablet-medium}{
 		.project-body{
-				flex-direction: column;
-				display: block;
-				height: auto !important; //Remove if Sidebar JS is turned off on mobile
-				.project-sidebar-filler, .project-content {
-					flex-basis: 100%;
-					.project-sidebar{
-						position: initial;
-						padding-right: 0;
-						width: 100% !important; //Remove if Sidebar JS is turned off on mobile
-					}
+			flex-direction: column;
+			display: block;
+			height: auto !important; //Remove if Sidebar JS is turned off on mobile
+			.project-sidebar-filler, .project-content {
+				flex-basis: 100%;
+				.project-sidebar {
+					position: initial;
+					padding-right: 0;
+					width: 100% !important; //Remove if Sidebar JS is turned off on mobile
 				}
 			}
 		}
+	}
 }
 
 //
@@ -352,9 +357,17 @@ $sticky-scroll-offset: 60px;
 		width: 100%;
 		max-width: 1160px;
 	}
-	@media #{$media-tablet-medium} {
-		.project-sidebar-filler {
-			display: none;
+	@media #{$media-tablet-medium}{
+		.project-body{
+			flex-direction: column;
+			display: block;
+			height: auto !important; //Remove if Sidebar JS is turned off on mobile
+			.project-sidebar-filler {
+				display: none;
+			}
+			.project-content {
+				flex-basis: 100%;
+			}
 		}
 	}
 }
