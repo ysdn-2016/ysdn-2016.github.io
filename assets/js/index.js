@@ -30,7 +30,6 @@ $(function () {
   // NB: Keep in sync with _header.scss
   enquire.register('screen and (min-width: 600px)', {
     match: function () {
-      console.log('yoyo')
       Header.init();
     },
     unmatch: function () {
