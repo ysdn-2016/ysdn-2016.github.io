@@ -152,7 +152,7 @@
                 <path d="M250,90.2487667 C250,80.452655 242.164861,72.5111136 232.5,72.5111136 C222.835139,72.5111136 215,80.452655 215,90.2487667 C215,100.044878 222.835139,107.98642 232.5,107.98642 C242.164861,107.98642 250,100.044878 250,90.2487667" id="Fill-14" fill="#EF4962" style="mix-blend-mode: darken;"></path>
             </g>
             <rect id="Rectangle-886" fill="#FFFFFF" x="3.35135135" y="75.9189189" width="100.72973" height="31.1351351"></rect>
-            <text id="All-Work" font-family="SofiaProRegular, Sofia Pro" font-size="24" font-weight="normal" line-spacing="32" fill="#182226">
+            <text id="All-Work" font-family="Sofia, Avenir, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="bold" line-spacing="32" fill="#182226">
                 <tspan x="13.0810811" y="99.8918919">All Work</tspan>
             </text>
         </g>

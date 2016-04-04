@@ -146,7 +146,7 @@
                     <ellipse id="Oval" cx="108.921327" cy="0.458102484" rx="0.455061009" ry="0.458102484"></ellipse>
                 </g>
                 <rect id="Rectangle-886" fill="#FFFFFF" x="2.35135135" y="74.9189189" width="239.648649" height="31.1351351"></rect>
-                <text id="Interactive-&amp;-Motion" font-family="SofiaProRegular, Sofia Pro" font-size="24" font-weight="normal" line-spacing="32" fill="#182226">
+                <text id="Interactive-&amp;-Motion" font-family="Sofia, Avenir, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="bold" line-spacing="32" fill="#182226">
                     <tspan x="12.0810811" y="98.8918919">Interactive &amp; Motion</tspan>
                 </text>
                 <path d="M216,18.5 L216,54.4999984 L252,54.5 L216,18.5 Z" id="Shape-Copy-25" fill="#7CBDDF" style="mix-blend-mode: darken;"></path>

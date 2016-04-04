@@ -109,6 +109,13 @@ module.exports = {
 	      priority: 4
 	    },
 	    {
+	      id: "forge",
+	      company: "Forge Media",
+	      title: "Patron",
+	      url: "http://forgemedia.ca/",
+	      priority: 4
+	    },
+	    {
 	      id: "hughes-brannan",
 	      company: "Hughes & Brannan",
 	      title: "Patron",
