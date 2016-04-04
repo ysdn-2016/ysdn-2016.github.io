@@ -150,7 +150,45 @@
             <p>Creation and experimentation in three-dimensional space, from package design to physical computing.</p>
           </div>
           <div class="work">
-            {% for project in projects | filterByDiscipline('communication') | shuffle | take(7) %}
+            {% for project in projects | filterByDiscipline('physical') | shuffle | take(7) %}
+              {% include 'partials/project-preview.html' %}
+            {% endfor %}
+          </div>
+          <div class="row">
+            <a href="/work/communication/" class="button">See More Projects</a>
+          </div>
+        </article>
+        <article class="work-info-design">
+          <div class="row">
+            <div class="home-work-icon">
+              <img src="/assets/images/home-icon-info.svg" alt="">
+            </div>
+            <h3 class="home-work-title">Information <br />Design</h3>
+          </div>
+          <div class="row">
+            <p>Organizing, simplifying, and visualizing text and image, to communicate data in an interesting and thought-provoking way.</p>
+          </div>
+          <div class="work">
+            {% for project in projects | filterByDiscipline('information') | shuffle | take(7) %}
+              {% include 'partials/project-preview.html' %}
+            {% endfor %}
+          </div>
+          <div class="row">
+            <a href="/work/communication/" class="button">See More Projects</a>
+          </div>
+        </article>
+        <article class="work-inter-design">
+          <div class="row">
+            <div class="home-work-icon">
+              <img src="/assets/images/home-icon-inter.svg" alt="">
+            </div>
+            <h3 class="home-work-title">Interactive &amp; <br />Motion Design</h3>
+          </div>
+          <div class="row">
+            <p>Developing participatory interactive experiences and visualizing moving image with motion design.</p>
+          </div>
+          <div class="work">
+            {% for project in projects | filterByDiscipline('information') | shuffle | take(7) %}
               {% include 'partials/project-preview.html' %}
             {% endfor %}
           </div>
