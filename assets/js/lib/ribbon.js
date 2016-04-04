@@ -4,6 +4,8 @@ var css = require('veinjs');
 var DEFAULT_URL = '/work/';
 var EVENT_URL = '/event/';
 
+var noop = function () {};
+
 module.exports = (function () {
   var $body;
   var $window;
@@ -13,10 +15,33 @@ module.exports = (function () {
   var $eventRibbonMenuToggle;
 
   var isOpen = false;
+  var isMobileSize = false;
   // NOTE: we're using user agent because the bug this fixes relates to
   // Safari's browser chrome, not the smaller browser size
   var isMobileSafari = /iPhone|iPad/i.test(window.navigator.userAgent);
   var previousUrl = DEFAULT_URL;
+
+  var mobileQuery = 'screen and (max-width: 600px)';
+  var desktopQuery = 'screen and (min-width: 600px)';
+
+  var mobileHandler = {
+    match: function () {
+      isMobileSize = true;
+      $window.on('resize', fixMobileTransition)
+      fixMobileTransition();
+    }
+  }
+
+  var desktopHandler = {
+    match: function () {
+      isMobileSize = false;
+      unfixMobileTransition();
+    }
+  }
+
+  /**
+   * Exports
+   */
 
   function init () {
     $body = $('body');
@@ -31,23 +56,27 @@ module.exports = (function () {
     $eventRibbon.on('click', handleEventRibbonClick);
     $eventRibbonMenuToggle.on('click', handleMobileMenuToggle);
 
-    $window.on('resize', fixMobileSafariScrollHandler)
-    fixMobileSafariScrollHandler();
+    enquire.register(mobileQuery, mobileHandler);
+    enquire.register(desktopQuery, desktopHandler);
   }
 
-  return { init: init };
+  function destroy () {
+    enquire.unregister(mobileQuery, mobileHandler);
+  }
+
+  return { init: init, destroy: destroy };
 
   /**
    * Private functions
    */
 
   function showEventPanel () {
+    isOpen = true;
+    hideMobileMenu();
+    fixMobileTransition();
     $body.addClass('locked');
     $eventPanel.addClass('event-panel--open');
     $eventRibbon.addClass('event-ribbon--open');
-    isOpen = true;
-    hideMobileMenu();
-    fixMobileSafariScrollHandler();
   }
 
   function hideEventPanel () {
@@ -89,13 +118,20 @@ module.exports = (function () {
     $eventRibbonMenuToggle.removeClass('event-ribbon-menu-toggle--open');
   }
 
-  function fixMobileSafariScrollHandler () {
+  function fixMobileTransition () {
     if (!isOpen) return;
+    if (!isMobileSize) return;
     var windowHeight = window.innerHeight;
     var ribbonOffset = windowHeight - $eventRibbon.innerHeight();
     css.inject('.event-panel', { height: ribbonOffset + 'px', bottom: -ribbonOffset + 'px' });
     css.inject('.event-panel--open', { transform: 'translateY(-' + ribbonOffset + 'px)' });
     css.inject('.event-ribbon--open', { transform: 'translateY(-' + ribbonOffset + 'px)' });
+  }
+
+  function unfixMobileTransition () {
+    css.inject('.event-panel', { height: null, bottom: null });
+    css.inject('.event-panel--open', { transform: null });
+    css.inject('.event-ribbon--open', { transform: null });
   }
 
 })();
