@@ -1,6 +1,8 @@
 <div class="event-panel {%- if id == 'event' %} event-panel--open{% endif %}">
 	<div class="event-panel-content">
 		<div class="event-panel-content-wrapper">
+			<div class="event-shape-a"></div>
+			<div class="event-shape-b"></div>
 			<div class="event-details">
 				<div class="event-details-content">
 					<div class="event-details-block">
@@ -36,9 +38,32 @@
 				<div class="event-info-intro">
 					<p>The Intermission is the 2016 <a href="http://design.yorku.ca" target="_blank">York/Sheridan Program in Design&rsquo;s</a> annual showcase of the best work produced by its graduating class. It is a night for the industry to connect with emerging designers and explore their projects, and for students to celebrate their past four years of hard work with you!</p>
 				</div>
-				<div class="event-info-directions">
+				<div class="event-directions">
 					<h3>Getting to the Show</h3>
-					<img class="event-directions-figure" src="{{ pixel }}" data-src="/assets/images/map.png" />
+					<div class="event-directions-map"></div>
+					<div class="event-directions-routes">
+						<div class="event-directions-route">
+							<h6>TTC</h6>
+							<div class="event-directions-stops">
+								<div class="event-directions-stop">29 Dufferin &rarr; Saskatchewan Rd</div>
+								<div class="event-directions-stop">504 King &rarr; Dufferin St</div>
+								<div class="event-directions-stop">509 Harbourfront &rarr; Manitoba Dr</div>
+							</div>
+						</div>
+						<div class="event-directions-route">
+							<h6>GO</h6>
+							<div class="event-directions-stops">
+								<div class="event-directions-stop">Lakeshore West &rarr; Exhibition</div>
+							</div>
+						</div>
+						<div class="event-directions-route">
+							<h6>Car</h6>
+							<div class="event-directions-stops">
+								<a href="https://www.google.ca/maps/place/10+Yukon+Pl,+Toronto,+ON+M6K+3C3/@43.6313371,-79.4257077,17.69z/data=!4m2!3m1!1s0x882b3509d05b0731:0x9e824a6f06404650?hl=en" target="_blank" class="event-directions-stop">Parking area beside venue</a>
+							</div>
+						</div>
+						<a href="https://goo.gl/vCID1a" target="_blank" class="event-directions-link">Get directions on Google Maps</a>
+					</div>
 				</div>
 				<div class="event-info-faq">
 					<h3>Frequently Asked Questions</h3>
@@ -95,7 +120,7 @@
 		</div>
 		<div class="event-ribbon-nav--maximized event-ribbon-nav">
 			<span class="event-ribbon-arrow i-arrow-down"></span>
-			See Student Work
+			See Full Site
 		</div>
 	</div>
 	<div class="event-ribbon-menu">

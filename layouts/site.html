@@ -1,12 +1,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
 	{% include 'event.html' %}
-
-	{% if id == 'about' || id == 'sponsors' %}
-		<div class="parallax">
-	{% endif %}
 	<div class="container">
 		{% include 'partials/header.html' %}
 		<main class="main">
@@ -16,7 +11,4 @@
 			{% include 'partials/footer.html' %}
 		{% endif %}
 	</div>
-	{% if id == 'about' || id == 'sponsors' %}
-		</div>
-	{% endif %}
 {% endblock %}

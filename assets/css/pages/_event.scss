@@ -3,8 +3,7 @@ $ribbon-height-desktop: 44px;
 $ribbon-height-mobile: 50px;
 $ribbon-bleed: 240px;
 $ribbon-peek: 8px;
-
-$ribbon-transition-duration: 800ms;
+$ribbon-transition-duration: 600ms;
 $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 
 .event-panel {
@@ -29,6 +28,7 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	width: 100%;
 	height: 100%;
 	transition: opacity 400ms ease $ribbon-transition-duration;
+
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -65,6 +65,10 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	// will-change: transform;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.0);
 	// the CSS for .event-ribbon--open is set in JS
+}
+
+.event-ribbon--minimized {
+	transform: translateY($ribbon-height-mobile + 1);
 }
 
 .event-ribbon-wrapper {
@@ -194,7 +198,6 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 @media only screen and (min-width: 600px) {
-
 	.event-ribbon {
 		background: $yellow;
 		top: -$ribbon-bleed;
@@ -229,14 +232,14 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 		height: $ribbon-height-desktop + $ribbon-bleed;
 		font-size: 15px;
 		&::before {
-			content: '';
+			background: transparent;
+			content: "";
 			position: absolute;
-			width: 100%;
 			top: $ribbon-bleed;
 			left: 0;
-			height: 1px;
-			background: transparent;
 			transform: background 400ms ease;
+			width: 100%;
+			height: 1px;
 		}
 		.event-ribbon--open &::before {
 			background: rgba(0, 0, 0, 0.1);
@@ -244,42 +247,14 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }
 
-// @media only screen and (min-width: 600px) {
-// 	.event-panel {
-// 		bottom: auto;
-// 		top: calc(100% - #{$ribbon-height});
-// 		&:not(.event-panel--open):hover {
-// 			transform: none;
-// 		}
-// 	}
-// 	.event-ribbon {
-// 		top: 0;
-// 		bottom: auto;
-// 	}
-//
-// 	.event-ribbon-wrapper {
-// 		font-size: 15px;
-// 	}
-//
-// 	.event-ribbon-arrow {
-// 		position: absolute;
-// 		top: 50%;
-// 		left: 50%;
-// 		margin-left: -9px;
-// 		margin-top: -14px;
-// 		.event-panel--open & {
-// 			transform: rotate(180deg);
-// 		}
-// 	}
-// }
-
 //
 // Event Panel Content
 //
 
 .event-panel-content {
+	position: relative;
 	overflow-x: hidden;
-	padding-top: 12px;
+	padding-top: 48px;
 	a {
 		@include underline;
 	}
@@ -287,6 +262,20 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 
 .event-panel-content-wrapper {
 	@include wrapper;
+}
+
+.event-shape-a {
+	position: absolute;
+	top: 24px;
+	left: 24px;
+	@include shape-triangle(36px, $blue, 90);
+}
+
+.event-shape-b {
+	position: absolute;
+	top: 48px;
+	right: 40px;
+	@include shape-rectangle(20px, 40px, $red, 45);
 }
 
 .event-details {
@@ -311,21 +300,21 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 		text-transform: uppercase;
 	}
 	&::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
 		background: rgba(0, 0, 0, 0.15);
-		width: 111%;
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		margin-left: -6%;
+		width: 112%;
 		height: 1px;
-		margin-left: -5.5%;
 	}
 }
 
 .event-details-block {
 	position: relative;
-	margin-top: 24px;
 	z-index: 2;
+	margin-top: 24px;
 }
 
 .event-details-location {
@@ -335,17 +324,17 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .event-details-time {
-	width: 111%;
+	background: transparent url("/assets/images/grad-show-close@2x.jpg") no-repeat;
+	background-size: cover;
 	margin-left: -5.5%;
 	padding: 48px 0;
-	background: transparent url('/assets/images/grad-show-close@2x.jpg') no-repeat;
-	background-size: cover;
+	width: 111%;
 }
 
 .event-details-time-blocks {
-	margin-top: 24px;
 	display: flex;
 	justify-content: space-around;
+	margin-top: 24px;
 	h6 {
 		margin-bottom: 6px;
 		line-height: 1.0;
@@ -358,9 +347,9 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 .event-info {
 	padding-top: 48px;
 	h3 {
-		color: $red;
 		margin-top: 48px;
 		margin-bottom: 24px;
+		color: $red;
 		font-size: 20px;
 		font-weight: normal;
 	}
@@ -370,14 +359,56 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	display: none;
 }
 
+.event-directions-map {
+	background: $darkened-yellow;
+	margin-left: -6%;
+	padding-bottom: 80%;
+	width: 112%;
+	height: 0;
+	pointer-events: none;
+	margin-bottom: 24px;
+}
+
+// HACK: selecting the Google logo
+.event-directions-map > div > :last-child, // Google logo
+.event-directions-map > div > :nth-last-child(2), // "Report a problem with this map"
+.event-directions-map > div > :nth-last-child(3), // Mobile notice
+.event-directions-map > div > :nth-last-child(4), // Terms of Service
+.event-directions-map > div > :nth-last-child(5),
+.event-directions-map > div > :nth-last-child(6) {
+	display: none !important;
+}
+
+.event-directions-route {
+	display: flex;
+	font-size: 14px;
+
+	h6 {
+		font-size: 14px;
+		font-weight: normal;
+		width: 50px;
+	}
+}
+
+.event-directions-stops {
+	opacity: 0.5;
+}
+
+.event-directions-link {
+	display: inline-block;
+	margin-top: 24px;
+	margin-bottom: 24px;
+	font-size: 15px;
+}
+
 .event-info-question {
 	margin-bottom: 36px;
 	h5 {
-		line-height: 1.35;
 		font-size: 18px;
 		font-weight: normal;
+		line-height: 1.35;
 		&::before {
-			content: 'Q. '
+			content: "Q. ";
 		}
 	}
 	p {
@@ -385,7 +416,7 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 		font-size: 15px;
 		line-height: 1.6;
 		&::before {
-			content: 'A. '
+			content: "A. ";
 		}
 	}
 }
