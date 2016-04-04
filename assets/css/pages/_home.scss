@@ -262,6 +262,21 @@ section.home {
 	display: none;
 }
 
+@media (max-width: 540px) {
+	.home-post-intro {
+		background-color: white;
+	}
+
+	.intro-stage:not(.final-stage) {
+		display: none;
+		animation: none;
+	}
+
+	.final-stage {
+		display: block;
+	}
+}
+
 // == Home Nav == //
 
 header.home-header {
@@ -281,6 +296,21 @@ header.home-header {
 		animation-delay: 10s;
 
 		fill: white;
+	}
+}
+
+@media (max-width: 540px) {
+	header.home-header {
+		background-color: white !important;
+		.header-nav {
+			color: #1b2020 !important;
+		}
+		svg {
+			fill: white;
+		}
+		path {
+			fill: #1b2020 !important;
+		}
 	}
 }
 
@@ -323,6 +353,11 @@ header.home-header {
 	}
 }
 
+@media (min-width: 801px) {
+	.mobile {
+		display: none;
+	}
+}
 @media (max-width: 800px) {
 	.mobile {
 		display: block !important;
@@ -731,8 +766,8 @@ header.home-header {
 	}
 
 	.home-event p {
-		width: 80%;
-		padding: 0 10%;
+		width: 90%;
+		padding: 0 5%;
 		padding-top: 0;
 		padding-bottom: 10px;
 		font-size: 18px;
