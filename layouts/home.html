@@ -49,7 +49,7 @@
           </div>
         </div>
       </section> <!-- .home-info -->
-      <section class="home-work">
+      <section class="home-work desktop">
         <div class="row home-work-comm">
           <div class="col span-4 title">
             <div class="shape-grid">
@@ -119,6 +119,46 @@
           </div>
         </div>
       </section> <!-- .home-work -->
+      <section class="home-work mobile">
+        <article class="work-communication-design">
+          <div class="row">
+            <div class="home-work-icon">
+              <img src="/assets/images/home-icon-com.svg" alt="">
+            </div>
+            <h3 class="home-work-title">Communication <br />Design</h3>
+          </div>
+          <div class="row">
+            <p>Communicating ideas through visual language on all manner of mediums, including branding identity, type and editorial design, various promotional materials, and more.</p>
+          </div>
+          <div class="work">
+            {% for project in projects | filterByDiscipline('communication') | shuffle | take(7) %}
+              {% include 'partials/project-preview.html' %}
+            {% endfor %}
+          </div>
+          <div class="row">
+            <a href="/work/communication/" class="button">See More Projects</a>
+          </div>
+        </article>
+        <article class="work-physical-design">
+          <div class="row">
+            <div class="home-work-icon">
+              <img src="/assets/images/home-icon-phy.svg" alt="">
+            </div>
+            <h3 class="home-work-title">Physical <br />Design</h3>
+          </div>
+          <div class="row">
+            <p>Creation and experimentation in three-dimensional space, from package design to physical computing.</p>
+          </div>
+          <div class="work">
+            {% for project in projects | filterByDiscipline('communication') | shuffle | take(7) %}
+              {% include 'partials/project-preview.html' %}
+            {% endfor %}
+          </div>
+          <div class="row">
+            <a href="/work/communication/" class="button">See More Projects</a>
+          </div>
+        </article>
+      </section>
       <section class="home-event">
         <div class="wrap">
           <div class="bg-span">
