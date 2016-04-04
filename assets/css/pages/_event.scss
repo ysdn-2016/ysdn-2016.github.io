@@ -17,13 +17,18 @@ $ribbon-peek: 8px;
 		cursor: pointer;
 	}
 
-	&--open {
-		transform: translateY(-100%);
-	}
+	// the CSS for .event-panel--open is set in JS
 }
 
 .event-panel-content {
 	overflow-y: scroll;
+	height: 100%;
+	width: 100%;
+	-webkit-overflow-scrolling: touch;
+}
+
+.event-panel-content-wrapper {
+	@include wrapper;
 }
 
 // .event-panel {
@@ -60,27 +65,20 @@ $ribbon-peek: 8px;
 .event-ribbon {
 	position: fixed;
 	bottom: 0;
-	z-index: 104;
+	z-index: 102;
 	display: block;
 	width: 100%;
-	transition: background 400ms ease, bottom 800ms cubic-bezier(0.19, 1, 0.22, 1);
-	will-change: bottom;
+	transition: background 400ms ease, transform 800ms cubic-bezier(0.19, 1, 0.22, 1);
+	will-change: transform;
+
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.0);
 
-	&--open {
-		// transform: translateY(-100%);
-		bottom: calc(100% - #{$ribbon-height-mobile});
-	}
+	// the CSS for .event-ribbon--open is set in JS
 }
 
 .event-ribbon-wrapper {
 	background: $yellow;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: $ribbon-height-mobile;
-	font-size: 16px;
+	border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 
 	&--desktop {
 		display: none;
@@ -92,15 +90,44 @@ $ribbon-peek: 8px;
 	}
 
 	.event-ribbon--open & {
-		background: $darkened-yellow;
+		// background: $darkened-yellow;
+	}
+}
+
+.event-ribbon-nav {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: $ribbon-height-mobile;
+	transition: opacity 400ms ease;
+}
+
+.event-ribbon-nav--minimized {
+	.event-ribbon--open & {
+		opacity: 0.0;
+		pointer-events: none;
+	}
+}
+
+.event-ribbon-nav--maximized {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.0;
+	justify-content: center;
+	pointer-events: none;
+	.event-ribbon--open & {
+		opacity: 1.0;
 	}
 }
 
 .event-ribbon-callout {
 	display: flex;
 	align-items: center;
-	height: 100%;
 	padding-left: 16px;
+	height: 100%;
 }
 
 .event-ribbon-arrow {
@@ -121,6 +148,7 @@ $ribbon-peek: 8px;
 	align-items: center;
 	padding: 0 20px;
 	height: 100%;
+
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.0);
 
 	&--open {
@@ -140,7 +168,6 @@ $ribbon-peek: 8px;
 }
 
 .event-ribbon-menu {
-	display: none;
 	background: #000;
 	position: absolute;
 	top: 100%;
@@ -156,8 +183,8 @@ $ribbon-peek: 8px;
 }
 
 .event-ribbon-menu-line {
-	padding: 12px 0;
 	margin: 0 18px;
+	padding: 12px 0;
 	&:not(:first-child) {
 		border-top: 1px rgba(255, 255, 255, 0.15) solid;
 	}

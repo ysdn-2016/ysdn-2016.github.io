@@ -32,7 +32,8 @@
     "quartz-layout": "^0.1.11",
     "raf-scroll": "^1.3.0",
     "scrollmonitor": "^1.0.12",
-    "slug-component": "^1.1.0"
+    "slug-component": "^1.1.0",
+    "veinjs": "git+https://github.com/israelidanny/veinjs.git"
   },
   "devDependencies": {
     "autoprefixer": "^6.1.0",
