@@ -147,7 +147,7 @@
                 </g>
                 <path d="M36,36 L36,53.5135127 L18.4864865,53.5135135 L36,36 Z" id="Shape-Copy-25" fill="#5AC2B3" style="mix-blend-mode: darken;" transform="translate(27.243243, 44.756757) scale(-1, 1) translate(-27.243243, -44.756757) "></path>
                 <rect id="Rectangle-886" fill="#FFFFFF" x="2.35135135" y="74.9189189" width="187.783784" height="31.1351351"></rect>
-                <text id="Communication" font-family="SofiaProRegular, Sofia Pro" font-size="24" font-weight="normal" line-spacing="32" fill="#182226">
+                <text id="Communication" font-family="Sofia, Avenir, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="bold" line-spacing="32" fill="#182226">
                     <tspan x="12.0810811" y="98.8918919">Communication</tspan>
                 </text>
                 <path d="M233.513514,36 L180,36 L180,54.4864865 L233.513514,54.4864865 L233.513514,36 Z" id="Fill-6" fill="#7CBDDF" style="mix-blend-mode: darken;"></path>
