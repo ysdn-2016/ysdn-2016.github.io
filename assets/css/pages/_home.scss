@@ -470,30 +470,6 @@ header.home-header {
 	}
 }
 
-@media (min-width: 541px) and (max-width: 800px) {
-	.home-work .row {
-		display: block;
-	}
-
-	.home-work .work {
-		content: '';
-		display: block !important;
-		display: table;
-		clear: both;
-		.column {
-			width: auto;
-		}
-	}
-
-	.home-work .project-preview {
-		float: left;
-		width: auto;
-		img, svg {
-			height: 180px;
-		}
-	}
-}
-
 // == Home Mobile == //
 
 .home-work.mobile {
@@ -589,12 +565,16 @@ header.home-header {
 	margin-right: 14px;
 	// float: left;
 	.project-preview-image {
+		position: relative;
 		background-color: green;
 		overflow: hidden;
 		// align-items: center;
 		width: 220px;
 		height: 160px;
 		img, svg {
+			position: absolute;
+			width: 100%;
+			min-height: 100%;
 			width: 220px !important;
 		}
 	}
