@@ -3,7 +3,8 @@ $header-dark-bg: $black;
 $header-light-color: #1b2020;
 $header-light-bg: $white;
 
-$header-height: 90px;
+$header-base-height: 90px;
+$header-height: $header-base-height + $ribbon-height-desktop;
 
 .header {
 	position: absolute;
@@ -12,7 +13,7 @@ $header-height: 90px;
 	left: 0;
 	right: 0;
 	z-index: 99;
-	height: $header-height + $ribbon-height-desktop;
+	height: $header-height;
 	box-shadow: none;
 	transition: box-shadow 400ms ease, background 400ms ease;
 	backface-visibility: hidden;
@@ -22,7 +23,7 @@ $header-height: 90px;
 	background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 	position: fixed;
-	height: $header-height + $ribbon-height-desktop;
+	height: $header-height;
 	top: 0;
 	transform: translateY(-100%);
 }
@@ -36,7 +37,7 @@ $header-height: 90px;
 }
 
 .header-spacer {
-	height: 90px;
+	height: $header-height;
 }
 
 .header-wrapper {
@@ -84,99 +85,16 @@ $header-height: 90px;
 // 	transition: transform 0.2s ease-in;
 // }
 
-.mobile-header {
-	position: relative;
-	padding: 10px 0;
-	display: none;
-	width: 100%;
-	height: 80px;
-	flex-direction: row;
-	justify-content: space-between;
-	background-color: #fff;
-	> a {
-		display: inline-block;
-	}
-	&.active .mobile-header-nav {
-		top: 0;
-		transition: top 0.3s ease-out;
-	}
-}
-
-.mobile-header-logo {
-	margin-left: 5%;
-	height: 60px;
-	width: 120px;
-	svg {
-		height: 60px;
-		width: 120px;
-		display: inline-block;
-		// padding: 10px 0;
-	}
-	path {
-		fill: $header-light-color;
-	}
-}
-
-.mobile-header-nav-trigger {
-	width: 40px;
-	height: 40px;
-	margin: 10px;
-	margin-right: 5%;
-	@include dot-grid;
-	background-position: 6px 6px;
-	&:hover {
-		background-color: #f5f5f5;
-	}
-}
-
-.mobile-header-nav {
-	position: fixed;
-	top: -300px;
-	left: 0;
-	width: 100%;
-	z-index: 99;
-	background-color: black;
-	padding: 20px 5%;
-	transition: top 0.3s ease-in;
-	a {
-		display: block;
-		background-color: #222;
-		height: 44px;
-		width: 100%;
-		padding: 10px;
-		text-align: center;
-		line-height: 24px;
-		font-size: 15px;
-		font-weight: bold;
-		color: white;
-		&:hover {
-			background-color: darken(#222, 4%);
-		}
-	}
-	a + a {
-		margin: 12px 0;
-	}
-	span {
-		@include underline(#FFF);
-		padding: 0 0 2px;
-	}
-	.close {
-		background-color: transparent;
-		padding-bottom: 0px;
-		line-height: 14px;
-		height: 24px;
-		&:hover {
-			background-color: transparent;
-		}
-	}
-}
-
 // NB: Keep in sync with index.js
 @media (max-width: 600px) {
 	.header {
+		position: static;
 		z-index: 99;
 		background-color: #fff;
 		padding-bottom: 0;
+	}
+	.header-spacer {
+		display: none;
 	}
 	.header-nav {
 		display: none;

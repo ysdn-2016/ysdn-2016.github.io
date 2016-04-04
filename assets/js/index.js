@@ -44,14 +44,4 @@ $(function () {
       duration: 800
     });
   });
-  // $('#mobile-header-trigger').on('click', function (e) {
-  //   e.preventDefault()
-  //   $('.mobile-header').toggleClass('active');
-  //   $('main.main').toggleClass('mobile-nav-active');
-  // });
-  // $('#mobile-header-close').on('click', function (e) {
-  //   e.preventDefault()
-  //   $('.mobile-header').toggleClass('active');
-  //   $('main.main').toggleClass('mobile-nav-active');
-  // });
 });

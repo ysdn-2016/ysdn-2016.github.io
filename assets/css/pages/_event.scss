@@ -201,6 +201,7 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 
 @media only screen and (min-width: 600px) {
 	.event-ribbon {
+		position: absolute;
 		background: $yellow;
 		top: -$ribbon-bleed;
 		bottom: auto;
