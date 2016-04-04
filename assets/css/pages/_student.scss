@@ -363,3 +363,54 @@ $student-profile-header-background: #f6f6f6;
 		display: block;
 	}
 }
+
+@media (max-width: 540px) {
+	.student-profile-header{
+		width: 100%;
+		height: 480px;
+	}
+	.student-profile-header-wrapper {
+		flex-direction: column;
+	}
+	.student-profile-hero {
+		padding-top: 0px;
+		justify-content: flex-start !important;
+	}
+	.student-profile-meta {
+		justify-content: flex-start !important;
+	}
+
+	.student-profile-name {
+		font-size: 32px;
+	}
+
+	.student-profile-introduction {
+		margin-top: 0;
+	}
+
+	.student-profile-social {
+		position: static;
+		margin-top: 16px;
+		line-height: 1.5;
+	}
+
+	.student-profile-portrait {
+		position: relative;
+		left: -20%;
+		top: 0;
+		width: 140%;
+		height: auto;
+	}
+
+	.student-profile-sidebar {
+		width: 100%;
+	}
+
+	.student-profile-main-column {
+		width: 100%;
+	}
+
+	.student-profile-project-meta {
+		display: block;
+	}
+}
