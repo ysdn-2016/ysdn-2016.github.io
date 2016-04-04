@@ -64,7 +64,7 @@ module.exports = {
 				answer: `We dedicate a part of the night exclusively to people working in the design and creative industries. All students will be there to answer any questions about their work and experience. No ticket or registration is required.`
 			},
 			{
-				question: `I'll be at FITC on April 19th. Can I still come?`,
+				question: `I'll be at FITC on April 19. Can I still come?`,
 				answer: `For sure! The FITC schedule ends at 6pm on April 19th. We're open until 11pm, so there's lots of time if you'd like to swing by.`
 			},
 			{
