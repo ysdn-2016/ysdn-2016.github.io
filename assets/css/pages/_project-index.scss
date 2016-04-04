@@ -15,7 +15,7 @@
 	}
 
 	a {
-		padding-right: 16px;
+		margin-right: 16px;
 		color: $light-gray;
 		font-weight: 400;
 
@@ -28,33 +28,32 @@
 			padding-left: 0;
 		}
 	}
-	.student-nav-view-search input{
+	.student-nav-view-search input {
 		border: none;
 		padding: 0;
-		font-size: 19px;
-		line-height: 1.6em;
 		width: 68px;
 		color: black;
+		font-size: 19px;
+		line-height: 1.6em;
 		transition: width 0.25s ease;
 
-		&:focus{
+		&:focus {
 			width: 200px;
-			&::-webkit-input-placeholder{
-			opacity: 0.3;
+			&::-webkit-input-placeholder {
+				opacity: 0.3;
+			}
 		}
-		}
-		&::-webkit-input-placeholder{
-			color: black;
+		&::-webkit-input-placeholder {
 			opacity: 1;
+			color: black;
 			transition: opacity 0.25s ease;
 		}
 	}
-	&-filters{
-		@media #{$media-mobile-large}{
+	&-filters {
+		@media #{$media-mobile-large} {
 			flex-direction: column;
 		}
 	}
-
 }
 
 //
@@ -62,22 +61,22 @@
 //
 
 .project-category-intro {
-	width: 100%;
 	position: relative;
-	width: 100%;
 	margin-bottom: 30px;
+	width: 100%;
+	width: 100%;
 
 	img {
 		width: 100%;
 	}
 
-	&-desktop{
+	&-desktop {
 		display: block;
 		@media #{$media-desktop-medium} {
 			display: none;
 		}
 	}
-	&-tablet{
+	&-tablet {
 		display: none;
 		@media #{$media-desktop-medium} {
 			display: block;
@@ -86,7 +85,7 @@
 			display: none;
 		}
 	}
-	&-mobile{
+	&-mobile {
 		display: none;
 		@media #{$media-mobile-large} {
 			display: block;
@@ -95,9 +94,9 @@
 }
 
 
-.student-nav-view-search{
+.student-nav-view-search {
 	white-space: nowrap;
-	#student-nav-view-search-input{
+	#student-nav-view-search-input {
 		@media #{$media-mobile-large} {
 			width: 0;
 		}
@@ -108,9 +107,11 @@
 }
 
 .project-nav-categories {
+	margin-left: 24px;
 	overflow: scroll;
-  white-space: nowrap;
-	@media #{$media-mobile-large}{
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	@media #{$media-mobile-large} {
 		flex-direction: column;
 	}
 }
@@ -126,16 +127,16 @@
 .project-grid {
 	@include clearfix;
 	.column {
-		width: 30%;
 		margin-right: 5%;
+		width: 30%;
 	}
 	.column:nth-child(3n) {
 		margin-right: 0;
 	}
 	@media only screen and (max-width: 800px) {
 		.column {
-			width: 46%;
 			margin-right: 8%;
+			width: 46%;
 		}
 		.column:nth-child(3n) {
 			margin-right: 8%;
