@@ -83,8 +83,13 @@
 	}
 }
 
-.sponsors-interest p {
-	max-width: 100%;
+.sponsors-interest {
+	p {
+		max-width: 100%;
+	}
+	@media #{$media-tablet-medium} {
+		padding: 20px 0;
+	}
 }
 
 //
@@ -93,11 +98,6 @@
 
 $sponsor-page-section-padding: 10vh;
 $sponsor-page-grid-increment: 34px; // NOTE: taken from space between circles in grid svg
-
-// TODO: @emmersonic, if you get a chance can you change these class names from
-// 'sponsor-page-sponsors' to like 'all-sponsors' or 'sponsors-page-sponsors'?
-// By duplicating them you're affecting my work on the event page.
-// I've scoped it in for now, but it's best if things sit on the top level.
 
 .sponsors {
 
