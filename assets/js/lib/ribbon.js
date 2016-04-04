@@ -33,8 +33,14 @@ module.exports = (function () {
       isMobileSize = true;
       isShowingOnMobile = true;
       $window.on('resize', fixMobileTransition)
-      fixMobileTransition();
       $window.on('scrolldelta', handleMobileScroll);
+      $window.on('resize orientationchange', showMobileRibbon);
+      fixMobileTransition();
+    },
+    unmatch: function () {
+      $window.off('resize', fixMobileTransition)
+      $window.off('scrolldelta', handleMobileScroll);
+      $window.off('resize orientationchange', showMobileRibbon);
     }
   }
 
