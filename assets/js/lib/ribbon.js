@@ -48,6 +48,7 @@ module.exports = (function () {
   var desktopHandler = {
     match: function () {
       isMobileSize = false;
+      unfixMobileTransition();
     }
   }
 

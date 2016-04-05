@@ -19,7 +19,6 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	&:not(.event-panel--open) {
 		cursor: pointer;
 	}
-
 	// the CSS for .event-panel--open is set in JS
 }
 
@@ -465,6 +464,7 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 @media only screen and (min-width: 600px) {
 	.event-panel-content {
 		padding: 10vh 0;
+		overflow-y: scroll;
 	}
 
 	.event-panel-content-wrapper {
@@ -474,11 +474,28 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	.event-details,
 	.event-details-spacer {
 		margin-right: 10%;
+		height: 100%;
 		width: 35%;
 		text-align: left;
 		&::after {
 			display: none;
 		}
+	}
+
+	.event-details {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 0;
+		bottom: 0;
+	}
+
+	.event-details-spacer {
+		display: block;
+	}
+
+	.event-details-time {
+		pointer-events: none;
 	}
 
 	.event-info {
@@ -551,11 +568,9 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 
 	.event-details {
 		width: 30%;
-
 		h1 {
 			font-size: 44px;
 		}
-
 		h3 {
 			font-size: 28px;
 		}
