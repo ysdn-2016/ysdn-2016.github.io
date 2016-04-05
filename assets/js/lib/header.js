@@ -22,12 +22,16 @@ module.exports = (function () {
 		spacerBottom = spacerOffset + $spacer.innerHeight();
 
 		$window.on('scrolldelta', handleScroll);
+		$window.on('event-panel:maximize', open);
+		$window.on('event-panel:minimize', close);
 	}
 
 	function destroy () {
 		isFixed = false;
 		$header.removeClass('header--fixed header--maximized header--is-transitioning');
 		$window.off('scrolldelta', handleScroll);
+		$window.off('event-panel:maximize', open);
+		$window.off('event-panel:minimize', close);
 		$window.trigger('header:minimize');
 	}
 

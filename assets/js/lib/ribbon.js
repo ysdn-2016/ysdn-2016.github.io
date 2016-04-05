@@ -12,6 +12,7 @@ module.exports = (function () {
   var $document;
   var $body;
   var $window;
+  var $header;
   var $eventPanel;
   var $eventRibbon;
   var $eventRibbonMenu;
@@ -60,6 +61,7 @@ module.exports = (function () {
     $body = $('body');
     $window = $(window);
     $document = $(document);
+    $header = $('.header');
     $eventPanel = $('.event-panel');
     $eventRibbon = $('.event-ribbon');
     $eventRibbonMenu = $('.event-ribbon-menu');
@@ -96,6 +98,7 @@ module.exports = (function () {
     $eventPanel.on('touchmove', stopPropagation);
     $eventPanel.addClass('event-panel--open');
     $eventRibbon.addClass('event-ribbon--open');
+    $header.addClass('header--maximized');
   }
 
   function hideEventPanel () {
@@ -129,6 +132,9 @@ module.exports = (function () {
     if (!isMobileSize) return;
     var windowHeight = window.innerHeight;
     var ribbonOffset = windowHeight - $eventRibbon.innerHeight();
+    css.inject('.event-panel', { height: null, bottom: null });
+    css.inject('.event-panel--open', { transform: null });
+    css.inject('.event-ribbon--open', { transform: null });
     css.inject('.event-panel', { height: ribbonOffset + 'px', bottom: -ribbonOffset + 'px' });
     css.inject('.event-panel--open', { transform: 'translateY(-' + ribbonOffset + 'px)' });
     css.inject('.event-ribbon--open', { transform: 'translateY(-' + ribbonOffset + 'px)' });

@@ -1,7 +1,7 @@
 
 $ribbon-height-desktop: 44px;
 $ribbon-height-mobile: 50px;
-$ribbon-bleed: 240px;
+$ribbon-bleed: 400px;
 $ribbon-peek: 8px;
 $ribbon-transition-duration: 600ms;
 $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
@@ -26,9 +26,13 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	overflow-y: scroll;
 	width: 100%;
 	height: 100%;
-	transition: opacity 400ms ease $ribbon-transition-duration;
+	transition: opacity 400ms ease;
 
 	-webkit-overflow-scrolling: touch;
+
+	.event-panel--open & {
+		transition-delay: $ribbon-transition-duration;
+	}
 }
 
 @media only screen and (min-width: 600px) {
