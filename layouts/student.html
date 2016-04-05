@@ -11,7 +11,7 @@
 					<div class="student-profile-hero">
 						<h1 class="student-profile-name">{{ name }}</h1>
 						{% if introduction %}
-							<div class="student-profile-introduction">{{ introduction | markdown | safe }}</div>
+							<div class="student-profile-introduction">{{ introduction | markdown | newTab | safe }}</div>
 						{% endif %}
 					</div>
 					<div class="student-profile-social">
@@ -52,12 +52,12 @@
 				<aside class="student-profile-sidebar">
 					<div class="student-profile-sidebar-note student-profile-sidebar-biography">
 						<h5 class="student-profile-sidebar-note-label">About</h5>
-						{{ biography | markdown | default(config.studentProfile.defaults.biography) | safe }}
+						{{ biography | markdown | newTab | default(config.studentProfile.defaults.biography) | safe }}
 					</div>
 					{% for note in sideNotes %}
 						<div class="student-profile-sidebar-note">
 							<h5 class="student-profile-sidebar-note-label">{{ note.label }}</h5>
-							{{ note.contents | markdown | safe }}
+							{{ note.contents | markdown | newTab | safe }}
 						</div>
 					{% endfor %}
 				</aside>

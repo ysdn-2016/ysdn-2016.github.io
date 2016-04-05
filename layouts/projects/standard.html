@@ -8,7 +8,7 @@
 					<div class="project-header-title{% if title.length < 10 %} project-header-title--large{% endif %}">{{ title }}</div>
 					<a class="project-header-owner-name" href="{{ owner.href }}" >{{ owner.name }}</a>
 				</header>
-				<div class="project-markdown">{{ contents | stripAssets | safe }}</div>
+				<div class="project-markdown">{{ contents | stripAssets | newTab | safe }}</div>
 				<div class="project-callout">
 					<a class="project-owner-image" href="{{ owner.href }}">
 						<img src="{{ owner.portrait | asset_url({ width: 120, height: 120, fit: 'facearea', facepad: 2.5 }) }}" alt="{{ owner.name }}" draggable="false" />
