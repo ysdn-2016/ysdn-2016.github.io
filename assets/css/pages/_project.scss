@@ -8,13 +8,12 @@ $sticky-scroll-offset: 60px;
 .project-body {
 	position: relative;
 	display: flex;
-	margin: 0 -$project-grid-gutter/2;
 }
 
 .project-sidebar-filler {
 	position: relative;
 	flex-basis:  33.334%;
-	padding: 0 $project-grid-gutter/2;
+	padding-right: $project-grid-gutter/2;
 
 }
 
@@ -34,7 +33,7 @@ $sticky-scroll-offset: 60px;
 
 .project-content {
 	flex-basis: 66.666%;
-	padding: 0 $project-grid-gutter/2;
+	padding-left: $project-grid-gutter/2;
 
 	& > :first-child {
 		margin-top: 0;
@@ -42,6 +41,10 @@ $sticky-scroll-offset: 60px;
 
 	& > :last-child {
 		margin-bottom: 0;
+	}
+
+	@media #{$media-tablet-medium} {
+		padding: 0;
 	}
 }
 
@@ -441,9 +444,6 @@ $sticky-scroll-offset: 60px;
 @media only screen and (max-width : 740px) {
 	.case-nav, .case-nav-holder {
 		display: none;
-	}
-	.project-content, .project-details, .project-assets {
-		padding-right: 20px;
 	}
 	.project--case-study .project-header .title {
 		padding: 40px 20px 68px;
