@@ -17,8 +17,11 @@
       <a href="/sponsors/" {% if id == 'sponsors' %}class="active"{% endif %}><span>Sponsors</span></a>
       <a href="/about/" {% if id == 'about' %}class="active"{% endif %}><span>About</span></a>
     </nav>
-    <div class="footer-actions">
-      <a href="#!top" class="footer-back-to-top"><i class="i-arrow-up"></i><span>Back To Top</span></a>
+    <div class="footer-social">
+      <a href="{{ social.facebook.url }}" class="event-ribbon-social-media-icon i-facebook" target="_blank"></a>
+      <a href="{{ social.twitter.url }}" class="event-ribbon-social-media-icon i-twitter" target="_blank"></a>
+      <a href="{{ social.instagram.url }}" class="event-ribbon-social-media-icon i-instagram" target="_blank"></a>
+      <a href="{{ social.mail.url }}" class="event-ribbon-social-media-icon i-mail" target="_blank"></a>
     </div>
   </div>
 </footer>
