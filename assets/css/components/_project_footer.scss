@@ -1,10 +1,9 @@
 .project-footer {
-	border-top: 1px light-gray solid;
+	border-top: 1px rgba(0,0,0,0.2) solid;
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 ($project-grid-gutter / 2) * -1;
-	margin-top: 50px;
-	padding-top: 60px;
+	margin-top: 60px;
+	padding-top: 48px;
 	padding-bottom: 40px;
 
 	p {
@@ -67,7 +66,11 @@
 
 .project-footer-event-prompt {
 	padding-right: $project-grid-gutter / 2;
-	padding-left: $project-grid-gutter / 2;
+	padding-left: 0;
+
+	@media #{$media-tablet-medium} {
+		padding-right: 0;
+	}
 
 	&-headline {
 		max-width: 15em;
@@ -88,6 +91,15 @@
 	padding-right: $project-grid-gutter / 2;
 	padding-left: $project-grid-gutter / 2;
 }
+
+.project-footer-related-project{
+	padding-right: 0;
+}
+.project-footer-next-project {
+	@media #{$media-tablet-medium} {
+		padding-left: 0;
+	}
+}	
 
 .project-footer-preview {
 	&.hover .project-footer-preview-image,
@@ -117,7 +129,7 @@
 	color: #aaa;
 	font-size: 13px;
 	font-weight: normal;
-	line-height: 1.0;
+	line-height: 1.4;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 	transition: opacity 200ms ease;
