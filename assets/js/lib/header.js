@@ -28,6 +28,7 @@ module.exports = (function () {
 		isFixed = false;
 		$header.removeClass('header--fixed header--maximized header--is-transitioning');
 		$window.off('scrolldelta', handleScroll);
+		$window.trigger('header:minimize');
 	}
 
 	function open () {
@@ -35,6 +36,7 @@ module.exports = (function () {
 		$header.addClass('header--is-transitioning');
 		$header.addClass('header--maximized');
 		$header.on('transitionend webkitTransitionEnd', removeTransitionClass);
+		$window.trigger('header:maximize');
 	}
 
 	function close () {
@@ -42,6 +44,7 @@ module.exports = (function () {
 		$header.addClass('header--is-transitioning');
 		$header.removeClass('header--maximized');
 		$header.on('transitionend webkitTransitionEnd', removeTransitionClass);
+		$window.trigger('header:minimize');
 	}
 
 	return { init: init, destroy: destroy }

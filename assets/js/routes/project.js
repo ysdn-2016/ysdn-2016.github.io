@@ -28,6 +28,7 @@ module.exports = function () {
 
   var $window = $(window);
   var $document = $(document);
+  var $header = $('.header');
   var $project = $('.project-body');
   var $sidebar = $('.project-sidebar');
   var $content = $('.project-content');
@@ -37,6 +38,7 @@ module.exports = function () {
   var isSidebarSmallerThanWindow = false;
   var isSidebarLargerThanContent = false;
   var isContentLargerThanSidebar = false;
+  var isHeaderMaximized = false;
 
   var tracks = {
     pinned: { start: 0, end: 0, offset: 0 },
@@ -53,6 +55,8 @@ module.exports = function () {
   loop.add(scroll);
   $window.on('resize load', resize);
   $document.on('DOMContentLoaded', resize);
+  $window.on('header:maximize', headerMaximized);
+  $window.on('header:minimize', headerMinimized);
 
   $(document).on('mouseenter', '.project-footer-preview-title', projectMouseEnter);
   $(document).on('mouseleave', '.project-footer-preview-title', projectMouseLeave);
@@ -125,6 +129,15 @@ module.exports = function () {
       tracks.bottom.start = tracks.pinned.end;
       tracks.bottom.end = $(document).height();
     }
+
+    if (isHeaderMaximized) {
+      var height = $header.height();
+      tracks.pinned.start = tracks.pinned.start - height;
+      tracks.pinned.end = tracks.pinned.end - height;
+      tracks.pinned.offset = tracks.pinned.offset + height;
+      tracks.bottom.start = tracks.bottom.start - height;
+      tracks.bottom.end = tracks.bottom.end - height;
+    }
   }
 
   function projectMouseEnter (e) {
@@ -133,6 +146,20 @@ module.exports = function () {
 
   function projectMouseLeave (e) {
     $(this).parents('.project-footer-preview').removeClass('hover');
+  }
+
+  function headerMaximized () {
+    isHeaderMaximized = true;
+    setTracks();
+    unpin();
+    pin();
+  }
+
+  function headerMinimized () {
+    isHeaderMaximized = false;
+    setTracks();
+    unpin();
+    pin();
   }
 
 };

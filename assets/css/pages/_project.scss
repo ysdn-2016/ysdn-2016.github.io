@@ -13,9 +13,8 @@ $sticky-scroll-offset: 60px;
 
 .project-sidebar-filler {
 	position: relative;
-	flex-basis:  33.334%;
+	flex-basis: 33.334%;
 	padding: 0 $project-grid-gutter/2;
-
 }
 
 .project-sidebar {
@@ -62,7 +61,6 @@ $sticky-scroll-offset: 60px;
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 24px;
-
 	will-change: opacity, transform;
 }
 
@@ -112,20 +110,20 @@ $sticky-scroll-offset: 60px;
 
 .project-owner-introduction {
 	display: block;
-	max-width: 300px;
 	margin-top: 16px;
 	margin-bottom: 3px;
+	width: 100%;
+	max-width: 300px;
 	color: #aaa;
 	font-size: 16px;
 	line-height: 1.4;
-	width: 100%;
 }
 
 .project-owner-image {
 	@include avatar;
-	max-width: 40px;
 	margin-right: 12px;
 	margin-left: -2px;
+	max-width: 40px;
 }
 
 //
@@ -136,6 +134,8 @@ $sticky-scroll-offset: 60px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	transition: top 250ms ease;
+	will-change: top;
 }
 
 .project-sidebar-headers-link {
@@ -166,9 +166,9 @@ $sticky-scroll-offset: 60px;
 	}
 
 	p, h1, h2, h3, h4, h5, h6, ul, ol {
+		margin-bottom: 15px;
 		width: 90%;
 		max-width: 600px;
-		margin-bottom: 15px;
 		font-size: 18px;
 		@media #{$media-tablet-medium} {
 			width: 100%;
@@ -231,25 +231,25 @@ $sticky-scroll-offset: 60px;
 	}
 
 	.btn-primary, .button {
-		border: 1px solid black;
 		background-color: black;
 		background-image: none;
+		border: 1px solid black;
 		padding: 14px 20px 14px 20px;
 		color: $white;
 
 		&:hover {
 			background-color: $red;
-			opacity: 1.0;
 			border-color: $red;
+			opacity: 1.0;
 		}
 	}
 
 	.caption {
-		font-size: 0.86em;
-		line-height: 1.5;
-		color: #aaa;
 		margin-top: -18px;
 		padding-bottom: 12px;
+		color: #aaa;
+		font-size: 0.86em;
+		line-height: 1.5;
 	}
 
 	.contributors {
@@ -283,16 +283,16 @@ $sticky-scroll-offset: 60px;
 	}
 
 	:not(pre) > code {
-		border: 1px solid #f2f2f2;
 		background: #f9f9f9;
+		border: 1px solid #f2f2f2;
 	}
 
 	pre {
+		background-color: #f9f9f9;
 		border: 1px solid #f2f2f2;
 		border-radius: 3px;
-		background-color: #f9f9f9;
-		max-width: 600px;
 		padding: 14px 16px;
+		max-width: 600px;
 		font-size: 14px;
 		line-height: 18px;
 	}
@@ -321,10 +321,10 @@ $sticky-scroll-offset: 60px;
 		font-size: 15px;
 	}
 
-	@media #{$media-tablet-medium}{
-		.project-body{
-			flex-direction: column;
+	@media #{$media-tablet-medium} {
+		.project-body {
 			display: block;
+			flex-direction: column;
 			height: auto !important; //Remove if Sidebar JS is turned off on mobile
 			.project-sidebar-filler, .project-content {
 				flex-basis: 100%;
@@ -357,10 +357,10 @@ $sticky-scroll-offset: 60px;
 		width: 100%;
 		max-width: 1160px;
 	}
-	@media #{$media-tablet-medium}{
-		.project-body{
-			flex-direction: column;
+	@media #{$media-tablet-medium} {
+		.project-body {
 			display: block;
+			flex-direction: column;
 			height: auto !important; //Remove if Sidebar JS is turned off on mobile
 			.project-sidebar-filler {
 				display: none;
@@ -376,11 +376,11 @@ $sticky-scroll-offset: 60px;
 	position: relative;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
 	padding-top: 32px;
-	padding-bottom: 32px;
-	line-height: 1.2;
 	max-width: 400px;
+	line-height: 1.2;
+
+	flex-wrap: wrap;
 
 	&-title {
 		font-size: 17px;
@@ -393,10 +393,10 @@ $sticky-scroll-offset: 60px;
 	}
 
 	&::before {
-		content: '';
+		background: #f2f2f2;
+		content: "";
 		position: absolute;
 		top: 0;
-		background: #f2f2f2;
 		display: block;
 		width: 75%;
 		height: 1px;
