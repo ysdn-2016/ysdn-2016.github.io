@@ -216,7 +216,8 @@
 .student-search-results {
 	text-align: center;
 	padding: 48px 0 128px;
-	font-size: 16px;
+	font-size: 21px;
+	line-height: 1.52;
 	a {
 		@include underline();
 	}
