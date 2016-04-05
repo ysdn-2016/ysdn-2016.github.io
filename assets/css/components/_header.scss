@@ -33,7 +33,7 @@ $header-height: $header-base-height + $ribbon-height-desktop;
 }
 
 .header--is-transitioning {
-	transition: transform 200ms ease, box-shadow 400ms ease, background 400ms ease;
+	transition: transform 250ms ease, box-shadow 400ms ease, background 400ms ease;
 }
 
 .header-spacer {
