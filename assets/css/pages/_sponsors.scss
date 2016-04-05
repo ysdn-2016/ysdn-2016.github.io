@@ -84,6 +84,8 @@
 }
 
 .sponsors-interest {
+	padding-top: 40px;
+	padding-bottom: 0px;
 	p {
 		max-width: 100%;
 	}
@@ -157,7 +159,7 @@ $sponsor-page-grid-increment: 34px; // NOTE: taken from space between circles in
 	.sponsor-page-sponsors-founding-sponsors,
 	.sponsor-page-sponsors-patron-sponsors {
 		display: flex;
-		margin-bottom: 24px;
+		margin-bottom: 48px;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-self: center;
