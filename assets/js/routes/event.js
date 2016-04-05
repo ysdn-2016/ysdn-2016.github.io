@@ -31,6 +31,7 @@ module.exports = function (ctx) {
 		},
 		unmatch: function () {
 			$eventContent.off('scroll', onScroll);
+			$eventDetails.css('transform', '');
 		}
 	})
 

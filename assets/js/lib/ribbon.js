@@ -19,7 +19,6 @@ module.exports = (function () {
   var $eventRibbonMenuToggle;
 
   var isOpen = false;
-  var isShowingOnMobile = false;
   var isMobileSize = false;
   // NOTE: we're using user agent because the bug this fixes relates to
   // Safari's browser chrome, not the smaller browser size
@@ -32,7 +31,6 @@ module.exports = (function () {
   var mobileHandler = {
     match: function () {
       isMobileSize = true;
-      isShowingOnMobile = true;
       $window.on('resize', fixMobileTransition)
       $window.on('scrolldelta', handleMobileScroll);
       $window.on('resize orientationchange', showMobileRibbon);
@@ -98,7 +96,9 @@ module.exports = (function () {
     $eventPanel.on('touchmove', stopPropagation);
     $eventPanel.addClass('event-panel--open');
     $eventRibbon.addClass('event-ribbon--open');
-    $header.addClass('header--maximized');
+    if (!isMobileSize) {
+      $header.addClass('header--maximized');
+    }
   }
 
   function hideEventPanel () {
@@ -138,6 +138,7 @@ module.exports = (function () {
     css.inject('.event-panel', { height: ribbonOffset + 'px', bottom: -ribbonOffset + 'px' });
     css.inject('.event-panel--open', { transform: 'translateY(-' + ribbonOffset + 'px)' });
     css.inject('.event-ribbon--open', { transform: 'translateY(-' + ribbonOffset + 'px)' });
+    $header.removeClass('header--maximized');
   }
 
   function unfixMobileTransition () {
