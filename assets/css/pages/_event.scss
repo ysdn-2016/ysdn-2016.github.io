@@ -62,9 +62,10 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	width: 100%;
 	cursor: pointer;
 	transition: background 400ms ease, transform $ribbon-transition-duration $ribbon-transition-ease;
-	backface-visibility: hidden;
 	// will-change: transform;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0.0);
+
+	backface-visibility: hidden;
 	// the CSS for .event-ribbon--open is set in JS
 }
 
@@ -201,8 +202,8 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 
 @media only screen and (min-width: 600px) {
 	.event-ribbon {
-		position: absolute;
 		background: $yellow;
+		position: absolute;
 		top: -$ribbon-bleed;
 		bottom: auto;
 	}
@@ -248,6 +249,28 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 			background: rgba(0, 0, 0, 0.1);
 		}
 	}
+
+	.event-ribbon-nav {
+		width: 100%;
+		height: $ribbon-height-desktop;
+	}
+
+	.event-ribbon-nav--minimized {
+		.event-ribbon-arrow {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+	}
+
+	.event-ribbon-nav--maximized {
+		top: auto;
+		bottom: 0;
+		.event-ribbon-arrow {
+			margin-left: 6px;
+		}
+	}
 }
 
 //
@@ -261,6 +284,9 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	a {
 		@include underline;
 	}
+	a:hover {
+		@include underline-hover-color($red);
+	}
 }
 
 .event-panel-content-wrapper {
@@ -268,17 +294,17 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .event-shape-a {
+	@include shape-triangle(36px, $blue, 90);
 	position: absolute;
 	top: 24px;
 	left: 24px;
-	@include shape-triangle(36px, $blue, 90);
 }
 
 .event-shape-b {
+	@include shape-rectangle(20px, 40px, $red, 45);
 	position: absolute;
 	top: 48px;
 	right: 40px;
-	@include shape-rectangle(20px, 40px, $red, 45);
 }
 
 .event-details {
@@ -297,6 +323,7 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 		margin-bottom: 16px;
 	}
 	h5 {
+		margin-bottom: 12px;
 		color: $red;
 		font-size: 13px;
 		letter-spacing: 0.06em;
@@ -314,6 +341,10 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }
 
+.event-details-spacer {
+	display: none;
+}
+
 .event-details-block {
 	position: relative;
 	z-index: 2;
@@ -329,9 +360,9 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 .event-details-time {
 	background: transparent url("/assets/images/grad-show-close@2x.jpg") no-repeat;
 	background-size: cover;
-	margin-left: -5.5%;
+	margin-left: -6%;
 	padding: 48px 0;
-	width: 111%;
+	width: 112%;
 }
 
 .event-details-time-blocks {
@@ -358,21 +389,22 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }
 
-.event-intro-figure {
+.event-info-figure {
 	display: none;
 }
 
 .event-directions-map {
 	background: $darkened-yellow;
+	margin-bottom: 24px;
 	margin-left: -6%;
 	padding-bottom: 80%;
 	width: 112%;
 	height: 0;
 	pointer-events: none;
-	margin-bottom: 24px;
 }
 
 // HACK: selecting the Google logo
+.event-directions-map > div > :nth-child(2),
 .event-directions-map > div > :last-child, // Google logo
 .event-directions-map > div > :nth-last-child(2), // "Report a problem with this map"
 .event-directions-map > div > :nth-last-child(3), // Mobile notice
@@ -382,14 +414,20 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	display: none !important;
 }
 
+.event-directions-routes-wrapper {
+	& > h3 {
+		display: none;
+	}
+}
+
 .event-directions-route {
 	display: flex;
 	font-size: 14px;
 
 	h6 {
+		width: 50px;
 		font-size: 14px;
 		font-weight: normal;
-		width: 50px;
 	}
 }
 
@@ -421,5 +459,149 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 		&::before {
 			content: "A. ";
 		}
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.event-panel-content {
+		padding: 10vh 0;
+	}
+
+	.event-panel-content-wrapper {
+		display: flex;
+	}
+
+	.event-details,
+	.event-details-spacer {
+		margin-right: 10%;
+		width: 35%;
+		text-align: left;
+		&::after {
+			display: none;
+		}
+	}
+
+	.event-info {
+		width: 55%;
+	}
+
+	.event-info-intro,
+	.event-directions-routes-wrapper,
+	.event-info-faq,
+	.event-info-cast {
+		max-width: 530px;
+	}
+
+	.event-info-intro {
+		font-size: 20px;
+		line-height: 1.6;
+		p {
+			margin: 0;
+		}
+	}
+
+	.event-details-block {
+		margin-top: 36px;
+	}
+
+	.event-details-time {
+		background: none;
+		margin-left: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.event-details-time-blocks {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.event-details-time-block + .event-details-time-block {
+		margin-top: 18px;
+	}
+
+	.event-directions {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.event-directions-map {
+		margin-left: 0;
+		padding-bottom: 60%;
+		width: 100%;
+		pointer-events: auto;
+	}
+}
+
+// @media only screen and (min-height: 600px) and (min-width: 600px) {
+// 	.event-details {
+// 		position: fixed;
+// 		top: 0;
+// 		bottom: 0;
+// 		display: flex;
+// 		align-items: center;
+// 	}
+//
+// 	.event-details-spacer {
+// 		display: block;
+// 	}
+// }
+
+@media only screen and (min-width: 880px) {
+
+	.event-details {
+		width: 30%;
+
+		h1 {
+			font-size: 44px;
+		}
+
+		h3 {
+			font-size: 28px;
+		}
+	}
+
+	.event-info {
+		padding-top: 0;
+		width: 60%;
+	}
+
+	.event-info-intro {
+		position: relative;
+		font-size: 24px;
+		p {
+			position: relative;
+			z-index: 2;
+		}
+	}
+
+	.event-info-figure {
+		position: absolute;
+		top: 24px;
+		right: 0;
+		display: block;
+		max-width: 320px;
+	}
+
+	.event-details-time-blocks {
+		flex-direction: row;
+	}
+
+	.event-details-time-block + .event-details-time-block {
+		margin-top: 0;
+		margin-left: 24px;
+	}
+
+	.event-directions-routes-wrapper {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		& > h3 {
+			display: block;
+			margin-top: 0;
+		}
+	}
+	.event-directions-routes {
+		margin-top: 5px;
 	}
 }

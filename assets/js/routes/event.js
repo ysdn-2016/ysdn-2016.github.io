@@ -2,7 +2,7 @@
 var mapOptions = {
 	zoom: 14,
 	backgroundColor: 'none',
-	// center: new google.maps.LatLng(43.631014, -79.426256),
+	center: new google.maps.LatLng(43.631014, -79.426256),
 	scrollwheel: false,
 	disableDefaultUI: true,
 	disableDoubleClickZoom: true,
@@ -13,15 +13,15 @@ module.exports = function (ctx) {
 	var $eventPanel = $('.event-panel');
 	var $eventMap = $('.event-directions-map');
 
-	// var map = new google.maps.Map($eventMap.get(0), mapOptions);
-	// var marker = new google.maps.Marker({
-	// 	position: new google.maps.LatLng(43.631014, -79.426256),
-	// 	map: map,
-	// 	icon: '/assets/images/marker.svg',
-	// 	title: 'Liberty Grand'
-	// })
+	var map = new google.maps.Map($eventMap.get(0), mapOptions);
+	var marker = new google.maps.Marker({
+		position: new google.maps.LatLng(43.631014, -79.426256),
+		map: map,
+		icon: '/assets/images/marker.svg',
+		title: 'Liberty Grand'
+	})
 
-	// google.maps.event.addDomListener(marker, 'click', onMapMarkerClick)
+	google.maps.event.addDomListener(marker, 'click', onMapMarkerClick)
 
 	/**
 	 * Private functions

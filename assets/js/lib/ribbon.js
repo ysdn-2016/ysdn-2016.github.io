@@ -41,13 +41,13 @@ module.exports = (function () {
       $window.off('resize', fixMobileTransition)
       $window.off('scrolldelta', handleMobileScroll);
       $window.off('resize orientationchange', showMobileRibbon);
+      unfixMobileTransition();
     }
   }
 
   var desktopHandler = {
     match: function () {
       isMobileSize = false;
-      unfixMobileTransition();
     }
   }
 
@@ -147,7 +147,9 @@ module.exports = (function () {
     } else {
       showEventPanel();
       previousUrl = router.current;
-      router(EVENT_URL);
+      setTimeout(function () {
+        router(EVENT_URL);
+      }, 150);
     }
   }
 
