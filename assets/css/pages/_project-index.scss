@@ -107,7 +107,6 @@
 }
 
 .project-nav-categories {
-	margin-left: 24px;
 	overflow: scroll;
 	white-space: nowrap;
 	&::-webkit-scrollbar {
@@ -118,6 +117,7 @@
 	-webkit-overflow-scrolling: touch;
 	@media #{$media-mobile-large} {
 		flex-direction: column;
+		margin-left: 24px;
 	}
 }
 
