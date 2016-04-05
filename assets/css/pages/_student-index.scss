@@ -219,9 +219,8 @@
 	font-size: 16px;
 	a {
 		@include underline();
-		color: $red;
 	}
 	a:hover {
-		opacity: 0.6;
+		@include underline-hover-color($red);
 	}
 }
