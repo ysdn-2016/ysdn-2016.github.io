@@ -14,6 +14,7 @@ module.exports = (function () {
   var $window;
   var $header;
   var $eventPanel;
+  var $eventContent;
   var $eventRibbon;
   var $eventRibbonMenu;
   var $eventRibbonMenuToggle;
@@ -47,6 +48,7 @@ module.exports = (function () {
   var desktopHandler = {
     match: function () {
       isMobileSize = false;
+      $window.on('resize', fixDesktopTransition);
       unfixMobileTransition();
     }
   }
@@ -61,6 +63,7 @@ module.exports = (function () {
     $document = $(document);
     $header = $('.header');
     $eventPanel = $('.event-panel');
+    $eventContent = $('.event-panel-content');
     $eventRibbon = $('.event-ribbon');
     $eventRibbonMenu = $('.event-ribbon-menu');
     $eventRibbonMenuToggle = $('.event-ribbon-menu-toggle');
@@ -93,7 +96,7 @@ module.exports = (function () {
     fixMobileTransition();
     $body.addClass('locked');
     $body.on('touchmove', preventDefault);
-    $eventPanel.on('touchmove', stopPropagation);
+    $eventContent.on('touchmove', stopPropagation);
     $eventPanel.addClass('event-panel--open');
     $eventRibbon.addClass('event-ribbon--open');
     if (!isMobileSize) {
@@ -104,7 +107,7 @@ module.exports = (function () {
   function hideEventPanel () {
     $body.removeClass('locked');
     $body.off('touchmove', preventDefault);
-    $eventPanel.off('touchmove', stopPropagation);
+    $eventContent.off('touchmove', stopPropagation);
     $eventPanel.removeClass('event-panel--open');
     $eventRibbon.removeClass('event-ribbon--open');
     isOpen = false;
@@ -121,10 +124,12 @@ module.exports = (function () {
   }
 
   function showMobileRibbon () {
+    if (isOpen) return;
     $eventRibbon.removeClass('event-ribbon--minimized');
   }
 
   function hideMobileRibbon () {
+    if (isOpen) return;
     $eventRibbon.addClass('event-ribbon--minimized');
   }
 
@@ -138,13 +143,18 @@ module.exports = (function () {
     css.inject('.event-panel', { height: ribbonOffset + 'px', bottom: -ribbonOffset + 'px' });
     css.inject('.event-panel--open', { transform: 'translateY(-' + ribbonOffset + 'px)' });
     css.inject('.event-ribbon--open', { transform: 'translateY(-' + ribbonOffset + 'px)' });
-    $header.removeClass('header--maximized');
+    $header.removeClass('header--maximized header--fixed');
   }
 
   function unfixMobileTransition () {
     css.inject('.event-panel', { height: null, bottom: null });
     css.inject('.event-panel--open', { transform: null });
     css.inject('.event-ribbon--open', { transform: null });
+  }
+
+  function fixDesktopTransition () {
+    if (!isOpen) return;
+    $header.addClass('header--fixed header--maximized');
   }
 
   function handleEventRibbonClick (e) {

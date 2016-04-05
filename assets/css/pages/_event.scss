@@ -310,6 +310,69 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	right: 40px;
 }
 
+.event-shape-c {
+	@include shape-square(36px, $red, 0);
+	position: absolute;
+	top: 150px;
+	right: 0;
+}
+
+.event-shape-d {
+	@include shape-triangle(48px, $blue, 180);
+	position: absolute;
+	top: -18px;
+	right: 14px;
+	z-index: 2;
+}
+
+.event-shape-e {
+	@include shape-square(24px, $red, 0);
+	position: absolute;
+	top: 90px;
+	right: 14px;
+	z-index: 2;
+}
+
+.event-shape-f {
+	@include shape-circle(48px, $blue);
+	position: absolute;
+	top: 224px;
+	left: 56px;
+	z-index: 2;
+}
+
+.event-shape-h {
+	@include shape-square(40px, $red, 0);
+	position: absolute;
+	top: 390px;
+	right: 115px;
+	z-index: 2;
+}
+
+.event-shape-i {
+	@include shape-triangle(48px, $blue, 180);
+	position: absolute;
+	top: 800px;
+	left: 200px;
+	z-index: 2;
+	mix-blend-mode: screen;
+}
+
+.event-shape-j {
+	@include shape-half-circle(48px, $red, 225);
+	position: absolute;
+	top: -12px;
+	right: 14px;
+}
+
+.event-shape-k {
+	@include shape-square(36px, $blue, 0);
+	position: absolute;
+	top: -0px;
+	right: 36px;
+	mix-blend-mode: screen;
+}
+
 .event-details {
 	position: relative;
 	padding-bottom: 48px;
@@ -362,6 +425,7 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 
 .event-details-time {
 	background: transparent url("/assets/images/grad-show-close@2x.jpg") no-repeat;
+	background-position: 40px 0;
 	background-size: cover;
 	margin-left: -6%;
 	padding: 48px 0;
@@ -392,8 +456,28 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }
 
+.event-info-intro {
+	position: relative;
+	p {
+		position: relative;
+		z-index: 2;
+	}
+}
+
 .event-info-figure {
 	display: none;
+}
+
+.event-info-cast {
+	position: relative;
+	p {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.event-directions {
+	position: relative;
 }
 
 .event-directions-map {
@@ -445,7 +529,13 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	font-size: 15px;
 }
 
+.event-info-faq {
+	position: relative;
+}
+
 .event-info-question {
+	position: relative;
+	z-index: 3;
 	margin-bottom: 36px;
 	h5 {
 		font-size: 18px;
@@ -503,6 +593,7 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 
 	.event-info {
+		padding-top: 0;
 		width: 55%;
 	}
 
@@ -568,20 +659,32 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 // 	}
 // }
 
-@media only screen and (min-width: 880px) {
+@media only screen and (min-width: 990px) {
 
 	.event-details {
 		width: 30%;
 		h1 {
-			font-size: 44px;
+			font-size: 34px;
 		}
 		h3 {
-			font-size: 28px;
+			font-size: 20px;
+		}
+	}
+}
+
+@media only screen and (min-width: 990px) {
+
+	.event-details {
+		width: 30%;
+		h1 {
+			font-size: 38px;
+		}
+		h3 {
+			font-size: 24px;
 		}
 	}
 
 	.event-info {
-		padding-top: 0;
 		width: 60%;
 	}
 
@@ -622,5 +725,17 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 	.event-directions-routes {
 		margin-top: 5px;
+	}
+}
+
+
+@media only screen and (min-width: 1200px) {
+	.event-details {
+		h1 {
+			font-size: 44px;
+		}
+		h3 {
+			font-size: 28px;
+		}
 	}
 }
