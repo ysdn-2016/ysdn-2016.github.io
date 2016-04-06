@@ -122,6 +122,12 @@
 	}
 }
 
+@media only screen and (max-width: 750px) {
+	.student-preview-name {
+		font-size: 13px;
+	}
+}
+
 @media only screen and (max-width: 600px) {
 
 	.student-grid {
@@ -152,7 +158,7 @@
 	}
 
 	.student-preview-name {
-		font-size: 13px;
+		font-size: 12px;
 		left: calc(100% - 26px);
 	}
 }
