@@ -544,19 +544,24 @@ header.home-header {
 	text-overflow: ellipsis;
 }
 
-@media (max-width: 560px) {
+@media only screen and (max-width: 560px) {
 	.home-work.mobile {
 		display: block;
+		padding-bottom: 24px;
 	}
 
 	.home-work.desktop {
 		display: none;
 	}
 
-	article {
+	.home-work article {
 		margin-bottom: 18px;
 		padding-top: 26px;
+		&:not(:last-child) {
+			border-bottom: 1px #d2d2d2 solid;
+		}
 	}
+
 	.home-work .row {
 		display: flex;
 		flex-direction: row;
