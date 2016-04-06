@@ -37,14 +37,6 @@ Here's a guide to the different branches:
 * `master` is the rendered html output (ie. the live site). Never commit directly to `master`
 * `production` is the source files for the live site. Only merge into this branch from `develop`
 * `develop` is the workspace branch for upcoming changes (eg. soft-launch). Make/merge changes here.
-* `00-branch-name` is an example issue or feature branch name. Make your changes here.
-
-When starting work, follow this workflow:
-
-1. Branch off of `develop` and make your changes locally
-2. When it's ready to go, merge it into `develop`
-3. When you're ready to deploy to ysdn2016.com, create a PR with `production` as the base and `develop` as the comparison. This will start a staging server, where we'll check out the changes
-4. If it looks good, merge the PR. Switch to `production` locally and run `make deploy`
 
 #### Templates
 
