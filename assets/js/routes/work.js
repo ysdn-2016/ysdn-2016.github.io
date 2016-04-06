@@ -1,7 +1,9 @@
+
+var Fuse = require('fuse.js');
 var shuffle = require('../lib/shuffle');
 var Lazyload = require('../lib/lazyload');
 
-var PROJECT_CLASS = '.project-preview'
+var PROJECT_CLASS = '.project-preview';
 
 module.exports = function () {
   shuffle(document.querySelector('[data-columns]'));
@@ -9,6 +11,11 @@ module.exports = function () {
   var $document = $(document);
   var $projects = $(PROJECT_CLASS);
   var $categoryLinks = $('.project-nav-category');
+  var $search = $('.student-nav-view-search-input');
+
+  var grid;
+  var projects;
+  var fuse;
 
   var config = {
     container: '[data-columns]',
@@ -20,14 +27,58 @@ module.exports = function () {
     ]
   }
 
-  var grid = new Quartz(config)
-
-
+  /**
+   * Init
+   */
   $categoryLinks.on('click', categoryLinkClick);
+  $search.on('input change', updateSearch);
   $(document).on('mouseenter', '.project-preview-title', projectMouseEnter);
   $(document).on('mouseleave', '.project-preview-title', projectMouseLeave);
   $(document).on('mouseenter', '.project-preview-image', projectMouseEnter);
   $(document).on('mouseleave', '.project-preview-image', projectMouseLeave);
+
+  grid = new Quartz(config);
+  projects = $projects.map(toProjectObject).get();
+  fuse = new Fuse(projects, {
+    keys: [
+      { name: 'title', weight: 0.7 },
+      { name: 'owner', weight: 0.4 },
+      // { name: 'category', weight: 0.1 }
+    ],
+    include: ['matches'],
+    distance: 0,
+    threshold: 0
+  });
+
+  updateSearch();
+
+  window.grid = grid
+
+  /**
+   * Private Functions
+   */
+
+  function updateSearch () {
+    var predicate = $search.val();
+
+    if (!predicate.length) {
+      $projects.removeClass('hidden');
+      grid.update();
+      return;
+    }
+
+    var matches = fuse.search(predicate);
+    var count = matches.length;
+
+    $projects.addClass('hidden');
+
+    matches.forEach(function (match) {
+      match.item.$el.removeClass('hidden');
+    });
+
+    Lazyload.check();
+    grid.update();
+  }
 
   /**
    * Event Handlers
@@ -59,3 +110,13 @@ module.exports = function () {
     grid.update();
   }
 };
+
+function toProjectObject (i, el) {
+  var $el = $(el);
+  return {
+    $el: $el,
+    title: $el.data('title'),
+    owner: $el.data('owner'),
+    category: $el.data('category')
+  }
+}
