@@ -324,6 +324,10 @@ $sticky-scroll-offset: 60px;
 		font-size: 16px;
 	}
 
+	.project-markdown {
+		padding-bottom: 12px;
+	}
+
 	@media #{$media-tablet-medium} {
 		.project-body {
 			display: block;
@@ -372,6 +376,13 @@ $sticky-scroll-offset: 60px;
 				flex-basis: 100%;
 			}
 		}
+		.project-header {
+			align-items: flex-start;
+			margin-bottom: 30px;
+		}
+		.project-header-title {
+			text-align: left;
+		}
 	}
 }
 
@@ -411,5 +422,9 @@ $sticky-scroll-offset: 60px;
 
 	.project-sidebar-headers-link + & {
 		margin-top: 32px;
+	}
+
+	@media #{$media-tablet-medium} {
+		padding-bottom: 24px;
 	}
 }

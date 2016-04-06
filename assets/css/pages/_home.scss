@@ -108,6 +108,10 @@ section.home {
 	.desktop, .tablet, .mobile {
 		display: none;
 	}
+
+	@media (max-width: 600px) {
+		margin-top: 0;
+	}
 }
 
 // == Home Intro == //
