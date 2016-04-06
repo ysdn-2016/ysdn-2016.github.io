@@ -63,15 +63,16 @@ deploy:
 	@make clean-content
 	@make sync
 	@NODE_ENV=production make build
-	@echo "Deploying branch \033[0;33m$(BRANCH)\033[0m to Surge.sh..."
+	@echo "Deploying branch \033[0;33m$(BRANCH)\033[0m to Github Pages (staging)..."
 	@(cd build && \
 		printf 'User-agent: *\nDisallow: /\n' > robots.txt && \
+		echo "$(STAGING)" > CNAME && \
 		git init -q . && \
 		git add . && \
-		git commit -q -m "Deployment (auto-commit)") && \
+		git commit -q -m "Deployment (auto-commit)" && \
 		echo "\033[0;90m" && \
-		$(BIN)/surge build $(STAGING) \
-		echo "\033[0m"
+		git push "git@github.com:ysdn-2016/staging.git" HEAD:gh-pages --force && \
+		echo "\033[0m")
 	@echo "Deployed to \033[0;32mhttp://$(STAGING)/\033[0m"
 
 deploy\:production:
