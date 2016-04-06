@@ -71,44 +71,29 @@ $student-profile-header-background: #f6f6f6;
 		width: 100%;
 		height: 100%;
 		.shape-1 {
-			@include shape-rectangle(60px, 120px, $blue, 35);
+			@include shape-rectangle(60px, 120px, $green, 45);
 		}
 		.shape-2 {
-			@include shape-circle(80px, $red);
-
+			@include shape-circle(60px, $red);
 		}
 		.shape-3 {
 			@include shape-triangle(60px, $yellow, 0);
-		}
-		.shape-4 {
-			@include shape-square(80px, $orange, 0);
-		}
-		.shape-5 {
-			@include shape-circle(40px, $green);
 		}
 		.wrapper {
 			position: absolute;
 			mix-blend-mode: multiply;
 		}
 		.shape-1-wrapper {
-			right: 160px;
-			bottom: 300px;
+			right: 140px;
+			bottom: 340px;
 		}
 		.shape-2-wrapper {
-			right: 210px;
+			left: 120px;
 			bottom: 320px;
 		}
 		.shape-3-wrapper {
 			top: 80px;
 			left: 80px;
-		}
-		.shape-4-wrapper {
-			bottom: 260px;
-			left: 160px;
-		}
-		.shape-5-wrapper {
-			top: 60px;
-			right: 170px;
 		}
 	}
 }
@@ -353,6 +338,30 @@ $student-profile-header-background: #f6f6f6;
 		height: 400px;
 		bottom: -100px;
 		margin-left: -20px;
+	}
+
+	.student-profile-portrait .shapes {
+		.shape-1 {
+			@include shape-rectangle(40px, 80px, $green, 45);
+		}
+		.shape-2 {
+			@include shape-circle(40px, $red);
+		}
+		.shape-3 {
+			@include shape-triangle(40px, $yellow, 0);
+		}
+		.shape-1-wrapper {
+			right: 120px;
+			bottom: 220px;
+		}
+		.shape-2-wrapper {
+			left: 80px;
+			bottom: 200px;
+		}
+		.shape-3-wrapper {
+			top: 70px;
+			left: 60px;
+		}
 	}
 
 	// body
