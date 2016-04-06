@@ -595,6 +595,18 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 		display: block;
 	}
 
+	@supports (position: sticky) {
+		.event-details {
+			position: sticky;
+			top: 0;
+			height: 100%;
+		}
+
+		.event-details-spacer {
+			display: none;
+		}
+	}
+
 	.event-details-time {
 		pointer-events: none;
 	}
@@ -744,5 +756,12 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 		h3 {
 			font-size: 28px;
 		}
+	}
+
+	.event-shape-h {
+		top: 300px;
+		right: -120px;
+		width: 56px;
+		height: 56px;
 	}
 }

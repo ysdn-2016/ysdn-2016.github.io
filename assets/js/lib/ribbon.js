@@ -165,9 +165,7 @@ module.exports = (function () {
     } else {
       showEventPanel();
       previousUrl = router.current;
-      setTimeout(function () {
-        router(EVENT_URL);
-      }, 150);
+      router(EVENT_URL);
     }
   }
 

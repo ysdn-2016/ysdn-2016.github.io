@@ -1,5 +1,5 @@
 
-var loop = require('raf-scroll');
+var supportsSticky = require('../lib/helpers/supports-position-sticky');
 
 var mapOptions = {
 	zoom: 14,
@@ -29,9 +29,26 @@ module.exports = function (ctx) {
 
 	google.maps.event.addDomListener(marker, 'click', onMapMarkerClick)
 
+	if (!supportsSticky()) {
+		enquire.register('only screen and (min-width: 600px)', {
+			match: function () {
+				$eventContent.on('scroll', onScroll);
+			},
+			unmatch: function () {
+				$eventContent.off('scroll', onScroll);
+				$eventDetails.css('transform', '');
+			}
+		})
+	}
+
 	/**
 	 * Private functions
 	 */
+
+	function onScroll (e) {
+		var scrollY = e.target.scrollTop
+		$eventDetails.css('transform', 'translateY(' + scrollY + 'px)')
+	}
 
 	function onMapMarkerClick () {
 		window.open('https://goo.gl/maps/YuXwP9XNDhQ2', '_blank').focus()
