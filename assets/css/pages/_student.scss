@@ -72,21 +72,12 @@ $student-profile-header-background: #f6f6f6;
 		height: 100%;
 		.shape-1 {
 			@include shape-rectangle(60px, 120px, $green, 45);
-			animation: shape-fadein 0.8s forwards;
-			animation-delay: 0.8s;
-			opacity: 0;
 		}
 		.shape-2 {
 			@include shape-circle(60px, $red);
-			animation: shape-fadein 0.8s forwards;
-			animation-delay: 1.6s;
-			opacity: 0;
 		}
 		.shape-3 {
 			@include shape-triangle(60px, $yellow, 0);
-			animation: shape-fadein 0.8s forwards;
-			animation-delay: 2.4s;
-			opacity: 0;
 		}
 		.wrapper {
 			position: absolute;
@@ -95,20 +86,29 @@ $student-profile-header-background: #f6f6f6;
 		.shape-1-wrapper {
 			right: 140px;
 			bottom: 340px;
+			animation: shape-fadein 0.8s forwards;
+			animation-delay: 1.4s;
+			opacity: 0;
 		}
 		.shape-2-wrapper {
 			left: 120px;
 			bottom: 320px;
+			animation: shape-fadein 0.8s forwards;
+			animation-delay: 2s;
+			opacity: 0;
 		}
 		.shape-3-wrapper {
 			top: 80px;
 			left: 80px;
+			animation: shape-fadein 0.8s forwards;
+			animation-delay: 2.6s;
+			opacity: 0;
 		}
 	}
 }
 
 .student-profile-portrait-image {
-	animation: portrait-fadein 1.8s forwards;
+	animation: portrait-fadein 2.4s forwards;
 }
 
 .student-profile-social {
