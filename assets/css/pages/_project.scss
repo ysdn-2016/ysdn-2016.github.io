@@ -12,7 +12,7 @@ $sticky-scroll-offset: 60px;
 
 .project-sidebar-filler {
 	position: relative;
-	flex-basis:  33.334%;
+	flex-basis: 33.334%;
 	padding-right: $project-grid-gutter/2;
 }
 
@@ -411,49 +411,5 @@ $sticky-scroll-offset: 60px;
 
 	.project-sidebar-headers-link + & {
 		margin-top: 32px;
-	}
-}
-
-/**
- * Sticky Sections
- */
-
-.sticktop {
-	position: fixed !important;
-	top: 0 !important;
-	bottom: auto !important;
-}
-.stickbottom {
-	position: fixed !important;
-	top: auto !important;
-	bottom: 0 !important;
-}
-
-.stickbottomwindow {
-	position: absolute !important;
-	top: auto !important;
-	bottom: 0 !important;
-}
-
-.sticktopwindow {
-	position: absolute !important;
-	top: 0 !important;
-	bottom: auto !important;
-}
-
-@media only screen and (max-width : 740px) {
-	.case-nav, .case-nav-holder {
-		display: none;
-	}
-	.project--case-study .project-header .title {
-		padding: 40px 20px 68px;
-	}
-	#project-fixed-overlay, #gallery {
-		display: block !important;
-		flex-direction: column;
-	}
-	.stickbottomwindow, .sticktopwindow, .stickbottom, .sticktop {
-		position: static !important;
-		display: block;
 	}
 }
