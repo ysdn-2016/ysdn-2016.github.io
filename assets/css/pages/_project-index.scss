@@ -28,6 +28,12 @@
 			padding-left: 0;
 		}
 	}
+	label{
+		margin-left: 0;
+		transition: margin-left 0.25s ease;
+		position: absolute;
+		background-color: white;
+	}
 	.student-nav-view-search input {
 		border: none;
 		padding: 0;
@@ -47,6 +53,20 @@
 			opacity: 1;
 			color: black;
 			transition: opacity 0.25s ease;
+		}
+
+		@media #{$media-mobile-large} {
+			width:50px;
+			position: absolute;
+			background-color: white;
+			opacity: 0;
+			&:focus{
+				width: calc(100% - 56px);
+				opacity: 1;
+				&+label{
+					margin-left: calc(100% - 56px);
+				}
+			}
 		}
 	}
 	&-filters {
@@ -102,7 +122,7 @@
 	white-space: nowrap;
 	#student-nav-view-search-input {
 		@media #{$media-mobile-large} {
-			width: 0;
+			//width: 0;
 		}
 	}
 	@media #{$media-mobile-large} {
