@@ -426,4 +426,28 @@ $student-profile-header-background: #f6f6f6;
 	.student-profile-project-meta {
 		display: block;
 	}
+
+	.student-profile-portrait .shapes {
+		.shape-1 {
+			@include shape-rectangle(40px, 80px, $green, 45);
+		}
+		.shape-2 {
+			@include shape-circle(40px, $red);
+		}
+		.shape-3 {
+			@include shape-triangle(40px, $yellow, 0);
+		}
+		.shape-1-wrapper {
+			right: 150px;
+			bottom: 370px;
+		}
+		.shape-2-wrapper {
+			left: 150px;
+			bottom: 350px;
+		}
+		.shape-3-wrapper {
+			top: 70px;
+			left: 120px;
+		}
+	}
 }
