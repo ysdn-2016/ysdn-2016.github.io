@@ -124,6 +124,10 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }
 
+.event-ribbon-wrapper--mobile {
+	font-size: 17px;
+}
+
 .event-ribbon-wrapper--mobile .event-ribbon-callout {
 	display: flex;
 	align-items: center;
@@ -139,6 +143,9 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	margin-right: 4px;
 	font-size: 18px;
 	transition: transform 300ms ease;
+	.event-ribbon-wrapper--mobile .event-ribbon-nav--minimized & {
+		top: 1.5px;
+	}
 }
 
 .event-ribbon-menu-toggle {

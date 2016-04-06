@@ -226,3 +226,17 @@
 		@include underline-hover-color($red);
 	}
 }
+
+
+@media only screen and (max-width: 600px) {
+
+	.student-search,
+	.student-search-wrapper {
+		justify-content: flex-start;
+	}
+
+	.student-search {
+		margin-bottom: 32px;
+	}
+
+}

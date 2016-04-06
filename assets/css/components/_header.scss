@@ -91,7 +91,9 @@ $header-height: $header-base-height + $ribbon-height-desktop;
 		position: static;
 		z-index: 99;
 		background-color: #fff;
+		padding-top: 36px;
 		padding-bottom: 0;
+		height: 80px;
 	}
 	.header-spacer {
 		display: none;

@@ -88,8 +88,8 @@
 
 .project-footer-next-project,
 .project-footer-related-project {
-	padding-right: $project-grid-gutter / 2;
-	padding-left: $project-grid-gutter / 2;
+	padding-right: $project-grid-gutter / 4;
+	padding-left: $project-grid-gutter / 4;
 }
 
 .project-footer-related-project{
@@ -99,7 +99,7 @@
 	@media #{$media-tablet-medium} {
 		padding-left: 0;
 	}
-}	
+}
 
 .project-footer-preview {
 	&.hover .project-footer-preview-image,

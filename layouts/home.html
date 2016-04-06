@@ -195,7 +195,7 @@
             <p>Developing participatory interactive experiences and visualizing moving image with motion design.</p>
           </div>
           <div class="work">
-            {% for project in projects | filterByDiscipline('information') | shuffle | take(7) %}
+            {% for project in projects | filterByDiscipline('interactive') | shuffle | take(7) %}
               {% include 'partials/project-preview.html' %}
             {% endfor %}
           </div>

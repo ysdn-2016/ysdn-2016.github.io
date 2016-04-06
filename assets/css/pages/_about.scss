@@ -16,6 +16,9 @@
     margin-bottom: 28px;
     font-size: 2.2em;
     text-align: center;
+    @media #{$media-tablet-medium} {
+      text-align: left;
+    }
   }
 
   p {
@@ -85,6 +88,9 @@
     margin-bottom: 18px;
     font-size: 2em;
     text-align: center;
+    @media #{$media-tablet-medium} {
+      text-align: left;
+    }
   }
 
   p {
