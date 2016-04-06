@@ -10,7 +10,6 @@
 	font-size: 19px;
 
 	@media #{$media-tablet-medium} {
-		flex-direction: row-reverse;
 		font-size: 16px;
 	}
 
@@ -29,12 +28,12 @@
 		}
 	}
 	@media #{$media-tablet-medium} {
-		label{
-			margin-left: 0;
-			transition: margin-left 0.35s ease;
-			position: absolute;
+		label {
 			background-color: white;
 			box-shadow: 7px 0 9px 4px rgba(255, 255, 255, 1);
+			position: absolute;
+			margin-left: 0;
+			transition: margin-left 0.35s ease;
 		}
 	}
 	.student-nav-view-search input {
@@ -58,30 +57,30 @@
 		}
 
 		@media #{$media-tablet-medium} {
-			width: 50px;
-			position: absolute;
 			background-color: white;
-			opacity: 0;
+			position: absolute;
+			width: 50px;
 			color: transparent;
-			transition: width 2s ease 1s, opacity 1s ease 0.25s, color 0.1s ease;
+			transition: width 250ms ease, opacity 1000ms ease 250ms, color 100ms ease;
 			&::-webkit-input-placeholder {
 				opacity: 0;
+				transition: opacity 250ms ease 0ms;
+
 				delay: 5s;
-				transition: opacity 0.25s ease 0s;
 			}
-			&:focus{
-				width: 100%;
-				padding-right: 20px;
-				opacity: 1;
-				color: black;
+			&:focus {
 				background-color: white;
-				transition: width 0.25s ease 0s, opacity 0.15s ease, color 0.5s ease 0.25s;
-				&+label{
+				opacity: 1;
+				padding-right: 20px;
+				width: 100%;
+				color: black;
+				transition: width 250ms ease 0s, opacity 150ms ease, color 500ms ease 250ms;
+				& + label {
 					margin-left: calc(90% - 16px);
 				}
 				&::-webkit-input-placeholder {
 					opacity: 1;
-					transition: opacity 0.25s ease 0.25s;
+					transition: opacity 250ms ease 250ms;
 				}
 			}
 		}
@@ -95,6 +94,13 @@
 
 .project-subnav {
 	margin-bottom: 48px;
+	@media #{$media-tablet-medium} {
+		flex-direction: row-reverse;
+	}
+
+	input {
+		box-shadow: 0 0 12px 6px #fff;
+	}
 }
 
 //
@@ -150,17 +156,19 @@
 .project-nav-categories {
 	overflow: scroll;
 	white-space: nowrap;
+
+	-webkit-overflow-scrolling: touch;
 	&::-webkit-scrollbar {
 		display: none;
-		height: 0;
 		width: 0;
+		height: 0;
 	}
-	-webkit-overflow-scrolling: touch;
 	@media #{$media-tablet-medium} {
 		flex-direction: column;
-		margin-left: 24px;
 		margin-right: -10%;
-		padding-left: 10px;
+		margin-left: 24px;
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 }
 
