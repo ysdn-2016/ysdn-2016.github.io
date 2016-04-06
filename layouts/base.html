@@ -6,12 +6,14 @@
 	<meta name="description" content="{{ site.description }}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 
+{% block meta:og %}
 	<meta property="og:site_name" content="YSDN 2016"/>
 	<meta property="og:title" content="YSDN 2016 Presents: The Intermission"/>
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://ysdn2016.com/" />
 	<meta property="og:image" content="http://ysdn2016.com/assets/images/og-image.png" />
 	<meta property="og:description" content="The York/Sheridan Program in Design invites you to The Intermission — an exhibition of the work of the 2016’s graduating class." />
+{% endblock %}
 
 	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
 	<link rel="stylesheet" media="screen, projection" href="/assets/bundle.css" />
