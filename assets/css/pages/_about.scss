@@ -253,6 +253,10 @@
 
   top: 350px;
   right: 0;
+  @media #{$media-tablet-medium} {
+		right: 50px;
+		top: 90px;
+	}
 }
 
 .about-header-shape-2 {
@@ -261,6 +265,10 @@
   top: 170px;
   left: 50%;
   margin-left: 280px;
+  @media #{$media-tablet-medium} {
+		left: -50%;
+		top: 500px;
+	}
 }
 
 .about-header-shape-3 {
