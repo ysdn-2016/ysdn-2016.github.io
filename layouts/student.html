@@ -8,7 +8,7 @@
 	<meta property="og:description" content="YSDN 2016: The Intermission{% if introduction %} — {{ introduction }}{% endif %}" />
 	<meta property="profile:first_name" content="{{ firstName }}" />
 	<meta property="profile:last_name" content="{{ lastName }}" />
-	<meta property="og:image" content="{{ portrait.url }}" />
+	<meta property="og:image" content="{{ portrait | asset_url({ width: 1200, height: 631, fit: 'facearea', facepad: 3 }) }}" />
 	<meta property="og:image:width" content="{{ portrait.width }}" />
 	<meta property="og:image:height" content="{{ portrait.height }}" />
 {% endblock %}
