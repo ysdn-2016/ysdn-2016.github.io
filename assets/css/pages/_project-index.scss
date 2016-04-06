@@ -203,6 +203,18 @@
 	}
 }
 
+.project-grid-search-results {
+	padding-top: 24px;
+	text-align: center;
+	a {
+		color: $red;
+		@include underline($red);
+	}
+	a:hover {
+		opacity: 0.6;
+	}
+}
+
 .project-preview {
 	display: block;
 	margin-bottom: 50px;

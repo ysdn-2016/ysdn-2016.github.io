@@ -29,8 +29,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="project-list">
-	</div>
 	<div class="project-grid" data-columns>
 	{% set listing = projects | shuffle %}
 	{% if discipline !== 'all' %}
@@ -41,5 +39,11 @@
 		{% include 'partials/project-preview.html' %}
 	{% endif %}
 	{% endfor %}
+	</div>
+	<div class="hidden project-grid-search-results--few project-grid-search-results">
+		<p>Not the right project?<br/><a href="#" class="project-grid-search-results-clear">Clear your search</a>.</p>
+	</div>
+	<div class="hidden project-grid-search-results--none project-grid-search-results">
+		<p>Can't find the project you're looking for?<br/><a href="#" class="project-grid-search-results-clear">Clear your search</a>.</p>
 	</div>
 {% endblock %}

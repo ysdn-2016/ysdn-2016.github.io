@@ -3,15 +3,18 @@ var Fuse = require('fuse.js');
 var shuffle = require('../lib/shuffle');
 var Lazyload = require('../lib/lazyload');
 
-var PROJECT_CLASS = '.project-preview';
+var MINIMUM_MATCHES = 2;
 
 module.exports = function () {
   shuffle(document.querySelector('[data-columns]'));
 
   var $document = $(document);
-  var $projects = $(PROJECT_CLASS);
+  var $projects = $('.project-preview');
   var $categoryLinks = $('.project-nav-category');
   var $search = $('.student-nav-view-search-input');
+  var $fewResults = $('.project-grid-search-results--few');
+  var $noResults = $('.project-grid-search-results--none');
+  var $clearSearch = $('.project-grid-search-results-clear');
 
   var grid;
   var projects;
@@ -19,7 +22,7 @@ module.exports = function () {
 
   var config = {
     container: '[data-columns]',
-    items: PROJECT_CLASS,
+    items: '.project-preview:not(.hidden)',
     columnClass: 'column',
     mediaQueries: [
       { query: 'screen and (max-width: 800px)', columns: 2 },
@@ -31,6 +34,7 @@ module.exports = function () {
    * Init
    */
   $categoryLinks.on('click', categoryLinkClick);
+  $clearSearch.on('click', clearSearch);
   $search.on('input change', updateSearch);
   $(document).on('mouseenter', '.project-preview-title', projectMouseEnter);
   $(document).on('mouseleave', '.project-preview-title', projectMouseLeave);
@@ -52,8 +56,6 @@ module.exports = function () {
 
   updateSearch();
 
-  window.grid = grid
-
   /**
    * Private Functions
    */
@@ -63,6 +65,8 @@ module.exports = function () {
 
     if (!predicate.length) {
       $projects.removeClass('hidden');
+      $fewResults.addClass('hidden');
+      $noResults.addClass('hidden');
       grid.update();
       return;
     }
@@ -71,13 +75,29 @@ module.exports = function () {
     var count = matches.length;
 
     $projects.addClass('hidden');
+    $fewResults.addClass('hidden');
+    $noResults.addClass('hidden');
 
     matches.forEach(function (match) {
       match.item.$el.removeClass('hidden');
     });
 
+    if (matches.length < 1) {
+      $noResults.removeClass('hidden');
+    } else if (matches.length < MINIMUM_MATCHES) {
+      $fewResults.removeClass('hidden');
+    }
+
     Lazyload.check();
     grid.update();
+  }
+
+  function clearSearch (e) {
+    if (e) {
+      e.preventDefault()
+    }
+    $search.val('');
+    updateSearch();
   }
 
   /**
