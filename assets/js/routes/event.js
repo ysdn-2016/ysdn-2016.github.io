@@ -1,4 +1,6 @@
 
+var loop = require('raf-scroll');
+
 var mapOptions = {
 	zoom: 14,
 	backgroundColor: 'none',
@@ -15,6 +17,8 @@ module.exports = function (ctx) {
 	var $eventDetails = $('.event-details');
 	var $eventMap = $('.event-directions-map');
 
+	var frameRequest = null;
+	var lastScroll = 0;
 	var map = new google.maps.Map($eventMap.get(0), mapOptions);
 	var marker = new google.maps.Marker({
 		position: new google.maps.LatLng(43.631014, -79.426256),
@@ -25,24 +29,9 @@ module.exports = function (ctx) {
 
 	google.maps.event.addDomListener(marker, 'click', onMapMarkerClick)
 
-	enquire.register('only screen and (min-width: 600px)', {
-		match: function () {
-			$eventContent.on('scroll', onScroll);
-		},
-		unmatch: function () {
-			$eventContent.off('scroll', onScroll);
-			$eventDetails.css('transform', '');
-		}
-	})
-
 	/**
 	 * Private functions
 	 */
-
-	function onScroll () {
-		var scrollY = $eventContent.get(0).scrollTop;
-		$eventDetails.css('transform', 'translateY(' + scrollY + 'px)');
-	}
 
 	function onMapMarkerClick () {
 		window.open('https://goo.gl/maps/YuXwP9XNDhQ2', '_blank').focus()

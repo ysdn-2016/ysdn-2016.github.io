@@ -1,4 +1,5 @@
 var router = require('page');
+var loop = require('raf-scroll');
 var Lazyload = require('./lib/lazyload');
 var Header = require('./lib/header');
 var EventRibbon = require('./lib/ribbon');

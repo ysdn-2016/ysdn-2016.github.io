@@ -14,6 +14,7 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	width: 100%;
 	height: 100vh;
 	transition: transform $ribbon-transition-duration $ribbon-transition-ease;
+	backface-visibility: hidden;
 	will-change: transform;
 
 	&:not(.event-panel--open) {
@@ -356,6 +357,7 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	left: 200px;
 	z-index: 2;
 	mix-blend-mode: screen;
+	isolation: isolate;
 }
 
 .event-shape-j {
@@ -371,6 +373,7 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	top: -0px;
 	right: 36px;
 	mix-blend-mode: screen;
+	isolation: isolate;
 }
 
 .event-details {
@@ -470,6 +473,8 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 
 .event-info-cast {
 	position: relative;
+	// creates a new stacking context so shapes blend properly
+	opacity: 0.9999;
 	p {
 		position: relative;
 		z-index: 2;
@@ -531,6 +536,8 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 
 .event-info-faq {
 	position: relative;
+	// creates a new stacking context so shapes blend properly
+	opacity: 0.9999;
 }
 
 .event-info-question {
