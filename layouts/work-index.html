@@ -29,7 +29,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="project-grid" data-columns>
+	<div class="project-grid loading" data-columns>
 	{% set listing = projects | shuffle %}
 	{% if discipline !== 'all' %}
 		{% set listing = listing | filterByDiscipline(discipline) %}

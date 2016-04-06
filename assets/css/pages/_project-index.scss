@@ -182,12 +182,16 @@
 
 .project-grid {
 	@include clearfix;
+	transform: opacity 400ms ease;
 	.column {
 		margin-right: 5%;
 		width: 30%;
 	}
 	.column:nth-child(3n) {
 		margin-right: 0;
+	}
+	&.loading {
+		opacity: 0.0;
 	}
 	@media only screen and (max-width: 800px) {
 		.column {

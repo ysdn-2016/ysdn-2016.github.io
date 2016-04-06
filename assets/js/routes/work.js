@@ -1,12 +1,15 @@
 
 var Fuse = require('fuse.js');
+var deck = require('deck');
 var shuffle = require('../lib/shuffle');
 var Lazyload = require('../lib/lazyload');
 
 var MINIMUM_MATCHES = 2;
 
 module.exports = function () {
-  shuffle(document.querySelector('[data-columns]'));
+  var gridElement = document.querySelector('[data-columns]');
+  shuffle(gridElement);
+  gridElement.classList.remove('loading')
 
   var $document = $(document);
   var $projects = $('.project-preview');
