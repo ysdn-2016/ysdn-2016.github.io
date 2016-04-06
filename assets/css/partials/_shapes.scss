@@ -1,7 +1,5 @@
 .shape {
 	position: absolute;
-
-	mix-blend-mode: multiply;
 	&.screen {
 		mix-blend-mode: screen !important;
 	}

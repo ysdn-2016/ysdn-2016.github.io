@@ -460,13 +460,24 @@ header.home-header {
 	justify-content: center;
 	width: percentage(4/12);
 	height: 640px;
-	.shape-grid {
-		@include dot-grid;
+	.shape-block {
 		position: relative;
 		overflow: hidden;
 		width: 80px;
 		height: 80px;
 		margin-bottom: 20px;
+		// HACK: Makes a new stacking context to fix mix-blend-mode
+		opacity: 0.9999;
+	}
+	.shape-grid {
+		position: absolute;
+		@include dot-grid;
+		width: 100%;
+		height: 100%;
+		z-index: 9;
+	}
+	.shape {
+		mix-blend-mode: screen;
 	}
 }
 
