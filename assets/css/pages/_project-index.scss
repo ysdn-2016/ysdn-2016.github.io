@@ -56,15 +56,28 @@
 		}
 
 		@media #{$media-mobile-large} {
-			width:50px;
+			width: 50px;
 			position: absolute;
 			background-color: white;
 			opacity: 0;
+			transition: width 2s ease 1s, opacity 2s ease;
+			&::-webkit-input-placeholder {
+				opacity: 0;
+				delay: 5s;
+				transition: opacity 0.25s ease 0s;
+			}
 			&:focus{
-				width: calc(100% - 56px);
+				width: 100%;
+				padding-right: 20px;
 				opacity: 1;
+				background-color: white;
+				transition: width 0.25s ease 0s, opacity 0.25s ease;
 				&+label{
 					margin-left: calc(100% - 56px);
+				}
+				&::-webkit-input-placeholder {
+					opacity: 1;
+					transition: opacity 0.25s ease 0.25s;
 				}
 			}
 		}
