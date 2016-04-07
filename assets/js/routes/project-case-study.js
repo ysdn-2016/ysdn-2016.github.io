@@ -24,12 +24,23 @@ module.exports = function () {
   var lastScroll = -1;
   var $intros = $('.project-content').find('h1,h3,h5');
   var waypoints = getWaypoints($intros);
+  var updateHeader = function () {};
   var measurements = {
     window: {
       width: 0,
       height: 0
     }
   };
+
+  if ($('.project-introduction').size() > 0) {
+    updateHeader = function () {
+      var progress = (window.scrollY * 1.2) / (measurements.window.height / 2);
+      $intro.css({
+        transform: 'translateY(' + Math.round(progress * 200) + 'px)',
+        opacity: Math.max(1 - progress, 0)
+      });
+    }
+  }
 
   loop.add(scroll);
 
@@ -41,11 +52,7 @@ module.exports = function () {
     var scrollY = e.deltaY;
     if (scrollY === lastScroll) return;
 
-    var progress = (window.scrollY * 1.2) / (measurements.window.height / 2);
-    $intro.css({
-      transform: 'translateY(' + Math.round(progress * 200) + 'px)',
-      opacity: Math.max(1 - progress, 0)
-    });
+    updateHeader();
 
     for (var i = 0; i < waypoints.length; i++) {
       var waypoint = waypoints[i];
