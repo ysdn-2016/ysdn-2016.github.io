@@ -312,7 +312,8 @@ section.home {
 	top: 0;
 	left: 0;
 	width: 100%;
-	transform: translateX(1440px);
+	opacity: 0;
+	transform: translateX(2000px);
 	animation: slide-in-right 2.0s forwards;
 	animation-delay: 11.5s;
 }
