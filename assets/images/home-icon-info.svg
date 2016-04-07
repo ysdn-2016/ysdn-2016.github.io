@@ -6,9 +6,10 @@
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Information-Design">
-            <path d="M43,83 L83,83 L83,43 L43,43 L43,83 Z" id="Fill-1" fill="#7ABDE0" style="mix-blend-mode: darken;"></path>
+            <path d="M43,83 L83,83 L83,43 L43,43 L43,83 Z" id="Fill-1" fill="#7ABDE0"></path>
             <path d="M3,43 L43,43 L43,3 L3,3 L3,43 Z" id="Fill-1-Copy" fill="#7ABDE0" style="mix-blend-mode: darken;"></path>
-            <path d="M3,123 L123,3 L3,3 L3,123 Z" id="Fill-5" fill="#EF4962" style="mix-blend-mode: screen;" transform="translate(63.000000, 63.000000) rotate(-180.000000) translate(-63.000000, -63.000000) "></path>
+            <path d="M3,123 L123,3 L3,3 L3,123 Z" id="Fill-5" fill="#EF4962" transform="translate(63.000000, 63.000000) rotate(-180.000000) translate(-63.000000, -63.000000) "></path>
+            <path d="M83,43 L83,83 L43,83 L83,43 Z" id="Combined-Shape" fill="#7ABDE0" style="mix-blend-mode: screen;"></path>
             <g id="Group">
                 <g id="Grid-Unit">
                     <rect x="0" y="0" width="40" height="40"></rect>

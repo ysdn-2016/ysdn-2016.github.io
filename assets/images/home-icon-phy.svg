@@ -6,9 +6,9 @@
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Physical-Design">
-            <path d="M103,83 C91.9544444,83 83,91.9544444 83,103 C83,114.045556 91.9544444,123 103,123 C114.045556,123 123,114.045556 123,103 C123,91.9544444 114.045556,83 103,83 Z" id="Fill-14" fill="#EF4962" style="mix-blend-mode: multiply;"></path>
-            <path d="M3,83 L123,83 L123,43 L3,43 L3,83 Z" id="Fill-1" fill="#50E3C2" style="mix-blend-mode: darken;"></path>
-            <path d="M3,83 L83,3 L3,3 L3,83 Z" id="Fill-5" fill="#FDD319" style="mix-blend-mode: screen;"></path>
+            <path d="M3,123 L123,123 L123,43 L3,43 L3,123 Z" id="Fill-1" fill="#64BDB1" style="mix-blend-mode: darken;"></path>
+            <path d="M43.4314575,43 L4,3.56854249 L123.431458,3.56854249 L84,43 L43.4314575,43 Z" id="Combined-Shape" fill="#EF4962"></path>
+            <path d="M84.0685425,43 L43.5,43 L63.7842712,63.2842712 L84.0685425,43 Z" id="Combined-Shape" fill="#EF4962" style="mix-blend-mode: screen;"></path>
             <g id="Group">
                 <g id="Grid-Unit">
                     <rect x="0" y="0" width="40" height="40"></rect>
