@@ -237,6 +237,12 @@ $student-profile-header-background: #f6f6f6;
 
 .student-profile-projects {
 	margin-bottom: 60px;
+
+	&:last-child {
+		@media #{$media-mobile-large} {
+			margin-bottom: 24px;
+		}
+	}
 }
 
 .student-profile-projects-header {

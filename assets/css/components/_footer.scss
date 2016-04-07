@@ -85,4 +85,7 @@
 	a {
 		max-width: 35em;
 	}
+	@media #{$media-mobile-large} {
+		margin-top: 0px;
+	}
 }
