@@ -109,8 +109,6 @@
 		left: 0;
 		opacity: 0.0;
 		transition: opacity 500ms ease;
-
-		backface-visibility: hidden;
 	}
 
 	img[lazyloaded] {
