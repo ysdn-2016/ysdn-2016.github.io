@@ -217,7 +217,7 @@ $student-profile-header-background: #f6f6f6;
 	p + p {
 		margin-top: 0.75em;
 	}
-	a {
+	a:not(.button) {
 		@include underline($black);
 		padding-bottom: 1px;
 		&:hover {
