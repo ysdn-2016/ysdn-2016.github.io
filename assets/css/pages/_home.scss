@@ -112,9 +112,15 @@ section.home {
 	.desktop, .tablet, .mobile {
 		display: none;
 	}
-
 	@media (max-width: 600px) {
 		margin-top: 0;
+	}
+}
+
+@media (max-width: 540px) {
+	.home-post-intro {
+		animation: none;
+		animation-delay: 0;
 	}
 }
 
@@ -146,47 +152,47 @@ section.home {
 
 @keyframes slide-in-bottom {
 	0% {
-		transform: translateY(2000px);
 		opacity: 0;
+		transform: translateY(2000px);
 	}
 	80% {
 		opacity: 1;
 	}
 	100% {
-		transform: translateY(0px);
 		opacity: 1;
+		transform: translateY(0px);
 	}
 }
 
 @keyframes slide-in-right {
 	0% {
-		transform: translateX(1440px);
 		opacity: 0;
+		transform: translateX(1440px);
 	}
 	80% {
 		opacity: 1;
 	}
 	100% {
-		transform: translateX(0px);
 		opacity: 1;
+		transform: translateX(0px);
 	}
 }
 
 @keyframes stagetwo {
 	0% {
-		transform: translateY(-1440px);
 		opacity: 0;
+		transform: translateY(-1440px);
 	}
 	15% {
-		transform: translateY(-1440px);
 		opacity: 0;
+		transform: translateY(-1440px);
 	}
 	18% {
 		opacity: 0;
 	}
 	42% {
-		transform: translateY(0px);
 		opacity: 1;
+		transform: translateY(0px);
 	}
 	70% {
 		opacity: 1;
@@ -366,13 +372,23 @@ header.home-header {
 @media (max-width: 540px) {
 	header.home-header {
 		background-color: white !important;
+		animation: none;
+		animation-delay: 0;
 		.header-nav {
 			color: #1b2020 !important;
+			animation: none;
+			animation-delay: 0;
 		}
 		svg {
+			animation: none;
+			animation-delay: 0;
+
 			fill: white;
 		}
 		path {
+			animation: none;
+			animation-delay: 0;
+
 			fill: #1b2020 !important;
 		}
 	}
@@ -527,18 +543,18 @@ header.home-header {
 	.shape-block {
 		position: relative;
 		overflow: hidden;
+		// HACK: Makes a new stacking context to fix mix-blend-mode
+		opacity: 0.9999;
 		width: 80px;
 		height: 80px;
 		margin-bottom: 20px;
-		// HACK: Makes a new stacking context to fix mix-blend-mode
-		opacity: 0.9999;
 	}
 	.shape-grid {
-		position: absolute;
 		@include dot-grid;
+		position: absolute;
+		z-index: 9;
 		width: 100%;
 		height: 100%;
-		z-index: 9;
 	}
 	.shape {
 		mix-blend-mode: screen;
@@ -655,8 +671,8 @@ header.home-header {
 		img, svg {
 			position: absolute;
 			width: 100%;
-			min-height: 100%;
 			width: 220px !important;
+			min-height: 100%;
 		}
 	}
 }
@@ -856,8 +872,8 @@ header.home-header {
 		padding-bottom: 44px;
 		color: white;
 		font-size: 1.2em;
-		line-height: 1.5em !important;
 		font-weight: normal;
+		line-height: 1.5em !important;
 		text-align: center;
 	}
 	h4 {
@@ -866,8 +882,8 @@ header.home-header {
 		margin-top: 38px;
 		color: white;
 		font-size: 16px;
-		line-height: 1.5em !important;
 		font-weight: 400;
+		line-height: 1.5em !important;
 		text-align: center;
 		a {
 			@include underline();
