@@ -93,7 +93,7 @@ module.exports = function () {
     Lazyload.check();
 
     if (matches.length < MINIMUM_MATCHES) {
-      $noResultsPrompt.text('Not who');
+      $noResultsPrompt.text('Not');
       $noResults.removeClass('hidden');
     }
 

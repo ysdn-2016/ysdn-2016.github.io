@@ -149,6 +149,10 @@
     color: white;
   }
 
+  a{
+  	@include underline($white);
+  }
+
   input, textarea {
     border: none;
     background-color: white;
