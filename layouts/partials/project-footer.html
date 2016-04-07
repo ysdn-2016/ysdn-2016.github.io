@@ -33,14 +33,28 @@
 	</div>
 	<div class="project-footer-related-project project-footer-preview">
 		{% set similar = projects | filter('category', category) | not('id', id) | not('id', project.id) | random %}
-		<h4 class="project-footer-subhead">Similar Project</h4>
-		<a href="{{ similar.href }}" class="project-footer-preview-image">
-			<svg class="project-footer-preview-image-placeholder" viewBox="0 0 800 400" preserveAspectRatio="xMinYMin" width="{{ similar.thumbnail.width }}">
-				<rect x="0" y="0" width="100%" height="100%"></rect>
-			</svg>
-			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg==" data-src="{{ similar.thumbnail | asset_url({ width: 800, height: 400, fit: 'crop' }) }}" />
-		</a>
-		<a href="{{ similar.href }}" class="project-footer-preview-title">{{ similar.title }}</a>
-		<a href="{{ similar.owner.href }}" class="project-footer-preview-author">{{ similar.owner.name }}</a>
+		{% if similar %}
+			<h4 class="project-footer-subhead">Similar Project</h4>
+			<a href="{{ similar.href }}" class="project-footer-preview-image">
+				<svg class="project-footer-preview-image-placeholder" viewBox="0 0 800 400" preserveAspectRatio="xMinYMin" width="{{ similar.thumbnail.width }}">
+					<rect x="0" y="0" width="100%" height="100%"></rect>
+				</svg>
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg==" data-src="{{ similar.thumbnail | asset_url({ width: 800, height: 400, fit: 'crop' }) }}" />
+			</a>
+			<a href="{{ similar.href }}" class="project-footer-preview-title">{{ similar.title }}</a>
+			<a href="{{ similar.owner.href }}" class="project-footer-preview-author">{{ similar.owner.name }}</a>
+		{% else %}
+			{% set discipline = category | categoryToDiscipline %}
+			{% set similar = projects | not('id', id) | random %}
+			<h4 class="project-footer-subhead">Another Project</h4>
+			<a href="{{ similar.href }}" class="project-footer-preview-image">
+				<svg class="project-footer-preview-image-placeholder" viewBox="0 0 800 400" preserveAspectRatio="xMinYMin" width="{{ similar.thumbnail.width }}">
+					<rect x="0" y="0" width="100%" height="100%"></rect>
+				</svg>
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg==" data-src="{{ similar.thumbnail | asset_url({ width: 800, height: 400, fit: 'crop' }) }}" />
+			</a>
+			<a href="{{ similar.href }}" class="project-footer-preview-title">{{ similar.title }}</a>
+			<a href="{{ similar.owner.href }}" class="project-footer-preview-author">{{ similar.owner.name }}</a>
+		{% endif %}
 	</div>
 </div>
