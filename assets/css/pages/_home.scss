@@ -398,7 +398,6 @@ header.home-header {
 // == Home Info == //
 
 .home-info {
-	margin-top: -80px;
 	padding-top: 60px;
 	h2 {
 		font-size: 1.85em;
@@ -452,6 +451,12 @@ header.home-header {
 	.home-info .feature-text {
 		margin-top: 20px;
 		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 540px) {
+	.home-info {
+		margin-top: -80px;
 	}
 }
 
