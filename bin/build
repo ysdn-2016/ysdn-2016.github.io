@@ -120,7 +120,7 @@ site.use(branch('students/**/project.md')
  * Shared plugins at end
  */
 if (build.env === 'production') {
-	site.use(minify())	
+	site.use(minify())
 }
 
 /**
