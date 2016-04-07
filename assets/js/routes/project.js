@@ -34,6 +34,7 @@ module.exports = function () {
   var $content = $('.project-content');
 
   var isPinned = false;
+  var isPinnedToBottom = false;
   var shouldPinToTop = false;
   var isSidebarSmallerThanWindow = false;
   var isSidebarLargerThanContent = false;
@@ -83,14 +84,18 @@ module.exports = function () {
   function scroll (e) {
     var scrollY = e.deltaY;
     if (scrollY === lastScrollY) return;
+    refresh();
+    lastScrollY = scrollY;
+  }
 
+  function refresh () {
     isBetween(scrollY, tracks.pinned.start, tracks.pinned.end) ? pin() : unpin();
     isBetween(scrollY, tracks.bottom.start, tracks.bottom.end) ? pinToBottom() : unpinToBottom();
-    lastScrollY = scrollY;
   }
 
   function pin () {
     if (isPinned) return;
+    if (isPinnedToBottom) return;
     $sidebar.css('top', tracks.pinned.offset);
     $sidebar.addClass('pinned');
     isPinned = true;
@@ -98,17 +103,21 @@ module.exports = function () {
 
   function unpin () {
     if (!isPinned) return;
-    $sidebar.css('top', '');
     $sidebar.removeClass('pinned');
+    $sidebar.css('top', '');
     isPinned = false;
   }
 
   function pinToBottom () {
+    if (isPinnedToBottom) return;
     $sidebar.addClass('bottom');
+    isPinnedToBottom = true;
   }
 
   function unpinToBottom () {
+    if (!isPinnedToBottom) return;
     $sidebar.removeClass('bottom');
+    isPinnedToBottom = false;
   }
 
   function setTracks () {
@@ -151,15 +160,13 @@ module.exports = function () {
   function headerMaximized () {
     isHeaderMaximized = true;
     setTracks();
-    unpin();
-    pin();
+    refresh();
   }
 
   function headerMinimized () {
     isHeaderMaximized = false;
     setTracks();
-    unpin();
-    pin();
+    refresh();
   }
 
 };
