@@ -100,7 +100,7 @@ module.exports = (function () {
     $eventPanel.addClass('event-panel--open');
     $eventRibbon.addClass('event-ribbon--open');
     if (!isMobileSize) {
-      $header.addClass('header--maximized');
+      $header.addClass('header--fixed header--maximized');
     }
   }
 

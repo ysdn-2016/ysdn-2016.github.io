@@ -295,7 +295,8 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	a {
 		@include underline;
 	}
-	a:hover {
+	a:hover,
+	a.hover {
 		@include underline-hover-color($red);
 	}
 }
@@ -456,6 +457,10 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }
 
+.event-details-location-ghost {
+	display: none;
+}
+
 .event-info {
 	padding-top: 48px;
 	h3 {
@@ -592,11 +597,18 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 
 	.event-details {
-		position: absolute;
+		position: fixed;
 		display: flex;
 		align-items: center;
 		top: 0;
 		bottom: 0;
+		pointer-events: none;
+	}
+
+	.event-details-location-ghost {
+		display: block;
+		position: fixed;
+		z-index: 2;
 	}
 
 	.event-details-spacer {
@@ -608,9 +620,14 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 			position: sticky;
 			top: 0;
 			height: 100%;
+			pointer-events: auto;
 		}
 
 		.event-details-spacer {
+			display: none;
+		}
+
+		.event-details-location-ghost {
 			display: none;
 		}
 	}
@@ -662,6 +679,11 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	.event-directions {
 		display: flex;
 		flex-direction: column;
+		margin-top: 48px;
+	}
+
+	.event-directions > h3:first-child {
+		display: none;
 	}
 
 	.event-directions-map {
