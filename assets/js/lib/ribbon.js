@@ -18,6 +18,7 @@ module.exports = (function () {
   var $eventRibbon;
   var $eventRibbonMenu;
   var $eventRibbonMenuToggle;
+  var $eventRibbonMenuOverlay;
 
   var isOpen = false;
   var isMobileSize = false;
@@ -67,6 +68,7 @@ module.exports = (function () {
     $eventRibbon = $('.event-ribbon');
     $eventRibbonMenu = $('.event-ribbon-menu');
     $eventRibbonMenuToggle = $('.event-ribbon-menu-toggle');
+    $eventRibbonMenuOverlay = $('.event-ribbon-menu-overlay');
 
     if ($eventPanel.hasClass('event-panel--open')) {
       showEventPanel();
@@ -116,11 +118,18 @@ module.exports = (function () {
   function showMobileMenu () {
     $eventRibbonMenu.addClass('event-ribbon-menu--open');
     $eventRibbonMenuToggle.addClass('event-ribbon-menu-toggle--open');
+    $eventRibbonMenuOverlay.addClass('event-ribbon-menu-overlay--open');
+    $eventRibbonMenuOverlay.on('click', hideMobileMenu);
   }
 
-  function hideMobileMenu () {
+  function hideMobileMenu (e) {
+    if (e) {
+      e.stopPropagation();
+    }
     $eventRibbonMenu.removeClass('event-ribbon-menu--open');
     $eventRibbonMenuToggle.removeClass('event-ribbon-menu-toggle--open');
+    $eventRibbonMenuOverlay.removeClass('event-ribbon-menu-overlay--open');
+    $eventRibbonMenuOverlay.off('click', hideMobileMenu);
   }
 
   function showMobileRibbon () {

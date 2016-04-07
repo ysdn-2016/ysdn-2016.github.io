@@ -189,6 +189,21 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }
 
+.event-ribbon-menu-overlay {
+	position: fixed;
+	background: rgba(0, 0, 0, 0.0);
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	transition: background 400ms ease;
+	&--open {
+		background: rgba(0, 0, 0, 0.4);
+		pointer-events: auto;
+	}
+}
+
 .event-ribbon-menu-line {
 	margin: 0 18px;
 	padding: 12px 0;
