@@ -335,6 +335,7 @@ section.home {
 @media (max-width: 540px) {
 	.home-post-intro {
 		background-color: white;
+		top:-80px;
 	}
 
 	.intro-stage:not(.final-stage) {
@@ -397,6 +398,7 @@ header.home-header {
 // == Home Info == //
 
 .home-info {
+	margin-top: -80px;
 	padding-top: 60px;
 	h2 {
 		font-size: 1.85em;
