@@ -1,3 +1,7 @@
+.page-home {
+	overflow-x: hidden;
+}
+
 section.home {
 	// == Home Grid == //
 	$start: 1;
@@ -82,7 +86,7 @@ section.home {
 	// @include dot-grid-unit;
 	margin-top: -22px;
 	animation: fade-to-white 1.4s forwards;
-	animation-delay: 10s;
+	animation-delay: 14s;
 	img {
 		width: 100%;
 	}
@@ -108,9 +112,15 @@ section.home {
 	.desktop, .tablet, .mobile {
 		display: none;
 	}
-
 	@media (max-width: 600px) {
 		margin-top: 0;
+	}
+}
+
+@media (max-width: 540px) {
+	.home-post-intro {
+		animation: none;
+		animation-delay: 0;
 	}
 }
 
@@ -140,14 +150,48 @@ section.home {
 	}
 }
 
+@keyframes slide-in-bottom {
+	0% {
+		opacity: 0;
+		transform: translateY(2000px);
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@keyframes slide-in-right {
+	0% {
+		opacity: 0;
+		transform: translateX(1440px);
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
 @keyframes stagetwo {
 	0% {
+		opacity: 0;
 		transform: translateY(-1440px);
 	}
 	15% {
+		opacity: 0;
 		transform: translateY(-1440px);
 	}
-	40% {
+	18% {
+		opacity: 0;
+	}
+	42% {
+		opacity: 1;
 		transform: translateY(0px);
 	}
 	70% {
@@ -155,7 +199,7 @@ section.home {
 		transform: translateY(0px);
 	}
 
-	80% {
+	74% {
 		opacity: 0;
 		transform: translateY(0px);
 	}
@@ -213,7 +257,7 @@ section.home {
 	height: 100%;
 	color: white;
 	text-align: center;
-	animation: fade-in-out 5.6s forwards;
+	animation: fade-in-out 6.4s forwards;
 	animation-delay: 0.6s;
 	h2 {
 		width: 360px;
@@ -232,7 +276,7 @@ section.home {
 	left: 0;
 	width: 100%;
 	transform: translateY(-1440px);
-	animation: stagetwo 10s forwards;
+	animation: stagetwo 14s forwards;
 	animation-delay: 4s;
 	img {
 		width: 100%;
@@ -248,9 +292,32 @@ section.home {
 	width: 100%;
 	transform: translateY(-1440px);
 	animation: slide-in 2.0s forwards;
-	animation-delay: 7.6s;
+	animation-delay: 8.6s;
 }
 .home-intro-stage-4 {
+	// display: none;
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transform: translateY(-2000px);
+	animation: slide-in-bottom 2.0s forwards;
+	animation-delay: 10s;
+}
+.home-intro-stage-5 {
+	// display: none;
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	transform: translateX(2000px);
+	animation: slide-in-right 2.0s forwards;
+	animation-delay: 11.5s;
+}
+.home-intro-stage-6 {
 	position: absolute;
 	z-index: 5;
 	top: 0;
@@ -259,7 +326,7 @@ section.home {
 	width: 100%;
 	// display: none;
 	animation: fade-in 1.4s forwards;
-	animation-delay: 10s;
+	animation-delay: 14s;
 }
 
 .final-stage {
@@ -269,6 +336,7 @@ section.home {
 @media (max-width: 540px) {
 	.home-post-intro {
 		background-color: white;
+		top:-80px;
 	}
 
 	.intro-stage:not(.final-stage) {
@@ -286,18 +354,18 @@ section.home {
 header.home-header {
 	background-color: black;
 	animation: fade-to-white 1.4s forwards;
-	animation-delay: 10s;
+	animation-delay: 14s;
 	.header-nav {
 		color: white;
 		animation: fade-to-white 1.4s forwards;
-		animation-delay: 10s;
+		animation-delay: 14s;
 	}
 	svg {
 		fill: white;
 	}
 	path {
 		animation: fade-to-white 1.4s forwards;
-		animation-delay: 10s;
+		animation-delay: 14s;
 
 		fill: white;
 	}
@@ -306,13 +374,23 @@ header.home-header {
 @media (max-width: 540px) {
 	header.home-header {
 		background-color: white !important;
+		animation: none;
+		animation-delay: 0;
 		.header-nav {
 			color: #1b2020 !important;
+			animation: none;
+			animation-delay: 0;
 		}
 		svg {
+			animation: none;
+			animation-delay: 0;
+
 			fill: white;
 		}
 		path {
+			animation: none;
+			animation-delay: 0;
+
 			fill: #1b2020 !important;
 		}
 	}
@@ -374,6 +452,12 @@ header.home-header {
 	.home-info .feature-text {
 		margin-top: 20px;
 		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 540px) {
+	.home-info {
+		margin-top: -80px;
 	}
 }
 
@@ -467,18 +551,18 @@ header.home-header {
 	.shape-block {
 		position: relative;
 		overflow: hidden;
+		// HACK: Makes a new stacking context to fix mix-blend-mode
+		opacity: 0.9999;
 		width: 80px;
 		height: 80px;
 		margin-bottom: 20px;
-		// HACK: Makes a new stacking context to fix mix-blend-mode
-		opacity: 0.9999;
 	}
 	.shape-grid {
-		position: absolute;
 		@include dot-grid;
+		position: absolute;
+		z-index: 9;
 		width: 100%;
 		height: 100%;
-		z-index: 9;
 	}
 	.shape {
 		mix-blend-mode: screen;
@@ -595,8 +679,8 @@ header.home-header {
 		img, svg {
 			position: absolute;
 			width: 100%;
-			min-height: 100%;
 			width: 220px !important;
+			min-height: 100%;
 		}
 	}
 }
@@ -799,6 +883,7 @@ header.home-header {
 		color: white;
 		font-size: 1.2em;
 		font-weight: normal;
+		line-height: 1.5em !important;
 		text-align: center;
 	}
 	h4 {
@@ -808,7 +893,11 @@ header.home-header {
 		color: white;
 		font-size: 16px;
 		font-weight: 400;
+		line-height: 1.5em !important;
 		text-align: center;
+		a {
+			@include underline();
+		}
 	}
 	.home-social-feed {
 		width: 1200px;
@@ -886,7 +975,7 @@ header.home-header {
 		h4 {
 			width: 80%;
 			margin: 0 auto;
-			padding-top: 12px;
+			padding-top: 42px;
 			padding-bottom: 8px;
 			font-size: 18px;
 			line-height: 1.4;

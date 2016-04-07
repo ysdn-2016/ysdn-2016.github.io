@@ -514,13 +514,18 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .event-directions-map {
+	position: relative;
 	background: $darkened-yellow;
 	margin-bottom: 24px;
 	margin-left: -6%;
-	padding-bottom: 80%;
 	width: 112%;
-	height: 0;
+	// height: 0;
 	pointer-events: none;
+	&::before {
+		content: '';
+		display: block;
+		padding-top: 80%;
+	}
 }
 
 // HACK: selecting the Google logo
@@ -703,9 +708,11 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 
 	.event-directions-map {
 		margin-left: 0;
-		padding-bottom: 60%;
 		width: 100%;
 		pointer-events: auto;
+		&::before {
+			padding-top: 60%;
+		}
 	}
 }
 

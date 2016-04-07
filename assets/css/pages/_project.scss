@@ -12,7 +12,7 @@ $sticky-scroll-offset: 60px;
 
 .project-sidebar-filler {
 	position: relative;
-	flex-basis: 33.334%;
+	width: 33.334%;
 	padding-right: $project-grid-gutter/2;
 }
 
@@ -31,7 +31,7 @@ $sticky-scroll-offset: 60px;
 }
 
 .project-content {
-	flex-basis: 66.666%;
+	width: 66.666%;
 	padding-left: $project-grid-gutter/2;
 
 	& > :first-child {
@@ -49,10 +49,10 @@ $sticky-scroll-offset: 60px;
 
 @media only screen and (max-width: 1080px) {
 	.project-sidebar-filler {
-		flex-basis: 40%;
+		width: 40%;
 	}
 	.project-content {
-		flex-basis: 60%;
+		width: 60%;
 	}
 }
 
@@ -334,7 +334,7 @@ $sticky-scroll-offset: 60px;
 			flex-direction: column;
 			height: auto !important; //Remove if Sidebar JS is turned off on mobile
 			.project-sidebar-filler, .project-content {
-				flex-basis: 100%;
+				width: 100%;
 				.project-sidebar {
 					position: initial;
 					padding-right: 0;
@@ -373,7 +373,7 @@ $sticky-scroll-offset: 60px;
 				display: none;
 			}
 			.project-content {
-				flex-basis: 100%;
+				width: 100%;
 			}
 		}
 		.project-header {

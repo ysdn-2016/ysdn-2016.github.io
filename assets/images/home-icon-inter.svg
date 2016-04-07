@@ -6,8 +6,9 @@
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Interactive">
-            <path d="M3,123 L83,123 L83,3 L3,3 L3,123 Z" id="Fill-1-Copy" fill="#FDD319" style="mix-blend-mode: darken;"></path>
-            <path d="M43,123 L123,43 L43,43 L43,123 Z" id="Fill-5" fill="#7ABDE0" style="mix-blend-mode: screen;" transform="translate(83.000000, 83.000000) rotate(-90.000000) translate(-83.000000, -83.000000) "></path>
+            <path d="M3,123 L83,123 L83,3 L3,3 L3,123 Z" id="Fill-1-Copy" fill="#FDD319"></path>
+            <path d="M83,83 L123,123 L83,123 L83,83 Z" id="Combined-Shape" fill="#7ABDE0"></path>
+            <path d="M83,83 L83,123 L63,123 L43,123 L43,43 L83,83 Z" id="Combined-Shape" fill="#7ABDE0" style="mix-blend-mode: screen;"></path>
             <g id="Group">
                 <g id="Grid-Unit">
                     <rect x="0" y="0" width="40" height="40"></rect>

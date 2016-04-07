@@ -34,18 +34,18 @@
 .project-footer-event-prompt,
 .project-footer-next-project,
 .project-footer-related-project {
-	flex: 1 0 33%;
+	width: 33%;
 }
 
 @media only screen and (max-width: 740px) {
 	.project-footer-event-prompt,
 	.project-footer-next-project,
 	.project-footer-related-project {
-		flex: 1 0 50%;
+		width: 50%;
 		margin: 20px 0;
 	}
 	.project-footer-event-prompt {
-		flex: 1 0 100%;
+		width: 100%;
 	}
 }
 
