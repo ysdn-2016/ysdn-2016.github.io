@@ -807,6 +807,9 @@ header.home-header {
 		font-size: 16px;
 		font-weight: 400;
 		text-align: center;
+		a {
+			@include underline();
+		}
 	}
 	.home-social-feed {
 		width: 1200px;
