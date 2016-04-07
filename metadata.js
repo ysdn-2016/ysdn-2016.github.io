@@ -94,6 +94,13 @@ module.exports = {
 	      url: "http://3Mcanada.ca",
 	      priority: 3
 	    },
+	   	{
+	      id: "saman",
+	      company: "Saman Design",
+	      title: "Patron",
+	      url: "http://www.samandesign.com/",
+	      priority: 3
+	    },
 	    {
 	      id: "veritiv",
 	      company: "Veritiv",
@@ -130,10 +137,10 @@ module.exports = {
 	      priority: 4
 	    },
 	    {
-	      id: "saman",
-	      company: "Saman Design",
+	      id: "watt",
+	      company: "Watt Retail",
 	      title: "Patron",
-	      url: "http://www.samandesign.com/",
+	      url: "http://www.wattisretail.com/",
 	      priority: 4
 	    }
 	  ]
