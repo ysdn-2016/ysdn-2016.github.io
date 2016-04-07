@@ -59,7 +59,7 @@
 		@media #{$media-tablet-medium} {
 			background-color: white;
 			position: absolute;
-			width: 50px;
+			width: 30px;
 			color: transparent;
 			transition: width 250ms ease, opacity 1000ms ease 250ms, color 100ms ease;
 			&::-webkit-input-placeholder {
@@ -96,10 +96,7 @@
 	margin-bottom: 48px;
 	@media #{$media-tablet-medium} {
 		flex-direction: row-reverse;
-	}
-
-	input {
-		box-shadow: 0 0 12px 6px #fff;
+		margin-bottom: 28px;
 	}
 }
 
@@ -166,8 +163,9 @@
 	@media #{$media-tablet-medium} {
 		flex-direction: column;
 		margin-right: -10%;
-		margin-left: 24px;
-		padding-left: 5%;
+		border-left: 1px gray solid;
+		margin-left: 20px;
+		padding-left: 15px;
 		padding-right: 5%;
 	}
 }
