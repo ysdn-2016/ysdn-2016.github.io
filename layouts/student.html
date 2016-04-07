@@ -39,7 +39,7 @@
 					</div>
 				</div>
 				<div class="student-profile-portrait">
-					<img class="student-profile-portrait-image" src="{{ portrait | asset_url }}" draggable="false" />
+					<img class="student-profile-portrait-image" src="{{ pixel }}" data-src="{{ portrait | asset_url({ width: 600 }) }}" data-retina-src="{{ portrait | asset_url({ width: 1200 }) }}" draggable="false" />
 					<div class="shapes">
 						<div class="wrapper shape-1-wrapper">
 							<div class="shape shape-1"></div>

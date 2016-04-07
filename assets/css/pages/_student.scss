@@ -86,29 +86,29 @@ $student-profile-header-background: #f6f6f6;
 		.shape-1-wrapper {
 			right: 140px;
 			bottom: 340px;
-			animation: shape-fadein 0.8s forwards;
-			animation-delay: 1.4s;
+			animation: shape-fadein 400ms ease forwards;
+			animation-delay: 800ms;
 			opacity: 0;
 		}
 		.shape-2-wrapper {
 			left: 120px;
 			bottom: 320px;
-			animation: shape-fadein 0.8s forwards;
-			animation-delay: 2s;
+			animation: shape-fadein 400ms ease forwards;
+			animation-delay: 1200ms;
 			opacity: 0;
 		}
 		.shape-3-wrapper {
 			top: 80px;
 			left: 80px;
-			animation: shape-fadein 0.8s forwards;
-			animation-delay: 2.6s;
+			animation: shape-fadein 400ms ease forwards;
+			animation-delay: 2000ms;
 			opacity: 0;
 		}
 	}
 }
 
-.student-profile-portrait-image {
-	animation: portrait-fadein 2.4s forwards;
+.student-profile-portrait-image[lazyloaded] {
+	animation: portrait-fadein 800ms forwards;
 }
 
 .student-profile-social {
@@ -470,10 +470,12 @@ $student-profile-header-background: #f6f6f6;
 @keyframes portrait-fadein {
 	from {
     opacity: 0;
+		transform: translateY(5px);
   }
 
   to {
     opacity: 1;
+		transform: translateY(0px);
   }
 }
 
