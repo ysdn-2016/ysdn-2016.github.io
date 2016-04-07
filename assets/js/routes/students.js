@@ -12,6 +12,7 @@ var notFalse = function (x) { return !!x };
 var lastChar = function (str) { return str.charAt(str.length - 1) };
 
 module.exports = function () {
+
   var $window = $(window);
   var $grid = $('.student-grid');
   var $search = $('.student-search-input');
@@ -48,6 +49,17 @@ module.exports = function () {
   $students.on('mouseenter', mouseEnter);
   $students.on('mouseleave', mouseLeave);
   $noResultsClear.on('click', clear);
+
+  if (window.innerWidth < 600) {
+    loadMobileStudents();
+    enquire.register('screen and (min-width: 600px)', {
+      match: function () {
+        loadDesktopStudents();
+      }
+    })
+  } else {
+    loadDesktopStudents();
+  }
 
   var autosize = $search.autosize({ typeahead: $typeahead });
 
@@ -159,6 +171,26 @@ module.exports = function () {
 
   function stopRewind () {
     $(this).removeClass('student-preview--rewind');
+  }
+
+  function loadMobileStudents () {
+    $students.find('img').each(function (i, el) {
+      var $el = $(el);
+      $el.attr('data-src', $el.attr('data-mobile-src'))
+      $el.attr('data-retina-src', $el.attr('data-mobile-retina-src'))
+    });
+    Lazyload.update();
+    Lazyload.check();
+  }
+
+  function loadDesktopStudents () {
+    $students.find('img').each(function (i, el) {
+      var $el = $(el);
+      $el.attr('data-src', $el.attr('data-desktop-src'))
+      $el.attr('data-retina-src', $el.attr('data-desktop-retina-src'))
+    });
+    Lazyload.update();
+    Lazyload.check();
   }
 };
 

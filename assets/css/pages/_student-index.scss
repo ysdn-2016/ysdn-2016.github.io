@@ -74,13 +74,17 @@
 		&[lazyloaded] {
 			opacity: 1.0;
 		}
-		.student-preview:hover &,
-		.student-preview:focus & {
-			animation: play 400ms steps(4) forwards;
-		}
-		.student-preview--rewind & {
-			animation: rewind 400ms steps(4) forwards;
-		}
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.student-preview:hover .student-preview-image img,
+	.student-preview:focus .student-preview-image img {
+		animation: play 400ms steps(4) forwards;
+	}
+
+	.student-preview--rewind .student-preview-image img {
+		animation: rewind 400ms steps(4) forwards;
 	}
 }
 

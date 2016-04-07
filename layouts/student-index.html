@@ -22,7 +22,7 @@
 				{% if item.type === 'student' %}
 					<a class="student-grid-block student-preview student" href="{{ item.href }}" data-name="{{ item.name }}" data-categories="{{ item.projectCategories | map('id') | join(',') }}">
 						<div class="student-preview-image">
-							<img src="{{ pixel }}" data-src="{{ item.strip | asset_url({ height: 400 }) }}" data-retina-src="{{ item.strip | asset_url({ height: 800 }) }}" alt="{{ item.name }}" draggable="false" />
+							<img src="{{ pixel }}" data-mobile-src="{{ item.portrait | asset_url({ height: 300 }) }}" data-mobile-retina-src="{{ item.portrait | asset_url({ height: 600 }) }}" data-desktop-src="{{ item.strip | asset_url({ height: 400 }) }}" data-desktop-retina-src="{{ item.strip | asset_url({ height: 800 }) }}" alt="{{ item.name }}" draggable="false" />
 						</div>
 						<div class="student-preview-name">{{ item.name }}</div>
 					</a>
