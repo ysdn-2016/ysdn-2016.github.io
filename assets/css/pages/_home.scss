@@ -86,7 +86,7 @@ section.home {
 	// @include dot-grid-unit;
 	margin-top: -22px;
 	animation: fade-to-white 1.4s forwards;
-	animation-delay: 10s;
+	animation-delay: 14s;
 	img {
 		width: 100%;
 	}
@@ -144,22 +144,56 @@ section.home {
 	}
 }
 
+@keyframes slide-in-bottom {
+	0% {
+		transform: translateY(2000px);
+		opacity: 0;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes slide-in-right {
+	0% {
+		transform: translateX(1440px);
+		opacity: 0;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
 @keyframes stagetwo {
 	0% {
 		transform: translateY(-1440px);
+		opacity: 0;
 	}
 	15% {
 		transform: translateY(-1440px);
+		opacity: 0;
 	}
-	40% {
+	18% {
+		opacity: 0;
+	}
+	42% {
 		transform: translateY(0px);
+		opacity: 1;
 	}
 	70% {
 		opacity: 1;
 		transform: translateY(0px);
 	}
 
-	80% {
+	74% {
 		opacity: 0;
 		transform: translateY(0px);
 	}
@@ -217,7 +251,7 @@ section.home {
 	height: 100%;
 	color: white;
 	text-align: center;
-	animation: fade-in-out 5.6s forwards;
+	animation: fade-in-out 6.4s forwards;
 	animation-delay: 0.6s;
 	h2 {
 		width: 360px;
@@ -236,7 +270,7 @@ section.home {
 	left: 0;
 	width: 100%;
 	transform: translateY(-1440px);
-	animation: stagetwo 10s forwards;
+	animation: stagetwo 14s forwards;
 	animation-delay: 4s;
 	img {
 		width: 100%;
@@ -252,9 +286,31 @@ section.home {
 	width: 100%;
 	transform: translateY(-1440px);
 	animation: slide-in 2.0s forwards;
-	animation-delay: 7.6s;
+	animation-delay: 8.6s;
 }
 .home-intro-stage-4 {
+	// display: none;
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transform: translateY(-2000px);
+	animation: slide-in-bottom 2.0s forwards;
+	animation-delay: 10s;
+}
+.home-intro-stage-5 {
+	// display: none;
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transform: translateX(1440px);
+	animation: slide-in-right 2.0s forwards;
+	animation-delay: 11.5s;
+}
+.home-intro-stage-6 {
 	position: absolute;
 	z-index: 5;
 	top: 0;
@@ -263,7 +319,7 @@ section.home {
 	width: 100%;
 	// display: none;
 	animation: fade-in 1.4s forwards;
-	animation-delay: 10s;
+	animation-delay: 14s;
 }
 
 .final-stage {
@@ -290,18 +346,18 @@ section.home {
 header.home-header {
 	background-color: black;
 	animation: fade-to-white 1.4s forwards;
-	animation-delay: 10s;
+	animation-delay: 14s;
 	.header-nav {
 		color: white;
 		animation: fade-to-white 1.4s forwards;
-		animation-delay: 10s;
+		animation-delay: 14s;
 	}
 	svg {
 		fill: white;
 	}
 	path {
 		animation: fade-to-white 1.4s forwards;
-		animation-delay: 10s;
+		animation-delay: 14s;
 
 		fill: white;
 	}
