@@ -84,7 +84,7 @@ module.exports = (function () {
     enquire.unregister(mobileQuery, mobileHandler);
   }
 
-  return { init: init, destroy: destroy };
+  return { init: init, destroy: destroy, open: showEventPanel, close: hideEventPanel };
 
   /**
    * Private functions

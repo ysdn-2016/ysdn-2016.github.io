@@ -27,7 +27,7 @@ function toIdElementMap (arr) {
 function toDeck (arr) {
   var obj = {}
   arr.forEach(function (el, i) {
-    obj[i] = parseFloat(el.dataset.weight, 10) * 100;
+    obj[i] = parseFloat(el.dataset.weight, 10);
   })
   return obj
 }

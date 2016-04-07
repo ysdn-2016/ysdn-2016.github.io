@@ -38,6 +38,11 @@ $(function () {
     }
   })
 
+  $('a[href="/event/"]').on('click', function (e) {
+    e.preventDefault();
+    EventRibbon.open();
+  })
+
   $('a[href="#!top"]').on('click', function (e) {
     e.preventDefault()
     $('html,body,.parallax').animate({ scrollTop: 0 }, {

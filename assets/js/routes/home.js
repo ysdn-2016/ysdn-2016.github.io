@@ -2,7 +2,7 @@
 var Instafeed = require('instafeed.js');
 var stripHashtags = require('../lib/helpers/strip-hashtags');
 var truncate = require('../lib/helpers/truncate');
-var shuffle = require('fisher-yates')
+var deck = require('deck')
 
 var GRID_PROJECT_COUNT = 3
 
@@ -126,4 +126,17 @@ function getGridConfig (el) {
       { query: 'screen and (min-width: 1px)', columns: 2 }
     ]
   }
+}
+
+function shuffle (arr) {
+  var obj = {}
+  arr.forEach(function (p) {
+    obj[p.id] = parseFloat(p.weight, 10)
+  })
+  var results = deck.shuffle(obj);
+  return results.map(function (id) {
+    return arr.filter(function (p) {
+      return p.id === id
+    })[0]
+  })
 }
