@@ -1,334 +1,778 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="875px" height="400px" viewBox="0 0 875 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="806px" height="326px" viewBox="0 0 806 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
     <title>communication-tablet</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="All-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Work-Index/Work-Index-Masonry/Information-Copy-2" transform="translate(-93.000000, -614.000000)">
-            <g id="communication-tablet" transform="translate(95.000000, 616.000000)">
-                <g id="Background-(Grid)" stroke-width="3" stroke="#000000" fill="#000000">
-                    <g id="Block">
-                        <ellipse id="Oval" cx="181.993286" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="communication-tablet">
+            <g id="Group-2">
+                <g id="Group-4">
+                    <g id="Dot-Copy-749" transform="translate(800.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
-                    <g id="Block" transform="translate(0.000000, 213.490725)">
-                        <ellipse id="Oval" cx="181.993286" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
+                    <g id="Dot-Copy-748" transform="translate(760.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
-                    <g id="Block" transform="translate(436.087690, 0.000000)">
-                        <ellipse id="Oval" cx="181.993286" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
+                    <g id="Dot-Copy-747" transform="translate(720.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
-                    <g id="Block" transform="translate(436.087690, 213.490725)">
-                        <ellipse id="Oval" cx="181.993286" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="181.993286" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="145.673585" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="109.485477" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="73.2973684" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="37.1092601" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="401.554838" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="365.235136" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="329.047028" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="292.85892" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="256.670812" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="220.482703" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
+                    <g id="Dot-Copy-746" transform="translate(680.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
-                    <g id="Block" transform="translate(869.139966, 0.000000)">
-                        <ellipse id="Oval" cx="0.921151847" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
+                    <g id="Dot-Copy-745" transform="translate(640.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
-                    <g id="Block" transform="translate(869.139966, 213.490725)">
-                        <ellipse id="Oval" cx="0.921151847" cy="182.085758" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="145.879263" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="109.672767" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="73.4662713" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="37.2597756" rx="0.921151847" ry="0.92161989"></ellipse>
-                        <ellipse id="Oval" cx="0.921151847" cy="0.92161989" rx="0.921151847" ry="0.92161989"></ellipse>
+                    <g id="Dot-Copy-744" transform="translate(600.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-743" transform="translate(560.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-742" transform="translate(520.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-741" transform="translate(480.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-740" transform="translate(440.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-739" transform="translate(400.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-738" transform="translate(360.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-737" transform="translate(320.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-736" transform="translate(280.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-735" transform="translate(240.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-734" transform="translate(200.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-733" transform="translate(160.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-732" transform="translate(120.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-731" transform="translate(80.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-730" transform="translate(40.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-729" transform="translate(0.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-718" transform="translate(800.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-717" transform="translate(760.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-716" transform="translate(720.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-715" transform="translate(680.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-714" transform="translate(640.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-713" transform="translate(600.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-712" transform="translate(560.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-711" transform="translate(520.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-710" transform="translate(480.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-709" transform="translate(440.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-708" transform="translate(400.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-707" transform="translate(360.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-706" transform="translate(320.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-705" transform="translate(280.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-704" transform="translate(240.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-703" transform="translate(200.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-702" transform="translate(160.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-701" transform="translate(120.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-700" transform="translate(80.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-699" transform="translate(40.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-698" transform="translate(0.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-687" transform="translate(800.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-686" transform="translate(760.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-685" transform="translate(720.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-684" transform="translate(680.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-683" transform="translate(640.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-682" transform="translate(600.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-681" transform="translate(560.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-680" transform="translate(520.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-679" transform="translate(480.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-678" transform="translate(440.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-677" transform="translate(400.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-676" transform="translate(360.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-675" transform="translate(320.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-674" transform="translate(280.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-673" transform="translate(240.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-672" transform="translate(200.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-671" transform="translate(160.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-670" transform="translate(120.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-669" transform="translate(80.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-668" transform="translate(40.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-667" transform="translate(0.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-656" transform="translate(800.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-655" transform="translate(760.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-654" transform="translate(720.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-653" transform="translate(680.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-652" transform="translate(640.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-651" transform="translate(600.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-650" transform="translate(560.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-649" transform="translate(520.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-648" transform="translate(480.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-647" transform="translate(440.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-646" transform="translate(400.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-645" transform="translate(360.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-644" transform="translate(320.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-643" transform="translate(280.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-642" transform="translate(240.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-641" transform="translate(200.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-640" transform="translate(160.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-639" transform="translate(120.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-638" transform="translate(80.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-637" transform="translate(40.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-636" transform="translate(0.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-625" transform="translate(800.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-624" transform="translate(760.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-623" transform="translate(720.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-622" transform="translate(680.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-621" transform="translate(640.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-620" transform="translate(600.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-619" transform="translate(560.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-618" transform="translate(520.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-617" transform="translate(480.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-616" transform="translate(440.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-615" transform="translate(400.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-614" transform="translate(360.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-613" transform="translate(320.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-612" transform="translate(280.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-611" transform="translate(240.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-610" transform="translate(200.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-609" transform="translate(160.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-608" transform="translate(120.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-607" transform="translate(80.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-606" transform="translate(40.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-605" transform="translate(0.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-594" transform="translate(800.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-593" transform="translate(760.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-592" transform="translate(720.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-591" transform="translate(680.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-590" transform="translate(640.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-589" transform="translate(600.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-588" transform="translate(560.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-587" transform="translate(520.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-586" transform="translate(480.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-585" transform="translate(440.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-584" transform="translate(400.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-583" transform="translate(360.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-582" transform="translate(320.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-581" transform="translate(280.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-580" transform="translate(240.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-579" transform="translate(200.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-578" transform="translate(160.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-577" transform="translate(120.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-576" transform="translate(80.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-575" transform="translate(40.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-574" transform="translate(0.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-563" transform="translate(800.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-562" transform="translate(760.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-561" transform="translate(720.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-560" transform="translate(680.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-559" transform="translate(640.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-558" transform="translate(600.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-557" transform="translate(560.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-556" transform="translate(520.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-555" transform="translate(480.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-554" transform="translate(440.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-553" transform="translate(400.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-552" transform="translate(360.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-551" transform="translate(320.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-550" transform="translate(280.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-549" transform="translate(240.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-548" transform="translate(200.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-547" transform="translate(160.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-546" transform="translate(120.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-545" transform="translate(80.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-544" transform="translate(40.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-543" transform="translate(0.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-532" transform="translate(800.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-531" transform="translate(760.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-530" transform="translate(720.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-529" transform="translate(680.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-528" transform="translate(640.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-527" transform="translate(600.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-526" transform="translate(560.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-525" transform="translate(520.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-524" transform="translate(480.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-523" transform="translate(440.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-522" transform="translate(400.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-521" transform="translate(360.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-520" transform="translate(320.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-519" transform="translate(280.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-518" transform="translate(240.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-517" transform="translate(200.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-516" transform="translate(160.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-515" transform="translate(120.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-514" transform="translate(80.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-513" transform="translate(40.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-512" transform="translate(0.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-501" transform="translate(800.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-500" transform="translate(760.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-499" transform="translate(720.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-498" transform="translate(680.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-497" transform="translate(640.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-496" transform="translate(600.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-495" transform="translate(560.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-494" transform="translate(520.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-493" transform="translate(480.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-492" transform="translate(440.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-491" transform="translate(400.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-490" transform="translate(360.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-489" transform="translate(320.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-488" transform="translate(280.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-487" transform="translate(240.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-486" transform="translate(200.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-485" transform="translate(160.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-484" transform="translate(120.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-483" transform="translate(80.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-482" transform="translate(40.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-481">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
                 </g>
-                <path d="M472,288 L544,288 L544,360 L472,359.999998 L472,288 Z" id="Rectangle-path-Copy-22" fill="#FCD315" style="mix-blend-mode: darken;"></path>
-                <rect id="Rectangle-843" fill="#FFFFFF" x="158" y="51" width="492" height="72"></rect>
-                <text id="Communication" font-family="Sofia, Avenir, Helvetica Neue, Arial, sans-serif" font-size="60" font-weight="bold" line-spacing="72" fill="#182226">
-                    <tspan x="186" y="118">Communication</tspan>
-                </text>
-                <path d="M872,148 L653,148 L653,217 L872,217 L872,148 Z" id="Fill-6" fill="#7CBDDF" style="mix-blend-mode: darken;"></path>
-                <path d="M725,77 C686.340556,77 655,108.340556 655,147 C655,185.659444 686.340556,217 725,217 C763.659444,217 795,185.659444 795,147 C795,108.340556 763.659444,77 725,77 Z" id="Fill-14" fill="#EF4962" style="mix-blend-mode: darken;"></path>
-                <path d="M109,183 L109,251.999997 L40,252 L109,183 Z" id="Shape-Copy-25" fill="#5AC2B3" style="mix-blend-mode: darken;" transform="translate(74.500000, 217.500000) scale(-1, 1) translate(-74.500000, -217.500000) "></path>
+                <g id="communication-copy" transform="translate(43.000000, 57.000000)">
+                    <path d="M280,186 L360,186 L360,266 L280,265.999998 L280,186 Z" id="Rectangle-path-Copy-22" fill="#FCD315" style="mix-blend-mode: darken;"></path>
+                    <rect id="Rectangle-843" fill="#FFFFFF" x="104" y="0" width="429" height="72"></rect>
+                    <path d="M142.86,55.08 C140.28,58.38 136.26,60.48 131.7,60.48 C123.48,60.48 117.18,53.76 117.18,45.42 C117.18,37.08 123.48,30.3 131.7,30.3 C136.2,30.3 140.04,32.4 142.74,35.46 L147.66,31.62 C144,27.06 138.3,24.18 131.7,24.18 C120,24.18 110.82,33.66 110.82,45.42 C110.82,57.12 120,66.6 131.7,66.6 C138.42,66.6 144.18,63.66 147.78,58.98 L142.86,55.08 Z M166.14,66.6 C174.12,66.6 180.84,60.78 180.84,51.9 C180.84,43.02 174.12,37.38 166.14,37.38 C158.22,37.38 151.56,43.02 151.56,51.9 C151.56,60.78 158.22,66.6 166.14,66.6 L166.14,66.6 Z M166.14,60.6 C161.52,60.6 157.68,57.18 157.68,51.9 C157.68,46.74 161.52,43.44 166.14,43.44 C170.82,43.44 174.66,46.74 174.66,51.9 C174.66,57.18 170.82,60.6 166.14,60.6 L166.14,60.6 Z M219.6,43.44 C223.2,43.44 225.54,46.02 225.54,50.4 L225.54,66 L231.72,66 L231.72,49.86 C231.72,41.88 227.82,37.38 220.92,37.38 C218.34,37.38 214.14,38.1 211.5,42.96 C209.94,39.42 207.12,37.38 202.68,37.38 C200.46,37.38 195.72,38.28 193.86,42.18 L193.86,37.98 L187.68,37.98 L187.68,66 L193.86,66 L193.86,50.94 C193.86,45.48 197.34,43.44 200.94,43.44 C204.24,43.44 206.58,45.96 206.64,50.28 L206.64,66 L212.82,66 L212.82,50.94 C212.82,46.44 215.52,43.44 219.6,43.44 L219.6,43.44 Z M271.98,43.44 C275.58,43.44 277.92,46.02 277.92,50.4 L277.92,66 L284.1,66 L284.1,49.86 C284.1,41.88 280.2,37.38 273.3,37.38 C270.72,37.38 266.52,38.1 263.88,42.96 C262.32,39.42 259.5,37.38 255.06,37.38 C252.84,37.38 248.1,38.28 246.24,42.18 L246.24,37.98 L240.06,37.98 L240.06,66 L246.24,66 L246.24,50.94 C246.24,45.48 249.72,43.44 253.32,43.44 C256.62,43.44 258.96,45.96 259.02,50.28 L259.02,66 L265.2,66 L265.2,50.94 C265.2,46.44 267.9,43.44 271.98,43.44 L271.98,43.44 Z M311.34,37.98 L311.34,53.04 C311.34,58.62 307.74,60.6 304.14,60.6 C300.78,60.6 298.32,58.2 298.32,53.58 L298.32,37.98 L292.14,37.98 L292.14,54.3 C292.08,62.22 296.16,66.6 303,66.6 C305.94,66.6 309.72,65.1 311.34,61.92 L311.34,66 L317.52,66 L317.52,37.98 L311.34,37.98 Z M332.34,66 L332.34,50.94 C332.34,45.42 335.88,43.44 339.54,43.44 C343.14,43.44 345.42,45.96 345.42,50.4 L345.42,66 L351.6,66 L351.6,49.68 C351.6,41.76 347.7,37.38 340.92,37.38 C337.8,37.38 333.96,38.94 332.34,42.18 L332.34,37.98 L326.16,37.98 L326.16,66 L332.34,66 Z M358.86,26.64 C358.86,24.42 360.78,22.74 363,22.74 C365.28,22.74 367.08,24.42 367.08,26.64 C367.08,28.86 365.28,30.54 363,30.54 C360.78,30.54 358.86,28.86 358.86,26.64 L358.86,26.64 Z M366.06,37.98 L366.06,66 L359.94,66 L359.94,37.98 L366.06,37.98 Z M372.9,51.9 C372.9,60.78 379.8,66.6 387.84,66.6 C392.34,66.6 396.36,64.8 399,61.68 L394.14,57.9 C392.64,59.64 390.3,60.66 387.84,60.66 C383.16,60.66 379.02,57.12 379.02,51.9 C379.02,46.68 383.16,43.38 387.84,43.38 C390.3,43.38 392.64,44.34 394.14,46.08 L398.94,42.24 C396.3,39.12 392.28,37.38 387.84,37.38 C379.8,37.38 372.9,43.02 372.9,51.9 L372.9,51.9 Z M404.76,43.02 L408.3,46.8 C410.1,44.4 413.34,42.96 416.22,42.96 C420.72,42.96 423.3,45.6 423.3,49.26 L423.3,50.52 C420.6,49.26 418.02,48.72 415.62,48.72 C406.8,48.72 403.56,52.86 403.56,57.72 C403.56,63.3 407.82,66.6 414.24,66.6 C417.42,66.6 421.08,65.76 423.3,62.94 L423.3,66 L429.42,66 L429.42,49.26 C429.42,41.46 424.62,37.38 416.64,37.38 C412.98,37.38 407.94,38.52 404.76,43.02 L404.76,43.02 Z M414.48,60.96 C411.12,60.96 409.62,59.52 409.62,57.72 C409.62,56.16 410.58,53.58 415.74,53.58 C417.3,53.58 420.3,54 423.24,55.2 L423.24,57.3 C421.44,60.24 416.88,60.96 414.48,60.96 L414.48,60.96 Z M446.16,37.98 L446.16,27.36 L439.98,27.36 L439.98,37.98 L434.94,37.98 L434.94,43.08 L439.98,43.08 L439.98,66 L446.16,66 L446.16,43.08 L452.1,43.08 L452.1,37.98 L446.16,37.98 Z M456.84,26.64 C456.84,24.42 458.76,22.74 460.98,22.74 C463.26,22.74 465.06,24.42 465.06,26.64 C465.06,28.86 463.26,30.54 460.98,30.54 C458.76,30.54 456.84,28.86 456.84,26.64 L456.84,26.64 Z M464.04,37.98 L464.04,66 L457.92,66 L457.92,37.98 L464.04,37.98 Z M485.46,66.6 C493.44,66.6 500.16,60.78 500.16,51.9 C500.16,43.02 493.44,37.38 485.46,37.38 C477.54,37.38 470.88,43.02 470.88,51.9 C470.88,60.78 477.54,66.6 485.46,66.6 L485.46,66.6 Z M485.46,60.6 C480.84,60.6 477,57.18 477,51.9 C477,46.74 480.84,43.44 485.46,43.44 C490.14,43.44 493.98,46.74 493.98,51.9 C493.98,57.18 490.14,60.6 485.46,60.6 L485.46,60.6 Z M513.18,66 L513.18,50.94 C513.18,45.42 516.72,43.44 520.38,43.44 C523.98,43.44 526.26,45.96 526.26,50.4 L526.26,66 L532.44,66 L532.44,49.68 C532.44,41.76 528.54,37.38 521.76,37.38 C518.64,37.38 514.8,38.94 513.18,42.18 L513.18,37.98 L507,37.98 L507,66 L513.18,66 Z" id="Communication" fill="#182226"></path>
+                    <path d="M760,146 L520,146 L520,226 L760,226 L760,146 Z" id="Fill-6" fill="#7CBDDF" style="mix-blend-mode: darken;"></path>
+                    <path d="M600,66 C555.817778,66 520,101.817778 520,146 C520,190.182222 555.817778,226 600,226 C644.182222,226 680,190.182222 680,146 C680,101.817778 644.182222,66 600,66 Z" id="Fill-14" fill="#EF4962" style="mix-blend-mode: darken;"></path>
+                    <path d="M80,106 L80,185.999996 L0,186 L80,106 Z" id="Shape-Copy-25" fill="#5AC2B3" style="mix-blend-mode: darken;" transform="translate(40.000000, 146.000000) scale(-1, 1) translate(-40.000000, -146.000000) "></path>
+                </g>
             </g>
         </g>
     </g>

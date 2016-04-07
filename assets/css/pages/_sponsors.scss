@@ -301,12 +301,20 @@ $sponsor-page-grid-increment: 34px; // NOTE: taken from space between circles in
 	@include shape-triangle(54px, $yellow, 270);
 	top: 250px;
 	right: 20%;
+	@media #{$media-tablet-medium} {
+		top: 80px;
+		right: 10%;
+	}
 }
 
 .sponsors-header-shape-2 {
 	@include shape-triangle(54px, $yellow, 270);
 	top: 277px;
 	right: calc(20% - 27px);
+	@media #{$media-tablet-medium} {
+		top: 107px;
+		right: calc(10% - 27px);
+	}
 }
 
 .sponsors-header-shape-3 {
@@ -314,6 +322,10 @@ $sponsor-page-grid-increment: 34px; // NOTE: taken from space between circles in
 	top: 170px;
 	left: 10%;
 	margin-left: 180px;
+	@media #{$media-tablet-medium} {
+		top: 360px;
+		margin-left: 0px;
+	}
 }
 
 .sponsors-header-shape-4 {
@@ -328,4 +340,8 @@ $sponsor-page-grid-increment: 34px; // NOTE: taken from space between circles in
 	top: 500px;
 	right: 0;
 	margin-right: 160px;
+	@media #{$media-tablet-medium} {
+		margin-right: 0px;
+		top: 400px;
+	}
 }

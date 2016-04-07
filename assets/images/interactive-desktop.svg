@@ -1,13 +1,301 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="806px" height="326px" viewBox="0 0 806 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1206px" height="406px" viewBox="0 0 1206 406" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
-    <title>physical-tablet</title>
+    <title>interactive-desktop</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="physical-tablet">
-            <g id="Group-2" transform="translate(0.000000, -36.000000)">
-                <g id="Group-10" transform="translate(0.000000, 37.000000)">
+        <g id="interactive-desktop">
+            <g id="Group-3">
+                <g id="Group-Copy-3">
+                    <g id="Dot-Copy-821" transform="translate(1200.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-820" transform="translate(1160.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-819" transform="translate(1120.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-818" transform="translate(1080.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-817" transform="translate(1040.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-816" transform="translate(1000.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-815" transform="translate(960.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-814" transform="translate(920.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-813" transform="translate(880.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-812" transform="translate(840.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-811" transform="translate(800.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-810" transform="translate(760.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-809" transform="translate(720.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-808" transform="translate(680.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-807" transform="translate(640.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-806" transform="translate(600.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-805" transform="translate(560.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-804" transform="translate(520.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-803" transform="translate(480.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-802" transform="translate(440.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-801" transform="translate(400.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-800" transform="translate(360.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-799" transform="translate(320.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-798" transform="translate(280.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-797" transform="translate(240.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-796" transform="translate(200.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-795" transform="translate(160.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-794" transform="translate(120.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-793" transform="translate(80.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-792" transform="translate(40.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-791" transform="translate(0.000000, 400.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-790" transform="translate(1200.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-789" transform="translate(1160.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-788" transform="translate(1120.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-787" transform="translate(1080.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-786" transform="translate(1040.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-785" transform="translate(1000.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-784" transform="translate(960.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-783" transform="translate(920.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-782" transform="translate(880.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-781" transform="translate(840.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-780" transform="translate(800.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-779" transform="translate(760.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-778" transform="translate(720.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-777" transform="translate(680.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-776" transform="translate(640.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-775" transform="translate(600.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-774" transform="translate(560.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-773" transform="translate(520.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-772" transform="translate(480.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-771" transform="translate(440.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-770" transform="translate(400.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-769" transform="translate(360.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-768" transform="translate(320.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-767" transform="translate(280.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-766" transform="translate(240.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-765" transform="translate(200.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-764" transform="translate(160.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-763" transform="translate(120.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-762" transform="translate(80.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-761" transform="translate(40.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-760" transform="translate(0.000000, 360.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-759" transform="translate(1200.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-758" transform="translate(1160.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-757" transform="translate(1120.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-756" transform="translate(1080.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-755" transform="translate(1040.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-754" transform="translate(1000.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-753" transform="translate(960.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-752" transform="translate(920.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-751" transform="translate(880.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-750" transform="translate(840.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
                     <g id="Dot-Copy-749" transform="translate(800.000000, 320.000000)">
                         <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
@@ -89,6 +377,46 @@
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
                     <g id="Dot-Copy-729" transform="translate(0.000000, 320.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-728" transform="translate(1200.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-727" transform="translate(1160.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-726" transform="translate(1120.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-725" transform="translate(1080.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-724" transform="translate(1040.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-723" transform="translate(1000.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-722" transform="translate(960.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-721" transform="translate(920.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-720" transform="translate(880.000000, 280.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-719" transform="translate(840.000000, 280.000000)">
                         <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
@@ -176,6 +504,46 @@
                         <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
+                    <g id="Dot-Copy-697" transform="translate(1200.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-696" transform="translate(1160.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-695" transform="translate(1120.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-694" transform="translate(1080.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-693" transform="translate(1040.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-692" transform="translate(1000.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-691" transform="translate(960.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-690" transform="translate(920.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-689" transform="translate(880.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-688" transform="translate(840.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
                     <g id="Dot-Copy-687" transform="translate(800.000000, 240.000000)">
                         <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
@@ -257,6 +625,46 @@
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
                     <g id="Dot-Copy-667" transform="translate(0.000000, 240.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-666" transform="translate(1200.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-665" transform="translate(1160.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-664" transform="translate(1120.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-663" transform="translate(1080.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-662" transform="translate(1040.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-661" transform="translate(1000.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-660" transform="translate(960.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-659" transform="translate(920.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-658" transform="translate(880.000000, 200.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-657" transform="translate(840.000000, 200.000000)">
                         <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
@@ -344,6 +752,46 @@
                         <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
+                    <g id="Dot-Copy-635" transform="translate(1200.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-634" transform="translate(1160.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-633" transform="translate(1120.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-632" transform="translate(1080.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-631" transform="translate(1040.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-630" transform="translate(1000.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-629" transform="translate(960.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-628" transform="translate(920.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-627" transform="translate(880.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-626" transform="translate(840.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
                     <g id="Dot-Copy-625" transform="translate(800.000000, 160.000000)">
                         <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
@@ -425,6 +873,46 @@
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
                     <g id="Dot-Copy-605" transform="translate(0.000000, 160.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-604" transform="translate(1200.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-603" transform="translate(1160.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-602" transform="translate(1120.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-601" transform="translate(1080.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-600" transform="translate(1040.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-599" transform="translate(1000.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-598" transform="translate(960.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-597" transform="translate(920.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-596" transform="translate(880.000000, 120.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-595" transform="translate(840.000000, 120.000000)">
                         <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
@@ -512,6 +1000,46 @@
                         <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
+                    <g id="Dot-Copy-573" transform="translate(1200.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-572" transform="translate(1160.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-571" transform="translate(1120.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-570" transform="translate(1080.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-569" transform="translate(1040.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-568" transform="translate(1000.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-567" transform="translate(960.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-566" transform="translate(920.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-565" transform="translate(880.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-564" transform="translate(840.000000, 80.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
                     <g id="Dot-Copy-563" transform="translate(800.000000, 80.000000)">
                         <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
@@ -596,6 +1124,46 @@
                         <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
+                    <g id="Dot-Copy-542" transform="translate(1200.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-541" transform="translate(1160.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-540" transform="translate(1120.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-539" transform="translate(1080.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-538" transform="translate(1040.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-537" transform="translate(1000.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-536" transform="translate(960.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-535" transform="translate(920.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-534" transform="translate(880.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-533" transform="translate(840.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
                     <g id="Dot-Copy-532" transform="translate(800.000000, 40.000000)">
                         <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
@@ -677,6 +1245,46 @@
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
                     <g id="Dot-Copy-512" transform="translate(0.000000, 40.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-511" transform="translate(1200.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-510" transform="translate(1160.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-509" transform="translate(1120.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-508" transform="translate(1080.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-507" transform="translate(1040.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-506" transform="translate(1000.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-505" transform="translate(960.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-504" transform="translate(920.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-503" transform="translate(880.000000, 0.000000)">
+                        <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
+                        <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Dot-Copy-502" transform="translate(840.000000, 0.000000)">
                         <rect id="Grid-Unit" x="0" y="0" width="40" height="40"></rect>
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
@@ -765,13 +1373,13 @@
                         <circle id="Dot" fill="#000000" cx="3" cy="3" r="3"></circle>
                     </g>
                 </g>
-                <g id="physical-copy" transform="translate(43.000000, 0.000000)">
-                    <rect id="Rectangle-843" fill="#FFFFFF" x="452" y="233" width="262" height="72"></rect>
-                    <path d="M474.4,238.66 L474.4,280 L480.82,280 L480.82,264.82 L491.02,264.82 C499.96,264.82 503.62,258.4 503.62,251.8 C503.62,245.2 499.96,238.66 491.02,238.66 L474.4,238.66 Z M480.82,244.54 L490.9,244.54 C495.34,244.54 497.26,248.32 497.26,251.8 C497.26,255.34 495.28,259 490.66,259 L480.82,259 L480.82,244.54 Z M515.92,280 L515.92,264.94 C515.92,259.42 520.18,257.44 523.72,257.44 C527.2,257.44 529.96,260.02 529.96,264.4 L529.96,280 L536.14,280 L536.14,264.04 C536.14,256.06 531.94,251.38 524.8,251.38 C521.86,251.38 517.48,252.82 515.92,256.24 L515.92,236.74 L509.74,236.74 L509.74,280 L515.92,280 Z M552.4,293.68 L569.74,251.98 L563.14,251.98 L555.28,271.18 L547.48,251.98 L540.88,251.98 L551.98,278.68 L545.92,293.68 L552.4,293.68 Z M581.38,267.88 L585.16,268.78 C587.2,269.26 589.06,270.28 589.06,272.08 C589.06,274.18 586.9,275.44 584.08,275.44 C580.84,275.44 578.86,273.82 578.56,271.42 L572.86,271.42 C572.98,277.3 578.38,280.6 583.6,280.6 C590.02,280.6 594.76,277.54 594.76,272.14 C594.76,269.32 593.5,265.48 587.44,263.98 L583.12,262.9 C581.62,262.48 580.06,261.82 579.7,260.74 C579.4,259.9 579.46,259 579.94,258.22 C580.54,257.26 582.34,256.66 583.9,256.66 C585.82,256.66 587.74,257.56 587.98,259.66 L593.86,259.66 C593.5,253.66 588.64,251.38 583.66,251.38 C578.5,251.38 574,254.62 573.64,258.76 C573.28,263.26 575.44,266.26 581.38,267.88 L581.38,267.88 Z M600.4,240.64 C600.4,238.42 602.32,236.74 604.54,236.74 C606.82,236.74 608.62,238.42 608.62,240.64 C608.62,242.86 606.82,244.54 604.54,244.54 C602.32,244.54 600.4,242.86 600.4,240.64 L600.4,240.64 Z M607.6,251.98 L607.6,280 L601.48,280 L601.48,251.98 L607.6,251.98 Z M614.44,265.9 C614.44,274.78 621.34,280.6 629.38,280.6 C633.88,280.6 637.9,278.8 640.54,275.68 L635.68,271.9 C634.18,273.64 631.84,274.66 629.38,274.66 C624.7,274.66 620.56,271.12 620.56,265.9 C620.56,260.68 624.7,257.38 629.38,257.38 C631.84,257.38 634.18,258.34 635.68,260.08 L640.48,256.24 C637.84,253.12 633.82,251.38 629.38,251.38 C621.34,251.38 614.44,257.02 614.44,265.9 L614.44,265.9 Z M646.3,257.02 L649.84,260.8 C651.64,258.4 654.88,256.96 657.76,256.96 C662.26,256.96 664.84,259.6 664.84,263.26 L664.84,264.52 C662.14,263.26 659.56,262.72 657.16,262.72 C648.34,262.72 645.1,266.86 645.1,271.72 C645.1,277.3 649.36,280.6 655.78,280.6 C658.96,280.6 662.62,279.76 664.84,276.94 L664.84,280 L670.96,280 L670.96,263.26 C670.96,255.46 666.16,251.38 658.18,251.38 C654.52,251.38 649.48,252.52 646.3,257.02 L646.3,257.02 Z M656.02,274.96 C652.66,274.96 651.16,273.52 651.16,271.72 C651.16,270.16 652.12,267.58 657.28,267.58 C658.84,267.58 661.84,268 664.78,269.2 L664.78,271.3 C662.98,274.24 658.42,274.96 656.02,274.96 L656.02,274.96 Z M679.3,236.74 L679.3,280 L685.48,280 L685.48,236.74 L679.3,236.74 Z" id="Information" fill="#182226"></path>
-                    <path d="M155.208153,35.2081528 L325.208153,205.208153 L155.208153,205.208153 L155.208153,35.2081528 Z" id="Rectangle-2837" fill="#EE4A62" style="mix-blend-mode: darken;" transform="translate(240.208153, 120.208153) rotate(-45.000000) translate(-240.208153, -120.208153) "></path>
-                    <rect id="Rectangle-2837" fill="#5AC2B3" style="mix-blend-mode: darken;" x="120" y="200" width="240" height="120"></rect>
-                    <path d="M20,200 C8.95444444,200 0,208.954444 0,220 C0,231.045556 8.95444444,240 20,240 C31.0455556,240 40,231.045556 40,220 C40,208.954444 31.0455556,200 20,200 Z" id="Fill-14" fill="#F47F50" style="mix-blend-mode: darken;"></path>
-                    <path d="M640,40 L600,40 L600,160 L640,160 L640,40 Z" id="Fill-6" fill="#7CBDDF" style="mix-blend-mode: darken;"></path>
+                <g id="interactive" transform="translate(123.000000, 61.000000)">
+                    <path d="M600,102 L600,261.999993 L440,262 L600,102 Z" id="Shape-Copy-25" fill="#7CBDDF" style="mix-blend-mode: darken;" transform="translate(520.000000, 182.000000) scale(-1, 1) translate(-520.000000, -182.000000) "></path>
+                    <path d="M360,22 L480,22 L480,302 L360,301.999994 L360,22 Z" id="Rectangle-path-Copy-22" fill="#FCD315" style="mix-blend-mode: darken;"></path>
+                    <rect id="Rectangle-843" fill="#FFFFFF" x="618" y="0" width="414" height="154"></rect>
+                    <path d="M654.4,18.66 L654.4,60 L660.76,60 L660.76,18.66 L654.4,18.66 Z M676.66,60 L676.66,44.94 C676.66,39.42 680.2,37.44 683.86,37.44 C687.46,37.44 689.74,39.96 689.74,44.4 L689.74,60 L695.92,60 L695.92,43.68 C695.92,35.76 692.02,31.38 685.24,31.38 C682.12,31.38 678.28,32.94 676.66,36.18 L676.66,31.98 L670.48,31.98 L670.48,60 L676.66,60 Z M712.66,31.98 L712.66,21.36 L706.48,21.36 L706.48,31.98 L701.44,31.98 L701.44,37.08 L706.48,37.08 L706.48,60 L712.66,60 L712.66,37.08 L718.6,37.08 L718.6,31.98 L712.66,31.98 Z M751.06,45.9 C751.06,37.02 745,31.38 737.02,31.38 C729.04,31.38 722.62,37.02 722.62,45.9 C722.62,54.78 729.04,60.6 737.02,60.6 C742.3,60.6 747.52,58.32 749.98,53.4 C748.36,52.68 746.5,51.9 744.94,51.18 C743.5,53.76 740.44,55.2 737.32,55.2 C732.82,55.2 729.34,52.5 728.74,48.18 L751,48.18 C751.06,47.58 751.06,46.56 751.06,45.9 L751.06,45.9 Z M745,43.68 L728.74,43.68 C729.34,39.36 732.7,36.78 737.02,36.78 C741.22,36.78 744.4,39.3 745,43.68 L745,43.68 Z M763.78,49.92 C763.78,42.48 766,37.2 771.28,37.2 C772.48,37.2 773.86,37.38 775.42,38.16 L776.44,32.46 C775.54,31.86 773.44,31.38 771.46,31.38 C767.98,31.38 765.22,33.42 763.78,38.4 L763.78,31.98 L757.6,31.98 L757.6,60 L763.78,60 L763.78,49.92 Z M780.76,37.02 L784.3,40.8 C786.1,38.4 789.34,36.96 792.22,36.96 C796.72,36.96 799.3,39.6 799.3,43.26 L799.3,44.52 C796.6,43.26 794.02,42.72 791.62,42.72 C782.8,42.72 779.56,46.86 779.56,51.72 C779.56,57.3 783.82,60.6 790.24,60.6 C793.42,60.6 797.08,59.76 799.3,56.94 L799.3,60 L805.42,60 L805.42,43.26 C805.42,35.46 800.62,31.38 792.64,31.38 C788.98,31.38 783.94,32.52 780.76,37.02 L780.76,37.02 Z M790.48,54.96 C787.12,54.96 785.62,53.52 785.62,51.72 C785.62,50.16 786.58,47.58 791.74,47.58 C793.3,47.58 796.3,48 799.24,49.2 L799.24,51.3 C797.44,54.24 792.88,54.96 790.48,54.96 L790.48,54.96 Z M811.96,45.9 C811.96,54.78 818.86,60.6 826.9,60.6 C831.4,60.6 835.42,58.8 838.06,55.68 L833.2,51.9 C831.7,53.64 829.36,54.66 826.9,54.66 C822.22,54.66 818.08,51.12 818.08,45.9 C818.08,40.68 822.22,37.38 826.9,37.38 C829.36,37.38 831.7,38.34 833.2,40.08 L838,36.24 C835.36,33.12 831.34,31.38 826.9,31.38 C818.86,31.38 811.96,37.02 811.96,45.9 L811.96,45.9 Z M853,31.98 L853,21.36 L846.82,21.36 L846.82,31.98 L841.78,31.98 L841.78,37.08 L846.82,37.08 L846.82,60 L853,60 L853,37.08 L858.94,37.08 L858.94,31.98 L853,31.98 Z M863.68,20.64 C863.68,18.42 865.6,16.74 867.82,16.74 C870.1,16.74 871.9,18.42 871.9,20.64 C871.9,22.86 870.1,24.54 867.82,24.54 C865.6,24.54 863.68,22.86 863.68,20.64 L863.68,20.64 Z M870.88,31.98 L870.88,60 L864.76,60 L864.76,31.98 L870.88,31.98 Z M875.98,31.98 L887.68,60 L893.38,60 L905.08,31.98 L898.48,31.98 L890.56,52.14 L882.52,31.98 L875.98,31.98 Z M936.82,45.9 C936.82,37.02 930.76,31.38 922.78,31.38 C914.8,31.38 908.38,37.02 908.38,45.9 C908.38,54.78 914.8,60.6 922.78,60.6 C928.06,60.6 933.28,58.32 935.74,53.4 C934.12,52.68 932.26,51.9 930.7,51.18 C929.26,53.76 926.2,55.2 923.08,55.2 C918.58,55.2 915.1,52.5 914.5,48.18 L936.76,48.18 C936.82,47.58 936.82,46.56 936.82,45.9 L936.82,45.9 Z M930.76,43.68 L914.5,43.68 C915.1,39.36 918.46,36.78 922.78,36.78 C926.98,36.78 930.16,39.3 930.76,43.68 L930.76,43.68 Z M971.14,60.6 C975.16,60.6 979.36,58.98 981.34,55.98 C982.84,59.1 986.38,60.6 991.36,60.6 L991.36,55.02 C986.14,55.02 985.24,52.08 985.24,47.52 L985.24,39.84 L990.4,39.84 L990.4,34.86 L985.24,34.86 L985.24,29.64 L979.48,29.64 L979.48,34.86 L971.68,34.86 C968.14,34.86 966.52,31.38 966.52,29.16 C966.52,26.52 968.56,24.3 971.74,24.3 C973.84,24.3 975.58,25.5 976.72,27.24 L981.82,24.12 C979.6,20.64 975.82,18.3 971.38,18.36 C965.08,18.48 960.28,23.22 960.28,28.98 C960.28,32.22 961.66,35.28 963.82,36.9 C959.86,39.06 957.52,43.02 957.52,47.7 C957.52,55.02 963.16,60.6 971.14,60.6 L971.14,60.6 Z M971.5,39.84 L979.48,39.84 L979.48,44.94 C979.48,50.7 976.96,54.66 971.5,54.66 C966.88,54.66 963.88,51.66 963.7,47.52 C963.64,43.92 966.46,39.84 971.5,39.84 L971.5,39.84 Z M690.82,100.66 L676.78,130.12 L662.74,100.66 L657.1,100.66 L652.06,142 L658.42,142 L661.96,112.48 L674.14,137.38 L679.54,137.38 L691.66,112.48 L695.2,142 L701.56,142 L696.52,100.66 L690.82,100.66 Z M721.72,142.6 C729.7,142.6 736.42,136.78 736.42,127.9 C736.42,119.02 729.7,113.38 721.72,113.38 C713.8,113.38 707.14,119.02 707.14,127.9 C707.14,136.78 713.8,142.6 721.72,142.6 L721.72,142.6 Z M721.72,136.6 C717.1,136.6 713.26,133.18 713.26,127.9 C713.26,122.74 717.1,119.44 721.72,119.44 C726.4,119.44 730.24,122.74 730.24,127.9 C730.24,133.18 726.4,136.6 721.72,136.6 L721.72,136.6 Z M751.66,113.98 L751.66,103.36 L745.48,103.36 L745.48,113.98 L740.44,113.98 L740.44,119.08 L745.48,119.08 L745.48,142 L751.66,142 L751.66,119.08 L757.6,119.08 L757.6,113.98 L751.66,113.98 Z M762.34,102.64 C762.34,100.42 764.26,98.74 766.48,98.74 C768.76,98.74 770.56,100.42 770.56,102.64 C770.56,104.86 768.76,106.54 766.48,106.54 C764.26,106.54 762.34,104.86 762.34,102.64 L762.34,102.64 Z M769.54,113.98 L769.54,142 L763.42,142 L763.42,113.98 L769.54,113.98 Z M790.96,142.6 C798.94,142.6 805.66,136.78 805.66,127.9 C805.66,119.02 798.94,113.38 790.96,113.38 C783.04,113.38 776.38,119.02 776.38,127.9 C776.38,136.78 783.04,142.6 790.96,142.6 L790.96,142.6 Z M790.96,136.6 C786.34,136.6 782.5,133.18 782.5,127.9 C782.5,122.74 786.34,119.44 790.96,119.44 C795.64,119.44 799.48,122.74 799.48,127.9 C799.48,133.18 795.64,136.6 790.96,136.6 L790.96,136.6 Z M818.68,142 L818.68,126.94 C818.68,121.42 822.22,119.44 825.88,119.44 C829.48,119.44 831.76,121.96 831.76,126.4 L831.76,142 L837.94,142 L837.94,125.68 C837.94,117.76 834.04,113.38 827.26,113.38 C824.14,113.38 820.3,114.94 818.68,118.18 L818.68,113.98 L812.5,113.98 L812.5,142 L818.68,142 Z" id="Interactive-&amp;" fill="#182226"></path>
+                    <path d="M20,142 C8.95444444,142 0,150.954444 0,162 C0,173.045556 8.95444444,182 20,182 C31.0455556,182 40,173.045556 40,162 C40,150.954444 31.0455556,142 20,142 Z" id="Fill-14" fill="#EE4A62" style="mix-blend-mode: darken;"></path>
+                    <path d="M260,62 C248.954444,62 240,70.9544444 240,82 C240,93.0455556 248.954444,102 260,102 C271.045556,102 280,93.0455556 280,82 C280,70.9544444 271.045556,62 260,62 Z" id="Fill-14" fill="#EE4A62" style="mix-blend-mode: darken;"></path>
                 </g>
             </g>
         </g>
