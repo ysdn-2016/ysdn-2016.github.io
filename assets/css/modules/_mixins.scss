@@ -1,34 +1,64 @@
 
-@mixin wrapper ($width: $grid-width) {
-	margin-right: auto;
-	margin-left: auto;
+
+@mixin wrapper ($width: $max-width) {
 	width: 90%;
 	max-width: $width;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-@mixin icon ($icon, $size: 36px) {
+@mixin icon ($wsize, $hsize) {
 	display: block;
-	background: transparent;
-	background-image: url('/assets/images/#{$icon}.svg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: $size;
-	height: $size;
-	flex-basis: $size;
+	width: $wsize;
+	height: $hsize;
 }
 
 @mixin fill {
 	position: absolute;
 	top: 0;
-	left: 0;
 	right: 0;
 	bottom: 0;
+	left: 0;
+}
+
+@mixin clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin aspect-ratio ($width, $height) {
+	height: 0;
+	padding-bottom: percentage($height / $width);
+}
+
+@mixin fullwidth-override {
+	position: relative;
+	left: -50%;
+	width: 200%;
+}
+
+//
+// Typography
+//
+
+@mixin font-smoothing ($value: antialiased) {
+	@if $value == antialiased {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	@else {
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	}
 }
 
 @mixin underline ($color: currentColor) {
 	@include underline-color($color);
-	background-position: bottom;
 	background-repeat: repeat-x;
+	background-position: bottom;
 	background-size: 3px 1px;
 	text-decoration: none;
 }
@@ -37,28 +67,51 @@
 	background-image: linear-gradient(to right, $color 33%, rgba(255,255,255,0) 0%);
 }
 
-@mixin link-hover-color ($color) {
+@mixin underline-hover-color ($color) {
 	@include underline-color(rgba($color, 0.6));
 	color: $color;
 }
 
-@mixin aspect-ratio ($width, $height) {
-	padding-bottom: percentage($height / $width);
-	height: 0;
+@mixin all-caps {
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+@mixin project-category {
+	@include all-caps;
+	color: #aaa;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 1.0;
 }
 
 //
-// Media Queries
+// Blocks
 //
 
-@mixin retina {
-  @media
-    only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 2/1),
-    only screen and (min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi),
-    only screen and (min-resolution: 2dppx) {
-    @content;
-  }
+@mixin avatar {
+	img {
+		border-radius: 50%;
+		overflow: hidden;
+	}
+}
+
+@mixin image-placeholder() {
+	position: relative;
+
+	svg rect {
+		fill: #f2f2f2;
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.0;
+		transition: opacity 500ms ease;
+	}
+
+	img[lazyloaded] {
+		opacity: 1.0;
+	}
 }

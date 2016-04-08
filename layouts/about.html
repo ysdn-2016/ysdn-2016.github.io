@@ -1,0 +1,85 @@
+{% extends 'site.html' %}
+
+{% block main %}
+	<section class="about">
+
+		<div class="about-header">
+			<h1>About</h1>
+			<p>The <a href="http://design.yorku.ca" target="_blank"><span>York/Sheridan Program in Design</span></a> is the first and largest program in Ontario that offers the Bachelor of Design Honours degree, a four-year University degree delivered jointly by York University and Sheridan College.</p>
+			<p>The Intermission is a celebration of the graduating class of 2016; it is a reflection on our past four years and our hopes for the future.</p>
+			<div class="shapes parallax-layer">
+				<div class="shape about-header-shape-1"></div>
+				<div class="shape about-header-shape-3"></div>
+				<div class="shape about-header-shape-5"></div>
+				<div class="shape about-header-shape-2"></div>
+				<div class="shape about-header-shape-4"></div>
+			</div>
+		</div> <!-- .about-header -->
+		<!-- <div class="about-brand">
+			<div class="inner fullwidth">
+				<div class="about-brand-video">
+					<a href="#" class="about-btn-play" id="about-btn-play"></a>
+					<h3>The Intermission</h3>
+					<p>About the brand</p>
+					<p>2:05</p>
+				</div>
+			</div>
+		</div> -->
+
+		<div class="about-info">
+			<h2>Design for the Second Act</h2>
+			<p>It is the eye of the hurricane, a moment of calm preceding and succeeding the storm, the pause between two tumultuous periods.</p>
+			<p>In the theatre world, this break in the action is called "the intermission". During the intermission, the house lights come on, the actors break character, and the audience is allowed a chance to revel in what they've just experienced, and wonder what's to come. The intermission is a pause in theatrics, and a chance for us to truly introduce ourselves.</p>
+			<div class="shapes parallax-layer">
+				<div class="shape-stack-group">
+					<div class="shape about-info-shape-1"></div>
+					<div class="shape about-info-shape-2"></div>
+				</div>
+				<div class="shape about-info-shape-3"></div>
+				<div class="shape about-info-shape-4"></div>
+				<div class="shape about-info-shape-5"></div>
+			</div>
+		</div>
+
+		<div class="about-contact">
+			<div class="row">
+				<div class="col">
+					<h2>Get in Touch</h2>
+				</div>
+				<div class="col">
+					<p>We're happy to answer any questions; just fill out the form below. You can also <a href="/event/#faq">visit our FAQ</a> for more information about the show!</p>
+				</div>
+			</div>
+			<form action="https://formspree.io/hello@ysdn2016.com" method="POST" id="about-form">
+				<div class="row">
+					<div class="col">
+						<div class="name">
+							<label for="name">Full Name</label>
+							<input type="text" name="name">
+						</div>
+						<div class="email">
+							<label for="email">Email</label>
+							<input type="text" name="email">
+						</div>
+						<div class="company">
+							<label for="company">Company (optional)</label>
+							<input type="text" name="company">
+						</div>
+					</div>
+					<div class="col">
+						<div class="name">
+							<label for="name">Message</label>
+							<textarea name="message" class="textarea"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="row form-btn">
+					<div class="col space">&nbsp;</div>
+					<div class="col"><input type="submit" value="Send" class="button"></div>
+				</div>
+			</form>
+		</div> <!-- .about-contact -->
+
+	</section> <!-- .about -->
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'site.html' %}
+
+{% block main %}
+	<nav class="project-nav">
+		<div class="project-nav-filters">
+			<a href="/work/" class="category-target {%- if discipline === 'all' %} active{% endif %}" data-discipline="all">All</a>
+			<a href="/work/communication/" class="category-target {%- if discipline === 'communication' %} active{% endif %}" data-discipline="communication">Communication</a>
+			<a href="/work/physical/" class="category-target {%- if discipline === 'physical' %} active{% endif %}" data-discipline="physical">Physical</a>
+			<a href="/work/information/" class="category-target {%- if discipline === 'information' %} active{% endif %}" data-discipline="information">Information</a>
+			<a href="/work/interactive/" class="category-target {%- if discipline === 'interactive' %} active{% endif %}" data-discipline="interactive">Interactive &amp; Motion</a>
+		</div>
+	</nav>
+	<div class="project-category-intro">
+		<img class="project-category-intro-desktop" src="/assets/images/{{ discipline }}-desktop.svg" />
+		<img class="project-category-intro-tablet" src="/assets/images/{{ discipline }}-tablet.svg" />
+		<img class="project-category-intro-mobile" src="/assets/images/{{ discipline }}-mobile.svg" />
+	</div>
+	<div class="project-subnav project-nav">
+		<div class="project-nav-categories">
+			<a href="#!" class="project-nav-category active" data-category="*">All Work</a>
+			{% for category in categories | filter('discipline', discipline) %}
+				<a href="#!" class="project-nav-category" data-category="{{ category.id }}">{{ category.label }}</a>
+			{% endfor %}
+		</div>
+		<div class="project-nav-view">
+			<div class="student-nav-view-search">
+				<input type="text" id="student-nav-view-search-input" class="student-nav-view-search-input" placeholder="Search" />
+				<label for="student-nav-view-search-input"><i class="student-nav-view-search-icon i-search"></i></label>
+			</div>
+		</div>
+	</div>
+	<div class="project-grid loading" data-columns>
+	{% set listing = projects | shuffle %}
+	{% if discipline !== 'all' %}
+		{% set listing = listing | filterByDiscipline(discipline) %}
+	{% endif %}
+	{% for project in listing %}
+	{% if project.thumbnail %}
+		{% include 'partials/project-preview.html' %}
+	{% endif %}
+	{% endfor %}
+	</div>
+	<div class="hidden project-grid-search-results--few project-grid-search-results">
+		<p>Not the right project?<br/><a href="#" class="project-grid-search-results-clear">Clear your search</a>.</p>
+	</div>
+	<div class="hidden project-grid-search-results--none project-grid-search-results">
+		<p>Can't find the project you're looking for?<br/><a href="#" class="project-grid-search-results-clear">Clear your search</a>.</p>
+	</div>
+{% endblock %}

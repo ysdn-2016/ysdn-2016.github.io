@@ -1,10 +1,27 @@
-@import "modules/variables";
-@import "modules/mixins";
+@import 'modules/variables';
+@import 'modules/mixins';
 
-@import "partials/font-face";
-@import "partials/normalize";
-@import "partials/base";
-@import "partials/animations";
+@import 'partials/normalize';
+@import 'partials/animations';
+@import 'partials/shapes';
+@import 'partials/font-face';
+@import 'partials/icons';
+@import 'partials/base';
 
-@import "pages/event";
-@import "pages/redirect";
+@import 'modules/extends';
+
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/project-index';
+@import 'pages/project';
+@import 'pages/sponsors';
+@import 'pages/student-index';
+@import 'pages/student';
+@import 'pages/event';
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/project_footer';
+@import 'components/subscribe';
+
+@import 'partials/utilities';

@@ -1,0 +1,91 @@
+
+.footer {
+	// position: absolute;
+	width: 90%;
+	margin: 0 auto;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	font-family: $sofia;
+	font-size: 0.875em;
+
+	a {
+		padding-bottom: 2px;
+		color: #1b2020;
+		line-height: 30px;
+		text-decoration: none;
+		&:hover span {
+			border-bottom: 1px solid black;
+			padding-bottom: 0;
+		}
+	}
+
+	a + a {
+		margin-left: 20px;
+	}
+}
+
+.footer-wrapper {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px black solid;
+	padding: 20px 0 28px;
+	max-width: $max-width;
+	margin: 0 auto;
+
+	@media #{$media-mobile-large} {
+		flex-direction: column;
+	    -webkit-align-items: center;
+	    align-items: center;
+	    padding: 16px 0 16px;
+	}
+}
+.footer-nav {
+	@media #{$media-mobile-large} {
+		padding-bottom: 20px;
+	}
+}
+
+.footer-social {
+	font-size: 22px;
+	text-align: right;
+	a + a {
+		margin-left: 8px;
+	}
+	a:hover {
+		opacity: 0.6;
+	}
+}
+
+
+//
+// CTA Footer
+//
+
+.feature {
+	width: 90%;
+	margin: 96px auto 0;
+	max-width: $max-width;
+	padding: 42px 0 30px;
+	border-top: 1px #ccc solid;
+	text-align: center;
+	p,
+	a {
+		font-family: $sofia;
+		font-size: 21px;
+		max-width: 27em;
+		margin: 0 auto 1.25em;
+		line-height: 32px;
+		letter-spacing: 0.15px;
+	}
+}
+
+.feature--student {
+	p,
+	a {
+		max-width: 35em;
+	}
+	@media #{$media-mobile-large} {
+		margin-top: 0px;
+	}
+}

@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% block meta:og %}
+	<meta property="og:site_name" content="YSDN 2016"/>
+	<meta property="og:title" content="YSDN 2016: {{ name }}"/>
+	<meta property="og:type" content="profile" />
+	<meta property="og:url" content="http://ysdn2016.com{{ href }}" />
+	<meta property="og:description" content="{% if introduction %}{{ introduction }}{% else %}The York/Sheridan Program in Design invites you to The Intermission — an exhibition of the work of the 2016’s graduating class.{% endif %}" />
+	<meta property="profile:first_name" content="{{ firstName }}" />
+	<meta property="profile:last_name" content="{{ lastName }}" />
+	<meta property="og:image" content="{{ portrait | asset_url({ width: 1200, height: 631, fit: 'facearea', facepad: 3 }) }}" />
+	<meta property="og:image:width" content="{{ portrait.width }}" />
+	<meta property="og:image:height" content="{{ portrait.height }}" />
+{% endblock %}
+
+{% block body %}
+
+	{% include 'partials/header.html' %}
+
+	<section class="student-profile student-profile--{{ id }}">
+		<header class="student-profile-header">
+			<div class="student-profile-header-wrapper">
+				<div class="student-profile-meta">
+					<div class="student-profile-hero">
+						<h1 class="student-profile-name">{{ name }}</h1>
+						{% if introduction %}
+							<div class="student-profile-introduction">{{ introduction | markdown | newTab | safe }}</div>
+						{% endif %}
+					</div>
+					<div class="student-profile-social">
+						{# {% if email %}<a href="mailto:{{ email }}" class="student-profile-social-link student-profile-social-email" target="_blank"><span>Email</span></a>{% endif %} #}
+						{% if url %}<a href="{{ url }}" class="student-profile-social-link student-profile-social-url" target="_blank"><span>Website</span></a>{% endif %}
+						{% if behance %}<a href="https://www.behance.net/{{ behance }}" class="student-profile-social-link student-profile-social-behance" target="_blank"><span>Behance</span></a>{% endif %}
+						{% if twitter %}<a href="https://twitter.com/{{ twitter }}" class="student-profile-social-link student-profile-social-twitter" target="_blank"><span>Twitter</span></a>{% endif %}
+						{% if instagram %}<a href="https://www.instagram.com/{{ instagram | replace('@', '') }}" class="student-profile-social-link student-profile-social-instagram" target="_blank"><span>Instagram</span></a>{% endif %}
+						{% if dribbble %}<a href="https://dribbble.com/{{ dribbble | replace('@', '') }}" class="student-profile-social-link student-profile-social-dribbble" target="_blank"><span>Dribbble</span></a>{% endif %}
+						{% if linkedin %}<a href="https://ca.linkedin.com/in/{{ linkedin | replace('@', '') }}" class="student-profile-social-link student-profile-social-linkedin" target="_blank"><span>LinkedIn</span></a>{% endif %}
+						{% if github %}<a href="https://github.com/{{ github | replace('@', '') }}" class="student-profile-social-link student-profile-social-github" target="_blank"><span>GitHub</span></a>{% endif %}
+					</div>
+				</div>
+				<div class="student-profile-portrait{% if name === 'Jinah Kim' %} student-profile-portrait--empty{% endif %} c{{ id }}">
+					<img class="student-profile-portrait-image" src="{{ pixel }}" data-src="{{ portrait | asset_url({ width: 600 }) }}" data-retina-src="{{ portrait | asset_url({ width: 1200 }) }}" draggable="false" />
+					<div class="shapes">
+						<div class="wrapper shape-1-wrapper">
+							<div class="shape shape-1"></div>
+						</div>
+						<div class="wrapper shape-2-wrapper">
+							<div class="shape shape-2"></div>
+						</div>
+						<div class="wrapper shape-3-wrapper">
+							<div class="shape shape-3"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="student-profile-body">
+			<div class="student-profile-body-wrapper">
+				<aside class="student-profile-sidebar">
+					<div class="student-profile-sidebar-note student-profile-sidebar-biography">
+						<h5 class="student-profile-sidebar-note-label">About</h5>
+						{{ biography | markdown | newTab | default(config.studentProfile.defaults.biography) | safe }}
+					</div>
+					{% for note in sideNotes %}
+						<div class="student-profile-sidebar-note">
+							<h5 class="student-profile-sidebar-note-label">{{ note.label }}</h5>
+							{{ note.contents | markdown | newTab | safe }}
+						</div>
+					{% endfor %}
+				</aside>
+				<div class="student-profile-main-column">
+					{% set caseStudies = projects | filter("type", "case-study") %}
+					{% set standardProjects = projects | filter("type", "standard") %}
+					{% if caseStudies.length > 0 %}
+					<div class="student-profile-projects-header">Case Studies</div>
+					<div class="student-profile-projects student-profile-projects--case-study">
+						{% for project in caseStudies %}
+							<a class="student-profile-project student-profile-project--case-study" href="{{ project.href }}">
+								<div class="student-profile-project-thumbnail">
+								{% if project.thumbnail.height > project.thumbnail.width %}
+										<svg class="student-profile-project-thumbnail-placeholder" viewBox="0 0 800 500" preserveAspectRatio="xMinYMin" width="800">
+											<rect x="0" y="0" width="100%" height="100%"></rect>
+										</svg>
+										<img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 800, height: 500, fit: 'crop', crop: 'entropy' }) }}" data-retina-src="{{ project.thumbnail | asset_url({ width: 1600, height: 1000, fit: 'crop', crop: 'entropy' }) }}" alt="{{ project.title }}" />
+									{% else %}
+										<svg class="student-profile-project-thumbnail-placeholder" viewBox="0 0 {{ project.thumbnail.width }} {{ project.thumbnail.height }}" preserveAspectRatio="xMinYMin" width="{{ project.thumbnail.width }}">
+											<rect x="0" y="0" width="100%" height="100%"></rect>
+										</svg>
+										<img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 800 }) }}" data-retina-src="{{ project.thumbnail | asset_url({ width: 1600 }) }}" alt="{{ project.title }}" />
+									{% endif %}
+								</div>
+								<div class="student-profile-project-meta">
+									<div class="student-profile-project-header">
+										<h4 class="student-profile-project-title">{{ project.title }}</h4>
+										<h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
+									</div>
+									<div class="student-profile-project-description">
+										{{ project.contents | toString | excerpt(230) | safe }}
+									</div>
+								</div>
+							</a>
+						{% endfor %}
+					</div>
+					{% endif %}
+					{% if standardProjects.length > 0 %}
+						<div class="student-profile-projects-header">Projects</div>
+						<div class="student-profile-projects student-profile-projects--standard" data-columns>
+							{% for project in standardProjects %}
+							<a class="student-profile-project student-profile-project--standard" href="{{ project.href }}">
+								<div class="student-profile-project-thumbnail">
+									<svg class="student-profile-project-thumbnail-placeholder" viewBox="0 0 {{ project.thumbnail.width }} {{ project.thumbnail.height }}" preserveAspectRatio="xMinYMin" width="{{ project.thumbnail.width }}">
+										<rect x="0" y="0" width="100%" height="100%"></rect>
+									</svg>
+									<img src="{{ pixel }}" data-src="{{ project.thumbnail | asset_url({ width: 400 }) }}" data-retina-src="{{ project.thumbnail | asset_url({ width: 800 }) }}" alt="{{ project.title }}" />
+								</div>
+								<div class="student-profile-project-meta">
+									<div class="student-profile-project-header">
+										<h4 class="student-profile-project-title">{{ project.title }}</h4>
+										<h5 class="student-profile-project-category">{{ project.category | titleize }}</p>
+									</div>
+								</div>
+							</a>
+							{% endfor %}
+						</div>
+					{% endif %}
+					{% if !standardProjects.length && !caseStudies.length %}
+						<div class="student-profile-projects-header student-profile-projects-header-placeholder">Projects</div>
+						<div class="student-profile-projects-placeholder">
+							This student hasn't uploaded any work yet :(
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</main>
+	</section>
+
+	{% include 'partials/footer.html' %}
+
+{% endblock %}

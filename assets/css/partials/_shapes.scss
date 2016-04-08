@@ -1,0 +1,107 @@
+.shape {
+	position: absolute;
+	&.screen {
+		mix-blend-mode: screen !important;
+	}
+}
+
+.parallax {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	height: 100vh;
+
+	perspective: 1px;
+}
+
+.parallax-layer {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	pointer-events: none;
+	transform: translateZ(-0.04px);
+	&-double {
+		transform: translateZ(-0.08px);
+	}
+}
+
+@mixin dot-grid() {
+	background-image: url(/assets/images/dot-grid.svg);
+	background-repeat: repeat;
+	background-position: top left;
+}
+
+@mixin dot-grid-unit() {
+	background-image: url(/assets/images/grid_unit_40px.svg);
+	background-repeat: repeat;
+	background-position: top left;
+	background-size: 40px;
+}
+
+@mixin shape-triangle($size, $color, $rotation) {
+	border-top: 0 solid transparent;
+	border-right: $size solid $color;
+	border-bottom: $size solid transparent;
+	width: 0;
+	height: 0;
+	transform: rotate($rotation + deg);
+}
+
+@mixin shape-circle($size, $color) {
+	border-radius: 50%;
+	background-color: $color;
+	width: $size;
+	height: $size;
+}
+
+@mixin shape-half-circle($size, $color, $rotation) {
+	border-radius: $size $size 0 0;
+	background-color: $color;
+	width: $size;
+	height: $size/2;
+	transform: rotate($rotation + deg);
+}
+
+@mixin shape-rectangle($width, $height, $color, $rotation) {
+	background-color: $color;
+	width: $width;
+	height: $height;
+	transform: rotate($rotation + deg);
+}
+
+@mixin shape-square($size, $color, $rotation) {
+	background-color: $color;
+	width: $size;
+	height: $size;
+	transform: rotate($rotation + deg);
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}

@@ -1,0 +1,27 @@
+{% if type !== 'case-study' and type !== 'standard' %}
+<div class="feature {%- if firstName %} feature--student{% endif %}">
+  {% if firstName %}
+    <p>To meet {{ firstName }} and the rest of the cast, come check out the Grad Show on April 19 at the Liberty Grand.</p>
+  {% else %}
+    <p>To meet the cast and explore their work, come check out the Grad Show on April 19 at the Liberty Grand.</p>
+  {% endif %}
+  <a href="/event/" class="btn-primary">Attend the Grad Show</a>
+</div>
+{% endif %}
+
+<footer class="footer">
+  <div class="footer-wrapper">
+    <nav class="footer-nav">
+      <a href="/work/" {% if id == 'work' %}class="active"{% endif %}><span>Work</span></a>
+      <a href="/students/" {% if id == 'students' %}class="active"{% endif %}><span>Cast</span></a>
+      <a href="/sponsors/" {% if id == 'sponsors' %}class="active"{% endif %}><span>Sponsors</span></a>
+      <a href="/about/" {% if id == 'about' %}class="active"{% endif %}><span>About</span></a>
+    </nav>
+    <div class="footer-social">
+      <a href="{{ social.facebook.url }}" class="event-ribbon-social-media-icon i-facebook" target="_blank"></a>
+      <a href="{{ social.twitter.url }}" class="event-ribbon-social-media-icon i-twitter" target="_blank"></a>
+      <a href="{{ social.instagram.url }}" class="event-ribbon-social-media-icon i-instagram" target="_blank"></a>
+      <a href="{{ social.mail.url }}" class="event-ribbon-social-media-icon i-mail" target="_blank"></a>
+    </div>
+  </div>
+</footer>

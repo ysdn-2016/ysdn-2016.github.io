@@ -1,0 +1,39 @@
+general:
+  branches:
+    ignore:
+      - gh-pages
+      - master
+experimental:
+  notify:
+    branches:
+      only:
+        - production
+
+machine:
+  node:
+    version: 5.7.0
+  environment:
+    CIRCLE_BUILD_DIR: $HOME/$CIRCLE_PROJECT_REPONAME
+    PATH: $PATH:$CIRCLE_BUILD_DIR/bin
+  post:
+    - mkdir -p $CIRCLE_BUILD_DIR/bin
+    - git config --global user.name "CircleCi"
+    - git config --global user.email "ci@example.com"
+dependencies:
+  pre:
+    - ./bin/ci/install-sassc
+  override:
+    - npm install --dev
+  cache_directories:
+    - bin
+deployment:
+  production:
+    branch: production
+    commands:
+      - make --no-print-directory deploy:production
+      - ./bin/ci/notify "production" "http://ysdn2016.com"
+  staging:
+    branch: develop
+    commands:
+      - make --no-print-directory deploy
+      - ./bin/ci/notify "staging" "http://staging.ysdn2016.com"

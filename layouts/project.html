@@ -1,0 +1,21 @@
+{% extends 'site.html' %}
+
+{% block meta:og %}
+	<meta property="og:site_name" content="YSDN 2016"/>
+	<meta property="og:title" content="YSDN 2016: {{ title }}"/>
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://ysdn2016.com{{ href }}" />
+	<meta property="og:description" content="{{ contents | excerpt(500) | safe }}" />
+	<meta property="og:image" content="{{ thumbnail.url }}" />
+	<meta property="og:image:width" content="{{ thumbnail.width }}" />
+	<meta property="og:image:height" content="{{ thumbnail.height }}" />
+{% endblock %}
+
+{% block main %}
+	{% if type == 'case-study' %}
+		{% include 'projects/case-study.html' %}
+	{% else %}
+		{% include 'projects/standard.html' %}
+	{% endif %}
+	{% include 'partials/project-footer.html' %}
+{% endblock %}

@@ -1,37 +1,20 @@
-
 * {
 	box-sizing: border-box;
 }
 
-html {
-	background: $black;
-}
-
-html.blue-elastic-scroll {
-	background: $accent;
+html,
+body {
+	height: 100%;
 }
 
 body {
+	@include font-smoothing;
+	background: #fff;
+	color: $black;
 	font-family: $sofia;
 	font-size: 18px;
-	line-height: $line-height;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-::selection {
-	background: rgba($blue, 0.25);
-}
-
-//
-// Typography
-//
-
-h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-	font-weight: normal;
-	line-height: 1.2;
-	text-rendering: optimizeLegibility;
+	font-feature-settings: 'kern';
+	line-height: 1.6em;
 }
 
 a {
@@ -39,52 +22,140 @@ a {
 	text-decoration: none;
 }
 
-p {
-	margin: 0;
-}
-
-p + p {
-	margin-top: 1em;
-}
-
-p a {
-	@include underline();
-}
-
-ul,
-ol {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-//
-// Images
-//
-
 img,
 svg {
+	display: block;
 	max-width: 100%;
 	height: auto;
-	vertical-align: top;
 }
 
-//
-// Components
-//
-
-.wrapper {
-	@include wrapper();
+i {
+	font-style: normal;
 }
 
-//
-// Utility
-//
+/**
+ * Selection
+ */
 
-.locked {
-	overflow: hidden;
+::selection {
+	background: rgba($blue, 0.25);
 }
 
-.no-wrap {
-	white-space: nowrap;
+/**
+ *
+ * Headers
+ *
+ */
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: $sofia;
+	font-weight: bold;
+	text-rendering: optimizeLegibility;
+}
+
+h1 {
+	font-size: 60px;
+	line-height: 64px;
+}
+
+h2 {
+	font-size: 36px;
+	line-height: 44px;
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 32px;
+}
+
+h4 {
+	font-size: 14px;
+	line-height: 12px;
+}
+
+/**
+ *
+ * Forms
+ *
+ */
+
+input {
+	border: 1px solid #000;
+	background: rgba(255, 255, 255, 0.5);
+	outline: none;
+	padding: 10px;
+	color: $black;
+	font-family: $sofia;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.min-input {
+	border: none;
+	border-bottom: 3px solid #000;
+}
+
+.btn-primary, .button {
+	cursor: pointer;
+	background-color: $black;
+	display: inline-block;
+	margin: 0 0 10px 0;
+	padding: 10px 20px 11px;
+	color: $white;
+	font-family: $sofia;
+	font-size: 16px !important;
+	line-height: 19px !important;
+	text-align: center;
+	&:hover {
+		background-color: $red;
+	}
+}
+
+
+//
+// Common Elements
+//
+
+.container {
+	position: relative;
+	overflow-x: hidden;
+	min-height: 100%;
+}
+
+@media only screen and (max-width : 640px) {
+	.container {
+		margin-right: 0;
+		margin-bottom: $ribbon-peek;
+	}
+}
+
+.main {
+	@include wrapper;
+	// Use padding so that footer will properly display on pages without enough
+	// content to fill the page vertically.
+	padding: 40px 0 0;
+}
+
+.row {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.col-4 {
+	flex: 0 0 auto;
+	flex-basis: 33.333%;
+	box-sizing: border-box;
+	max-width: 33.333%;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	@media only screen and (max-width: 48em) {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
 }

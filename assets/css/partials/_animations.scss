@@ -11,27 +11,19 @@
 	}
 }
 
+//
+// Student Film Strip Animations
+//
 
-@keyframes marquee {
-	from {
-		transform: translateX(105%);
-	}
-	to {
-		transform: translateX(-105%);
-	}
+// NOTE: 80% because we want to shift over 4 out of 5 frames.
+// 4/5 = 80%
+
+@keyframes play {
+	from { transform: translateX(0%); }
+	to { transform: translateX(-80%); }
 }
 
-@keyframes marquee-offset {
-	0% {
-		transform: translateX(0);
-	}
-	49.99% {
-		transform: translateX(-105%);
-	}
-	50% {
-		transform: translateX(105%);
-	}
-	100% {
-		transform: translateX(0);
-	}
+@keyframes rewind {
+	from { transform: translateX(-80%); }
+	to { transform: translateX(0%); }
 }

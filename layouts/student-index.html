@@ -1,0 +1,36 @@
+{% extends 'site.html' %}
+
+{% block main %}
+	<section class="student-index">
+		<div class="student-search-wrapper">
+			<div class="student-search">
+				<div class="student-search-icon"></div>
+				<div class="student-search-typeahead"></div>
+				<input class="student-search-input" type="text" placeholder="Looking for someone?" />
+			</div>
+		</div>
+		<div class="student-grid">
+			{% for item in studentGrid %}
+				{% if item.type === 'shape' %}
+					<a class="student-grid-block student-grid-shape-container">
+						<div class="student-grid-shape student-grid-shape--{{ item.shape }}"></div>
+					</a>
+				{% endif %}
+				{% if item.type === 'intermission' %}
+					<div class="student-grid-intermission"><p>{{ item.text }}</p></div>
+				{% endif %}
+				{% if item.type === 'student' %}
+					<a class="student-grid-block student-preview student" href="{{ item.href }}" data-name="{{ item.name }}" data-categories="{{ item.projectCategories | map('id') | join(',') }}">
+						<div class="student-preview-image">
+							<img src="{{ pixel }}" data-mobile-src="{{ item.portrait | asset_url({ height: 300 }) }}" data-mobile-retina-src="{{ item.portrait | asset_url({ height: 600 }) }}" data-desktop-src="{{ item.strip | asset_url({ height: 400 }) }}" data-desktop-retina-src="{{ item.strip | asset_url({ height: 800 }) }}" alt="{{ item.name }}" draggable="false" />
+						</div>
+						<div class="student-preview-name">{{ item.name }}</div>
+					</a>
+				{% endif %}
+			{% endfor %}
+		</div>
+		<div class="student-search-results hidden">
+			<p><span class="student-search-results-prompt">Can't find</span> who you're looking for?<br/>Maybe try <a href="#" class="student-search-results-clear">looking at our faces</a> again.</p>
+		</div>
+	</section>
+{% endblock %}

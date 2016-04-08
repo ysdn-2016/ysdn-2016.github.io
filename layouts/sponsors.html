@@ -1,0 +1,82 @@
+{% extends 'site.html' %}
+
+{% block main %}
+	<section class="sponsors">
+
+		<div class="sponsors-header">
+			<h1>Sponsors</h1>
+			<p>We would like to express our gratitude to our generous sponsors. This show wouldn’t have been possible without their kind support.</p>
+
+			<div class="shapes parallax-layer">
+				<div class="shape sponsors-header-shape-1"></div>
+				<div class="shape sponsors-header-shape-2"></div>
+				<div class="shape sponsors-header-shape-3"></div>
+				<div class="shape sponsors-header-shape-4"></div>
+				<div class="shape sponsors-header-shape-5"></div>
+			</div>
+		</div> <!-- .sponsors-header -->
+
+		<section class="sponsor-page-sponsors sponsor-page-section sponsor-page-sponsors-list">
+		<div class="sponsor-page-sponsors-logos">
+			<div class="sponsor-page-sponsors-presenting-sponsors">
+			<p>Presenting Sponsor</p>
+				{% for sponsor in event.sponsors | filter('priority', 1) %}
+				<a class="sponsor-page-presenting-sponsor sponsor-page-sponsor sponsor-page-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+					{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
+					{% include logo %}
+				</a>
+				{% endfor %}
+			</div>
+			<div class="sponsor-page-sponsors-founding-sponsors">
+			<p>Interactive Sponsor</p>
+				{% for sponsor in event.sponsors | filter('priority', 2) %}
+				<a class="sponsor-page-founding-sponsor sponsor-page-sponsor sponsor-page-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+					{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
+					{% include logo %}
+				</a>
+				{% endfor %}
+			</div>
+			<div class="sponsor-page-sponsors-patron-sponsors">
+				<p>Sponsors</p>
+				{% for sponsor in event.sponsors | filter('priority', 3) %}
+				<a class="sponsor-page-patron-sponsor sponsor-page-sponsor sponsor-page-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+					{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
+					{% include logo %}
+				</a>
+				{% endfor %}
+			</div>
+			<div class="sponsor-page-sponsors-patron-sponsors">
+				{% for sponsor in event.sponsors | filter('priority', 4) %}
+				<a class="sponsor-page-patron-sponsor sponsor-page-sponsor sponsor-page-sponsor--{{ sponsor.id }}" href="{{ sponsor.url }}" rel="nofollow" target="_blank">
+					{% set logo = "partials/sponsors/%.html" | replace('%', sponsor.id) %}
+					{% include logo %}
+				</a>
+				{% endfor %}
+			</div>
+		</div>
+		</section>
+
+		<div class="sponsors-interest">
+			<p>If you are interested in supporting this event or a Grad Show in the future, <a href="mailto:hello@ysdn2016.com?subject=Sponsorship"><span>please get in touch.</span></a></p>
+		</div>
+		<!-- .sponsors -->
+
+	<!-- Hide until Videos are Received -->
+	<!--
+	<section class="sponsors">
+		<div class="sponsors-header">
+			<h1>RL Solutions</h1>
+			<p>Presenting Sponsor</p>
+		</div>
+		<div class="sponsors-videos">
+			<div class='embed-container'>
+				<iframe src='https://player.vimeo.com/video/8057966' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			</div>
+			<div class='embed-container'>
+				<iframe src='https://player.vimeo.com/video/8057966' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			</div>
+		</div>
+	</section> -->
+	</section>
+
+{% endblock %}

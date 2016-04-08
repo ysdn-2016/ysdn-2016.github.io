@@ -1,165 +1,54 @@
+var router = require('page');
+var loop = require('raf-scroll');
+var Lazyload = require('./lib/lazyload');
+var Header = require('./lib/header');
+var EventRibbon = require('./lib/ribbon');
 
-var fs = require('fs')
-var ready = require('domready')
-var events = require('dom-events')
-var enquire = require('enquire.js')
-var Instafeed = require('instafeed.js')
+var routes = {
+  about: require('./routes/about'),
+  home: require('./routes/home'),
+  work: require('./routes/work'),
+  project: require('./routes/project'),
+  students: require('./routes/students'),
+  student: require('./routes/student'),
+  event: require('./routes/event')
+};
 
-var breakpoints = require('./lib/media')
-var stripHashtags = require('./lib/helpers/strip-hashtags')
-var truncate = require('./lib/helpers/truncate')
+router('/', routes.home);
+router('/about/', routes.about);
+router('/work/', routes.work);
+router('/work/:category/', routes.work);
+router('/event/', routes.event);
+// router.exit('/event/', routes.event.exit);
+router('/:student/:project/', routes.project);
+router('/students/', routes.students);
+router('/:student/', routes.student);
+router.start({ click: false });
 
-var Subscribe = require('./lib/subscribe')
+$(function () {
+  EventRibbon.init();
 
-var mapOptions = {
-	zoom: 15,
-	center: new google.maps.LatLng(43.6337886,-79.432927),
-	scrollwheel: false,
-	disableDefaultUI: true,
-	disableDoubleClickZoom: true,
-	styles: require('./templates/map')
-}
+  // NB: Keep in sync with _header.scss
+  enquire.register('screen and (min-width: 600px)', {
+    match: function () {
+      Header.init();
+    },
+    unmatch: function () {
+      Header.destroy();
+    }
+  })
 
-var markerOptions = {
-	breakpoints: breakpoints
-}
+  $('a[href="/event/"]').on('click', function (e) {
+    e.preventDefault();
+    EventRibbon.open();
+    router('/event/');
+  })
 
-var feedOptions = {
-	clientId: '467ede5a6b9b48ae8e03f4e2582aeeb3',
-	userId: '2228340350',
-	sortBy: 'most-recent',
-	template: require('./templates/instagram.html'),
-	limit: 6
-}
-
-ready(function () {
-
-	Subscribe.init()
-
-	var mapElement = document.querySelector('[data-map]')
-	var map = googleMap(mapElement)
-	var marker = googleMapMarker()
-	var mapPosition = { x: 0.5, y: 0.5 }
-	var imageCount = 0
-
-	var feedElement = document.querySelector('[data-instagram]')
-	var feed = instagramFeed(feedElement)
-
-	var venueAddressLink = document.querySelector('[data-venue-address]')
-
-	events.on(venueAddressLink, 'mouseenter', onVenueMouseEnter)
-	google.maps.event.addDomListener(window, 'resize', onMapResize)
-	google.maps.event.addDomListener(marker, 'click', onMapMarkerClick)
-	google.maps.event.addDomListener(marker, 'mouseover', onMapMarkerMouseOver)
-	google.maps.event.addDomListener(marker, 'mouseout', onMapMarkerMouseOut)
-	google.maps.event.addListenerOnce(map, 'idle', onMapLoad)
-
-	/**
-	 * Event Handlers
-	 */
-
-	function instagramFeed (el) {
-		var feed = new Instafeed({
-			accessToken: '5139102.1677ed0.e96631b309c2454493762538cccb4e1d',
-			target: el,
-			sort: feedOptions.sortBy,
-			limit: feedOptions.limit * 2,
-			get: 'user',
-			resolution: 'standard_resolution',
-			userId: feedOptions.userId,
-			template: feedOptions.template,
-			filter: function (item) {
-				if (item.type !== 'image') return false
-				if (imageCount >= feedOptions.limit) return false
-				// HACK: we adjust the captions in filter function 🙈
-				item.caption.text = stripHashtags(item.caption.text)
-				item.caption.text = truncate(item.caption.text, 200)
-				imageCount++
-				return true
-			},
-		})
-		feed.run()
-		return feed
-	}
-
-	function googleMap (el) {
-		var map = new google.maps.Map(mapElement, mapOptions)
-		return map
-	}
-
-	function googleMapMarker () {
-		return new google.maps.Marker({
-			position: new google.maps.LatLng(43.631014, -79.426256),
-			map: map,
-			icon: '/assets/images/marker.svg',
-			title: 'Liberty Grand'
-		})
-	}
-
-
-
-	function onMapLoad () {
-		markerOptions.breakpoints.forEach(function (breakpoint) {
-			enquire.register(breakpoint.query, function () {
-				mapPosition = breakpoint.coords
-			})
-		})
-		onMapResize()
-	}
-
-	function onMapResize () {
-		setMapCenterWithPercentageOffset(marker.getPosition(), mapPosition.x, mapPosition.y)
-	}
-
-	function onMapMarkerClick () {
-		window.open('https://goo.gl/maps/YuXwP9XNDhQ2', '_blank').focus()
-	}
-
-	function onMapMarkerMouseOver () {
-		venueAddressLink.classList.add('hover')
-	}
-
-	function onMapMarkerMouseOut () {
-		venueAddressLink.classList.remove('hover')
-	}
-
-
-	function onVenueMouseEnter (e) {
-		bounceMarker()
-	}
-
-	/**
-	 * Helper functions
-	 */
-
-	function bounceMarker () {
-		if (marker.getAnimation() != null) return
-		marker.setAnimation(google.maps.Animation.BOUNCE)
-		setTimeout(function () {
-			marker.setAnimation(null)
-		}, 750)
-	}
-
-	function setMapCenterWithPercentageOffset (coord, x, y) {
-		var bounds = mapElement.getBoundingClientRect()
-		var normalizedX = x - 0.5
-		var normalizedY = 0.5 - y
-		var offsetX = bounds.width * normalizedX
-		var offsetY = bounds.height * normalizedY
-		setMapCenterWithOffset(coord, offsetX, offsetY)
-	}
-
-	function setMapCenterWithOffset (coord, x, y) {
-		var scale = Math.pow(2, map.getZoom())
-		var projection = map.getProjection()
-
-		if (!projection) return
-		var a = projection.fromLatLngToPoint(coord)
-		var b = new google.maps.Point(x / scale, y / scale)
-
-		var target = new google.maps.Point(a.x - b.x, a.y + b.y)
-		map.setCenter(projection.fromPointToLatLng(target))
-	}
-
-
-})
+  $('a[href="#!top"]').on('click', function (e) {
+    e.preventDefault()
+    $('html,body,.parallax').animate({ scrollTop: 0 }, {
+      easing: 'easeOutExpo',
+      duration: 800
+    });
+  });
+});

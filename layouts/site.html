@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	<div class="container">
+		{% include 'partials/header.html' %}
+		<main class="main">
+			{% block main %}{% endblock %}
+		</main>
+		{% if id !== 'home' %}
+			{% include 'partials/footer.html' %}
+		{% endif %}
+	</div>
+{% endblock %}

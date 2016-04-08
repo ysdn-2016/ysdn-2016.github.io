@@ -1,0 +1,268 @@
+//
+// Navigation
+//
+
+.project-nav {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+	font-family: $sofia;
+	font-size: 19px;
+
+	@media #{$media-tablet-medium} {
+		font-size: 16px;
+	}
+
+	a {
+		margin-right: 16px;
+		color: $light-gray;
+		font-weight: 400;
+
+		&.active,
+		&:hover {
+			color: black;
+		}
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+	@media #{$media-tablet-medium} {
+		label {
+			background-color: white;
+			box-shadow: 7px 0 9px 4px rgba(255, 255, 255, 1);
+			position: absolute;
+			margin-left: 0;
+			transition: margin-left 0.35s ease;
+		}
+	}
+	.student-nav-view-search input {
+		border: none;
+		padding: 0;
+		width: 68px;
+		color: black;
+		font-size: 19px;
+		line-height: 1.6em;
+		transition: width 0.25s ease;
+
+		&:focus {
+			width: 200px;
+			&::-webkit-input-placeholder {
+				opacity: 0.3;
+			}
+		}
+		&::-webkit-input-placeholder {
+			opacity: 1;
+			transition: opacity 0.25s ease;
+		}
+
+		@media #{$media-tablet-medium} {
+			background-color: white;
+			position: absolute;
+			width: 30px;
+			color: transparent;
+			transition: width 250ms ease, opacity 1000ms ease 250ms, color 100ms ease;
+			&::-webkit-input-placeholder {
+				opacity: 0;
+				transition: opacity 250ms ease 0ms;
+
+				delay: 5s;
+			}
+			&:focus {
+				background-color: white;
+				opacity: 1;
+				padding-right: 20px;
+				width: 100%;
+				color: black;
+				transition: width 250ms ease 0s, opacity 150ms ease, color 500ms ease 250ms;
+				& + label {
+					margin-left: calc(90% - 16px);
+				}
+				&::-webkit-input-placeholder {
+					opacity: 1;
+					transition: opacity 250ms ease 250ms;
+				}
+			}
+		}
+	}
+	&-filters {
+		@media #{$media-tablet-medium} {
+			flex-direction: column;
+		}
+	}
+}
+
+.project-subnav {
+	margin-bottom: 48px;
+	@media #{$media-tablet-medium} {
+		flex-direction: row-reverse;
+		margin-bottom: 28px;
+	}
+}
+
+//
+// Category Header
+//
+
+.project-category-intro {
+	position: relative;
+	margin-bottom: 30px;
+	width: 100%;
+	width: 100%;
+
+	img {
+		width: 100%;
+	}
+
+	&-desktop {
+		display: block;
+		@media #{$media-desktop-medium} {
+			display: none;
+		}
+	}
+	&-tablet {
+		display: none;
+		@media #{$media-desktop-medium} {
+			display: block;
+		}
+		@media #{$media-mobile-large} {
+			display: none;
+		}
+	}
+	&-mobile {
+		display: none;
+		@media #{$media-mobile-large} {
+			display: block;
+		}
+	}
+}
+
+
+.student-nav-view-search {
+	white-space: nowrap;
+	#student-nav-view-search-input {
+		@media #{$media-mobile-large} {
+			//width: 0;
+		}
+	}
+	@media #{$media-mobile-large} {
+		margin-right: 10px;
+	}
+}
+
+.project-nav-categories {
+	overflow: scroll;
+	white-space: nowrap;
+
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: none;
+	&::-webkit-scrollbar {
+		display: none;
+		width: 0;
+		height: 0;
+	}
+	@media #{$media-tablet-medium} {
+		flex-direction: column;
+		margin-right: -10%;
+		border-left: 1px gray solid;
+		margin-left: 20px;
+		padding-left: 15px;
+		padding-right: 5%;
+	}
+}
+
+.project-nav-category {
+	display: inline-block;
+}
+
+//
+// Project Grid
+//
+
+.project-grid {
+	@include clearfix;
+	transform: opacity 400ms ease;
+	.column {
+		margin-right: 5%;
+		width: 30%;
+	}
+	.column:nth-child(3n) {
+		margin-right: 0;
+	}
+	&.loading {
+		opacity: 0.0;
+	}
+	@media only screen and (max-width: 800px) {
+		.column {
+			margin-right: 8%;
+			width: 46%;
+		}
+		.column:nth-child(3n) {
+			margin-right: 8%;
+		}
+		.column:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+}
+
+.project-grid-search-results {
+	padding-top: 24px;
+	text-align: center;
+	a {
+		color: $red;
+		@include underline($red);
+	}
+	a:hover {
+		opacity: 0.6;
+	}
+}
+
+.project-preview {
+	display: block;
+	margin-bottom: 50px;
+	@media #{$media-mobile-large} {
+		margin-bottom: 30px;
+	}
+}
+
+.project-preview-image {
+	@include image-placeholder;
+	display: block;
+	transition: opacity 200ms ease;
+	.project-preview.hover & {
+		opacity: 0.6;
+	}
+}
+
+.project-preview-details {
+	margin-top: 14px;
+	font-family: $sofia;
+}
+
+.project-preview-title {
+	display: block;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 1.3;
+	transition: opacity 200ms ease;
+	.project-preview.hover & {
+		opacity: 0.6;
+	}
+
+	@media #{$media-tablet-medium} {
+		font-size: 16px;
+	}
+}
+
+.project-preview-student {
+	display: inline-block;
+	margin-top: 6px;
+	color: #888;
+	font-size: 15px;
+	line-height: 1.3;
+	transition: opacity 200ms ease;
+	&:hover {
+		opacity: 0.6;
+	}
+}

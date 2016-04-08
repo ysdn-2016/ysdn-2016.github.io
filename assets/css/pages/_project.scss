@@ -1,0 +1,430 @@
+
+//
+// Structure
+//
+
+$sticky-scroll-offset: 60px;
+
+.project-body {
+	position: relative;
+	display: flex;
+}
+
+.project-sidebar-filler {
+	position: relative;
+	width: 33.334%;
+	padding-right: $project-grid-gutter/2;
+}
+
+.project-sidebar {
+	position: absolute;
+	padding-right: 60px;
+	&.pinned {
+		position: fixed;
+		top: $sticky-scroll-offset;
+	}
+	&.bottom {
+		position: absolute;
+		top: auto;
+		bottom: 0;
+	}
+}
+
+.project-content {
+	width: 66.666%;
+	padding-left: $project-grid-gutter/2;
+
+	& > :first-child {
+		margin-top: 0;
+	}
+
+	& > :last-child {
+		margin-bottom: 0;
+	}
+
+	@media #{$media-tablet-medium} {
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 1080px) {
+	.project-sidebar-filler {
+		width: 40%;
+	}
+	.project-content {
+		width: 60%;
+	}
+}
+
+//
+// Project Header
+//
+
+.project-header {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 24px;
+	will-change: opacity, transform;
+}
+
+.project-header-title {
+	display: block;
+	margin-bottom: 24px;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 43px;
+	&--large {
+		margin-top: 4px;
+		font-size: 48px;
+		letter-spacing: -0.02em;
+	}
+}
+
+.project-header-category {
+	@include project-category;
+	margin-bottom: 16px;
+}
+
+.project-introduction {
+	@include image-placeholder;
+	margin-bottom: 60px;
+}
+
+//
+// Project Owner
+//
+
+.project-owner {
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+	line-height: 1.0;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+.project-owner-name {
+	display: block;
+	margin-bottom: 3px;
+	font-size: 18px;
+	line-height: 2.4;
+}
+
+.project-owner-introduction {
+	display: block;
+	margin-top: 16px;
+	margin-bottom: 3px;
+	width: 100%;
+	max-width: 300px;
+	color: #aaa;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+.project-owner-image {
+	@include avatar;
+	margin-right: 12px;
+	margin-left: -2px;
+	max-width: 40px;
+}
+
+//
+// Project Sidebar
+//
+
+.project-sidebar {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	transition: top 250ms ease;
+	will-change: top;
+}
+
+.project-sidebar-headers-link {
+	// display: block;
+	margin-bottom: 8px;
+	color: #aaa;
+	font-size: 20px;
+	line-height: 26px;
+	transition: color 0.25s ease;
+	&:hover,
+	&.active {
+		color: $black;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+//
+// Project Content
+//
+
+.project-content,
+.project-markdown {
+	figure,
+	iframe {
+		width: 100%;
+	}
+
+	p, h1, h2, h3, h4, h5, h6, ul, ol {
+		margin-bottom: 15px;
+		width: 90%;
+		max-width: 600px;
+		font-size: 18px;
+		@media #{$media-tablet-medium} {
+			width: 100%;
+			font-size: 17px;
+		}
+	}
+
+	figure {
+		@include image-placeholder;
+		margin: 2em 0;
+		@media #{$media-tablet-medium} {
+			margin: 22px 0;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 40px;
+	}
+
+	h1, h2 {
+		font-size: 36px;
+		line-height: 48px;
+	}
+
+	h3, h4, h5, h6 {
+		font-size: 26px;
+		line-height: 36px;
+		@media #{$media-tablet-medium} {
+			font-size: 22px;
+			line-height: 32px;
+		}
+	}
+
+	ul,
+	ol {
+		margin: 0;
+		padding: 0 0 0 1.5em;
+	}
+
+	li {
+		margin-bottom: 6px;
+		line-height: 1.4;
+	}
+
+	a {
+		@include underline($black);
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	blockquote {
+		border-left: 4px #e2e2e2 solid;
+		margin: 1em 0;
+		padding-left: 16px;
+		color: #666;
+		font-size: 0.9;
+		font-weight: 400;
+		font-style: italic;
+	}
+
+	.btn-primary, .button {
+		background-color: black;
+		background-image: none;
+		border: 1px solid black;
+		padding: 14px 20px 14px 20px;
+		color: $white;
+
+		&:hover {
+			background-color: $red;
+			border-color: $red;
+			opacity: 1.0;
+		}
+	}
+
+	.caption {
+		margin-top: -18px;
+		padding-bottom: 12px;
+		color: #aaa;
+		font-size: 0.86em;
+		line-height: 1.5;
+	}
+
+	.contributors {
+		margin-top: 1.5em;
+	}
+
+	.contributors br {
+		display: none;
+	}
+
+	.contributor-name {
+		display: block;
+		line-height: 26px;
+	}
+
+	.contributor-role {
+		display: block;
+		margin-top: 12px;
+		color: grey;
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	.contributor-name + .contributor-role {
+		margin-top: 12px;
+	}
+
+	code {
+		font-family: Menlo, Monaco, monospace;
+		font-size: 13px;
+	}
+
+	:not(pre) > code {
+		background: #f9f9f9;
+		border: 1px solid #f2f2f2;
+	}
+
+	pre {
+		background-color: #f9f9f9;
+		border: 1px solid #f2f2f2;
+		border-radius: 3px;
+		padding: 14px 16px;
+		max-width: 600px;
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+
+
+//
+// Standard Projects
+//
+
+.project--standard {
+	position: relative;
+
+	.project-header {
+		margin-bottom: 0;
+	}
+
+	.project-header-title {
+		margin: 0 0 4px;
+		font-size: 36px;
+	}
+
+	.project-header-owner-name {
+		margin: 8px 0 12px;
+		color: #888;
+		font-size: 16px;
+	}
+
+	.project-markdown {
+		padding-bottom: 12px;
+	}
+
+	@media #{$media-tablet-medium} {
+		.project-body {
+			display: block;
+			flex-direction: column;
+			height: auto !important; //Remove if Sidebar JS is turned off on mobile
+			.project-sidebar-filler, .project-content {
+				width: 100%;
+				.project-sidebar {
+					position: initial;
+					padding-right: 0;
+					width: 100% !important; //Remove if Sidebar JS is turned off on mobile
+				}
+			}
+		}
+	}
+}
+
+//
+// Case Studies
+//
+
+.project--case-study {
+	.project-header {
+		align-items: center;
+		margin-bottom: 60px;
+	}
+
+	.project-header-title {
+		text-align: center;
+	}
+
+	.case-content {
+		display: flex;
+		width: 100%;
+		max-width: 1160px;
+	}
+	@media #{$media-tablet-medium} {
+		.project-body {
+			display: block;
+			flex-direction: column;
+			height: auto !important; //Remove if Sidebar JS is turned off on mobile
+			.project-sidebar-filler {
+				display: none;
+			}
+			.project-content {
+				width: 100%;
+			}
+		}
+		.project-header {
+			align-items: flex-start;
+			margin-bottom: 30px;
+		}
+		.project-header-title {
+			text-align: left;
+		}
+	}
+}
+
+.project-callout {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	padding-top: 32px;
+	max-width: 400px;
+	line-height: 1.2;
+
+	flex-wrap: wrap;
+
+	&-title {
+		font-size: 17px;
+		font-weight: bold;
+	}
+
+	&-name {
+		color: #aaa;
+		font-size: 15px;
+	}
+
+	&::before {
+		background: #f2f2f2;
+		content: "";
+		position: absolute;
+		top: 0;
+		display: block;
+		width: 75%;
+		height: 1px;
+	}
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	.project-sidebar-headers-link + & {
+		margin-top: 32px;
+	}
+
+	@media #{$media-tablet-medium} {
+		padding-bottom: 24px;
+	}
+}

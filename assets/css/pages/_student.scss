@@ -1,0 +1,732 @@
+$student-profile-header-background: #f6f6f6;
+
+.page-student {
+	.header:not(.header--fixed),
+	.header-spacer {
+		background: $student-profile-header-background;
+	}
+}
+
+.student-profile-header {
+	position: relative;
+	background-color: $student-profile-header-background;
+	display: flex;
+	overflow: hidden;
+	height: 420px;
+}
+
+.student-profile-header-wrapper {
+	@include wrapper;
+	position: relative;
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	// padding-top: 0px;
+}
+
+.student-profile-meta {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.student-profile-hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	// margin-bottom: 120px;
+}
+
+.student-profile-name {
+	position: relative;
+	left: -3px;
+	font-size: 52px;
+}
+
+.student-profile-introduction {
+	max-width: 20em;
+	margin-top: 12px;
+	font-size: 20px;
+	line-height: 1.5;
+	p {
+		margin: 0;
+		font-size: inherit;
+	}
+}
+
+.student-profile-portrait {
+	position: absolute;
+	left: 50%;
+	margin-left: -60px;
+	bottom: -140px;
+	width: 600px;
+	height: 600px;
+	.shapes {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		.shape-1 {
+			@include shape-rectangle(60px, 120px, $green, 45);
+		}
+		.shape-2 {
+			@include shape-circle(60px, $red);
+		}
+		.shape-3 {
+			@include shape-triangle(60px, $yellow, 0);
+		}
+		.wrapper {
+			position: absolute;
+			mix-blend-mode: multiply;
+		}
+		.shape-1-wrapper {
+			right: 140px;
+			bottom: 340px;
+			animation: shape-fadein 400ms ease forwards;
+			animation-delay: 800ms;
+			opacity: 0;
+		}
+		.shape-2-wrapper {
+			left: 120px;
+			bottom: 320px;
+			animation: shape-fadein 400ms ease forwards;
+			animation-delay: 1200ms;
+			opacity: 0;
+		}
+		.shape-3-wrapper {
+			top: 80px;
+			left: 80px;
+			animation: shape-fadein 400ms ease forwards;
+			animation-delay: 2000ms;
+			opacity: 0;
+		}
+	}
+}
+
+.student-profile-portrait--empty img {
+	position: relative;
+	bottom: 70px;
+}
+
+.student-profile-portrait-image[lazyloaded] {
+	animation: portrait-fadein 800ms forwards;
+}
+
+.student-profile-social {
+	position: absolute;
+	// margin-top: auto;
+	bottom: 24px;
+	&-link {
+		margin-right: 0.75em;
+		font-size: 16px;
+		span {
+			@include underline($black);
+			padding: 0 0 2px;
+		}
+	}
+
+	&-url:hover {
+		color: #666;
+		span {
+			@include underline(#666);
+		}
+	}
+	&-behance:hover {
+		color: $accent;
+		span {
+			@include underline($accent);
+		}
+	}
+	&-dribbble:hover {
+		color: $red;
+		span {
+			@include underline($red);
+		}
+	}
+	&-twitter:hover {
+		color: $blue;
+		span {
+			@include underline($blue);
+		}
+	}
+	&-linkedin:hover {
+		color: $orange;
+		span {
+			@include underline($orange);
+		}
+	}
+	&-github:hover {
+		color: $green;
+		span {
+			@include underline($green);
+		}
+	}
+	&-instagram:hover {
+		color: $accent;
+		span {
+			@include underline($accent);
+		}
+	}
+}
+
+
+
+.profile-shapes {
+	position: absolute;
+	z-index: 9;
+	right: 100px;
+	bottom: 30px;
+	width: 440px;
+}
+
+.student-profile-body {
+	padding-top: 56px;
+}
+
+.student-profile-body-wrapper {
+	@include wrapper;
+	display: flex;
+}
+
+//
+// Sidebar
+//
+
+.student-profile-sidebar {
+	width: 26%;
+	margin-right: 8%;
+}
+
+.student-profile-sidebar-biography {
+	margin-bottom: 12px;
+}
+
+.student-profile-sidebar-note-label {
+	margin-bottom: 18px;
+	line-height: 1.4;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.student-profile-sidebar-note {
+	margin-bottom: 28px;
+	font-size: 16px;
+	p {
+		margin: 0;
+		line-height: 1.6;
+	}
+	p + p {
+		margin-top: 0.75em;
+	}
+	a:not(.button) {
+		@include underline($black);
+		padding-bottom: 1px;
+		&:hover {
+			@include underline-color($red);
+			color: $red;
+		}
+	}
+}
+
+//
+// Projects
+//
+
+.student-profile-main-column {
+	width: 62%;
+}
+
+.student-profile-projects {
+	margin-bottom: 60px;
+
+	&:last-child {
+		@media #{$media-mobile-large} {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+.student-profile-projects-header {
+	display: block;
+	margin-bottom: 24px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.4em;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	.student-profile-projects + & {
+		border-top: 1px #f2f2f2 solid;
+		padding-top: 48px;
+	}
+	&-placeholder {
+		margin-bottom: 20px;
+	}
+}
+
+.student-profile-projects-placeholder {
+	margin-bottom: 60px;
+}
+
+//
+// Project
+//
+
+.student-profile-project {
+	display: block;
+	transition: opacity 200ms ease;
+	&--case-study {
+		margin-bottom: 56px;
+	}
+	&--standard {
+		margin-bottom: 16px;
+	}
+	&:hover {
+		opacity: 0.6;
+	}
+}
+
+.student-profile-project-thumbnail {
+	@include image-placeholder;
+	margin-bottom: 18px;
+}
+
+.student-profile-project-meta {
+	display: flex;
+}
+
+.student-profile-project-header {
+	flex: 1 0 24%;
+	margin-right: 6%;
+}
+
+.student-profile-project-title {
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 1.3;
+}
+
+.student-profile-project-category {
+	margin-top: 10px;
+	color: #aaa;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 1.0;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.student-profile-project-description {
+	flex: 1 0 70%;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+//
+// Projects Masonry
+//
+
+.student-profile-projects--standard {
+	@include clearfix;
+	.column {
+		width: 46%;
+	}
+	.column:nth-child(2n) {
+		margin-left: 8%;
+	}
+	.student-profile-project {
+		margin-bottom: 40px;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 1000px)  {
+	// header
+	.student-profile-header {
+		height: 280px;
+	}
+	.student-profile-meta {
+		top: -60px;
+	}
+	.student-profile-name {
+		font-size: 42px;
+	}
+	.student-profile-introduction {
+		font-size: 17px;
+	}
+	.student-profile-social {
+		bottom: 0;
+		width: 300px;
+		line-height: 1.8;
+	}
+	.student-profile-portrait {
+		width: 400px;
+		height: 400px;
+		bottom: -100px;
+		margin-left: -20px;
+	}
+
+	.student-profile-portrait .shapes {
+		.shape-1 {
+			@include shape-rectangle(40px, 80px, $green, 45);
+		}
+		.shape-2 {
+			@include shape-circle(40px, $red);
+		}
+		.shape-3 {
+			@include shape-triangle(40px, $yellow, 0);
+		}
+		.shape-1-wrapper {
+			right: 120px;
+			bottom: 220px;
+		}
+		.shape-2-wrapper {
+			left: 80px;
+			bottom: 200px;
+		}
+		.shape-3-wrapper {
+			top: 70px;
+			left: 60px;
+		}
+	}
+
+	// body
+}
+
+// Mobile breakpoint
+@media (max-width: 700px)  {
+	.student-profile {
+		margin-right: 0;
+	}
+	.student-profile-body-wrapper {
+		display: block;
+	}
+}
+
+@media (max-width: 600px) {
+	.student-profile-header {
+		width: 100%;
+		height: 540px;
+	}
+	.student-profile-header-wrapper {
+		flex-direction: column;
+	}
+	.student-profile-hero {
+		padding-top: 16px;
+		justify-content: flex-start !important;
+	}
+	.student-profile-meta {
+		justify-content: flex-start !important;
+	}
+
+	.student-profile-name {
+		font-size: 32px;
+	}
+
+	.student-profile-introduction {
+		margin-top: 0;
+	}
+
+	.student-profile-social {
+		position: static;
+		margin-top: 16px;
+		line-height: 1.5;
+	}
+
+	.student-profile-portrait {
+		position: relative;
+		left: -10%;
+		top: 0;
+		width: 140%;
+		height: auto;
+	}
+
+	.student-profile-sidebar {
+		width: 100%;
+	}
+
+	.student-profile-main-column {
+		width: 100%;
+	}
+
+	.student-profile-project-meta {
+		display: block;
+	}
+
+	.student-profile-portrait .shapes {
+		.shape-1 {
+			@include shape-rectangle(40px, 80px, $green, 45);
+		}
+		.shape-2 {
+			@include shape-circle(40px, $red);
+		}
+		.shape-3 {
+			@include shape-triangle(40px, $yellow, 0);
+		}
+		.shape-1-wrapper {
+			right: 150px;
+			bottom: 320px;
+		}
+		.shape-2-wrapper {
+			left: 150px;
+			bottom: 310px;
+		}
+		.shape-3-wrapper {
+			top: 70px;
+			left: 120px;
+		}
+	}
+
+	.student-profile-portrait {
+		.student-profile--564f9255e7679d3cd0f73eb7 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eae & {
+			left: -3%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ea9 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73edb & {
+			left: -8%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ea2 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ea8 & {
+			left: -8%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ea7 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee7 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee2 & {
+			left: -3%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ec8 & {
+			left: -2%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ebd & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee3 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73e92 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ebf & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ecc & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ed8 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ed3 & {
+			left: -7%;
+		}
+		.student-profile--564f9255e7679d3cd0f73e9b & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ec4 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eb2 & {
+			left: -4%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eb4 & {
+			left: -4%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eb5 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eb6 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ec1 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73e93 & {
+			left: -4%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee9 & {
+			left: -1%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ed5 & {
+			left: -4%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eaf & {
+			left: -4%;
+		}
+		.student-profile--564f9255e7679d3cd0f73e9f & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee5 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee1 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eb9 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee4 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ead & {
+			left: -4%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee8 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73e95 & {
+			left: -4%;
+		}
+	}
+}
+
+// == Animations == //
+
+@keyframes portrait-fadein {
+	from {
+    opacity: 0;
+		transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+		transform: translateY(0px);
+  }
+}
+
+@keyframes shape-fadein {
+	from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+//
+// Individual profile adjustments
+//
+
+@media (min-width: 1001px) {
+	.student-profile-portrait {
+		&.c564f9255e7679d3cd0f73ec9 {
+			bottom: -140px;
+		}
+		&.c564f9255e7679d3cd0f73eb7 {
+			bottom: -120px;
+		}
+		&.c564f9255e7679d3cd0f73ea6 {
+			bottom: -120px;
+		}
+		&.c564f9255e7679d3cd0f73ea9 {
+			bottom: -120px;
+		}
+		&.c564f9255e7679d3cd0f73edb {
+			bottom: -120px;
+		}
+		&.c564f9255e7679d3cd0f73ed1 {
+			bottom: -130px;
+		}
+		&.c564f9255e7679d3cd0f73ed7 {
+			bottom: -120px;
+		}
+		&.c564f9255e7679d3cd0f73e8d {
+			bottom: -140px;
+		}
+		&.c564f9255e7679d3cd0f73ea2 {
+			bottom: -130px;
+		}
+		&.c564f9255e7679d3cd0f73eb3 {
+			bottom: -110px;
+		}
+		&.c564f9255e7679d3cd0f73ea8 {
+			bottom: -120px;
+		}
+		&.c564f9255e7679d3cd0f73ee7 {
+			bottom: -110px;
+		}
+		&.c564f9255e7679d3cd0f73ec8 {
+			bottom: -110px;
+		}
+		&.c564f9255e7679d3cd0f73ece {
+			bottom: -160px;
+		}
+		&.c564f9255e7679d3cd0f73ec0 {
+			bottom: -160px;
+		}
+	}
+}
+
+@media (min-width: 501px) and (max-width: 1000px) {
+	.student-profile-portrait {
+		&.c564f9255e7679d3cd0f73ec9 {
+			bottom: -100px;
+		}
+		&.c564f9255e7679d3cd0f73eb7 {
+			bottom: -80px;
+		}
+		&.c564f9255e7679d3cd0f73ea1 {
+			bottom: -80px;
+		}
+		&.c564f9255e7679d3cd0f73eae {
+			bottom: -90px;
+		}
+		&.c564f9255e7679d3cd0f73ebc {
+			bottom: -90px;
+		}
+		&.c564f9255e7679d3cd0f73e90 {
+			bottom: -90px;
+		}
+		&.c564f9255e7679d3cd0f73ea6 {
+			bottom: -80px;
+		}
+		&.c564f9255e7679d3cd0f73ea9 {
+			bottom: -80px;
+		}
+		&.c564f9255e7679d3cd0f73edb {
+			bottom: -70px;
+		}
+		&.c564f9255e7679d3cd0f73ed1 {
+			bottom: -80px;
+		}
+		&.c564f9255e7679d3cd0f73ed7 {
+			bottom: -90px;
+		}
+		&.c564f9255e7679d3cd0f73e8d {
+			bottom: -100px;
+		}
+		&.c564f9255e7679d3cd0f73ea2 {
+			bottom: -80px;
+		}
+		&.c564f9255e7679d3cd0f73eb3 {
+			bottom: -80px;
+		}
+		&.c564f9255e7679d3cd0f73ea8 {
+			bottom: -80px;
+		}
+		&.c564f9255e7679d3cd0f73ee7 {
+			bottom: -70px;
+		}
+		&.c564f9255e7679d3cd0f73ee2 {
+			bottom: -90px;
+		}
+		&.c564f9255e7679d3cd0f73ec8 {
+			bottom: -80px;
+		}
+		&.c564f9255e7679d3cd0f73ed6 {
+			bottom: -90px;
+		}
+	}
+}

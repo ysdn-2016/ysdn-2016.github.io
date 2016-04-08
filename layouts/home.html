@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+{% block body %}
+  {% include 'partials/header.html' %}
+  <div class="home-post-intro">
+    <div class="home-intro-stage-1 intro-stage">
+      <h2>York/Sheridan Program in Design&rsquo;s Graduating Class of 2016 presents...</h2>
+    </div>
+    <div class="home-intro-stage-2 intro-stage">
+      <img src="/assets/images/home-intro-grid-white.svg" alt="">
+    </div>
+    <div class="home-intro-stage-3 intro-stage">
+      <img src="/assets/images/home-intro-spit-shapes-1.svg" alt="">
+    </div>
+    <div class="home-intro-stage-4 intro-stage">
+      <img src="/assets/images/home-intro-spit-shapes-2.svg" alt="">
+    </div>
+    <div class="home-intro-stage-5 intro-stage">
+      <img src="/assets/images/home-intro-spit-shapes-3.svg" alt="">
+    </div>
+    <div class="home-intro-stage-6 intro-stage">
+      <img src="/assets/images/home-intro-grid.svg" alt="">
+    </div>
+    <div class="final-stage intro-stage">
+      <img class="desktop" src="/assets/images/home-intro-grid-desktop.svg">
+      <img class="tablet" src="/assets/images/home-intro-grid-tablet.svg">
+      <img class="mobile" src="/assets/images/home-intro-grid-mobile.svg">
+    </div>
+  </div>
+  <section class="home grid-wrapper">
+    <div class="grid-12">
+      <header class="home-intro">
+
+      </header> <!-- .home-intro -->
+      <div class="main">
+      <section class="home-info">
+        <div class="row">
+          <div class="col span-2"></div>
+          <div class="col span-6">
+            <h2>
+              <a href="http://design.yorku.ca/" target="_blank"><span>York/Sheridan Program in Design&rsquo;s  </span></a> Class of 2016 presents <span class="no-wrap">The Intermission</span>
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-2"></div>
+          <div class="col span-5 mobile">
+            <p>The Intermission commemorates our last four years of design study, and provides a chance to celebrate our accomplishments and share our hopes for the future. It is a chance for us to break character from the many roles we adopt as designers, and take a moment to truly introduce ourselves. </p>
+            <p>Join us as we pause to reflect on how far we&rsquo;ve come and the possibilities that lie ahead. Welcome to The Intermission.</p>
+          </div>
+          <div class="col span-4">
+            <div class="feature-text">
+              <p>To meet the cast and explore their work, come check out the Grad Show on April 19 at the Liberty Grand.</p>
+              <a href="/event/" class="button">Attend the Grad Show</a>
+            </div>
+          </div>
+          <div class="col span-5 desktop">
+            <p>The Intermission commemorates our last four years of design study, and provides a chance to celebrate our accomplishments and share our hopes for the future. It is a chance for us to break character from the many roles we adopt as designers, and take a moment to truly introduce ourselves. </p>
+            <p>Join us as we pause to reflect on how far we&rsquo;ve come and the possibilities that lie ahead. Welcome to The Intermission.</p>
+          </div>
+        </div>
+      </section> <!-- .home-info -->
+      <section class="home-work desktop">
+        <div class="row home-work-comm">
+          <div class="col span-4 title">
+            <div class="shape-block">
+              <div class="shape-grid"></div>
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+            </div>
+            <h3>Communication Design</h3>
+            <p>Communicating ideas through visual language on all manner of mediums, including branding identity, type and editorial design, various promotional materials, and more.</p>
+            <a href="/work/communication/" class="button">See More Projects</a>
+          </div>
+          <div class="col span-8 work" data-columns="communication">
+            {% for project in projects | filterByDiscipline('communication') | shuffle | take(3) %}
+              {% include 'partials/project-preview.html' %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="row home-work-phy">
+          <div class="col span-8 work" data-columns="physical">
+            {% for project in projects | filterByDiscipline('physical') | shuffle | take(3) %}
+              {% include 'partials/project-preview.html' %}
+            {% endfor %}
+          </div>
+          <div class="col span-4 title">
+            <div class="shape-block">
+              <div class="shape-grid"></div>
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+            </div>
+            <h3>Physical Design</h3>
+            <p>Creation and experimentation in three-dimensional space, from package design to physical computing.</p>
+            <a href="/work/physical/" class="button">See More Projects</a>
+          </div>
+        </div>
+        <div class="row home-work-info">
+          <div class="col span-4 title">
+            <div class="shape-block">
+              <div class="shape-grid"></div>
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+            </div>
+            <h3>Information Design</h3>
+            <p>Organizing, simplifying, and visualizing text and image, to communicate data in an interesting and thought-provoking way.</p>
+            <a href="/work/information/" class="button">See More Projects</a>
+          </div>
+          <div class="col span-8 work" data-columns="information">
+            {% for project in projects | filterByDiscipline('information') | shuffle | take(3) %}
+              {% include 'partials/project-preview.html' %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="row home-work-web">
+        <div class="col span-8 work" data-columns="interactive">
+            {% for project in projects | filterByDiscipline('interactive') | shuffle | take(3) %}
+              {% include 'partials/project-preview.html' %}
+            {% endfor %}
+          </div>
+          <div class="col span-4 title">
+            <div class="shape-block">
+              <div class="shape-grid"></div>
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+            </div>
+            <h3>Interactive &amp; Motion Design</h3>
+            <p>Developing participatory interactive experiences and visualizing moving image with motion design.</p>
+            <a href="/work/interactive/" class="button">See More Projects</a>
+          </div>
+        </div>
+      </section> <!-- .home-work -->
+      </div>
+      <section class="home-work mobile">
+        <article class="work-communication-design">
+          <div class="row">
+            <div class="home-work-icon">
+              <img src="/assets/images/home-icon-com.svg" alt="">
+            </div>
+            <h3 class="home-work-title">Communication <br />Design</h3>
+          </div>
+          <div class="row">
+            <p>Communicating ideas through visual language on all manner of mediums, including branding identity, type and editorial design, various promotional materials, and more.</p>
+          </div>
+          <div class="work">
+            {% for project in projects | filterByDiscipline('communication') | shuffle | take(7) %}
+              {% include 'partials/project-preview.html' %}
+            {% endfor %}
+          </div>
+          <div class="row">
+            <a href="/work/communication/" class="button">See More Projects</a>
+          </div>
+        </article>
+        <article class="work-physical-design">
+          <div class="row">
+            <div class="home-work-icon">
+              <img src="/assets/images/home-icon-phy.svg" alt="">
+            </div>
+            <h3 class="home-work-title">Physical <br />Design</h3>
+          </div>
+          <div class="row">
+            <p>Creation and experimentation in three-dimensional space, from package design to physical computing.</p>
+          </div>
+          <div class="work">
+            {% for project in projects | filterByDiscipline('physical') | shuffle | take(7) %}
+              {% include 'partials/project-preview.html' %}
+            {% endfor %}
+          </div>
+          <div class="row">
+            <a href="/work/communication/" class="button">See More Projects</a>
+          </div>
+        </article>
+        <article class="work-info-design">
+          <div class="row">
+            <div class="home-work-icon">
+              <img src="/assets/images/home-icon-info.svg" alt="">
+            </div>
+            <h3 class="home-work-title">Information <br />Design</h3>
+          </div>
+          <div class="row">
+            <p>Organizing, simplifying, and visualizing text and image, to communicate data in an interesting and thought-provoking way.</p>
+          </div>
+          <div class="work">
+            {% for project in projects | filterByDiscipline('information') | shuffle | take(7) %}
+              {% include 'partials/project-preview.html' %}
+            {% endfor %}
+          </div>
+          <div class="row">
+            <a href="/work/communication/" class="button">See More Projects</a>
+          </div>
+        </article>
+        <article class="work-inter-design">
+          <div class="row">
+            <div class="home-work-icon">
+              <img src="/assets/images/home-icon-inter.svg" alt="">
+            </div>
+            <h3 class="home-work-title">Interactive &amp; <br />Motion Design</h3>
+          </div>
+          <div class="row">
+            <p>Developing participatory interactive experiences and visualizing moving image with motion design.</p>
+          </div>
+          <div class="work">
+            {% for project in projects | filterByDiscipline('interactive') | shuffle | take(7) %}
+              {% include 'partials/project-preview.html' %}
+            {% endfor %}
+          </div>
+          <div class="row">
+            <a href="/work/communication/" class="button">See More Projects</a>
+          </div>
+        </article>
+      </section>
+      <section class="home-event">
+        <div class="wrap">
+          <div class="bg-span">
+            <h2>Come meet the cast!</h2>
+            <p>To meet the cast and explore their work, come check out the Grad Show on April 19 at the Liberty Grand.</p>
+          </div>
+        </div>
+        <div class="button-wrap">
+          <a href="/event" class="button">Attend the Grad Show</a>
+        </div>
+      </section> <!-- .home-event -->
+      <section class="home-social">
+        <h2>See what we’ve been up to behind the curtains.</h2>
+        <div class="home-social-feed instagram-feed" id="home-insta"></div>
+        <h4 class="event-social-subheader event-section-subheader">Follow along on <a class="event-social-link--facebook" href="{{ facebook.url }}" target="_blank">Facebook</a>, <a class="event-social-link--twitter" href="{{ twitter.url }}" target="_blank">Twitter</a>, and <a class="event-social-link--instagram" href="{{ instagram.url }}" target="_blank">Instagram</a> for a behind-the-scenes look.</h4>
+      </section> <!-- .section.home-social -->
+    </div>
+  </section>
+  <template id="project-preview-template">
+    {% raw %}
+    <div class="project-preview">
+    	<a href="{{ project.href }}" class="project-preview-image">
+    		<svg class="project-preview-image-placeholder" viewBox="0 0 {{ project.thumbnail.width }} {{ project.thumbnail.height }}" preserveAspectRatio="xMinYMin" width="{{ project.thumbnail.width }}">
+    			<rect x="0" y="0" width="100%" height="100%"></rect>
+    		</svg>
+    		<img src="{{ pixel }}" data-src="{{ project.thumbnail.asset400 }}" data-src-retina="{{ project.thumbnail.asset800 }}" />
+    	</a>
+    	<div class="project-preview-details">
+    		<a href="{{ project.href }}" class="project-preview-title">{{ project.title }}</a>
+    		<a href="{{ project.owner.href }}" class="project-preview-student">{{ project.owner.name }}</a>
+    	</div>
+    </div>
+    {% endraw %}
+  </template>
+  <script>
+    var PROJECTS = {{ projectsHash | json | safe }};
+  </script>
+{% endblock %}

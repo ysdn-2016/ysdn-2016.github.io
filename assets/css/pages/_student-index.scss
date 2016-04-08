@@ -1,0 +1,252 @@
+
+//
+// Student Grid
+//
+
+.student-grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -1.5%;
+}
+
+.student-grid-block,
+.student-grid-intermission {
+	display: flex;
+	width: 22%;
+	margin: 0 1.5% 3vw;
+}
+
+.student-grid-intermission {
+	flex-basis: 47%;
+	align-items: center;
+	justify-content: center;
+	font-weight: 400;
+	p {
+		margin: 0;
+	}
+}
+
+.student-grid-shape-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.student-grid-shape {
+	&--triangle {
+		@include shape-triangle(60px, $yellow, 0);
+	}
+	&--rectangle {
+		@include shape-rectangle(42px, 84px, $red, 45);
+	}
+	&--half-circle {
+		@include shape-half-circle(80px, $green, 135);
+	}
+	&--circle {
+		@include shape-circle(60px, $blue);
+	}
+	&--square {
+		@include shape-square(60px, $orange, 0);
+	}
+}
+
+.student-preview {
+	position: relative;
+	display: block;
+}
+
+.student-preview-image {
+	position: relative;
+	background: #f6f6f6;
+	overflow: hidden;
+	height: 0;
+	padding-top: 100%;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.0;
+		transition: opacity 200ms ease 100ms;
+		max-width: none;
+		height: 101%;
+
+		&[lazyloaded] {
+			opacity: 1.0;
+		}
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.student-preview:hover .student-preview-image img,
+	.student-preview:focus .student-preview-image img {
+		animation: play 400ms steps(4) forwards;
+	}
+
+	.student-preview--rewind .student-preview-image img {
+		animation: rewind 400ms steps(4) forwards;
+	}
+}
+
+.student-preview-name {
+	position: absolute;
+	color: #ccc;
+	top: -8px;
+	left: calc(100% - 30px);
+	width: calc(100% - 24px);
+	font-family: $sofia;
+	font-size: 14px;
+	line-height: 22px;
+	text-align: left;
+	transform: rotate(90deg);
+	transform-origin: left bottom;
+	z-index: 9;
+	mix-blend-mode: multiply;
+}
+
+@media only screen and (max-width: 940px) {
+	.student-grid-block {
+		flex-basis: 30%;
+		margin: 0 1.5% 4%;
+	}
+
+	.student-grid-block:nth-child(4),
+	.student-grid-block:nth-child(11),
+	.student-grid-block:nth-child(25),
+	.student-grid-block:nth-child(28),
+	.student-grid-block:nth-child(62),
+	.student-grid-block:nth-child(93),
+	.student-grid-block:nth-child(126) {
+		display: none;
+	}
+
+	.student-grid-intermission {
+		flex-basis: 63%;
+		min-height: 26vw;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.student-preview-name {
+		font-size: 13px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+
+	.student-grid {
+		justify-content: space-between;
+	}
+
+	.student-grid-block {
+		flex-basis: 48%;
+		margin: 0 0 4%;
+	}
+
+	.student-grid-block:nth-child(4) {
+		display: flex;
+	}
+
+	.student-grid-block:nth-child(62) {
+		display: none;
+	}
+
+	.student-grid-shape-container {
+		min-height: 44.5vw;
+	}
+
+	.student-grid-intermission {
+		flex-basis: 100%;
+		min-height: 44.5vw;
+		text-align: center;
+	}
+
+	.student-preview-name {
+		font-size: 12px;
+		left: calc(100% - 26px);
+	}
+}
+
+@media only screen and (max-width: 340px) {
+	.student-preview-name {
+		display: none;
+	}
+}
+
+//
+// Student Search
+//
+
+
+.student-search-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.student-search {
+	position: relative;
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+	margin-bottom: 64px;
+}
+
+.student-search-icon {
+	@extend .i-search;
+	position: relative;
+	width: 24px;
+	text-align: center;
+}
+
+.student-search-input {
+	position: relative;
+	background: transparent;
+	border: none;
+	overflow: visible;
+	will-change: width;
+	z-index: 2;
+}
+
+.student-search-input,
+.student-search-typeahead {
+	font-size: 24px;
+}
+
+.student-search-typeahead {
+	position: absolute;
+	color: #ccc;
+	top: 12px;
+	left: 34px;
+	white-space: nowrap;
+	.silent {
+		visibility: hidden;
+	}
+}
+
+.student-search-results {
+	text-align: center;
+	padding: 48px 0 128px;
+	font-size: 21px;
+	line-height: 32px;
+	a {
+		@include underline();
+	}
+	a:hover {
+		@include underline-hover-color($red);
+	}
+}
+
+
+@media only screen and (max-width: 600px) {
+
+	.student-search,
+	.student-search-wrapper {
+		justify-content: flex-start;
+	}
+
+	.student-search {
+		margin-bottom: 32px;
+	}
+
+}

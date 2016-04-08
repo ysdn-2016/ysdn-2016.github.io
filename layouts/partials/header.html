@@ -1,9 +1,13 @@
-<header>
-  <a href="/"><div class="logo"></div></a>
-  <div class="nav">
-    <a href="/projects/">Projects</a>
-    <a href="/students/">Students</a>
-    <a href="/sponsor/">Sponsor</a>
-    <a href="#">Event Details</a>
-  </div>
+<header class="header {% if id == 'home' %}home-header{% endif %}">
+	{% include '../event.html' %}
+	<div class="header-wrapper">
+	  <a href="/" class="header-logo">{% include 'logo.html' %}</a>
+	  <div class="header-nav">
+	    <a href="/work/" {% if id == 'work' %}class="active"{% endif %}>Work</a>
+	    <a href="/students/" {% if id == 'students' %}class="active"{% endif %}>Cast</a>
+	    <a href="/sponsors/" {% if id == 'sponsors' %}class="active"{% endif %}>Sponsors</a>
+	    <a href="/about/" {% if id == 'about' %}class="active"{% endif %}>About</a>
+	  </div>
+	</div>
 </header>
+<div class="header-spacer"></div>

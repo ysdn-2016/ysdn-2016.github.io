@@ -1,0 +1,60 @@
+<div class="project-footer">
+	<div class="project-footer-event-prompt">
+		<h4 class="project-footer-subhead">Enjoyed this project?</h4>
+		<h2 class="project-footer-event-prompt-headline">Come meet {{ owner.firstName }} and the rest of the cast at the Grad Show on April 19 at the Liberty Grand.</h2>
+		<a href="/event/" class="btn-primary">Attend the Grad Show</a>
+	</div>
+	<div class="project-footer-next-project project-footer-preview">
+		{% set project = owner.projects | not('id', id) | random %}
+		{% if project %}
+			{# if the student has another project to show #}
+			<h4 class="project-footer-subhead">Also by {{ owner.firstName }}</h4>
+			<a href="{{ project.href }}" class="project-footer-preview-image">
+				<svg class="project-footer-preview-image-placeholder" viewBox="0 0 800 400" preserveAspectRatio="xMinYMin" width="800">
+					<rect x="0" y="0" width="100%" height="100%"></rect>
+				</svg>
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg==" data-src="{{ project.thumbnail | asset_url({ width: 800, height: 400, fit: 'crop' }) }}" />
+			</a>
+			<a href="{{ project.href }}" class="project-footer-preview-title">{{ project.title }}</a>
+			<a href="/work/{{ project.category }}" class="project-footer-preview-category">{{ project.category | titleize }}</a>
+		{% else %}
+			{# if the student doesn't have another project to show #}
+			{% set project = projects | filter('category', category) | not('id', id) | random %}
+			<h4 class="project-footer-subhead">Similar Project</h4>
+			<a href="{{ project.href }}" class="project-footer-preview-image">
+				<svg class="project-footer-preview-image-placeholder" viewBox="0 0 800 400" preserveAspectRatio="xMinYMin" width="{{ project.thumbnail.width }}">
+					<rect x="0" y="0" width="100%" height="100%"></rect>
+				</svg>
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg==" data-src="{{ project.thumbnail | asset_url({ width: 800, height: 400, fit: 'crop' }) }}" />
+			</a>
+			<a href="{{ project.href }}" class="project-footer-preview-title">{{ project.title }}</a>
+			<a href="{{ project.owner.href }}" class="project-footer-preview-author">{{ project.owner.name }}</a>
+		{% endif %}
+	</div>
+	<div class="project-footer-related-project project-footer-preview">
+		{% set similar = projects | filter('category', category) | not('id', id) | not('id', project.id) | random %}
+		{% if similar %}
+			<h4 class="project-footer-subhead">Similar Project</h4>
+			<a href="{{ similar.href }}" class="project-footer-preview-image">
+				<svg class="project-footer-preview-image-placeholder" viewBox="0 0 800 400" preserveAspectRatio="xMinYMin" width="{{ similar.thumbnail.width }}">
+					<rect x="0" y="0" width="100%" height="100%"></rect>
+				</svg>
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg==" data-src="{{ similar.thumbnail | asset_url({ width: 800, height: 400, fit: 'crop' }) }}" />
+			</a>
+			<a href="{{ similar.href }}" class="project-footer-preview-title">{{ similar.title }}</a>
+			<a href="{{ similar.owner.href }}" class="project-footer-preview-author">{{ similar.owner.name }}</a>
+		{% else %}
+			{% set discipline = category | categoryToDiscipline %}
+			{% set similar = projects | not('id', id) | random %}
+			<h4 class="project-footer-subhead">Another Project</h4>
+			<a href="{{ similar.href }}" class="project-footer-preview-image">
+				<svg class="project-footer-preview-image-placeholder" viewBox="0 0 800 400" preserveAspectRatio="xMinYMin" width="{{ similar.thumbnail.width }}">
+					<rect x="0" y="0" width="100%" height="100%"></rect>
+				</svg>
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP4z8BQDwAEgAF/posBPQAAAABJRU5ErkJggg==" data-src="{{ similar.thumbnail | asset_url({ width: 800, height: 400, fit: 'crop' }) }}" />
+			</a>
+			<a href="{{ similar.href }}" class="project-footer-preview-title">{{ similar.title }}</a>
+			<a href="{{ similar.owner.href }}" class="project-footer-preview-author">{{ similar.owner.name }}</a>
+		{% endif %}
+	</div>
+</div>

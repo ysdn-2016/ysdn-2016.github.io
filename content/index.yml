@@ -1,3 +1,2 @@
-id: index
-layout: redirect.html
-url: /event/
+id: home
+layout: home.html

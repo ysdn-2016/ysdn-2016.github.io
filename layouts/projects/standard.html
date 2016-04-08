@@ -1,0 +1,33 @@
+
+<article class="project project--standard">
+	<section class="project-body">
+		<div class="project-sidebar-filler">
+			<aside class="project-sidebar">
+				<header class="project-header">
+					<a class="project-header-category" href="/work/{{ category | categoryToDiscipline }}/">{{ category | titleize }}</a>
+					<div class="project-header-title{% if title.length < 10 %} project-header-title--large{% endif %}">{{ title }}</div>
+					<a class="project-header-owner-name" href="{{ owner.href }}" >{{ owner.name }}</a>
+				</header>
+				<div class="project-markdown">{{ contents | stripAssets | newTab | safe }}</div>
+				<div class="project-callout">
+					<a class="project-owner-image" href="{{ owner.href }}">
+						<img src="{{ owner.portrait | asset_url({ width: 120, height: 120, fit: 'facearea', facepad: 2.5 }) }}" alt="{{ owner.name }}" draggable="false" />
+					</a>
+					<a class="project-owner-name" href="{{ owner.href }}" >{{ owner.name }}</a>
+					<a class="project-owner-introduction" href="{{ owner.href }}" >{{ owner.introduction | replace('\n', '<br/>') | safe }}</a>
+				</div>
+			</aside>
+		</div>
+		<div class="project-content">
+			{{ contents | onlyVideoAssets | safe }}
+			{% for asset in assets %}
+				<figure>
+					<svg viewBox="0 0 {{ asset.width }} {{ asset.height }}" preserveAspectRatio="xMinYMin" width="{{ asset.width }}">
+						<rect x="0" y="0" width="100%" height="100%"></rect>
+					</svg>
+					<img src="{{ pixel }}" data-src="{{ asset | asset_url({ width: 800 }) }}" data-retina-src="{{ asset | asset_url({ width: 1600 }) }}" />
+				</figure>
+			{% endfor %}
+		</div>
+	</section>
+</article>
