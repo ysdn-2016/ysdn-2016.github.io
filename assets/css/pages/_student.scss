@@ -107,6 +107,11 @@ $student-profile-header-background: #f6f6f6;
 	}
 }
 
+.student-profile-portrait--empty img {
+	position: relative;
+	bottom: 70px;
+}
+
 .student-profile-portrait-image[lazyloaded] {
 	animation: portrait-fadein 800ms forwards;
 }
