@@ -13,6 +13,10 @@ section.home {
 	}
 	[class*='span-'] {
 		float: left;
+		padding: 0 20px;
+		@media #{$media-tablet-medium} {
+			padding: 0;
+		}
 	}
 	// Create grid widths (1-12)
 	@for $i from $start through $end {
@@ -21,8 +25,6 @@ section.home {
 		}
 	}
 	&.grid-wrapper {
-		max-width: 1160px;
-		margin: 0 auto;
 	}
 	.grid-12 {
 		max-width: $gridWidth;
@@ -433,6 +435,16 @@ header.home-header {
 			margin-bottom: 0;
 		}
 	}
+	.row{
+		.col{
+			&:first-child{
+				padding-left: 0;
+			}
+			&:last-child{
+				padding-right: 0;
+			}
+		}
+	}
 }
 
 @media (min-width: 770px) {
@@ -472,6 +484,14 @@ header.home-header {
 	.row {
 		justify-content: space-between;
 		margin-bottom: 48px;
+		.col{
+			&:first-child{
+				padding-left: 0;
+			}
+			&:last-child{
+				padding-right: 0;
+			}
+		}
 	}
 	h3 {
 		font-size: 2.1em;
