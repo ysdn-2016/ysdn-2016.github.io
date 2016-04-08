@@ -22,6 +22,7 @@ var interval;
 
 module.exports = function (ctx) {
 	$window = $(window);
+	$eventContent = $('.event-panel-content');
 	$eventDetailsGhost = $('.event-details-location-ghost');
 	$eventDetailsLink = $('.event-details-location-link');
 	$eventMap = $('.event-directions-map');
@@ -33,6 +34,11 @@ module.exports = function (ctx) {
 		icon: '/assets/images/marker.svg',
 		title: 'Liberty Grand'
 	})
+
+	if (window.location.hash === '#faq') {
+		var $faq = $('#faq');
+		$eventContent.scrollTop($faq.offset().top - 60)
+	}
 
 	google.maps.event.addDomListener(marker, 'click', onMapMarkerClick)
 
