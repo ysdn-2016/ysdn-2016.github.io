@@ -18,6 +18,7 @@ var $eventMap;
 
 var map;
 var marker;
+var interval;
 
 module.exports = function (ctx) {
 	$window = $(window);
@@ -57,7 +58,7 @@ function bind () {
 	$eventDetailsGhost.on('mouseenter', onMouseEnterGhost);
 	$eventDetailsGhost.on('mouseleave', onMouseLeaveGhost);
 	resize();
-	setTimeout(resize, 800);
+	interval = setInterval(resize, 800);
 }
 
 function unbind () {
@@ -70,6 +71,7 @@ function unbind () {
 		width: '',
 		height: ''
 	})
+	clearInterval(interval);
 }
 
 function resize () {
