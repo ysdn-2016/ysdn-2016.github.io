@@ -38,7 +38,7 @@
 						{% if github %}<a href="https://github.com/{{ github | replace('@', '') }}" class="student-profile-social-link student-profile-social-github" target="_blank"><span>GitHub</span></a>{% endif %}
 					</div>
 				</div>
-				<div class="student-profile-portrait{% if name === 'Jinah Kim' %} student-profile-portrait--empty{% endif %}">
+				<div class="student-profile-portrait{% if name === 'Jinah Kim' %} student-profile-portrait--empty{% endif %} c{{ id }}">
 					<img class="student-profile-portrait-image" src="{{ pixel }}" data-src="{{ portrait | asset_url({ width: 600 }) }}" data-retina-src="{{ portrait | asset_url({ width: 1200 }) }}" draggable="false" />
 					<div class="shapes">
 						<div class="wrapper shape-1-wrapper">
