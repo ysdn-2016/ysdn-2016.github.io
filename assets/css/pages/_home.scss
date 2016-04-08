@@ -117,7 +117,7 @@ section.home {
 	}
 }
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
 	.home-post-intro {
 		animation: none;
 		animation-delay: 0;
@@ -333,7 +333,7 @@ section.home {
 	display: none;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
 	.home-post-intro {
 		background-color: white;
 		top:-80px;
@@ -371,7 +371,7 @@ header.home-header {
 	}
 }
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
 	header.home-header {
 		background-color: white !important;
 		animation: none;
@@ -455,7 +455,7 @@ header.home-header {
 	}
 }
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
 	.home-info {
 		margin-top: -80px;
 	}
