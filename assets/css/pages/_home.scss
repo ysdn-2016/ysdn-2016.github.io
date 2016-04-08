@@ -654,7 +654,7 @@ header.home-header {
 	text-overflow: ellipsis;
 }
 
-@media only screen and #{$media-tablet-medium} {
+@media #{$media-tablet-medium} {
 	.home-work.mobile {
 		display: block;
 		padding-bottom: 24px;
