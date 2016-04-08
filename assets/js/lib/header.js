@@ -9,6 +9,7 @@ module.exports = (function () {
 	var $window;
 
 	var isFixed = false;
+	var isMaximized = false;
 	var spacerOffset = 0;
 	var spacerBottom = 0;
 
@@ -37,18 +38,22 @@ module.exports = (function () {
 
 	function open () {
 		if (!isFixed) return;
+		if (isMaximized) return;
 		$header.addClass('header--is-transitioning');
 		$header.addClass('header--maximized');
 		$header.on('transitionend webkitTransitionEnd', removeTransitionClass);
 		$window.trigger('header:maximize');
+		isMaximized = true;
 	}
 
 	function close () {
 		if (!isFixed) return;
+		if (!isMaximized) return;
 		$header.addClass('header--is-transitioning');
 		$header.removeClass('header--maximized');
 		$header.on('transitionend webkitTransitionEnd', removeTransitionClass);
 		$window.trigger('header:minimize');
+		isMaximized = false;
 	}
 
 	return { init: init, destroy: destroy }
