@@ -13,7 +13,6 @@ section.home {
 	}
 	[class*='span-'] {
 		float: left;
-		padding: 0 $spanPadding;
 	}
 	// Create grid widths (1-12)
 	@for $i from $start through $end {
@@ -38,12 +37,13 @@ section.home {
 			&:not(:last-child) {
 				padding-bottom: 28px;
 			}
+
 		}
 		.col {
 			min-height: 1px;
 		}
 	}
-	@media (max-width: 800px) {
+	@media #{$media-tablet-medium} {
 		.span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12 {
 			width: 100%;
 		}
@@ -435,12 +435,12 @@ header.home-header {
 	}
 }
 
-@media (min-width: 801px) {
+@media (min-width: 770px) {
 	.mobile {
 		display: none;
 	}
 }
-@media (max-width: 800px) {
+@media #{$media-tablet-medium} {
 	.mobile {
 		display: block !important;
 	}
@@ -494,9 +494,20 @@ header.home-header {
 	.column + .column {
 		margin-left: 6%;
 	}
+	.work{
+		@media #{$media-tablet-medium} {
+		    display: block;
+		    width: 50%;
+		    .column{
+		    	display: block;
+		    	float: none;
+		    	width: 100%;
+		    }
+		}
+	}
 }
 
-@media (min-width: 561px) {
+@media #{$media-tablet-medium} {
 	.home-work.desktop {
 		display: block;
 	}
@@ -508,6 +519,12 @@ header.home-header {
 .home-work.desktop .work {
 	display: flex;
 	width: percentage(7.5/12);
+	@media #{$media-tablet-medium}{
+		width: 50%;
+	}
+	@media #{$media-mobile-large}{
+		width: 100%;
+	}
 }
 
 .home-work .sub-col {
@@ -548,6 +565,11 @@ header.home-header {
 	justify-content: center;
 	width: percentage(4/12);
 	height: 640px;
+	@media #{$media-tablet-medium} {
+	    width: 40% !important;
+	}
+
+
 	.shape-block {
 		position: relative;
 		overflow: hidden;
@@ -632,7 +654,7 @@ header.home-header {
 	text-overflow: ellipsis;
 }
 
-@media only screen and (max-width: 560px) {
+@media #{$media-tablet-medium} {
 	.home-work.mobile {
 		display: block;
 		padding-bottom: 24px;
