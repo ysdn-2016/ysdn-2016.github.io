@@ -734,6 +734,7 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 
 	.event-details {
 		width: 30%;
+		max-width: 1200px * 0.3;
 		h1 {
 			font-size: 34px;
 		}

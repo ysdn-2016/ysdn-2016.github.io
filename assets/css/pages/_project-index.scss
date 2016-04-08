@@ -221,6 +221,9 @@
 .project-preview {
 	display: block;
 	margin-bottom: 50px;
+	@media #{$media-mobile-large} {
+		margin-bottom: 30px;
+	}
 }
 
 .project-preview-image {

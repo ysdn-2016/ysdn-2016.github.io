@@ -94,7 +94,6 @@ module.exports = function () {
   }
 
   function pin () {
-    if (isPinned) return;
     if (isPinnedToBottom) return;
     $sidebar.css('top', tracks.pinned.offset);
     $sidebar.addClass('pinned');

@@ -107,6 +107,11 @@ $student-profile-header-background: #f6f6f6;
 	}
 }
 
+.student-profile-portrait--empty img {
+	position: relative;
+	bottom: 70px;
+}
+
 .student-profile-portrait-image[lazyloaded] {
 	animation: portrait-fadein 800ms forwards;
 }
@@ -262,6 +267,10 @@ $student-profile-header-background: #f6f6f6;
 	}
 }
 
+.student-profile-projects-placeholder {
+	margin-bottom: 60px;
+}
+
 //
 // Project
 //
@@ -333,7 +342,7 @@ $student-profile-header-background: #f6f6f6;
 	}
 }
 
-@media (min-width: 541px) and (max-width: 1000px)  {
+@media (min-width: 601px) and (max-width: 1000px)  {
 	// header
 	.student-profile-header {
 		height: 280px;
@@ -396,10 +405,10 @@ $student-profile-header-background: #f6f6f6;
 	}
 }
 
-@media (max-width: 540px) {
-	.student-profile-header{
+@media (max-width: 600px) {
+	.student-profile-header {
 		width: 100%;
-		height: 500px;
+		height: 600px;
 	}
 	.student-profile-header-wrapper {
 		flex-direction: column;
@@ -467,6 +476,117 @@ $student-profile-header-background: #f6f6f6;
 		.shape-3-wrapper {
 			top: 70px;
 			left: 120px;
+		}
+	}
+
+	.student-profile-portrait {
+		.student-profile--564f9255e7679d3cd0f73eb7 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eae & {
+			left: -3%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ea9 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73edb & {
+			left: -8%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ea2 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ea8 & {
+			left: -8%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ea7 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee7 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee2 & {
+			left: -3%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ec8 & {
+			left: -2%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ebd & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee3 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73e92 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ebf & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ecc & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ed8 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ed3 & {
+			left: -7%;
+		}
+		.student-profile--564f9255e7679d3cd0f73e9b & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ec4 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eb2 & {
+			left: -4%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eb4 & {
+			left: -4%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eb5 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eb6 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ec1 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73e93 & {
+			left: -4%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee9 & {
+			left: -1%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ed5 & {
+			left: -4%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eaf & {
+			left: -4%;
+		}
+		.student-profile--564f9255e7679d3cd0f73e9f & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee5 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee1 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73eb9 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee4 & {
+			left: -5%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ead & {
+			left: -4%;
+		}
+		.student-profile--564f9255e7679d3cd0f73ee8 & {
+			left: -6%;
+		}
+		.student-profile--564f9255e7679d3cd0f73e95 & {
+			left: -4%;
 		}
 	}
 }
