@@ -131,7 +131,7 @@ function getGridConfig (el) {
 function shuffle (arr) {
   var obj = {}
   arr.forEach(function (p) {
-    obj[p.id] = parseFloat(p.weight, 10)
+    obj[p.id] = parseFloat(p.weight, 10) || 2.5;
   })
   var results = deck.shuffle(obj);
   return results.map(function (id) {
