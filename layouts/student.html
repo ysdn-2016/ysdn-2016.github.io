@@ -28,7 +28,7 @@
 						{% endif %}
 					</div>
 					<div class="student-profile-social">
-						{# {% if email %}<a href="mailto:{{ email }}" class="student-profile-social-link student-profile-social-email" target="_blank"><span>Email</span></a>{% endif %} #}
+						{% if email %}<a href="mailto:{{ email }}" class="student-profile-social-link student-profile-social-email" target="_blank"><span>Email</span></a>{% endif %}
 						{% if url %}<a href="{{ url }}" class="student-profile-social-link student-profile-social-url" target="_blank"><span>Website</span></a>{% endif %}
 						{% if behance %}<a href="https://www.behance.net/{{ behance }}" class="student-profile-social-link student-profile-social-behance" target="_blank"><span>Behance</span></a>{% endif %}
 						{% if twitter %}<a href="https://twitter.com/{{ twitter }}" class="student-profile-social-link student-profile-social-twitter" target="_blank"><span>Twitter</span></a>{% endif %}
