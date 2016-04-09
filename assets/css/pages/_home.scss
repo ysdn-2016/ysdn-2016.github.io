@@ -87,7 +87,7 @@ section.home {
 	margin: 0 auto;
 	// @include dot-grid-unit;
 	margin-top: -22px;
-	animation: fade-to-white 1.4s forwards;
+	animation: fade-to-white 1400ms forwards;
 	animation-delay: 14s;
 	img {
 		width: 100%;
@@ -214,16 +214,9 @@ section.home {
 @keyframes fade-to-white {
 	0% {
 		background-color: black;
-		color: white;
-
-		fill: white;
 	}
-
 	100% {
 		background-color: white;
-		color: #1b2020;
-
-		fill: #1b2020;
 	}
 }
 
@@ -353,50 +346,49 @@ section.home {
 
 // == Home Nav == //
 
-header.home-header {
-	background-color: black;
-	animation: fade-to-white 1.4s forwards;
-	animation-delay: 14s;
-	.header-nav {
-		color: white;
-		animation: fade-to-white 1.4s forwards;
-		animation-delay: 14s;
-	}
-	svg {
-		fill: white;
-	}
-	path {
-		animation: fade-to-white 1.4s forwards;
-		animation-delay: 14s;
-
-		fill: white;
-	}
-}
-
-@media #{$media-tablet-medium} {
-	header.home-header {
-		background-color: white !important;
-		animation: none;
-		animation-delay: 0;
-		.header-nav {
-			color: #1b2020 !important;
-			animation: none;
-			animation-delay: 0;
-		}
-		svg {
-			animation: none;
-			animation-delay: 0;
-
-			fill: white;
-		}
-		path {
-			animation: none;
-			animation-delay: 0;
-
-			fill: #1b2020 !important;
-		}
-	}
-}
+// header.home-header {
+// 	background-color: black;
+// 	animation: fade-to-white 1.4s forwards;
+// 	animation-delay: 14s;
+// 	.header-nav {
+// 		// color: white;
+// 		animation: fade-to-white-text 1.4s backwards;
+// 		animation-delay: 14s;
+// 	}
+// 	// svg {
+// 	// 	fill: white;
+// 	// }
+// 	path {
+// 		animation: fade-to-white-svg 1.4s backwards;
+// 		animation-delay: 14s;
+// 		// fill: white;
+// 	}
+// }
+//
+// @media #{$media-tablet-medium} {
+// 	header.home-header {
+// 		background-color: white !important;
+// 		animation: none;
+// 		animation-delay: 0;
+// 		.header-nav {
+// 			color: #1b2020 !important;
+// 			animation: none;
+// 			animation-delay: 0;
+// 		}
+// 		svg {
+// 			animation: none;
+// 			animation-delay: 0;
+//
+// 			fill: white;
+// 		}
+// 		path {
+// 			animation: none;
+// 			animation-delay: 0;
+//
+// 			fill: #1b2020 !important;
+// 		}
+// 	}
+// }
 
 // == Home Info == //
 

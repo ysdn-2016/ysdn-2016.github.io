@@ -57,6 +57,9 @@ sync: clean-content
 sync-portraits:
 	@node resources/add-profile-images/index.js
 
+sync-weight:
+	@(cd resources/assign-project-weight/ && node index.js)
+
 deploy:
 	@echo "Building site for \033[0;33mstaging\033[0m..."
 	@make clean
