@@ -77,7 +77,7 @@ deploy:
 
 deploy\:production:
 	@if [[ "$(BRANCH)" != "production" ]]; then sleep 0.5 && echo "\n\033[0;31mERROR:\033[0m Deployments can only happen in the \033[0;33mproduction\033[0m branch\nMerge your changes into \033[0;33mproduction\033[0m and try again.\n" && tput bel && exit 1; fi
-	@echo "Building site for \033[0;33mstaging\033[0m..."
+	@echo "Building site for \033[0;33mproduction\033[0m..."
 	@make clean
 	@make sync
 	@NODE_ENV=production make build
