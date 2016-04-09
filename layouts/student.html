@@ -28,14 +28,14 @@
 						{% endif %}
 					</div>
 					<div class="student-profile-social">
-						{% if email %}<a href="mailto:{{ email }}" onClick="ga(‘send’, ‘event’, ‘ Mailto’, ‘Click to Email’, ‘{{ email }}’);" class="student-profile-social-link student-profile-social-email"><span>Email</span></a>{% endif %}
-						{% if url %}<a href="{{ url }}" onClick="ga(‘send’, ‘event’, ‘ Social’, ‘Website’, ‘{{ url }}’);" class="student-profile-social-link student-profile-social-url" target="_blank"><span>Website</span></a>{% endif %}
-						{% if behance %}<a href="https://www.behance.net/{{ behance }}" onClick="ga(‘send’, ‘event’, ‘ Social’, ‘Behance’, ‘{{ behance }}’);" class="student-profile-social-link student-profile-social-behance" target="_blank"><span>Behance</span></a>{% endif %}
-						{% if twitter %}<a href="https://twitter.com/{{ twitter }}" onClick="ga(‘send’, ‘event’, ‘ Social’, ‘Twitter’, ‘{{ twitter }}’);" class="student-profile-social-link student-profile-social-twitter" target="_blank"><span>Twitter</span></a>{% endif %}
-						{% if instagram %}<a href="https://www.instagram.com/{{ instagram | replace('@', '') }}" onClick="ga(‘send’, ‘event’, ‘ Social’, ‘Instagram’, ‘{{ instagram }}’);" class="student-profile-social-link student-profile-social-instagram" target="_blank"><span>Instagram</span></a>{% endif %}
-						{% if dribbble %}<a href="https://dribbble.com/{{ dribbble | replace('@', '') }}" onClick="ga(‘send’, ‘event’, ‘ Social’, ‘Dribbble’, ‘{{ dribbble }}’);" class="student-profile-social-link student-profile-social-dribbble" target="_blank"><span>Dribbble</span></a>{% endif %}
-						{% if linkedin %}<a href="https://ca.linkedin.com/in/{{ linkedin | replace('@', '') }}" onClick="ga(‘send’, ‘event’, ‘ Social’, ‘Linkedin’, ‘{{ linkedin }}’);" class="student-profile-social-link student-profile-social-linkedin" target="_blank"><span>LinkedIn</span></a>{% endif %}
-						{% if github %}<a href="https://github.com/{{ github | replace('@', '') }}" onClick="ga(‘send’, ‘event’, ‘ Social’, ‘Github’, ‘{{ github }}’);" class="student-profile-social-link student-profile-social-github" target="_blank"><span>GitHub</span></a>{% endif %}
+						{% if email %}<a href="mailto:{{ email }}" onClick="ga('send', 'event', 'Mailto', 'Email', '{{ email }}')" class="student-profile-social-link student-profile-social-email"><span>Email</span></a>{% endif %}
+						{% if url %}<a href="{{ url }}" onClick="ga('send', 'event', 'Social', 'Website', '{{ url }}')" class="student-profile-social-link student-profile-social-url" target="_blank"><span>Website</span></a>{% endif %}
+						{% if behance %}<a href="https://www.behance.net/{{ behance }}" oonClick="ga('send', 'event', 'Social', 'Behance', '{{ behance }}')" class="student-profile-social-link student-profile-social-behance" target="_blank"><span>Behance</span></a>{% endif %}
+						{% if twitter %}<a href="https://twitter.com/{{ twitter }}" onClick="ga('send', 'event', 'Social', 'Twitter', '{{ twitter }}')" class="student-profile-social-link student-profile-social-twitter" target="_blank"><span>Twitter</span></a>{% endif %}
+						{% if instagram %}<a href="https://www.instagram.com/{{ instagram | replace('@', '') }}" onClick="ga('send', 'event', 'Social', 'instagram', '{{ instagram }}')" class="student-profile-social-link student-profile-social-instagram" target="_blank"><span>Instagram</span></a>{% endif %}
+						{% if dribbble %}<a href="https://dribbble.com/{{ dribbble | replace('@', '') }}" onClick="ga('send', 'event', 'Social', 'dribbble', '{{ dribbble }}')" class="student-profile-social-link student-profile-social-dribbble" target="_blank"><span>Dribbble</span></a>{% endif %}
+						{% if linkedin %}<a href="https://ca.linkedin.com/in/{{ linkedin | replace('@', '') }}" onClick="ga('send', 'event', 'Social', 'Linkedin', '{{ linkedin }}')" class="student-profile-social-link student-profile-social-linkedin" target="_blank"><span>LinkedIn</span></a>{% endif %}
+						{% if github %}<a href="https://github.com/{{ github | replace('@', '') }}" onClick="ga('send', 'event', 'Social', 'Github', '{{ github }}')" class="student-profile-social-link student-profile-social-github" target="_blank"><span>GitHub</span></a>{% endif %}
 					</div>
 				</div>
 				<div class="student-profile-portrait{% if name === 'Jinah Kim' %} student-profile-portrait--empty{% endif %} c{{ id }}">
