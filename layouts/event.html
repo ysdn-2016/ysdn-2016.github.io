@@ -26,16 +26,16 @@
 					<div class="event-details-location event-details-block">
 						<h5>Where</h5>
 						<h3>The Liberty Grand</h3>
-						<a href="https://goo.gl/maps/YuXwP9XNDhQ2" target="_blank" class="event-details-location-link">25 British Columbia Rd, Toronto</a>
+						<a href="https://goo.gl/maps/YuXwP9XNDhQ2" target="_blank" class="event-details-location-link" onClick="ga('send', 'event', 'Outbound', 'GoogleMaps', 'Event Page')">25 British Columbia Rd, Toronto</a>
 					</div>
 				</div>
 			</div>
-			<a class="event-details-location-ghost" href="https://goo.gl/maps/YuXwP9XNDhQ2" target="_blank"></a>
+			<a class="event-details-location-ghost" href="https://goo.gl/maps/YuXwP9XNDhQ2" target="_blank" onClick="ga('send', 'event', 'Outbound', 'Google Maps', 'Event Page')"></a>
 			<div class="event-details-spacer"></div>
 			<div class="event-info">
 				<div class="event-info-intro">
 					<div class="event-shape-c"></div>
-					<p>The Intermission is the 2016 <a href="http://design.yorku.ca" target="_blank">York/Sheridan Program in Design&rsquo;s</a> annual showcase of the best work produced by its graduating class. It is a night for the industry to connect with emerging designers and explore their works, and for students to celebrate their past four years of hard work with you!</p>
+					<p>The Intermission is the 2016 <a href="http://design.yorku.ca" target="_blank" onClick="ga('send', 'event', 'Outbound', 'YorkuDesign', 'Event Page')">York/Sheridan Program in Design&rsquo;s</a> annual showcase of the best work produced by its graduating class. It is a night for the industry to connect with emerging designers and explore their works, and for students to celebrate their past four years of hard work with you!</p>
 					<img class="event-info-figure" src="{{ pixel }}" data-src="/assets/images/grad-show-close@1x.jpg" data-retina-src="/assets/images/grad-show-close@1x.jpg" />
 				</div>
 				<div class="event-directions">
@@ -62,10 +62,10 @@
 							<div class="event-directions-route">
 								<h6>Car</h6>
 								<div class="event-directions-stops">
-									<a href="https://www.google.ca/maps/place/10+Yukon+Pl,+Toronto,+ON+M6K+3C3/@43.6313371,-79.4257077,17.69z/data=!4m2!3m1!1s0x882b3509d05b0731:0x9e824a6f06404650?hl=en" target="_blank" class="event-directions-stop">Parking area beside venue</a>
+									<a href="https://www.google.ca/maps/place/10+Yukon+Pl,+Toronto,+ON+M6K+3C3/@43.6313371,-79.4257077,17.69z/data=!4m2!3m1!1s0x882b3509d05b0731:0x9e824a6f06404650?hl=en" target="_blank" class="event-directions-stop" onClick="ga('send', 'event', 'Outbound', 'GoogleMapsParking', 'Event Page')">Parking area beside venue</a>
 								</div>
 							</div>
-							<a href="https://goo.gl/vCID1a" target="_blank" class="event-directions-link">Get directions on Google Maps</a>
+							<a href="https://goo.gl/vCID1a" target="_blank" class="event-directions-link" onClick="ga('send', 'event', 'Outbound', 'GoogleMapsDirections', 'Event Page')">Get directions on Google Maps</a>
 						</div>
 					</div>
 				</div>
@@ -104,7 +104,7 @@
 					<div class="event-shape-j"></div>
 					<div class="event-shape-k"></div>
 					<h3>Come Meet the Cast!</h3>
-					<p>Let us know if you're coming <a href="https://www.facebook.com/events/260128614319369/">on Facebook</a> and <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=YSDN+Grad+Show:+The+Intermission&dates=20160419T230000Z/20160420T030000Z&location=Liberty+Grand,+Toronto,+ON&sf=true&output=xml">add the event to your calendar</a>. We hope to see you there!</p>
+					<p>Let us know if you're coming <a href="https://www.facebook.com/events/260128614319369/" onClick="ga('send', 'event', 'Outbound', 'FacebookEvent', 'Event Page')">on Facebook</a> and <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=YSDN+Grad+Show:+The+Intermission&dates=20160419T230000Z/20160420T030000Z&location=Liberty+Grand,+Toronto,+ON&sf=true&output=xml" onClick="ga('send', 'event', 'Outbound', 'GoogleDate', 'Event Page')">add the event to your calendar</a>. We hope to see you there!</p>
 				</div>
 			</div>
 		</div>
@@ -154,10 +154,10 @@
 			<a href="/about/" {% if id == 'about' %}class="active"{% endif %}>About</a>
 		</div>
 		<div class="event-ribbon-menu-line event-ribbon-menu-line--social">
-			<a href="{{ social.facebook.url }}" class="event-ribbon-social-icon i-facebook" target="_blank"></a>
-			<a href="{{ social.instagram.url }}" class="event-ribbon-social-icon i-instagram" target="_blank"></a>
-			<a href="{{ social.twitter.url }}" class="event-ribbon-social-icon i-twitter" target="_blank"></a>
-			<a href="{{ social.mail.url }}" class="event-ribbon-social-icon i-mail" target="_blank"></a>
+			<a href="{{ social.facebook.url }}" class="event-ribbon-social-icon i-facebook" target="_blank" onClick="ga('send', 'event', 'Outbound', 'Facebook', 'Ribbon')"></a>
+			<a href="{{ social.instagram.url }}" class="event-ribbon-social-icon i-instagram" target="_blank" onClick="ga('send', 'event', 'Outbound', 'Instagram', 'Ribbon')"></a>
+			<a href="{{ social.twitter.url }}" class="event-ribbon-social-icon i-twitter" target="_blank" onClick="ga('send', 'event', 'Outbound', 'Twitter', 'Ribbon')"></a>
+			<a href="{{ social.mail.url }}" class="event-ribbon-social-icon i-mail" target="_blank" onClick="ga('send', 'event', 'Outbound', 'Email', 'Ribbon')"></a>
 		</div>
 	</div>
 </div>
