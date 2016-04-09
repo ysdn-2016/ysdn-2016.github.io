@@ -36,8 +36,39 @@ $header-height: $header-base-height + $ribbon-height-desktop;
 	transition: transform 250ms ease, box-shadow 400ms ease, background 400ms ease;
 }
 
+.header--home {
+	background: white;
+	transition: box-shadow 400ms ease, background 1400ms ease;
+	.header-nav {
+		transition: color 1400ms ease;
+	}
+	.header-logo path {
+		transition: fill 1400ms ease;
+	}
+	&.header--is-transitioning {
+		transition: transform 250ms ease, box-shadow 400ms ease, background 1400ms;
+	}
+}
+
+.header--white {
+	background: black;
+	.header-nav {
+		color: #fff;
+	}
+	.header-logo path {
+		fill: #fff;
+	}
+}
+
 .header-spacer {
 	height: $header-height;
+	background: transparent;
+	.header--white + & {
+		background: black;
+	}
+	.header--home {
+		transition: background 1400ms;
+	}
 }
 
 .header-wrapper {

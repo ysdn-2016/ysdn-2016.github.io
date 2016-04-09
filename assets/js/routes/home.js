@@ -20,6 +20,7 @@ var TEMPLATE_OWNER_HREF = /\{\{\s*project\.owner\.href\s*\}\}/g
 
 module.exports = function () {
 
+  var $header = $('.header');
   var $grids = $('[data-columns]');
   var $projects = $('.project-preview');
 
@@ -70,6 +71,11 @@ module.exports = function () {
   /**
   * Intro Functions
   **/
+  $('.home-post-intro').on('animationstart webkitAnimationStart msAnimationStart', function (e) {
+    console.log(e.originalEvent.animationName)
+    if (e.originalEvent.animationName !== 'fade-in') return;
+    $header.removeClass('header--white')
+  })
 
   /**
    * Helper functions
