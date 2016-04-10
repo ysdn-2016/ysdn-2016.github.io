@@ -163,8 +163,13 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }
 
-.event-ribbon-details {
+.event-ribbon-details,
+.event-ribbon-cta {
 	opacity: 0.5;
+}
+
+.event-ribbon-details {
+	margin-left: 8px;
 }
 
 .event-ribbon-bullet {

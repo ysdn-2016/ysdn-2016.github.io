@@ -1,5 +1,6 @@
 var router = require('page');
 var css = require('veinjs');
+var Lazyload = require('./lazyload')
 
 var DEFAULT_URL = '/work/';
 var EVENT_URL = '/event/';
@@ -104,6 +105,8 @@ module.exports = (function () {
     if (!isMobileSize) {
       $header.addClass('header--fixed header--maximized');
     }
+    previousUrl = router.current;
+    router(EVENT_URL);
   }
 
   function hideEventPanel () {
@@ -113,6 +116,8 @@ module.exports = (function () {
     $eventPanel.removeClass('event-panel--open');
     $eventRibbon.removeClass('event-ribbon--open');
     isOpen = false;
+    router(previousUrl);
+    Lazyload.update().check()
   }
 
   function showMobileMenu () {
@@ -165,16 +170,12 @@ module.exports = (function () {
     if (!isOpen) return;
     $header.addClass('header--fixed header--maximized');
   }
-
   function handleEventRibbonClick (e) {
     e.preventDefault();
     if ($eventPanel.hasClass('event-panel--open')) {
       hideEventPanel();
-      router(previousUrl);
     } else {
       showEventPanel();
-      previousUrl = router.current;
-      router(EVENT_URL);
     }
   }
 
