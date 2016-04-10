@@ -72,7 +72,6 @@ module.exports = function () {
   * Intro Functions
   **/
   $('.home-post-intro').on('animationstart webkitAnimationStart msAnimationStart', function (e) {
-    console.log(e.originalEvent.animationName)
     if (e.originalEvent.animationName !== 'fade-in') return;
     $header.removeClass('header--white')
   })

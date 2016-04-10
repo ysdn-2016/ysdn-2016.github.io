@@ -38,7 +38,7 @@ $(function () {
     }
   })
 
-  $('a[href="/event/"]').on('click', function (e) {
+  $('a[href="/event/"],a[href="/event"]').on('click', function (e) {
     e.preventDefault();
     EventRibbon.open();
     router('/event/');
