@@ -106,9 +106,7 @@ module.exports = (function () {
     isOpen = true;
     hideMobileMenu();
     fixMobileTransition();
-    $body.addClass('locked');
-    $body.on('touchmove', preventDefault);
-    $eventContent.on('touchmove', stopPropagation);
+    pinScrolling()
     $eventPanel.addClass('event-panel--open event-panel--is-transitioning');
     $eventRibbon.addClass('event-ribbon--open');
     if (!isMobileSize) {
@@ -120,9 +118,7 @@ module.exports = (function () {
   }
 
   function hideEventPanel () {
-    $body.removeClass('locked');
-    $body.off('touchmove', preventDefault);
-    $eventContent.off('touchmove', stopPropagation);
+    unpinScrolling()
     $eventPanel.removeClass('event-panel--open');
     $eventPanel.addClass('event-panel--is-transitioning');
     $eventRibbon.removeClass('event-ribbon--open');
@@ -133,6 +129,7 @@ module.exports = (function () {
   }
 
   function showMobileMenu () {
+    pinScrolling();
     $eventRibbonMenu.addClass('event-ribbon-menu--open');
     $eventRibbonMenuToggle.addClass('event-ribbon-menu-toggle--open');
     $eventRibbonMenuOverlay.addClass('event-ribbon-menu-overlay--open');
@@ -143,6 +140,7 @@ module.exports = (function () {
     if (e) {
       e.stopPropagation();
     }
+    unpinScrolling();
     $eventRibbonMenu.removeClass('event-ribbon-menu--open');
     $eventRibbonMenuToggle.removeClass('event-ribbon-menu-toggle--open');
     $eventRibbonMenuOverlay.removeClass('event-ribbon-menu-overlay--open');
@@ -157,6 +155,18 @@ module.exports = (function () {
   function hideMobileRibbon () {
     if (isOpen) return;
     $eventRibbon.addClass('event-ribbon--minimized');
+  }
+
+  function pinScrolling () {
+    $body.addClass('locked');
+    $body.on('touchmove', preventDefault);
+    $eventContent.on('touchmove', stopPropagation);
+  }
+
+  function unpinScrolling () {
+    $body.removeClass('locked');
+    $body.off('touchmove', preventDefault);
+    $eventContent.off('touchmove', stopPropagation);
   }
 
   function fixMobileTransition () {
