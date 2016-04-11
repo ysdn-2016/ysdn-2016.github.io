@@ -854,13 +854,6 @@ section.home {
 	}
 }
 
-
-@media (min-width: 561px) {
-	.home-event {
-		@include fullwidth-override;
-	}
-}
-
 @media (max-width: 560px) {
 	.home-event {
 		background-position: top center;
@@ -987,16 +980,7 @@ section.home {
 	line-height: 1.45;
 	text-align: center;
 }
-@media (min-width: 1001px) {
-	.home-social {
-		@include fullwidth-override;
-	}
-}
 
-@media (min-width: 561px) and (max-width: 1000px) {
-	.home-social {
-	}
-}
 
 @media (max-width: 560px) {
 	.home-social {
