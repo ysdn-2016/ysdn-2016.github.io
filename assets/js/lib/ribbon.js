@@ -6,6 +6,7 @@ var DEFAULT_URL = '/work/';
 var EVENT_URL = '/event/';
 
 var SCROLL_THRESHOLD = 10;
+var TRANSITION_END = 'transitionend webkitTransitionEnd msTransitionEnd';
 
 var noop = function () {};
 
@@ -34,10 +35,14 @@ module.exports = (function () {
   var mobileHandler = {
     match: function () {
       isMobileSize = true;
+      $eventRibbon.addClass('event-ribbon--no-transition');
       $window.on('resize', fixMobileTransition)
       $window.on('scrolldelta', handleMobileScroll);
       $window.on('resize orientationchange', showMobileRibbon);
       fixMobileTransition();
+      setTimeout(function () {
+        $eventRibbon.removeClass('event-ribbon--no-transition');
+      }, 5)
     },
     unmatch: function () {
       $window.off('resize', fixMobileTransition)
@@ -50,8 +55,12 @@ module.exports = (function () {
   var desktopHandler = {
     match: function () {
       isMobileSize = false;
+      $eventRibbon.addClass('event-ribbon--no-transition');
       $window.on('resize', fixDesktopTransition);
       unfixMobileTransition();
+      setTimeout(function () {
+        $eventRibbon.removeClass('event-ribbon--no-transition');
+      }, 5)
     }
   }
 
@@ -97,30 +106,30 @@ module.exports = (function () {
     isOpen = true;
     hideMobileMenu();
     fixMobileTransition();
-    $body.addClass('locked');
-    $body.on('touchmove', preventDefault);
-    $eventContent.on('touchmove', stopPropagation);
-    $eventPanel.addClass('event-panel--open');
+    pinScrolling()
+    $eventPanel.addClass('event-panel--open event-panel--is-transitioning');
     $eventRibbon.addClass('event-ribbon--open');
     if (!isMobileSize) {
       $header.addClass('header--fixed header--maximized');
     }
+    $eventPanel.on(TRANSITION_END, handlePanelTransitionEnd);
     previousUrl = router.current;
     router(EVENT_URL);
   }
 
   function hideEventPanel () {
-    $body.removeClass('locked');
-    $body.off('touchmove', preventDefault);
-    $eventContent.off('touchmove', stopPropagation);
+    unpinScrolling()
     $eventPanel.removeClass('event-panel--open');
+    $eventPanel.addClass('event-panel--is-transitioning');
     $eventRibbon.removeClass('event-ribbon--open');
+    $eventPanel.on(TRANSITION_END, handlePanelTransitionEnd);
     isOpen = false;
     router(previousUrl);
     Lazyload.update().check()
   }
 
   function showMobileMenu () {
+    pinScrolling();
     $eventRibbonMenu.addClass('event-ribbon-menu--open');
     $eventRibbonMenuToggle.addClass('event-ribbon-menu-toggle--open');
     $eventRibbonMenuOverlay.addClass('event-ribbon-menu-overlay--open');
@@ -131,6 +140,7 @@ module.exports = (function () {
     if (e) {
       e.stopPropagation();
     }
+    unpinScrolling();
     $eventRibbonMenu.removeClass('event-ribbon-menu--open');
     $eventRibbonMenuToggle.removeClass('event-ribbon-menu-toggle--open');
     $eventRibbonMenuOverlay.removeClass('event-ribbon-menu-overlay--open');
@@ -145,6 +155,18 @@ module.exports = (function () {
   function hideMobileRibbon () {
     if (isOpen) return;
     $eventRibbon.addClass('event-ribbon--minimized');
+  }
+
+  function pinScrolling () {
+    $body.addClass('locked');
+    $body.on('touchmove', preventDefault);
+    $eventContent.on('touchmove', stopPropagation);
+  }
+
+  function unpinScrolling () {
+    $body.removeClass('locked');
+    $body.off('touchmove', preventDefault);
+    $eventContent.off('touchmove', stopPropagation);
   }
 
   function fixMobileTransition () {
@@ -197,6 +219,10 @@ module.exports = (function () {
     } else if (delta > 1 && delta >= SCROLL_THRESHOLD && scrollY > 0) {
       hideMobileRibbon();
     }
+  }
+
+  function handlePanelTransitionEnd () {
+    $eventPanel.removeClass('event-panel--is-transitioning');
   }
 
   function preventDefault (e) {

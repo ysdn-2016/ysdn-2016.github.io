@@ -13,7 +13,6 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	z-index: 103;
 	width: 100%;
 	height: 100vh;
-	transition: transform $ribbon-transition-duration $ribbon-transition-ease;
 	backface-visibility: hidden;
 	will-change: transform;
 
@@ -21,6 +20,10 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 		cursor: pointer;
 	}
 	// the CSS for .event-panel--open is set in JS
+
+	&--is-transitioning {
+		transition: transform $ribbon-transition-duration $ribbon-transition-ease;
+	}
 }
 
 .event-panel-content {
@@ -71,6 +74,10 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 
 	backface-visibility: hidden;
 	// the CSS for .event-ribbon--open is set in JS
+
+	&--no-transition {
+		transition: background 400ms ease;
+	}
 }
 
 .event-ribbon--minimized {
@@ -163,13 +170,17 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }
 
-.event-ribbon-details,
-.event-ribbon-cta {
+.event-ribbon-details {
 	opacity: 0.5;
 }
 
 .event-ribbon-details {
 	margin-left: 8px;
+}
+
+.event-ribbon-location,
+.event-ribbon-bullet {
+	display: none;
 }
 
 .event-ribbon-bullet {
@@ -304,6 +315,13 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }
 
+@media only screen and (min-width: 800px) {
+	.event-ribbon-location,
+	.event-ribbon-bullet {
+		display: inline;
+	}
+}
+
 //
 // Event Panel Content
 //
@@ -312,6 +330,7 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	position: relative;
 	overflow-x: hidden;
 	padding-top: 48px;
+	padding-bottom: 48px;
 	a {
 		@include underline;
 	}
@@ -600,7 +619,7 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
 	.event-panel-content {
 		padding: 10vh 0;
 		overflow-y: scroll;
