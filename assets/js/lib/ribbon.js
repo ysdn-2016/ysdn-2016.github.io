@@ -6,6 +6,7 @@ var DEFAULT_URL = '/work/';
 var EVENT_URL = '/event/';
 
 var SCROLL_THRESHOLD = 10;
+var TRANSITION_END = 'transitionend webkitTransitionEnd msTransitionEnd';
 
 var noop = function () {};
 
@@ -34,10 +35,14 @@ module.exports = (function () {
   var mobileHandler = {
     match: function () {
       isMobileSize = true;
+      $eventRibbon.addClass('event-ribbon--no-transition');
       $window.on('resize', fixMobileTransition)
       $window.on('scrolldelta', handleMobileScroll);
       $window.on('resize orientationchange', showMobileRibbon);
       fixMobileTransition();
+      setTimeout(function () {
+        $eventRibbon.removeClass('event-ribbon--no-transition');
+      }, 5)
     },
     unmatch: function () {
       $window.off('resize', fixMobileTransition)
@@ -50,8 +55,12 @@ module.exports = (function () {
   var desktopHandler = {
     match: function () {
       isMobileSize = false;
+      $eventRibbon.addClass('event-ribbon--no-transition');
       $window.on('resize', fixDesktopTransition);
       unfixMobileTransition();
+      setTimeout(function () {
+        $eventRibbon.removeClass('event-ribbon--no-transition');
+      }, 5)
     }
   }
 
@@ -100,11 +109,12 @@ module.exports = (function () {
     $body.addClass('locked');
     $body.on('touchmove', preventDefault);
     $eventContent.on('touchmove', stopPropagation);
-    $eventPanel.addClass('event-panel--open');
+    $eventPanel.addClass('event-panel--open event-panel--is-transitioning');
     $eventRibbon.addClass('event-ribbon--open');
     if (!isMobileSize) {
       $header.addClass('header--fixed header--maximized');
     }
+    $eventPanel.on(TRANSITION_END, handlePanelTransitionEnd);
     previousUrl = router.current;
     router(EVENT_URL);
   }
@@ -114,7 +124,9 @@ module.exports = (function () {
     $body.off('touchmove', preventDefault);
     $eventContent.off('touchmove', stopPropagation);
     $eventPanel.removeClass('event-panel--open');
+    $eventPanel.addClass('event-panel--is-transitioning');
     $eventRibbon.removeClass('event-ribbon--open');
+    $eventPanel.on(TRANSITION_END, handlePanelTransitionEnd);
     isOpen = false;
     router(previousUrl);
     Lazyload.update().check()
@@ -197,6 +209,10 @@ module.exports = (function () {
     } else if (delta > 1 && delta >= SCROLL_THRESHOLD && scrollY > 0) {
       hideMobileRibbon();
     }
+  }
+
+  function handlePanelTransitionEnd () {
+    $eventPanel.removeClass('event-panel--is-transitioning');
   }
 
   function preventDefault (e) {
