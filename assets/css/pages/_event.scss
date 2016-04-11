@@ -163,13 +163,17 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }
 
-.event-ribbon-details,
-.event-ribbon-cta {
+.event-ribbon-details {
 	opacity: 0.5;
 }
 
 .event-ribbon-details {
 	margin-left: 8px;
+}
+
+.event-ribbon-location,
+.event-ribbon-bullet {
+	display: none;
 }
 
 .event-ribbon-bullet {
@@ -301,6 +305,13 @@ $ribbon-transition-ease: cubic-bezier(0.19, 1, 0.22, 1);
 		.event-ribbon-arrow {
 			margin-left: 6px;
 		}
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.event-ribbon-location,
+	.event-ribbon-bullet {
+		display: inline;
 	}
 }
 
