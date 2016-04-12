@@ -113,7 +113,9 @@ module.exports = (function () {
       $header.addClass('header--fixed header--maximized');
     }
     $eventPanel.on(TRANSITION_END, handlePanelTransitionEnd);
-    previousUrl = router.current;
+    if (router.current !== '/event/') {
+      previousUrl = router.current;
+    }
     router(EVENT_URL);
   }
 
