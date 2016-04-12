@@ -8,7 +8,8 @@ module.exports = {
 	 * Site metadata (title, meta description, etc)
 	 */
 	site: {
-		title: 'YSDN'
+		title: 'YSDN Presents: The Intermission - 2016 Gradshow',
+		description: 'The Intermission is a celebration of the graduating class of 2016; it is a reflection on our past four years and our hopes for the future.'
 	},
 
 	/**
