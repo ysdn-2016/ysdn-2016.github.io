@@ -302,7 +302,7 @@ $sponsor-page-grid-increment: 34px; // NOTE: taken from space between circles in
 	top: 250px;
 	right: 20%;
 	@media #{$media-tablet-medium} {
-		top: 80px;
+		top: 120px;
 		right: 10%;
 	}
 }
@@ -312,8 +312,8 @@ $sponsor-page-grid-increment: 34px; // NOTE: taken from space between circles in
 	top: 277px;
 	right: calc(20% - 27px);
 	@media #{$media-tablet-medium} {
-		top: 107px;
-		right: calc(10% - 27px);
+		top: 144px;
+		right: calc(10% - 22px);
 	}
 }
 
