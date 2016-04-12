@@ -85,7 +85,7 @@ module.exports = {
 	      id: "facebook",
 	      company: "Facebook",
 	      title: "Interactive Sponsor",
-	      url: "https://facebook.com/profile.php?=73322363",
+	      url: "https://facebook.com/",
 	      priority: 2
 	    },
 	    {
