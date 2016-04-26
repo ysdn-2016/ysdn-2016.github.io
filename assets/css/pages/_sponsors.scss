@@ -1,10 +1,13 @@
 .sponsors {
 	margin: 0 auto;
 	&-videos {
-		margin: -15px 0;
-		padding-bottom: 80px;
+		border-top: 1px #ccc solid;
+		margin: 80px 0;
 		h1 {
 			margin-bottom: 0;
+		}
+		.sponsors-header h1 {
+			margin-bottom: 12px;
 		}
 		.embed-container {
 			position: relative;
@@ -13,7 +16,7 @@
 			width: 49%;
 			max-width: 50%;
 			height: 0;
-			padding-bottom: 28.125%;
+			padding-bottom: 27.8%;
 		}
 		.embed-container iframe, .embed-container object, .embed-container embed {
 			position: absolute;
@@ -21,7 +24,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			padding: 15px 20px;
+			padding: 10px 15px;
 		}
 	}
 }
@@ -83,10 +86,25 @@
 	}
 }
 
-.sponsors-header {
-	@media #{$media-tablet-medium} {
-    padding-top: 0px;
-  }
+
+@media #{$media-tablet-medium} {
+	section:not(.sponsors-videos) > .sponsors-header {
+		padding-top: 0;
+	}
+	.sponsors-videos {
+		margin-bottom: -40px;
+
+		.sponsors-header {
+			padding-top: 40px;
+			padding-bottom: 20px;
+		}
+
+		.embed-container {
+			width: 100%;
+			max-width: none;
+			padding-bottom: percentage(9/16);
+		}
+	}
 }
 
 .sponsors-interest {
