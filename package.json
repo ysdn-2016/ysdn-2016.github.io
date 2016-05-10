@@ -66,6 +66,7 @@
     "metalsmith-typography": "^0.1.1",
     "metalsmith-validate": "^0.1.4",
     "mkdirp": "^0.5.1",
+    "object-hash": "^1.1.2",
     "onchange": "^2.0.0",
     "ora": "^0.2.1",
     "partialify": "^3.1.6",
